@@ -5,7 +5,7 @@
 
 #include "ResponseMessage.h"
 
-namespace justanlsp
+namespace ls6052
 {
 
 //////////////////////////////////////////////////////////////
@@ -44,4 +44,4 @@ class ShutdownResponse : public ResponseMessage
     }
 };
 
-} // namespace justanlsp
+} // namespace ls6052

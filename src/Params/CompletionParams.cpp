@@ -2,7 +2,7 @@
 
 #include "../Utils/Logger.h"
 
-namespace justanlsp
+namespace ls6052
 {
 CompletionParams::CompletionParams(const nlohmann::json &jsonRPC)
 {
@@ -42,4 +42,4 @@ void CompletionParams::setTextDocumentIdentifier(const nlohmann::json &jsonRPC)
 
     m_textDocumentIdentifier.URI = jsonRPC["uri"];
 }
-} // namespace justanlsp
+} // namespace ls6052

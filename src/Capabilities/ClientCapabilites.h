@@ -5,7 +5,7 @@
 
 #include "TextDocumentCapabilities.h"
 
-namespace justanlsp
+namespace ls6052
 {
 //////////////////////////////////////////////////////////////
 ///
@@ -56,4 +56,4 @@ class ClientCapabilities
     //////////////////////////////////////////////////////////////
     std::shared_ptr<TextDocumentCapabilities> m_textDocument;
 };
-} // namespace justanlsp
+} // namespace ls6052

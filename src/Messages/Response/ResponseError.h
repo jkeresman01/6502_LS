@@ -5,7 +5,7 @@
 
 #include "../../Errors/ErrorCodes.h"
 
-namespace justanlsp
+namespace ls6052
 {
 
 //////////////////////////////////////////////////////////////
@@ -129,4 +129,4 @@ class ResponseError
     std::string m_message;
 };
 
-} // namespace justanlsp
+} // namespace ls6052

@@ -2,7 +2,7 @@
 
 #include "RequestMessage.h"
 
-namespace justanlsp
+namespace ls6052
 {
 
 //////////////////////////////////////////////////////////////
@@ -25,4 +25,4 @@ class ShutdownRequest : public RequestMessage
     //////////////////////////////////////////////////////////////
     explicit ShutdownRequest(const nlohmann::json &jsonRPC) : RequestMessage(jsonRPC){};
 };
-} // namespace justanlsp
+} // namespace ls6052

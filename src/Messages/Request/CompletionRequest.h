@@ -7,7 +7,7 @@
 #include "../../Params/CompletionParams.h"
 #include "RequestMessage.h"
 
-namespace justanlsp
+namespace ls6052
 {
 //////////////////////////////////////////////////////////////
 ///
@@ -53,4 +53,4 @@ class CompletionRequest : public RequestMessage
     //////////////////////////////////////////////////////////////
     std::shared_ptr<CompletionParams> m_completionParams;
 };
-} // namespace justanlsp
+} // namespace ls6052

@@ -2,7 +2,7 @@
 
 #include "../Utils/Logger.h"
 
-namespace justanlsp
+namespace ls6052
 {
 DidOpenTextDocumentRequest::DidOpenTextDocumentRequest(const nlohmann::json &jsonRPC)
     : NotificationMessage(jsonRPC)
@@ -23,4 +23,4 @@ void DidOpenTextDocumentRequest::setParams(const nlohmann::json &jsonRPC)
     m_params = std::make_shared<DidOpenTextDocumentParams>(jsonRPC["params"]);
 }
 
-} // namespace justanlsp
+} // namespace ls6052

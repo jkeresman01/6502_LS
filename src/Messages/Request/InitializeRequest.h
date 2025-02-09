@@ -5,7 +5,7 @@
 #include "../Params/InitializeParams.h"
 #include "RequestMessage.h"
 
-namespace justanlsp
+namespace ls6052
 {
 
 //////////////////////////////////////////////////////////////
@@ -55,4 +55,4 @@ class InitializeRequest : public RequestMessage
     //////////////////////////////////////////////////////////////
     std::shared_ptr<InitializeParams> m_initializeParams;
 };
-} // namespace justanlsp
+} // namespace ls6052

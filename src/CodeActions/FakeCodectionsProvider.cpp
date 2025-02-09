@@ -7,7 +7,7 @@
 
 #include <vector>
 
-namespace justanlsp
+namespace ls6052
 {
 std::vector<CodeAction> FakeCodeActionsProvider::getCodeActions(const std::string &URI)
 {
@@ -33,4 +33,4 @@ void FakeCodeActionsProvider::fillFakeCodeActions(std::vector<CodeAction> &codeA
     codeActions.emplace_back("Code action test 2", CodeActionKind::QUICK_FIX, false, workspaceEdit);
 }
 
-} // namespace justanlsp
+} // namespace ls6052

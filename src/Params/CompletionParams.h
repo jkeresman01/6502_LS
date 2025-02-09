@@ -7,7 +7,7 @@
 #include "../Types/Range.h"
 #include "../Types/TextDocumentIdentifier.h"
 
-namespace justanlsp
+namespace ls6052
 {
 class CompletionParams
 {
@@ -81,4 +81,4 @@ class CompletionParams
     //////////////////////////////////////////////////////////////
     TextDocumentIdentifier m_textDocumentIdentifier;
 };
-} // namespace justanlsp
+} // namespace ls6052

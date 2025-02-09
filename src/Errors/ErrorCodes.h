@@ -2,7 +2,7 @@
 
 #include <cstdint>
 
-namespace justanlsp
+namespace ls6052
 {
 
 //////////////////////////////////////////////////////////////
@@ -59,4 +59,4 @@ enum class ErrorCodes : int32_t
     INTERNAL_ERROR = -32603,
 };
 
-} // namespace justanlsp
+} // namespace ls6052

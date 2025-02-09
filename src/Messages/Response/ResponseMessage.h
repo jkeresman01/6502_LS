@@ -9,7 +9,7 @@
 #include <ostream>
 #include <string>
 
-namespace justanlsp
+namespace ls6052
 {
 
 //////////////////////////////////////////////////////////////
@@ -77,4 +77,4 @@ class ResponseMessage : public Message
     std::optional<ResponseError> m_responseError;
 };
 
-} // namespace justanlsp
+} // namespace ls6052

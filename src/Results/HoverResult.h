@@ -3,7 +3,7 @@
 #include <nlohmann/json.hpp>
 #include <string>
 
-namespace justanlsp
+namespace ls6052
 {
 //////////////////////////////////////////////////////////////
 ///
@@ -43,4 +43,4 @@ class HoverResult
     std::string m_value;
 };
 
-} // namespace justanlsp
+} // namespace ls6052

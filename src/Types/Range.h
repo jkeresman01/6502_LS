@@ -5,7 +5,7 @@
 
 #include "Position.h"
 
-namespace justanlsp
+namespace ls6052
 {
 
 //////////////////////////////////////////////////////////////
@@ -66,4 +66,4 @@ struct Range
         return ss.str();
     }
 };
-} // namespace justanlsp
+} // namespace ls6052

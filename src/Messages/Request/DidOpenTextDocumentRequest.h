@@ -5,7 +5,7 @@
 #include "../Notification/NotificationMessage.h"
 #include "../Params/DidOpenTextDocumentParams.h"
 
-namespace justanlsp
+namespace ls6052
 {
 //////////////////////////////////////////////////////////////
 ///
@@ -54,4 +54,4 @@ class DidOpenTextDocumentRequest : public NotificationMessage
     //////////////////////////////////////////////////////////////
     std::shared_ptr<DidOpenTextDocumentParams> m_params;
 };
-} // namespace justanlsp
+} // namespace ls6052

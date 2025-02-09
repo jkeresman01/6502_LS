@@ -2,7 +2,7 @@
 
 #include "../Utils/Logger.h"
 
-namespace justanlsp
+namespace ls6052
 {
 TextDocumentPositionParams::TextDocumentPositionParams(const nlohmann::json &jsonRPC)
 {
@@ -28,4 +28,4 @@ void TextDocumentPositionParams::setTextDocumentIdentifier(const nlohmann::json 
 
     m_textDocument.URI = jsonRPC["uri"];
 }
-} // namespace justanlsp
+} // namespace ls6052

@@ -6,7 +6,7 @@
 
 #include "../Types/Diagnostic.h"
 
-namespace justanlsp
+namespace ls6052
 {
 class PublishDiagnosticsParams
 {
@@ -55,4 +55,4 @@ class PublishDiagnosticsParams
     //////////////////////////////////////////////////////////////
     std::vector<Diagnostic> m_diagnostics;
 };
-} // namespace justanlsp
+} // namespace ls6052

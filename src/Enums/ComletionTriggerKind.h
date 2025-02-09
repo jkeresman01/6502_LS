@@ -1,6 +1,6 @@
 #pragma once
 
-namespace justanlsp
+namespace ls6052
 {
 //////////////////////////////////////////////////////////////
 ///
@@ -37,4 +37,4 @@ enum class CompletionTriggerKind
     //////////////////////////////////////////////////////////////
     TRIGGER_FOR_INCOMPLETE_COMPLETIONS = 3,
 };
-} // namespace justanlsp
+} // namespace ls6052

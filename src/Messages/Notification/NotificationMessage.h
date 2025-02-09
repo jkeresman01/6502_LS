@@ -4,7 +4,7 @@
 
 #include "../Messages/Message.h"
 
-namespace justanlsp
+namespace ls6052
 {
 
 //////////////////////////////////////////////////////////////
@@ -59,4 +59,4 @@ class NotificationMessage : public Message
     std::string m_method;
 };
 
-} // namespace justanlsp
+} // namespace ls6052

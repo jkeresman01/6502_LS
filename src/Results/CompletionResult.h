@@ -5,7 +5,7 @@
 
 #include "../Types/CompletionItem.h"
 
-namespace justanlsp
+namespace ls6052
 {
 
 //////////////////////////////////////////////////////////////
@@ -48,4 +48,4 @@ class CompletionResult
     std::vector<CompletionItem> m_completionItems;
 };
 
-} // namespace justanlsp
+} // namespace ls6052

@@ -7,7 +7,7 @@
 #include <mutex>
 #include <string>
 
-namespace justanlsp
+namespace ls6052
 {
 
 ConfigurationManager *ConfigurationManager::s_instance = nullptr;
@@ -87,4 +87,4 @@ ConfigurationManager *ConfigurationManager::getInstance()
 
     return s_instance;
 }
-} // namespace justanlsp
+} // namespace ls6052

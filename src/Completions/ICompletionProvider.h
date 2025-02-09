@@ -3,7 +3,7 @@
 #include "../Types/CompletionItem.h"
 #include <vector>
 
-namespace justanlsp
+namespace ls6052
 {
 
 //////////////////////////////////////////////////////////////
@@ -28,4 +28,4 @@ class ICompletionProvider
     virtual std::vector<CompletionItem> getCompletions() = 0;
 };
 
-} // namespace justanlsp
+} // namespace ls6052

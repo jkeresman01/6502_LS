@@ -2,7 +2,7 @@
 
 #include "../Messages/Response/ResponseError.h"
 
-namespace justanlsp
+namespace ls6052
 {
 class Ls6502ErrorDirector
 {
@@ -37,4 +37,4 @@ class Ls6502ErrorDirector
             .withErrorMessage("Received request after shutdown");
     }
 };
-} // namespace justanlsp
+} // namespace ls6052

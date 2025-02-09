@@ -2,7 +2,7 @@
 
 #include <string>
 
-namespace justanlsp
+namespace ls6052
 {
 
 CodeAction::CodeAction(const std::string &title, const CodeActionKind &codeActionKind, const bool isPreffered,
@@ -61,4 +61,4 @@ CodeAction CodeAction::Builder::build()
 {
     return CodeAction(m_title, m_codeActionKind, m_isPreffered, m_workspaceEdit);
 }
-} // namespace justanlsp
+} // namespace ls6052

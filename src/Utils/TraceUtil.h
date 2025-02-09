@@ -4,7 +4,7 @@
 
 #include "../Enums/TraceValue.h"
 
-namespace justanlsp
+namespace ls6052
 {
 
 /////////////////////////////////////////////////////////////////////
@@ -53,4 +53,4 @@ TraceValue inline getTraceValue(const std::string &traceValueStr)
     return TraceValue::OFF;
 }
 
-} // namespace justanlsp
+} // namespace ls6052

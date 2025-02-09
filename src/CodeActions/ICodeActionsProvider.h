@@ -4,7 +4,7 @@
 
 #include <vector>
 
-namespace justanlsp
+namespace ls6052
 {
 
 //////////////////////////////////////////////////////////////
@@ -32,4 +32,4 @@ class ICodeActionsProvider
     virtual std::vector<CodeAction> getCodeActions(const std::string &URI) = 0;
 };
 
-} // namespace justanlsp
+} // namespace ls6052

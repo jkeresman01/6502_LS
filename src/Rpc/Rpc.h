@@ -7,7 +7,7 @@
 #include "../Utils/Convert.h"
 #include "../Utils/Logger.h"
 
-namespace justanlsp
+namespace ls6052
 {
 /////////////////////////////////////////////////////////////////////
 ///
@@ -88,4 +88,4 @@ inline uint32_t Rpc::extractContentLength()
     }
 }
 
-} // namespace justanlsp
+} // namespace ls6052

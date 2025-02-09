@@ -2,7 +2,7 @@
 
 #include <memory>
 
-namespace justanlsp
+namespace ls6052
 {
 void Trie::insert(const std::string &word)
 {
@@ -61,4 +61,4 @@ void Trie::findAllWords(std::shared_ptr<TrieNode> node, const std::string &prefi
     }
 }
 
-} // namespace justanlsp
+} // namespace ls6052

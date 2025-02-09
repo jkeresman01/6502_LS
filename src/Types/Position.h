@@ -4,7 +4,7 @@
 #include <sstream>
 #include <string>
 
-namespace justanlsp
+namespace ls6052
 {
 
 //////////////////////////////////////////////////////////////
@@ -57,4 +57,4 @@ struct Position
         return ss.str();
     }
 };
-} // namespace justanlsp
+} // namespace ls6052

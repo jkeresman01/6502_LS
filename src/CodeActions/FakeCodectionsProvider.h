@@ -3,7 +3,7 @@
 #include "../Types/CodeAction.h"
 #include "ICodeActionsProvider.h"
 
-namespace justanlsp
+namespace ls6052
 {
 
 //////////////////////////////////////////////////////////////
@@ -50,4 +50,4 @@ class FakeCodeActionsProvider : public ICodeActionsProvider
     void logCodeActions(std::vector<CodeAction> &codeAction);
 };
 
-} // namespace justanlsp
+} // namespace ls6052

@@ -4,7 +4,7 @@
 #include <nlohmann/json.hpp>
 #include <string>
 
-namespace justanlsp
+namespace ls6052
 {
 //////////////////////////////////////////////////////////////
 ///
@@ -131,4 +131,4 @@ class TextDocumentItem
     std::string m_text;
 };
 
-} // namespace justanlsp
+} // namespace ls6052

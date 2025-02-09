@@ -1,6 +1,6 @@
 #include "PublishDiagnosticsParams.h"
 
-namespace justanlsp
+namespace ls6052
 {
 
 PublishDiagnosticsParams::PublishDiagnosticsParams(const std::string &URI,
@@ -27,4 +27,4 @@ nlohmann::json PublishDiagnosticsParams::dianosticItemsToJson() const
     return diagnostics;
 }
 
-} // namespace justanlsp
+} // namespace ls6052

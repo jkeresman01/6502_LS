@@ -4,7 +4,7 @@
 
 #include "TextDocumentPositionParams.h"
 
-namespace justanlsp
+namespace ls6052
 {
 
 //////////////////////////////////////////////////////////////
@@ -28,4 +28,4 @@ class TextDocumentCompletionParams : public TextDocumentPositionParams
     TextDocumentCompletionParams(const nlohmann::json &jsonRPC) : TextDocumentPositionParams(jsonRPC){};
 };
 
-} // namespace justanlsp
+} // namespace ls6052

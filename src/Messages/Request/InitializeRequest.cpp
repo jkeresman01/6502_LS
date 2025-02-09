@@ -2,7 +2,7 @@
 
 #include "../Utils/Logger.h"
 
-namespace justanlsp
+namespace ls6052
 {
 
 InitializeRequest::InitializeRequest(const nlohmann::json &jsonRPC) : RequestMessage(jsonRPC)
@@ -23,4 +23,4 @@ void InitializeRequest::setInitializeParams(const nlohmann::json &jsonRPC)
     m_initializeParams = std::make_shared<InitializeParams>(jsonRPC["params"]);
 }
 
-} // namespace justanlsp
+} // namespace ls6052

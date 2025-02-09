@@ -2,7 +2,7 @@
 
 #include "../Utils/Logger.h"
 
-namespace justanlsp
+namespace ls6052
 {
 CodeActionParams::CodeActionParams(const nlohmann::json &jsonRPC)
 {
@@ -51,4 +51,4 @@ void CodeActionParams::setURI(const nlohmann::json &jsonRPC)
 
     m_URI = jsonRPC["uri"];
 }
-} // namespace justanlsp
+} // namespace ls6052

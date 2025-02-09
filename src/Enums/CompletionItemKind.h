@@ -1,6 +1,6 @@
 #pragma once
 
-namespace justanlsp
+namespace ls6052
 {
 
 //////////////////////////////////////////////////////////////
@@ -188,4 +188,4 @@ enum class CompletionItemKind
     TYPE_PARAMETER = 25,
 };
 
-} // namespace justanlsp
+} // namespace ls6052

@@ -6,7 +6,7 @@
 #include "../Messages/Response/ResponseMessage.h"
 #include "../Types/ServerInfo.h"
 
-namespace justanlsp
+namespace ls6052
 {
 
 //////////////////////////////////////////////////////////////
@@ -83,4 +83,4 @@ class InitializeResult
     ServerCapabilities m_serverCapabilities;
 };
 
-} // namespace justanlsp
+} // namespace ls6052

@@ -1,6 +1,6 @@
 #include "PublishDiagnosticsNotification.h"
 
-namespace justanlsp
+namespace ls6052
 {
 
 PublishDiagnosticsNoticifation::PublishDiagnosticsNoticifation(
@@ -25,4 +25,4 @@ std::ostream &operator<<(std::ostream &os,
     return os;
 }
 
-} // namespace justanlsp
+} // namespace ls6052

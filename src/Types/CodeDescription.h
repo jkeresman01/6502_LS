@@ -2,7 +2,7 @@
 
 #include <string>
 
-namespace justanlsp
+namespace ls6052
 {
 
 //////////////////////////////////////////////////////////////
@@ -21,4 +21,4 @@ struct CodeDescription
     //////////////////////////////////////////////////////////////
     std::string URI;
 };
-} // namespace justanlsp
+} // namespace ls6052

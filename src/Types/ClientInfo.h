@@ -3,7 +3,7 @@
 #include <sstream>
 #include <string>
 
-namespace justanlsp
+namespace ls6052
 {
 
 //////////////////////////////////////////////////////////////
@@ -43,4 +43,4 @@ struct ClientInfo
         return ss.str();
     }
 };
-} // namespace justanlsp
+} // namespace ls6052

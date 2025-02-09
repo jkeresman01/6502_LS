@@ -3,7 +3,7 @@
 #include <sstream>
 #include <string>
 
-namespace justanlsp
+namespace ls6052
 {
 
 //////////////////////////////////////////////////////////////
@@ -52,4 +52,4 @@ struct ServerInfo
     //////////////////////////////////////////////////////////////
     nlohmann::json toJson() const { return {{"name", name}, {"version", version}}; }
 };
-} // namespace justanlsp
+} // namespace ls6052

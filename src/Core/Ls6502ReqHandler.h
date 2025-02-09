@@ -16,7 +16,7 @@
 #include "Ls6502Client.h"
 #include "Ls6502Counter.h"
 
-namespace justanlsp
+namespace ls6052
 {
 //////////////////////////////////////////////////////////////
 ///
@@ -144,4 +144,4 @@ class Ls6502ReqHandler
     //////////////////////////////////////////////////////////////
     std::shared_ptr<ICodeActionsProvider> m_codeActionsProvider;
 };
-} // namespace justanlsp
+} // namespace ls6052

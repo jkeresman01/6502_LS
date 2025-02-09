@@ -5,7 +5,7 @@
 #include "../Types/CodeAction.h"
 #include <nlohmann/json.hpp>
 
-namespace justanlsp
+namespace ls6052
 {
 //////////////////////////////////////////////////////////////
 ///
@@ -46,4 +46,4 @@ class CodeActionResult
     std::vector<CodeAction> m_codeActions;
 };
 
-} // namespace justanlsp
+} // namespace ls6052

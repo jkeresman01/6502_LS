@@ -2,7 +2,7 @@
 
 #include "../Utils/Logger.h"
 
-namespace justanlsp
+namespace ls6052
 {
 TextDocumentItem::TextDocumentItem(const nlohmann::json &jsonRPC)
 {
@@ -63,4 +63,4 @@ void TextDocumentItem::setText(const nlohmann::json &jsonRPC)
 
     m_text = jsonRPC["text"];
 }
-} // namespace justanlsp
+} // namespace ls6052

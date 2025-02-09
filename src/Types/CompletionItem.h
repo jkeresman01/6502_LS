@@ -5,7 +5,7 @@
 #include <nlohmann/json.hpp>
 #include <string>
 
-namespace justanlsp
+namespace ls6052
 {
 
 //////////////////////////////////////////////////////////////
@@ -179,4 +179,4 @@ class CompletionItem
     CompletionItemKind m_completionItemKind;
 };
 
-} // namespace justanlsp
+} // namespace ls6052

@@ -4,7 +4,7 @@
 
 #include "Range.h"
 
-namespace justanlsp
+namespace ls6052
 {
 
 //////////////////////////////////////////////////////////////
@@ -31,4 +31,4 @@ struct Location
     //////////////////////////////////////////////////////////////
     Range range;
 };
-} // namespace justanlsp
+} // namespace ls6052

@@ -3,7 +3,7 @@
 #include <cstdint>
 #include <numeric>
 
-namespace justanlsp
+namespace ls6052
 {
 Ls6502Counter::Ls6502Counter()
 {
@@ -24,4 +24,4 @@ uint32_t Ls6502Counter::getSum() const
 {
     return std::accumulate(m_ls6502Counters.begin(), m_ls6502Counters.end(), 0);
 }
-} // namespace justanlsp
+} // namespace ls6052

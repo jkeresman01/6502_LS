@@ -6,7 +6,7 @@
 
 #include "TrieNode.h"
 
-namespace justanlsp
+namespace ls6052
 {
 class Trie
 {
@@ -69,4 +69,4 @@ class Trie
     //////////////////////////////////////////////////////////////
     std::shared_ptr<TrieNode> m_root = std::make_shared<TrieNode>();
 };
-} // namespace justanlsp
+} // namespace ls6052

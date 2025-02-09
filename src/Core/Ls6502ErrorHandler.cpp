@@ -5,7 +5,7 @@
 #include "../Utils/Logger.h"
 #include "Ls6502ErrorDirector.h"
 
-namespace justanlsp
+namespace ls6052
 {
 
 void Ls6502ErrorHandler::handleServerNotInitalizedError(int64_t id)
@@ -72,4 +72,4 @@ void Ls6502ErrorHandler::handleError(const ResponseError &responseError, int64_t
     Rpc::send(responseMessage);
 }
 
-} // namespace justanlsp
+} // namespace ls6052

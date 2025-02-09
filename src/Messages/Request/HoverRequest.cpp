@@ -2,7 +2,7 @@
 
 #include "../../Utils/Logger.h"
 
-namespace justanlsp
+namespace ls6052
 {
 HoverRequest::HoverRequest(const nlohmann::json &jsonRPC) : RequestMessage(jsonRPC)
 {
@@ -22,4 +22,4 @@ void HoverRequest::setParams(const nlohmann::json &jsonRPC)
     m_hoverParams = std::make_shared<HoverParams>(jsonRPC["params"]);
 }
 
-} // namespace justanlsp
+} // namespace ls6052

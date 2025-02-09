@@ -5,7 +5,7 @@
 
 #include "../Types/TextDocumentItem.h"
 
-namespace justanlsp
+namespace ls6052
 {
 
 //////////////////////////////////////////////////////////////
@@ -58,4 +58,4 @@ class DidOpenTextDocumentParams
     std::shared_ptr<TextDocumentItem> m_textDocumentItem;
 };
 
-} // namespace justanlsp
+} // namespace ls6052

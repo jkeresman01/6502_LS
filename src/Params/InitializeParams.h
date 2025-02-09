@@ -11,7 +11,7 @@
 #include "../Enums/TraceValue.h"
 #include "../Types/ClientInfo.h"
 
-namespace justanlsp
+namespace ls6052
 {
 
 //////////////////////////////////////////////////////////////
@@ -133,4 +133,4 @@ class InitializeParams
     TraceValue m_traceValue;
 };
 
-} // namespace justanlsp
+} // namespace ls6052

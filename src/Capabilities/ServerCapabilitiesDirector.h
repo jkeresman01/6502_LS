@@ -2,7 +2,7 @@
 
 #include "ServerCapabilities.h"
 
-namespace justanlsp
+namespace ls6052
 {
 class ServerCapabilitiesDirector
 {
@@ -18,4 +18,4 @@ class ServerCapabilitiesDirector
             .withCodeActionSupport(true);
     }
 };
-} // namespace justanlsp
+} // namespace ls6052

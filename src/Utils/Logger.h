@@ -22,14 +22,14 @@
         return std::string(buffer);                                                                          \
     }(format, __VA_ARGS__)
 
-#define LOG(severity, message) justanlsp::Logger::log(severity, message, __FILE__, __LINE__)
+#define LOG(severity, message) ls6052::Logger::log(severity, message, __FILE__, __LINE__)
 
 #define LS_6502_DEBUG(message) LOG("DEBUG", message)
 #define LS_6502_INFO(message) LOG("INFO", message)
 #define LS_6502_WARN(message) LOG("WARN", message)
 #define LS_6502_ERROR(message) LOG("ERROR", message)
 
-namespace justanlsp
+namespace ls6052
 {
 
 class Logger
@@ -76,4 +76,4 @@ class Logger
     }
 };
 
-} // namespace justanlsp
+} // namespace ls6052

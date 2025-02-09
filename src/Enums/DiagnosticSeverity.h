@@ -1,6 +1,6 @@
 #pragma once
 
-namespace justanlsp
+namespace ls6052
 {
 
 //////////////////////////////////////////////////////////////
@@ -42,4 +42,4 @@ enum class DiagnosticSeverity
     HINT = 4,
 };
 
-} // namespace justanlsp
+} // namespace ls6052

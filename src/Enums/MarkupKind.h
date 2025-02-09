@@ -1,6 +1,6 @@
 #pragma onceEnu
 
-namespace justanlsp
+namespace ls6052
 {
 
 //////////////////////////////////////////////////////////////
@@ -35,4 +35,4 @@ enum class MarkupKind
     OPTIONS_NO,
 };
 
-} // namespace justanlsp
+} // namespace ls6052

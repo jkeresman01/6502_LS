@@ -1,6 +1,6 @@
 #include "ServerCapabilities.h"
 
-namespace justanlsp
+namespace ls6052
 {
 
 ServerCapabilities::ServerCapabilities(const TextDocumentSyncKind &textDocumentSyncKind,
@@ -66,4 +66,4 @@ ServerCapabilities ServerCapabilities::Builder::build() const
                               m_areDefinitionsSupported);
 }
 
-} // namespace justanlsp
+} // namespace ls6052

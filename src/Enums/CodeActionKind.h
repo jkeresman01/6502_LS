@@ -1,6 +1,6 @@
 #pragma once
 
-namespace justanlsp
+namespace ls6052
 {
 
 //////////////////////////////////////////////////////////////
@@ -35,4 +35,4 @@ enum class CodeActionKind
     //////////////////////////////////////////////////////////////
     REFACTOR,
 };
-} // namespace justanlsp
+} // namespace ls6052

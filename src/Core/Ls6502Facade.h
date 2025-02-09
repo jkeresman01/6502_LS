@@ -10,7 +10,7 @@
 #include "Ls6502ErrorHandler.h"
 #include "Ls6502ReqHandler.h"
 
-namespace justanlsp
+namespace ls6052
 {
 
 //////////////////////////////////////////////////////////////
@@ -167,7 +167,7 @@ class Ls6502Facade
     /// @brief Request counters
     ///
     //////////////////////////////////////////////////////////////
-    std::unique_ptr<Ls6502Counter> m_justAnLspCounters = std::make_unique<Ls6502Counter>();
+    std::unique_ptr<Ls6502Counter> m_ls6502Counters = std::make_unique<Ls6502Counter>();
 };
 
-} // namespace justanlsp
+} // namespace ls6052

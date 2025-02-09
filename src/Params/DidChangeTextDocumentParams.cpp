@@ -2,7 +2,7 @@
 
 #include "../Utils/Logger.h"
 
-namespace justanlsp
+namespace ls6052
 {
 
 DidChangeTextDocumentParams::DidChangeTextDocumentParams(const nlohmann::json &jsonRPC)
@@ -36,4 +36,4 @@ void DidChangeTextDocumentParams::setContentChanges(const nlohmann::json &jsonRP
 
     m_contentChanges = jsonRPC["text"];
 }
-} // namespace justanlsp
+} // namespace ls6052

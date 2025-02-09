@@ -5,7 +5,7 @@
 #include "../Types/Position.h"
 #include "../Types/TextDocumentIdentifier.h"
 
-namespace justanlsp
+namespace ls6052
 {
 
 //////////////////////////////////////////////////////////////
@@ -81,4 +81,4 @@ class TextDocumentPositionParams
     Position m_position;
 };
 
-} // namespace justanlsp
+} // namespace ls6052

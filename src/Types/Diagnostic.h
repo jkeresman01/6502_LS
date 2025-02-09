@@ -9,7 +9,7 @@
 #include "../Types/DiagnosticsRelatedInformation.h"
 #include "Range.h"
 
-namespace justanlsp
+namespace ls6052
 {
 
 //////////////////////////////////////////////////////////////
@@ -103,4 +103,4 @@ class Diagnostic
     std::string m_message;
 };
 
-} // namespace justanlsp
+} // namespace ls6052

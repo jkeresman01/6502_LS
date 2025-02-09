@@ -7,7 +7,7 @@
 #include <unordered_map>
 #include <vector>
 
-namespace justanlsp
+namespace ls6052
 {
 
 //////////////////////////////////////////////////////////////
@@ -31,4 +31,4 @@ class WorkspaceEdit
   private:
     ChangesT m_changes;
 };
-} // namespace justanlsp
+} // namespace ls6052

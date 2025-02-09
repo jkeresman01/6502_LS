@@ -8,7 +8,7 @@
 #include "../Config/ConfigurationManager.h"
 #include "../Utils/Logger.h"
 
-namespace justanlsp
+namespace ls6052
 {
 
 //////////////////////////////////////////////////////////////
@@ -54,4 +54,4 @@ class DiagnosticsProviderFactory
     }
 };
 
-} // namespace justanlsp
+} // namespace ls6052

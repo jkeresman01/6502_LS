@@ -7,7 +7,7 @@
 #include "../Messages/Response/ResponseMessage.h"
 #include "../Results/CompletionResult.h"
 
-namespace justanlsp
+namespace ls6052
 {
 
 //////////////////////////////////////////////////////////////
@@ -53,4 +53,4 @@ class CompletionResponse : public ResponseMessage
     CompletionResult m_completionResult;
 };
 
-} // namespace justanlsp
+} // namespace ls6052

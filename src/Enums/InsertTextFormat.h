@@ -1,6 +1,6 @@
 #pragma once
 
-namespace justanlsp
+namespace ls6052
 {
 
 //////////////////////////////////////////////////////////////
@@ -27,4 +27,4 @@ enum class InsetTextFormat
     //////////////////////////////////////////////////////////////
     SNIPPET = 1,
 };
-} // namespace justanlsp
+} // namespace ls6052

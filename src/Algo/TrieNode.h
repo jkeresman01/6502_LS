@@ -3,11 +3,11 @@
 #include <memory>
 #include <unordered_map>
 
-namespace justanlsp
+namespace ls6052
 {
 struct TrieNode
 {
     bool isLeaf;
     std::unordered_map<char, std::shared_ptr<TrieNode>> children;
 };
-} // namespace justanlsp
+} // namespace ls6052

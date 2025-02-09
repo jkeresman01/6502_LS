@@ -1,6 +1,6 @@
 #pragma once
 
-namespace justanlsp
+namespace ls6052
 {
 
 //////////////////////////////////////////////////////////////
@@ -98,4 +98,4 @@ enum class RequestType
     COUNT,
 };
 
-} // namespace justanlsp
+} // namespace ls6052

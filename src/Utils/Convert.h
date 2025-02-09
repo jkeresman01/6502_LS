@@ -5,7 +5,7 @@
 
 #include "../Utils/Logger.h"
 
-namespace justanlsp
+namespace ls6052
 {
 
 /////////////////////////////////////////////////////////////////////
@@ -57,4 +57,4 @@ template <typename T> inline T Converter::convert(const std::string &input)
     return result;
 }
 
-} // namespace justanlsp
+} // namespace ls6052

@@ -5,7 +5,7 @@
 
 #include <vector>
 
-namespace justanlsp
+namespace ls6052
 {
 
 //////////////////////////////////////////////////////////////
@@ -41,4 +41,4 @@ class FakeCompletionProvider : public ICompletionProvider
     void fillFakeComletions(std::vector<CompletionItem> &completions);
 };
 
-} // namespace justanlsp
+} // namespace ls6052

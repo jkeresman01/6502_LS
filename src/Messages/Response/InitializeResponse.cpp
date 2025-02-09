@@ -4,7 +4,7 @@
 #include <sstream>
 #include <string>
 
-namespace justanlsp
+namespace ls6052
 {
 
 InitializeResponse::InitializeResponse(const std::string &jsonRPC, const int64_t &id,
@@ -39,4 +39,4 @@ std::ostream &operator<<(std::ostream &os, const InitializeResponse &initializeR
     return os;
 }
 
-} // namespace justanlsp
+} // namespace ls6052

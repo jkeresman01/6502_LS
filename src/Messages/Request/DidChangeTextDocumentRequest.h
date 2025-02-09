@@ -7,7 +7,7 @@
 #include "../Notification/NotificationMessage.h"
 #include "../Params/DidChangeTextDocumentParams.h"
 
-namespace justanlsp
+namespace ls6052
 {
 
 //////////////////////////////////////////////////////////////
@@ -57,4 +57,4 @@ class DidChangeTextDocumentRequest : public NotificationMessage
     std::shared_ptr<DidChangeTextDocumentParams> m_didChangeTextDocumentParams;
 };
 
-} // namespace justanlsp
+} // namespace ls6052

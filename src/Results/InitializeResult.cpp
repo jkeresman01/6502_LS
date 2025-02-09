@@ -3,7 +3,7 @@
 #include <sstream>
 #include <string>
 
-namespace justanlsp
+namespace ls6052
 {
 
 InitializeResult::InitializeResult(const ServerInfo &serverInfo, const ServerCapabilities &serverCapabilites)
@@ -30,4 +30,4 @@ std::string InitializeResult::toString() const
     return ss.str();
 }
 
-} // namespace justanlsp
+} // namespace ls6052

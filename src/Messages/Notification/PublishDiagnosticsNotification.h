@@ -7,7 +7,7 @@
 #include "../../Params/PublishDiagnosticsParams.h"
 #include "NotificationMessage.h"
 
-namespace justanlsp
+namespace ls6052
 {
 class PublishDiagnosticsNoticifation : public NotificationMessage
 {
@@ -24,4 +24,4 @@ class PublishDiagnosticsNoticifation : public NotificationMessage
   private:
     std::shared_ptr<PublishDiagnosticsParams> m_diagnosticsParams;
 };
-} // namespace justanlsp
+} // namespace ls6052

@@ -4,7 +4,7 @@
 #include <string>
 #include <unordered_map>
 
-namespace justanlsp
+namespace ls6052
 {
 
 //////////////////////////////////////////////////////////////
@@ -117,4 +117,4 @@ class ConfigurationManager
     //////////////////////////////////////////////////////////////
     PropertiesT m_properties;
 };
-} // namespace justanlsp
+} // namespace ls6052

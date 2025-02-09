@@ -1,6 +1,6 @@
 #pragma once
 
-namespace justanlsp
+namespace ls6052
 {
 
 //////////////////////////////////////////////////////////////
@@ -39,4 +39,4 @@ enum class TraceValue
     VERBOSE,
 };
 
-} // namespace justanlsp
+} // namespace ls6052

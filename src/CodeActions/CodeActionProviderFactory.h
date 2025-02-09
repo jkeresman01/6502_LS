@@ -7,7 +7,7 @@
 #include "FakeCodectionsProvider.h"
 #include "ICodeActionsProvider.h"
 
-namespace justanlsp
+namespace ls6052
 {
 
 //////////////////////////////////////////////////////////////
@@ -54,4 +54,4 @@ class CodeActionsProviderFactory
     }
 };
 
-} // namespace justanlsp
+} // namespace ls6052

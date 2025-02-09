@@ -5,7 +5,7 @@
 
 #include "Message.h"
 
-namespace justanlsp
+namespace ls6052
 {
 
 //////////////////////////////////////////////////////////////
@@ -68,4 +68,4 @@ class RequestMessage : public Message
     std::string m_method;
 };
 
-} // namespace justanlsp
+} // namespace ls6052

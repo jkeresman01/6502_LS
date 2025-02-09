@@ -2,7 +2,7 @@
 
 #include "../Utils/Logger.h"
 
-namespace justanlsp
+namespace ls6052
 {
 DidOpenTextDocumentParams::DidOpenTextDocumentParams(const nlohmann::json &jsonRPC)
 {
@@ -21,4 +21,4 @@ void DidOpenTextDocumentParams::setTextDocumentItemKind(const nlohmann::json &js
 
     m_textDocumentItem = std::make_shared<TextDocumentItem>(jsonRPC["textDocument"]);
 }
-} // namespace justanlsp
+} // namespace ls6052

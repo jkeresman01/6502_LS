@@ -1,6 +1,6 @@
 #include "CodeActionResult.h"
 
-namespace justanlsp
+namespace ls6052
 {
 nlohmann::json CodeActionResult::toJson() const
 {
@@ -13,4 +13,4 @@ nlohmann::json CodeActionResult::toJson() const
 
     return json;
 }
-} // namespace justanlsp
+} // namespace ls6052

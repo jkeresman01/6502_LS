@@ -1,6 +1,6 @@
 #include "HoverResponse.h"
 
-namespace justanlsp
+namespace ls6052
 {
 HoverResponse::HoverResponse(const std::string &jsonRPC, const int64_t id, const HoverResult &hoverResult)
     : ResponseMessage(jsonRPC, id), m_hoverResult(hoverResult)
@@ -21,4 +21,4 @@ std::ostream &operator<<(std::ostream &os, const HoverResponse &hoverResponse)
 
     return os;
 }
-} // namespace justanlsp
+} // namespace ls6052

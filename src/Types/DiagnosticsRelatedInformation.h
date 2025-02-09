@@ -4,7 +4,7 @@
 
 #include "Location.h"
 
-namespace justanlsp
+namespace ls6052
 {
 
 //////////////////////////////////////////////////////////////
@@ -34,4 +34,4 @@ struct DiagnosticRelatedInformation
     std::string message;
 };
 
-} // namespace justanlsp
+} // namespace ls6052

@@ -7,7 +7,7 @@
 #include "../Capabilities/ClientCapabilites.h"
 #include "../Types/ClientInfo.h"
 
-namespace justanlsp
+namespace ls6052
 {
 
 //////////////////////////////////////////////////////////////
@@ -118,4 +118,4 @@ class Ls6502Client
     //////////////////////////////////////////////////////////////
     std::unordered_map<std::string, std::string> m_documentsByURI;
 };
-} // namespace justanlsp
+} // namespace ls6052
