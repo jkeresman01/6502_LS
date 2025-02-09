@@ -1,6 +1,6 @@
 #pragma once
 
-namespace ls6052
+namespace ls6502
 {
 // TODO finish documention
 
@@ -54,4 +54,4 @@ enum class AddressingMode
     //////////////////////////////////////////////////////////////
     INVALID,
 };
-} // namespace ls6052
+} // namespace ls6502

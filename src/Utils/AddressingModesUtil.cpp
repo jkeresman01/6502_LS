@@ -5,18 +5,15 @@
 #include "../Enums/AddressingModes.h"
 #include "../Utils/Logger.h"
 
-namespace ls6052
+namespace ls6502
 {
 
 AddressingMode AddressingModeUtil::stringToAddressingMode(const std::string &addressingMode)
 {
     static const StringAddressingModeMapT addressingModes = {
-        {"Immediate", AddressingMode::IMMEDIATE},
-        {"Zero Page,X", AddressingMode::ZERO_PAGE_X},
-        {"Zero Page,Y", AddressingMode::ZERO_PAGE_Y},
-        {"Absolute,X", AddressingMode::ABSOLUTE_X},
-        {"Absolute,Y", AddressingMode::ABSOLUTE_Y},
-        {"Indirect", AddressingMode::INDIRECT_INDEXED}};
+        {"Immediate", AddressingMode::IMMEDIATE},     {"Zero Page,X", AddressingMode::ZERO_PAGE_X},
+        {"Zero Page,Y", AddressingMode::ZERO_PAGE_Y}, {"Absolute,X", AddressingMode::ABSOLUTE_X},
+        {"Absolute,Y", AddressingMode::ABSOLUTE_Y},   {"Indirect", AddressingMode::INDIRECT_INDEXED}};
 
     StringAddressingModeMapT::const_iterator it = addressingModes.find(addressingMode);
 
@@ -32,12 +29,9 @@ AddressingMode AddressingModeUtil::stringToAddressingMode(const std::string &add
 const char *AddressingModeUtil::addressingModeToString(const AddressingMode addressingMode)
 {
     static const AddressingModeStringMapT addressingModes = {
-        {AddressingMode::IMMEDIATE, "Immediate"},
-        {AddressingMode::ZERO_PAGE_X, "Zero Page,X"},
-        {AddressingMode::ZERO_PAGE_Y, "Zero Page,Y"},
-        {AddressingMode::ABSOLUTE_X, "Absolute,X"},
-        {AddressingMode::ABSOLUTE_Y, "Absolute,Y"},
-        {AddressingMode::INDIRECT_INDEXED, "Indirect"}};
+        {AddressingMode::IMMEDIATE, "Immediate"},     {AddressingMode::ZERO_PAGE_X, "Zero Page,X"},
+        {AddressingMode::ZERO_PAGE_Y, "Zero Page,Y"}, {AddressingMode::ABSOLUTE_X, "Absolute,X"},
+        {AddressingMode::ABSOLUTE_Y, "Absolute,Y"},   {AddressingMode::INDIRECT_INDEXED, "Indirect"}};
 
     AddressingModeStringMapT::const_iterator it = addressingModes.find(addressingMode);
 
@@ -50,4 +44,4 @@ const char *AddressingModeUtil::addressingModeToString(const AddressingMode addr
     return it->second.c_str();
 }
 
-} // namespace ls6052
+} // namespace ls6502
