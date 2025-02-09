@@ -16,8 +16,7 @@ AddressingMode AddressingModeUtil::stringToAddressingMode(const std::string &add
         {"Zero Page,Y", AddressingMode::ZERO_PAGE_Y},
         {"Absolute,X", AddressingMode::ABSOLUTE_X},
         {"Absolute,Y", AddressingMode::ABSOLUTE_Y},
-        {"Indirect,X", AddressingMode::INDIRECT_X},
-        {"Indirect,Y", AddressingMode::INDIRECT_Y}};
+        {"Indirect", AddressingMode::INDIRECT_INDEXED}};
 
     StringAddressingModeMapT::const_iterator it = addressingModes.find(addressingMode);
 
@@ -38,8 +37,7 @@ const char *AddressingModeUtil::addressingModeToString(const AddressingMode addr
         {AddressingMode::ZERO_PAGE_Y, "Zero Page,Y"},
         {AddressingMode::ABSOLUTE_X, "Absolute,X"},
         {AddressingMode::ABSOLUTE_Y, "Absolute,Y"},
-        {AddressingMode::INDIRECT_X, "Indirect,X"},
-        {AddressingMode::INDIRECT_Y, "Indirect,Y"}};
+        {AddressingMode::INDIRECT_INDEXED, "Indirect"}};
 
     AddressingModeStringMapT::const_iterator it = addressingModes.find(addressingMode);
 
