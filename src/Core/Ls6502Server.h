@@ -66,11 +66,10 @@ class Ls6502Server
   private:
     //////////////////////////////////////////////////////////////
     ///
-    /// @brief Single simplified interface for handling JustAnLspLSP
-    ///        request messages
+    /// @brief Single simplified interface for handling LSP request
     ///
     //////////////////////////////////////////////////////////////
-    std::shared_ptr<Ls6502Facade> m_justAnLspFacade = std::make_shared<Ls6502Facade>();
+    std::shared_ptr<Ls6502Facade> m_6502Facade = std::make_shared<Ls6502Facade>();
 };
 
 } // namespace justanlsp

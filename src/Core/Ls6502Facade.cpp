@@ -1,11 +1,11 @@
 #include "Ls6502Facade.h"
-#include "Ls6502Server.h"
 
 #include <exception>
 #include <iostream>
 #include <memory>
 #include <vector>
 
+#include "Ls6502Server.h"
 #include "../Enums/ExitStatus.h"
 #include "../Enums/RequestType.h"
 #include "../Enums/TextDocumentSyncKind.h"
@@ -22,7 +22,6 @@
 #include "../Types/CompletionItem.h"
 #include "../Utils/Logger.h"
 #include "../Utils/MessageUtil.h"
-#include "JUstAnLSPClientService.h"
 #include "Ls6502Client.h"
 #include "Ls6502Counter.h"
 #include "Ls6502ErrorHandler.h"

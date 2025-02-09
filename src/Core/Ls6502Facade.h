@@ -17,8 +17,7 @@ namespace justanlsp
 ///
 /// @class Ls6502Facade
 ///
-/// @brief Single simplified interface for handling JustAnLspLSP
-///        request messages
+/// @brief Single simplified interface for handling LSP request messages
 ///
 //////////////////////////////////////////////////////////////
 class Ls6502Facade

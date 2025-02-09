@@ -25,7 +25,6 @@
 #include "../Types/CompletionItem.h"
 #include "../Types/Diagnostic.h"
 #include "../Types/TextDocumentItem.h"
-#include "JUstAnLSPClientService.h"
 
 namespace justanlsp
 {
