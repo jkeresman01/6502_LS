@@ -10,7 +10,7 @@ namespace ls6052
 
 AddressingMode AddressingModeUtil::stringToAddressingMode(const std::string &addressingMode)
 {
-    static const  StringAddressingModeMapT addressingModes = {
+    static const StringAddressingModeMapT addressingModes = {
         {"Immediate", AddressingMode::IMMEDIATE},
         {"Zero Page,X", AddressingMode::ZERO_PAGE_X},
         {"Zero Page,Y", AddressingMode::ZERO_PAGE_Y},
@@ -23,7 +23,7 @@ AddressingMode AddressingModeUtil::stringToAddressingMode(const std::string &add
 
     if (it == addressingModes.end())
     {
-        LS_6502_WARN(STR("Unkknown addressing mode: %s", addressingMode.c_str()));
+        LS_6502_WARN(STR("Unknown addressing mode: %s", addressingMode.c_str()));
         return AddressingMode::INVALID;
     }
 
