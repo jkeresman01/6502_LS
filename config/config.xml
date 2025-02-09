@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <property name="completionProvider">fake</property>
+    <property name="hoverProvider">fake</property>
+    <property name="codeActionProvider">fake</property>
+    <property name="diagnosticsProvider">fake</property>
+    <property name="snippetsProvider">fake</property>
+</config>
+

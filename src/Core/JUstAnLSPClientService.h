@@ -1,0 +1,82 @@
+#pragma once
+
+#include "Ls6502Client.h"
+
+#include <cstdint>
+#include <map>
+
+namespace justanlsp
+{
+
+//////////////////////////////////////////////////////////////
+///
+/// Typedefs
+///
+//////////////////////////////////////////////////////////////
+typedef std::map<uint32_t, Ls6502Client> Ls6502ClientsMapT;
+
+//////////////////////////////////////////////////////////////
+///
+/// @class Ls6502ClientService
+///
+/// @brief Responsible for keeping track of registered clients.
+///        Implemented using Meyer's variant of Singleton pattern.
+///
+//////////////////////////////////////////////////////////////
+class Ls6502ClientService
+{
+  public:
+    //////////////////////////////////////////////////////////////
+    ///
+    /// @brief Constructors (default, copy, move)
+    ///        and assignment operators
+    ///
+    //////////////////////////////////////////////////////////////
+    Ls6502ClientService() = default;
+    Ls6502ClientService(const Ls6502ClientService &) = delete;
+    Ls6502ClientService(Ls6502ClientService &&) = delete;
+    Ls6502ClientService &operator=(const Ls6502ClientService &) = delete;
+    Ls6502ClientService &operator=(Ls6502ClientService &&) = delete;
+
+    //////////////////////////////////////////////////////////////
+    ///
+    /// @brief Gets the singleton instance of the Ls6502ClientService
+    ///
+    //////////////////////////////////////////////////////////////
+    static Ls6502ClientService &getInstance();
+
+    //////////////////////////////////////////////////////////////
+    ///
+    /// @brief Registers the new client
+    ///
+    /// @param client that will get registed
+    ///
+    //////////////////////////////////////////////////////////////
+    void registerClient(const Ls6502Client &client);
+
+    //////////////////////////////////////////////////////////////
+    ///
+    /// @brief Gets the client by its ID
+    ///
+    /// @param clientId
+    ///
+    //////////////////////////////////////////////////////////////
+    Ls6502Client getClientById(uint32_t clientId) const;
+
+  private:
+    //////////////////////////////////////////////////////////////
+    ///
+    /// @brief Registered clients mapped by their coressponding IDs
+    ///
+    //////////////////////////////////////////////////////////////
+    Ls6502ClientsMapT m_registeredClients;
+
+    //////////////////////////////////////////////////////////////
+    ///
+    /// @brief Id that will be given to client upon registration
+    ///
+    //////////////////////////////////////////////////////////////
+    static uint32_t m_clientId;
+};
+
+} // namespace justanlsp

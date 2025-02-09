@@ -1,0 +1,121 @@
+#pragma once
+
+#include <memory>
+#include <string>
+#include <unordered_map>
+
+#include "../Capabilities/ClientCapabilites.h"
+#include "../Types/ClientInfo.h"
+
+namespace justanlsp
+{
+
+//////////////////////////////////////////////////////////////
+///
+/// @class Ls6502Client
+///
+/// @brief Represent the client that connects to Ls6502 server
+///
+//////////////////////////////////////////////////////////////
+class Ls6502Client
+{
+  public:
+    //////////////////////////////////////////////////////////////
+    ///
+    /// @brief Default constructor
+    ///
+    //////////////////////////////////////////////////////////////
+    Ls6502Client() = default;
+
+    //////////////////////////////////////////////////////////////
+    ///
+    /// @brief Constructor that saves client info and registers
+    ///        clients capabilities
+    ///
+    /// @param clientInfo
+    /// @param clientCapabilites
+    ///
+    //////////////////////////////////////////////////////////////
+    Ls6502Client(const ClientInfo &clientInfo,
+                    const std::shared_ptr<ClientCapabilities> &clientCapabilites);
+
+    //////////////////////////////////////////////////////////////
+    ///
+    /// @brief Registers client capabilities (features supported
+    ///        by the editor or tool)
+    ///
+    /// @param clientCapabilites
+    ///
+    //////////////////////////////////////////////////////////////
+    void registerCapabilites(const std::shared_ptr<ClientCapabilities> &clientCapabilites);
+
+    //////////////////////////////////////////////////////////////
+    ///
+    /// @brief Saves info about the client (name and version)
+    ///
+    /// @param clientInfo
+    ///
+    //////////////////////////////////////////////////////////////
+    void saveInfo(const ClientInfo &clientInfo);
+
+    //////////////////////////////////////////////////////////////
+    ///
+    /// @brief Adds new document to keep track of
+    ///
+    /// @param URI
+    /// @param document
+    ///
+    //////////////////////////////////////////////////////////////
+    void addDocument(const std::string &URI, const std::string &document);
+
+    //////////////////////////////////////////////////////////////
+    ///
+    /// @brief Adds new document to keep track of
+    ///
+    /// @param URI
+    /// @param document
+    ///
+    //////////////////////////////////////////////////////////////
+    void updateDocumentWithURI(const std::string &URI, const std::string &document);
+
+    //////////////////////////////////////////////////////////////
+    ///
+    /// @brief Gets document by provided URI
+    ///
+    /// @param URI
+    ///
+    //////////////////////////////////////////////////////////////
+    std::string getDocumentByURI(const std::string &URI) const;
+
+    //////////////////////////////////////////////////////////////
+    ///
+    /// @brief Gets string represenation of client information
+    ///
+    /// @return clientInfo
+    ///
+    //////////////////////////////////////////////////////////////
+    std::string getInfo() const { return m_clientInfo.toString(); };
+
+  private:
+    //////////////////////////////////////////////////////////////
+    ///
+    /// @brief Client capabilites
+    ///
+    //////////////////////////////////////////////////////////////
+    std::shared_ptr<ClientCapabilities> m_clientCapabilities = std::make_shared<ClientCapabilities>();
+
+    //////////////////////////////////////////////////////////////
+    ///
+    /// @brief Client information (name and version)
+    ///
+    //////////////////////////////////////////////////////////////
+    ClientInfo m_clientInfo;
+
+    //////////////////////////////////////////////////////////////
+    ///
+    /// @brief Documents mapped by their corresponding URI
+    ///
+    //////////////////////////////////////////////////////////////
+    std::unordered_map<std::string, std::string> m_documentsByURI;
+};
+} // namespace justanlsp
