@@ -1,0 +1,27 @@
+name: Static analysis
+
+on:
+  push:
+    branches: main
+
+jobs:
+  cppcheck:
+    name: Static analysis
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Install cppcheck
+      run: sudo apt-get install -y cppcheck
+
+    - name: Run static analysis with cppcheck
+      run: |
+        cppcheck src/ --enable=all . \
+        --suppress=missingIncludeSystem 2> cppcheck-report.txt
+        if [ -s cppcheck-report.txt ]; then
+          echo "Reported issue: "
+          cat cppcheck-report.txt
+          exit 1
+        fi
