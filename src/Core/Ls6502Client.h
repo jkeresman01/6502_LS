@@ -36,8 +36,7 @@ class Ls6502Client
     /// @param clientCapabilites
     ///
     //////////////////////////////////////////////////////////////
-    Ls6502Client(const ClientInfo &clientInfo,
-                    const std::shared_ptr<ClientCapabilities> &clientCapabilites);
+    Ls6502Client(const ClientInfo &clientInfo, const std::shared_ptr<ClientCapabilities> &clientCapabilites);
 
     //////////////////////////////////////////////////////////////
     ///

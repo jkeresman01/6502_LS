@@ -159,8 +159,7 @@ class Ls6502Facade
     /// @brief Responsible for handling request such as init/shutdown
     ///
     //////////////////////////////////////////////////////////////
-    std::unique_ptr<Ls6502ErrorHandler> m_ls6502ErrorHandler =
-        std::make_unique<Ls6502ErrorHandler>();
+    std::unique_ptr<Ls6502ErrorHandler> m_ls6502ErrorHandler = std::make_unique<Ls6502ErrorHandler>();
 
     //////////////////////////////////////////////////////////////
     ///

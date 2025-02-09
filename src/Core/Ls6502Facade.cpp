@@ -5,7 +5,6 @@
 #include <memory>
 #include <vector>
 
-#include "Ls6502Server.h"
 #include "../Enums/ExitStatus.h"
 #include "../Enums/RequestType.h"
 #include "../Enums/TextDocumentSyncKind.h"

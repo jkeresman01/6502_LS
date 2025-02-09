@@ -63,7 +63,7 @@ void ConfigurationManager::load(std::ifstream &in)
         else
         {
             LS_6502_WARN(STR("Found empty property: [\"%s\"] : [\"%s\"]", property.first.c_str(),
-                          property.second.c_str()));
+                             property.second.c_str()));
         }
     }
 }

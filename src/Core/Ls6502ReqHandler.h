@@ -2,9 +2,9 @@
 
 #include <memory>
 
-#include "../Diagnostics/IDiagnosticsProvider.h"
 #include "../CodeActions/ICodeActionsProvider.h"
 #include "../Completions/ICompletionProvider.h"
+#include "../Diagnostics/IDiagnosticsProvider.h"
 #include "../Messages/Request/CodeActionRequest.h"
 #include "../Messages/Request/CompletionRequest.h"
 #include "../Messages/Request/DefinitionRequest.h"

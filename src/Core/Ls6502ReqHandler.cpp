@@ -144,8 +144,7 @@ void Ls6502ReqHandler::textDocumentHoverReq(const std::shared_ptr<HoverRequest> 
     // TODO hover logic
 }
 
-void Ls6502ReqHandler::textDocumentCodeActionReq(
-    const std::shared_ptr<CodeActionRequest> &codeActionRequest)
+void Ls6502ReqHandler::textDocumentCodeActionReq(const std::shared_ptr<CodeActionRequest> &codeActionRequest)
 {
     LS_6502_DEBUG("Processing textDocument/codeAction request");
 

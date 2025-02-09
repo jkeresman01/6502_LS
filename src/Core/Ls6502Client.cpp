@@ -8,7 +8,7 @@ namespace ls6052
 {
 
 Ls6502Client::Ls6502Client(const ClientInfo &clientInfo,
-                                 const std::shared_ptr<ClientCapabilities> &clientCapabilites)
+                           const std::shared_ptr<ClientCapabilities> &clientCapabilites)
 {
     saveInfo(clientInfo);
     registerCapabilites(clientCapabilites);
@@ -29,7 +29,7 @@ void Ls6502Client::addDocument(const std::string &URI, const std::string &docume
     m_documentsByURI.emplace(URI, document);
 
     LS_6502_DEBUG(STR("Added text document with URI: %s, for client: %s", URI.c_str(),
-                   m_clientInfo.toString().c_str()));
+                      m_clientInfo.toString().c_str()));
 }
 
 std::string Ls6502Client::getDocumentByURI(const std::string &URI) const
@@ -50,7 +50,7 @@ void Ls6502Client::updateDocumentWithURI(const std::string &URI, const std::stri
     m_documentsByURI[URI] = document;
 
     LS_6502_DEBUG(STR("Updated text document with URI: %s, for client: %s", URI.c_str(),
-                   m_clientInfo.toString().c_str()));
+                      m_clientInfo.toString().c_str()));
 }
 
 } // namespace ls6052

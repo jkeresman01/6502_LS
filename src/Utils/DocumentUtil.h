@@ -92,7 +92,7 @@ inline std::string DocumentUtil::extractPrefix(const std::string &document, cons
     if (!isValidPosition)
     {
         LS_6502_WARN(STR("Invalid position, when trying to extract prefix, at line %zu, character %zu:",
-                      position.line, position.character));
+                         position.line, position.character));
         return std::string();
     }
 
@@ -102,7 +102,7 @@ inline std::string DocumentUtil::extractPrefix(const std::string &document, cons
     std::string word = line.substr(start, end - start);
 
     LS_6502_DEBUG(STR("Extracted word \"%s\" from document at line %zu, character %zu", word.c_str(),
-                   position.line, position.character));
+                      position.line, position.character));
 
     return word;
 }
