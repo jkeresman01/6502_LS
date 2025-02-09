@@ -1,11 +1,20 @@
 #pragma once
 
 #include <string>
+#include <unordered_map>
 
 #include "../Enums/AddressingModes.h"
 
 namespace ls6052
 {
+
+//////////////////////////////////////////////////////////////
+///
+/// Typedefs
+///
+//////////////////////////////////////////////////////////////
+typedef std::unordered_map<std::string, AddressingMode> StringAddressingModeMapT;
+typedef std::unordered_map<AddressingMode, std::string> AddressingModeStringMapT;
 
 class AddressingModeUtil
 {
