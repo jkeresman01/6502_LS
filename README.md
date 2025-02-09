@@ -4,8 +4,7 @@ Toy langaguge server for 6052 assembly, providing completion items and informati
 
 ## 6502 processor ##
 
-![image](https://github.com/user-attachments/assets/8aca9304-e6aa-4dff-9ba2-453673fd37aa)
-
+TODO: short desc
 
 Registers:
 
