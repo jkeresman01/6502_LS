@@ -1,0 +1,41 @@
+#pragma once
+
+namespace ls6052
+{
+//TODO finish documention
+
+//////////////////////////////////////////////////////////////
+///
+/// @enum AddressingMode 
+///
+/// @brief Addressing modes implemented by the 6502 processor
+///
+//////////////////////////////////////////////////////////////
+enum class AddressingMode 
+{
+    ZERO_PAGE,
+
+    //////////////////////////////////////////////////////////////
+    ///
+    /// @brief In immediate addressing, the operand value immediatly 
+    ///        follows the opcode in memmory
+    ///
+    //////////////////////////////////////////////////////////////
+    IMMEDIATE,
+
+    //////////////////////////////////////////////////////////////
+    ///
+    /// @brief In absoule (direct) addressing, we specify the the 
+    ///        memmory location containg the value to be read or 
+    ///        written by the instruction
+    ///
+    //////////////////////////////////////////////////////////////
+    ABSOLUTE,
+
+    ABSOLUTE_INDEXED,
+
+    INDIRECT,
+};   
+}
+
+
