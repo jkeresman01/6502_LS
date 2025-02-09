@@ -1,0 +1,63 @@
+{
+    "LDA": {
+        "description": "Load Accumulator",
+        "addressing_modes": {
+            "Immediate": { "syntax": "LDA #$44", "bytes": 2, "cycles": 2 },
+            "Zero Page": { "syntax": "LDA $44", "bytes": 2, "cycles": 3 },
+            "Zero Page,X": { "syntax": "LDA $44,X", "bytes": 2, "cycles": 4 },
+            "Absolute": { "syntax": "LDA $4400", "bytes": 3, "cycles": 4 },
+            "Absolute,X": { "syntax": "LDA $4400,X", "bytes": 3, "cycles": 4 },
+            "Absolute,Y": { "syntax": "LDA $4400,Y", "bytes": 3, "cycles": 4 },
+            "Indirect,X": { "syntax": "LDA ($44,X)", "bytes": 2, "cycles": 6 },
+            "Indirect,Y": { "syntax": "LDA ($44),Y", "bytes": 2, "cycles": 5 }
+        }
+    },
+    "LDX": {
+        "description": "Load X Register",
+        "addressing_modes": {
+            "Immediate": { "syntax": "LDX #$44", "bytes": 2, "cycles": 2 },
+            "Zero Page": { "syntax": "LDX $44", "bytes": 2, "cycles": 3 },
+            "Zero Page,Y": { "syntax": "LDX $44,Y", "bytes": 2, "cycles": 4 },
+            "Absolute": { "syntax": "LDX $4400", "bytes": 3, "cycles": 4 },
+            "Absolute,Y": { "syntax": "LDX $4400,Y", "bytes": 3, "cycles": 4 }
+        }
+    },
+    "LDY": {
+        "description": "Load Y Register",
+        "addressing_modes": {
+            "Immediate": { "syntax": "LDY #$44", "bytes": 2, "cycles": 2 },
+            "Zero Page": { "syntax": "LDY $44", "bytes": 2, "cycles": 3 },
+            "Zero Page,X": { "syntax": "LDY $44,X", "bytes": 2, "cycles": 4 },
+            "Absolute": { "syntax": "LDY $4400", "bytes": 3, "cycles": 4 },
+            "Absolute,X": { "syntax": "LDY $4400,X", "bytes": 3, "cycles": 4 }
+        }
+    },
+    "STA": {
+        "description": "Store Accumulator",
+        "addressing_modes": {
+            "Zero Page": { "syntax": "STA $44", "bytes": 2, "cycles": 3 },
+            "Zero Page,X": { "syntax": "STA $44,X", "bytes": 2, "cycles": 4 },
+            "Absolute": { "syntax": "STA $4400", "bytes": 3, "cycles": 4 },
+            "Absolute,X": { "syntax": "STA $4400,X", "bytes": 3, "cycles": 5 },
+            "Absolute,Y": { "syntax": "STA $4400,Y", "bytes": 3, "cycles": 5 },
+            "Indirect,X": { "syntax": "STA ($44,X)", "bytes": 2, "cycles": 6 },
+            "Indirect,Y": { "syntax": "STA ($44),Y", "bytes": 2, "cycles": 6 }
+        }
+    },
+    "STX": {
+        "description": "Store X Register",
+        "addressing_modes": {
+            "Zero Page": { "syntax": "STX $44", "bytes": 2, "cycles": 3 },
+            "Zero Page,Y": { "syntax": "STX $44,Y", "bytes": 2, "cycles": 4 },
+            "Absolute": { "syntax": "STX $4400", "bytes": 3, "cycles": 4 }
+        }
+    },
+    "STY": {
+        "description": "Store Y Register",
+        "addressing_modes": {
+            "Zero Page": { "syntax": "STY $44", "bytes": 2, "cycles": 3 },
+            "Zero Page,X": { "syntax": "STY $44,X", "bytes": 2, "cycles": 4 },
+            "Absolute": { "syntax": "STY $4400", "bytes": 3, "cycles": 4 }
+        }
+    }
+}
