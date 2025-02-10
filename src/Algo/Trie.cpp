@@ -2,7 +2,7 @@
 
 #include <memory>
 
-namespace ls6052
+namespace ls6502
 {
 void Trie::insert(const std::string &word)
 {
