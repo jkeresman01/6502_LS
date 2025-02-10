@@ -1,63 +1,51 @@
 {
-    "LDA": {
-        "description": "Load Accumulator",
-        "addressing_modes": {
-            "Immediate": { "syntax": "LDA #$44", "bytes": 2, "cycles": 2 },
-            "Zero Page": { "syntax": "LDA $44", "bytes": 2, "cycles": 3 },
-            "Zero Page,X": { "syntax": "LDA $44,X", "bytes": 2, "cycles": 4 },
-            "Absolute": { "syntax": "LDA $4400", "bytes": 3, "cycles": 4 },
-            "Absolute,X": { "syntax": "LDA $4400,X", "bytes": 3, "cycles": 4 },
-            "Absolute,Y": { "syntax": "LDA $4400,Y", "bytes": 3, "cycles": 4 },
-            "Indirect,X": { "syntax": "LDA ($44,X)", "bytes": 2, "cycles": 6 },
-            "Indirect,Y": { "syntax": "LDA ($44),Y", "bytes": 2, "cycles": 5 }
-        }
+  "instructions": [
+    {
+      "mnemonic": "ADC",
+      "description": "Add Memory to Accumulator with Carry",
+      "operation": "A + M + C -> A, C",
+      "flags": {
+        "N": true,
+        "Z": true,
+        "C": true,
+        "I": false,
+        "D": false,
+        "V": true
+      },
+      "addressing_modes": [
+        {"mode": "immediate", "assembler": "ADC #oper", "opcode": "69", "bytes": 2, "cycles": 2},
+        {"mode": "zeropage", "assembler": "ADC oper", "opcode": "65", "bytes": 2, "cycles": 3},
+        {"mode": "zeropage,X", "assembler": "ADC oper,X", "opcode": "75", "bytes": 2, "cycles": 4},
+        {"mode": "absolute", "assembler": "ADC oper", "opcode": "6D", "bytes": 3, "cycles": 4},
+        {"mode": "absolute,X", "assembler": "ADC oper,X", "opcode": "7D", "bytes": 3, "cycles": 4, "extra_cycle": true},
+        {"mode": "absolute,Y", "assembler": "ADC oper,Y", "opcode": "79", "bytes": 3, "cycles": 4, "extra_cycle": true},
+        {"mode": "(indirect,X)", "assembler": "ADC (oper,X)", "opcode": "61", "bytes": 2, "cycles": 6},
+        {"mode": "(indirect),Y", "assembler": "ADC (oper),Y", "opcode": "71", "bytes": 2, "cycles": 5, "extra_cycle": true}
+      ]
     },
-    "LDX": {
-        "description": "Load X Register",
-        "addressing_modes": {
-            "Immediate": { "syntax": "LDX #$44", "bytes": 2, "cycles": 2 },
-            "Zero Page": { "syntax": "LDX $44", "bytes": 2, "cycles": 3 },
-            "Zero Page,Y": { "syntax": "LDX $44,Y", "bytes": 2, "cycles": 4 },
-            "Absolute": { "syntax": "LDX $4400", "bytes": 3, "cycles": 4 },
-            "Absolute,Y": { "syntax": "LDX $4400,Y", "bytes": 3, "cycles": 4 }
-        }
-    },
-    "LDY": {
-        "description": "Load Y Register",
-        "addressing_modes": {
-            "Immediate": { "syntax": "LDY #$44", "bytes": 2, "cycles": 2 },
-            "Zero Page": { "syntax": "LDY $44", "bytes": 2, "cycles": 3 },
-            "Zero Page,X": { "syntax": "LDY $44,X", "bytes": 2, "cycles": 4 },
-            "Absolute": { "syntax": "LDY $4400", "bytes": 3, "cycles": 4 },
-            "Absolute,X": { "syntax": "LDY $4400,X", "bytes": 3, "cycles": 4 }
-        }
-    },
-    "STA": {
-        "description": "Store Accumulator",
-        "addressing_modes": {
-            "Zero Page": { "syntax": "STA $44", "bytes": 2, "cycles": 3 },
-            "Zero Page,X": { "syntax": "STA $44,X", "bytes": 2, "cycles": 4 },
-            "Absolute": { "syntax": "STA $4400", "bytes": 3, "cycles": 4 },
-            "Absolute,X": { "syntax": "STA $4400,X", "bytes": 3, "cycles": 5 },
-            "Absolute,Y": { "syntax": "STA $4400,Y", "bytes": 3, "cycles": 5 },
-            "Indirect,X": { "syntax": "STA ($44,X)", "bytes": 2, "cycles": 6 },
-            "Indirect,Y": { "syntax": "STA ($44),Y", "bytes": 2, "cycles": 6 }
-        }
-    },
-    "STX": {
-        "description": "Store X Register",
-        "addressing_modes": {
-            "Zero Page": { "syntax": "STX $44", "bytes": 2, "cycles": 3 },
-            "Zero Page,Y": { "syntax": "STX $44,Y", "bytes": 2, "cycles": 4 },
-            "Absolute": { "syntax": "STX $4400", "bytes": 3, "cycles": 4 }
-        }
-    },
-    "STY": {
-        "description": "Store Y Register",
-        "addressing_modes": {
-            "Zero Page": { "syntax": "STY $44", "bytes": 2, "cycles": 3 },
-            "Zero Page,X": { "syntax": "STY $44,X", "bytes": 2, "cycles": 4 },
-            "Absolute": { "syntax": "STY $4400", "bytes": 3, "cycles": 4 }
-        }
+    {
+      "mnemonic": "AND",
+      "description": "AND Memory with Accumulator",
+      "operation": "A AND M -> A",
+      "flags": {
+        "N": true,
+        "Z": true,
+        "C": false,
+        "I": false,
+        "D": false,
+        "V": false
+      },
+      "addressing_modes": [
+        {"mode": "immediate", "assembler": "AND #oper", "opcode": "29", "bytes": 2, "cycles": 2},
+        {"mode": "zeropage", "assembler": "AND oper", "opcode": "25", "bytes": 2, "cycles": 3},
+        {"mode": "zeropage,X", "assembler": "AND oper,X", "opcode": "35", "bytes": 2, "cycles": 4},
+        {"mode": "absolute", "assembler": "AND oper", "opcode": "2D", "bytes": 3, "cycles": 4},
+        {"mode": "absolute,X", "assembler": "AND oper,X", "opcode": "3D", "bytes": 3, "cycles": 4, "extra_cycle": true},
+        {"mode": "absolute,Y", "assembler": "AND oper,Y", "opcode": "39", "bytes": 3, "cycles": 4, "extra_cycle": true},
+        {"mode": "(indirect,X)", "assembler": "AND (oper,X)", "opcode": "21", "bytes": 2, "cycles": 6},
+        {"mode": "(indirect),Y", "assembler": "AND (oper),Y", "opcode": "31", "bytes": 2, "cycles": 5, "extra_cycle": true}
+      ]
     }
+  ]
 }
+

@@ -5,6 +5,7 @@
 #include "../CodeActions/ICodeActionsProvider.h"
 #include "../Completions/ICompletionProvider.h"
 #include "../Diagnostics/IDiagnosticsProvider.h"
+#include "../Hover/IHoverProvider.h"
 #include "../Messages/Request/CodeActionRequest.h"
 #include "../Messages/Request/CompletionRequest.h"
 #include "../Messages/Request/DefinitionRequest.h"
@@ -13,6 +14,7 @@
 #include "../Messages/Request/HoverRequest.h"
 #include "../Messages/Request/InitializeRequest.h"
 #include "../Messages/Request/ShutdownRequest.h"
+#include "../Snippets/ISnippetProvider.h"
 #include "Ls6502Client.h"
 #include "Ls6502Counter.h"
 
@@ -143,5 +145,19 @@ class Ls6502ReqHandler
     ///
     //////////////////////////////////////////////////////////////
     std::shared_ptr<ICodeActionsProvider> m_codeActionsProvider;
+
+    //////////////////////////////////////////////////////////////
+    ///
+    /// @brief shared pointer to hover provider object
+    ///
+    //////////////////////////////////////////////////////////////
+    std::shared_ptr<IHoverProvider> m_hoverProvider;
+
+    //////////////////////////////////////////////////////////////
+    ///
+    /// @brief shared pointer to snippet provider object
+    ///
+    //////////////////////////////////////////////////////////////
+    std::shared_ptr<ISnippetProvider> m_snippetProvider;
 };
 } // namespace ls6502

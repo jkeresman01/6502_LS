@@ -13,15 +13,21 @@
 #include "../Diagnostics/FakeDiagnosticsProvider.h"
 #include "../Diagnostics/IDiagnosticsProvider.h"
 #include "../Enums/TextDocumentSyncKind.h"
+#include "../Hover/HoverProviderFactory.h"
 #include "../Messages/Notification/PublishDiagnosticsNotification.h"
+#include "../Messages/Response/CodeActionResponse.h"
 #include "../Messages/Response/CompletionResponse.h"
+#include "../Messages/Response/HoverResponse.h"
 #include "../Messages/Response/InitializeResponse.h"
 #include "../Messages/Response/ShutdownResponse.h"
 #include "../Params/DidChangeTextDocumentParams.h"
 #include "../Params/DidOpenTextDocumentParams.h"
 #include "../Params/PublishDiagnosticsParams.h"
+#include "../Results/CodeActionResult.h"
 #include "../Results/CompletionResult.h"
+#include "../Results/HoverResult.h"
 #include "../Rpc/Rpc.h"
+#include "../Snippets/SnippetProviderFactory.h"
 #include "../Types/CompletionItem.h"
 #include "../Types/Diagnostic.h"
 #include "../Types/TextDocumentItem.h"
@@ -32,6 +38,7 @@ namespace ls6502
 Ls6502ReqHandler::Ls6502ReqHandler()
     : m_diagnosticsProvider(DiagnosticsProviderFactory::create()),
       m_completionProvider(CompletionProviderFactory::create()),
+      m_hoverProvider(HoverProviderFactory::create()), m_snippetProvider(SnippetProviderFactory::create()),
       m_codeActionsProvider(CodeActionsProviderFactory::create())
 {
 }
@@ -137,11 +144,18 @@ void Ls6502ReqHandler::textDocumentHoverReq(const std::shared_ptr<HoverRequest> 
     std::shared_ptr<HoverParams> hoverParams = hoverTextDocumentReq->getParams();
 
     std::string URI = hoverParams->getTextDocumentIdentifier().URI;
-    Position position = hoverParams->getPosition();
 
+    Position position = hoverParams->getPosition();
     std::string document = m_ls6502Client->getDocumentByURI(URI);
 
-    // TODO hover logic
+    int64_t requestId = hoverTextDocumentReq->getId();
+
+    std::string hoverItem = m_hoverProvider->getHoverItems();
+
+    HoverResult hoverResult(hoverItem);
+    HoverResponse hoverResponse("2.0", requestId, hoverResult);
+
+    Rpc::send(hoverResponse);
 }
 
 void Ls6502ReqHandler::textDocumentCodeActionReq(const std::shared_ptr<CodeActionRequest> &codeActionRequest)
@@ -150,7 +164,19 @@ void Ls6502ReqHandler::textDocumentCodeActionReq(const std::shared_ptr<CodeActio
 
     std::shared_ptr<CodeActionParams> codeActionParams = codeActionRequest->getParams();
 
-    // TODO hover logic
+    std::string URI = codeActionParams->getURI();
+    Range range = codeActionParams->getRange();
+
+    std::string document = m_ls6502Client->getDocumentByURI(URI);
+
+    std::vector<CodeAction> codeActions = m_codeActionsProvider->getCodeActions();
+
+    int64_t requestId = codeActionRequest->getId();
+
+    CodeActionResult codeActionResult({codeActions});
+    CodeActionResponse codeActionsResponse{"2.0", requestId, codeActionResult};
+
+    Rpc::send(codeActionsResponse);
 }
 
 void Ls6502ReqHandler::textDocumentDefinitionReq(const std::shared_ptr<DefintionRequest> &defintionRequest)
@@ -158,6 +184,8 @@ void Ls6502ReqHandler::textDocumentDefinitionReq(const std::shared_ptr<Defintion
     LS_6502_DEBUG("Processing textDocument/definition request");
 
     std::shared_ptr<DefinitionParams> definitionParams = defintionRequest->getParams();
+
+    // TODO definitintion req -> remove
 }
 
 void Ls6502ReqHandler::shutdownReq(const std::shared_ptr<ShutdownRequest> &shutdownRequest)

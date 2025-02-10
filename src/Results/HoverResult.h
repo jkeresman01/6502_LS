@@ -23,7 +23,16 @@ class HoverResult
     /// @param value The string value to be displayed in the hover result.
     ///
     //////////////////////////////////////////////////////////////
-    HoverResult(const std::string &value) : m_value(value){};
+    explicit HoverResult(const std::string &value) : m_value(value), m_kind("markdown"){};
+
+    //////////////////////////////////////////////////////////////
+    ///
+    /// @brief Accessor method for hover result value
+    ///
+    /// @return value Hover result value
+    ///
+    //////////////////////////////////////////////////////////////
+    std::string getResult() const { return m_value; };
 
     //////////////////////////////////////////////////////////////
     ///
@@ -32,7 +41,7 @@ class HoverResult
     /// @return A nlohmann::json object containing the hover result
     ///
     //////////////////////////////////////////////////////////////
-    nlohmann::json toJson() const { return {{"result", m_value}}; };
+    nlohmann::json toJson() const { return {{"contents", {"kind", m_kind}, {"value", m_value}}}; }
 
   private:
     //////////////////////////////////////////////////////////////
@@ -41,6 +50,13 @@ class HoverResult
     ///
     //////////////////////////////////////////////////////////////
     std::string m_value;
+
+    //////////////////////////////////////////////////////////////
+    ///
+    /// @brief The kind of the hover
+    ///
+    //////////////////////////////////////////////////////////////
+    std::string m_kind;
 };
 
 } // namespace ls6502

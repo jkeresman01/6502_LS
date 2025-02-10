@@ -11,7 +11,6 @@ namespace ls6502
 //////////////////////////////////////////////////////////////
 ///
 /// @class RequestMessage
-///
 /// @brief A request message to describe a request between
 ///        the client (editor) and the server.
 ///

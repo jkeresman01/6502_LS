@@ -6,6 +6,7 @@
 
 namespace ls6502
 {
+
 class IInstructionSetRepository
 {
   public:
