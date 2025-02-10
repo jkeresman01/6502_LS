@@ -7,7 +7,7 @@
 
 using namespace std::chrono;
 
-namespace ls6052
+namespace ls6502
 {
 
 /////////////////////////////////////////////////////////////////////
@@ -60,4 +60,4 @@ inline std::ostream &TimeUtil::putTime(std::ostream &out, const std::time_t &tim
     return out << std::put_time(std::localtime(&time), "%Y-%m-%d %H:%M:%S");
 }
 
-} // namespace ls6052
+} // namespace ls6502

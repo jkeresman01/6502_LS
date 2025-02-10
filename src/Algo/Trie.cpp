@@ -61,4 +61,4 @@ void Trie::findAllWords(std::shared_ptr<TrieNode> node, const std::string &prefi
     }
 }
 
-} // namespace ls6052
+} // namespace ls6502

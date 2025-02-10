@@ -5,7 +5,7 @@
 #include "../Capabilities/TextDocumentSyncClientCapabilites.h"
 #include "HoverClientCapabilities.h"
 
-namespace ls6052
+namespace ls6502
 {
 
 //////////////////////////////////////////////////////////////
@@ -63,4 +63,4 @@ class TextDocumentCapabilities
     //////////////////////////////////////////////////////////////
     HoverClientCapabilities m_hover;
 };
-} // namespace ls6052
+} // namespace ls6502

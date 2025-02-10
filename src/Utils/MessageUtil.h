@@ -7,7 +7,7 @@
 #include "Logger.h"
 #include "RequestMethodUtil.h"
 
-namespace ls6052
+namespace ls6502
 {
 
 /////////////////////////////////////////////////////////////////////
@@ -83,4 +83,4 @@ inline RequestType MessageUtil::getType(const nlohmann::json &request)
     return RequestMethodUtil::getType(method);
 }
 
-} // namespace ls6052
+} // namespace ls6502

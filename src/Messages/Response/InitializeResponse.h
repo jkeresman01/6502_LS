@@ -9,7 +9,7 @@
 #include "ResponseError.h"
 #include "ResponseMessage.h"
 
-namespace ls6052
+namespace ls6502
 {
 
 //////////////////////////////////////////////////////////////
@@ -74,4 +74,4 @@ class InitializeResponse : public ResponseMessage
     InitializeResult m_initializeResut;
 };
 
-} // namespace ls6052
+} // namespace ls6502

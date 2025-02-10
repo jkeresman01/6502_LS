@@ -7,7 +7,7 @@
 #include <unordered_map>
 #include <vector>
 
-namespace ls6052
+namespace ls6502
 {
 
 //////////////////////////////////////////////////////////////
@@ -31,4 +31,4 @@ class WorkspaceEdit
   private:
     ChangesT m_changes;
 };
-} // namespace ls6052
+} // namespace ls6502

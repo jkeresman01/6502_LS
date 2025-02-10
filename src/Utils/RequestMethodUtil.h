@@ -5,7 +5,7 @@
 #include "../Enums/RequestType.h"
 #include "../Utils/Logger.h"
 
-namespace ls6052
+namespace ls6502
 {
 
 /////////////////////////////////////////////////////////////////////
@@ -92,4 +92,4 @@ RequestType inline RequestMethodUtil::getType(const std::string &method)
     }
 }
 
-} // namespace ls6052
+} // namespace ls6502

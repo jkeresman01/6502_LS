@@ -7,7 +7,7 @@
 #include "../Enums/CodeActionKind.h"
 #include "WorkspaceEdit.h"
 
-namespace ls6052
+namespace ls6502
 {
 //////////////////////////////////////////////////////////////
 ///
@@ -179,4 +179,4 @@ class CodeAction
     //////////////////////////////////////////////////////////////
     WorkspaceEdit m_workspaceEdit;
 };
-} // namespace ls6052
+} // namespace ls6502

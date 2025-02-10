@@ -6,7 +6,7 @@
 
 #include "../Types/Diagnostic.h"
 
-namespace ls6052
+namespace ls6502
 {
 class PublishDiagnosticsParams
 {
@@ -55,4 +55,4 @@ class PublishDiagnosticsParams
     //////////////////////////////////////////////////////////////
     std::vector<Diagnostic> m_diagnostics;
 };
-} // namespace ls6052
+} // namespace ls6502

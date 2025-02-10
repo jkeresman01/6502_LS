@@ -1,7 +1,7 @@
 #include "ResponseMessage.h"
 #include <ostream>
 
-namespace ls6052
+namespace ls6502
 {
 
 ResponseMessage::ResponseMessage(const std::string &jsonRpc, int64_t id) : Message(jsonRpc), m_id(id){};
@@ -32,4 +32,4 @@ std::ostream &operator<<(std::ostream &os, const ResponseMessage &responseMessag
     return os;
 }
 
-} // namespace ls6052
+} // namespace ls6502

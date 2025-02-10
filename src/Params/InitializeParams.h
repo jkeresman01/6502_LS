@@ -11,7 +11,7 @@
 #include "../Enums/TraceValue.h"
 #include "../Types/ClientInfo.h"
 
-namespace ls6052
+namespace ls6502
 {
 
 //////////////////////////////////////////////////////////////
@@ -133,4 +133,4 @@ class InitializeParams
     TraceValue m_traceValue;
 };
 
-} // namespace ls6052
+} // namespace ls6502

@@ -7,7 +7,7 @@
 #include "../Messages/Response/ResponseMessage.h"
 #include "Ls6502Facade.h"
 
-namespace ls6052
+namespace ls6502
 {
 
 //////////////////////////////////////////////////////////////
@@ -72,4 +72,4 @@ class Ls6502Server
     std::shared_ptr<Ls6502Facade> m_6502Facade = std::make_shared<Ls6502Facade>();
 };
 
-} // namespace ls6052
+} // namespace ls6502

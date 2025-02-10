@@ -1,6 +1,6 @@
 #pragma once
 
-namespace ls6052
+namespace ls6502
 {
 
 //////////////////////////////////////////////////////////////
@@ -188,4 +188,4 @@ enum class CompletionItemKind
     TYPE_PARAMETER = 25,
 };
 
-} // namespace ls6052
+} // namespace ls6502

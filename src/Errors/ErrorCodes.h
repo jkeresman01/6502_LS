@@ -2,7 +2,7 @@
 
 #include <cstdint>
 
-namespace ls6052
+namespace ls6502
 {
 
 //////////////////////////////////////////////////////////////
@@ -59,4 +59,4 @@ enum class ErrorCodes : int32_t
     INTERNAL_ERROR = -32603,
 };
 
-} // namespace ls6052
+} // namespace ls6502

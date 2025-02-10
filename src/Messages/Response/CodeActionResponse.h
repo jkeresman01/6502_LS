@@ -6,7 +6,7 @@
 #include "../../Results/CodeActionResult.h"
 #include "ResponseMessage.h"
 
-namespace ls6052
+namespace ls6502
 {
 //////////////////////////////////////////////////////////////
 ///
@@ -59,4 +59,4 @@ class CodeActionResponse : public ResponseMessage
     //////////////////////////////////////////////////////////////
     CodeActionResult m_codeActionResult;
 };
-} // namespace ls6052
+} // namespace ls6502

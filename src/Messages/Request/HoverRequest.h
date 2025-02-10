@@ -6,7 +6,7 @@
 #include "../../Params/HoverParams.h"
 #include "RequestMessage.h"
 
-namespace ls6052
+namespace ls6502
 {
 
 //////////////////////////////////////////////////////////////
@@ -57,4 +57,4 @@ class HoverRequest : public RequestMessage
     //////////////////////////////////////////////////////////////
     std::shared_ptr<HoverParams> m_hoverParams;
 };
-} // namespace ls6052
+} // namespace ls6502

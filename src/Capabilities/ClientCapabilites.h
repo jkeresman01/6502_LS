@@ -5,7 +5,7 @@
 
 #include "TextDocumentCapabilities.h"
 
-namespace ls6052
+namespace ls6502
 {
 //////////////////////////////////////////////////////////////
 ///
@@ -56,4 +56,4 @@ class ClientCapabilities
     //////////////////////////////////////////////////////////////
     std::shared_ptr<TextDocumentCapabilities> m_textDocument;
 };
-} // namespace ls6052
+} // namespace ls6502

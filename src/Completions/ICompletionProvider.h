@@ -3,7 +3,7 @@
 #include "../Types/CompletionItem.h"
 #include <vector>
 
-namespace ls6052
+namespace ls6502
 {
 
 //////////////////////////////////////////////////////////////
@@ -28,4 +28,4 @@ class ICompletionProvider
     virtual std::vector<CompletionItem> getCompletions() = 0;
 };
 
-} // namespace ls6052
+} // namespace ls6502

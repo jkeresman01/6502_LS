@@ -4,7 +4,7 @@
 
 #include "Location.h"
 
-namespace ls6052
+namespace ls6502
 {
 
 //////////////////////////////////////////////////////////////
@@ -34,4 +34,4 @@ struct DiagnosticRelatedInformation
     std::string message;
 };
 
-} // namespace ls6052
+} // namespace ls6502

@@ -7,7 +7,7 @@
 #include "../Types/Position.h"
 #include "../Utils/Logger.h"
 
-namespace ls6052
+namespace ls6502
 {
 
 /////////////////////////////////////////////////////////////////////
@@ -147,4 +147,4 @@ static size_t findEndOfTheWord(const std::string &line, const Position &position
     return end;
 }
 
-} // namespace ls6052
+} // namespace ls6502

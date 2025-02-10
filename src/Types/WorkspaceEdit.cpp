@@ -2,7 +2,7 @@
 
 #include <nlohmann/json.hpp>
 
-namespace ls6052
+namespace ls6502
 {
 
 void WorkspaceEdit::addChage(const std::pair<std::string, std::vector<TextEdit>> &textEdit)
@@ -45,4 +45,4 @@ std::string WorkspaceEdit::toString() const
     return ss.str();
 }
 
-} // namespace ls6052
+} // namespace ls6502

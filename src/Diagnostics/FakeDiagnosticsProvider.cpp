@@ -1,6 +1,6 @@
 #include "FakeDiagnosticsProvider.h"
 
-namespace ls6052
+namespace ls6502
 {
 
 std::vector<Diagnostic> FakeDiagnosticsProvider::getDiagnostics(const std::string &document,
@@ -59,4 +59,4 @@ void FakeDiagnosticsProvider::fillFakeInfo(std::vector<Diagnostic> &diagnostics)
                              "Third INFORMATION message");
 }
 
-} // namespace ls6052
+} // namespace ls6502

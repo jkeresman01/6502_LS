@@ -5,7 +5,7 @@
 
 #include <vector>
 
-namespace ls6052
+namespace ls6502
 {
 
 //////////////////////////////////////////////////////////////
@@ -41,4 +41,4 @@ class FakeCompletionProvider : public ICompletionProvider
     void fillFakeComletions(std::vector<CompletionItem> &completions);
 };
 
-} // namespace ls6052
+} // namespace ls6502

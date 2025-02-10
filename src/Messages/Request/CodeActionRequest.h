@@ -6,7 +6,7 @@
 #include "../../Params/CodeActionParams.h"
 #include "RequestMessage.h"
 
-namespace ls6052
+namespace ls6502
 {
 class CodeActionRequest : public RequestMessage
 {
@@ -21,4 +21,4 @@ class CodeActionRequest : public RequestMessage
   private:
     std::shared_ptr<CodeActionParams> m_codeActionParams;
 };
-} // namespace ls6052
+} // namespace ls6502

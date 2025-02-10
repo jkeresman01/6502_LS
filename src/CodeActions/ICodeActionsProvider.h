@@ -4,7 +4,7 @@
 
 #include <vector>
 
-namespace ls6052
+namespace ls6502
 {
 
 //////////////////////////////////////////////////////////////
@@ -32,4 +32,4 @@ class ICodeActionsProvider
     virtual std::vector<CodeAction> getCodeActions(const std::string &URI) = 0;
 };
 
-} // namespace ls6052
+} // namespace ls6502

@@ -5,7 +5,7 @@
 #include "../Types/Diagnostic.h"
 #include "IDiagnosticsProvider.h"
 
-namespace ls6052
+namespace ls6502
 {
 //////////////////////////////////////////////////////////////
 ///
@@ -91,4 +91,4 @@ class FakeDiagnosticsProvider : public IDiagnosticsProvider
     void fillFakeInfo(std::vector<Diagnostic> &diagnostics);
 };
 
-} // namespace ls6052
+} // namespace ls6502

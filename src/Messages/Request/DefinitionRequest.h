@@ -6,7 +6,7 @@
 #include "../../Params/DefintionParams.h"
 #include "RequestMessage.h"
 
-namespace ls6052
+namespace ls6502
 {
 
 //////////////////////////////////////////////////////////////
@@ -57,4 +57,4 @@ class DefintionRequest : public RequestMessage
     //////////////////////////////////////////////////////////////
     std::shared_ptr<DefinitionParams> m_hoverParams;
 };
-} // namespace ls6052
+} // namespace ls6502

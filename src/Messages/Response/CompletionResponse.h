@@ -7,7 +7,7 @@
 #include "../Messages/Response/ResponseMessage.h"
 #include "../Results/CompletionResult.h"
 
-namespace ls6052
+namespace ls6502
 {
 
 //////////////////////////////////////////////////////////////
@@ -53,4 +53,4 @@ class CompletionResponse : public ResponseMessage
     CompletionResult m_completionResult;
 };
 
-} // namespace ls6052
+} // namespace ls6502

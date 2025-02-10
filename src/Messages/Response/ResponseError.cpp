@@ -2,7 +2,7 @@
 
 #include <sstream>
 
-namespace ls6052
+namespace ls6502
 {
 
 ResponseError::ResponseError(const ErrorCodes &errorCode, const std::string &message)
@@ -42,4 +42,4 @@ ResponseError ResponseError::Builder::build() const
     return ResponseError(m_errorCode, m_message);
 }
 
-} // namespace ls6052
+} // namespace ls6502

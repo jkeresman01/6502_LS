@@ -4,7 +4,7 @@
 
 #include "TextDocumentPositionParams.h"
 
-namespace ls6052
+namespace ls6502
 {
 class DefinitionParams : public TextDocumentPositionParams
 {
@@ -19,4 +19,4 @@ class DefinitionParams : public TextDocumentPositionParams
     explicit DefinitionParams(const nlohmann::json &jsonRPC) : TextDocumentPositionParams(jsonRPC){};
 };
 
-} // namespace ls6052
+} // namespace ls6502

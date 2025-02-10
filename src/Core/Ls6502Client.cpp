@@ -4,7 +4,7 @@
 
 #include "../Utils/Logger.h"
 
-namespace ls6052
+namespace ls6502
 {
 
 Ls6502Client::Ls6502Client(const ClientInfo &clientInfo,
@@ -53,4 +53,4 @@ void Ls6502Client::updateDocumentWithURI(const std::string &URI, const std::stri
                       m_clientInfo.toString().c_str()));
 }
 
-} // namespace ls6052
+} // namespace ls6502

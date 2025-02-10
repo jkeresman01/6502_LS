@@ -5,7 +5,7 @@
 
 #include "Range.h"
 
-namespace ls6052
+namespace ls6502
 {
 
 //////////////////////////////////////////////////////////////
@@ -68,4 +68,4 @@ class TextEdit
     std::string m_newText;
 };
 
-} // namespace ls6052
+} // namespace ls6502

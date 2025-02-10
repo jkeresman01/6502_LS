@@ -2,7 +2,7 @@
 
 #include "../../Utils/Logger.h"
 
-namespace ls6052
+namespace ls6502
 {
 CodeActionRequest::CodeActionRequest(const nlohmann::json &jsonRPC) : RequestMessage(jsonRPC)
 {
@@ -21,4 +21,4 @@ void CodeActionRequest::setParams(const nlohmann::json &jsonRPC)
 
     m_codeActionParams = std::make_shared<CodeActionParams>(jsonRPC["params"]);
 }
-} // namespace ls6052
+} // namespace ls6502

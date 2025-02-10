@@ -6,7 +6,7 @@
 #include "../../Results/HoverResult.h"
 #include "ResponseMessage.h"
 
-namespace ls6052
+namespace ls6502
 {
 //////////////////////////////////////////////////////////////
 ///
@@ -59,4 +59,4 @@ class HoverResponse : public ResponseMessage
     HoverResult m_hoverResult;
 };
 
-} // namespace ls6052
+} // namespace ls6502

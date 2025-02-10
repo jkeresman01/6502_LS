@@ -4,7 +4,7 @@
 
 #include "../Enums/TraceValue.h"
 
-namespace ls6052
+namespace ls6502
 {
 
 /////////////////////////////////////////////////////////////////////
@@ -53,4 +53,4 @@ TraceValue inline getTraceValue(const std::string &traceValueStr)
     return TraceValue::OFF;
 }
 
-} // namespace ls6052
+} // namespace ls6502

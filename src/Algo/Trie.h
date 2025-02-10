@@ -69,4 +69,4 @@ class Trie
     //////////////////////////////////////////////////////////////
     std::shared_ptr<TrieNode> m_root = std::make_shared<TrieNode>();
 };
-} // namespace ls6052
+} // namespace ls6502

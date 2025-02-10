@@ -6,7 +6,7 @@
 #include "../Errors/ErrorCodes.h"
 #include "../Messages/Response/ResponseError.h"
 
-namespace ls6052
+namespace ls6502
 {
 //////////////////////////////////////////////////////////////
 ///
@@ -86,4 +86,4 @@ class Ls6502ErrorHandler
     //////////////////////////////////////////////////////////////
     void handleError(const ResponseError &responseError, int64_t id);
 };
-} // namespace ls6052
+} // namespace ls6502

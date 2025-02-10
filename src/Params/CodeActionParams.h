@@ -4,7 +4,7 @@
 
 #include "../Types/Range.h"
 
-namespace ls6052
+namespace ls6502
 {
 class CodeActionParams
 {
@@ -95,4 +95,4 @@ class CodeActionParams
     std::string m_URI;
 };
 
-} // namespace ls6052
+} // namespace ls6502

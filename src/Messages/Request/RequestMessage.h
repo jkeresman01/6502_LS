@@ -5,7 +5,7 @@
 
 #include "Message.h"
 
-namespace ls6052
+namespace ls6502
 {
 
 //////////////////////////////////////////////////////////////
@@ -68,4 +68,4 @@ class RequestMessage : public Message
     std::string m_method;
 };
 
-} // namespace ls6052
+} // namespace ls6502

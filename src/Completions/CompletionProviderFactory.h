@@ -8,7 +8,7 @@
 #include "../Config/ConfigurationManager.h"
 #include "../Utils/Logger.h"
 
-namespace ls6052
+namespace ls6502
 {
 
 //////////////////////////////////////////////////////////////
@@ -54,4 +54,4 @@ class CompletionProviderFactory
     }
 };
 
-} // namespace ls6052
+} // namespace ls6502

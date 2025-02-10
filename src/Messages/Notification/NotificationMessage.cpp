@@ -1,6 +1,6 @@
 #include "NotificationMessage.h"
 
-namespace ls6052
+namespace ls6502
 {
 
 NotificationMessage::NotificationMessage(const nlohmann::json &jsonRPC)
@@ -15,4 +15,4 @@ nlohmann::json NotificationMessage::toJson() const
     return {Message::toJson(), "method", m_method};
 }
 
-} // namespace ls6052
+} // namespace ls6502

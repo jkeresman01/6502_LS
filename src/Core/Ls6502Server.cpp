@@ -9,7 +9,7 @@
 #include "../Utils/MessageUtil.h"
 #include "Ls6502Facade.h"
 
-namespace ls6052
+namespace ls6502
 {
 
 void Ls6502Server::init()
@@ -40,4 +40,4 @@ void Ls6502Server::handleRequest(const std::string &request)
     m_6502Facade->handleRequest(jsonRPC);
 }
 
-} // namespace ls6052
+} // namespace ls6502

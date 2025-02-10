@@ -6,7 +6,7 @@
 #include <set>
 #include <string>
 
-namespace ls6052
+namespace ls6502
 {
 
 //////////////////////////////////////////////////////////////
@@ -66,4 +66,4 @@ class Message
     std::string m_jsonRPC;
 };
 
-} // namespace ls6052
+} // namespace ls6502

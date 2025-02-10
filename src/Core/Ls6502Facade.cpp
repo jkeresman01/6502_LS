@@ -26,7 +26,7 @@
 #include "Ls6502ErrorHandler.h"
 #include "Ls6502Server.h"
 
-namespace ls6052
+namespace ls6502
 {
 
 void Ls6502Facade::handleRequest(const nlohmann::json &request)
@@ -214,4 +214,4 @@ void Ls6502Facade::ensureNoReqIsProcessedAfterShutdown(const nlohmann::json &req
     }
 }
 
-} // namespace ls6052
+} // namespace ls6502

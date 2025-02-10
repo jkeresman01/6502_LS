@@ -26,7 +26,7 @@
 #include "../Types/Diagnostic.h"
 #include "../Types/TextDocumentItem.h"
 
-namespace ls6052
+namespace ls6502
 {
 
 Ls6502ReqHandler::Ls6502ReqHandler()
@@ -171,4 +171,4 @@ void Ls6502ReqHandler::shutdownReq(const std::shared_ptr<ShutdownRequest> &shutd
     LS_6502_DEBUG("Response was sent for shutdown request!");
 }
 
-} // namespace ls6052
+} // namespace ls6502

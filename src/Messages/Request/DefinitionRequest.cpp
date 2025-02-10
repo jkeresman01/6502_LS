@@ -2,7 +2,7 @@
 
 #include "../../Utils/Logger.h"
 
-namespace ls6052
+namespace ls6502
 {
 DefintionRequest::DefintionRequest(const nlohmann::json &jsonRPC) : RequestMessage(jsonRPC)
 {
@@ -22,4 +22,4 @@ void DefintionRequest::setParams(const nlohmann::json &jsonRPC)
     m_hoverParams = std::make_shared<DefinitionParams>(jsonRPC["params"]);
 }
 
-} // namespace ls6052
+} // namespace ls6502

@@ -4,7 +4,7 @@
 #include <string>
 #include <vector>
 
-namespace ls6052
+namespace ls6502
 {
 
 CompletionResult::CompletionResult(const std::vector<CompletionItem> &completionItems)
@@ -24,4 +24,4 @@ nlohmann::json CompletionResult::toJson() const
     return completions;
 }
 
-} // namespace ls6052
+} // namespace ls6502

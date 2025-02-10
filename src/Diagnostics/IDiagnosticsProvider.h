@@ -5,7 +5,7 @@
 #include <string>
 #include <vector>
 
-namespace ls6052
+namespace ls6502
 {
 //////////////////////////////////////////////////////////////
 ///
@@ -33,4 +33,4 @@ class IDiagnosticsProvider
     virtual std::vector<Diagnostic> getDiagnostics(const std::string &document, const Position &position) = 0;
 };
 
-} // namespace ls6052
+} // namespace ls6502

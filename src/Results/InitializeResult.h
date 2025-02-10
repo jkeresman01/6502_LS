@@ -6,7 +6,7 @@
 #include "../Messages/Response/ResponseMessage.h"
 #include "../Types/ServerInfo.h"
 
-namespace ls6052
+namespace ls6502
 {
 
 //////////////////////////////////////////////////////////////
@@ -83,4 +83,4 @@ class InitializeResult
     ServerCapabilities m_serverCapabilities;
 };
 
-} // namespace ls6052
+} // namespace ls6502

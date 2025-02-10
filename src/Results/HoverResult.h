@@ -3,7 +3,7 @@
 #include <nlohmann/json.hpp>
 #include <string>
 
-namespace ls6052
+namespace ls6502
 {
 //////////////////////////////////////////////////////////////
 ///
@@ -43,4 +43,4 @@ class HoverResult
     std::string m_value;
 };
 
-} // namespace ls6052
+} // namespace ls6502

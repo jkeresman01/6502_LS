@@ -1,6 +1,6 @@
 #include "CompletionItem.h"
 
-namespace ls6052
+namespace ls6502
 {
 
 CompletionItem::CompletionItem(const std::string &label, const CompletionItemKind completionItemKind,
@@ -47,4 +47,4 @@ nlohmann::json CompletionItem::toJson() const
             {"kind", m_completionItemKind},
             {"documentation", m_documentation}};
 }
-}; // namespace ls6052
+}; // namespace ls6502

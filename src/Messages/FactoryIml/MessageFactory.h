@@ -13,7 +13,7 @@
 #include "../Messages/Request/ShutdownRequest.h"
 #include "../Utils/Logger.h"
 
-namespace ls6052
+namespace ls6502
 {
 
 //////////////////////////////////////////////////////////////
@@ -149,4 +149,4 @@ class MessageFactory
     }
 };
 
-} // namespace ls6052
+} // namespace ls6502

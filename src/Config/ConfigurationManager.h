@@ -4,7 +4,7 @@
 #include <string>
 #include <unordered_map>
 
-namespace ls6052
+namespace ls6502
 {
 
 //////////////////////////////////////////////////////////////
@@ -117,4 +117,4 @@ class ConfigurationManager
     //////////////////////////////////////////////////////////////
     PropertiesT m_properties;
 };
-} // namespace ls6052
+} // namespace ls6502

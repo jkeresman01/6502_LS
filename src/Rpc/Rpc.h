@@ -7,7 +7,7 @@
 #include "../Utils/Convert.h"
 #include "../Utils/Logger.h"
 
-namespace ls6052
+namespace ls6502
 {
 /////////////////////////////////////////////////////////////////////
 ///
@@ -88,4 +88,4 @@ inline uint32_t Rpc::extractContentLength()
     }
 }
 
-} // namespace ls6052
+} // namespace ls6502

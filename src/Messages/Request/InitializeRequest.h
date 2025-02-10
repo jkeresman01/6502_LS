@@ -5,7 +5,7 @@
 #include "../Params/InitializeParams.h"
 #include "RequestMessage.h"
 
-namespace ls6052
+namespace ls6502
 {
 
 //////////////////////////////////////////////////////////////
@@ -55,4 +55,4 @@ class InitializeRequest : public RequestMessage
     //////////////////////////////////////////////////////////////
     std::shared_ptr<InitializeParams> m_initializeParams;
 };
-} // namespace ls6052
+} // namespace ls6502

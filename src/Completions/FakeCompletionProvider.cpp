@@ -4,7 +4,7 @@
 
 #include <vector>
 
-namespace ls6052
+namespace ls6502
 {
 std::vector<CompletionItem> FakeCompletionProvider::getCompletions()
 {
@@ -23,4 +23,4 @@ void FakeCompletionProvider::fillFakeComletions(std::vector<CompletionItem> &com
                              "DNS client ip address test 1 documentation", "dnsClientIpAddress",
                              "dnsClientIpAddress");
 }
-} // namespace ls6052
+} // namespace ls6502

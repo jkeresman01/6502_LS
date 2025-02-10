@@ -5,7 +5,7 @@
 
 #include "../Types/TextDocumentIdentifier.h"
 
-namespace ls6052
+namespace ls6502
 {
 
 //////////////////////////////////////////////////////////////
@@ -77,4 +77,4 @@ class DidChangeTextDocumentParams
     std::string m_contentChanges;
 };
 
-} // namespace ls6052
+} // namespace ls6502

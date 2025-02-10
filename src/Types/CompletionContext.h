@@ -5,7 +5,7 @@
 
 #include "../Enums/ComletionTriggerKind.h"
 
-namespace ls6052
+namespace ls6502
 {
 //////////////////////////////////////////////////////////////
 ///
@@ -32,4 +32,4 @@ struct CompletionContext
     //////////////////////////////////////////////////////////////
     std::optional<std::string> triggerCharacter;
 };
-} // namespace ls6052
+} // namespace ls6502

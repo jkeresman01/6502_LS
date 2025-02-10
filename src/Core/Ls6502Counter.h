@@ -5,7 +5,7 @@
 
 #include "../Enums/RequestType.h"
 
-namespace ls6052
+namespace ls6502
 {
 class Ls6502Counter
 {
@@ -57,4 +57,4 @@ class Ls6502Counter
     //////////////////////////////////////////////////////////////
     std::vector<uint32_t> m_ls6502Counters;
 };
-} // namespace ls6052
+} // namespace ls6502

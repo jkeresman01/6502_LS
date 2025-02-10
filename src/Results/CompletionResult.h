@@ -5,7 +5,7 @@
 
 #include "../Types/CompletionItem.h"
 
-namespace ls6052
+namespace ls6502
 {
 
 //////////////////////////////////////////////////////////////
@@ -48,4 +48,4 @@ class CompletionResult
     std::vector<CompletionItem> m_completionItems;
 };
 
-} // namespace ls6052
+} // namespace ls6502

@@ -1,6 +1,6 @@
 #pragma once
 
-namespace ls6052
+namespace ls6502
 {
 
 //////////////////////////////////////////////////////////////
@@ -28,4 +28,4 @@ enum class DiagnosticTag
     DEPRECATED = 2,
 };
 
-} // namespace ls6052
+} // namespace ls6502

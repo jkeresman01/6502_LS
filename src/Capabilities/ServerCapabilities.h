@@ -7,7 +7,7 @@
 
 #include "../Enums/TextDocumentSyncKind.h"
 
-namespace ls6052
+namespace ls6502
 {
 
 //////////////////////////////////////////////////////////////
@@ -224,4 +224,4 @@ class ServerCapabilities
     //////////////////////////////////////////////////////////////
     bool m_areDefinitionsSupported;
 };
-} // namespace ls6052
+} // namespace ls6502

@@ -4,7 +4,7 @@
 #include <iomanip>
 #include <sstream>
 
-namespace ls6052
+namespace ls6502
 {
 //////////////////////////////////////////////////////////////
 ///
@@ -82,4 +82,4 @@ struct TextDocumentSyncClientCapabilities
         return ss.str();
     }
 };
-} // namespace ls6052
+} // namespace ls6502

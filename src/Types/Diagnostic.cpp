@@ -1,6 +1,6 @@
 #include "Diagnostic.h"
 
-namespace ls6052
+namespace ls6502
 {
 Diagnostic::Diagnostic(const Range &range, const DiagnosticSeverity &severity, const std::string &source,
                        const std::string &message)
@@ -14,4 +14,4 @@ nlohmann::json Diagnostic::toJson() const
         {"range", m_range.toJson()}, {"severity", m_severity}, {"source", m_source}, {"message", m_message}};
 }
 
-} // namespace ls6052
+} // namespace ls6502

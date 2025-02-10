@@ -1,6 +1,6 @@
 #include "HoverClientCapabilities.h"
 
-namespace ls6052
+namespace ls6502
 {
 
 HoverClientCapabilities::HoverClientCapabilities(const nlohmann::json &jsonRPC)
@@ -11,4 +11,4 @@ HoverClientCapabilities::HoverClientCapabilities(const nlohmann::json &jsonRPC)
     // TODO get contentForrmat from request and dynamic reg options
 }
 
-} // namespace ls6052
+} // namespace ls6502

@@ -1,6 +1,6 @@
 #include "CompletionResponse.h"
 
-namespace ls6052
+namespace ls6502
 {
 
 CompletionResponse::CompletionResponse(const std::string &jsonRPC, int64_t &id,
@@ -24,4 +24,4 @@ std::ostream &operator<<(std::ostream &os, const CompletionResponse &comletionRe
     return os;
 }
 
-} // namespace ls6052
+} // namespace ls6502

@@ -2,7 +2,7 @@
 
 #include "../../Utils/Logger.h"
 
-namespace ls6052
+namespace ls6502
 {
 CompletionRequest::CompletionRequest(const nlohmann::json &jsonRPC) : RequestMessage(jsonRPC)
 {
@@ -22,4 +22,4 @@ void CompletionRequest::setParams(const nlohmann::json &jsonRPC)
     m_completionParams = std::make_shared<CompletionParams>(jsonRPC["params"]);
 }
 
-} // namespace ls6052
+} // namespace ls6502

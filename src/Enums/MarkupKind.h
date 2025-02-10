@@ -1,6 +1,6 @@
 #pragma onceEnu
 
-namespace ls6052
+namespace ls6502
 {
 
 //////////////////////////////////////////////////////////////
@@ -35,4 +35,4 @@ enum class MarkupKind
     OPTIONS_NO,
 };
 
-} // namespace ls6052
+} // namespace ls6502

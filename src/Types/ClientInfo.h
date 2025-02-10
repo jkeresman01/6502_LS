@@ -3,7 +3,7 @@
 #include <sstream>
 #include <string>
 
-namespace ls6052
+namespace ls6502
 {
 
 //////////////////////////////////////////////////////////////
@@ -43,4 +43,4 @@ struct ClientInfo
         return ss.str();
     }
 };
-} // namespace ls6052
+} // namespace ls6502

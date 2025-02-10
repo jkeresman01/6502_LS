@@ -1,6 +1,6 @@
 #include "PublishDiagnosticsNotification.h"
 
-namespace ls6052
+namespace ls6502
 {
 
 PublishDiagnosticsNoticifation::PublishDiagnosticsNoticifation(
@@ -25,4 +25,4 @@ std::ostream &operator<<(std::ostream &os,
     return os;
 }
 
-} // namespace ls6052
+} // namespace ls6502

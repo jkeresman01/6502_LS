@@ -9,7 +9,7 @@
 #include <ostream>
 #include <string>
 
-namespace ls6052
+namespace ls6502
 {
 
 //////////////////////////////////////////////////////////////
@@ -77,4 +77,4 @@ class ResponseMessage : public Message
     std::optional<ResponseError> m_responseError;
 };
 
-} // namespace ls6052
+} // namespace ls6502

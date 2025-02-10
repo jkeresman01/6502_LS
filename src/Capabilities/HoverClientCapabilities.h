@@ -5,7 +5,7 @@
 
 #include "../Enums/MarkupKind.h"
 
-namespace ls6052
+namespace ls6502
 {
 
 //////////////////////////////////////////////////////////////
@@ -45,4 +45,4 @@ class HoverClientCapabilities
     bool m_isDynamicRegistrationSupported;
 };
 
-} // namespace ls6052
+} // namespace ls6502

@@ -1,6 +1,6 @@
 #pragma once
 
-namespace ls6052
+namespace ls6502
 {
 
 //////////////////////////////////////////////////////////////
@@ -39,4 +39,4 @@ enum class TraceValue
     VERBOSE,
 };
 
-} // namespace ls6052
+} // namespace ls6502

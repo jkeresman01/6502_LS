@@ -6,7 +6,7 @@
 #include "../Utils/Logger.h"
 #include "../Utils/TraceUtil.h"
 
-namespace ls6052
+namespace ls6502
 {
 
 InitializeParams::InitializeParams(const nlohmann::json &jsonInitializeParams)
@@ -65,4 +65,4 @@ void InitializeParams::setTraceLevel(const nlohmann::json &jsonRPC)
     m_traceValue = jsonRPC["trace"];
 }
 
-} // namespace ls6052
+} // namespace ls6502

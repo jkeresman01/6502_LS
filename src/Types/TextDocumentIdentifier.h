@@ -9,7 +9,7 @@
 /// @brief Text documents are identified using a URI.
 ///
 //////////////////////////////////////////////////////////////
-namespace ls6052
+namespace ls6502
 {
 struct TextDocumentIdentifier
 {
@@ -20,4 +20,4 @@ struct TextDocumentIdentifier
     //////////////////////////////////////////////////////////////
     std::string URI;
 };
-} // namespace ls6052
+} // namespace ls6502

@@ -5,7 +5,7 @@
 
 #include "../Utils/Logger.h"
 
-namespace ls6052
+namespace ls6502
 {
 
 /////////////////////////////////////////////////////////////////////
@@ -57,4 +57,4 @@ template <typename T> inline T Converter::convert(const std::string &input)
     return result;
 }
 
-} // namespace ls6052
+} // namespace ls6502

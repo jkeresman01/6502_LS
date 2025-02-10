@@ -1,6 +1,6 @@
 #include "CodeActionResponse.h"
 
-namespace ls6052
+namespace ls6502
 {
 CodeActionResponse::CodeActionResponse(const std::string &jsonRPC, const int64_t id,
                                        const CodeActionResult &codeActionResult)
@@ -22,4 +22,4 @@ std::ostream &operator<<(std::ostream &os, const CodeActionResponse &codeActionR
 
     return os;
 }
-} // namespace ls6052
+} // namespace ls6502

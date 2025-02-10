@@ -6,7 +6,7 @@
 #include "Message.h"
 #include <nlohmann/json.hpp>
 
-namespace ls6052
+namespace ls6502
 {
 
 RequestMessage::RequestMessage(const nlohmann::json &jsonRPC) : Message("2.0")
@@ -41,4 +41,4 @@ void RequestMessage::setMethod(const nlohmann::json &jsonRPC)
     m_method = jsonRPC["method"];
 }
 
-} // namespace ls6052
+} // namespace ls6502

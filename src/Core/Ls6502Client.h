@@ -7,7 +7,7 @@
 #include "../Capabilities/ClientCapabilites.h"
 #include "../Types/ClientInfo.h"
 
-namespace ls6052
+namespace ls6502
 {
 
 //////////////////////////////////////////////////////////////
@@ -117,4 +117,4 @@ class Ls6502Client
     //////////////////////////////////////////////////////////////
     std::unordered_map<std::string, std::string> m_documentsByURI;
 };
-} // namespace ls6052
+} // namespace ls6502

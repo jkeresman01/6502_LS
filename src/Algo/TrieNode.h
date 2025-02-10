@@ -10,4 +10,4 @@ struct TrieNode
     bool isLeaf;
     std::unordered_map<char, std::shared_ptr<TrieNode>> children;
 };
-} // namespace ls6052
+} // namespace ls6502

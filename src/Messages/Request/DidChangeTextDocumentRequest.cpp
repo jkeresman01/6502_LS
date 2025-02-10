@@ -2,7 +2,7 @@
 
 #include "../Utils/Logger.h"
 
-namespace ls6052
+namespace ls6502
 {
 DidChangeTextDocumentRequest::DidChangeTextDocumentRequest(const nlohmann::json &jsonRPC)
     : NotificationMessage(jsonRPC)
@@ -22,4 +22,4 @@ void DidChangeTextDocumentRequest::setParams(const nlohmann::json &jsonRPC)
 
     m_didChangeTextDocumentParams = std::make_shared<DidChangeTextDocumentParams>(jsonRPC["params"]);
 }
-} // namespace ls6052
+} // namespace ls6502

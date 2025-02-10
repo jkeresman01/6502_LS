@@ -2,7 +2,7 @@
 
 #include <string>
 
-namespace ls6052
+namespace ls6502
 {
 
 CodeAction::CodeAction(const std::string &title, const CodeActionKind &codeActionKind, const bool isPreffered,
@@ -61,4 +61,4 @@ CodeAction CodeAction::Builder::build()
 {
     return CodeAction(m_title, m_codeActionKind, m_isPreffered, m_workspaceEdit);
 }
-} // namespace ls6052
+} // namespace ls6502

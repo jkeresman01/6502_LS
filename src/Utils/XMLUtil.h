@@ -2,7 +2,7 @@
 
 #include <string>
 
-namespace ls6052
+namespace ls6502
 {
 
 /////////////////////////////////////////////////////////////////////
@@ -103,4 +103,4 @@ std::string inline XMLUtil::trim(const std::string &line)
     return isAllWhitespaceLine ? "" : line.substr(start, end - start + 1);
 }
 
-} // namespace ls6052
+} // namespace ls6502

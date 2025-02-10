@@ -7,7 +7,7 @@
 #include <mutex>
 #include <string>
 
-namespace ls6052
+namespace ls6502
 {
 
 ConfigurationManager *ConfigurationManager::s_instance = nullptr;
@@ -87,4 +87,4 @@ ConfigurationManager *ConfigurationManager::getInstance()
 
     return s_instance;
 }
-} // namespace ls6052
+} // namespace ls6502

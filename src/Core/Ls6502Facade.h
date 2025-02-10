@@ -10,7 +10,7 @@
 #include "Ls6502ErrorHandler.h"
 #include "Ls6502ReqHandler.h"
 
-namespace ls6052
+namespace ls6502
 {
 
 //////////////////////////////////////////////////////////////
@@ -169,4 +169,4 @@ class Ls6502Facade
     std::unique_ptr<Ls6502Counter> m_ls6502Counters = std::make_unique<Ls6502Counter>();
 };
 
-} // namespace ls6052
+} // namespace ls6502
