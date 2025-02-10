@@ -1,6 +1,6 @@
 ## Langauge server for 6502 assembly ---> Not baked yet
 
-Toy langaguge server for 6052 assembly, providing completion items and information about instruction set on hover.
+Toy langaguge server for 6502 assembly, providing completion items and information about instruction set on hover.
 
 ## 6502 processor ##
 
