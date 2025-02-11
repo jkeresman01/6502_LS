@@ -1,10 +1,10 @@
 #pragma once
 
-#include <vector>
 #include <memory>
+#include <vector>
 
-#include "../Types/Position.h"
 #include "../Repo/IInstructionSetRepository.h"
+#include "../Types/Position.h"
 #include "IHoverProvider.h"
 
 namespace ls6502
