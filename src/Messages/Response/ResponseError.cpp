@@ -12,7 +12,7 @@ ResponseError::ResponseError(const ErrorCodes &errorCode, const std::string &mes
 
 nlohmann::json ResponseError::toJson() const
 {
-    return {{"code", static_cast<int>(m_errorCode)}, {"message", m_message}};
+    return {{"code", static_cast<int32_t>(m_errorCode)}, {"message", m_message}};
 }
 
 std::string ResponseError::toString() const
