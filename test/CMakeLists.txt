@@ -64,6 +64,7 @@ set(TEST_FILES
     Utils/RequestMethodType.cpp
     Utils/MessageUtilTest.cpp
     Utils/TraceLevelTest.cpp
+    Utils/AddressingModeUtil.cpp
     Utils/XMLUtilTest.cpp
     Config/ConfigurationManageTest.cpp
 )
