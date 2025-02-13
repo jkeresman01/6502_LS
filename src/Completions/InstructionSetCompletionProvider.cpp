@@ -22,13 +22,14 @@ void InstructionSetCompletionProvider::loadInstructionSetTrie()
     }
 }
 
-std::vector<CompletionItem> InstructionSetCompletionProvider::getCompletions(const std::string &document, const Positon &position) override
+std::vector<CompletionItem> InstructionSetCompletionProvider::getCompletions(const std::string &document,
+                                                                             const Positon &position) override
 {
     std::string instruction = DocumentUtil::extractPrefix(document, position);
 
     InstructionSetMapT::iterator it = m_instructionSet.find(instruction);
 
-    if(it == m_instructionSet.end())
+    if (it == m_instructionSet.end())
     {
         LS_6502_WARN(STR("%s isn't a vaid 6502 assembly instruction", instruction.c_str()));
         return {};
@@ -36,8 +37,7 @@ std::vector<CompletionItem> InstructionSetCompletionProvider::getCompletions(con
 
     Instruction instructionDetails = it->second;
 
-    //TODO finish creat comletion item, return vector
-
+    // TODO finish creat comletion item, return vector
 }
 
 } // namespace ls6502

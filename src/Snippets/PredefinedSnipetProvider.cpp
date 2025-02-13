@@ -1,11 +1,12 @@
 #include "PredefinedSnipetProvider.h"
+
 #include "SnippetRepositoryFactory.h"
 
 namespace ls6502
 {
 PredefinedSnippetProvider::PredefinedSnippetProvider()
+    : m_snippetRepository(SnippetRepositoryFactory::create())
 {
-    m_snippetRepository = SnippetRepositoryFactory::create();
     m_snippets = m_snippetRepository->load();
 }
 
