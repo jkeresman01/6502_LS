@@ -17,6 +17,6 @@ class JSONInstructionSetRepository : public IInstructionSetRepository
 
   private:
     InstructionSetMapT m_instructionSet;
-    const char *INSTRUCTION_SET_FILE_PATH = "../../instructions/instructions.json";
+    const char *INSTRUCTION_SET_FILE_PATH = "/home/josip/git/cpp/6502_LS/instructions/instructions.json";
 };
 } // namespace ls6502

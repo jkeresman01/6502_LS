@@ -41,7 +41,7 @@ class HoverResult
     /// @return A nlohmann::json object containing the hover result
     ///
     //////////////////////////////////////////////////////////////
-    nlohmann::json toJson() const { return {{"contents", {"kind", m_kind}, {"value", m_value}}}; }
+    nlohmann::json toJson() const { return {{"contents", {{"kind", m_kind}, {"value", m_value}}}}; }
 
   private:
     //////////////////////////////////////////////////////////////

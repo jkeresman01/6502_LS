@@ -90,7 +90,7 @@ void Ls6502ReqHandler::textDocumentDidOpenReq(
     PublishDiagnosticsNoticifation publishDiagnosticsNotification("textDocument/publishDiagnostics",
                                                                   diagnosticsParams);
 
-    Rpc::send(publishDiagnosticsNotification);
+    /* Rpc::send(publishDiagnosticsNotification); */
 
     LS_6502_DEBUG("Request with method: textDocument/didOpen was successfully processed");
 }
@@ -116,7 +116,7 @@ void Ls6502ReqHandler::textDocumentDidChangeReq(
     PublishDiagnosticsNoticifation publishDiagnosticsNotification("textDocument/publishDiagnostics",
                                                                   diagnosticsParams);
 
-    Rpc::send(publishDiagnosticsNotification);
+    /* Rpc::send(publishDiagnosticsNotification); */
 
     LS_6502_DEBUG("Response successfully sent for textDocument/didChangerequest");
 }
@@ -125,7 +125,14 @@ void Ls6502ReqHandler::textDocumentCompletionReq(const std::shared_ptr<Completio
 {
     LS_6502_DEBUG("Processing textDocument/completion request");
 
-    std::vector<CompletionItem> completionItems = m_completionProvider->getCompletions();
+    std::shared_ptr<CompletionParams> completionParams = completionReq->getParams();
+
+    Position position = completionParams->getPosition();
+    std::string URI = completionParams->getURI();
+
+    std::string document = m_ls6502Client->getDocumentByURI(URI);
+
+    std::vector<CompletionItem> completionItems = m_completionProvider->getCompletions(document, position);
 
     int64_t requestId = completionReq->getId();
 
@@ -150,9 +157,9 @@ void Ls6502ReqHandler::textDocumentHoverReq(const std::shared_ptr<HoverRequest> 
 
     int64_t requestId = hoverTextDocumentReq->getId();
 
-    std::string hoverItem = m_hoverProvider->getHoverItems();
+    HoverItem hoverItem = m_hoverProvider->getHoverItem(document, position);
 
-    HoverResult hoverResult(hoverItem);
+    HoverResult hoverResult(hoverItem.text);
     HoverResponse hoverResponse("2.0", requestId, hoverResult);
 
     Rpc::send(hoverResponse);
@@ -165,11 +172,8 @@ void Ls6502ReqHandler::textDocumentCodeActionReq(const std::shared_ptr<CodeActio
     std::shared_ptr<CodeActionParams> codeActionParams = codeActionRequest->getParams();
 
     std::string URI = codeActionParams->getURI();
-    Range range = codeActionParams->getRange();
 
-    std::string document = m_ls6502Client->getDocumentByURI(URI);
-
-    std::vector<CodeAction> codeActions = m_codeActionsProvider->getCodeActions();
+    std::vector<CodeAction> codeActions = m_codeActionsProvider->getCodeActions(URI);
 
     int64_t requestId = codeActionRequest->getId();
 
