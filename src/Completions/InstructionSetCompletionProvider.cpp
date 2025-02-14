@@ -10,7 +10,7 @@ namespace ls6502
 InstructionSetCompletionProvider::InstructionSetCompletionProvider()
     : m_instructionSetRepository(IInstructionSetRepoFactory::create())
 {
-    m_instructionSet = m_instructionSetRepository.load();
+    m_instructionSet = m_instructionSetRepository->load();
     loadInstructionSetTrie();
 }
 
@@ -23,7 +23,7 @@ void InstructionSetCompletionProvider::loadInstructionSetTrie()
 }
 
 std::vector<CompletionItem> InstructionSetCompletionProvider::getCompletions(const std::string &document,
-                                                                             const Positon &position) override
+                                                                             const Position &position)
 {
     std::string instruction = DocumentUtil::extractPrefix(document, position);
 
@@ -37,6 +37,7 @@ std::vector<CompletionItem> InstructionSetCompletionProvider::getCompletions(con
 
     Instruction instructionDetails = it->second;
 
+    return {};
     // TODO finish creat comletion item, return vector
 }
 

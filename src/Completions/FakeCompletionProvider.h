@@ -28,7 +28,8 @@ class FakeCompletionProvider : public ICompletionProvider
     ///         the fake completions.
     ///
     //////////////////////////////////////////////////////////////
-    std::vector<CompletionItem> getCompletions() override;
+    std::vector<CompletionItem> getCompletions(const std::string &document,
+                                               const Position &position) override;
 
   private:
     //////////////////////////////////////////////////////////////

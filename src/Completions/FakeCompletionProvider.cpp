@@ -6,8 +6,13 @@
 
 namespace ls6502
 {
-std::vector<CompletionItem> FakeCompletionProvider::getCompletions()
+
+std::vector<CompletionItem> FakeCompletionProvider::getCompletions(const std::string &document,
+                                                                   const Position &position)
 {
+    (void)document;
+    (void)position;
+
     std::vector<CompletionItem> completions;
     fillFakeComletions(completions);
     return completions;

@@ -18,7 +18,8 @@ class InstructionSetCompletionProvider : public ICompletionProvider
   public:
     InstructionSetCompletionProvider();
 
-    virtual std::vector<CompletionItem> getCompletions() override;
+    virtual std::vector<CompletionItem> getCompletions(const std::string &document,
+                                                       const Position &position) override;
 
   private:
     void loadInstructionSetTrie();

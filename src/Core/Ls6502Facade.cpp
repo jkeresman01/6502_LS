@@ -73,7 +73,7 @@ void Ls6502Facade::handleInitializeRequest(const nlohmann::json &request)
 {
     LS_6502_DEBUG("Received request with method: initialize");
 
-    m_ls6502_counters->increment(RequestType::INITIALIZE);
+    m_ls6502Counters->increment(RequestType::INITIALIZE);
 
     ensureNoReqIsProcessedAfterShutdown(request);
 
@@ -86,7 +86,7 @@ void Ls6502Facade::handleShutdownRequest(const nlohmann::json &request)
 {
     LS_6502_DEBUG("Received request with method: shutdown");
 
-    m_ls6502_counters->increment(RequestType::SHUTDOWN);
+    m_ls6502Counters->increment(RequestType::SHUTDOWN);
 
     std::shared_ptr<ShutdownRequest> shutdownRequest = MessageFactory::createShutdownReq(request);
 
@@ -97,7 +97,7 @@ void Ls6502Facade::handleInitializedRequest(const nlohmann::json &request)
 {
     LS_6502_DEBUG("Received notification with method: initialized");
 
-    m_ls6502_counters->increment(RequestType::INITIALIZED);
+    m_ls6502Counters->increment(RequestType::INITIALIZED);
 
     ensureNoReqIsProcessedAfterShutdown(request);
 
@@ -108,7 +108,7 @@ void Ls6502Facade::handleTextDocumentDidOpenRequest(const nlohmann::json &reques
 {
     LS_6502_DEBUG("Received notification with method: textDocument/didOpen");
 
-    m_ls6502_counters->increment(RequestType::TEXT_DOCUMENT_DID_OPEN);
+    m_ls6502Counters->increment(RequestType::TEXT_DOCUMENT_DID_OPEN);
 
     ensureNoReqIsProcessedAfterShutdown(request);
 
@@ -122,7 +122,7 @@ void Ls6502Facade::handleTextDocumentDidChangeRequest(const nlohmann::json &requ
 {
     LS_6502_DEBUG("Received request with method: textDocument/didChange");
 
-    m_ls6502_counters->increment(RequestType::TEXT_DOCUMENT_DID_CHANGE);
+    m_ls6502Counters->increment(RequestType::TEXT_DOCUMENT_DID_CHANGE);
 
     ensureNoReqIsProcessedAfterShutdown(request);
 
@@ -136,7 +136,7 @@ void Ls6502Facade::handleTextDocumentCompletionRequest(const nlohmann::json &req
 {
     LS_6502_DEBUG("Received request with method: textDocument/completion");
 
-    m_ls6502_counters->increment(RequestType::TEXT_DOCUMENT_COMPLETION);
+    m_ls6502Counters->increment(RequestType::TEXT_DOCUMENT_COMPLETION);
 
     ensureNoReqIsProcessedAfterShutdown(request);
 
@@ -149,7 +149,7 @@ void Ls6502Facade::handleExitRequest(const nlohmann::json &request)
 {
     LS_6502_DEBUG("Received notification with method: exit");
 
-    bool isShutdownReqReceived = m_ls6502_counters->getValue(RequestType::SHUTDOWN) != 0;
+    bool isShutdownReqReceived = m_ls6502Counters->getValue(RequestType::SHUTDOWN) != 0;
 
     if (isShutdownReqReceived)
     {
@@ -167,7 +167,7 @@ void Ls6502Facade::handleTextDocumentHoverRequest(const nlohmann::json &request)
 {
     LS_6502_DEBUG("Received request with method: textDocument/hover");
 
-    m_ls6502_counters->increment(RequestType::TEXT_DOCUMENT_HOVER);
+    m_ls6502Counters->increment(RequestType::TEXT_DOCUMENT_HOVER);
 
     ensureNoReqIsProcessedAfterShutdown(request);
 
@@ -180,7 +180,7 @@ void Ls6502Facade::handleTextDocumentCodeActionRequest(const nlohmann::json &req
 {
     LS_6502_DEBUG("Received request with method: textDocument/codeAction");
 
-    m_ls6502_counters->increment(RequestType::TEXT_DOCUMENT_CODE_ACTION);
+    m_ls6502Counters->increment(RequestType::TEXT_DOCUMENT_CODE_ACTION);
 
     ensureNoReqIsProcessedAfterShutdown(request);
 
@@ -193,7 +193,7 @@ void Ls6502Facade::handleTextDocumentDefintionRequest(const nlohmann::json &requ
 {
     LS_6502_DEBUG("Received request with method: textDocument/codeAction");
 
-    m_ls6502_counters->increment(RequestType::TEXT_DOCUMENT_DEFINITION);
+    m_ls6502Counters->increment(RequestType::TEXT_DOCUMENT_DEFINITION);
 
     ensureNoReqIsProcessedAfterShutdown(request);
 
@@ -205,7 +205,7 @@ void Ls6502Facade::handleTextDocumentDefintionRequest(const nlohmann::json &requ
 
 void Ls6502Facade::ensureNoReqIsProcessedAfterShutdown(const nlohmann::json &request)
 {
-    bool isShutdownReqReceived = m_ls6502_counters->getValue(RequestType::SHUTDOWN) != 0;
+    bool isShutdownReqReceived = m_ls6502Counters->getValue(RequestType::SHUTDOWN) != 0;
 
     if (isShutdownReqReceived)
     {

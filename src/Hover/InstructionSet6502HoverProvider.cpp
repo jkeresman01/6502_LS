@@ -1,10 +1,13 @@
 #include "InstructionSet6502HoverProvider.h"
 
-#include "../Types/HoverItem.h"
-#include "../Types/Position.h"
+#include <algorithm>
+#include <functional>
 
 #include "../Repo/InstructionSetRepoFactory.h"
+#include "../Types/HoverItem.h"
+#include "../Types/Position.h"
 #include "../Utils/DocumentUtil.h"
+#include "../Utils/Logger.h"
 
 namespace ls6502
 {
@@ -13,27 +16,41 @@ InstructionSet6502HoverProvider::InstructionSet6502HoverProvider()
     : m_instructionSetRepository(IInstructionSetRepoFactory::create())
 {
     m_instructionSet = m_instructionSetRepository->load();
+
+    for (const auto &[instruction, _] : m_instructionSet)
+    {
+        LS_6502_DEBUG(STR("instructio: %s", instruction));
+    }
 }
 
-HoverItem InstructionSet6502HoverProvider::getHoverItems(const std::string &document,
-                                                         const Position &position)
+HoverItem InstructionSet6502HoverProvider::getHoverItem(const std::string &document, const Position &position)
 {
     std::string instruction = DocumentUtil::extractPrefix(document, position);
+
+    std::transform(instruction.begin(), instruction.end(), instruction.begin(),
+                   std::ptr_fun<int, int>(std::toupper));
 
     LS_6502_DEBUG(STR("Hover items are requested for instruction: %s", instruction.c_str()));
 
     InstructionSetMapT::iterator it = m_instructionSet.find(instruction);
 
+    HoverItem hoverItem;
+
     if (it == m_instructionSet.end())
     {
-        LS_6502_DEBUG(STR("Following instruction isn't supporeted: %s", instruction.c_str()));
-        return {};
+        std::stringstream ss;
+        ss << "Following instruction isn't supporeted: " << instruction;
+
+        LS_6502_DEBUG(ss.str());
+
+        /* hoverItem.text = ss.str(); */
+        hoverItem.text = "Load accummualtor";
     }
-
-    Instruction instructionDetails = it->second;
-
-    HoverItem hoverItem;
-    hoverItem.text = instructionDetails.toString();
+    else
+    {
+        Instruction instructionDetails = it->second;
+        hoverItem.text = instructionDetails.toString();
+    }
 
     return hoverItem;
 }

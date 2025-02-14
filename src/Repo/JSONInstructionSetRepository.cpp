@@ -1,5 +1,7 @@
 #include "JSONInstructionSetRepository.h"
 
+#include <nlohmann/json.hpp>
+
 #include "../Utils/Logger.h"
 
 namespace ls6502

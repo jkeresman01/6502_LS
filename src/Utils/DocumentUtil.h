@@ -83,7 +83,7 @@ class DocumentUtil
 /// Implementation of inline defined functions
 /////////////////////////////////////////////////////////////////////
 
-inline std::string DocumentUtil::extractPrefix(const std::string &document, const Position &position)
+std::string inline DocumentUtil::extractPrefix(const std::string &document, const Position &position)
 {
     std::string line = extractLine(document, position);
 
@@ -123,7 +123,7 @@ std::string inline DocumentUtil::extractLine(const std::string &document, const 
     return line;
 }
 
-static size_t findStartOfTheWord(const std::string &line, const Position &position)
+size_t inline DocumentUtil::findStartOfTheWord(const std::string &line, const Position &position)
 {
     size_t start = position.character;
 
@@ -135,7 +135,7 @@ static size_t findStartOfTheWord(const std::string &line, const Position &positi
     return start;
 }
 
-static size_t findEndOfTheWord(const std::string &line, const Position &position)
+size_t inline DocumentUtil::findEndOfTheWord(const std::string &line, const Position &position)
 {
     size_t end = position.character;
 
