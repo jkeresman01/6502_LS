@@ -31,7 +31,7 @@ std::vector<CompletionItem> InstructionSetCompletionProvider::getCompletions(con
 
     if (it == m_instructionSet.end())
     {
-        LS_6502_WARN(STR("%s isn't a vaid 6502 assembly instruction", instruction.c_str()));
+        LS_6502_WARN(STR("%s isn't a valid 6502 assembly instruction", instruction.c_str()));
         return {};
     }
 
