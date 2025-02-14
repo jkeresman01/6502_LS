@@ -1,27 +1,27 @@
 #include <gtest/gtest.h>
 
 #include "../../src/Enums/AddressingModes.h"
-#include "../../src/Utils/AddressingModesUtil.h"
+#include "../../src/Utils/AddressingModessUtil.h"
 
 using namespace ls6502;
 
-class AddressingModeUtilTest : public ::testing::Test
+class AddressingModesUtilTest : public ::testing::Test
 {
 };
 
-TEST_F(AddressingModeUtilTest, GivenValidAddressingModeString_WhenConverted_ThenReturnsCorrectEnum)
+TEST_F(AddressingModesUtilTest, GivenValidAddressingModeString_WhenConverted_ThenReturnsCorrectEnum)
 {
     struct TestCase
     {
         std::string input;
-        AddressingMode expectedOutput;
+        AddressingModes expectedOutput;
     };
 
     std::vector<TestCase> testCases = {
-        {"Immediate", AddressingMode::IMMEDIATE},     {"Zero Page,X", AddressingMode::ZERO_PAGE_X},
-        {"Zero Page,Y", AddressingMode::ZERO_PAGE_Y}, {"Absolute,X", AddressingMode::ABSOLUTE_X},
-        {"Absolute,Y", AddressingMode::ABSOLUTE_Y},   {"Indirect", AddressingMode::INDIRECT_INDEXED},
-        {"UnknownMode", AddressingMode::INVALID},     {"", AddressingMode::INVALID}};
+        {"Immediate", AddressingModes::IMMEDIATE},     {"Zero Page,X", AddressingModes::ZERO_PAGE_X},
+        {"Zero Page,Y", AddressingModes::ZERO_PAGE_Y}, {"Absolute,X", AddressingModes::ABSOLUTE_X},
+        {"Absolute,Y", AddressingModes::ABSOLUTE_Y},   {"Indirect", AddressingModes::INDIRECT_INDEXED},
+        {"UnknownMode", AddressingModes::INVALID},     {"", AddressingModes::INVALID}};
 
     for (const auto &testCase : testCases)
     {
@@ -30,25 +30,25 @@ TEST_F(AddressingModeUtilTest, GivenValidAddressingModeString_WhenConverted_Then
     }
 }
 
-TEST_F(AddressingModeUtilTest, GivenValidAddressingModeEnum_WhenConverted_ThenReturnsCorrectString)
+TEST_F(AddressingModesUtilTest, GivenValidAddressingModeEnum_WhenConverted_ThenReturnsCorrectString)
 {
     struct TestCase
     {
-        AddressingMode input;
+        AddressingModes input;
         std::string expectedOutput;
     };
 
-    std::vector<TestCase> testCases = {{AddressingMode::IMMEDIATE, "Immediate"},
-                                       {AddressingMode::ZERO_PAGE_X, "Zero Page,X"},
-                                       {AddressingMode::ZERO_PAGE_Y, "Zero Page,Y"},
-                                       {AddressingMode::ABSOLUTE_X, "Absolute,X"},
-                                       {AddressingMode::ABSOLUTE_Y, "Absolute,Y"},
-                                       {AddressingMode::INDIRECT_INDEXED, "Indirect"},
-                                       {AddressingMode::INVALID, ""}};
+    std::vector<TestCase> testCases = {{AddressingModes::IMMEDIATE, "Immediate"},
+                                       {AddressingModes::ZERO_PAGE_X, "Zero Page,X"},
+                                       {AddressingModes::ZERO_PAGE_Y, "Zero Page,Y"},
+                                       {AddressingModes::ABSOLUTE_X, "Absolute,X"},
+                                       {AddressingModes::ABSOLUTE_Y, "Absolute,Y"},
+                                       {AddressingModes::INDIRECT_INDEXED, "Indirect"},
+                                       {AddressingModes::INVALID, ""}};
 
     for (const auto &testCase : testCases)
     {
-        EXPECT_STREQ(AddressingModeUtil::addressingModeToString(testCase.input),
+        EXPECT_STREQ(AddressingModesUtil::addressingModeToString(testCase.input),
                      testCase.expectedOutput.c_str())
             << "Failed for input: " << static_cast<int>(testCase.input);
     }

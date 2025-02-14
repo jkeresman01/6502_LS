@@ -8,30 +8,30 @@
 namespace ls6502
 {
 
-AddressingMode AddressingModeUtil::stringToAddressingMode(const std::string &addressingMode)
+AddressingModes AddressingModeUtil::stringToAddressingMode(const std::string &addressingMode)
 {
     static const StringAddressingModeMapT addressingModes = {
-        {"Immediate", AddressingMode::IMMEDIATE},     {"Zero Page,X", AddressingMode::ZERO_PAGE_X},
-        {"Zero Page,Y", AddressingMode::ZERO_PAGE_Y}, {"Absolute,X", AddressingMode::ABSOLUTE_X},
-        {"Absolute,Y", AddressingMode::ABSOLUTE_Y},   {"Indirect", AddressingMode::INDIRECT_INDEXED}};
+        {"Immediate", AddressingModes::IMMEDIATE},     {"Zero Page,X", AddressingModes::ZERO_PAGE_X},
+        {"Zero Page,Y", AddressingModes::ZERO_PAGE_Y}, {"Absolute,X", AddressingModes::ABSOLUTE_X},
+        {"Absolute,Y", AddressingModes::ABSOLUTE_Y},   {"Indirect", AddressingModes::INDIRECT_INDEXED}};
 
     StringAddressingModeMapT::const_iterator it = addressingModes.find(addressingMode);
 
     if (it == addressingModes.end())
     {
         LS_6502_WARN(STR("Unknown addressing mode: %s", addressingMode.c_str()));
-        return AddressingMode::INVALID;
+        return AddressingModes::INVALID;
     }
 
     return it->second;
 }
 
-const char *AddressingModeUtil::addressingModeToString(const AddressingMode addressingMode)
+const char *AddressingModeUtil::addressingModeToString(const AddressingModes addressingMode)
 {
     static const AddressingModeStringMapT addressingModes = {
-        {AddressingMode::IMMEDIATE, "Immediate"},     {AddressingMode::ZERO_PAGE_X, "Zero Page,X"},
-        {AddressingMode::ZERO_PAGE_Y, "Zero Page,Y"}, {AddressingMode::ABSOLUTE_X, "Absolute,X"},
-        {AddressingMode::ABSOLUTE_Y, "Absolute,Y"},   {AddressingMode::INDIRECT_INDEXED, "Indirect"}};
+        {AddressingModes::IMMEDIATE, "Immediate"},     {AddressingModes::ZERO_PAGE_X, "Zero Page,X"},
+        {AddressingModes::ZERO_PAGE_Y, "Zero Page,Y"}, {AddressingModes::ABSOLUTE_X, "Absolute,X"},
+        {AddressingModes::ABSOLUTE_Y, "Absolute,Y"},   {AddressingModes::INDIRECT_INDEXED, "Indirect"}};
 
     AddressingModeStringMapT::const_iterator it = addressingModes.find(addressingMode);
 
