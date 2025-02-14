@@ -42,7 +42,7 @@ void JSONInstructionSetRepository::load(std::ifstream &in)
         instruction.description = jsonInstruction["description"].get<std::string>();
         instruction.operation = jsonInstruction["operation"].get<std::string>();
 
-        for (auto &[flag, value] : jsonInstruction["flags"].items())
+        for (const auto &[flag, value] : jsonInstruction["flags"].items())
         {
             instruction.flags[flag] = value.get<bool>();
         }
