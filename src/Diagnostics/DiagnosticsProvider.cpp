@@ -62,7 +62,7 @@ void DiagnosticsProvider::checkUnsupportedInstructions(const std::string &line, 
     std::string mnemonic;
     iss >> mnemonic;
 
-    if (!mnemonic.empty() && m_instructionSet.find(mnemonic) == m_instructionSet.end())
+    if (!mnemonic.empty() and m_instructionSet.find(mnemonic) == m_instructionSet.end())
     {
         m_diagnostics.emplace_back(Range{lineNumber, 0, lineNumber, mnemonic.size()},
                                    DiagnosticSeverity::ERROR, "Parser",

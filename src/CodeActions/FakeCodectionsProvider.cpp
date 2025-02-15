@@ -9,8 +9,10 @@
 
 namespace ls6502
 {
-std::vector<CodeAction> FakeCodeActionsProvider::getCodeActions(const std::string &URI)
+std::vector<CodeAction> FakeCodeActionsProvider::getCodeActions(const std::string &document)
 {
+    (void) document;
+
     std::vector<CodeAction> codeActions;
     fillFakeCodeActions(codeActions, URI);
     return codeActions;
