@@ -14,7 +14,6 @@ struct AddressingMode
     uint32_t bytes;
     uint32_t cycles;
     bool hasExtraCycle;
-    ;
 
     std::string toString() const
     {
