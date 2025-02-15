@@ -25,20 +25,38 @@ void InstructionSetCompletionProvider::loadInstructionSetTrie()
 std::vector<CompletionItem> InstructionSetCompletionProvider::getCompletions(const std::string &document,
                                                                              const Position &position)
 {
-    std::string instruction = DocumentUtil::extractPrefix(document, position);
+    std::string prefix = DocumentUtil::extractPrefix(document, position);
+    std::vector<std::string> instructions = m_instructionSetTrie->getCompletionWords(prefix);
 
-    InstructionSetMapT::iterator it = m_instructionSet.find(instruction);
+    return mapInstructionsToCompletions(instructions);
+}
 
-    if (it == m_instructionSet.end())
+std::vector<CompletionItem> InstructionSetCompletionProvider::mapInstructionsToCompletions(
+    const std::vector<std::string> &instructions)
+{
+    std::vector<CompletionItem> completionItems;
+
+    for (const auto &instruction : instructions)
     {
-        LS_6502_WARN(STR("%s isn't a valid 6502 assembly instruction", instruction.c_str()));
-        return {};
+        InstructionSetMapT::iterator it = m_instructionSet.find(instruction);
+
+        if (it == m_instructionSet.end())
+        {
+            LS_6502_WARN(STR("%s isn't a valid 6502 assembly instruction", instruction.c_str()));
+            continue;
+        }
+
+        Instruction foundInstruction = it->second;
+
+        for (const auto &addressingMode : foundInstruction.addressingModes)
+        {
+            completionItems.emplace_back(foundInstruction.mnemonic, CompletionItemKind::TEXT,
+                                         foundInstruction.description, foundInstruction.operation,
+                                         foundInstruction.mnemonic);
+        }
     }
 
-    Instruction instructionDetails = it->second;
-
-    return {};
-    // TODO finish creat comletion item, return vector
+    return completionItems;
 }
 
 } // namespace ls6502

@@ -23,6 +23,7 @@ class InstructionSetCompletionProvider : public ICompletionProvider
 
   private:
     void loadInstructionSetTrie();
+    std::vector<CompletionItem> mapInstructionsToCompletions(const std::vector<std::string> &instructions);
 
   private:
     std::unique_ptr<Trie> m_instructionSetTrie = std::make_unique<Trie>();
