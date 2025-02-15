@@ -3,6 +3,7 @@
 #include <cctype>
 #include <sstream>
 #include <string>
+#include <vector>
 
 #include "../Types/Position.h"
 #include "../Utils/Logger.h"
@@ -40,6 +41,17 @@ class DocumentUtil
     ///
     /////////////////////////////////////////////////////////////////////
     static std::string extractPrefix(const std::string &document, const Position &position);
+
+    /////////////////////////////////////////////////////////////////////
+    ///
+    /// @brief Splits the given document into a vector of lines.
+    //
+    /// @param document
+    ///
+    /// @return A vector containing individual lines.
+    ///
+    /////////////////////////////////////////////////////////////////////
+    static std::vector<std::string> splitDocumentIntoLines(const std::string &document);
 
   private:
     /////////////////////////////////////////////////////////////////////
@@ -82,6 +94,20 @@ class DocumentUtil
 /////////////////////////////////////////////////////////////////////
 /// Implementation of inline defined functions
 /////////////////////////////////////////////////////////////////////
+
+std::vector<std::string> inline DocumentUtil::splitDocumentIntoLines(const std::string &document)
+{
+    std::vector<std::string> lines;
+    std::stringstream ss(document);
+    std::string line;
+
+    while (std::getline(ss, line))
+    {
+        lines.push_back(line);
+    }
+
+    return lines;
+}
 
 std::string inline DocumentUtil::extractPrefix(const std::string &document, const Position &position)
 {

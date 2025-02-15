@@ -83,7 +83,7 @@ void Ls6502ReqHandler::textDocumentDidOpenReq(
 
     std::string document = m_ls6502Client->getDocumentByURI(URI);
 
-    std::vector<Diagnostic> diagnostics = m_diagnosticsProvider->getDiagnostics(document, Position{10, 10});
+    std::vector<Diagnostic> diagnostics = m_diagnosticsProvider->getDiagnostics(document);
 
     std::shared_ptr<PublishDiagnosticsParams> diagnosticsParams =
         std::make_shared<PublishDiagnosticsParams>(URI, diagnostics);
@@ -109,7 +109,7 @@ void Ls6502ReqHandler::textDocumentDidChangeReq(
 
     std::string document = m_ls6502Client->getDocumentByURI(URI);
 
-    std::vector<Diagnostic> diagnostics = m_diagnosticsProvider->getDiagnostics(document, Position{10, 10});
+    std::vector<Diagnostic> diagnostics = m_diagnosticsProvider->getDiagnostics(document);
 
     std::shared_ptr<PublishDiagnosticsParams> diagnosticsParams =
         std::make_shared<PublishDiagnosticsParams>(URI, diagnostics);

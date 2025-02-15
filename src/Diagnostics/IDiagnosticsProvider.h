@@ -1,9 +1,10 @@
 #pragma once
 
-#include "../Types/Diagnostic.h"
-#include "../Types/Position.h"
 #include <string>
 #include <vector>
+
+#include "../Types/Diagnostic.h"
+#include "../Types/Position.h"
 
 namespace ls6502
 {
@@ -30,7 +31,7 @@ class IDiagnosticsProvider
     ///         diagnostics for the specified document and position.
     ///
     //////////////////////////////////////////////////////////////
-    virtual std::vector<Diagnostic> getDiagnostics(const std::string &document, const Position &position) = 0;
+    virtual std::vector<Diagnostic> getDiagnostics(const std::string &document) = 0;
 };
 
 } // namespace ls6502

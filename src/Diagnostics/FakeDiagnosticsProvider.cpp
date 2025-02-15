@@ -3,9 +3,10 @@
 namespace ls6502
 {
 
-std::vector<Diagnostic> FakeDiagnosticsProvider::getDiagnostics(const std::string &document,
-                                                                const Position &position)
+std::vector<Diagnostic> FakeDiagnosticsProvider::getDiagnostics(const std::string &document)
 {
+    (void)document;
+
     std::vector<Diagnostic> diagnostics;
     fillFakeDiagnostics(diagnostics);
     return diagnostics;

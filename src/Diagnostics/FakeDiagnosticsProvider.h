@@ -42,7 +42,7 @@ class FakeDiagnosticsProvider : public IDiagnosticsProvider
     /// @return A vector of Diagnostic objects representing the fake diagnostics.
     ///
     //////////////////////////////////////////////////////////////
-    std::vector<Diagnostic> getDiagnostics(const std::string &document, const Position &position) override;
+    std::vector<Diagnostic> getDiagnostics(const std::string &document) override;
 
   private:
     //////////////////////////////////////////////////////////////
