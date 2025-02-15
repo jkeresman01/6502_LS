@@ -172,8 +172,9 @@ void Ls6502ReqHandler::textDocumentCodeActionReq(const std::shared_ptr<CodeActio
     std::shared_ptr<CodeActionParams> codeActionParams = codeActionRequest->getParams();
 
     std::string URI = codeActionParams->getURI();
+    std::string document = m_ls6502Client->getDocumentByURI(URI);
 
-    std::vector<CodeAction> codeActions = m_codeActionsProvider->getCodeActions(URI);
+    std::vector<CodeAction> codeActions = m_codeActionsProvider->getCodeActions(document, URI);
 
     int64_t requestId = codeActionRequest->getId();
 

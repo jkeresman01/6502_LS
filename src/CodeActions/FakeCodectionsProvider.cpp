@@ -29,7 +29,7 @@ void FakeCodeActionsProvider::fillFakeCodeActions(std::vector<CodeAction> &codeA
 
     std::vector<TextEdit> textEdits;
     textEdits.push_back(textEdit);
-    workspaceEdit.addChage({URI, textEdits});
+    workspaceEdit.addChange({URI, textEdits});
 
     CodeAction firstFakeCodeAction = CodeAction::Builder()
                                          .withTitle("Code action test")
