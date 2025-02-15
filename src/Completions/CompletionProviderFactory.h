@@ -4,6 +4,7 @@
 
 #include "FakeCompletionProvider.h"
 #include "ICompletionProvider.h"
+#include "InstructionSetCompletionProvider.h"
 
 #include "../Config/ConfigurationManager.h"
 #include "../Utils/Logger.h"
@@ -50,7 +51,7 @@ class CompletionProviderFactory
 
         // TODO implement rest of the completion providers
 
-        return std::make_shared<FakeCompletionProvider>();
+        return std::make_shared<InstructionSetCompletionProvider>();
     }
 };
 

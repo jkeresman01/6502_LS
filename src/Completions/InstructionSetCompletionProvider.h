@@ -1,4 +1,4 @@
-#pragma once
+#pragma onceInstrCom
 
 #include <memory>
 #include <unordered_map>
@@ -25,7 +25,7 @@ class InstructionSetCompletionProvider : public ICompletionProvider
     void loadInstructionSetTrie();
 
   private:
-    std::unique_ptr<Trie> m_instructionSetTrie;
+    std::unique_ptr<Trie> m_instructionSetTrie = std::make_unique<Trie>();
 
     std::shared_ptr<IInstructionSetRepository> m_instructionSetRepository;
 
