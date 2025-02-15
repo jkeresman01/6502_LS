@@ -33,19 +33,18 @@ HoverItem InstructionSet6502HoverProvider::getHoverItem(const std::string &docum
 
     LS_6502_DEBUG(STR("Hover items are requested for instruction: %s", instruction.c_str()));
 
-    InstructionSetMapT::iterator it = m_instructionSet.find(instruction);
-
     HoverItem hoverItem;
+
+    InstructionSetMapT::iterator it = m_instructionSet.find(instruction);
 
     if (it == m_instructionSet.end())
     {
         std::stringstream ss;
-        ss << instruction << "isn't valid 6502 ASM instruction!";
+        ss << instruction << " isn't valid 6502 ASM instruction!";
 
         LS_6502_DEBUG(ss.str());
 
         hoverItem.text = ss.str();
-        hoverItem.text = "Load accummualtor";
     }
     else
     {
