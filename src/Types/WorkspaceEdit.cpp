@@ -5,7 +5,7 @@
 namespace ls6502
 {
 
-void WorkspaceEdit::addChage(const std::pair<std::string, std::vector<TextEdit>> &textEdit)
+void WorkspaceEdit::addChange(const std::pair<std::string, std::vector<TextEdit>> &textEdit)
 {
     m_changes.insert(textEdit);
 }

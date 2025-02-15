@@ -22,7 +22,7 @@ class WorkspaceEdit
   public:
     WorkspaceEdit() = default;
 
-    void addChage(const std::pair<std::string, std::vector<TextEdit>> &textEdit);
+    void addChange(const std::pair<std::string, std::vector<TextEdit>> &textEdit);
 
     nlohmann::json toJson() const;
 

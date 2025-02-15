@@ -29,7 +29,7 @@ class ICodeActionsProvider
     ///         available code actions for the document.
     ///
     //////////////////////////////////////////////////////////////
-    virtual std::vector<CodeAction> getCodeActions(const std::string &document) = 0;
+    virtual std::vector<CodeAction> getCodeActions(const std::string &document, const std::string &URI) = 0;
 };
 
 } // namespace ls6502

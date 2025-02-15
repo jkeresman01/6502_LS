@@ -27,7 +27,7 @@ class FakeCodeActionsProvider : public ICodeActionsProvider
     ///         fake code actions.
     ///
     //////////////////////////////////////////////////////////////
-    std::vector<CodeAction> getCodeActions(const std::string &document) override;
+    std::vector<CodeAction> getCodeActions(const std::string &document, const std::string &URI) override;
 
   private:
     //////////////////////////////////////////////////////////////

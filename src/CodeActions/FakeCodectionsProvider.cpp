@@ -9,9 +9,10 @@
 
 namespace ls6502
 {
-std::vector<CodeAction> FakeCodeActionsProvider::getCodeActions(const std::string &document)
+std::vector<CodeAction> FakeCodeActionsProvider::getCodeActions(const std::string &document,
+                                                                const std::string &URI)
 {
-    (void) document;
+    (void)document;
 
     std::vector<CodeAction> codeActions;
     fillFakeCodeActions(codeActions, URI);
@@ -28,11 +29,32 @@ void FakeCodeActionsProvider::fillFakeCodeActions(std::vector<CodeAction> &codeA
 
     std::vector<TextEdit> textEdits;
     textEdits.push_back(textEdit);
-
     workspaceEdit.addChage({URI, textEdits});
-    codeActions.emplace_back("Code action test", CodeActionKind::QUICK_FIX, false, workspaceEdit);
-    codeActions.emplace_back("Code action test 1", CodeActionKind::QUICK_FIX, false, workspaceEdit);
-    codeActions.emplace_back("Code action test 2", CodeActionKind::QUICK_FIX, false, workspaceEdit);
+
+    CodeAction firstFakeCodeAction = CodeAction::Builder()
+                                         .withTitle("Code action test")
+                                         .withCodeActionKind(CodeActionKind::QUICK_FIX)
+                                         .withPrefferedFix(false)
+                                         .withWorkspaceEdit(workspaceEdit)
+                                         .build();
+
+    CodeAction secondFakeCodeAction = CodeAction::Builder()
+                                          .withTitle("Code action test 1")
+                                          .withCodeActionKind(CodeActionKind::QUICK_FIX)
+                                          .withPrefferedFix(false)
+                                          .withWorkspaceEdit(workspaceEdit)
+                                          .build();
+
+    CodeAction thirdFakeCodeAction = CodeAction::Builder()
+                                         .withTitle("Code action test 2")
+                                         .withCodeActionKind(CodeActionKind::QUICK_FIX)
+                                         .withPrefferedFix(false)
+                                         .withWorkspaceEdit(workspaceEdit)
+                                         .build();
+
+    codeActions.push_back(firstFakeCodeAction);
+    codeActions.push_back(secondFakeCodeAction);
+    codeActions.push_back(thirdFakeCodeAction);
 }
 
 } // namespace ls6502
