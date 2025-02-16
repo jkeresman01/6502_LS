@@ -22,8 +22,7 @@ class InstructionSetCompletionProvider : public ICompletionProvider
                                                        const Position &position) override;
 
   private:
-    void createCompletionsForAllAddressingModes(std::vector<CompletionItem> &completionItems,
-                                                const Instruction &instruction);
+    void createCompletionsForAllAddressingModes(const Instruction &instruction);
 
   private:
     void loadInstructionSetTrie();
@@ -33,6 +32,8 @@ class InstructionSetCompletionProvider : public ICompletionProvider
     std::unique_ptr<Trie> m_instructionSetTrie = std::make_unique<Trie>();
 
     std::shared_ptr<IInstructionSetRepository> m_instructionSetRepository;
+
+    std::vector<CompletionItem> m_completionItems;
 
     InstructionSetMapT m_instructionSet;
 };
