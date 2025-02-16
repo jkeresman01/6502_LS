@@ -71,3 +71,87 @@ TEST_F(DocumentUtilTest, WillReturnEmptyStringForOutOfBoundsPosition)
     // THEN
     EXPECT_EQ(result, "");
 }
+
+TEST_F(DocumentUtilTest, WillHadnleEmptyDocument)
+{
+    // GIVEN
+    std::string document = "";
+
+    // WHEN
+    auto result = DocumentUtil::splitDocumentIntoLines(document);
+
+    // THEN
+    EXPECT_TRUE(result.empty());
+}
+
+TEST_F(DocumentUtilTest, WillHandleSingleLineDocument)
+{
+    // GIVEN
+    std::string document = "Hello, world!";
+
+    // WHEN
+    auto result = DocumentUtil::splitDocumentIntoLines(document);
+
+    // THEN
+    ASSERT_EQ(result.size(), 1);
+    EXPECT_EQ(result[0], "Hello, world!");
+}
+
+TEST_F(DocumentUtilTest, WillHandleMultiLineDocument)
+{
+    // GIVEN
+    std::string document = "Line 1\nLine 2\nLine 3";
+
+    // WHEN
+    auto result = DocumentUtil::splitDocumentIntoLines(document);
+
+    // THEN
+    ASSERT_EQ(result.size(), 3);
+    EXPECT_EQ(result[0], "Line 1");
+    EXPECT_EQ(result[1], "Line 2");
+    EXPECT_EQ(result[2], "Line 3");
+}
+
+TEST_F(DocumentUtilTest, WillHandleTrailingNewline)
+{
+    // GIVEN
+    std::string document = "Line 1\nLine 2\n";
+
+    // WHEN
+    auto result = DocumentUtil::splitDocumentIntoLines(document);
+
+    // THEN
+    ASSERT_EQ(result.size(), 2);
+    EXPECT_EQ(result[0], "Line 1");
+    EXPECT_EQ(result[1], "Line 2");
+}
+
+TEST_F(DocumentUtilTest, WillHandleConsecutiveNewlines)
+{
+    // GIVEN
+    std::string document = "Line 1\n\nLine 3";
+
+    // WHEN
+    auto result = DocumentUtil::splitDocumentIntoLines(document);
+
+    // THEN
+    ASSERT_EQ(result.size(), 3);
+    EXPECT_EQ(result[0], "Line 1");
+    EXPECT_EQ(result[1], "");
+    EXPECT_EQ(result[2], "Line 3");
+}
+
+TEST_F(DocumentUtilTest, WillHandleCarriageReturnNewlines)
+{
+    // GIVEN
+    std::string document = "Line 1\r\nLine 2\r\nLine 3";
+
+    // WHEN
+    auto result = DocumentUtil::splitDocumentIntoLines(document);
+
+    // THEN
+    ASSERT_EQ(result.size(), 3);
+    EXPECT_EQ(result[0], "Line 1");
+    EXPECT_EQ(result[1], "Line 2");
+    EXPECT_EQ(result[2], "Line 3");
+}
