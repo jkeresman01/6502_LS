@@ -10,11 +10,31 @@
 
 namespace ls6502
 {
+/////////////////////////////////////////////////////////////////////
+///
+/// @class HoverProviderFactory
+///
+/// @brief A factory class responsible for creating hover provider
+///        instances based on configuration settings.
+///
+/////////////////////////////////////////////////////////////////////
 class HoverProviderFactory
 {
   public:
+    /////////////////////////////////////////////////////////////////////
+    ///
+    /// @brief Deleted constructor
+    ///
+    /////////////////////////////////////////////////////////////////////
     HoverProviderFactory() = delete;
 
+    /////////////////////////////////////////////////////////////////////
+    ///
+    /// @brief Creates a hover provider based on the configuration
+    ///
+    /// @return A shared pointer to an IHoverProvider instance.
+    ///
+    /////////////////////////////////////////////////////////////////////
     static std::shared_ptr<IHoverProvider> create()
     {
         std::string hoverProvider = ConfigurationManager::getInstance()->getProperty("hoverProvider");
@@ -27,4 +47,5 @@ class HoverProviderFactory
         return std::make_shared<InstructionSet6502HoverProvider>();
     }
 };
+
 } // namespace ls6502
