@@ -20,6 +20,8 @@ DiagnosticsProvider::DiagnosticsProvider() : m_instructionSetRepository(IInstruc
 
 std::vector<Diagnostic> DiagnosticsProvider::getDiagnostics(const std::string &document)
 {
+    m_diagnostics.clear();
+
     std::vector<std::string> lines = DocumentUtil::splitDocumentIntoLines(document);
 
     for (size_t lineNumber = 0; lineNumber < lines.size(); ++lineNumber)
@@ -59,6 +61,7 @@ void DiagnosticsProvider::checkInvalidSemicolonUsage(const std::string &line, si
 void DiagnosticsProvider::checkUnsupportedInstructions(const std::string &line, size_t lineNumber)
 {
     std::istringstream iss(line);
+
     std::string mnemonic;
     iss >> mnemonic;
 
