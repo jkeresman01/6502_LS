@@ -11,7 +11,7 @@ class AddressingModesUtilTest : public ::testing::Test
 
 TEST_F(AddressingModesUtilTest, WillReturnCorrectAddressingModeEnumValue)
 {
-    //GIVEN
+    // GIVEN
     struct TestCase
     {
         std::string input;
@@ -24,8 +24,8 @@ TEST_F(AddressingModesUtilTest, WillReturnCorrectAddressingModeEnumValue)
         {"Absolute,Y", AddressingModes::ABSOLUTE_Y},   {"Indirect", AddressingModes::INDIRECT_INDEXED},
         {"UnknownMode", AddressingModes::INVALID},     {"", AddressingModes::INVALID}};
 
-    //WHEN
-    //THEN
+    // WHEN
+    // THEN
     for (const auto &testCase : testCases)
     {
         EXPECT_EQ(AddressingModeUtil::stringToAddressingMode(testCase.input), testCase.expectedOutput)
@@ -35,7 +35,7 @@ TEST_F(AddressingModesUtilTest, WillReturnCorrectAddressingModeEnumValue)
 
 TEST_F(AddressingModesUtilTest, WillReturnCorrectAddressingModeBasedOnEnumValue)
 {
-    //GIVEN
+    // GIVEN
     struct TestCase
     {
         AddressingModes input;
@@ -50,8 +50,8 @@ TEST_F(AddressingModesUtilTest, WillReturnCorrectAddressingModeBasedOnEnumValue)
                                        {AddressingModes::INDIRECT_INDEXED, "Indirect"},
                                        {AddressingModes::INVALID, ""}};
 
-    //WHEN
-    //THEN
+    // WHEN
+    // THEN
     for (const auto &testCase : testCases)
     {
         EXPECT_STREQ(AddressingModesUtil::addressingModeToString(testCase.input),
