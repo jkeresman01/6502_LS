@@ -47,16 +47,20 @@ std::vector<CompletionItem> InstructionSetCompletionProvider::mapInstructionsToC
         }
 
         Instruction foundInstruction = it->second;
-
-        for (const auto &addressingMode : foundInstruction.addressingModes)
-        {
-            completionItems.emplace_back(foundInstruction.mnemonic, CompletionItemKind::TEXT,
-                                         foundInstruction.description, foundInstruction.operation,
-                                         foundInstruction.mnemonic);
-        }
+        createCompletionsForAllAddressingModes(completionItems, foundInstruction);
     }
 
     return completionItems;
+}
+
+void InstructionSetCompletionProvider::createCompletionsForAllAddressingModes(
+    std::vector<CompletionItem> &completionItems, const Instruction &instruction)
+{
+    for (const auto &addressingMode : instruction.addressingModes)
+    {
+        completionItems.emplace_back(instruction.mnemonic, CompletionItemKind::TEXT, instruction.description,
+                                     instruction.operation, instruction.mnemonic);
+    }
 }
 
 } // namespace ls6502

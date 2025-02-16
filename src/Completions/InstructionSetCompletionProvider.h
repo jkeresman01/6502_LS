@@ -22,6 +22,10 @@ class InstructionSetCompletionProvider : public ICompletionProvider
                                                        const Position &position) override;
 
   private:
+    void createCompletionsForAllAddressingModes(std::vector<CompletionItem> &completionItems,
+                                                const Instruction &instruction);
+
+  private:
     void loadInstructionSetTrie();
     std::vector<CompletionItem> mapInstructionsToCompletions(const std::vector<std::string> &instructions);
 
