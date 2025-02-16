@@ -11,10 +11,6 @@ std::vector<CodeAction> CodeActionProvider::getCodeActions(const std::string &do
 {
     std::vector<Diagnostic> diagnostics = m_diagnosticsProvider->getDiagnostics(document);
 
-    // TODO resever size from diagnostics, since vector size is known, will remove need to reallocate memorius
-    // every timeius
-    // TODO don't forget
-
     for (const auto &diagnostic : diagnostics)
     {
         WorkspaceEdit workspaceEdit;
