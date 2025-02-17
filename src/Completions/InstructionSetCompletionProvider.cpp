@@ -65,7 +65,8 @@ void InstructionSetCompletionProvider::createCompletionsForAllAddressingModes(co
     for (const auto &addressingMode : instruction.addressingModes)
     {
         m_completionItems.emplace_back(addressingMode.assembler, CompletionItemKind::TEXT,
-                                       addressingMode.toString(), addressingMode.mode, addressingMode.mode);
+                                       instruction.description, addressingMode.getDetails(),
+                                       addressingMode.getDetails());
     }
 }
 

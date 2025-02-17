@@ -15,6 +15,13 @@ struct AddressingMode
     uint32_t cycles;
     bool hasExtraCycle;
 
+    std::string getDetails() const
+    {
+        std::stringstream ss;
+        ss << "Opcode: " << opcode << ", bytes: " << bytes << ", cycles: " << cycles << "\r\n";
+        return ss.str();
+    }
+
     std::string toString() const
     {
         std::stringstream ss;
