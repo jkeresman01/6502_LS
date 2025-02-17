@@ -12,7 +12,7 @@ class FakeCodeActionsProviderTest : public ::testing::Test
 {
   protected:
     std::unique_ptr<ICodeActionsProvider> m_fakeCodeActionProvider =
-        std::make_shared<FakeCodeActionProvider>();
+        std::make_unique<FakeCodeActionProvider>();
 };
 
 TEST_F(FakeCodeActionsProviderTest, WillReturnFakeCodeActions)
