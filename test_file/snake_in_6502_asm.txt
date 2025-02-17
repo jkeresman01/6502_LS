@@ -3,272 +3,272 @@
 ; \__ \ ' \/ _` | / / -_) _ \__ \ () / /
 ; |___/_||_\__,_|_\_\___\___/___/\__/___|
 
-; Change direction: W A S D
+; CHANGE DIRECTION: W A S D
 
-define appleL         $00 ; screen location of apple, low byte
-define appleH         $01 ; screen location of apple, high byte
-define snakeHeadL     $10 ; screen location of snake head, low byte
-define snakeHeadH     $11 ; screen location of snake head, high byte
-define snakeBodyStart $12 ; start of snake body byte pairs
-define snakeDirection $02 ; direction (possible values are below)
-define snakeLength    $03 ; snake length, in bytes
+DEFINE APPLEL         $00 ; SCREEN LOCATION OF APPLE, LOW BYTE
+DEFINE APPLEH         $01 ; SCREEN LOCATION OF APPLE, HIGH BYTE
+DEFINE SNAKEHEADL     $10 ; SCREEN LOCATION OF SNAKE HEAD, LOW BYTE
+DEFINE SNAKEHEADH     $11 ; SCREEN LOCATION OF SNAKE HEAD, HIGH BYTE
+DEFINE SNAKEBODYSTART $12 ; START OF SNAKE BODY BYTE PAIRS
+DEFINE SNAKEDIRECTION $02 ; DIRECTION (POSSIBLE VALUES ARE BELOW)
+DEFINE SNAKELENGTH    $03 ; SNAKE LENGTH, IN BYTES
 
-; Directions (each using a separate bit)
-define movingUp      1
-define movingRight   2
-define movingDown    4
-define movingLeft    8
+; DIRECTIONS (EACH USING A SEPARATE BIT)
+DEFINE MOVINGUP      1
+DEFINE MOVINGRIGHT   2
+DEFINE MOVINGDOWN    4
+DEFINE MOVINGLEFT    8
 
-; ASCII values of keys controlling the snake
-define ASCII_w      $77
-define ASCII_a      $61
-define ASCII_s      $73
-define ASCII_d      $64
+; ASCII VALUES OF KEYS CONTROLLING THE SNAKE
+DEFINE ASCII_W      $77
+DEFINE ASCII_A      $61
+DEFINE ASCII_S      $73
+DEFINE ASCII_D      $64
 
-; System variables
-define sysRandom    $fe
-define sysLastKey   $ff
+; SYSTEM VARIABLES
+DEFINE SYSRANDOM    $FE
+DEFINE SYSLASTKEY   $FF
+
+  JSR INIT
+  JSR LOOP
+
+INIT:
+  JSR INITSNAKE
+  JSR GENERATEAPPLEPOSITION
+  RTS
 
 
-  jsr init
-  jsr loop
+INITSNAKE:
+  LDA #MOVINGRIGHT  ;START DIRECTION
+  STA SNAKEDIRECTION
 
-init:
-  jsr initSnake
-  jsr generateApplePosition
-  rts
-
-
-initSnake:
-  lda #movingRight  ;start direction
-  sta snakeDirection
-
-  lda #4  ;start length (2 segments)
-  sta snakeLength
+  LDA #4  ;START LENGTH (2 SEGMENTS)
+  STA SNAKELENGTH
   
-  lda #$11
-  sta snakeHeadL
+  LDA #$11
+  STA SNAKEHEADL
   
-  lda #$10
-  sta snakeBodyStart
+  LDA #$10
+  STA SNAKEBODYSTART
   
-  lda #$0f
-  sta $14 ; body segment 1
+  LDA #$0F
+  STA $14 ; BODY SEGMENT 1
   
-  lda #$04
-  sta snakeHeadH
-  sta $13 ; body segment 1
-  sta $15 ; body segment 2
-  rts
+  LDA #$04
+  STA SNAKEHEADH
+  STA $13 ; BODY SEGMENT 1
+  STA $15 ; BODY SEGMENT 2
+  RTS
 
 
-generateApplePosition:
-  ;load a new random byte into $00
-  lda sysRandom
-  sta appleL
+GENERATEAPPLEPOSITION:
+  ;LOAD A NEW RANDOM BYTE INTO $00
+  LDA SYSRANDOM
+  STA APPLEL
 
-  ;load a new random number from 2 to 5 into $01
-  lda sysRandom
-  and #$03 ;mask out lowest 2 bits
-  clc
-  adc #2
-  sta appleH
+  ;LOAD A NEW RANDOM NUMBER FROM 2 TO 5 INTO $01
+  LDA SYSRANDOM
+  AND #$03 ;MASK OUT LOWEST 2 BITS
+  CLC
+  ADC #2
+  STA APPLEH
 
-  rts
-
-
-loop:
-  jsr readKeys
-  jsr checkCollision
-  jsr updateSnake
-  jsr drawApple
-  jsr drawSnake
-  jsr spinWheels
-  jmp loop
+  RTS
 
 
-readKeys:
-  lda sysLastKey
-  cmp #ASCII_w
-  beq upKey
-  cmp #ASCII_d
-  beq rightKey
-  cmp #ASCII_s
-  beq downKey
-  cmp #ASCII_a
-  beq leftKey
-  rts
-upKey:
-  lda #movingDown
-  bit snakeDirection
-  bne illegalMove
-
-  lda #movingUp
-  sta snakeDirection
-  rts
-rightKey:
-  lda #movingLeft
-  bit snakeDirection
-  bne illegalMove
-
-  lda #movingRight
-  sta snakeDirection
-  rts
-downKey:
-  lda #movingUp
-  bit snakeDirection
-  bne illegalMove
-
-  lda #movingDown
-  sta snakeDirection
-  rts
-leftKey:
-  lda #movingRight
-  bit snakeDirection
-  bne illegalMove
-
-  lda #movingLeft
-  sta snakeDirection
-  rts
-illegalMove:
-  rts
+LOOP:
+  JSR READKEYS
+  JSR CHECKCOLLISION
+  JSR UPDATESNAKE
+  JSR DRAWAPPLE
+  JSR DRAWSNAKE
+  JSR SPINWHEELS
+  JMP LOOP
 
 
-checkCollision:
-  jsr checkAppleCollision
-  jsr checkSnakeCollision
-  rts
+READKEYS:
+  LDA SYSLASTKEY
+  CMP #ASCII_W
+  BEQ UPKEY
+  CMP #ASCII_D
+  BEQ RIGHTKEY
+  CMP #ASCII_S
+  BEQ DOWNKEY
+  CMP #ASCII_A
+  BEQ LEFTKEY
+  RTS
+UPKEY:
+  LDA #MOVINGDOWN
+  BIT SNAKEDIRECTION
+  BNE ILLEGALMOVE
+
+  LDA #MOVINGUP
+  STA SNAKEDIRECTION
+  RTS
+RIGHTKEY:
+  LDA #MOVINGLEFT
+  BIT SNAKEDIRECTION
+  BNE ILLEGALMOVE
+
+  LDA #MOVINGRIGHT
+  STA SNAKEDIRECTION
+  RTS
+
+DOWNKEY:
+  LDA #MOVINGUP
+  BIT SNAKEDIRECTION
+  BNE ILLEGALMOVE
+
+ #MOVINGDOWN
+  STA SNAKEDIRECTION
+  RTS
+LEFTKEY:
+  LDA #MOVINGRIGHT
+  BIT SNAKEDIRECTION
+  BNE ILLEGALMOVE
+
+  LDA #MOVINGLEFT
+  STA SNAKEDIRECTION
+  RTS
+ILLEGALMOVE:
+  RTS
 
 
-checkAppleCollision:
-  lda appleL
-  cmp snakeHeadL
-  bne doneCheckingAppleCollision
-  lda appleH
-  cmp snakeHeadH
-  bne doneCheckingAppleCollision
-
-  ;eat apple
-  inc snakeLength
-  inc snakeLength ;increase length
-  jsr generateApplePosition
-doneCheckingAppleCollision:
-  rts
+CHECKCOLLISION:
+  JSR CHECKAPPLECOLLISION
+  JSR CHECKSNAKECOLLISION
+  RTS
 
 
-checkSnakeCollision:
-  ldx #2 ;start with second segment
-snakeCollisionLoop:
-  lda snakeHeadL,x
-  cmp snakeHeadL
-  bne continueCollisionLoop
+CHECKAPPLECOLLISION:
+  LDA APPLEL
+  CMP SNAKEHEADL
+  BNE DONECHECKINGAPPLECOLLISION
+  LDA APPLEH
+  CMP SNAKEHEADH
+  BNE DONECHECKINGAPPLECOLLISION
 
-maybeCollided:
-  lda snakeHeadH,x
-  cmp snakeHeadH
-  beq didCollide
-
-continueCollisionLoop:
-  inx
-  inx
-  cpx snakeLength          ;got to last section with no collision
-  beq didntCollide
-  jmp snakeCollisionLoop
-
-didCollide:
-  jmp gameOver
-didntCollide:
-  rts
+  ;EAT APPLE
+  INC SNAKELENGTH
+  INC SNAKELENGTH ;INCREASE LENGTH
+  JSR GENERATEAPPLEPOSITION
+DONECHECKINGAPPLECOLLISION:
+  RTS
 
 
-updateSnake:
-  ldx snakeLength
-  dex
-  txa
-updateloop:
-  lda snakeHeadL,x
-  sta snakeBodyStart,x
-  dex
-  bpl updateloop
+CHECKSNAKECOLLISION:
+  LDX #2 ;START WITH SECOND SEGMENT
+SNAKECOLLISIONLOOP:
+  LDA SNAKEHEADL,X
+  CMP SNAKEHEADL
+  BNE CONTINUECOLLISIONLOOP
 
-  lda snakeDirection
-  lsr
-  bcs up
-  lsr
-  bcs right
-  lsr
-  bcs down
-  lsr
-  bcs left
-up:
-  lda snakeHeadL
-  sec
-  sbc #$20
-  sta snakeHeadL
-  bcc upup
-  rts
-upup:
-  dec snakeHeadH
-  lda #$1
-  cmp snakeHeadH
-  beq collision
-  rts
-right:
-  inc snakeHeadL
-  lda #$1f
-  bit snakeHeadL
-  beq collision
-  rts
-down:
-  lda snakeHeadL
-  clc
-  adc #$20
-  sta snakeHeadL
-  bcs downdown
-  rts
-downdown:
-  inc snakeHeadH
-  lda #$6
-  cmp snakeHeadH
-  beq collision
-  rts
-left:
-  dec snakeHeadL
-  lda snakeHeadL
-  and #$1f
-  cmp #$1f
-  beq collision
-  rts
-collision:
-  jmp gameOver
+MAYBECOLLIDED:
+  LDA SNAKEHEADH,X
+  CMP SNAKEHEADH
+  BEQ DIDCOLLIDE
+
+CONTINUECOLLISIONLOOP:
+  INX
+  INX
+  CPX SNAKELENGTH          ;GOT TO LAST SECTION WITH NO COLLISION
+  BEQ DIDNTCOLLIDE
+  JMP SNAKECOLLISIONLOOP
+
+DIDCOLLIDE:
+  JMP GAMEOVER
+DIDNTCOLLIDE:
+  RTS
 
 
-drawApple:
-  ldy #0
-  lda sysRandom
-  sta (appleL),y
-  rts
+UPDATESNAKE:
+  LDX SNAKELENGTH
+  DEX
+  TXA
+UPDATELOOP:
+  LDA SNAKEHEADL,X
+  STA SNAKEBODYSTART,X
+  DEX
+  BPL UPDATELOOP
+
+  LDA SNAKEDIRECTION
+  LSR
+  BCS UP
+  LSR
+  BCS RIGHT
+  LSR
+  BCS DOWN
+  LSR
+  BCS LEFT
+UP:
+  LDA SNAKEHEADL
+  SEC
+  SBC #$20
+  STA SNAKEHEADL
+  BCC UPUP
+  RTS
+UPUP:
+  DEC SNAKEHEADH
+  LDA #$1
+  CMP SNAKEHEADH
+  BEQ COLLISION
+  RTS
+RIGHT:
+  INC SNAKEHEADL
+  LDA #$1F
+  BIT SNAKEHEADL
+  BEQ COLLISION
+  RTS
+DOWN:
+  LDA SNAKEHEADL
+  CLC
+  ADC #$20
+  STA SNAKEHEADL
+  BCS DOWNDOWN
+  RTS
+DOWNDOWN:
+  INC SNAKEHEADH
+  LDA #$6
+  CMP SNAKEHEADH
+  BEQ COLLISION
+  RTS
+LEFT:
+  DEC SNAKEHEADL
+  LDA SNAKEHEADL
+  AND #$1F
+  CMP #$1F
+  BEQ COLLISION
+  RTS
+COLLISION:
+  JMP GAMEOVER
 
 
-drawSnake:
-  ldx snakeLength
-  lda #0
-  sta (snakeHeadL,x) ; erase end of tail
-
-  ldx #0
-  lda #1
-  sta (snakeHeadL,x) ; paint head
-  rts
+DRAWAPPLE:
+  LDY #0
+  LDA SYSRANDOM
+  STA (APPLEL),Y
+  RTS
 
 
-spinWheels:
-  ldx #0
-spinloop:
-  nop
-  nop
-  dex
-  bne spinloop
-  rts
+DRAWSNAKE:
+  LDX SNAKELENGTH
+  LDA #0
+  STA (SNAKEHEADL,X) ; ERASE END OF TAIL
+
+  LDX #0
+  LDA #1
+  STA (SNAKEHEADL,X) ; PAINT HEAD
+  RTS
 
 
-gameOver:
+SPINWHEELS:
+  LDX #0
+SPINLOOP:
+  NOP
+  NOP
+  DEX
+  BNE SPINLOOP
+  RTS
+
+
+GameOver:
