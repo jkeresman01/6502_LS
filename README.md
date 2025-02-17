@@ -1,10 +1,62 @@
+<div align="center">
+
+  <h1>6502 assembly language server</h1>
+  <h6> ---> Langauge server for 6502 assembly <--- </h6>
+
+![C++](https://img.shields.io/badge/C++-blue?style=for-the-badge&logo=c%2B%2B)
+![Work In Progress](https://img.shields.io/badge/Work%20In%20Progress-orange?style=for-the-badge)
+
+</div>
+
 ## Langauge server for 6502 assembly ---> Not baked yet
 
-Toy langaguge server for 6502 assembly, providing completion items and information about instruction set on hover.
+## Table of Contents ##
+
+- [6502 Langauge server](#)
+   - [Completions](#)
+   - [Hover](#)
+   - [Diagnostics](#)
+   - [CodeActions](#)
+- [6502 processor](#)
+  - [Overivew](#)
+  - [Instruction Set](#)
+- [Clients](#)
+  - [Neovim](#)
+  - [Emacs](#)
+  - [VSCode](#)
+- [Build](#)
+
+## 6502 lanage server ##
+
+This is fairly simple implementation of language server protocol for 6502 assembly.
+
+A language server is a tool that provides language-specific features like auto-completion, go-to-definition, and find-all-references to an editor or integrated development environment (IDE) through the Language Server Protocol (LSP).
+
+For more information visit official microsofts documentation.
+
+### Completions [intelisense]  ###
+
+[![asciicast](https://asciinema.org/a/Vpxr4wl0QqZ83fRqBJO7xGunM.svg)](https://asciinema.org/a/Vpxr4wl0QqZ83fRqBJO7xGunM)
+
+### Hover ###
+
+[![asciicast](https://asciinema.org/a/syKCKR74Qze1xiQ46AxoEDiyv.svg)](https://asciinema.org/a/syKCKR74Qze1xiQ46AxoEDiyv)
+
+### Diagnostics  ###
+
+/// TODO
+
+### Code actions  ###
+
+/// TODO
 
 ## 6502 processor ##
 
-TODO: short desc
+///  TODO: short desc
+
+## Overview ##
+
+/// TODO: short desc
 
 Registers:
 
@@ -16,9 +68,7 @@ Registers:
 * SP	stack pointer	(8 bit)
 
 
-
-## Covered instruction  ##
-
+## Instruction set  ##
 
 | Mnemonic | Description |
 |----------|------------|
@@ -79,10 +129,52 @@ Registers:
 | **TXS**  | Transfer X to stack pointer   |
 | **TYA**  | Transfer Y to accumulator     |
 
-### Completions [intelisense]  ###
 
-[![asciicast](https://asciinema.org/a/Vpxr4wl0QqZ83fRqBJO7xGunM.svg)](https://asciinema.org/a/Vpxr4wl0QqZ83fRqBJO7xGunM)
+## Clients ##
 
-### Hover ###
-[![asciicast](https://asciinema.org/a/syKCKR74Qze1xiQ46AxoEDiyv.svg)](https://asciinema.org/a/syKCKR74Qze1xiQ46AxoEDiyv)
+Instructions on how to setup language server on client side is provided for following editors: Neovim, Emacs, VSCode(don't use this one).
+
+### Neovim ###
+
+Neovim supports the Language Server Protocol (LSP), which means it acts as a client to LSP servers and includes a Lua framework `vim.lsp`.
+
+To configure the LSP client, you can use this example:
+
+```Lua
+vim.api.nvim_create_autocmd("FileType", {
+    pattern = "txt",
+
+    callback = function()
+
+        local client = vim.lsp.start({
+            name = "JustAnLSP",
+            cmd = {"/path/to/6502LS/binary"}
+        })
+
+        if not client then
+            vim.notify "No can do for 6502 ASM language server!"
+        else
+            vim.lsp.buf_attach_client(0, client)
+        end
+    end
+
+})
+```
+
+### Emacs ###
+
+/// TODO
+
+### VSCode ###
+
+/// TODO
+
+## Build ##
+
+``` shell
+cd 6502_LS
+mkdir build && cd build
+cmake ..
+make
+```
 
