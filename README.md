@@ -78,3 +78,11 @@ Registers:
 | **TXA**  | Transfer X to accumulator     |
 | **TXS**  | Transfer X to stack pointer   |
 | **TYA**  | Transfer Y to accumulator     |
+
+### Intelisense [completions]  ###
+
+[![asciicast](https://asciinema.org/a/GBdxqY7I4daDNtJBR4at8FYJS.svg)](https://asciinema.org/a/GBdxqY7I4daDNtJBR4at8FYJS)
+
+### Hover ###
+[![asciicast](https://asciinema.org/a/syKCKR74Qze1xiQ46AxoEDiyv.svg)](https://asciinema.org/a/syKCKR74Qze1xiQ46AxoEDiyv)
+
