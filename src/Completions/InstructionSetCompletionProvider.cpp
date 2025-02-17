@@ -1,5 +1,8 @@
 #include "InstructionSetCompletionProvider.h"
 
+#include <algorithm>
+#include <functional>
+
 #include "../Repo/InstructionSetRepoFactory.h"
 #include "../Types/Position.h"
 #include "../Utils/DocumentUtil.h"
@@ -26,6 +29,10 @@ std::vector<CompletionItem> InstructionSetCompletionProvider::getCompletions(con
                                                                              const Position &position)
 {
     std::string prefix = DocumentUtil::extractPrefix(document, position);
+
+    std::transform(prefix.begin(), prefix.end(), prefix.begin(),
+                   std::ptr_fun<int32_t, int32_t>(std::toupper));
+
     std::vector<std::string> instructions = m_instructionSetTrie->getCompletionWords(prefix);
 
     return mapInstructionsToCompletions(instructions);
