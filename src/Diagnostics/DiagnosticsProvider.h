@@ -87,11 +87,26 @@ class DiagnosticsProvider : public IDiagnosticsProvider
     void checkGeneralSyntaxErrors(const std::string &line, size_t lineNumber);
 
   private:
-    std::shared_ptr<IInstructionSetRepository>
-        m_instructionSetRepository;        ///< Repository for instruction set data
-    std::vector<Diagnostic> m_diagnostics; ///< List of collected diagnostics
-    InstructionSetMapT m_instructionSet;   ///< Map of instruction names to Instruction objects
+    /////////////////////////////////////////////////////////////////////
+    ///
+    /// @brief Repository for instruction set data
+    ///
+    /////////////////////////////////////////////////////////////////////
+    std::shared_ptr<IInstructionSetRepository> m_instructionSetRepository;
+
+    /////////////////////////////////////////////////////////////////////
+    ///
+    /// @brief List of collected diagnostics
+    ///
+    /////////////////////////////////////////////////////////////////////
+    std::vector<Diagnostic> m_diagnostics;
+
+    /////////////////////////////////////////////////////////////////////
+    ///
+    /// @brief Map of instruction names to Instruction objects
+    ///
+    /////////////////////////////////////////////////////////////////////
+    InstructionSetMapT m_instructionSet;
 };
 
 } // namespace ls6502
-k

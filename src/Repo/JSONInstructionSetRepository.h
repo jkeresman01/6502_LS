@@ -148,10 +148,19 @@ class JSONInstructionSetRepository : public IInstructionSetRepository
     void loadCycles(const nlohmann::json &jsonData, AddressingMode &addressingMode);
 
   private:
-    InstructionSetMapT m_instructionSet; ///< Map of instruction names to Instruction objects
-    const char *INSTRUCTION_SET_FILE_PATH =
-        "/home/josip/git/cpp/6502_LS/instructions/instructions.json"; ///< Path to the JSON instruction set
-                                                                      ///< file
+    /////////////////////////////////////////////////////////////////////
+    ///
+    /// @brief Map of instruction names to Instruction objects
+    ///
+    /////////////////////////////////////////////////////////////////////
+    InstructionSetMapT m_instructionSet;
+
+    /////////////////////////////////////////////////////////////////////
+    ///
+    /// @brief Path to the JSON instruction set
+    ///
+    /////////////////////////////////////////////////////////////////////
+    const char *INSTRUCTION_SET_FILE_PATH = "/home/josip/git/cpp/6502_LS/instructions/instructions.json";
 };
 
 } // namespace ls6502
