@@ -27,10 +27,21 @@ class FakeDiagnosticsProvider : public IDiagnosticsProvider
   public:
     //////////////////////////////////////////////////////////////
     ///
-    /// @brief Default constructor for FakeDiagnosticsProvider.
+    /// @brief Mock constructor for FakeDiagnosticsProvider.
     ///
     //////////////////////////////////////////////////////////////
-    FakeDiagnosticsProvider() = default;
+    FakeDiagnosticsProvider() { fillFakeDiagnostics(); };
+
+    //////////////////////////////////////////////////////////////
+    ///
+    /// @brief Mock constructor
+    ///
+    /// @mockDiagnostics
+    ///
+    //////////////////////////////////////////////////////////////
+    FakeDiagnosticsProvider(const std::vector<Diagnostic> &mockDiagnostics) : m_diagnostics(mockDiagnostics)
+    {
+    }
 
     //////////////////////////////////////////////////////////////
     ///
@@ -52,43 +63,43 @@ class FakeDiagnosticsProvider : public IDiagnosticsProvider
     /// @param diagnostics The vector to be populated with fake diagnostic data.
     ///
     //////////////////////////////////////////////////////////////
-    void fillFakeDiagnostics(std::vector<Diagnostic> &diagnostics);
+    void fillFakeDiagnostics();
 
     //////////////////////////////////////////////////////////////
     ///
     /// @brief Fills the diagnostics vector with fake hint diagnostics.
     ///
-    /// @param diagnostics The vector to be populated with hint diagnostics.
-    ///
     //////////////////////////////////////////////////////////////
-    void fillFakeHints(std::vector<Diagnostic> &diagnostics);
+    void fillFakeHints();
 
     //////////////////////////////////////////////////////////////
     ///
     /// @brief Fills the diagnostics vector with fake warning diagnostics.
     ///
-    /// @param diagnostics The vector to be populated with warning diagnostics.
-    ///
     //////////////////////////////////////////////////////////////
-    void fillFakeWarnings(std::vector<Diagnostic> &diagnostics);
+    void fillFakeWarnings();
 
     //////////////////////////////////////////////////////////////
     ///
     /// @brief Fills the diagnostics vector with fake error diagnostics.
     ///
-    /// @param diagnostics The vector to be populated with error diagnostics.
-    ///
     //////////////////////////////////////////////////////////////
-    void fillFakeErrors(std::vector<Diagnostic> &diagnostics);
+    void fillFakeErrors();
 
     //////////////////////////////////////////////////////////////
     ///
     /// @brief Fills the diagnostics vector with fake informational diagnostics.
     ///
-    /// @param diagnostics The vector to be populated with informational diagnostics.
+    //////////////////////////////////////////////////////////////
+    void fillFakeInfo();
+
+  private:
+    //////////////////////////////////////////////////////////////
+    ///
+    /// @brief Diagnostics
     ///
     //////////////////////////////////////////////////////////////
-    void fillFakeInfo(std::vector<Diagnostic> &diagnostics);
+    std::vector<Diagnostic> m_diagnostics;
 };
 
 } // namespace ls6502

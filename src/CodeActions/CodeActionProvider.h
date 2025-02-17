@@ -38,9 +38,32 @@ class CodeActionProvider : public ICodeActionsProvider
     /////////////////////////////////////////////////////////////////////
     std::vector<CodeAction> getCodeActions(const std::string &document, const std::string &URI) override;
 
+    /////////////////////////////////////////////////////////////////////
+    ///
+    /// @brief Mutator method for diagnostics provider
+    ///
+    /// @param diagnosticsProvider
+    ///
+    /////////////////////////////////////////////////////////////////////
+    void setDiagnosticsProvider(const std::shared_ptr<IDiagnosticsProvider> &diagnosticsProvider)
+    {
+        m_diagnosticsProvider = diagnosticsProvider;
+    };
+
   private:
-    std::shared_ptr<IDiagnosticsProvider> m_diagnosticsProvider; ///< Provider for document diagnostics
-    std::vector<CodeAction> m_codeActions;                       ///< code actions
+    /////////////////////////////////////////////////////////////////////
+    ///
+    /// @brief Provider for document diagnostics
+    ///
+    /////////////////////////////////////////////////////////////////////
+    std::shared_ptr<IDiagnosticsProvider> m_diagnosticsProvider;
+
+    /////////////////////////////////////////////////////////////////////
+    ///
+    /// @brief Code actions
+    ///
+    /////////////////////////////////////////////////////////////////////
+    std::vector<CodeAction> m_codeActions;
 };
 
 } // namespace ls6502

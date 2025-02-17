@@ -41,6 +41,13 @@ class CodeAction
 
     //////////////////////////////////////////////////////////////
     ///
+    /// @brief Accessor method for title
+    ///
+    //////////////////////////////////////////////////////////////
+    std::string getTitle() const { return m_title; };
+
+    //////////////////////////////////////////////////////////////
+    ///
     /// @brief Converts the CodeAction to a string representation.
     ///
     /// @return A string representation of the CodeAction.
