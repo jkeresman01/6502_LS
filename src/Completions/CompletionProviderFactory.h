@@ -49,8 +49,6 @@ class CompletionProviderFactory
             return std::make_shared<FakeCompletionProvider>();
         }
 
-        // TODO implement rest of the completion providers
-
         return std::make_shared<InstructionSetCompletionProvider>();
     }
 };

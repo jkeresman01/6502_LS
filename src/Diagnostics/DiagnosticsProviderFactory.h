@@ -49,7 +49,6 @@ class DiagnosticsProviderFactory
             return std::make_shared<FakeDiagnosticsProvider>();
         }
 
-        // Default to FakeDiagnosticsProvider if no valid configuration is found.
         return std::make_shared<FakeDiagnosticsProvider>();
     }
 };
