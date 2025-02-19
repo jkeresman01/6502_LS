@@ -43,7 +43,7 @@ void DiagnosticsProvider::checkMalformedLabel(const std::string &line, size_t li
     if (std::regex_match(line, match, labelRegex))
     {
         m_diagnostics.emplace_back(Range{lineNumber, 0, lineNumber, line.size()}, DiagnosticSeverity::WARNING,
-                                   "Parser", "Label missing ':' at end");
+                                   typeid(*this).name(), "Label missing ':' at end");
     }
 }
 
@@ -54,7 +54,7 @@ void DiagnosticsProvider::checkInvalidSemicolonUsage(const std::string &line, si
     if (std::regex_match(line, invalidSemicolonRegex))
     {
         m_diagnostics.emplace_back(Range{lineNumber, 0, lineNumber, line.size()}, DiagnosticSeverity::ERROR,
-                                   "Parser", "Invalid non-comment word starting with ';'");
+                                   typeid(*this).name(), "Invalid non-comment word starting with ';'");
     }
 }
 
@@ -68,7 +68,7 @@ void DiagnosticsProvider::checkUnsupportedInstructions(const std::string &line, 
     if (!mnemonic.empty() and m_instructionSet.find(mnemonic) == m_instructionSet.end())
     {
         m_diagnostics.emplace_back(Range{lineNumber, 0, lineNumber, mnemonic.size()},
-                                   DiagnosticSeverity::ERROR, "Parser",
+                                   DiagnosticSeverity::ERROR, typeid(*this).name(),
                                    "Unsupported instruction: " + mnemonic);
     }
 }
@@ -79,8 +79,8 @@ void DiagnosticsProvider::checkGeneralSyntaxErrors(const std::string &line, size
 
     if (!std::regex_match(line, validSyntaxRegex))
     {
-        m_diagnostics.emplace_back(Range{lineNumber, 0, lineNumber, line.size()}, DiagnosticSeverity::ERROR,
-                                   "Parser", "General syntax error");
+        m_diagnostics.emplace_back(Range{lineNumber, 0, lineNumber, line.size()}, DiagnosticSeverity::ERROR, ,
+                                   typeid(*this).name(), "General syntax error");
     }
 }
 } // namespace ls6502
