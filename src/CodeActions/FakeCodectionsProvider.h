@@ -51,6 +51,17 @@ class FakeCodeActionsProvider : public ICodeActionsProvider
 
     //////////////////////////////////////////////////////////////
     ///
+    /// @brief Creates fake code action
+    ///
+    /// @param label
+    /// @param workspaceEdit
+    ///
+    //////////////////////////////////////////////////////////////
+    CodeAction createFakeCodeAction(const WorkspaceEdit &worskpaceEdit, const std::string& label);
+
+  private:
+    //////////////////////////////////////////////////////////////
+    ///
     /// @brief Numner of fake code actions that will be provided
     ///
     //////////////////////////////////////////////////////////////

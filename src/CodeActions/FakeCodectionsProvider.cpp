@@ -31,30 +31,20 @@ void FakeCodeActionsProvider::fillFakeCodeActions(std::vector<CodeAction> &codeA
     textEdits.push_back(textEdit);
     workspaceEdit.addChange({URI, textEdits});
 
-    CodeAction firstFakeCodeAction = CodeAction::Builder()
-                                         .withTitle("Code action test")
-                                         .withCodeActionKind(CodeActionKind::QUICK_FIX)
-                                         .withPrefferedFix(false)
-                                         .withWorkspaceEdit(workspaceEdit)
-                                         .build();
+    codeActions[0] = createFakeCodeAction(workspaceEdit, "Fake code action 1");
+    codeActions[1] = createFakeCodeAction(workspaceEdit, "Fake code action 2");
+    codeActions[2] = createFakeCodeAction(workspaceEdit, "Fake code action 3");
+}
 
-    CodeAction secondFakeCodeAction = CodeAction::Builder()
-                                          .withTitle("Code action test 1")
-                                          .withCodeActionKind(CodeActionKind::QUICK_FIX)
-                                          .withPrefferedFix(false)
-                                          .withWorkspaceEdit(workspaceEdit)
-                                          .build();
 
-    CodeAction thirdFakeCodeAction = CodeAction::Builder()
-                                         .withTitle("Code action test 2")
-                                         .withCodeActionKind(CodeActionKind::QUICK_FIX)
-                                         .withPrefferedFix(false)
-                                         .withWorkspaceEdit(workspaceEdit)
-                                         .build();
-
-    codeActions[0] = firstFakeCodeAction;
-    codeActions[1] = secondFakeCodeAction;
-    codeActions[2] = thirdFakeCodeAction;
+CodeAction FakeCodeActionsProvider::createFakeCodeAction(const WorkspaceEdit &workspaceEdit, const std::string& title)
+{
+    return CodeAction::Builder()
+        .withTitle(title)
+        .withCodeActionKind(CodeActionKind::QUICK_FIX)
+        .withPrefferedFix(false)
+        .withWorkspaceEdit(workspaceEdit)
+        .build();
 }
 
 } // namespace ls6502
