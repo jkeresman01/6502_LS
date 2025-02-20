@@ -35,22 +35,6 @@ std::vector<CodeAction> CodeActionProvider::getCodeActions(const std::string &do
 
             m_codeActions.push_back(codeAction);
         }
-        else if (diagnostic.getMessage().find("Unexpected ';'") != std::string::npos)
-        {
-            replacementText = document.substr(range.start.character + 1, range.end.character - 1);
-
-            textEdits.emplace_back(range, replacementText);
-            workspaceEdit.addChange({URI, textEdits});
-
-            CodeAction codeAction = CodeAction::Builder()
-                                        .withTitle("Remove unexpected ';'")
-                                        .withCodeActionKind(CodeActionKind::QUICK_FIX)
-                                        .withPrefferedFix(false)
-                                        .withWorkspaceEdit(workspaceEdit)
-                                        .build();
-
-            m_codeActions.push_back(codeAction);
-        }
         else if (diagnostic.getMessage().find("Unsupported instruction") != std::string::npos)
         {
             replacementText = "// Replace with a valid instruction";
