@@ -7,6 +7,7 @@
 #include "../Types/Position.h"
 #include "../Utils/DocumentUtil.h"
 #include "../Utils/Logger.h"
+#include "../Utils/StringUtil.h"
 
 namespace ls6502
 {
@@ -30,8 +31,7 @@ std::vector<CompletionItem> InstructionSetCompletionProvider::getCompletions(con
 {
     std::string prefix = DocumentUtil::extractPrefix(document, position);
 
-    std::transform(prefix.begin(), prefix.end(), prefix.begin(),
-                   std::ptr_fun<int32_t, int32_t>(std::toupper));
+    StringUtil::toUpper(prefix);
 
     std::vector<std::string> instructions = m_instructionSetTrie->getCompletionWords(prefix);
 

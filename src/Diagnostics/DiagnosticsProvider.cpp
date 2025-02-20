@@ -8,6 +8,7 @@
 #include "../Repo/InstructionSetRepoFactory.h"
 #include "../Types/Range.h"
 #include "../Utils/DocumentUtil.h"
+#include "../Utils/StringUtil.h"
 #include "../Utils/Logger.h"
 
 namespace ls6502
@@ -39,7 +40,12 @@ void DiagnosticsProvider::checkMalformedLabel(const std::string &line, size_t li
     std::regex labelRegex(R"(^\s*([A-Za-z_][A-Za-z0-9_]*)\s*$)");
     std::smatch match;
 
-    if (std::regex_match(line, match, labelRegex))
+    InstructionSetMapT::iterator it = m_instructionSet.find(line);
+
+    bool isValid6502Instruction = it != m_instructionSet.end();
+    bool isMissingColon = std::regex_match(line, match, labelRegex);
+
+    if (!isValid6502Instruction and isMissingColon)
     {
         m_diagnostics.emplace_back(Range{lineNumber, 0, lineNumber, line.size()}, DiagnosticSeverity::WARNING,
                                    typeid(*this).name(), "Label missing ':' at end");
@@ -52,6 +58,8 @@ void DiagnosticsProvider::checkUnsupportedInstructions(const std::string &line, 
 
     std::string mnemonic;
     iss >> mnemonic;
+
+    StringUtil::trim(mnemonic);
 
     if (!mnemonic.empty() and m_instructionSet.find(mnemonic) == m_instructionSet.end())
     {

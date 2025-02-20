@@ -9,6 +9,7 @@
 #include "../Types/Position.h"
 #include "../Utils/DocumentUtil.h"
 #include "../Utils/Logger.h"
+#include "../Utils/StringUtil.h"
 
 namespace ls6502
 {
@@ -28,8 +29,7 @@ HoverItem InstructionSet6502HoverProvider::getHoverItem(const std::string &docum
 {
     std::string instruction = DocumentUtil::extractPrefix(document, position);
 
-    std::transform(instruction.begin(), instruction.end(), instruction.begin(),
-                   std::ptr_fun<int32_t, int32_t>(std::toupper));
+    StringUtil::toUpper(instruction);
 
     LS_6502_DEBUG(STR("Hover items are requested for instruction: %s", instruction.c_str()));
 

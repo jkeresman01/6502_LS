@@ -28,28 +28,56 @@ class StringUtil
     ///
     /// @brief Trims the provided string
     ///
-    /// @param line
-    ///
-    /// @return trimed string, or empty string if all whitespaces
+    /// @param string
     ///
     /////////////////////////////////////////////////////////////////////
-    static std::string trim(const std::string &line);
+    static void trim(std::string &string);
+
+    /////////////////////////////////////////////////////////////////////
+    ///
+    /// @brief Converts the string to upper case
+    ///
+    /// @param string
+    ///
+    /////////////////////////////////////////////////////////////////////
+    static void toUpper(std::string &string);
+
+    /////////////////////////////////////////////////////////////////////
+    ///
+    /// @brief Converts the string to lower case
+    ///
+    /// @param string
+    ///
+    /////////////////////////////////////////////////////////////////////
+    static void toLower(std::string &string);
 };
 
 /////////////////////////////////////////////////////////////////////
 /// Implementation of inline defined functions
 /////////////////////////////////////////////////////////////////////
 
-std::string inline StringUtil::trim(const std::string &line)
+void inline StringUtil::trim(std::string &string)
 {
-    size_t start = line.find_first_not_of(" \t\n\r\f\v");
+    size_t start = string.find_first_not_of(" \t\n\r\f\v");
 
     if (start == std::string::npos)
     {
-        return std::string();
+        return;
     }
 
-    size_t end = line.find_last_not_of(" \t\n\r\f\v");
-    return line.substr(start, end - start + 1);
+    size_t end = string.find_last_not_of(" \t\n\r\f\v");
+    string = string.substr(start, end - start + 1);
 }
+
+void inline StringUtil::toUpper(std::string &string)
+{
+    std::transform(string.begin(), string.end(), string.begin(),
+                   std::ptr_fun<int32_t, int32_t>(std::toupper));
+}
+void inline StringUtil::toLower(std::string &string)
+{
+    std::transform(string.begin(), string.end(), string.begin(),
+                   std::ptr_fun<int32_t, int32_t>(std::tolower));
+}
+
 } // namespace ls6502
