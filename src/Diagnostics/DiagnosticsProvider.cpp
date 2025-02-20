@@ -79,7 +79,7 @@ void DiagnosticsProvider::checkGeneralSyntaxErrors(const std::string &line, size
 
     if (!std::regex_match(line, validSyntaxRegex))
     {
-        m_diagnostics.emplace_back(Range{lineNumber, 0, lineNumber, line.size()}, DiagnosticSeverity::ERROR, ,
+        m_diagnostics.emplace_back(Range{lineNumber, 0, lineNumber, line.size()}, DiagnosticSeverity::ERROR,
                                    typeid(*this).name(), "General syntax error");
     }
 }

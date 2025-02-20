@@ -14,7 +14,7 @@ std::vector<CodeAction> FakeCodeActionsProvider::getCodeActions(const std::strin
 {
     (void)document;
 
-    std::vector<CodeAction> codeActions;
+    std::vector<CodeAction> codeActions(FAKE_CODE_ACTIONS_NO);
     fillFakeCodeActions(codeActions, URI);
     return codeActions;
 }
@@ -52,9 +52,9 @@ void FakeCodeActionsProvider::fillFakeCodeActions(std::vector<CodeAction> &codeA
                                          .withWorkspaceEdit(workspaceEdit)
                                          .build();
 
-    codeActions.push_back(firstFakeCodeAction);
-    codeActions.push_back(secondFakeCodeAction);
-    codeActions.push_back(thirdFakeCodeAction);
+    codeActions[0] = firstFakeCodeAction;
+    codeActions[1] = secondFakeCodeAction;
+    codeActions[2] = thirdFakeCodeAction;
 }
 
 } // namespace ls6502

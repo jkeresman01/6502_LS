@@ -48,6 +48,13 @@ class FakeCodeActionsProvider : public ICodeActionsProvider
     ///
     //////////////////////////////////////////////////////////////
     void logCodeActions(std::vector<CodeAction> &codeAction);
+
+    //////////////////////////////////////////////////////////////
+    ///
+    /// @brief Numner of fake code actions that will be provided
+    ///
+    //////////////////////////////////////////////////////////////
+    static constexpr uint32_t FAKE_CODE_ACTIONS_NO = 3;
 };
 
 } // namespace ls6502
