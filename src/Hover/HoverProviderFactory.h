@@ -49,7 +49,7 @@ class HoverProviderFactory
             return std::make_shared<InstructionSet6502HoverProvider>();
         }
 
-        //TODO default to FakeHoverProvider
+        // TODO default to FakeHoverProvider
         return std::make_shared<InstructionSet6502HoverProvider>();
     }
 };

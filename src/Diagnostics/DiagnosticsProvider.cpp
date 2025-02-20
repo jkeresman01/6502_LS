@@ -8,8 +8,8 @@
 #include "../Repo/InstructionSetRepoFactory.h"
 #include "../Types/Range.h"
 #include "../Utils/DocumentUtil.h"
-#include "../Utils/StringUtil.h"
 #include "../Utils/Logger.h"
+#include "../Utils/StringUtil.h"
 
 namespace ls6502
 {
@@ -61,7 +61,11 @@ void DiagnosticsProvider::checkUnsupportedInstructions(const std::string &line, 
 
     StringUtil::trim(mnemonic);
 
-    if (!mnemonic.empty() and m_instructionSet.find(mnemonic) == m_instructionSet.end())
+    InstructionSetMapT::iterator it = m_instructionSet.find(mnemonic);
+
+    bool isValid6502ASMInstruction = it != m_instructionSet.end();
+
+    if (!mnemonic.empty() and !isValid6502ASMInstruction)
     {
         m_diagnostics.emplace_back(Range{lineNumber, 0, lineNumber, mnemonic.size()},
                                    DiagnosticSeverity::ERROR, typeid(*this).name(),
@@ -73,7 +77,9 @@ void DiagnosticsProvider::checkGeneralSyntaxErrors(const std::string &line, size
 {
     std::regex validSyntaxRegex(R"(^\s*([A-Za-z_][A-Za-z0-9_]*:)?\s*([A-Z]{2,3})?\s*([^;]*)?(;.*)?$)");
 
-    if (!std::regex_match(line, validSyntaxRegex))
+    bool isValidSyntax = std::regex_match(line, validSyntaxRegex);
+
+    if (!isValidSyntax)
     {
         m_diagnostics.emplace_back(Range{lineNumber, 0, lineNumber, line.size()}, DiagnosticSeverity::ERROR,
                                    typeid(*this).name(), "General syntax error");
