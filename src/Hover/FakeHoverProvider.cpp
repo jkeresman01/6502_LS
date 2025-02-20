@@ -4,8 +4,9 @@ namespace ls6502
 {
 HoverItem FakeHoverProvider::getHoverItem(const std::string &document, const Position &position)
 {
-    HoverItem fakeHoverItem;
-    fakeHoverItem.text = "6502 ASM langauge server";
-    return fakeHoverItem;
+    (void)document;
+    (void)position;
+
+    return HoverItem{"6502 ASM langauge server"};
 }
 } // namespace ls6502
