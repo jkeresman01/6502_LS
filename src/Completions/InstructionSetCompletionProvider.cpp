@@ -20,9 +20,9 @@ InstructionSetCompletionProvider::InstructionSetCompletionProvider()
 
 void InstructionSetCompletionProvider::loadInstructionSetTrie()
 {
-    for (const auto &[instruction, _] : m_instructionSet)
+    for (const auto &[mnemonic, _] : m_instructionSet)
     {
-        m_instructionSetTrie->insert(instruction);
+        m_instructionSetTrie->insert(mnemonic);
     }
 }
 
