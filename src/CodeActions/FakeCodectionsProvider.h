@@ -57,7 +57,7 @@ class FakeCodeActionsProvider : public ICodeActionsProvider
     /// @param workspaceEdit
     ///
     //////////////////////////////////////////////////////////////
-    CodeAction createFakeCodeAction(const WorkspaceEdit &worskpaceEdit, const std::string& label);
+    CodeAction createFakeCodeAction(const WorkspaceEdit &worskpaceEdit, const std::string &label);
 
   private:
     //////////////////////////////////////////////////////////////

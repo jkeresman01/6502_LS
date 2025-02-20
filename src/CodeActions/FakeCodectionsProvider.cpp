@@ -36,8 +36,8 @@ void FakeCodeActionsProvider::fillFakeCodeActions(std::vector<CodeAction> &codeA
     codeActions[2] = createFakeCodeAction(workspaceEdit, "Fake code action 3");
 }
 
-
-CodeAction FakeCodeActionsProvider::createFakeCodeAction(const WorkspaceEdit &workspaceEdit, const std::string& title)
+CodeAction FakeCodeActionsProvider::createFakeCodeAction(const WorkspaceEdit &workspaceEdit,
+                                                         const std::string &title)
 {
     return CodeAction::Builder()
         .withTitle(title)
