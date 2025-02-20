@@ -58,16 +58,6 @@ class DiagnosticsProvider : public IDiagnosticsProvider
 
     /////////////////////////////////////////////////////////////////////
     ///
-    /// @brief Checks for invalid semicolon usage in a given line
-    ///
-    /// @param line
-    /// @param lineNumber
-    ///
-    /////////////////////////////////////////////////////////////////////
-    void checkInvalidSemicolonUsage(const std::string &line, size_t lineNumber);
-
-    /////////////////////////////////////////////////////////////////////
-    ///
     /// @brief Checks for unsupported instructions in a given line
     ///
     /// @param line

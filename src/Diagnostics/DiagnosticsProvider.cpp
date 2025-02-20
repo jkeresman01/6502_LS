@@ -27,7 +27,6 @@ std::vector<Diagnostic> DiagnosticsProvider::getDiagnostics(const std::string &d
     for (size_t lineNumber = 0; lineNumber < lines.size(); ++lineNumber)
     {
         checkMalformedLabel(lines[lineNumber], lineNumber);
-        checkInvalidSemicolonUsage(lines[lineNumber], lineNumber);
         checkUnsupportedInstructions(lines[lineNumber], lineNumber);
         checkGeneralSyntaxErrors(lines[lineNumber], lineNumber);
     }
@@ -44,17 +43,6 @@ void DiagnosticsProvider::checkMalformedLabel(const std::string &line, size_t li
     {
         m_diagnostics.emplace_back(Range{lineNumber, 0, lineNumber, line.size()}, DiagnosticSeverity::WARNING,
                                    typeid(*this).name(), "Label missing ':' at end");
-    }
-}
-
-void DiagnosticsProvider::checkInvalidSemicolonUsage(const std::string &line, size_t lineNumber)
-{
-    std::regex invalidSemicolonRegex(R"(^\s*;\S.*$)");
-
-    if (std::regex_match(line, invalidSemicolonRegex))
-    {
-        m_diagnostics.emplace_back(Range{lineNumber, 0, lineNumber, line.size()}, DiagnosticSeverity::ERROR,
-                                   typeid(*this).name(), "Invalid non-comment word starting with ';'");
     }
 }
 
