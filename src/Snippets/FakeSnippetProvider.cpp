@@ -9,6 +9,8 @@ namespace ls6502
 
 std::vector<CompletionItem> FakeSnippetsProvider::getSnippets(const std::string &prefix)
 {
+    (void)prefix;
+
     std::vector<CompletionItem> snippets;
     fillFakeSnippets(snippets);
     return snippets;

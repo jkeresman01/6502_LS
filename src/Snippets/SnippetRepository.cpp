@@ -27,11 +27,11 @@ void SnippetRepository::load(std::ifstream &snippetsFile)
     nlohmann::json snippetsJson;
     snippetsFile >> snippetsJson;
 
-    for (auto &[key, snippets] : snippetsJson.items())
+    for (auto &[mnemonic, snippets] : snippetsJson.items())
     {
         for (const auto &snippet : snippets)
         {
-            m_snippets.emplace(key, snippet);
+            m_snippets.emplace(mnemonic, snippet);
         }
     }
 }
