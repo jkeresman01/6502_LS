@@ -44,6 +44,12 @@ class HoverProviderFactory
             return std::make_shared<FakeHoverProvider>();
         }
 
+        if (hoverProvider == "6502ISA")
+        {
+            return std::make_shared<InstructionSet6502HoverProvider>();
+        }
+
+        //TODO default to FakeHoverProvider
         return std::make_shared<InstructionSet6502HoverProvider>();
     }
 };
