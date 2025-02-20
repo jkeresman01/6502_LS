@@ -62,7 +62,7 @@ class InitializeResult
     ///
     /// @brief String representation of InitializeResult
     ///
-    /// @brief String representation of InitializeResult
+    /// @return String representation of InitializeResult
     ///
     //////////////////////////////////////////////////////////////
     std::string toString() const;
