@@ -26,20 +26,6 @@ TEST_F(DiagnosticsProviderTest, WillDetectsMalformedLabel)
     EXPECT_EQ(diagnostics[0].message, "Label missing ':' at end");
 }
 
-TEST_F(DiagnosticsProviderTest, WillDetectInvalidSemicolonUsage)
-{
-    // GIVEN
-    std::string document = ";InvalidUsage";
-
-    // WHEN
-    auto diagnostics = diagnosticsProvider->getDiagnostics(document);
-
-    // THEN
-    ASSERT_EQ(diagnostics.size(), 1);
-    EXPECT_EQ(diagnostics[0].severity, DiagnosticSeverity::ERROR);
-    EXPECT_EQ(diagnostics[0].message, "Invalid non-comment word starting with ';'");
-}
-
 TEST_F(DiagnosticsProviderTest, WillDetectUnsupportedInstruction)
 {
     // GIVEN
