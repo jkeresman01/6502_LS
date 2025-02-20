@@ -62,7 +62,7 @@ class FakeCodeActionsProvider : public ICodeActionsProvider
   private:
     //////////////////////////////////////////////////////////////
     ///
-    /// @brief Numner of fake code actions that will be provided
+    /// @brief Number of fake code actions that will be provided
     ///
     //////////////////////////////////////////////////////////////
     static constexpr uint32_t FAKE_CODE_ACTIONS_NO = 3;
