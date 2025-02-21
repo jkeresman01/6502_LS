@@ -30,15 +30,6 @@ class Message
 
     //////////////////////////////////////////////////////////////
     ///
-    /// @brief Destructs the Message from jsonRPC
-    ///
-    /// @param jsonRPC
-    ///
-    //////////////////////////////////////////////////////////////
-    virtual ~Message() = default;
-
-    //////////////////////////////////////////////////////////////
-    ///
     /// @brief  Serializes the message to JSON format
     ///
     /// @return Returns serialized Message in JSON format
