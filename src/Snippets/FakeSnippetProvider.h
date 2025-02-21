@@ -20,11 +20,18 @@ class FakeSnippetsProvider : public ISnippetProvider
   public:
     //////////////////////////////////////////////////////////////
     ///
+    /// @brief Construction, fills fake snippets
+    ///
+    //////////////////////////////////////////////////////////////
+    FakeSnippetsProvider();
+
+    //////////////////////////////////////////////////////////////
+    ///
     /// @brief Retrieves a list of snippets that match the given prefix.
     ///
     /// @param prefix
     ///
-    /// @return A vector of matching CompletionItems.
+    /// @return A vector of matching CompletionItems(CompletionItemKind::SNIPPET)
     ///
     //////////////////////////////////////////////////////////////
     std::vector<CompletionItem> getSnippets(const std::string &prefix) override;
@@ -34,9 +41,15 @@ class FakeSnippetsProvider : public ISnippetProvider
     ///
     /// @brief Populates a vector with fake snippets.
     ///
-    /// @param snippets
+    //////////////////////////////////////////////////////////////
+    void fillFakeSnippets();
+
+  private:
+    //////////////////////////////////////////////////////////////
+    ///
+    /// @brief Fake snippets vector
     ///
     //////////////////////////////////////////////////////////////
-    void fillFakeSnippets(std::vector<CompletionItem> &snippets);
+    std::vector<CompletionItem> m_snippets;
 };
 } // namespace ls6502
