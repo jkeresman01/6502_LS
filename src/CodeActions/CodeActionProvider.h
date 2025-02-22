@@ -45,10 +45,7 @@ class CodeActionProvider : public ICodeActionsProvider
     /// @param diagnosticsProvider
     ///
     /////////////////////////////////////////////////////////////////////
-    void setDiagnosticsProvider(const std::shared_ptr<IDiagnosticsProvider> &diagnosticsProvider)
-    {
-        m_diagnosticsProvider = diagnosticsProvider;
-    };
+    void setDiagnosticsProvider(const std::shared_ptr<IDiagnosticsProvider> &diagnosticsProvider);
 
   private:
     /////////////////////////////////////////////////////////////////////
