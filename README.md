@@ -132,7 +132,7 @@ Registers:
 
 ## Clients ##
 
-Instructions on how to setup language server on client side is provided for following editors: Neovim, Emacs, VSCode(don't use this one).
+Instructions on how to setup clients are provided for following editors: Neovim, Emacs, VSCode(don't use this one).
 
 ### Neovim ###
 
@@ -147,7 +147,7 @@ vim.api.nvim_create_autocmd("FileType", {
     callback = function()
 
         local client = vim.lsp.start({
-            name = "JustAnLSP",
+            name = "6502LS",
             cmd = {"/path/to/6502LS/binary"}
         })
 
