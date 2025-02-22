@@ -21,7 +21,7 @@ InstructionSet6502HoverProvider::InstructionSet6502HoverProvider()
 
     for (const auto &[instruction, _] : m_instructionSet)
     {
-        LS_6502_DEBUG(STR("instructio: %s", instruction.c_str()));
+        LS_6502_DEBUG(STR("Loaded instruction: %s", instruction.c_str()));
     }
 }
 
