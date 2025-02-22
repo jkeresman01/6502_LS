@@ -34,7 +34,7 @@ void Ls6502Client::addDocument(const std::string &URI, const std::string &docume
 
 std::string Ls6502Client::getDocumentByURI(const std::string &URI) const
 {
-    auto it = m_documentsByURI.find(URI);
+    DocumentsMapT::iterator it = m_documentsByURI.find(URI);
 
     if (it == m_documentsByURI.end())
     {

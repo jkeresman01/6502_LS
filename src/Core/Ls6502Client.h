@@ -12,6 +12,13 @@ namespace ls6502
 
 //////////////////////////////////////////////////////////////
 ///
+/// typedefs
+///
+//////////////////////////////////////////////////////////////
+typedef std::unordered_map<std::string, std::string> DocumentsMapT;
+
+//////////////////////////////////////////////////////////////
+///
 /// @class Ls6502Client
 ///
 /// @brief Represent the client that connects to Ls6502 server
@@ -115,6 +122,6 @@ class Ls6502Client
     /// @brief Documents mapped by their corresponding URI
     ///
     //////////////////////////////////////////////////////////////
-    std::unordered_map<std::string, std::string> m_documentsByURI;
+    DocumentsMapT m_documentsByURI;
 };
 } // namespace ls6502
