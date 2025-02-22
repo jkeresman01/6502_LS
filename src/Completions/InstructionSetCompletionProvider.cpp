@@ -1,8 +1,5 @@
 #include "InstructionSetCompletionProvider.h"
 
-#include <algorithm>
-#include <functional>
-
 #include "../Repo/InstructionSetRepoFactory.h"
 #include "../Types/Position.h"
 #include "../Utils/DocumentUtil.h"
@@ -45,19 +42,24 @@ std::vector<CompletionItem> InstructionSetCompletionProvider::mapInstructionsToC
 
     for (const auto &instruction : instructions)
     {
-        InstructionSetMapT::iterator it = m_instructionSet.find(instruction);
-
-        if (it == m_instructionSet.end())
-        {
-            LS_6502_WARN(STR("%s isn't a valid 6502 assembly instruction", instruction.c_str()));
-            continue;
-        }
-
-        Instruction foundInstruction = it->second;
-        createCompletionsForAllAddressingModes(foundInstruction);
+        createCompletionsForInstruction(instruction);
     }
 
     return m_completionItems;
+}
+
+void InstructionSetCompletionProvider::createCompletionsForInstruction(const std::string &instruction)
+{
+    InstructionSetMapT::iterator it = m_instructionSet.find(instruction);
+
+    if (it == m_instructionSet.end())
+    {
+        LS_6502_WARN(STR("%s isn't a valid 6502 assembly instruction", instruction.c_str()));
+        return;
+    }
+
+    Instruction foundInstruction = it->second;
+    createCompletionsForAllAddressingModes(foundInstruction);
 }
 
 void InstructionSetCompletionProvider::createCompletionsForAllAddressingModes(const Instruction &instruction)
