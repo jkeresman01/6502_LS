@@ -23,19 +23,22 @@ std::vector<CodeAction> WrongInstructionUsageDiagnosticsAnalyzer::provideCodeAct
 
     // TODO Replace with a valid instruction
     std::string replacementText = "// Adjust syntax based on valid addressing modes";
-
     textEdits.emplace_back(range, replacementText);
     workspaceEdit.addChange({URI, textEdits});
 
-    CodeAction codeAction = CodeAction::Builder()
-                                .withTitle("Fix instruction usage")
-                                .withCodeActionKind(CodeActionKind::REFACTOR)
-                                .withPrefferedFix(false)
-                                .withWorkspaceEdit(workspaceEdit)
-                                .build();
-
-    m_codeActions.push_back(codeAction);
+    m_codeActions.push_back(createCodeAction(workspaceEdit));
 
     return m_codeActions;
 }
+
+CodeAction WrongInstructionUsageDiagnosticsAnalyzer::createCodeAction(const WorkspaceEdit &workspaceEdit)
+{
+    return CodeAction::Builder()
+        .withTitle("Fix instruction usage")
+        .withCodeActionKind(CodeActionKind::REFACTOR)
+        .withPrefferedFix(false)
+        .withWorkspaceEdit(workspaceEdit)
+        .build();
+}
+
 } // namespace ls6502

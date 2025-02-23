@@ -22,7 +22,7 @@ std::vector<CodeAction> FakeCodeActionsProvider::getCodeActions(const std::strin
 void FakeCodeActionsProvider::fillFakeCodeActions(std::vector<CodeAction> &codeActions,
                                                   const std::string &URI)
 {
-    std::vector<TextEdit> textEdits {{{{2, 0}, {4, 10}}, "New text"}};
+    std::vector<TextEdit> textEdits{{{{2, 0}, {4, 10}}, "New text"}};
 
     WorkspaceEdit workspaceEdit;
     workspaceEdit.addChange({URI, textEdits});

@@ -19,13 +19,17 @@ std::vector<CodeAction> IncorrectLabelDiagnosticsAnalyzer::provideCodeActions(co
     WorkspaceEdit workspaceEdit;
     workspaceEdit.addChange({URI, textEdits});
 
-    CodeAction codeAction = CodeAction::Builder()
-                                .withTitle("Add missing ':' to label")
-                                .withCodeActionKind(CodeActionKind::QUICK_FIX)
-                                .withPrefferedFix(true)
-                                .withWorkspaceEdit(workspaceEdit)
-                                .build();
-
-    m_codeActions.push_back(codeAction);
+    m_codeActions.push_back(createCodeAction(workspaceEdit));
 }
+
+CodeAction IncorrectLabelDiagnosticsAnalyzer::createCodeAction(const WorkspaceEdit &workspaceEdit)
+{
+    return CodeAction::Builder()
+        .withTitle("Add missing ':' to label")
+        .withCodeActionKind(CodeActionKind::QUICK_FIX)
+        .withPrefferedFix(true)
+        .withWorkspaceEdit(workspaceEdit)
+        .build();
+}
+
 } // namespace ls6502

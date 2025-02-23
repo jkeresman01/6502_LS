@@ -18,6 +18,9 @@ class IncorrectLabelDiagnosticsAnalyzer : public IDiagnosticsAnalyzer
                                                const std::string &URI) override;
 
   private:
+    CodeAction createCodeAction(const WorkspaceEdit &workspaceEdit);
+
+  private:
     std::vector<CodeAction> m_codeActions;
 };
 } // namespace ls6502

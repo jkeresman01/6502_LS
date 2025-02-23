@@ -23,19 +23,22 @@ std::vector<CodeAction> UnsupportedInstructionDiagnosticsAnalyzer::provideCodeAc
 
     // TODO Replace with a valid instruction
     std::string replacementText = "// Replace with a valid instruction";
-
     textEdits.emplace_back(range, replacementText);
     workspaceEdit.addChange({URI, textEdits});
 
-    CodeAction codeAction = CodeAction::Builder()
-                                .withTitle("Replace unsupported instruction")
-                                .withCodeActionKind(CodeActionKind::REFACTOR)
-                                .withPrefferedFix(false)
-                                .withWorkspaceEdit(workspaceEdit)
-                                .build();
-
-    m_codeActions.push_back(codeAction);
+    m_codeActions.push_back(createCodeAction(workspaceEdit));
 
     return m_codeActions;
 }
+
+CodeAction UnsupportedInstructionDiagnosticsAnalyzer::createCodeAction(const WorkspaceEdit &workspaceEdit)
+{
+    return CodeAction::Builder()
+        .withTitle("Replace unsupported instruction")
+        .withCodeActionKind(CodeActionKind::REFACTOR)
+        .withPrefferedFix(false)
+        .withWorkspaceEdit(workspaceEdit)
+        .build();
+}
+
 } // namespace ls6502
