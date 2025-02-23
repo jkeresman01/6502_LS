@@ -19,27 +19,19 @@ std::vector<CodeAction> CodeActionProvider::getCodeActions(const std::string &do
 
     for (const auto &diagnostic : diagnostics)
     {
-        bool isLabelMissing = diagnostic.getMessage().find("Label missing ':'") != std::string::npos;
-
-        if (isLabelMissing)
+        if (isLabelMissingSemicolon(diagnostic))
         {
-            createCodeActionsForMissingLabel(diagnostic, document, URI);
+            fillCodeActionsForMissingLabel(diagnostic, document, URI);
         }
 
-        bool isInstructionUnsopproted =
-            diagnostic.getMessage().find("Unsupported instruction") != std::string::npos;
-
-        if (isInstructionUnsopproted)
+        if (isInstructionUnsupproted(diagnostic))
         {
-            createCodeActionsForUnsupportedInstruction(diagnostic, document, URI);
+            fillCodeActionsForUnsupportedInstruction(diagnostic, document, URI);
         }
 
-        bool isInstructionUsageIncorrect =
-            diagnostic.getMessage().find("Incorrect instruction usage") != std::string::npos;
-
-        if (isInstructionUnsopproted)
+        if (isInstructionUsageIncorrect(diagnostic))
         {
-            createCodeActionsForIncorrectInstructionUsage(diagnostic, document, URI);
+            fillCodeActionsForIncorrectInstructionUsage(diagnostic, document, URI);
         }
     }
 

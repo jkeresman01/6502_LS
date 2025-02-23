@@ -57,8 +57,8 @@ class CodeActionProvider : public ICodeActionsProvider
     /// @param URI
     ///
     /////////////////////////////////////////////////////////////////////
-    void createCodeActionsForMissingLabel(const Diagnostic &diagnostic, const std::string &document,
-                                          const std::string &URI);
+    void fillCodeActionsForMissingLabel(const Diagnostic &diagnostic, const std::string &document,
+                                        const std::string &URI);
 
     /////////////////////////////////////////////////////////////////////
     ///
@@ -69,8 +69,8 @@ class CodeActionProvider : public ICodeActionsProvider
     /// @param URI
     ///
     /////////////////////////////////////////////////////////////////////
-    void createCodeActionsForUnsupportedInstruction(const Diagnostic &diagnostic, const std::string &document,
-                                                    const std::string &URI);
+    void fillCodeActionsForUnsupportedInstruction(const Diagnostic &diagnostic, const std::string &document,
+                                                  const std::string &URI);
 
     /////////////////////////////////////////////////////////////////////
     ///
@@ -81,8 +81,42 @@ class CodeActionProvider : public ICodeActionsProvider
     /// @param URI
     ///
     /////////////////////////////////////////////////////////////////////
-    void createCodeActionsForIncorrectInstructionUsage(const Diagnostic &diagnostic,
-                                                       const std::string &document, const std::string &URI);
+    void fillCodeActionsForIncorrectInstructionUsage(const Diagnostic &diagnostic,
+                                                     const std::string &document, const std::string &URI);
+
+    /////////////////////////////////////////////////////////////////////
+    ///
+    /// @brief Validates if provided diagnostic is for missing label
+    ///
+    /// @param diagnostic
+    ///
+    /// @return true if label is missing semicolo, false otherwise
+    ///
+    /////////////////////////////////////////////////////////////////////
+    bool isLabelMissingSemicolon(const Diagnostic &diagnostic);
+
+    /////////////////////////////////////////////////////////////////////
+    ///
+    /// @brief Validates if provided diagnostic is for missing label
+    ///
+    /// @param diagnostic
+    ///
+    /// @return true if label is missing semicolo, false otherwise
+    ///
+    /////////////////////////////////////////////////////////////////////
+    bool isInstructionUnsupproted(const Diagnostic &diagnostic);
+
+    /////////////////////////////////////////////////////////////////////
+    ///
+    /// @brief Validates if provided diagnostic is for incorrect
+    ///        instruction usage
+    ///
+    /// @param diagnostic
+    ///
+    /// @return true if instruction was incorrectly used, false otherwise
+    ///
+    /////////////////////////////////////////////////////////////////////
+    bool isInstructionUsageIncorrect(const Diagnostic &diagnostic);
 
   private:
     /////////////////////////////////////////////////////////////////////
