@@ -23,6 +23,7 @@ class FakeCodeActionsProvider : public ICodeActionsProvider
     /// @brief Retrieves a list of fake code actions for a given URI.
     ///
     /// @param URI
+    ///
     /// @return A vector of CodeAction objects representing the
     ///         fake code actions.
     ///

@@ -25,8 +25,7 @@ class IDiagnosticsAnalyzer
     /// @brief Pure virtual function to provide code actions based
     ///        on a given diagnostic and document.
     ///
-    /// @param diagnostic  A reference to the Diagnostic object
-    ///                    representing the issue.
+    /// @param diagnostic 
     /// @param document
     /// @param URI
     ///
