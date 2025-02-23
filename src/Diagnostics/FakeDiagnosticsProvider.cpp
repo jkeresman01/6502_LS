@@ -1,7 +1,17 @@
-#include "FakeDiagnosticsProvider.h"
+#include "FakeDiagnosticsProvider.h" FakeDi
 
 namespace ls6502
 {
+
+FakeDiagnosticsProvider::FakeDiagnosticsProvider()
+{
+    fillFakeDiagnostics();
+};
+
+FakeDiagnosticsProvider::FakeDiagnosticsProvider(const std::vector<Diagnostic> &mockDiagnostics)
+    : m_diagnostics(mockDiagnostics)
+{
+}
 
 std::vector<Diagnostic> FakeDiagnosticsProvider::getDiagnostics(const std::string &document)
 {

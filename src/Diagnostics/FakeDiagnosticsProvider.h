@@ -11,15 +11,10 @@ namespace ls6502
 ///
 /// @class FakeDiagnosticsProvider
 ///
-/// @brief A mock implementation of the IDiagnosticsProvider interface.
-///        This class is used to simulate diagnostics, providing fake
-///        diagnostic information for testing or mock scenarios.
-///
-/// @note This class does not analyze the document or position for real errors.
-///       Instead, it generates fake diagnostics for different types such as
-///       hints, warnings, errors, and information.
-///
-/// @implements IDiagnosticsProvider
+/// @brief A mock implementation of the IDiagnosticsProvider
+///        interface. This class is used to simulate diagnostics,
+///        providing fake diagnostic information for testing or
+///        mock scenarios.
 ///
 //////////////////////////////////////////////////////////////
 class FakeDiagnosticsProvider : public IDiagnosticsProvider
@@ -30,27 +25,27 @@ class FakeDiagnosticsProvider : public IDiagnosticsProvider
     /// @brief Mock constructor for FakeDiagnosticsProvider.
     ///
     //////////////////////////////////////////////////////////////
-    FakeDiagnosticsProvider() { fillFakeDiagnostics(); };
+    FakeDiagnosticsProvider();
 
     //////////////////////////////////////////////////////////////
     ///
-    /// @brief Mock constructor
+    /// @brief Mock constructor for FakeDiagnosticsProvider.
     ///
-    /// @mockDiagnostics
+    /// @param mockDiagnostics
     ///
     //////////////////////////////////////////////////////////////
-    FakeDiagnosticsProvider(const std::vector<Diagnostic> &mockDiagnostics) : m_diagnostics(mockDiagnostics)
-    {
-    }
+    FakeDiagnosticsProvider(const std::vector<Diagnostic> &mockDiagnostics);
 
     //////////////////////////////////////////////////////////////
     ///
-    /// @brief Retrieves a list of fake diagnostics for a given document and position.
+    /// @brief Retrieves a vector of fake diagnostics for a given
+    ///        document and position.
     ///
     /// @param document
     /// @param position
     ///
-    /// @return A vector of Diagnostic objects representing the fake diagnostics.
+    /// @return A vector of Diagnostic objects representing
+    ///         the fake diagnostics.
     ///
     //////////////////////////////////////////////////////////////
     std::vector<Diagnostic> getDiagnostics(const std::string &document) override;
@@ -58,37 +53,43 @@ class FakeDiagnosticsProvider : public IDiagnosticsProvider
   private:
     //////////////////////////////////////////////////////////////
     ///
-    /// @brief Fills the diagnostics vector with a combination of fake diagnostics.
+    /// @brief Fills the diagnostics vector with a combination
+    ///        of fake diagnostics.
     ///
-    /// @param diagnostics The vector to be populated with fake diagnostic data.
+    /// @param diagnostics The vector to be populated with
+    ///        fake diagnostic data.
     ///
     //////////////////////////////////////////////////////////////
     void fillFakeDiagnostics();
 
     //////////////////////////////////////////////////////////////
     ///
-    /// @brief Fills the diagnostics vector with fake hint diagnostics.
+    /// @brief Fills the diagnostics vector with fake
+    ///        hint diagnostics.
     ///
     //////////////////////////////////////////////////////////////
     void fillFakeHints();
 
     //////////////////////////////////////////////////////////////
     ///
-    /// @brief Fills the diagnostics vector with fake warning diagnostics.
+    /// @brief Fills the diagnostics vector with fake
+    ///        warning diagnostics.
     ///
     //////////////////////////////////////////////////////////////
     void fillFakeWarnings();
 
     //////////////////////////////////////////////////////////////
     ///
-    /// @brief Fills the diagnostics vector with fake error diagnostics.
+    /// @brief Fills the diagnostics vector with fake
+    ///        error diagnostics.
     ///
     //////////////////////////////////////////////////////////////
     void fillFakeErrors();
 
     //////////////////////////////////////////////////////////////
     ///
-    /// @brief Fills the diagnostics vector with fake informational diagnostics.
+    /// @brief Fills the diagnostics vector with fake
+    ///        informational diagnostics.
     ///
     //////////////////////////////////////////////////////////////
     void fillFakeInfo();
