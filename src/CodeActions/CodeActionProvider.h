@@ -5,6 +5,7 @@
 #include "../Diagnostics/IDiagnosticsProvider.h"
 #include "../Types/CodeAction.h"
 #include "ICodeActionsProvider.h"
+#include "IDiagnosticsAnalyzer.h"
 
 namespace ls6502
 {
@@ -50,81 +51,17 @@ class CodeActionProvider : public ICodeActionsProvider
   private:
     /////////////////////////////////////////////////////////////////////
     ///
-    /// @brief Creates code actions for missing label diagnostic
-    ///
-    /// @param diagnostic
-    /// @param document
-    /// @param URI
-    ///
-    /////////////////////////////////////////////////////////////////////
-    void fillCodeActionsForMissingLabel(const Diagnostic &diagnostic, const std::string &document,
-                                        const std::string &URI);
-
-    /////////////////////////////////////////////////////////////////////
-    ///
-    /// @brief Creates code actions for unsupported instruction diagnostic
-    ///
-    /// @param diagnostic
-    /// @param document
-    /// @param URI
-    ///
-    /////////////////////////////////////////////////////////////////////
-    void fillCodeActionsForUnsupportedInstruction(const Diagnostic &diagnostic, const std::string &document,
-                                                  const std::string &URI);
-
-    /////////////////////////////////////////////////////////////////////
-    ///
-    /// @brief Creates code actions for incorrect instruction usage
-    ///
-    /// @param diagnostic
-    /// @param document
-    /// @param URI
-    ///
-    /////////////////////////////////////////////////////////////////////
-    void fillCodeActionsForIncorrectInstructionUsage(const Diagnostic &diagnostic,
-                                                     const std::string &document, const std::string &URI);
-
-    /////////////////////////////////////////////////////////////////////
-    ///
-    /// @brief Validates if provided diagnostic is for missing label
-    ///
-    /// @param diagnostic
-    ///
-    /// @return true if label is missing semicolo, false otherwise
-    ///
-    /////////////////////////////////////////////////////////////////////
-    bool isLabelMissingSemicolon(const Diagnostic &diagnostic);
-
-    /////////////////////////////////////////////////////////////////////
-    ///
-    /// @brief Validates if provided diagnostic is for missing label
-    ///
-    /// @param diagnostic
-    ///
-    /// @return true if label is missing semicolo, false otherwise
-    ///
-    /////////////////////////////////////////////////////////////////////
-    bool isInstructionUnsupproted(const Diagnostic &diagnostic);
-
-    /////////////////////////////////////////////////////////////////////
-    ///
-    /// @brief Validates if provided diagnostic is for incorrect
-    ///        instruction usage
-    ///
-    /// @param diagnostic
-    ///
-    /// @return true if instruction was incorrectly used, false otherwise
-    ///
-    /////////////////////////////////////////////////////////////////////
-    bool isInstructionUsageIncorrect(const Diagnostic &diagnostic);
-
-  private:
-    /////////////////////////////////////////////////////////////////////
-    ///
     /// @brief Provider for document diagnostics
     ///
     /////////////////////////////////////////////////////////////////////
     std::shared_ptr<IDiagnosticsProvider> m_diagnosticsProvider;
+
+    /////////////////////////////////////////////////////////////////////
+    ///
+    /// @brief Diagnostics analyzer
+    ///
+    /////////////////////////////////////////////////////////////////////
+    std::shared_ptr<IDiagnosticsAnalyzer> m_diagnosticsAnalyzer;
 
     /////////////////////////////////////////////////////////////////////
     ///
