@@ -50,6 +50,43 @@ class CodeActionProvider : public ICodeActionsProvider
   private:
     /////////////////////////////////////////////////////////////////////
     ///
+    /// @brief Creates code actions for missing label diagnostic
+    ///
+    /// @param diagnostic
+    /// @param document
+    /// @param URI
+    ///
+    /////////////////////////////////////////////////////////////////////
+    void createCodeActionsForMissingLabel(const Diagnostic &diagnostic, const std::string &document,
+                                          const std::string &URI);
+
+    /////////////////////////////////////////////////////////////////////
+    ///
+    /// @brief Creates code actions for unsupported instruction diagnostic
+    ///
+    /// @param diagnostic
+    /// @param document
+    /// @param URI
+    ///
+    /////////////////////////////////////////////////////////////////////
+    void createCodeActionsForUnsupportedInstruction(const Diagnostic &diagnostic, const std::string &document,
+                                                    const std::string &URI);
+
+    /////////////////////////////////////////////////////////////////////
+    ///
+    /// @brief Creates code actions for incorrect instruction usage
+    ///
+    /// @param diagnostic
+    /// @param document
+    /// @param URI
+    ///
+    /////////////////////////////////////////////////////////////////////
+    void createCodeActionsForIncorrectInstructionUsage(const Diagnostic &diagnostic,
+                                                       const std::string &document, const std::string &URI);
+
+  private:
+    /////////////////////////////////////////////////////////////////////
+    ///
     /// @brief Provider for document diagnostics
     ///
     /////////////////////////////////////////////////////////////////////
