@@ -2,10 +2,13 @@
 
 #include <memory>
 
+
+#include "ICodeActionsProvider.h"
+#include "FakeCodectionsProvider.h"
+#include "CodeActionProvider.h"
+
 #include "../Config/ConfigurationManager.h"
 #include "../Utils/Logger.h"
-#include "FakeCodectionsProvider.h"
-#include "ICodeActionsProvider.h"
 
 namespace ls6502
 {
@@ -43,12 +46,10 @@ class CodeActionsProviderFactory
 
         LS_6502_DEBUG(STR("Code action provider: %s", codeActionProvider.c_str()));
 
-        if (codeActionProvider == "fake")
+        if (codeActionProvider == "6502asm")
         {
-            return std::make_shared<FakeCodeActionsProvider>();
+            return std::make_shared<CodeActionProvider>();
         }
-
-        // TODO implement rest of code action providers
 
         return std::make_shared<FakeCodeActionsProvider>();
     }
