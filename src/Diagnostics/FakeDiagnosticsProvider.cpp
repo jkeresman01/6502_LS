@@ -6,7 +6,7 @@ namespace ls6502
 FakeDiagnosticsProvider::FakeDiagnosticsProvider()
 {
     fillFakeDiagnostics();
-};
+}
 
 FakeDiagnosticsProvider::FakeDiagnosticsProvider(const std::vector<Diagnostic> &mockDiagnostics)
     : m_diagnostics(mockDiagnostics)
