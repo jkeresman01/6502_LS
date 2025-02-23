@@ -10,14 +10,13 @@ std::vector<CodeAction> IncorrectLabelDiagnosticsAnalyzer::provideCodeActions(co
 {
     m_codeActions.clear();
 
-    WorkspaceEdit workspaceEdit;
-    std::vector<TextEdit> textEdits;
-
     Range range = diagnostic.getRange();
-    std::string replacementText;
-    replacementText = document.substr(range.start.character, range.end.character) + ":";
+    std::string replacementText = document.substr(range.start.character, range.end.character) + ":";
+    textEdits.emplace_back();
 
-    textEdits.emplace_back(range, replacementText);
+    std::vector<TextEdit> textEdits{{range, replacementText}};
+
+    WorkspaceEdit workspaceEdit;
     workspaceEdit.addChange({URI, textEdits});
 
     CodeAction codeAction = CodeAction::Builder()

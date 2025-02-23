@@ -11,7 +11,7 @@
 namespace ls6502
 {
 
-class UnsupportedInstructionDiagnosticsAnalyzer
+class UnsupportedInstructionDiagnosticsAnalyzer : public IDiagnosticsAnalyzer
 {
   public:
     std::vector<CodeAction> provideCodeActions(const Diagnostic &diagnostic, const std::string &document,
