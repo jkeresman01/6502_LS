@@ -27,14 +27,15 @@ void JSONInstructionSetRepository::load(std::ifstream &in)
 
     bool isValidJSONFormat = jsonData.contains("instructions") && jsonData["instructions"].is_array();
 
-    if (!isValidJSONFormat)
+    if (isValidJSONFormat)
+    {
+        loadInstructionSet(jsonData);
+    }
+    else
     {
         LS_6502_WARN(STR("No can do for %s: Invalid JSON format - missing 'instructions' array",
                          INSTRUCTION_SET_FILE_PATH));
-        return;
     }
-
-    loadInstructionSet(jsonData);
 }
 
 void JSONInstructionSetRepository::loadInstructionSet(const nlohmann::json &jsonData)
@@ -85,25 +86,27 @@ void JSONInstructionSetRepository::loadMnemonic(const nlohmann::json &jsonData, 
 
 void JSONInstructionSetRepository::loadDescription(const nlohmann::json &jsonData, Instruction &instruction)
 {
-    if (!jsonData.contains("description"))
+    if (jsonData.contains("description"))
+    {
+        instruction.description = jsonData["description"].get<std::string>();
+    }
+    else
     {
         LS_6502_WARN(
             STR("No can do for %s: Missing 'description' in instruction", INSTRUCTION_SET_FILE_PATH));
-        return;
     }
-
-    instruction.description = jsonData["description"].get<std::string>();
 }
 
 void JSONInstructionSetRepository::loadOperation(const nlohmann::json &jsonData, Instruction &instruction)
 {
-    if (!jsonData.contains("operation"))
+    if (jsonData.contains("operation"))
+    {
+        instruction.operation = jsonData["operation"].get<std::string>();
+    }
+    else
     {
         LS_6502_WARN(STR("No can do for %s: Missing 'operation' in instruction", INSTRUCTION_SET_FILE_PATH));
-        return;
     }
-
-    instruction.operation = jsonData["operation"].get<std::string>();
 }
 
 void JSONInstructionSetRepository::loadFlags(const nlohmann::json &jsonData, Instruction &instruction)
@@ -144,63 +147,69 @@ void JSONInstructionSetRepository::loadAddressingMode(const nlohmann::json &json
 
 void JSONInstructionSetRepository::loadMode(const nlohmann::json &jsonData, AddressingMode &addressingMode)
 {
-    if (!jsonData.contains("mode"))
+    if (jsonData.contains("mode"))
+    {
+        addressingMode.mode = jsonData["mode"].get<std::string>();
+    }
+    else
     {
         LS_6502_WARN(
             STR("No can do for %s: Missing 'jsonData' in addressing jsonData", INSTRUCTION_SET_FILE_PATH));
-        return;
     }
-
-    addressingMode.mode = jsonData["mode"].get<std::string>();
 }
 
 void JSONInstructionSetRepository::loadAssembler(const nlohmann::json &jsonData,
                                                  AddressingMode &addressingMode)
 {
-    if (!jsonData.contains("assembler"))
+    if (jsonData.contains("assembler"))
+    {
+        addressingMode.assembler = jsonData["assembler"].get<std::string>();
+    }
+    else
     {
         LS_6502_WARN(
             STR("No can do for %s: Missing 'assembler' in addressing jsonData", INSTRUCTION_SET_FILE_PATH));
-        return;
     }
-
-    addressingMode.assembler = jsonData["assembler"].get<std::string>();
 }
 
 void JSONInstructionSetRepository::loadOpcode(const nlohmann::json &jsonData, AddressingMode &addressingMode)
 {
-    if (!jsonData.contains("opcode"))
+    if (jsonData.contains("opcode"))
+    {
+        addressingMode.opcode = jsonData["opcode"].get<std::string>();
+    }
+    else
     {
         LS_6502_WARN(
             STR("No can do for %s: Missing 'opcode' in addressing jsonData", INSTRUCTION_SET_FILE_PATH));
-        return;
     }
-
-    addressingMode.opcode = jsonData["opcode"].get<std::string>();
 }
 
 void JSONInstructionSetRepository::loadBytes(const nlohmann::json &jsonData, AddressingMode &addressingMode)
 {
-    if (!jsonData.contains("bytes"))
+    if (jsonData.contains("bytes"))
+    {
+        addressingMode.bytes = jsonData["bytes"].get<int32_t>();
+    }
+    else
     {
         LS_6502_WARN(
             STR("No can do for %s: Missing 'bytes' in addressing jsonData", INSTRUCTION_SET_FILE_PATH));
-        return;
     }
-
-    addressingMode.bytes = jsonData["bytes"].get<int32_t>();
 }
 
 void JSONInstructionSetRepository::loadCycles(const nlohmann::json &jsonData, AddressingMode &addressingMode)
 {
-    if (!jsonData.contains("cycles"))
+    if (jsonData.contains("cycles"))
     {
+        addressingMode.cycles = jsonData["cycles"].get<int32_t>();
+    }
+    else
+    {
+
         LS_6502_WARN(
             STR("No can do for %s: Missing 'cycles' in addressing jsonData", INSTRUCTION_SET_FILE_PATH));
-        return;
     }
-
-    addressingMode.cycles = jsonData["cycles"].get<int32_t>();
 }
 
 } // namespace ls6502

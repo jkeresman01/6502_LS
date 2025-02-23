@@ -2,10 +2,9 @@
 
 #include <memory>
 
-
-#include "ICodeActionsProvider.h"
-#include "FakeCodectionsProvider.h"
 #include "CodeActionProvider.h"
+#include "FakeCodectionsProvider.h"
+#include "ICodeActionsProvider.h"
 
 #include "../Config/ConfigurationManager.h"
 #include "../Utils/Logger.h"
