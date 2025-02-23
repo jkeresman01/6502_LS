@@ -5,9 +5,9 @@
 
 namespace ls6502
 {
-struct TrieNode
+struct Node
 {
     bool isLeaf;
-    std::unordered_map<char, std::shared_ptr<TrieNode>> children;
+    std::unordered_map<char, std::shared_ptr<Node>> children;
 };
 } // namespace ls6502

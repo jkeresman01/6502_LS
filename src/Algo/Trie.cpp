@@ -6,11 +6,11 @@ namespace ls6502
 {
 void Trie::insert(const std::string &word)
 {
-    std::shared_ptr<TrieNode> current = m_root;
+    std::shared_ptr<Node> current = m_root;
 
     for (const char ch : word)
     {
-        current->children.try_emplace(ch, std::make_shared<TrieNode>());
+        current->children.try_emplace(ch, std::make_shared<Node>());
         current = current->children[ch];
     }
 
@@ -20,7 +20,7 @@ void Trie::insert(const std::string &word)
 std::vector<std::string> Trie::getCompletionWords(const std::string &prefix) const
 {
     std::vector<std::string> completionOptions;
-    std::shared_ptr<TrieNode> node = getTrieNode(prefix);
+    std::shared_ptr<Node> node = getNode(prefix);
 
     if (node)
     {
@@ -30,9 +30,9 @@ std::vector<std::string> Trie::getCompletionWords(const std::string &prefix) con
     return completionOptions;
 }
 
-std::shared_ptr<TrieNode> Trie::getTrieNode(const std::string &prefix) const
+std::shared_ptr<Node> Trie::getNode(const std::string &prefix) const
 {
-    std::shared_ptr<TrieNode> current = m_root;
+    std::shared_ptr<Node> current = m_root;
 
     for (const char ch : prefix)
     {
@@ -47,7 +47,7 @@ std::shared_ptr<TrieNode> Trie::getTrieNode(const std::string &prefix) const
     return current;
 }
 
-void Trie::findAllWords(std::shared_ptr<TrieNode> node, const std::string &prefix,
+void Trie::findAllWords(std::shared_ptr<Node> node, const std::string &prefix,
                         std::vector<std::string> &results) const
 {
     if (node->isLeaf)
