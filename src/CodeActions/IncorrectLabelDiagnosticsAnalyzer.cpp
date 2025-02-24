@@ -1,5 +1,3 @@
-#pragma once
-
 #include "IncorrectLabelDiagnosticsAnalyzer.h"
 
 namespace ls6502
@@ -12,7 +10,6 @@ std::vector<CodeAction> IncorrectLabelDiagnosticsAnalyzer::provideCodeActions(co
 
     Range range = diagnostic.getRange();
     std::string replacementText = document.substr(range.start.character, range.end.character) + ":";
-    textEdits.emplace_back();
 
     std::vector<TextEdit> textEdits{{range, replacementText}};
 
@@ -20,6 +17,8 @@ std::vector<CodeAction> IncorrectLabelDiagnosticsAnalyzer::provideCodeActions(co
     workspaceEdit.addChange({URI, textEdits});
 
     m_codeActions.push_back(createCodeAction(workspaceEdit));
+
+    return m_codeActions;
 }
 
 CodeAction IncorrectLabelDiagnosticsAnalyzer::createCodeAction(const WorkspaceEdit &workspaceEdit)

@@ -1,4 +1,4 @@
-#include "FakeDiagnosticsProvider.h" FakeDi
+#include "FakeDiagnosticsProvider.h"
 
 namespace ls6502
 {

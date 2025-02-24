@@ -1,5 +1,3 @@
-#pragma once
-
 #include "WrongInstructionUsageDiagnosticsAnalyzer.h"
 
 #include "../Types/CodeAction.h"

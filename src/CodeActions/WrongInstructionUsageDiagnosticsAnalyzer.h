@@ -40,6 +40,19 @@ class WrongInstructionUsageDiagnosticsAnalyzer : public IDiagnosticsAnalyzer
   private:
     //////////////////////////////////////////////////////////////
     ///
+    /// @brief Creates a code action based on the provided
+    ///        workspace edit.
+    ///
+    /// @param workspaceEdit
+    ///
+    /// @return A CodeAction object representing the suggested fix.
+    ///
+    //////////////////////////////////////////////////////////////
+    CodeAction createCodeAction(const WorkspaceEdit &workspaceEdit);
+
+  private:
+    //////////////////////////////////////////////////////////////
+    ///
     /// @brief Stores available code actions for the analyzer.
     ///
     //////////////////////////////////////////////////////////////
