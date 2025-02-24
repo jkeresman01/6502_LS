@@ -30,7 +30,7 @@ std::vector<CompletionItem> InstructionSetCompletionProvider::getCompletions(con
 
     StringUtil::toUpper(prefix);
 
-    std::vector<std::string> instructions = m_instructionSetTrie->getCompletionWords(prefix);
+    const std::vector<std::string> &instructions = m_instructionSetTrie->getCompletionWords(prefix);
 
     return mapInstructionsToCompletions(instructions);
 }
