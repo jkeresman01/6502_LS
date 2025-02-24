@@ -25,7 +25,7 @@ class CodeActionResult
     /// @param codeActions
     ///
     //////////////////////////////////////////////////////////////
-    CodeActionResult(const std::vector<CodeAction> &codeActions) : m_codeActions(codeActions){};
+    explicit CodeActionResult(const std::vector<CodeAction> &codeActions) : m_codeActions(codeActions){};
 
     //////////////////////////////////////////////////////////////
     ///
