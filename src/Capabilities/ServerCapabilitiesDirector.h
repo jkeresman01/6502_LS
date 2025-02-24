@@ -9,7 +9,7 @@ namespace ls6502
 ///
 /// @class ServerCapabilitiesDirector
 ///
-/// @brief Responsible for configuring default server 
+/// @brief Responsible for configuring default server
 ///        capabilities for the language server.
 ///
 //////////////////////////////////////////////////////////////
@@ -25,7 +25,7 @@ class ServerCapabilitiesDirector
 
     //////////////////////////////////////////////////////////////
     ///
-    /// @brief Configures default server capabilities 
+    /// @brief Configures default server capabilities
     ///        using the provided builder.
     ///
     /// @param serverCapabilitesBuilder
@@ -42,4 +42,3 @@ class ServerCapabilitiesDirector
 };
 
 } // namespace ls6502
-

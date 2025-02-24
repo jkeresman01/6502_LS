@@ -19,14 +19,13 @@ void CodeActionProvider::setDiagnosticsProvider(
 std::vector<CodeAction> CodeActionProvider::getCodeActions(const std::string &document,
                                                            const std::string &URI)
 {
-    std::vector<Diagnostic> diagnostics = m_diagnosticsProvider->getDiagnostics(document);
-
-    std::vector<CodeAction> codeActions;
+    const std::vector<Diagnostic> &diagnostics = m_diagnosticsProvider->getDiagnostics(document);
 
     for (const auto &diagnostic : diagnostics)
     {
         m_diagnosticsAnalyzer = DiagnosticsAnalyzerFactory::getInstance(diagnostic);
-        codeActions = m_diagnosticsAnalyzer->provideCodeActions(diagnostic, document, URI);
+        const std::vector<CodeAction> &codeActions =
+            m_diagnosticsAnalyzer->provideCodeActions(diagnostic, document, URI);
         m_codeActions.insert(m_codeActions.end(), codeActions.begin(), codeActions.end());
     }
 
