@@ -4,12 +4,34 @@
 
 namespace ls6502
 {
+
+//////////////////////////////////////////////////////////////
+///
+/// @class ServerCapabilitiesDirector
+///
+/// @brief Responsible for configuring default server 
+///        capabilities for the language server.
+///
+//////////////////////////////////////////////////////////////
 class ServerCapabilitiesDirector
 {
   public:
+    //////////////////////////////////////////////////////////////
+    ///
+    /// @brief Deleted default constructor to prevent instantiation.
+    ///
+    //////////////////////////////////////////////////////////////
     ServerCapabilitiesDirector() = delete;
 
-    static void createDefaultServerCapabilities(ServerCapabilities::Builder &serverCapabilitesBuilder)
+    //////////////////////////////////////////////////////////////
+    ///
+    /// @brief Configures default server capabilities 
+    ///        using the provided builder.
+    ///
+    /// @param serverCapabilitesBuilder
+    ///
+    //////////////////////////////////////////////////////////////
+    static void constructDefaultServerCapabilities(ServerCapabilities::Builder &serverCapabilitesBuilder)
     {
         serverCapabilitesBuilder.withTextDocumentSyncKind(TextDocumentSyncKind::FULL)
             .withHoverSupport(true)
@@ -18,4 +40,6 @@ class ServerCapabilitiesDirector
             .withCodeActionSupport(true);
     }
 };
+
 } // namespace ls6502
+

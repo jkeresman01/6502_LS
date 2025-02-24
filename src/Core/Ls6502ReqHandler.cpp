@@ -57,7 +57,7 @@ void Ls6502ReqHandler::initializeReq(const std::shared_ptr<InitializeRequest> &i
     m_ls6502Client->registerCapabilites(capabilities);
 
     ServerCapabilities::Builder serverCapabilitiesBuilder;
-    ServerCapabilitiesDirector::createDefaultServerCapabilities(serverCapabilitiesBuilder);
+    ServerCapabilitiesDirector::constructDefaultServerCapabilities(serverCapabilitiesBuilder);
     ServerCapabilities serverCapabilites = serverCapabilitiesBuilder.build();
 
     InitializeResult initializeResult({"Ls6502", "0.0.0.0.0.1-alpha"}, serverCapabilites);
