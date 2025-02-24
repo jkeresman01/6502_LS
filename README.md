@@ -175,6 +175,6 @@ vim.api.nvim_create_autocmd("FileType", {
 cd 6502_LS
 mkdir build && cd build
 cmake ..
-make
+make -j$(nproc)
 ```
 
