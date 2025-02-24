@@ -37,7 +37,7 @@ class CodeActionResponse : public ResponseMessage
     /// @return A JSON object representing the CodeActionResponse.
     ///
     //////////////////////////////////////////////////////////////
-    nlohmann::json toJson() const override;
+    virtual nlohmann::json toJson() const override;
 
     //////////////////////////////////////////////////////////////
     ///

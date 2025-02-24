@@ -36,7 +36,7 @@ class HoverResponse : public ResponseMessage
     /// @return A JSON object representing the HoverResponse.
     ///
     //////////////////////////////////////////////////////////////
-    nlohmann::json toJson() const;
+    virutal nlohmann::json toJson() const;
 
     //////////////////////////////////////////////////////////////
     ///

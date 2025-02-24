@@ -52,7 +52,7 @@ class ResponseMessage : public Message
     /// @return Returns the ResponseMessage in serialized JSON format.
     ///
     //////////////////////////////////////////////////////////////
-    nlohmann::json toJson() const override;
+    virtual nlohmann::json toJson() const override;
 
     //////////////////////////////////////////////////////////////
     ///
