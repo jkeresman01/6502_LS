@@ -58,7 +58,7 @@ class Trie
     ///         with the prefix, or nullptr if no such node exists
     ///
     //////////////////////////////////////////////////////////////
-    std::shared_ptr<Node> getTrieNode(const std::string &prefix) const;
+    std::shared_ptr<Node> getNode(const std::string &prefix) const;
 
     //////////////////////////////////////////////////////////////
     ///
