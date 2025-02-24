@@ -34,7 +34,7 @@ class FakeDiagnosticsProvider : public IDiagnosticsProvider
     /// @param mockDiagnostics
     ///
     //////////////////////////////////////////////////////////////
-    FakeDiagnosticsProvider(const std::vector<Diagnostic> &mockDiagnostics);
+    explicit FakeDiagnosticsProvider(const std::vector<Diagnostic> &mockDiagnostics);
 
     //////////////////////////////////////////////////////////////
     ///
