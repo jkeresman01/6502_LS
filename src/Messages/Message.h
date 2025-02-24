@@ -26,7 +26,7 @@ class Message
     /// @param jsonRPC
     ///
     //////////////////////////////////////////////////////////////
-    explicit Message(const std::string &jsonRPC) : m_jsonRPC(jsonRPC){};
+    explicit Message(const std::string &jsonRPC);
 
     //////////////////////////////////////////////////////////////
     ///
@@ -35,17 +35,19 @@ class Message
     /// @return Returns serialized Message in JSON format
     ///
     //////////////////////////////////////////////////////////////
-    virtual nlohmann::json toJson() const { return {{"jsonrpc", m_jsonRPC}}; }
+    virtual nlohmann::json toJson() const;
 
-    friend std::ostream &operator<<(std::ostream &os, const Message &mesage)
-    {
-        nlohmann::json jsonRPC = mesage.toJson();
-
-        os << "Content-Length: " << jsonRPC.dump().size() << "\r\n\r\n";
-        os << jsonRPC.dump() << std::endl;
-
-        return os;
-    }
+    //////////////////////////////////////////////////////////////
+    ///
+    /// @brief Overloads the output stream operator for ResponseMessage
+    ///
+    /// @param out
+    /// @param responseMessage
+    ///
+    /// @return The modified output stream.
+    ///
+    //////////////////////////////////////////////////////////////
+    friend std::ostream &operator<<(std::ostream &os, const Message &mesage);
 
   protected:
     //////////////////////////////////////////////////////////////

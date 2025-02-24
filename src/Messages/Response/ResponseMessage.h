@@ -54,6 +54,16 @@ class ResponseMessage : public Message
     //////////////////////////////////////////////////////////////
     nlohmann::json toJson() const override;
 
+    //////////////////////////////////////////////////////////////
+    ///
+    /// @brief Overloads the output stream operator for ResponseMessage
+    ///
+    /// @param out
+    /// @param responseMessage
+    ///
+    /// @return The modified output stream.
+    ///
+    //////////////////////////////////////////////////////////////
     friend std::ostream &operator<<(std::ostream &out, const ResponseMessage &responseMessage);
 
   protected:
