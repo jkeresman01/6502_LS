@@ -37,7 +37,7 @@ class Logger
   public:
     Logger() = delete;
 
-    static void log(const std::string &severity, const std::string &message, const char *fileName,
+    static void log(const std::string &severity, const std::string &message, const char *file,
                     uint32_t lineNumber)
     {
         std::ofstream logfile("/tmp/log.txt", std::ios::app);
@@ -48,21 +48,21 @@ class Logger
             return;
         }
 
-        putLogMessage(logfile, message, severity, lineNumber, fileName);
+        putLogMessage(logfile, message, severity, lineNumber, file);
 
         logfile.close();
     }
 
   private:
     static void putLogMessage(std::ofstream &log, const std::string &message, const std::string &severity,
-                              uint32_t lineNumber, const char *fileName)
+                              uint32_t lineNumber, const char *file)
     {
         log << "[";
         TimeUtil::putTime(log, TimeUtil::now());
         log << "] ";
 
         std::ostringstream location;
-        location << "[" << fileName << ":" << lineNumber << "]";
+        location << "[" << file << ":" << lineNumber << "]";
 
         log << location.str();
 
