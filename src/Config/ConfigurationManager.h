@@ -53,7 +53,7 @@ class ConfigurationManager
     ///
     /// @brief Helper function to load properties from a file stream
     ///
-    /// @param [in] in Reference to an input file stream
+    /// @param [in] in
     ///
     //////////////////////////////////////////////////////////////
     void load(std::ifstream &in);
@@ -71,7 +71,8 @@ class ConfigurationManager
     ///
     /// @brief Retrieve a property value by its key
     ///
-    /// @param [in] key The key of the property to retrieve
+    /// @param [in] key
+    ///
     /// @return The value associated with the given key
     ///
     //////////////////////////////////////////////////////////////
