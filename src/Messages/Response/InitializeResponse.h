@@ -63,6 +63,16 @@ class InitializeResponse : public ResponseMessage
     //////////////////////////////////////////////////////////////
     std::string toString() const;
 
+    //////////////////////////////////////////////////////////////
+    ///
+    /// @brief Overloads the output stream operator for InitializeResponse
+    ///
+    /// @param [in] out
+    /// @param [in] responseMessage
+    ///
+    /// @return The modified output stream.
+    ///
+    //////////////////////////////////////////////////////////////
     friend std::ostream &operator<<(std::ostream &os, const InitializeResponse &initializeResponse);
 
   private:

@@ -56,9 +56,6 @@ class FakeDiagnosticsProvider : public IDiagnosticsProvider
     /// @brief Fills the diagnostics vector with a combination
     ///        of fake diagnostics.
     ///
-    /// @param [in] diagnostics The vector to be populated with
-    ///        fake diagnostic data.
-    ///
     //////////////////////////////////////////////////////////////
     void fillFakeDiagnostics();
 
