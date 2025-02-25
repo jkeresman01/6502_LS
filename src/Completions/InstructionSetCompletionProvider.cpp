@@ -42,13 +42,13 @@ std::vector<CompletionItem> InstructionSetCompletionProvider::mapInstructionsToC
 
     for (const auto &instruction : instructions)
     {
-        createCompletionsForInstruction(instruction);
+        fillCompletionsForInstruction(instruction);
     }
 
     return m_completionItems;
 }
 
-void InstructionSetCompletionProvider::createCompletionsForInstruction(const std::string &instruction)
+void InstructionSetCompletionProvider::fillCompletionsForInstruction(const std::string &instruction)
 {
     InstructionSetMapT::iterator it = m_instructionSet.find(instruction);
 

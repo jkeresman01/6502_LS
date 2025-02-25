@@ -84,7 +84,7 @@ class InstructionSetCompletionProvider : public ICompletionProvider
     /// @param instruction
     ///
     /////////////////////////////////////////////////////////////////////
-    void createCompletionsForInstruction(const std::string &instruction);
+    void fillCompletionsForInstruction(const std::string &instruction);
 
   private:
     /////////////////////////////////////////////////////////////////////
