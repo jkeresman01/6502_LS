@@ -25,7 +25,7 @@ class DefintionRequest : public RequestMessage
     ///
     /// @brief Constructs the Defintion request from JSON RPC
     ///
-    /// @param jsonRPC
+    /// @param [in] jsonRPC
     ///
     //////////////////////////////////////////////////////////////
     explicit DefintionRequest(const nlohmann::json &jsonRPC);
@@ -44,7 +44,7 @@ class DefintionRequest : public RequestMessage
     ///
     /// @brief Mutator method for hover params
     ///
-    /// @param jsonRPC
+    /// @param [in] jsonRPC
     ///
     //////////////////////////////////////////////////////////////
     void setParams(const nlohmann::json &jsonRPC);

@@ -28,8 +28,8 @@ class FakeHoverProvider : public IHoverProvider
     ///
     /// @brief Retrieves hover information for a given document position
     ///
-    /// @param document
-    /// @param position
+    /// @param [in] document
+    /// @param [in] position
     ///
     /// @return A HoverItem containing hover information
     ///

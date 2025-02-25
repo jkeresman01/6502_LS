@@ -28,7 +28,7 @@ class DiagnosticsUtil
     ///
     /// @brief Validates if provided diagnostic is for missing label
     ///
-    /// @param diagnostic
+    /// @param [in] diagnostic
     ///
     /// @return true if label is missing semicolo, false otherwise
     ///
@@ -39,7 +39,7 @@ class DiagnosticsUtil
     ///
     /// @brief Validates if provided diagnostic is for missing label
     ///
-    /// @param diagnostic
+    /// @param [in] diagnostic
     ///
     /// @return true if label is missing semicolo, false otherwise
     ///
@@ -51,7 +51,7 @@ class DiagnosticsUtil
     /// @brief Validates if provided diagnostic is for incorrect
     ///        instruction usage
     ///
-    /// @param diagnostic
+    /// @param [in] diagnostic
     ///
     /// @return true if instruction was incorrectly used, false otherwise
     ///

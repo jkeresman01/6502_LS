@@ -39,8 +39,8 @@ class Ls6502Client
     /// @brief Constructor that saves client info and registers
     ///        clients capabilities
     ///
-    /// @param clientInfo
-    /// @param clientCapabilites
+    /// @param [in] clientInfo
+    /// @param [in] clientCapabilites
     ///
     //////////////////////////////////////////////////////////////
     Ls6502Client(const ClientInfo &clientInfo, const std::shared_ptr<ClientCapabilities> &clientCapabilites);
@@ -50,7 +50,7 @@ class Ls6502Client
     /// @brief Registers client capabilities (features supported
     ///        by the editor or tool)
     ///
-    /// @param clientCapabilites
+    /// @param [in] clientCapabilites
     ///
     //////////////////////////////////////////////////////////////
     void registerCapabilites(const std::shared_ptr<ClientCapabilities> &clientCapabilites);
@@ -59,7 +59,7 @@ class Ls6502Client
     ///
     /// @brief Saves info about the client (name and version)
     ///
-    /// @param clientInfo
+    /// @param [in] clientInfo
     ///
     //////////////////////////////////////////////////////////////
     void saveInfo(const ClientInfo &clientInfo);
@@ -68,8 +68,8 @@ class Ls6502Client
     ///
     /// @brief Adds new document to keep track of
     ///
-    /// @param URI
-    /// @param document
+    /// @param [in] URI
+    /// @param [in] document
     ///
     //////////////////////////////////////////////////////////////
     void addDocument(const std::string &URI, const std::string &document);
@@ -78,8 +78,8 @@ class Ls6502Client
     ///
     /// @brief Adds new document to keep track of
     ///
-    /// @param URI
-    /// @param document
+    /// @param [in] URI
+    /// @param [in] document
     ///
     //////////////////////////////////////////////////////////////
     void updateDocumentWithURI(const std::string &URI, const std::string &document);
@@ -88,7 +88,7 @@ class Ls6502Client
     ///
     /// @brief Gets document by provided URI
     ///
-    /// @param URI
+    /// @param [in] URI
     ///
     //////////////////////////////////////////////////////////////
     std::string getDocumentByURI(const std::string &URI) const;

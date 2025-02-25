@@ -20,7 +20,7 @@ class HoverResult
     ///
     /// @brief Constructs a HoverResult with the given value.
     ///
-    /// @param value The string value to be displayed in the hover result.
+    /// @param [in] value The string value to be displayed in the hover result.
     ///
     //////////////////////////////////////////////////////////////
     explicit HoverResult(const std::string &value) : m_value(value), m_kind("markdown"){};

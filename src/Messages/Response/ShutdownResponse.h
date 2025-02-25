@@ -23,8 +23,8 @@ class ShutdownResponse : public ResponseMessage
     ///
     /// @brief Constructs a ShutdownResponse message.
     ///
-    /// @param jsonRPC
-    /// @param id
+    /// @param [in] jsonRPC
+    /// @param [in] id
     ///
     //////////////////////////////////////////////////////////////
     ShutdownResponse(const std::string &jsonRPC, int64_t id) : ResponseMessage(jsonRPC, id) {}

@@ -25,7 +25,7 @@ class TextDocumentCapabilities
     ///
     /// @brief Constructs the TextDocumentCapabilities from jsonRPC request
     ///
-    /// @param jsonRPC
+    /// @param [in] jsonRPC
     ///
     //////////////////////////////////////////////////////////////
     explicit TextDocumentCapabilities(const nlohmann::json &jsonRPC);
@@ -34,7 +34,7 @@ class TextDocumentCapabilities
     ///
     /// @brief Accessor method for text docuemnt sync capabilities
     ///
-    /// @param synchronization capabilites
+    /// @param [in] synchronization capabilites
     ///
     //////////////////////////////////////////////////////////////
     TextDocumentSyncClientCapabilities getTextDocumentSyncCapabilites() const { return m_synchronization; };
@@ -43,7 +43,7 @@ class TextDocumentCapabilities
     ///
     /// @brief Accessor method for text docuemnt hover capabilities
     ///
-    /// @param hover capabilites
+    /// @param [in] hover capabilites
     ///
     //////////////////////////////////////////////////////////////
     HoverClientCapabilities getHoverCapabilities() const { return m_hover; };

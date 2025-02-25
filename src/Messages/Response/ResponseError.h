@@ -24,8 +24,8 @@ class ResponseError
     ///
     /// @brief Constructs a ResponseError with a specific code and message.
     ///
-    /// @param errorCode
-    /// @param message
+    /// @param [in] errorCode
+    /// @param [in] message
     ///
     //////////////////////////////////////////////////////////////
     ResponseError(const ErrorCodes &errorCode, const std::string &message);

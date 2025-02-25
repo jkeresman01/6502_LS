@@ -36,7 +36,7 @@ class FakeCompletionProvider : public ICompletionProvider
     ///
     /// @brief Populates the provided vector with fake completion items.
     ///
-    /// @param completions
+    /// @param [in] completions
     ///
     //////////////////////////////////////////////////////////////
     void fillFakeComletions(std::vector<CompletionItem> &completions);

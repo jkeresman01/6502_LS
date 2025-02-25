@@ -23,7 +23,7 @@ class TextDocumentPositionParams
     ///
     /// @brief Constructs TextDocumentPositionParams from JSON RPC requst
     ///
-    /// @param jsonRPC
+    /// @param [in] jsonRPC
     ///
     //////////////////////////////////////////////////////////////
     explicit TextDocumentPositionParams(const nlohmann::json &jsonRPC);
@@ -51,7 +51,7 @@ class TextDocumentPositionParams
     ///
     /// @brief Initializes the text document identifier from JSON data.
     ///
-    /// @param jsonRPC
+    /// @param [in] jsonRPC
     ///
     //////////////////////////////////////////////////////////////
     void setTextDocumentIdentifier(const nlohmann::json &jsonRPC);
@@ -60,7 +60,7 @@ class TextDocumentPositionParams
     ///
     /// @brief Initializes the position within the text document from JSON data.
     ///
-    /// @param jsonRPC
+    /// @param [in] jsonRPC
     ///
     //////////////////////////////////////////////////////////////
     void setPosition(const nlohmann::json &jsonRPC);

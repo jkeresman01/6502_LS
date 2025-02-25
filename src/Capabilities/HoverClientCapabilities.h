@@ -22,7 +22,7 @@ class HoverClientCapabilities
     ///
     /// @brief Constructs the HoverClientCapabilities from jsonRPC request
     ///
-    /// @param jsonRPC
+    /// @param [in] jsonRPC
     ///
     //////////////////////////////////////////////////////////////
     explicit HoverClientCapabilities(const nlohmann::json &jsonRPC);

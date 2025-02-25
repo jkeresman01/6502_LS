@@ -25,9 +25,9 @@ class CompletionResponse : public ResponseMessage
     ///
     /// @brief Constructs a CompletionResponse with the given JSON-RPC
     ///
-    /// @param jsonRPC
-    /// @param id
-    /// @param completionResult
+    /// @param [in] jsonRPC
+    /// @param [in] id
+    /// @param [in] completionResult
     ///
     //////////////////////////////////////////////////////////////
     CompletionResponse(const std::string &jsonRPC, int64_t &id, const CompletionResult &completionResult);

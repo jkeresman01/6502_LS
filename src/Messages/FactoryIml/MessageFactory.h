@@ -38,7 +38,7 @@ class MessageFactory
     ///
     /// @brief Creates an InitializeRequest message object.
     ///
-    /// @param jsonRPC The JSON object containing the request data.
+    /// @param [in] jsonRPC The JSON object containing the request data.
     ///
     /// @return A shared pointer to an InitializeRequest object.
     ///
@@ -52,7 +52,7 @@ class MessageFactory
     ///
     /// @brief Creates an ShutdownRequest message object.
     ///
-    /// @param jsonRPC The JSON object containing the request data.
+    /// @param [in] jsonRPC The JSON object containing the request data.
     ///
     /// @return A shared pointer to an ShutdownRequest object.
     ///
@@ -66,7 +66,7 @@ class MessageFactory
     ///
     /// @brief Creates an DidOpenTextDocumentRequest message object.
     ///
-    /// @param jsonRPC The JSON object containing the request data.
+    /// @param [in] jsonRPC The JSON object containing the request data.
     ///
     /// @return A shared pointer to an DidOpenTextDocumentRequest object.
     ///
@@ -81,7 +81,7 @@ class MessageFactory
     ///
     /// @brief Creates an DidChangeTextDocument message object.
     ///
-    /// @param jsonRPC The JSON object containing the request data.
+    /// @param [in] jsonRPC The JSON object containing the request data.
     ///
     /// @return A shared pointer to an DidChangeTextDocument object.
     ///
@@ -96,7 +96,7 @@ class MessageFactory
     ///
     /// @brief Creates an Completion request message object.
     ///
-    /// @param jsonRPC The JSON object containing the request data.
+    /// @param [in] jsonRPC The JSON object containing the request data.
     ///
     /// @return A shared pointer to an Completion request object.
     ///
@@ -110,7 +110,7 @@ class MessageFactory
     ///
     /// @brief Creates an Hover request message object.
     ///
-    /// @param jsonRPC The JSON object containing the request data.
+    /// @param [in] jsonRPC The JSON object containing the request data.
     ///
     /// @return A shared pointer to an Hover request object.
     ///
@@ -124,7 +124,7 @@ class MessageFactory
     ///
     /// @brief Creates an Code action request message object.
     ///
-    /// @param jsonRPC The JSON object containing the request data.
+    /// @param [in] jsonRPC The JSON object containing the request data.
     ///
     /// @return A shared pointer to an code action request object.
     ///
@@ -138,7 +138,7 @@ class MessageFactory
     ///
     /// @brief Creates an go to definition request message object.
     ///
-    /// @param jsonRPC The JSON object containing the request data.
+    /// @param [in] jsonRPC The JSON object containing the request data.
     ///
     /// @return A shared pointer to an go to definition request objecy
     ///

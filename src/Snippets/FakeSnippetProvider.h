@@ -29,7 +29,7 @@ class FakeSnippetsProvider : public ISnippetProvider
     ///
     /// @brief Retrieves a list of snippets that match the given prefix.
     ///
-    /// @param prefix
+    /// @param [in] prefix
     ///
     /// @return A vector of matching CompletionItems(CompletionItemKind::SNIPPET)
     ///

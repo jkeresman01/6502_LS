@@ -31,7 +31,7 @@ class Rpc
     ///
     /// @brief Send Message defined by language server protocol
     ///
-    /// @param response
+    /// @param [in] response
     ///
     /////////////////////////////////////////////////////////////////////
     static void send(const Message &response) { std::cout << response << std::endl; }

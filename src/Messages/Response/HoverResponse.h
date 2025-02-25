@@ -22,9 +22,9 @@ class HoverResponse : public ResponseMessage
     ///
     /// @brief Constructs a HoverResponse with given parameters.
     ///
-    /// @param jsonRPC
-    /// @param id
-    /// @param hoverResult
+    /// @param [in] jsonRPC
+    /// @param [in] id
+    /// @param [in] hoverResult
     ///
     //////////////////////////////////////////////////////////////
     HoverResponse(const std::string &jsonRPC, const int64_t id, const HoverResult &hoverResult);
@@ -42,8 +42,8 @@ class HoverResponse : public ResponseMessage
     ///
     /// @brief Overloads the output stream operator for HoverResponse.
     ///
-    /// @param os
-    /// @param codeActionResponse
+    /// @param [in] os
+    /// @param [in] codeActionResponse
     ///
     /// @return The modified output stream.
     ///

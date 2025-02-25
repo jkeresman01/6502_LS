@@ -28,7 +28,7 @@ class ISnippetProvider
     ///
     /// @brief Retrieves a list of code snippets that match a given prefix.
     ///
-    /// @param prefix
+    /// @param [in] prefix
     /// @return A vector of CompletionItem objects representing matching snippets.
     ///
     //////////////////////////////////////////////////////////////

@@ -23,7 +23,7 @@ class ICodeActionsProvider
     /// @brief Pure virtual function to retrieve code actions for
     ///        a specified document.
     ///
-    /// @param URI
+    /// @param [in] URI
     ///
     /// @return A vector of CodeAction objects representing the
     ///         available code actions for the document.

@@ -32,8 +32,8 @@ class DocumentUtil
     ///
     /// @brief Extract the word under the cursor at the given position.
     //
-    /// @param document
-    /// @param position
+    /// @param [in] document
+    /// @param [in] position
     ///
     /// @return The extracted word under the cursor.
     ///         Returns an empty string if no valid word is found
@@ -46,7 +46,7 @@ class DocumentUtil
     ///
     /// @brief Splits the given document into a vector of lines.
     //
-    /// @param document
+    /// @param [in] document
     ///
     /// @return A vector containing individual lines.
     ///
@@ -58,8 +58,8 @@ class DocumentUtil
     ///
     /// @brief Extract the word under the cursor at the given position.
     //
-    /// @param document
-    /// @param position
+    /// @param [in] document
+    /// @param [in] position
     ///
     /// @return Extracted line from the file
     ///
@@ -70,8 +70,8 @@ class DocumentUtil
     ///
     /// @brief Find start position of the word in line
     //
-    /// @param line
-    /// @param position
+    /// @param [in] line
+    /// @param [in] position
     ///
     /// @return words start position
     ///
@@ -82,8 +82,8 @@ class DocumentUtil
     ///
     /// @brief Find end position of the word in line
     //
-    /// @param line
-    /// @param position
+    /// @param [in] line
+    /// @param [in] position
     ///
     /// @return words end position
     ///

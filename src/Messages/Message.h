@@ -23,7 +23,7 @@ class Message
     ///
     /// @brief Constructs the Message from jsonRPC
     ///
-    /// @param jsonRPC
+    /// @param [in] jsonRPC
     ///
     //////////////////////////////////////////////////////////////
     explicit Message(const std::string &jsonRPC);
@@ -41,8 +41,8 @@ class Message
     ///
     /// @brief Overloads the output stream operator for ResponseMessage
     ///
-    /// @param out
-    /// @param responseMessage
+    /// @param [in] out
+    /// @param [in] responseMessage
     ///
     /// @return The modified output stream.
     ///

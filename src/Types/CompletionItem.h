@@ -29,10 +29,10 @@ class CompletionItem
     ///
     /// @brief Constructs textDocument/completion item
     ///
-    /// @param label
-    /// @param detail
-    /// @param documentation
-    /// @param detail
+    /// @param [in] label
+    /// @param [in] detail
+    /// @param [in] documentation
+    /// @param [in] detail
     ///
     //////////////////////////////////////////////////////////////
     CompletionItem(const std::string &label, const CompletionItemKind completionItemKind,
@@ -76,7 +76,7 @@ class CompletionItem
         ///
         /// @brief Sets the label of the completion item
         ///
-        /// @param label
+        /// @param [in] label
         ///
         /// @return Reference to the Builder for method chaining.
         ///
@@ -87,7 +87,7 @@ class CompletionItem
         ///
         /// @brief Sets the details of the completion item
         ///
-        /// @param label
+        /// @param [in] label
         ///
         /// @return Reference to the Builder for method chaining.
         ///
@@ -98,7 +98,7 @@ class CompletionItem
         ///
         /// @brief Sets the text that will be inserted for the completion item
         ///
-        /// @param insertedText
+        /// @param [in] insertedText
         ///
         /// @return Reference to the Builder for method chaining.
         ///
@@ -109,7 +109,7 @@ class CompletionItem
         ///
         /// @brief Sets the documentaiton for completion item
         ///
-        /// @param documentation
+        /// @param [in] documentation
         ///
         /// @return Reference to the Builder for method chaining.
         ///
@@ -120,7 +120,7 @@ class CompletionItem
         ///
         /// @brief Sets the completion item kind
         ///
-        /// @param completionItemKind
+        /// @param [in] completionItemKind
         ///
         /// @return Reference to the Builder for method chaining.
         ///

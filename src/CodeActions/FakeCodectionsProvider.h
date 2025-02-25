@@ -22,7 +22,7 @@ class FakeCodeActionsProvider : public ICodeActionsProvider
     ///
     /// @brief Retrieves a list of fake code actions for a given URI.
     ///
-    /// @param URI
+    /// @param [in] URI
     ///
     /// @return A vector of CodeAction objects representing the
     ///         fake code actions.
@@ -35,8 +35,8 @@ class FakeCodeActionsProvider : public ICodeActionsProvider
     ///
     /// @brief Populates the provided vector with fake code actions.
     ///
-    /// @param codeAction
-    /// @param URI
+    /// @param [in] codeAction
+    /// @param [in] URI
     ///
     //////////////////////////////////////////////////////////////
     void fillFakeCodeActions(std::vector<CodeAction> &codeAction, const std::string &URI);
@@ -45,7 +45,7 @@ class FakeCodeActionsProvider : public ICodeActionsProvider
     ///
     /// @brief Logs the list of generated fake code actions.
     ///
-    /// @param codeAction
+    /// @param [in] codeAction
     ///
     //////////////////////////////////////////////////////////////
     void logCodeActions(std::vector<CodeAction> &codeAction);
@@ -54,8 +54,8 @@ class FakeCodeActionsProvider : public ICodeActionsProvider
     ///
     /// @brief Creates fake code action
     ///
-    /// @param label
-    /// @param workspaceEdit
+    /// @param [in] label
+    /// @param [in] workspaceEdit
     ///
     //////////////////////////////////////////////////////////////
     CodeAction createFakeCodeAction(const WorkspaceEdit &worskpaceEdit, const std::string &label);

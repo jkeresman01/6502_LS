@@ -22,7 +22,7 @@ class TextDocumentItem
     ///
     /// @brief Constructs the TextDocumentItem from a JSON-RPC request.
     ///
-    /// @param jsonRPC The JSON object containing the TextDocumentItem information.
+    /// @param [in] jsonRPC The JSON object containing the TextDocumentItem information.
     ///
     //////////////////////////////////////////////////////////////
     explicit TextDocumentItem(const nlohmann::json &jsonRPC);
@@ -68,7 +68,7 @@ class TextDocumentItem
     ///
     /// @brief Mutator method for URI
     ///
-    /// @param jsonRPC
+    /// @param [in] jsonRPC
     ///
     //////////////////////////////////////////////////////////////
     void setURI(const nlohmann::json &jsonRPC);
@@ -77,7 +77,7 @@ class TextDocumentItem
     ///
     /// @brief Mutator method for language ID
     ///
-    /// @param jsonRPC
+    /// @param [in] jsonRPC
     ///
     //////////////////////////////////////////////////////////////
     void setLanguageId(const nlohmann::json &jsonRPC);
@@ -86,7 +86,7 @@ class TextDocumentItem
     ///
     /// @brief Mutator method for text version
     ///
-    /// @param jsonRPC
+    /// @param [in] jsonRPC
     ///
     //////////////////////////////////////////////////////////////
     void setTextVersion(const nlohmann::json &jsonRPC);
@@ -95,7 +95,7 @@ class TextDocumentItem
     ///
     /// @brief Mutator method for text content
     ///
-    /// @param jsonRPC
+    /// @param [in] jsonRPC
     ///
     //////////////////////////////////////////////////////////////
     void setText(const nlohmann::json &jsonRPC);

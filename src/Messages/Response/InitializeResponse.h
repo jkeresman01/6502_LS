@@ -28,7 +28,7 @@ class InitializeResponse : public ResponseMessage
     /// @brief Constructs an InitializeResponse with the provided
     ///        server info and capabilities.
     ///
-    /// @param initializeResult
+    /// @param [in] initializeResult
     ///
     //////////////////////////////////////////////////////////////
     InitializeResponse(const std::string &jsonRPC, const int64_t &id,
@@ -39,8 +39,8 @@ class InitializeResponse : public ResponseMessage
     /// @brief Constructs an InitializeResponse with the provided
     ///        server info and capabilities.
     ///
-    /// @param initializeResult
-    /// @param responseError
+    /// @param [in] initializeResult
+    /// @param [in] responseError
     ///
     //////////////////////////////////////////////////////////////
     InitializeResponse(const InitializeResult &initializeResult, const ResponseError &responseErro);

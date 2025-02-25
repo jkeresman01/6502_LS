@@ -38,7 +38,7 @@ class JSONInstructionSetRepository : public IInstructionSetRepository
     ///
     /// @brief Loads instruction set data from an input file stream
     ///
-    /// @param in
+    /// @param [in] in
     ///
     /////////////////////////////////////////////////////////////////////
     void load(std::ifstream &in);
@@ -47,7 +47,7 @@ class JSONInstructionSetRepository : public IInstructionSetRepository
     ///
     /// @brief Parses instruction set data from a JSON object
     ///
-    /// @param jsonData
+    /// @param [in] jsonData
     ///
     /////////////////////////////////////////////////////////////////////
     void loadInstructionSet(const nlohmann::json &jsonData);
@@ -56,8 +56,8 @@ class JSONInstructionSetRepository : public IInstructionSetRepository
     ///
     /// @brief Loads mnemonic details into an instruction object
     ///
-    /// @param jsonData
-    /// @param instruction
+    /// @param [in] jsonData
+    /// @param [in] instruction
     ///
     /////////////////////////////////////////////////////////////////////
     void loadMnemonic(const nlohmann::json &jsonData, Instruction &instruction);
@@ -66,8 +66,8 @@ class JSONInstructionSetRepository : public IInstructionSetRepository
     ///
     /// @brief Loads the description of an instruction
     ///
-    /// @param jsonData
-    /// @param instruction
+    /// @param [in] jsonData
+    /// @param [in] instruction
     ///
     /////////////////////////////////////////////////////////////////////
     void loadDescription(const nlohmann::json &jsonData, Instruction &instruction);
@@ -76,8 +76,8 @@ class JSONInstructionSetRepository : public IInstructionSetRepository
     ///
     /// @brief Loads the operation details of an instruction
     ///
-    /// @param jsonData
-    /// @param instruction
+    /// @param [in] jsonData
+    /// @param [in] instruction
     ///
     /////////////////////////////////////////////////////////////////////
     void loadOperation(const nlohmann::json &jsonData, Instruction &instruction);
@@ -86,8 +86,8 @@ class JSONInstructionSetRepository : public IInstructionSetRepository
     ///
     /// @brief Loads flag modifications associated with an instruction
     ///
-    /// @param jsonData
-    /// @param instruction
+    /// @param [in] jsonData
+    /// @param [in] instruction
     ///
     /////////////////////////////////////////////////////////////////////
     void loadFlags(const nlohmann::json &jsonData, Instruction &instruction);
@@ -96,8 +96,8 @@ class JSONInstructionSetRepository : public IInstructionSetRepository
     ///
     /// @brief Loads addressing mode details
     ///
-    /// @param jsonData
-    /// @param instruction
+    /// @param [in] jsonData
+    /// @param [in] instruction
     ///
     /////////////////////////////////////////////////////////////////////
     void loadAddressingMode(const nlohmann::json &jsonData, AddressingMode &instruction);
@@ -106,8 +106,8 @@ class JSONInstructionSetRepository : public IInstructionSetRepository
     ///
     /// @brief Loads the mode of an addressing mode object
     ///
-    /// @param jsonData
-    /// @param addressingMode
+    /// @param [in] jsonData
+    /// @param [in] addressingMode
     ///
     /////////////////////////////////////////////////////////////////////
     void loadMode(const nlohmann::json &jsonData, AddressingMode &addressingMode);
@@ -116,8 +116,8 @@ class JSONInstructionSetRepository : public IInstructionSetRepository
     ///
     /// @brief Loads assembler syntax for an addressing mode
     ///
-    /// @param jsonData
-    /// @param addressingMode
+    /// @param [in] jsonData
+    /// @param [in] addressingMode
     ///
     /////////////////////////////////////////////////////////////////////
     void loadAssembler(const nlohmann::json &jsonData, AddressingMode &addressingMode);
@@ -126,8 +126,8 @@ class JSONInstructionSetRepository : public IInstructionSetRepository
     ///
     /// @brief Loads opcode details for an addressing mode
     ///
-    /// @param jsonData
-    /// @param addressingMode
+    /// @param [in] jsonData
+    /// @param [in] addressingMode
     ///
     /////////////////////////////////////////////////////////////////////
     void loadOpcode(const nlohmann::json &jsonData, AddressingMode &addressingMode);
@@ -136,8 +136,8 @@ class JSONInstructionSetRepository : public IInstructionSetRepository
     ///
     /// @brief Loads byte size details for an addressing mode
     ///
-    /// @param jsonData
-    /// @param addressingMode
+    /// @param [in] jsonData
+    /// @param [in] addressingMode
     ///
     /////////////////////////////////////////////////////////////////////
     void loadBytes(const nlohmann::json &jsonData, AddressingMode &addressingMode);
@@ -146,8 +146,8 @@ class JSONInstructionSetRepository : public IInstructionSetRepository
     ///
     /// @brief Loads cycle count details for an addressing mode
     ///
-    /// @param jsonData
-    /// @param addressingMode
+    /// @param [in] jsonData
+    /// @param [in] addressingMode
     ///
     /////////////////////////////////////////////////////////////////////
     void loadCycles(const nlohmann::json &jsonData, AddressingMode &addressingMode);

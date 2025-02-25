@@ -23,7 +23,7 @@ class DidChangeTextDocumentParams
     ///
     /// @brief Constructs DidChangeTextDocumentParams from a JSON-RPC
     ///
-    /// @param jsonRPC
+    /// @param [in] jsonRPC
     ///
     //////////////////////////////////////////////////////////////
     explicit DidChangeTextDocumentParams(const nlohmann::json &jsonRPC);
@@ -47,7 +47,7 @@ class DidChangeTextDocumentParams
     ///
     /// @brief Mutator method for text document identifier
     ///
-    /// @param jsonRPC
+    /// @param [in] jsonRPC
     ///
     //////////////////////////////////////////////////////////////
     void setTextDocumentIdentifier(const nlohmann::json &jsonRPC);
@@ -56,7 +56,7 @@ class DidChangeTextDocumentParams
     ///
     /// @brief Mutator method for content changes
     ///
-    /// @param jsonRPC The JSON-RPC object containing LSP message data.
+    /// @param [in] jsonRPC The JSON-RPC object containing LSP message data.
     ///
     //////////////////////////////////////////////////////////////
     void setContentChanges(const nlohmann::json &jsonRPC);

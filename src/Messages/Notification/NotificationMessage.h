@@ -25,7 +25,7 @@ class NotificationMessage : public Message
     /// @brief Constructs a NotificationMessage with the specified
     ///        method and JSON-RPC version.
     ///
-    /// @param jsonRPC
+    /// @param [in] jsonRPC
     ///
     //////////////////////////////////////////////////////////////
     explicit NotificationMessage(const nlohmann::json &jsonRPC);
@@ -35,7 +35,7 @@ class NotificationMessage : public Message
     /// @brief Constructs a NotificationMessage with the specified
     ///        method
     ///
-    /// @param method
+    /// @param [in] method
     ///
     //////////////////////////////////////////////////////////////
     explicit NotificationMessage(const std::string &method);
@@ -45,7 +45,7 @@ class NotificationMessage : public Message
     /// @brief Constructs a NotificationMessage with the specified
     ///        method
     ///
-    /// @param method
+    /// @param [in] method
     ///
     //////////////////////////////////////////////////////////////
     nlohmann::json toJson() const override;

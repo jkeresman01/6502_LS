@@ -32,7 +32,7 @@ class ClientCapabilities
     ///
     /// @brief Constructs the ClientCapabilities from jsonRPC request
     ///
-    /// @param jsonRPC
+    /// @param [in] jsonRPC
     ///
     //////////////////////////////////////////////////////////////
     explicit ClientCapabilities(const nlohmann::json &jsonRPC);

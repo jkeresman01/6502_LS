@@ -13,7 +13,7 @@ class DefinitionParams : public TextDocumentPositionParams
     ///
     /// @brief Constructs the DefinitionParams object from JSON RPC
     ///
-    /// @param jsonRPC JSON object containing definition parameters
+    /// @param [in] jsonRPC JSON object containing definition parameters
     ///
     //////////////////////////////////////////////////////////////
     explicit DefinitionParams(const nlohmann::json &jsonRPC) : TextDocumentPositionParams(jsonRPC){};

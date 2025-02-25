@@ -15,8 +15,8 @@ class PublishDiagnosticsParams
     ///
     /// @brief Constructs the PublishDiagnosticsParams object
     ///
-    /// @param URI
-    /// @param diagnostics
+    /// @param [in] URI
+    /// @param [in] diagnostics
     ///
     //////////////////////////////////////////////////////////////
     PublishDiagnosticsParams(const std::string &URI, const std::vector<Diagnostic> &diagnostics);

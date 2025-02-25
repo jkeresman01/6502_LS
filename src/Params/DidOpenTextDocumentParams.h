@@ -24,7 +24,7 @@ class DidOpenTextDocumentParams
     /// @brief Constructs a DidOpenTextDocumentParams object
     ///        from a JSON-RPC request.
     ///
-    /// @param jsonRPC
+    /// @param [in] jsonRPC
     ///
     //////////////////////////////////////////////////////////////
     explicit DidOpenTextDocumentParams(const nlohmann::json &jsonRPC);
@@ -43,7 +43,7 @@ class DidOpenTextDocumentParams
     ///
     /// @brief Mutator method for TextDocumentItem
     ///
-    /// @param jsonRPC
+    /// @param [in] jsonRPC
     ///
     //////////////////////////////////////////////////////////////
     void setTextDocumentItemKind(const nlohmann::json &jsonRPC);

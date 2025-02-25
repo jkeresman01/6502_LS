@@ -22,8 +22,8 @@ class TextEdit
     ///
     /// @brief Constructs a TextEdit with a specified range and new text.
     ///
-    /// @param range
-    /// @param newText
+    /// @param [in] range
+    /// @param [in] newText
     ///
     //////////////////////////////////////////////////////////////
     TextEdit(const Range &range, const std::string &newText) : m_range(range), m_newText(newText){};

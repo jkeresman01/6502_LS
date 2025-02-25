@@ -30,7 +30,7 @@ class RequestMethodUtil
     ///
     /// @brief Converts LSP request method to corresponding enum type
     ///
-    /// @param method
+    /// @param [in] method
     ///
     /////////////////////////////////////////////////////////////////////
     static RequestType getType(const std::string &method);

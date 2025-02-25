@@ -20,7 +20,7 @@ class ShutdownRequest : public RequestMessage
     ///
     /// @brief Constructs the Initialize request from JSON RPC
     ///
-    /// @param jsonRPC
+    /// @param [in] jsonRPC
     ///
     //////////////////////////////////////////////////////////////
     explicit ShutdownRequest(const nlohmann::json &jsonRPC) : RequestMessage(jsonRPC){};

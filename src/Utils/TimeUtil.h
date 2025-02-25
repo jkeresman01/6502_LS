@@ -38,8 +38,8 @@ class TimeUtil
     ///
     /// @brief Print and format provided time
     ///
-    /// @param out
-    /// @param time
+    /// @param [in] out
+    /// @param [in] time
     ///
     /////////////////////////////////////////////////////////////////////
     static std::ostream &putTime(std::ostream &out, const std::time_t &time);

@@ -16,7 +16,7 @@ class CompletionParams
     ///
     /// @brief Constructs the Completion request from JSON RPC
     ///
-    /// @param jsonRPC
+    /// @param [in] jsonRPC
     ///
     //////////////////////////////////////////////////////////////
     explicit CompletionParams(const nlohmann::json &jsonRPC);

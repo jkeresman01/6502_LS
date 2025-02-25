@@ -25,9 +25,9 @@ class IncorrectLabelDiagnosticsAnalyzer : public IDiagnosticsAnalyzer
     ///
     /// @brief Provides code actions based on a given diagnostic.
     ///
-    /// @param diagnostic
-    /// @param document
-    /// @param URI
+    /// @param [in] diagnostic
+    /// @param [in] document
+    /// @param [in] URI
     ///
     /// @return A vector of CodeAction objects representing possible
     ///         fixes or improvements for the diagnostic.
@@ -42,7 +42,7 @@ class IncorrectLabelDiagnosticsAnalyzer : public IDiagnosticsAnalyzer
     /// @brief Creates a code action based on the provided
     ///        workspace edit.
     ///
-    /// @param workspaceEdit
+    /// @param [in] workspaceEdit
     ///
     /// @return A CodeAction object representing the suggested fix.
     ///

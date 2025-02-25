@@ -29,7 +29,7 @@ class Converter
     ///
     /// @brief Converts the given string input to provided type
     ///
-    /// @param input
+    /// @param [in] input
     ///
     /////////////////////////////////////////////////////////////////////
     template <typename T> static T convert(const std::string &input);

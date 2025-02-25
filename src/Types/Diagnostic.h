@@ -33,10 +33,10 @@ class Diagnostic
     ///
     /// @brief Constructs a Diagnostic item with specified range.
     ///
-    /// @param range
-    /// @param severity
-    /// @param source
-    /// @param message
+    /// @param [in] range
+    /// @param [in] severity
+    /// @param [in] source
+    /// @param [in] message
     ///
     //////////////////////////////////////////////////////////////
     Diagnostic(const Range &range, const DiagnosticSeverity &severity, const std::string &source,

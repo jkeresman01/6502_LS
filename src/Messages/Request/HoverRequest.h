@@ -25,7 +25,7 @@ class HoverRequest : public RequestMessage
     ///
     /// @brief Constructs the Hover request from JSON RPC
     ///
-    /// @param jsonRPC
+    /// @param [in] jsonRPC
     ///
     //////////////////////////////////////////////////////////////
     explicit HoverRequest(const nlohmann::json &jsonRPC);
@@ -44,7 +44,7 @@ class HoverRequest : public RequestMessage
     ///
     /// @brief Mutator method for hover params
     ///
-    /// @param jsonRPC
+    /// @param [in] jsonRPC
     ///
     //////////////////////////////////////////////////////////////
     void setParams(const nlohmann::json &jsonRPC);

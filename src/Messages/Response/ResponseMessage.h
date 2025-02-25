@@ -28,8 +28,8 @@ class ResponseMessage : public Message
     ///
     /// @brief Constructs a successful ResponseMessage.
     ///
-    /// @param jsonRpc
-    /// @param id
+    /// @param [in] jsonRpc
+    /// @param [in] id
     ///
     //////////////////////////////////////////////////////////////
     ResponseMessage(const std::string &jsonRpc, const int64_t id);
@@ -38,9 +38,9 @@ class ResponseMessage : public Message
     ///
     /// @brief Constructs an error ResponseMessage.
     ///
-    /// @param jsonRpc
-    /// @param id
-    /// @param responseError
+    /// @param [in] jsonRpc
+    /// @param [in] id
+    /// @param [in] responseError
     ///
     //////////////////////////////////////////////////////////////
     ResponseMessage(const std::string &jsonRpc, const int64_t id, const ResponseError &responseError);
@@ -58,8 +58,8 @@ class ResponseMessage : public Message
     ///
     /// @brief Overloads the output stream operator for ResponseMessage
     ///
-    /// @param out
-    /// @param responseMessage
+    /// @param [in] out
+    /// @param [in] responseMessage
     ///
     /// @return The modified output stream.
     ///

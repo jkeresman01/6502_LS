@@ -25,9 +25,9 @@ class IDiagnosticsAnalyzer
     /// @brief Pure virtual function to provide code actions based
     ///        on a given diagnostic and document.
     ///
-    /// @param diagnostic
-    /// @param document
-    /// @param URI
+    /// @param [in] diagnostic
+    /// @param [in] document
+    /// @param [in] URI
     ///
     /// @return A vector of CodeAction objects representing the
     ///         available fixes or suggestions for the diagnostic.

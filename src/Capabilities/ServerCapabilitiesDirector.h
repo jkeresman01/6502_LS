@@ -28,7 +28,7 @@ class ServerCapabilitiesDirector
     /// @brief Configures default server capabilities
     ///        using the provided builder.
     ///
-    /// @param serverCapabilitesBuilder
+    /// @param [in] serverCapabilitesBuilder
     ///
     //////////////////////////////////////////////////////////////
     static void constructDefaultServerCapabilities(ServerCapabilities::Builder &serverCapabilitesBuilder)

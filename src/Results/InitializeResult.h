@@ -25,8 +25,8 @@ class InitializeResult
     /// @brief Constructs an InitializeResult with the provided
     ///        server info and capabilities.
     ///
-    /// @param serverInfo
-    /// @param serverCapabilities
+    /// @param [in] serverInfo
+    /// @param [in] serverCapabilities
     ///
     //////////////////////////////////////////////////////////////
     InitializeResult(const ServerInfo &serverInfo, const ServerCapabilities &serverCapabilities);

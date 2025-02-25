@@ -24,7 +24,7 @@ class DidChangeTextDocumentRequest : public NotificationMessage
     ///
     /// @brief Constructs textDocument/didChange from a JSON-RPC
     ///
-    /// @param jsonRPC
+    /// @param [in] jsonRPC
     ///
     //////////////////////////////////////////////////////////////
     explicit DidChangeTextDocumentRequest(const nlohmann::json &jsonRPC);
@@ -43,7 +43,7 @@ class DidChangeTextDocumentRequest : public NotificationMessage
     ///
     /// @brief Mutator method for textDocument/didChange params
     ///
-    /// @param jsonRPC
+    /// @param [in] jsonRPC
     ///
     //////////////////////////////////////////////////////////////
     void setParams(const nlohmann::json &jsonRPC);

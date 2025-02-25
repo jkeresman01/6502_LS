@@ -31,7 +31,7 @@ class DiagnosticsAnalyzerFactory
     /// @brief Creates an instance of the appropriate
     ///        diagnostics analyzer based on the given diagnostic.
     ///
-    /// @param diagnostic
+    /// @param [in] diagnostic
     ///
     /// @return A shared pointer to an IDiagnosticsAnalyzer instance
     ///         corresponding to the diagnostic type.

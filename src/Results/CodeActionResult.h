@@ -22,7 +22,7 @@ class CodeActionResult
     /// @brief Constructs a CodeActionResult with the given list
     ///        of code actions.
     ///
-    /// @param codeActions
+    /// @param [in] codeActions
     ///
     //////////////////////////////////////////////////////////////
     explicit CodeActionResult(const std::vector<CodeAction> &codeActions) : m_codeActions(codeActions){};

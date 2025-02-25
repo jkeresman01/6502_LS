@@ -34,7 +34,7 @@ class Ls6502ErrorHandler
     ///
     /// @brief Handles the server not initialized error
     ///
-    /// @param message id
+    /// @param [in] message id
     ///
     //////////////////////////////////////////////////////////////
     void handleServerNotInitalizedError(int64_t id);
@@ -43,7 +43,7 @@ class Ls6502ErrorHandler
     ///
     /// @brief Handles the parse error
     ///
-    /// @param message id
+    /// @param [in] message id
     ///
     //////////////////////////////////////////////////////////////
     void handleParseError(int64_t id);
@@ -52,7 +52,7 @@ class Ls6502ErrorHandler
     ///
     /// @brief Handles the method not found error
     ///
-    /// @param message id
+    /// @param [in] message id
     ///
     //////////////////////////////////////////////////////////////
     void handleMethodNotFoundError(int64_t id);
@@ -61,7 +61,7 @@ class Ls6502ErrorHandler
     ///
     /// @brief Handles the internal error
     ///
-    /// @param message id
+    /// @param [in] message id
     ///
     //////////////////////////////////////////////////////////////
     void handleInternalError(int64_t id);
@@ -70,7 +70,7 @@ class Ls6502ErrorHandler
     ///
     /// @brief Handles the invalid request after shutdown
     ///
-    /// @param message id
+    /// @param [in] message id
     ///
     //////////////////////////////////////////////////////////////
     void handleReceivedReqAfterShutdownError(int64_t id);
@@ -80,8 +80,8 @@ class Ls6502ErrorHandler
     ///
     /// @brief Handles the error
     ///
-    /// @param responseError
-    /// @param id
+    /// @param [in] responseError
+    /// @param [in] id
     ///
     //////////////////////////////////////////////////////////////
     void handleError(const ResponseError &responseError, int64_t id);

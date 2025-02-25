@@ -30,10 +30,10 @@ class CodeAction
     ///
     /// @brief Constructs a CodeAction with given parameters.
     ///
-    /// @param title
-    /// @param codeActionKind
-    /// @param isPreffered
-    /// @param edit
+    /// @param [in] title
+    /// @param [in] codeActionKind
+    /// @param [in] isPreffered
+    /// @param [in] edit
     ///
     //////////////////////////////////////////////////////////////
     CodeAction(const std::string &title, const CodeActionKind &codeActionKind, const bool isPreffered,
@@ -78,7 +78,7 @@ class CodeAction
         ///
         /// @brief Sets the title of the CodeAction.
         ///
-        /// @param title
+        /// @param [in] title
         ///
         /// @return Reference to the Builder for method chaining.
         ///
@@ -89,7 +89,7 @@ class CodeAction
         ///
         /// @brief Sets the kind of the CodeAction.
         ///
-        /// @param codeActionKind
+        /// @param [in] codeActionKind
         ///
         /// @return Reference to the Builder for method chaining.
         ///
@@ -100,7 +100,7 @@ class CodeAction
         ///
         /// @brief Sets whether this code action is preferred.
         ///
-        /// @param isPreffered
+        /// @param [in] isPreffered
         ///
         /// @return Reference to the Builder for method chaining.
         ///
@@ -111,7 +111,7 @@ class CodeAction
         ///
         /// @brief Sets the workspace edit associated with the CodeAction.
         ///
-        /// @param workspaceEdit
+        /// @param [in] workspaceEdit
         ///
         /// @return Reference to the Builder for method chaining.
         ///

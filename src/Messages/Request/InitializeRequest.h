@@ -23,7 +23,7 @@ class InitializeRequest : public RequestMessage
     ///
     /// @brief Constructs the Initialize request from JSON RPC
     ///
-    /// @param jsonRPC
+    /// @param [in] jsonRPC
     ///
     //////////////////////////////////////////////////////////////
     explicit InitializeRequest(const nlohmann::json &jsonRPC);
@@ -42,7 +42,7 @@ class InitializeRequest : public RequestMessage
     ///
     /// @brief Mutator method for initialize params
     ///
-    /// @param jsonRPC
+    /// @param [in] jsonRPC
     ///
     //////////////////////////////////////////////////////////////
     void setInitializeParams(const nlohmann::json &jsonRPC);

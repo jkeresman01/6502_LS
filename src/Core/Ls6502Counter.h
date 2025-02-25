@@ -26,7 +26,7 @@ class Ls6502Counter
     ///
     /// @brief Increments the request counter
     ///
-    /// @param requestType
+    /// @param [in] requestType
     ///
     //////////////////////////////////////////////////////////////
     void increment(RequestType requestType);
@@ -35,7 +35,7 @@ class Ls6502Counter
     ///
     /// @brief Gets the value of requested counter
     ///
-    /// @param requestType
+    /// @param [in] requestType
     ///
     //////////////////////////////////////////////////////////////
     uint32_t getValue(RequestType requestType) const;
@@ -52,7 +52,7 @@ class Ls6502Counter
     ///
     /// @brief Keeps track of received requests
     ///
-    /// @param requestType
+    /// @param [in] requestType
     ///
     //////////////////////////////////////////////////////////////
     std::vector<uint32_t> m_ls6502Counters;

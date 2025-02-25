@@ -39,7 +39,7 @@ class Ls6502Facade
     ///
     /// @brief Interface for handling all LSP requests
     ///
-    /// @param String representation of incoming request
+    /// @param [in] String representation of incoming request
     ///
     //////////////////////////////////////////////////////////////
     void handleRequest(const nlohmann::json &request);
@@ -49,7 +49,7 @@ class Ls6502Facade
     ///
     /// @brief Entry point for handling initialize request
     ///
-    /// @param jsonRPC request
+    /// @param [in] jsonRPC request
     ///
     //////////////////////////////////////////////////////////////
     void handleInitializeRequest(const nlohmann::json &request);
@@ -58,7 +58,7 @@ class Ls6502Facade
     ///
     /// @brief Entry point for handling shutdown request
     ///
-    /// @param jsonRPC request
+    /// @param [in] jsonRPC request
     ///
     //////////////////////////////////////////////////////////////
     void handleShutdownRequest(const nlohmann::json &request);
@@ -67,7 +67,7 @@ class Ls6502Facade
     ///
     /// @brief Entry point for handling initialized request
     ///
-    /// @param jsonRPC request
+    /// @param [in] jsonRPC request
     ///
     //////////////////////////////////////////////////////////////
     void handleInitializedRequest(const nlohmann::json &request);
@@ -76,7 +76,7 @@ class Ls6502Facade
     ///
     /// @brief Entry point for handling textDocument/didOpen request
     ///
-    /// @param jsonRPC request
+    /// @param [in] jsonRPC request
     ///
     //////////////////////////////////////////////////////////////
     void handleTextDocumentDidOpenRequest(const nlohmann::json &request);
@@ -85,7 +85,7 @@ class Ls6502Facade
     ///
     /// @brief Entry point for handling textDocument/didChange request
     ///
-    /// @param jsonRPC request
+    /// @param [in] jsonRPC request
     ///
     //////////////////////////////////////////////////////////////
     void handleTextDocumentDidChangeRequest(const nlohmann::json &request);
@@ -94,7 +94,7 @@ class Ls6502Facade
     ///
     /// @brief Entry point for handling textDocument/hover request
     ///
-    /// @param jsonRPC request
+    /// @param [in] jsonRPC request
     ///
     //////////////////////////////////////////////////////////////
     void handleTextDocumentHoverRequest(const nlohmann::json &request);
@@ -103,7 +103,7 @@ class Ls6502Facade
     ///
     /// @brief Entry point for handling textDocument/completion request
     ///
-    /// @param jsonRPC request
+    /// @param [in] jsonRPC request
     ///
     //////////////////////////////////////////////////////////////
     void handleTextDocumentCompletionRequest(const nlohmann::json &request);
@@ -112,7 +112,7 @@ class Ls6502Facade
     ///
     /// @brief Entry point for handling textDocument/completion request
     ///
-    /// @param jsonRPC request
+    /// @param [in] jsonRPC request
     ///
     //////////////////////////////////////////////////////////////
     void handleExitRequest(const nlohmann::json &request);
@@ -121,7 +121,7 @@ class Ls6502Facade
     ///
     /// @brief Entry point for handling textDocument/completion request
     ///
-    /// @param jsonRPC request
+    /// @param [in] jsonRPC request
     ///
     //////////////////////////////////////////////////////////////
     void handleTextDocumentCodeActionRequest(const nlohmann::json &request);
@@ -130,7 +130,7 @@ class Ls6502Facade
     ///
     /// @brief Entry point for handling textDocument/definition request
     ///
-    /// @param jsonRPC request
+    /// @param [in] jsonRPC request
     ///
     //////////////////////////////////////////////////////////////
     void handleTextDocumentDefintionRequest(const nlohmann::json &request);
@@ -141,7 +141,7 @@ class Ls6502Facade
     /// @brief Ensures no request is processed after shudtown request
     ///        has been received, except exit notification
     ///
-    /// @param jsonRPC request
+    /// @param [in] jsonRPC request
     ///
     //////////////////////////////////////////////////////////////
     void ensureNoReqIsProcessedAfterShutdown(const nlohmann::json &request);

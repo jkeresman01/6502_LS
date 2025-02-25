@@ -28,12 +28,12 @@ class ServerCapabilities
     ///
     /// @brief Constructs server capabilities
     ///
-    /// @param textDocumentSyncKind
-    /// @param areSnippetsSupported
-    /// @param isHoverSupported
-    /// @param areCompletionsSupported
-    /// @param areCodeActionsSupported
-    /// @param areDefinitionsSupported
+    /// @param [in] textDocumentSyncKind
+    /// @param [in] areSnippetsSupported
+    /// @param [in] isHoverSupported
+    /// @param [in] areCompletionsSupported
+    /// @param [in] areCodeActionsSupported
+    /// @param [in] areDefinitionsSupported
     ///
     //////////////////////////////////////////////////////////////
     ServerCapabilities(const TextDocumentSyncKind &textDocumentSyncKind, bool areSnippetsSupported,
@@ -55,7 +55,7 @@ class ServerCapabilities
         ///
         /// @brief Sets the text document synchronization kind.
         ///
-        /// @param textDocuemntSyncKind TextDocumentSyncKind enum value.
+        /// @param [in] textDocuemntSyncKind TextDocumentSyncKind enum value.
         ///
         /// @return Reference to the Builder for method chaining.
         ///
@@ -66,7 +66,7 @@ class ServerCapabilities
         ///
         /// @brief Enables or disables snippet support.
         ///
-        /// @param areSnippetsSupported
+        /// @param [in] areSnippetsSupported
         ///
         /// @return Reference to the Builder for method chaining.
         ///
@@ -77,7 +77,7 @@ class ServerCapabilities
         ///
         /// @brief Enables or disables hover functionality.
         ///
-        /// @param isHoverSupported
+        /// @param [in] isHoverSupported
         ///
         /// @return Reference to the Builder for method chaining.
         ///
@@ -88,7 +88,7 @@ class ServerCapabilities
         ///
         /// @brief Enables or disables completion support.
         ///
-        /// @param areCompletionsSupported
+        /// @param [in] areCompletionsSupported
         ///
         /// @return Reference to the Builder for method chaining.
         ///
@@ -99,7 +99,7 @@ class ServerCapabilities
         ///
         /// @brief Enables or disables code action support.
         ///
-        /// @param areCodeActions
+        /// @param [in] areCodeActions
         ///
         /// @return Reference to the Builder for method chaining.
         ///
@@ -110,7 +110,7 @@ class ServerCapabilities
         ///
         /// @brief Enables or disables code action support.
         ///
-        /// @param areCodeActions
+        /// @param [in] areCodeActions
         ///
         /// @return Reference to the Builder for method chaining.
         ///

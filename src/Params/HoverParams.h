@@ -13,7 +13,7 @@ class HoverParams : public TextDocumentPositionParams
     ///
     /// @brief Constructs the HoverParams object from JSON RPC
     ///
-    /// @param jsonRPC JSON object containing hover parameters
+    /// @param [in] jsonRPC JSON object containing hover parameters
     ///
     //////////////////////////////////////////////////////////////
     explicit HoverParams(const nlohmann::json &jsonRPC) : TextDocumentPositionParams(jsonRPC){};

@@ -40,7 +40,7 @@ class PredefinedSnippetProvider : public ISnippetProvider
     /// @brief Retrieves a list of completion snippets that
     ///        match a given prefix.
     ///
-    /// @param prefix
+    /// @param [in] prefix
     ///
     /// @return A vector of CompletionItem objects that match
     ///         the given prefix.
@@ -54,8 +54,8 @@ class PredefinedSnippetProvider : public ISnippetProvider
     /// @brief Filters snippets based on the given prefix
     ///        and converts them into completion items.
     ///
-    /// @param snippets
-    /// @param prefix
+    /// @param [in] snippets
+    /// @param [in] prefix
     ///
     /// @return A vector of CompletionItem objects.
     ///

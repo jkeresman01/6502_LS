@@ -31,8 +31,8 @@ class CodeActionProvider : public ICodeActionsProvider
     ///
     /// @brief Retrieves available code actions for a given document
     ///
-    /// @param document
-    /// @param URI
+    /// @param [in] document
+    /// @param [in] URI
     ///
     /// @return A vector of available code actions
     ///
@@ -43,7 +43,7 @@ class CodeActionProvider : public ICodeActionsProvider
     ///
     /// @brief Mutator method for diagnostics provider
     ///
-    /// @param diagnosticsProvider
+    /// @param [in] diagnosticsProvider
     ///
     /////////////////////////////////////////////////////////////////////
     void setDiagnosticsProvider(const std::shared_ptr<IDiagnosticsProvider> &diagnosticsProvider);

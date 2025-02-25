@@ -28,7 +28,7 @@ class StringUtil
     ///
     /// @brief Trims the provided string
     ///
-    /// @param string
+    /// @param [in] string
     ///
     /////////////////////////////////////////////////////////////////////
     static void trim(std::string &string);
@@ -37,7 +37,7 @@ class StringUtil
     ///
     /// @brief Converts the string to upper case
     ///
-    /// @param string
+    /// @param [in] string
     ///
     /////////////////////////////////////////////////////////////////////
     static void toUpper(std::string &string);
@@ -46,7 +46,7 @@ class StringUtil
     ///
     /// @brief Converts the string to lower case
     ///
-    /// @param string
+    /// @param [in] string
     ///
     /////////////////////////////////////////////////////////////////////
     static void toLower(std::string &string);

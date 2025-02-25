@@ -29,7 +29,7 @@ class InitializeParams
     ///
     /// @brief Constructs the InitializeParams from JSON RPC
     ///
-    /// @param jsonRPC
+    /// @param [in] jsonRPC
     ///
     //////////////////////////////////////////////////////////////
     explicit InitializeParams(const nlohmann::json &jsonInitializeParams);
@@ -57,7 +57,7 @@ class InitializeParams
     ///
     /// @brief Mutator method for setting and validataing processId
     ///
-    /// @param jsoRPC
+    /// @param [in] jsoRPC
     ///
     //////////////////////////////////////////////////////////////
     void setProccessId(const nlohmann::json &jsonRPC);
@@ -66,7 +66,7 @@ class InitializeParams
     ///
     /// @brief Mutator method for setting and validataing locale
     ///
-    /// @param jsoRPC
+    /// @param [in] jsoRPC
     ///
     //////////////////////////////////////////////////////////////
     void setLocale(const nlohmann::json &jsonRPC);
@@ -75,7 +75,7 @@ class InitializeParams
     ///
     /// @brief Mutator method for setting and validataing clientInfo
     ///
-    /// @param jsoRPC
+    /// @param [in] jsoRPC
     ///
     //////////////////////////////////////////////////////////////
     void setClientInfo(const nlohmann::json &jsonRPC);
@@ -84,7 +84,7 @@ class InitializeParams
     ///
     /// @brief Mutator method for setting and validataing trace level
     ///
-    /// @param jsoRPC
+    /// @param [in] jsoRPC
     ///
     //////////////////////////////////////////////////////////////
     void setTraceLevel(const nlohmann::json &jsonRPC);

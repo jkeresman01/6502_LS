@@ -40,7 +40,7 @@ class AddressingModeUtil
     /// @brief Converts a string representation of an addressing mode
     ///        to its corresponding enum value.
     ///
-    /// @param addressingMode
+    /// @param [in] addressingMode
     ///
     /// @return The corresponding AddressingModes enum value.
     ///
@@ -52,7 +52,7 @@ class AddressingModeUtil
     /// @brief Converts an addressing mode enum value to
     ///        its string representation.
     ///
-    /// @param addressingMode
+    /// @param [in] addressingMode
     ///
     /// @return A C-string representing the addressing mode.
     ///

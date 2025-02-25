@@ -31,7 +31,7 @@ class MessageUtil
     ///
     /// @brief Delete default constructor to prevent instantiation
     ///
-    /// @param request
+    /// @param [in] request
     ///
     /// @return request method/type
     ///
@@ -42,7 +42,7 @@ class MessageUtil
     ///
     /// @brief Try to parse LSP request received from stdin
     ///
-    /// @param request
+    /// @param [in] request
     ///
     /// @return json object
     ///

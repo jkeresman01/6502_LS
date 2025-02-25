@@ -31,7 +31,7 @@ class FakeDiagnosticsProvider : public IDiagnosticsProvider
     ///
     /// @brief Mock constructor for FakeDiagnosticsProvider.
     ///
-    /// @param mockDiagnostics
+    /// @param [in] mockDiagnostics
     ///
     //////////////////////////////////////////////////////////////
     explicit FakeDiagnosticsProvider(const std::vector<Diagnostic> &mockDiagnostics);
@@ -41,8 +41,8 @@ class FakeDiagnosticsProvider : public IDiagnosticsProvider
     /// @brief Retrieves a vector of fake diagnostics for a given
     ///        document and position.
     ///
-    /// @param document
-    /// @param position
+    /// @param [in] document
+    /// @param [in] position
     ///
     /// @return A vector of Diagnostic objects representing
     ///         the fake diagnostics.
@@ -56,7 +56,7 @@ class FakeDiagnosticsProvider : public IDiagnosticsProvider
     /// @brief Fills the diagnostics vector with a combination
     ///        of fake diagnostics.
     ///
-    /// @param diagnostics The vector to be populated with
+    /// @param [in] diagnostics The vector to be populated with
     ///        fake diagnostic data.
     ///
     //////////////////////////////////////////////////////////////

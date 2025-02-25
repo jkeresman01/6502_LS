@@ -31,7 +31,7 @@ class SnippetRepository : public ISnippetRepository
     /// @brief Loads predefined snippets for 6502 ASM
     ///        from provider input stream
     ///
-    /// @param in
+    /// @param [in] in
     ///
     //////////////////////////////////////////////////////////////
     void load(std::ifstream &snippetsFile);

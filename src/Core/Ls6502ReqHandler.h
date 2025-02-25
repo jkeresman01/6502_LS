@@ -47,7 +47,7 @@ class Ls6502ReqHandler
     ///
     /// @brief Handles the initialization request
     ///
-    /// @param initializeRequest
+    /// @param [in] initializeRequest
     ///
     //////////////////////////////////////////////////////////////
     void initializeReq(const std::shared_ptr<InitializeRequest> &initializeRequest);
@@ -56,7 +56,7 @@ class Ls6502ReqHandler
     ///
     /// @brief Handles the shutdown request
     ///
-    /// @param shutdownRequest
+    /// @param [in] shutdownRequest
     ///
     //////////////////////////////////////////////////////////////
     void shutdownReq(const std::shared_ptr<ShutdownRequest> &shutdownRequest);
@@ -65,7 +65,7 @@ class Ls6502ReqHandler
     ///
     /// @brief Handles textDocument/didOpen request
     ///
-    /// @param textDocument/didOpen request
+    /// @param [in] textDocument/didOpen request
     ///
     //////////////////////////////////////////////////////////////
     void textDocumentDidOpenReq(const std::shared_ptr<DidOpenTextDocumentRequest> &didOpenTextDocumentReq);
@@ -74,7 +74,7 @@ class Ls6502ReqHandler
     ///
     /// @brief Handles textDocument/completion request
     ///
-    /// @param textDocument/completion  request
+    /// @param [in] textDocument/completion  request
     ///
     //////////////////////////////////////////////////////////////
     void textDocumentCompletionReq(const std::shared_ptr<CompletionRequest> &completionReq);
@@ -83,7 +83,7 @@ class Ls6502ReqHandler
     ///
     /// @brief Handles textDocument/didChange request
     ///
-    /// @param textDocument/didChange  request
+    /// @param [in] textDocument/didChange  request
     ///
     //////////////////////////////////////////////////////////////
     void textDocumentDidChangeReq(
@@ -93,7 +93,7 @@ class Ls6502ReqHandler
     ///
     /// @brief Handles textDocument/hover request
     ///
-    /// @param textDocument/hover  request
+    /// @param [in] textDocument/hover  request
     ///
     //////////////////////////////////////////////////////////////
     void textDocumentHoverReq(const std::shared_ptr<HoverRequest> &hoverTextDocuementReq);
@@ -102,7 +102,7 @@ class Ls6502ReqHandler
     ///
     /// @brief Handles textDocument/codeAction request
     ///
-    /// @param textDocument/codeAction  request
+    /// @param [in] textDocument/codeAction  request
     ///
     //////////////////////////////////////////////////////////////
     void textDocumentCodeActionReq(const std::shared_ptr<CodeActionRequest> &codeActionRequest);
@@ -111,7 +111,7 @@ class Ls6502ReqHandler
     ///
     /// @brief Handles textDocument/definition request
     ///
-    /// @param textDocument/definition request
+    /// @param [in] textDocument/definition request
     ///
     //////////////////////////////////////////////////////////////
     void textDocumentDefinitionReq(const std::shared_ptr<DefintionRequest> &defintionRequest);

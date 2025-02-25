@@ -28,7 +28,7 @@ class TraceUtil
     ///
     /// @brief Converts string trace value to enum representation
     ///
-    /// @param traceValueStr
+    /// @param [in] traceValueStr
     ///
     /////////////////////////////////////////////////////////////////////
     static TraceValue getTraceValue(const std::string &traceValueStr);

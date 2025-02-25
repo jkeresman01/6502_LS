@@ -13,7 +13,7 @@ class CodeActionParams
     ///
     /// @brief Constructs the CodeActionParams object from JSON RPC
     ///
-    /// @param jsonRPC JSON object containing code action parameters
+    /// @param [in] jsonRPC JSON object containing code action parameters
     ///
     //////////////////////////////////////////////////////////////
     explicit CodeActionParams(const nlohmann::json &jsonRPC);
@@ -43,7 +43,7 @@ class CodeActionParams
     ///
     /// @brief Mutator method for setting the range from JSON RPC
     ///
-    /// @param jsonRPC JSON object containing range details
+    /// @param [in] jsonRPC JSON object containing range details
     ///
     //////////////////////////////////////////////////////////////
     void setRange(const nlohmann::json &jsonRPC);
@@ -53,7 +53,7 @@ class CodeActionParams
     /// @brief Mutator method for setting the start position
     ///        of the range from JSON RPC
     ///
-    /// @param jsonRPC JSON object containing start position details
+    /// @param [in] jsonRPC JSON object containing start position details
     ///
     //////////////////////////////////////////////////////////////
     void setStartPosition(const nlohmann::json &jsonRPC);
@@ -63,7 +63,7 @@ class CodeActionParams
     /// @brief Mutator method for setting the end position
     ///        of the range from JSON RPC
     ///
-    /// @param jsonRPC JSON object containing end position details
+    /// @param [in] jsonRPC JSON object containing end position details
     ///
     //////////////////////////////////////////////////////////////
     void setEndPosition(const nlohmann::json &jsonRPC);
@@ -73,7 +73,7 @@ class CodeActionParams
     /// @brief Mutator method for setting the text document URI
     ///        from JSON RPC
     ///
-    /// @param jsonRPC JSON object containing the document URI
+    /// @param [in] jsonRPC JSON object containing the document URI
     ///
     //////////////////////////////////////////////////////////////
     void setURI(const nlohmann::json &jsonRPC);

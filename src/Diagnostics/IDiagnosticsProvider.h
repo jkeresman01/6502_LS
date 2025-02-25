@@ -24,8 +24,8 @@ class IDiagnosticsProvider
     /// @brief Retrieves a list of diagnostics for a given
     ///        document and position.
     ///
-    /// @param document
-    /// @param position
+    /// @param [in] document
+    /// @param [in] position
     ///
     /// @return A vector of Diagnostic objects representing the
     ///         diagnostics for the specified document and position.

@@ -22,7 +22,7 @@ class TextDocumentCompletionParams : public TextDocumentPositionParams
     ///
     /// @brief Constructs TextDocumentCompletionParams from a JSON RPC request.
     ///
-    /// @param jsonRPC
+    /// @param [in] jsonRPC
     ///
     //////////////////////////////////////////////////////////////
     TextDocumentCompletionParams(const nlohmann::json &jsonRPC) : TextDocumentPositionParams(jsonRPC){};

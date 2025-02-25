@@ -29,7 +29,7 @@ class Trie
     ///
     /// @brief Inserts a word into the trie
     ///
-    /// @param word
+    /// @param [in] word
     ///
     //////////////////////////////////////////////////////////////
     void insert(const std::string &word);
@@ -39,7 +39,7 @@ class Trie
     /// @brief Retrieves all words in the trie that start
     ///        with the given prefix
     ///
-    /// @param prefix
+    /// @param [in] prefix
     ///
     /// @return A vector containing all words that match the prefix
     ///
@@ -52,7 +52,7 @@ class Trie
     /// @brief Retrieves the TrieNode corresponding to the
     ///        given prefix
     ///
-    /// @param prefix
+    /// @param [in] prefix
     ///
     /// @return A shared pointer to the TrieNode associated
     ///         with the prefix, or nullptr if no such node exists
@@ -64,9 +64,9 @@ class Trie
     ///
     /// @brief Finds all words in the subtree rooted at the given node
     ///
-    /// @param node
-    /// @param prefix
-    /// @param results
+    /// @param [in] node
+    /// @param [in] prefix
+    /// @param [in] results
     ///
     //////////////////////////////////////////////////////////////
     void findAllWords(std::shared_ptr<Node> node, const std::string &prefix,

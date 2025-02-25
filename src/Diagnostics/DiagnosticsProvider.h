@@ -38,7 +38,7 @@ class DiagnosticsProvider : public IDiagnosticsProvider
     ///
     /// @brief Retrieves diagnostics for a given document
     ///
-    /// @param document
+    /// @param [in] document
     ///
     /// @return A vector of diagnostic issues found in the document
     ///
@@ -50,8 +50,8 @@ class DiagnosticsProvider : public IDiagnosticsProvider
     ///
     /// @brief Checks for malformed labels in a given line
     ///
-    /// @param line
-    /// @param lineNumber
+    /// @param [in] line
+    /// @param [in] lineNumber
     ///
     /////////////////////////////////////////////////////////////////////
     void checkMalformedLabel(const std::string &line, size_t lineNumber);
@@ -60,8 +60,8 @@ class DiagnosticsProvider : public IDiagnosticsProvider
     ///
     /// @brief Checks for unsupported instructions in a given line
     ///
-    /// @param line
-    /// @param lineNumber
+    /// @param [in] line
+    /// @param [in] lineNumber
     ///
     /////////////////////////////////////////////////////////////////////
     void checkUnsupportedInstructions(const std::string &line, size_t lineNumber);
@@ -70,8 +70,8 @@ class DiagnosticsProvider : public IDiagnosticsProvider
     ///
     /// @brief Checks for general syntax errors in a given line
     ///
-    /// @param line
-    /// @param lineNumber
+    /// @param [in] line
+    /// @param [in] lineNumber
     ///
     /////////////////////////////////////////////////////////////////////
     void checkGeneralSyntaxErrors(const std::string &line, size_t lineNumber);

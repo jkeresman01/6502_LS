@@ -25,7 +25,7 @@ class CompletionResult
     /// @brief Constructs a CompletionResult with a provided vector of
     ///        completion items.
     ///
-    /// @param completionItems
+    /// @param [in] completionItems
     ///
     //////////////////////////////////////////////////////////////
     explicit CompletionResult(const std::vector<CompletionItem> &completionItems);

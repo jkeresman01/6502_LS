@@ -22,7 +22,7 @@ class DidOpenTextDocumentRequest : public NotificationMessage
     ///
     /// @brief Constructs a DidOpenTextDocumentRequest from a JSON-RPC request.
     ///
-    /// @param jsonRPC
+    /// @param [in] jsonRPC
     ///
     //////////////////////////////////////////////////////////////
     explicit DidOpenTextDocumentRequest(const nlohmann::json &jsonRPC);
@@ -31,7 +31,7 @@ class DidOpenTextDocumentRequest : public NotificationMessage
     ///
     /// @brief Accessor method for textDocument/didOpen params
     ///
-    /// @param textDocument/didOpen params
+    /// @param [in] textDocument/didOpen params
     ///
     //////////////////////////////////////////////////////////////
     std::shared_ptr<DidOpenTextDocumentParams> getParams() const { return m_params; };
@@ -41,7 +41,7 @@ class DidOpenTextDocumentRequest : public NotificationMessage
     ///
     /// @brief Sets the parameters for the textDocument/didOpen request.
     ///
-    /// @param jsonRPC
+    /// @param [in] jsonRPC
     ///
     //////////////////////////////////////////////////////////////
     void setParams(const nlohmann::json &jsonRPC);

@@ -22,9 +22,9 @@ class CodeActionResponse : public ResponseMessage
     ///
     /// @brief Constructs a CodeActionResponse with given parameters.
     ///
-    /// @param jsonRPC
-    /// @param id
-    /// @param hoverResult
+    /// @param [in] jsonRPC
+    /// @param [in] id
+    /// @param [in] hoverResult
     ///
     //////////////////////////////////////////////////////////////
     CodeActionResponse(const std::string &jsonRPC, const int64_t id,
@@ -43,8 +43,8 @@ class CodeActionResponse : public ResponseMessage
     ///
     /// @brief Overloads the output stream operator for CodeActionResponse.
     ///
-    /// @param os
-    /// @param codeActionResponse
+    /// @param [in] os
+    /// @param [in] codeActionResponse
     ///
     /// @return The modified output stream.
     ///

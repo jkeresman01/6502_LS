@@ -40,8 +40,8 @@ class InstructionSetCompletionProvider : public ICompletionProvider
     ///
     /// @brief Retrieves completion suggestions based on document context
     ///
-    /// @param document
-    /// @param position
+    /// @param [in] document
+    /// @param [in] position
     ///
     /// @return A vector of completion items
     ///
@@ -61,7 +61,7 @@ class InstructionSetCompletionProvider : public ICompletionProvider
     ///
     /// @brief Maps a list of instructions to completion items
     ///
-    /// @param instructions
+    /// @param [in] instructions
     ///
     /// @return A vector of corresponding completion items
     ///
@@ -72,7 +72,7 @@ class InstructionSetCompletionProvider : public ICompletionProvider
     ///
     /// @brief Creates completion suggestions for all addressing modes
     ///
-    /// @param instruction
+    /// @param [in] instruction
     ///
     /////////////////////////////////////////////////////////////////////
     void createCompletionsForAllAddressingModes(const Instruction &instruction);
@@ -81,7 +81,7 @@ class InstructionSetCompletionProvider : public ICompletionProvider
     ///
     /// @brief Creates completions for the given instruction
     ///
-    /// @param instruction
+    /// @param [in] instruction
     ///
     /////////////////////////////////////////////////////////////////////
     void fillCompletionsForInstruction(const std::string &instruction);
