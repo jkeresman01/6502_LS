@@ -11,6 +11,7 @@ namespace ls6502
 
 struct Instruction
 {
+  public:
     std::string mnemonic;
     std::string description;
     std::string operation;
@@ -21,10 +22,10 @@ struct Instruction
     {
         std::ostringstream ss;
 
-        ss << "Mnemonic: " << mnemonic << "\n"
-           << "Description: " << description << "\n\n"
-           << "Operation: " << operation << "\n"
-           << "Flags: ";
+        ss << "Mnemonic: " << mnemonic << "\n";
+        ss << "Description: " << description << "\n\n";
+        ss << "Operation: " << operation << "\n";
+        ss << "Flags: ";
 
         if (flags.empty())
         {
@@ -32,11 +33,7 @@ struct Instruction
         }
         else
         {
-            for (const auto &[flag, value] : flags)
-            {
-                ss << flag << "=" << (value ? "1" : "0") << " ";
-            }
-            ss << "\n";
+            putFlags(ss);
         }
 
         ss << "\nAddressing Modes:\n";
@@ -44,12 +41,28 @@ struct Instruction
         ss << "Mode\t\tAssembler\tOpcode\tBytes\tCycles\n";
         ss << "---------------------------------------------------\n";
 
+        putAddressingModes(ss);
+
+        return ss.str();
+    }
+
+  private:
+    void putFlags(std::ostringstream &ss) const
+    {
+        for (const auto &[flag, value] : flags)
+        {
+            ss << flag << "=" << (value ? "1" : "0") << " ";
+        }
+
+        ss << "\n";
+    }
+
+    void putAddressingModes(std::ostringstream &ss) const
+    {
         for (const auto &addressingMode : addressingModes)
         {
             ss << addressingMode.toString();
         }
-
-        return ss.str();
     }
 };
 } // namespace ls6502
