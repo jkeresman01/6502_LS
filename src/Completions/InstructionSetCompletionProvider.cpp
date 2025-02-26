@@ -39,6 +39,7 @@ std::vector<CompletionItem> InstructionSetCompletionProvider::mapInstructionsToC
     const std::vector<std::string> &instructions)
 {
     m_completionItems.clear();
+    m_completionItems.reserve(instructions.size());
 
     for (const auto &instruction : instructions)
     {
