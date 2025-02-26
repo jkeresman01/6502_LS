@@ -25,9 +25,14 @@ struct AddressingMode
     std::string toString() const
     {
         std::stringstream ss;
-        ss << mode << "\t" << assembler << "\t" << opcode << "\t" << bytes << "\t" << cycles;
-        ss << "\t"
-           << "Extra cycle: " << (hasExtraCycle ? "YES" : "NO") << "\n";
+
+        ss << mode << "\t";
+        ss << assembler << "\t";
+        ss << opcode << "\t";
+        ss << bytes << "\t";
+        ss << cycles << "\t";
+        ss << "Extra cycle: " << (hasExtraCycle ? "YES" : "NO") << "\n";
+
         return ss.str();
     }
 };
