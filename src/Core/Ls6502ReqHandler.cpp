@@ -49,7 +49,8 @@ void Ls6502ReqHandler::initializeReq(const std::shared_ptr<InitializeRequest> &i
 
     std::shared_ptr<InitializeParams> initializeParams = initializeRequest->getInitializeParams();
     std::shared_ptr<ClientCapabilities> capabilities = initializeParams->getClientCapabilites();
-    ClientInfo info = initializeParams->getClientInfo();
+
+    const ClientInfo &info = initializeParams->getClientInfo();
 
     LS_6502_DEBUG(STR("Client: %s has sent initializtion request", info.toString().c_str()));
 
@@ -76,14 +77,14 @@ void Ls6502ReqHandler::textDocumentDidOpenReq(
     std::shared_ptr<DidOpenTextDocumentParams> didOpenParams = didOpenTextDocumentReq->getParams();
     std::shared_ptr<TextDocumentItem> textDocumentItem = didOpenParams->getTextDocumentItem();
 
-    std::string URI = textDocumentItem->getURI();
-    std::string textDocumentContent = textDocumentItem->getText();
+    const std::string &URI = textDocumentItem->getURI();
+    const std::string &textDocumentContent = textDocumentItem->getText();
 
     m_ls6502Client->addDocument(URI, textDocumentContent);
 
-    std::string document = m_ls6502Client->getDocumentByURI(URI);
+    const std::string &document = m_ls6502Client->getDocumentByURI(URI);
 
-    std::vector<Diagnostic> diagnostics = m_diagnosticsProvider->getDiagnostics(document);
+    const std::vector<Diagnostic> &diagnostics = m_diagnosticsProvider->getDiagnostics(document);
 
     std::shared_ptr<PublishDiagnosticsParams> diagnosticsParams =
         std::make_shared<PublishDiagnosticsParams>(URI, diagnostics);
@@ -102,14 +103,13 @@ void Ls6502ReqHandler::textDocumentDidChangeReq(
 
     std::shared_ptr<DidChangeTextDocumentParams> didChangeParams = didChangeTextDocumentReq->getParams();
 
-    std::string URI = didChangeParams->getChangedDocumentURI();
-    std::string contentChanges = didChangeParams->getContentChanges();
+    const std::string &URI = didChangeParams->getChangedDocumentURI();
+    const std::string &contentChanges = didChangeParams->getContentChanges();
 
     m_ls6502Client->updateDocumentWithURI(URI, contentChanges);
 
-    std::string document = m_ls6502Client->getDocumentByURI(URI);
-
-    std::vector<Diagnostic> diagnostics = m_diagnosticsProvider->getDiagnostics(document);
+    const std::string &document = m_ls6502Client->getDocumentByURI(URI);
+    const std::vector<Diagnostic> &diagnostics = m_diagnosticsProvider->getDiagnostics(document);
 
     std::shared_ptr<PublishDiagnosticsParams> diagnosticsParams =
         std::make_shared<PublishDiagnosticsParams>(URI, diagnostics);
@@ -127,12 +127,11 @@ void Ls6502ReqHandler::textDocumentCompletionReq(const std::shared_ptr<Completio
 
     std::shared_ptr<CompletionParams> completionParams = completionReq->getParams();
 
-    Position position = completionParams->getPosition();
-    std::string URI = completionParams->getURI();
+    const Position &position = completionParams->getPosition();
+    const std::string &URI = completionParams->getURI();
 
-    std::string document = m_ls6502Client->getDocumentByURI(URI);
-
-    std::vector<CompletionItem> completionItems = m_completionProvider->getCompletions(document, position);
+    const std::string &document = m_ls6502Client->getDocumentByURI(URI);
+    const std::vector<CompletionItem> &completionItems = m_completionProvider->getCompletions(document, position);
 
     int64_t requestId = completionReq->getId();
 
@@ -150,14 +149,14 @@ void Ls6502ReqHandler::textDocumentHoverReq(const std::shared_ptr<HoverRequest> 
 
     std::shared_ptr<HoverParams> hoverParams = hoverTextDocumentReq->getParams();
 
-    std::string URI = hoverParams->getTextDocumentIdentifier().URI;
+    const std::string &URI = hoverParams->getTextDocumentIdentifier().URI;
 
-    Position position = hoverParams->getPosition();
-    std::string document = m_ls6502Client->getDocumentByURI(URI);
+    const Position &position = hoverParams->getPosition();
+    const std::string &document = m_ls6502Client->getDocumentByURI(URI);
 
     int64_t requestId = hoverTextDocumentReq->getId();
 
-    HoverItem hoverItem = m_hoverProvider->getHoverItem(document, position);
+    const HoverItem &hoverItem = m_hoverProvider->getHoverItem(document, position);
 
     HoverResult hoverResult(hoverItem.text);
     HoverResponse hoverResponse("2.0", requestId, hoverResult);
@@ -171,10 +170,10 @@ void Ls6502ReqHandler::textDocumentCodeActionReq(const std::shared_ptr<CodeActio
 
     std::shared_ptr<CodeActionParams> codeActionParams = codeActionRequest->getParams();
 
-    std::string URI = codeActionParams->getURI();
-    std::string document = m_ls6502Client->getDocumentByURI(URI);
+    const std::string &URI = codeActionParams->getURI();
+    const std::string &document = m_ls6502Client->getDocumentByURI(URI);
 
-    std::vector<CodeAction> codeActions = m_codeActionsProvider->getCodeActions(document, URI);
+    const std::vector<CodeAction> &codeActions = m_codeActionsProvider->getCodeActions(document, URI);
 
     int64_t requestId = codeActionRequest->getId();
 
