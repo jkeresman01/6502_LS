@@ -62,9 +62,9 @@ void ConfigurationManager::loadProperties(std::ifstream &in, const std::string &
 {
     std::pair<std::string, std::string> property = XMLUtil::parseFromFileLine(line);
 
-    bool isValidProperty = property.first != "" and property.second != "" :
+    bool isValidProperty = property.first != "" and property.second != "";
 
-        if (!isValidProperty)
+    if (!isValidProperty)
     {
         LS_6502_WARN(STR("Found empty property: [\"%s\"] : [\"%s\"]", property.first.c_str(),
                          property.second.c_str()));
