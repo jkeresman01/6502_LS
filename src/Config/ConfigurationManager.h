@@ -81,6 +81,16 @@ class ConfigurationManager
   private:
     //////////////////////////////////////////////////////////////
     ///
+    /// @brief Load properties from xml
+    ///
+    /// @param [in] in
+    ///
+    //////////////////////////////////////////////////////////////
+    void loadProperties(std::ifstream &in, const std::string &line);
+
+  private:
+    //////////////////////////////////////////////////////////////
+    ///
     /// @brief Private constructor
     ///
     /// @note Ensures that the class can only be instantiated through

@@ -54,17 +54,22 @@ void ConfigurationManager::load(std::ifstream &in)
             continue;
         }
 
-        std::pair<std::string, std::string> property = XMLUtil::parseFromFileLine(line);
+        loadProperties(in, line);
+    }
+}
 
-        if (property.first != "" and property.second != "")
-        {
-            m_properties.insert(property);
-        }
-        else
-        {
-            LS_6502_WARN(STR("Found empty property: [\"%s\"] : [\"%s\"]", property.first.c_str(),
-                             property.second.c_str()));
-        }
+void ConfigurationManager::loadProperties(std::ifstream &in, const std::string &line)
+{
+    std::pair<std::string, std::string> property = XMLUtil::parseFromFileLine(line);
+
+    if (property.first != "" and property.second != "")
+    {
+        m_properties.insert(property);
+    }
+    else
+    {
+        LS_6502_WARN(STR("Found empty property: [\"%s\"] : [\"%s\"]", property.first.c_str(),
+                         property.second.c_str()));
     }
 }
 
