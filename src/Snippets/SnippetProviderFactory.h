@@ -22,11 +22,6 @@ class SnippetProviderFactory
 
         LS_6502_DEBUG(STR("Snippets provder: %s", snippetsProvider.c_str()));
 
-        if (snippetsProvider == "fake")
-        {
-            return std::make_shared<FakeSnippetsProvider>();
-        }
-
         if (snippetsProvider == "predefined")
         {
             return std::make_shared<PredefinedSnippetProvider>();

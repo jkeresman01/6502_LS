@@ -13,7 +13,7 @@ PredefinedSnippetProvider::PredefinedSnippetProvider()
 std::vector<CompletionItem> PredefinedSnippetProvider::getSnippets(const std::string &prefix)
 {
     std::vector<std::string> snippets;
-    auto range = m_snippets.equal_range(prefix);
+    const auto &range = m_snippets.equal_range(prefix);
 
     for (auto it = range.first; it != range.second; ++it)
     {
