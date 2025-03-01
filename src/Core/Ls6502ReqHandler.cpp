@@ -91,7 +91,7 @@ void Ls6502ReqHandler::textDocumentDidOpenReq(
     PublishDiagnosticsNoticifation publishDiagnosticsNotification("textDocument/publishDiagnostics",
                                                                   diagnosticsParams);
 
-    /* Rpc::send(publishDiagnosticsNotification); */
+    Rpc::send(publishDiagnosticsNotification);
 
     LS_6502_DEBUG("Request with method: textDocument/didOpen was successfully processed");
 }
@@ -131,7 +131,8 @@ void Ls6502ReqHandler::textDocumentCompletionReq(const std::shared_ptr<Completio
     const std::string &URI = completionParams->getURI();
 
     const std::string &document = m_ls6502Client->getDocumentByURI(URI);
-    const std::vector<CompletionItem> &completionItems = m_completionProvider->getCompletions(document, position);
+    const std::vector<CompletionItem> &completionItems =
+        m_completionProvider->getCompletions(document, position);
 
     int64_t requestId = completionReq->getId();
 
