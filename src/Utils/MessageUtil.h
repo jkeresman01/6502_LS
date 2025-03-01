@@ -36,7 +36,7 @@ class MessageUtil
     /// @return request method/type
     ///
     /////////////////////////////////////////////////////////////////////
-    static RequestType getType(const nlohmann::json &request);
+    static RequestType getMethod(const nlohmann::json &request);
 
     /////////////////////////////////////////////////////////////////////
     ///
@@ -56,7 +56,7 @@ class MessageUtil
 
 inline nlohmann::json MessageUtil::tryParse(const std::string &request)
 {
-    nlohmann::json jsonRequest;
+    nlohmann::json jsonRequestgetMethod
     try
     {
         jsonRequest = nlohmann::json::parse(request);
@@ -69,7 +69,7 @@ inline nlohmann::json MessageUtil::tryParse(const std::string &request)
     return jsonRequest;
 }
 
-inline RequestType MessageUtil::getType(const nlohmann::json &request)
+inline RequestType MessageUtil::getMethod(const nlohmann::json &request)
 {
     auto it = request.find("method");
 

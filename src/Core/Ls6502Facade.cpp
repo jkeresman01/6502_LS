@@ -31,7 +31,7 @@ namespace ls6502
 
 void Ls6502Facade::handleRequest(const nlohmann::json &request)
 {
-    switch (MessageUtil::getType(request))
+    switch (MessageUtil::getMethod(request))
     {
     case RequestType::INITIALIZE:
         handleInitializeRequest(request);
