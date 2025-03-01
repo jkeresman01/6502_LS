@@ -116,7 +116,7 @@ void Ls6502ReqHandler::textDocumentDidChangeReq(
     PublishDiagnosticsNoticifation publishDiagnosticsNotification("textDocument/publishDiagnostics",
                                                                   diagnosticsParams);
 
-    /* Rpc::send(publishDiagnosticsNotification); */
+    Rpc::send(publishDiagnosticsNotification);
 
     LS_6502_DEBUG("Response successfully sent for textDocument/didChangerequest");
 }
