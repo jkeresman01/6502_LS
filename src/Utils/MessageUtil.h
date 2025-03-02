@@ -56,7 +56,7 @@ class MessageUtil
 
 inline nlohmann::json MessageUtil::tryParse(const std::string &request)
 {
-    nlohmann::json jsonRequestgetMethod
+    nlohmann::json jsonRequest;
     try
     {
         jsonRequest = nlohmann::json::parse(request);
