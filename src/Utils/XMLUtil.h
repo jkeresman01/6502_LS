@@ -72,12 +72,12 @@ std::pair<std::string, std::string> inline XMLUtil::parseFromFileLine(const std:
     size_t valueStart = line.find(">", nameEnd) + 1;
     size_t valueEnd = line.find("</property>", valueStart);
 
-    bool hasPropertyName = nameStart != std::string::npos and nameEnd != std::string::npos;
-    bool hasPropertyValue = valueStart != std::string::npos && valueEnd != std::string::npos;
+    bool hasName = nameStart != std::string::npos and nameEnd != std::string::npos;
+    bool hasValue = valueStart != std::string::npos && valueEnd != std::string::npos;
 
     std::pair<std::string, std::string> property;
 
-    if (hasPropertyName and hasPropertyValue)
+    if (hasName and hasValue)
     {
         std::string propertyName = line.substr(nameStart, nameEnd - nameStart);
         std::string propertyValue = line.substr(valueStart, valueEnd - valueStart);
