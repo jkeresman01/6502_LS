@@ -37,6 +37,8 @@ class ServerCapabilitiesDirector
             .withHoverSupport(true)
             .withSnippetSupport(true)
             .withCompletionSupport(true)
+            .withCompletionSupport(true)
+            .withDefinitionSupport(true)
             .withCodeActionSupport(true);
     }
 };

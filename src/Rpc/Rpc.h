@@ -4,7 +4,6 @@
 
 #include "../Enums/RequestType.h"
 #include "../Messages/Message.h"
-#include "../Utils/Convert.h"
 #include "../Utils/Logger.h"
 
 namespace ls6502

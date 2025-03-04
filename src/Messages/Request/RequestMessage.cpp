@@ -1,6 +1,5 @@
 #include "RequestMessage.h"
 
-#include "../Utils/Convert.h"
 #include "../Utils/Logger.h"
 #include "../Utils/MessageUtil.h"
 #include "Message.h"
