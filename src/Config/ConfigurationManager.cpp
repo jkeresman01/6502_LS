@@ -36,7 +36,7 @@ std::string ConfigurationManager::getProperty(const std::string &propertyName)
 
     if (it == m_properties.end())
     {
-        LS_6502_ERROR(STR("No can do for property: %s", propertyName));
+        LS_6502_ERROR(STR("No can do for property: %s", propertyName.c_str()));
         return std::string();
     }
 
@@ -54,11 +54,11 @@ void ConfigurationManager::load(std::ifstream &in)
             continue;
         }
 
-        loadProperties(in, line);
+        readPropertyFromFileLine(line);
     }
 }
 
-void ConfigurationManager::loadProperties(std::ifstream &in, const std::string &line)
+void ConfigurationManager::readPropertyFromFileLine(const std::string &line)
 {
     std::pair<std::string, std::string> property = XMLUtil::parseFromFileLine(line);
 

@@ -1,4 +1,4 @@
-#pragma once
+#pragma onceCOn
 
 #include <mutex>
 #include <string>
@@ -81,12 +81,12 @@ class ConfigurationManager
   private:
     //////////////////////////////////////////////////////////////
     ///
-    /// @brief Load properties from xml
+    /// @brief Read propery from file line
     ///
-    /// @param [in] in
+    /// @param [in] line
     ///
     //////////////////////////////////////////////////////////////
-    void loadProperties(std::ifstream &in, const std::string &line);
+    void readPropertyFromFileLine(const std::string &line);
 
   private:
     //////////////////////////////////////////////////////////////
