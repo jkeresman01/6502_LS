@@ -49,12 +49,10 @@ void ConfigurationManager::load(std::ifstream &in)
 
     while (getline(in, line))
     {
-        if (!XMLUtil::isValidXMLLine(line))
+        if (XMLUtil::isValidXMLLine(line))
         {
-            continue;
+            readPropertyFromFileLine(line);
         }
-
-        readPropertyFromFileLine(line);
     }
 }
 
