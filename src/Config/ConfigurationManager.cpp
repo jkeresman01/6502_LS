@@ -30,19 +30,6 @@ void ConfigurationManager::load()
     configFile.close();
 }
 
-std::string ConfigurationManager::getProperty(const std::string &propertyName)
-{
-    auto it = m_properties.find(propertyName);
-
-    if (it == m_properties.end())
-    {
-        LS_6502_ERROR(STR("No can do for property: %s", propertyName.c_str()));
-        return std::string();
-    }
-
-    return it->second;
-}
-
 void ConfigurationManager::load(std::ifstream &in)
 {
     std::string line;
@@ -70,6 +57,19 @@ void ConfigurationManager::readPropertyFromFileLine(const std::string &line)
     }
 
     m_properties.insert(property);
+}
+
+std::string ConfigurationManager::getProperty(const std::string &propertyName)
+{
+    auto it = m_properties.find(propertyName);
+
+    if (it == m_properties.end())
+    {
+        LS_6502_ERROR(STR("No can do for property: %s", propertyName.c_str()));
+        return std::string();
+    }
+
+    return it->second;
 }
 
 ConfigurationManager::~ConfigurationManager()
