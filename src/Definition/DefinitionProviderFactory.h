@@ -15,7 +15,7 @@ namespace ls6502
 ///
 /// @class DefinitionProviderFactory
 ///
-/// @brief Factory class for creating instances of completion
+/// @brief Factory class for creating instances of definition
 ///        providers based on configuration settings.
 ///
 //////////////////////////////////////////////////////////////
