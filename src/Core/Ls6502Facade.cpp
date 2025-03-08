@@ -180,6 +180,18 @@ void Ls6502Facade::handleTextDocumentCodeActionRequest(const nlohmann::json &req
 {
     LS_6502_DEBUG("Received request with method: textDocument/codeAction");
 
+    LS_6502_DEBUG("Test test commit");
+    LS_6502_DEBUG("Test test commit");
+    LS_6502_DEBUG("Test test commit");
+    LS_6502_DEBUG("Test test commit");
+    LS_6502_DEBUG("Test test commit");
+    LS_6502_DEBUG("Test test commit");
+    LS_6502_DEBUG("Test test commit");
+    LS_6502_DEBUG("Test test commit");
+    LS_6502_DEBUG("Test test commit");
+    LS_6502_DEBUG("Test test commit");
+    LS_6502_DEBUG("Test test commit");
+
     m_ls6502Counters->increment(RequestType::TEXT_DOCUMENT_CODE_ACTION);
 
     ensureNoReqIsProcessedAfterShutdown(request);
