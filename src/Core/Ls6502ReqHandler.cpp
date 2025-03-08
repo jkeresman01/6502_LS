@@ -9,6 +9,7 @@
 #include "../Completions/CompletionProviderFactory.h"
 #include "../Completions/FakeCompletionProvider.h"
 #include "../Completions/ICompletionProvider.h"
+#include "../Definition/DefinitionProviderFactory.h"
 #include "../Diagnostics/DiagnosticsProviderFactory.h"
 #include "../Diagnostics/FakeDiagnosticsProvider.h"
 #include "../Diagnostics/IDiagnosticsProvider.h"
@@ -38,6 +39,7 @@ namespace ls6502
 Ls6502ReqHandler::Ls6502ReqHandler()
     : m_diagnosticsProvider(DiagnosticsProviderFactory::create()),
       m_completionProvider(CompletionProviderFactory::create()),
+      m_definitionProvider(DefinitionProviderFactory::create()),
       m_hoverProvider(HoverProviderFactory::create()), m_snippetProvider(SnippetProviderFactory::create()),
       m_codeActionsProvider(CodeActionsProviderFactory::create())
 {
@@ -190,7 +192,12 @@ void Ls6502ReqHandler::textDocumentDefinitionReq(const std::shared_ptr<Defintion
 
     std::shared_ptr<DefinitionParams> definitionParams = defintionRequest->getParams();
 
-    // TODO definitintion req -> remove
+    const std::string &URI = definitionParams->getTextDocumentIdentifier();
+    const Position &position = definitionParams->getPosition();
+
+    const std::string &document = m_ls6502Client->getDocumentByURI(URI);
+
+    const Location &location = m_definitionProvider->providerDefinitionLocation(document, position, document);
 }
 
 void Ls6502ReqHandler::shutdownReq(const std::shared_ptr<ShutdownRequest> &shutdownRequest)

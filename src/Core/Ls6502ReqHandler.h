@@ -4,6 +4,7 @@
 
 #include "../CodeActions/ICodeActionsProvider.h"
 #include "../Completions/ICompletionProvider.h"
+#include "../Definition/IDefinitionProvider.h"
 #include "../Diagnostics/IDiagnosticsProvider.h"
 #include "../Hover/IHoverProvider.h"
 #include "../Messages/Request/CodeActionRequest.h"
@@ -159,5 +160,12 @@ class Ls6502ReqHandler
     ///
     //////////////////////////////////////////////////////////////
     std::shared_ptr<ISnippetProvider> m_snippetProvider;
+
+    //////////////////////////////////////////////////////////////
+    ///
+    /// @brief shared pointer to snippet provider object
+    ///
+    //////////////////////////////////////////////////////////////
+    std::shared_ptr<IDefinitionProvider> m_definitionProvider;
 };
 } // namespace ls6502
