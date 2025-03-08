@@ -8,6 +8,6 @@ class FakeDefinitionProvider : public IDefinitionProvider
 {
   public:
     virtual Location providerDefinitionLocation(const std::string &document, const Position &position,
-                                     const std::string &URI) override;
+                                                const std::string &URI) override;
 };
 } // namespace ls6502
