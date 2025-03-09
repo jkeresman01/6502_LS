@@ -5,16 +5,14 @@
 
 namespace ls6502
 {
-    Location DefinitionProvider::providerDefinitionLocation(const std::string &document, const Position &position,
-                                                const std::string &URI)
-    {
-        std::string label = DocumentUtil::extractPrefix(document, position);
+Location DefinitionProvider::providerDefinitionLocation(const std::string &document, const Position &position,
+                                                        const std::string &URI)
+{
+    std::string label = DocumentUtil::extractPrefix(document, position);
 
-        // TODO extract range from label implementaion or reutrn current local 
-        Range range; 
+    // TODO extract range from label implementaion or reutrn current local
+    Range range;
 
-        return Location{URI, range};
-    }
+    return Location{URI, range};
 }
-
-   
+} // namespace ls6502

@@ -40,7 +40,8 @@ class CompletionProviderFactory
     //////////////////////////////////////////////////////////////
     static std::shared_ptr<ICompletionProvider> create()
     {
-        std::string completionProvider = ConfigurationManager::getInstance()->getProperty("completion");
+        const std::string &completionProvider =
+            ConfigurationManager::getInstance()->getProperty("completion");
 
         LS_6502_DEBUG(STR("Completion provider: %s", completionProvider.c_str()));
 

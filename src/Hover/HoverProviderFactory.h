@@ -37,7 +37,7 @@ class HoverProviderFactory
     /////////////////////////////////////////////////////////////////////
     static std::shared_ptr<IHoverProvider> create()
     {
-        std::string hoverProvider = ConfigurationManager::getInstance()->getProperty("hoverProvider");
+        const std::string &hoverProvider = ConfigurationManager::getInstance()->getProperty("hoverProvider");
 
         if (hoverProvider == "fake")
         {

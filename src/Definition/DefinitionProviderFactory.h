@@ -39,7 +39,8 @@ class DefinitionProviderFactory
     //////////////////////////////////////////////////////////////
     static std::shared_ptr<IDefinitionProvider> create()
     {
-        std::string definitionProvider = ConfigurationManager::getInstance()->getProperty("definition");
+        const std::string &definitionProvider =
+            ConfigurationManager::getInstance()->getProperty("definition");
 
         LS_6502_DEBUG(STR("Definition provider: %s", definitionProvider.c_str()));
 

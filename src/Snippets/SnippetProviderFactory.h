@@ -18,7 +18,8 @@ class SnippetProviderFactory
 
     static std::shared_ptr<ISnippetProvider> create()
     {
-        std::string snippetsProvider = ConfigurationManager::getInstance()->getProperty("snippetsProvider");
+        const std::string &snippetsProvider =
+            ConfigurationManager::getInstance()->getProperty("snippetsProvider");
 
         LS_6502_DEBUG(STR("Snippets provder: %s", snippetsProvider.c_str()));
 

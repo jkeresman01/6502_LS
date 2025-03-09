@@ -40,7 +40,7 @@ class CodeActionsProviderFactory
     //////////////////////////////////////////////////////////////
     static std::shared_ptr<ICodeActionsProvider> create()
     {
-        std::string codeActionProvider =
+        const std::string &codeActionProvider =
             ConfigurationManager::getInstance()->getProperty("codeActionProvider");
 
         LS_6502_DEBUG(STR("Code action provider: %s", codeActionProvider.c_str()));
