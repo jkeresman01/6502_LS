@@ -9,6 +9,6 @@ class IDefinitionProvider
 {
   public:
     virtual Location provideDefinitionLocation(const std::string &document, const Position &position,
-                                                const std::string &URI) = 0;
+                                               const std::string &URI) = 0;
 };
 } // namespace ls6502

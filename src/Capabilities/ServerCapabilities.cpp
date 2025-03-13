@@ -17,7 +17,7 @@ nlohmann::json ServerCapabilities::toJson() const
 {
     return {{"textDocumentSync", m_textDocumentSyncKind},
             {"completionProvider", "{}"},
-            {"hoverProvider", m_isHoverSupported},
+            {"hoverProvider", true},
             {"codeActionProvider", m_areCodeActionsSupported},
             {"definitionProvider", m_areDefinitionsSupported}};
 }
