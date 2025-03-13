@@ -37,6 +37,8 @@ class XMLUtil
     ///
     /// @param [in] line from XML file
     ///
+    /// @return true if is valid XML line
+    ///
     /////////////////////////////////////////////////////////////////////
     static bool isValidXMLLine(const std::string_view &line);
 
@@ -47,6 +49,8 @@ class XMLUtil
     ///
     /// @param [in] line from XML file
     ///
+    /// @return trimed line
+    ///
     /////////////////////////////////////////////////////////////////////
     std::string trim(const std::string &line);
 
@@ -55,6 +59,8 @@ class XMLUtil
     /// @brief Validates if line from XML file is valid property line
     ///
     /// @param [in] true if line is valid property line
+    ///
+    /// @return true if is valid propery
     ///
     /////////////////////////////////////////////////////////////////////
     bool isValidPropertyXMLLine(const std::string &line);
