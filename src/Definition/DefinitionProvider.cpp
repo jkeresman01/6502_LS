@@ -4,7 +4,7 @@
 
 namespace ls6502
 {
-Location DefinitionProvider::providerDefinitionLocation(const std::string &document, const Position &position,
+Location DefinitionProvider::provideDefinitionLocation(const std::string &document, const Position &position,
                                                         const std::string &URI)
 {
     const std::string &label = DocumentUtil::extractPrefix(document, position);

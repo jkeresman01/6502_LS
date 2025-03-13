@@ -197,7 +197,7 @@ void Ls6502ReqHandler::textDocumentDefinitionReq(const std::shared_ptr<Defintion
 
     const std::string &document = m_ls6502Client->getDocumentByURI(URI);
 
-    const Location &location = m_definitionProvider->providerDefinitionLocation(document, position, document);
+    const Location &location = m_definitionProvider->provideDefinitionLocation(document, position, document);
 }
 
 void Ls6502ReqHandler::shutdownReq(const std::shared_ptr<ShutdownRequest> &shutdownRequest)

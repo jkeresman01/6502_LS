@@ -2,7 +2,7 @@
 
 namespace ls6502
 {
-Location FakeDefinitionProvider::providerDefinitionLocation(const std::string &document,
+Location FakeDefinitionProvider::provideDefinitionLocation(const std::string &document,
                                                             const Position &position, const std::string &URI)
 {
     Range range{{10, 10}, {10, 12}};

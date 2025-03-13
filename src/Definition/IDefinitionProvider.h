@@ -8,7 +8,7 @@ namespace ls6502
 class IDefinitionProvider
 {
   public:
-    virtual Location providerDefinitionLocation(const std::string &document, const Position &position,
+    virtual Location provideDefinitionLocation(const std::string &document, const Position &position,
                                                 const std::string &URI) = 0;
 };
 } // namespace ls6502
