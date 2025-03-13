@@ -7,7 +7,7 @@ namespace ls6502
 
 /////////////////////////////////////////////////////////////////////
 ///
-/// @class Converter
+/// @class XMLUtil
 ///
 /// @brief Utility class for converting stuff
 ///
