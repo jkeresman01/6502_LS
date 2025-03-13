@@ -1,21 +1,33 @@
 #include "DefinitionProvider.h"
+#include "../Utils/DefinitionUtil.h"
 #include "../Utils/DocumentUtil.h"
 #include "../Utils/Logger.h"
+
+#include <regex>
 
 namespace ls6502
 {
 Location DefinitionProvider::provideDefinitionLocation(const std::string &document, const Position &position,
-                                                        const std::string &URI)
+                                                       const std::string &URI)
 {
     const std::string &label = DocumentUtil::extractPrefix(document, position);
 
     LS_6502_DEBUG(STR("Label: %s", label.c_str()));
 
-    // TODO extract range from label implementaion or reutrn current local
-    Range range;
+    if (label.empty())
+    {
+        LS_6502_DEBUG("Empty label, returning current position");
+        return Location{URI, Range{position, position}};
+    }
 
-    LS_6502_DEBUG(STR("Document: %s", document.c_str()));
+    const Position &definitionPosition = DefinitionUtil::findLabelPosition(label, document);
+
+    uint32_t lineNumber = definitionPosition.line;
+    uint32_t characterPosition = definitionPosition.character + static_cast<uint32_t>(label.length());
+
+    Range range{definitionPosition, {lineNumber, characterPosition}};
 
     return Location{URI, range};
 }
+
 } // namespace ls6502
