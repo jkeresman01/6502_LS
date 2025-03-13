@@ -1,4 +1,4 @@
-#pragma onceCOn
+#pragma once
 
 #include <mutex>
 #include <string>

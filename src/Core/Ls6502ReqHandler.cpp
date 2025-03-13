@@ -192,7 +192,7 @@ void Ls6502ReqHandler::textDocumentDefinitionReq(const std::shared_ptr<Defintion
 
     std::shared_ptr<DefinitionParams> definitionParams = defintionRequest->getParams();
 
-    const std::string &URI = definitionParams->getTextDocumentIdentifier();
+    const std::string &URI = definitionParams->getTextDocumentIdentifier().URI;
     const Position &position = definitionParams->getPosition();
 
     const std::string &document = m_ls6502Client->getDocumentByURI(URI);
