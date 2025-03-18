@@ -3,8 +3,6 @@
 #include "../Utils/DocumentUtil.h"
 #include "../Utils/Logger.h"
 
-#include <regex>
-
 namespace ls6502
 {
 Location DefinitionProvider::provideDefinitionLocation(const std::string &document, const Position &position,
@@ -24,7 +22,7 @@ Location DefinitionProvider::provideDefinitionLocation(const std::string &docume
     const Position &definitionPosition = DefinitionUtil::findLabelPosition(label, document);
 
     uint32_t lineNumber = definitionPosition.line;
-    uint32_t characterPosition = definitionPosition.character + static_cast<uint32_t>(label.length());
+    uint32_t characterPosition = definitionPosition.character + label.length();
 
     Range range{definitionPosition, {lineNumber, characterPosition}};
 
