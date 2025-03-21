@@ -13,8 +13,15 @@ namespace ls6502
 /// Typedefs
 ///
 //////////////////////////////////////////////////////////////
-typedef std::multimap<std::string, std::string> SnippetsT;
+typedef std::multimap<std::string, std::string> SnippetsMultimapT;
 
+//////////////////////////////////////////////////////////////
+///
+/// @class SnippetRepository 
+///
+/// @brief repository for 6502 snippets
+///
+//////////////////////////////////////////////////////////////
 class SnippetRepository : public ISnippetRepository
 {
   public:
@@ -23,15 +30,15 @@ class SnippetRepository : public ISnippetRepository
     /// @brief Loads predefined snippets for 6502 ASM
     ///
     //////////////////////////////////////////////////////////////
-    SnippetsT load() override;
+    SnippetsMultimapT load() override;
 
   private:
     //////////////////////////////////////////////////////////////
     ///
     /// @brief Loads predefined snippets for 6502 ASM
-    ///        from provider input stream
+    ///        from provided input stream
     ///
-    /// @param [in] in
+    /// @param [in] snippetsFile
     ///
     //////////////////////////////////////////////////////////////
     void load(std::ifstream &snippetsFile);
@@ -49,6 +56,6 @@ class SnippetRepository : public ISnippetRepository
     /// @brief Predefined snippets for 6052 ASM
     ///
     //////////////////////////////////////////////////////////////
-    SnippetsT m_snippets;
+    SnippetsMultimapT m_snippets;
 };
 } // namespace ls6502

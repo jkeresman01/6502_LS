@@ -21,7 +21,7 @@ class SnippetProviderFactory
         const std::string &snippetsProvider =
             ConfigurationManager::getInstance()->getProperty("snippetsProvider");
 
-        LS_6502_DEBUG(STR("Snippets provder: %s", snippetsProvider.c_str()));
+        LS_6502_DEBUG(STR("Snippets provider: %s", snippetsProvider.c_str()));
 
         if (snippetsProvider == "predefined")
         {

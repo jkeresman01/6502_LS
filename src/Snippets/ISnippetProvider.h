@@ -1,9 +1,9 @@
 #pragma once
 
-#include "../Types/CompletionItem.h"
-
 #include <string>
 #include <vector>
+
+#include "../Types/CompletionItem.h"
 
 namespace ls6502
 {

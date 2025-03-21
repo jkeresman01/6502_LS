@@ -16,7 +16,7 @@ namespace ls6502
 /// Typedefs
 ///
 //////////////////////////////////////////////////////////////
-typedef std::multimap<std::string, std::string> SnippetsT;
+typedef std::multimap<std::string, std::string> SnippetMultimapT;
 
 //////////////////////////////////////////////////////////////
 ///
@@ -69,7 +69,7 @@ class PredefinedSnippetProvider : public ISnippetProvider
     /// @brief Stores all predefined snippets as a multimap.
     ///
     //////////////////////////////////////////////////////////////
-    SnippetsT m_snippets;
+    SnippetMultimapT m_snippets;
 
     //////////////////////////////////////////////////////////////
     ///
