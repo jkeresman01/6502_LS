@@ -8,16 +8,58 @@
 
 namespace ls6502
 {
-
+//////////////////////////////////////////////////////////////
+///
+/// @struct Instruction
+///
+/// @brief Represents an instruction in the 6502 instruction set.
+///
+//////////////////////////////////////////////////////////////
 struct Instruction
 {
   public:
+    //////////////////////////////////////////////////////////////
+    ///
+    /// @brief The mnemonic of the instruction.
+    ///
+    //////////////////////////////////////////////////////////////
     std::string mnemonic;
+
+    //////////////////////////////////////////////////////////////
+    ///
+    /// @brief A brief description of the instruction.
+    ///
+    //////////////////////////////////////////////////////////////
     std::string description;
+
+    //////////////////////////////////////////////////////////////
+    ///
+    /// @brief The operation performed by the instruction.
+    ///
+    //////////////////////////////////////////////////////////////
     std::string operation;
+
+    //////////////////////////////////////////////////////////////
+    ///
+    /// @brief A map of flags affected by the instruction.
+    ///
+    //////////////////////////////////////////////////////////////
     std::unordered_map<std::string, bool> flags;
+
+    //////////////////////////////////////////////////////////////
+    ///
+    /// @brief A list of addressing modes supported by the instruction.
+    ///
+    //////////////////////////////////////////////////////////////
     std::vector<AddressingMode> addressingModes;
 
+    //////////////////////////////////////////////////////////////
+    ///
+    /// @brief Converts the instruction details to a formatted string.
+    ///
+    /// @return A string containing the formatted instruction details.
+    ///
+    //////////////////////////////////////////////////////////////
     std::string toString() const
     {
         std::ostringstream ss;
@@ -47,6 +89,15 @@ struct Instruction
     }
 
   private:
+    //////////////////////////////////////////////////////////////
+    ///
+    /// @brief Appends flag information to the provided
+    ///        output stream.
+    ///
+    /// @param [in,out] ss The output stream to which
+    ///        flag details are added.
+    ///
+    //////////////////////////////////////////////////////////////
     void putFlags(std::ostringstream &ss) const
     {
         for (const auto &[flag, value] : flags)
@@ -57,6 +108,15 @@ struct Instruction
         ss << "\n";
     }
 
+    //////////////////////////////////////////////////////////////
+    ///
+    /// @brief Appends addressing mode details to the
+    ///        provided output stream.
+    ///
+    /// @param [in,out] ss The output stream to which addressing
+    ///         mode details are added.
+    ///
+    //////////////////////////////////////////////////////////////
     void putAddressingModes(std::ostringstream &ss) const
     {
         for (const auto &addressingMode : addressingModes)
@@ -65,4 +125,5 @@ struct Instruction
         }
     }
 };
+
 } // namespace ls6502

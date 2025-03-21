@@ -8,7 +8,7 @@ namespace ls6502
 Location DefinitionProvider::provideDefinitionLocation(const std::string &document, const Position &position,
                                                        const std::string &URI)
 {
-    //TODO extract word under the cursor not prefix 
+    // TODO extract word under the cursor not prefix
     const std::string &label = DocumentUtil::extractPrefix(document, position);
 
     LS_6502_DEBUG(STR("Label: %s", label.c_str()));

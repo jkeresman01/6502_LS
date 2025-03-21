@@ -17,7 +17,7 @@ typedef std::multimap<std::string, std::string> SnippetsMultimapT;
 
 //////////////////////////////////////////////////////////////
 ///
-/// @class SnippetRepository 
+/// @class SnippetRepository
 ///
 /// @brief repository for 6502 snippets
 ///

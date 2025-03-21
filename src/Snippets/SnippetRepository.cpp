@@ -6,7 +6,7 @@
 
 namespace ls6502
 {
-SnippetsT SnippetRepository::load()
+SnippetsMultimapT SnippetRepository::load()
 {
     std::ifstream snippetsFile(PREDEFINED_SNIPPETS_PATH);
 

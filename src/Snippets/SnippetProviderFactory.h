@@ -11,11 +11,30 @@
 
 namespace ls6502
 {
+//////////////////////////////////////////////////////////////
+///
+/// @class SnippetProviderFactory
+///
+/// @brief Factory class for creating snippet providers.
+///
+//////////////////////////////////////////////////////////////
 class SnippetProviderFactory
 {
   public:
+    //////////////////////////////////////////////////////////////
+    ///
+    /// @brief Deleted default constructor to prevent instantiation.
+    ///
+    //////////////////////////////////////////////////////////////
     SnippetProviderFactory() = delete;
 
+    //////////////////////////////////////////////////////////////
+    ///
+    /// @brief Creates a snippet provider based on configuration settings.
+    ///
+    /// @return A shared pointer to an instance of ISnippetProvider.
+    ///
+    //////////////////////////////////////////////////////////////
     static std::shared_ptr<ISnippetProvider> create()
     {
         const std::string &snippetsProvider =
