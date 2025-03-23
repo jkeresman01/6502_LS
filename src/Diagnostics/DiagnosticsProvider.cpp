@@ -14,7 +14,7 @@
 namespace ls6502
 {
 
-DiagnosticsProvider::DiagnosticsProvider() : m_instructionSetRepository(IInstructionSetRepoFactory::create())
+DiagnosticsProvider::DiagnosticsProvider() : m_instructionSetRepository(InstructionSetRepoFactory::create())
 {
     m_instructionSet = m_instructionSetRepository->load();
 }

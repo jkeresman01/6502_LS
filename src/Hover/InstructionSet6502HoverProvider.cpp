@@ -15,7 +15,7 @@ namespace ls6502
 {
 
 InstructionSet6502HoverProvider::InstructionSet6502HoverProvider()
-    : m_instructionSetRepository(IInstructionSetRepoFactory::create())
+    : m_instructionSetRepository(InstructionSetRepoFactory::create())
 {
     m_instructionSet = m_instructionSetRepository->load();
 

@@ -9,7 +9,7 @@
 namespace ls6502
 {
 InstructionSetCompletionProvider::InstructionSetCompletionProvider()
-    : m_instructionSetRepository(IInstructionSetRepoFactory::create())
+    : m_instructionSetRepository(InstructionSetRepoFactory::create())
 {
     m_instructionSet = m_instructionSetRepository->load();
     loadInstructionSetTrie();
