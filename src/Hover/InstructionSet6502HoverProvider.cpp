@@ -2,7 +2,6 @@
 
 #include <algorithm>
 #include <cstdint>
-#include <functional>
 
 #include "../Repo/InstructionSetRepoFactory.h"
 #include "../Types/HoverItem.h"
@@ -18,11 +17,6 @@ InstructionSet6502HoverProvider::InstructionSet6502HoverProvider()
     : m_instructionSetRepository(InstructionSetRepoFactory::create())
 {
     m_instructionSet = m_instructionSetRepository->load();
-
-    for (const auto &[instruction, _] : m_instructionSet)
-    {
-        LS_6502_DEBUG(STR("Loaded instruction: %s", instruction.c_str()));
-    }
 }
 
 HoverItem InstructionSet6502HoverProvider::getHoverItem(const std::string &document, const Position &position)
