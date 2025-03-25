@@ -21,7 +21,7 @@ InstructionSet6502HoverProvider::InstructionSet6502HoverProvider()
 
 HoverItem InstructionSet6502HoverProvider::getHoverItem(const std::string &document, const Position &position)
 {
-    std::string instruction = DocumentUtil::extractPrefix(document, position);
+    std::string &instruction = DocumentUtil::extractPrefix(document, position);
 
     StringUtil::toUpper(instruction);
 

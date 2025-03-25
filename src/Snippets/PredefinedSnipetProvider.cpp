@@ -17,7 +17,7 @@ std::vector<CompletionItem> PredefinedSnippetProvider::getSnippets(const std::st
 
     for (auto it = range.first; it != range.second; ++it)
     {
-        snippets.push_back(it->second);
+        snippets.emplace_back(it->second);
     }
 
     return getCompletions(snippets, prefix);
