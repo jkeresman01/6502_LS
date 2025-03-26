@@ -52,11 +52,11 @@ void Ls6502ReqHandler::initializeReq(const std::shared_ptr<InitializeRequest> &i
     std::shared_ptr<InitializeParams> initializeParams = initializeRequest->getInitializeParams();
     std::shared_ptr<ClientCapabilities> capabilities = initializeParams->getClientCapabilites();
 
-    const ClientInfo &info = initializeParams->getClientInfo();
+    const ClientInfo &clientInfo = initializeParams->getClientInfo();
 
-    LS_6502_DEBUG(STR("Client: %s has sent initializtion request", info.toString().c_str()));
+    LS_6502_DEBUG(STR("Client: %s has sent initializtion request", clientInfo.toString().c_str()));
 
-    m_ls6502Client->saveInfo(info);
+    m_ls6502Client->saveInfo(clientInfo);
     m_ls6502Client->registerCapabilites(capabilities);
 
     ServerCapabilities::Builder serverCapabilitiesBuilder;
@@ -68,7 +68,8 @@ void Ls6502ReqHandler::initializeReq(const std::shared_ptr<InitializeRequest> &i
 
     Rpc::send(initializeResponse);
 
-    LS_6502_DEBUG(STR("Initialize response was successfully sent for client: %s", info.toString().c_str()));
+    LS_6502_DEBUG(
+        STR("Initialize response was successfully sent for client: %s", clientInfo.toString().c_str()));
 }
 
 void Ls6502ReqHandler::textDocumentDidOpenReq(
