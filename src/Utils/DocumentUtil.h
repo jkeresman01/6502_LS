@@ -111,7 +111,7 @@ std::vector<std::string> inline DocumentUtil::splitDocumentIntoLines(const std::
 
 std::string inline DocumentUtil::extractPrefix(const std::string &document, const Position &position)
 {
-    std::string line = extractLine(document, position);
+    const std::string &line = extractLine(document, position);
 
     bool isValidPosition = position.character < line.size();
 
@@ -153,7 +153,7 @@ size_t inline DocumentUtil::findStartOfTheWord(const std::string &line, const Po
 {
     size_t start = position.character;
 
-    while (start > 0 && std::isalnum(line[start - 1]))
+    while (start > 0 and std::isalnum(line[start - 1]))
     {
         --start;
     }
@@ -165,7 +165,7 @@ size_t inline DocumentUtil::findEndOfTheWord(const std::string &line, const Posi
 {
     size_t end = position.character;
 
-    while (end < line.size() && std::isalnum(line[end]))
+    while (end < line.size() and std::isalnum(line[end]))
     {
         ++end;
     }

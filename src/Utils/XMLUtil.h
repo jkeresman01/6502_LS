@@ -79,7 +79,7 @@ std::pair<std::string, std::string> inline XMLUtil::parseFromFileLine(const std:
     size_t valueEnd = line.find("</property>", valueStart);
 
     bool hasName = nameStart != std::string::npos and nameEnd != std::string::npos;
-    bool hasValue = valueStart != std::string::npos && valueEnd != std::string::npos;
+    bool hasValue = valueStart != std::string::npos and valueEnd != std::string::npos;
 
     std::pair<std::string, std::string> property;
 
@@ -96,7 +96,10 @@ std::pair<std::string, std::string> inline XMLUtil::parseFromFileLine(const std:
 
 bool inline XMLUtil::isValidXMLLine(const std::string_view &line)
 {
-    return line.find("<property") != std::string::npos and line.find("</property>") != std::string::npos;
+    bool hasCorrectStartPropertyTag = line.find("<property") != std::string::npos;
+    bool hasCorrectStartEndPropertyTag = line.find("</property>") != std::string::npos;
+
+    return hasCorrectStartPropertyTag and hasCorrectStartEndPropertyTag;
 }
 
 std::string inline XMLUtil::trim(const std::string &line)
