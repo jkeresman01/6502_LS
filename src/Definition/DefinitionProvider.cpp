@@ -1,4 +1,5 @@
 #include "DefinitionProvider.h"
+
 #include "../Utils/DefinitionUtil.h"
 #include "../Utils/DocumentUtil.h"
 #include "../Utils/Logger.h"

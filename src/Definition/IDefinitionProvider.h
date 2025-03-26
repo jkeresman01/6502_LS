@@ -1,3 +1,5 @@
+#pragma once
+
 #include "../Types/Location.h"
 #include "../Types/Position.h"
 
