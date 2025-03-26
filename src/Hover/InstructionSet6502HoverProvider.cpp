@@ -21,7 +21,7 @@ InstructionSet6502HoverProvider::InstructionSet6502HoverProvider()
 
 HoverItem InstructionSet6502HoverProvider::getHoverItem(const std::string &document, const Position &position)
 {
-    std::string &instruction = DocumentUtil::extractPrefix(document, position);
+    std::string instruction = DocumentUtil::extractPrefix(document, position);
 
     StringUtil::toUpper(instruction);
 
@@ -33,12 +33,11 @@ HoverItem InstructionSet6502HoverProvider::getHoverItem(const std::string &docum
 
     if (it == m_instructionSet.end())
     {
-        std::stringstream ss;
-        ss << instruction << " isn't valid 6502 ASM instruction!";
+        std::string invalidInstructionStr = STR(" isn't valid 6502 ASM instruction!", instruction.c_str());
 
-        LS_6502_DEBUG(ss.str());
+        LS_6502_DEBUG(invalidInstructionStr);
 
-        hoverItem.text = ss.str();
+        hoverItem.text = invalidInstructionStr;
     }
     else
     {

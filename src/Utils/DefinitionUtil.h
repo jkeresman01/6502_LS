@@ -1,6 +1,7 @@
 #pragma once
 
 #include "../Types/Position.h"
+#include "../Utils/Logger.h"
 
 #include <regex>
 
