@@ -33,7 +33,7 @@ HoverItem InstructionSet6502HoverProvider::getHoverItem(const std::string &docum
 
     if (it == m_instructionSet.end())
     {
-        std::string invalidInstructionStr = STR(" isn't valid 6502 ASM instruction!", instruction.c_str());
+        std::string invalidInstructionStr = STR("%s isn't valid 6502 ASM instruction!", instruction.c_str());
 
         LS_6502_DEBUG(invalidInstructionStr);
 
