@@ -1,3 +1,7 @@
+////////////////////////////////////////////////////////////
+// Headers
+////////////////////////////////////////////////////////////
+
 #include "ConfigurationManager.h"
 
 #include "../Utils/Logger.h"
@@ -10,9 +14,13 @@
 namespace ls6502
 {
 
+
+////////////////////////////////////////////////////////////
 ConfigurationManager *ConfigurationManager::s_instance = nullptr;
 std::mutex ConfigurationManager::s_mutex;
 
+
+////////////////////////////////////////////////////////////
 void ConfigurationManager::load()
 {
     m_properties.clear();
@@ -30,6 +38,8 @@ void ConfigurationManager::load()
     configFile.close();
 }
 
+
+////////////////////////////////////////////////////////////
 void ConfigurationManager::load(std::ifstream &in)
 {
     std::string line;
@@ -43,6 +53,8 @@ void ConfigurationManager::load(std::ifstream &in)
     }
 }
 
+
+////////////////////////////////////////////////////////////
 void ConfigurationManager::readPropertyFromFileLine(const std::string &line)
 {
     std::pair<std::string, std::string> property = XMLUtil::parseFromFileLine(line);
@@ -59,6 +71,8 @@ void ConfigurationManager::readPropertyFromFileLine(const std::string &line)
     m_properties.insert(property);
 }
 
+
+////////////////////////////////////////////////////////////
 std::string ConfigurationManager::getProperty(const std::string &propertyName)
 {
     auto it = m_properties.find(propertyName);
@@ -72,6 +86,8 @@ std::string ConfigurationManager::getProperty(const std::string &propertyName)
     return it->second;
 }
 
+
+////////////////////////////////////////////////////////////
 ConfigurationManager::~ConfigurationManager()
 {
     if (s_instance)
@@ -80,6 +96,8 @@ ConfigurationManager::~ConfigurationManager()
     }
 }
 
+
+////////////////////////////////////////////////////////////
 ConfigurationManager *ConfigurationManager::getInstance()
 {
     std::lock_guard<std::mutex> lock(s_mutex);

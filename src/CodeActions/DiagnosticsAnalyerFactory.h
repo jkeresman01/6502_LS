@@ -1,5 +1,9 @@
 #pragma once
 
+////////////////////////////////////////////////////////////
+// Headers
+////////////////////////////////////////////////////////////
+
 #include "IDiagnosticsAnalyzer.h"
 #include "IncorrectLabelDiagnosticsAnalyzer.h"
 #include "UnsupportedInstructionDiagnosticsAnalyzer.h"

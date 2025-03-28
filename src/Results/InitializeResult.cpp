@@ -1,3 +1,7 @@
+////////////////////////////////////////////////////////////
+// Headers
+////////////////////////////////////////////////////////////
+
 #include "InitializeResult.h"
 
 #include <sstream>
@@ -6,11 +10,15 @@
 namespace ls6502
 {
 
+
+////////////////////////////////////////////////////////////
 InitializeResult::InitializeResult(const ServerInfo &serverInfo, const ServerCapabilities &serverCapabilites)
     : m_serverInfo(serverInfo), m_serverCapabilities(serverCapabilites)
 {
 }
 
+
+////////////////////////////////////////////////////////////
 nlohmann::json InitializeResult::toJson() const
 {
     // TODO completionProvider and hoverProvider are hardoced for test purposes
@@ -23,6 +31,8 @@ nlohmann::json InitializeResult::toJson() const
                {{"resolveProvider", false}, {"completionItem", {{"snippetSupport", true}}}}}}}};
 }
 
+
+////////////////////////////////////////////////////////////
 std::string InitializeResult::toString() const
 {
     std::stringstream ss;

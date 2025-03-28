@@ -1,3 +1,7 @@
+////////////////////////////////////////////////////////////
+// Headers
+////////////////////////////////////////////////////////////
+
 #include "DiagnosticsProvider.h"
 
 #include <regex>
@@ -14,11 +18,15 @@
 namespace ls6502
 {
 
+
+////////////////////////////////////////////////////////////
 DiagnosticsProvider::DiagnosticsProvider() : m_instructionSetRepository(InstructionSetRepoFactory::create())
 {
     m_instructionSet = m_instructionSetRepository->load();
 }
 
+
+////////////////////////////////////////////////////////////
 std::vector<Diagnostic> DiagnosticsProvider::getDiagnostics(const std::string &document)
 {
     m_diagnostics.clear();
@@ -35,6 +43,8 @@ std::vector<Diagnostic> DiagnosticsProvider::getDiagnostics(const std::string &d
     return m_diagnostics;
 }
 
+
+////////////////////////////////////////////////////////////
 void DiagnosticsProvider::checkMalformedLabel(const std::string &line, size_t lineNumber)
 {
     std::regex labelRegex(R"(^\s*([A-Za-z_][A-Za-z0-9_]*)\s*$)");
@@ -52,6 +62,8 @@ void DiagnosticsProvider::checkMalformedLabel(const std::string &line, size_t li
     }
 }
 
+
+////////////////////////////////////////////////////////////
 void DiagnosticsProvider::checkUnsupportedInstructions(const std::string &line, size_t lineNumber)
 {
     std::istringstream iss(line);
@@ -73,6 +85,8 @@ void DiagnosticsProvider::checkUnsupportedInstructions(const std::string &line, 
     }
 }
 
+
+////////////////////////////////////////////////////////////
 void DiagnosticsProvider::checkGeneralSyntaxErrors(const std::string &line, size_t lineNumber)
 {
     std::regex validSyntaxRegex(R"(^\s*([A-Za-z_][A-Za-z0-9_]*:)?\s*([A-Z]{2,3})?\s*([^;]*)?(;.*)?$)");

@@ -1,3 +1,7 @@
+////////////////////////////////////////////////////////////
+// Headers
+////////////////////////////////////////////////////////////
+
 #include "WrongInstructionUsageDiagnosticsAnalyzer.h"
 
 #include "../Types/CodeAction.h"
@@ -9,6 +13,8 @@
 namespace ls6502
 {
 
+
+////////////////////////////////////////////////////////////
 std::vector<CodeAction> WrongInstructionUsageDiagnosticsAnalyzer::provideCodeActions(
     const Diagnostic &diagnostic, const std::string &document, const std::string &URI)
 {
@@ -29,6 +35,8 @@ std::vector<CodeAction> WrongInstructionUsageDiagnosticsAnalyzer::provideCodeAct
     return m_codeActions;
 }
 
+
+////////////////////////////////////////////////////////////
 CodeAction WrongInstructionUsageDiagnosticsAnalyzer::createCodeAction(const WorkspaceEdit &workspaceEdit)
 {
     return CodeAction::Builder()

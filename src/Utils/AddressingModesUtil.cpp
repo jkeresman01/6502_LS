@@ -1,3 +1,7 @@
+////////////////////////////////////////////////////////////
+// Headers
+////////////////////////////////////////////////////////////
+
 #include "AddressingModesUtil.h"
 
 #include <unordered_map>
@@ -8,6 +12,8 @@
 namespace ls6502
 {
 
+
+////////////////////////////////////////////////////////////
 AddressingModes AddressingModeUtil::stringToAddressingMode(const std::string &addressingMode)
 {
     static const StringAddressingModeMapT addressingModes = {
@@ -26,6 +32,8 @@ AddressingModes AddressingModeUtil::stringToAddressingMode(const std::string &ad
     return it->second;
 }
 
+
+////////////////////////////////////////////////////////////
 const char *AddressingModeUtil::addressingModeToString(const AddressingModes addressingMode)
 {
     static const AddressingModeStringMapT addressingModes = {

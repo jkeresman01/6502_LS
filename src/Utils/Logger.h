@@ -1,5 +1,9 @@
 #pragma once
 
+////////////////////////////////////////////////////////////
+// Headers
+////////////////////////////////////////////////////////////
+
 #include "TimeUtil.h"
 
 #include <chrono>
@@ -35,8 +39,12 @@ namespace ls6502
 class Logger
 {
   public:
+
+    ////////////////////////////////////////////////////////////
     Logger() = delete;
 
+
+    ////////////////////////////////////////////////////////////
     static void log(const std::string &severity, const std::string &message, const char *file,
                     uint32_t lineNumber)
     {
@@ -54,6 +62,8 @@ class Logger
     }
 
   private:
+
+    ////////////////////////////////////////////////////////////
     static void putLogMessage(std::ofstream &log, const std::string &message, const std::string &severity,
                               uint32_t lineNumber, const char *file)
     {

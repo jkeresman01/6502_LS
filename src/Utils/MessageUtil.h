@@ -1,5 +1,9 @@
 #pragma once
 
+////////////////////////////////////////////////////////////
+// Headers
+////////////////////////////////////////////////////////////
+
 #include <nlohmann/json.hpp>
 #include <string>
 
@@ -54,6 +58,8 @@ class MessageUtil
 /// Implementation of inline defined functions
 /////////////////////////////////////////////////////////////////////
 
+
+////////////////////////////////////////////////////////////
 inline nlohmann::json MessageUtil::tryParse(const std::string &request)
 {
     nlohmann::json jsonRequest;
@@ -69,6 +75,8 @@ inline nlohmann::json MessageUtil::tryParse(const std::string &request)
     return jsonRequest;
 }
 
+
+////////////////////////////////////////////////////////////
 inline RequestType MessageUtil::getMethod(const nlohmann::json &request)
 {
     auto it = request.find("method");

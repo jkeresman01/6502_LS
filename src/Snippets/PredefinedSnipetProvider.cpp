@@ -1,15 +1,24 @@
+////////////////////////////////////////////////////////////
+// Headers
+////////////////////////////////////////////////////////////
+
 #include "PredefinedSnipetProvider.h"
 
 #include "SnippetRepositoryFactory.h"
 
 namespace ls6502
 {
+
+
+////////////////////////////////////////////////////////////
 PredefinedSnippetProvider::PredefinedSnippetProvider()
     : m_snippetRepository(SnippetRepositoryFactory::create())
 {
     m_snippets = m_snippetRepository->load();
 }
 
+
+////////////////////////////////////////////////////////////
 std::vector<CompletionItem> PredefinedSnippetProvider::getSnippets(const std::string &prefix)
 {
     std::vector<std::string> snippets;
@@ -23,6 +32,8 @@ std::vector<CompletionItem> PredefinedSnippetProvider::getSnippets(const std::st
     return getCompletions(snippets, prefix);
 }
 
+
+////////////////////////////////////////////////////////////
 std::vector<CompletionItem> PredefinedSnippetProvider::getCompletions(
     const std::vector<std::string> &snippets, const std::string &prefix)
 {

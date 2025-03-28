@@ -1,12 +1,20 @@
+////////////////////////////////////////////////////////////
+// Headers
+////////////////////////////////////////////////////////////
+
 #include "PublishDiagnosticsParams.h"
 
 namespace ls6502
 {
 
+
+////////////////////////////////////////////////////////////
 PublishDiagnosticsParams::PublishDiagnosticsParams(const std::string &URI,
                                                    const std::vector<Diagnostic> &diagnostics)
     : m_URI(URI), m_diagnostics(diagnostics){};
 
+
+////////////////////////////////////////////////////////////
 nlohmann::json PublishDiagnosticsParams::toJson() const
 {
     return {
@@ -15,6 +23,8 @@ nlohmann::json PublishDiagnosticsParams::toJson() const
     };
 }
 
+
+////////////////////////////////////////////////////////////
 nlohmann::json PublishDiagnosticsParams::dianosticItemsToJson() const
 {
     std::vector<nlohmann::json> diagnostics(m_diagnostics.size());

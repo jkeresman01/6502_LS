@@ -1,3 +1,7 @@
+////////////////////////////////////////////////////////////
+// Headers
+////////////////////////////////////////////////////////////
+
 #include "InstructionSetCompletionProvider.h"
 
 #include "../Repo/InstructionSetRepoFactory.h"
@@ -8,6 +12,9 @@
 
 namespace ls6502
 {
+
+
+////////////////////////////////////////////////////////////
 InstructionSetCompletionProvider::InstructionSetCompletionProvider()
     : m_instructionSetRepository(InstructionSetRepoFactory::create())
 {
@@ -15,6 +22,8 @@ InstructionSetCompletionProvider::InstructionSetCompletionProvider()
     loadInstructionSetTrie();
 }
 
+
+////////////////////////////////////////////////////////////
 void InstructionSetCompletionProvider::loadInstructionSetTrie()
 {
     for (const auto &[mnemonic, _] : m_instructionSet)
@@ -23,6 +32,8 @@ void InstructionSetCompletionProvider::loadInstructionSetTrie()
     }
 }
 
+
+////////////////////////////////////////////////////////////
 std::vector<CompletionItem> InstructionSetCompletionProvider::getCompletions(const std::string &document,
                                                                              const Position &position)
 {
@@ -35,6 +46,8 @@ std::vector<CompletionItem> InstructionSetCompletionProvider::getCompletions(con
     return mapInstructionsToCompletions(instructions);
 }
 
+
+////////////////////////////////////////////////////////////
 std::vector<CompletionItem> InstructionSetCompletionProvider::mapInstructionsToCompletions(
     const std::vector<std::string> &instructions)
 {
@@ -49,6 +62,8 @@ std::vector<CompletionItem> InstructionSetCompletionProvider::mapInstructionsToC
     return m_completionItems;
 }
 
+
+////////////////////////////////////////////////////////////
 void InstructionSetCompletionProvider::fillCompletionsForInstruction(const std::string &instruction)
 {
     InstructionSetMapT::iterator it = m_instructionSet.find(instruction);
@@ -63,6 +78,8 @@ void InstructionSetCompletionProvider::fillCompletionsForInstruction(const std::
     createCompletionsForAllAddressingModes(foundInstruction);
 }
 
+
+////////////////////////////////////////////////////////////
 void InstructionSetCompletionProvider::createCompletionsForAllAddressingModes(const Instruction &instruction)
 {
     for (const auto &addressingMode : instruction.addressingModes)

@@ -1,5 +1,9 @@
 #pragma once
 
+////////////////////////////////////////////////////////////
+// Headers
+////////////////////////////////////////////////////////////
+
 #include <string>
 
 namespace ls6502
@@ -70,6 +74,8 @@ class XMLUtil
 /// Implementation of inline defined functions
 /////////////////////////////////////////////////////////////////////
 
+
+////////////////////////////////////////////////////////////
 std::pair<std::string, std::string> inline XMLUtil::parseFromFileLine(const std::string &line)
 {
     size_t nameStart = line.find("name=\"") + 6;
@@ -94,6 +100,8 @@ std::pair<std::string, std::string> inline XMLUtil::parseFromFileLine(const std:
     return property;
 }
 
+
+////////////////////////////////////////////////////////////
 bool inline XMLUtil::isValidXMLLine(const std::string_view &line)
 {
     bool hasCorrectStartPropertyTag = line.find("<property") != std::string::npos;
@@ -102,6 +110,8 @@ bool inline XMLUtil::isValidXMLLine(const std::string_view &line)
     return hasCorrectStartPropertyTag and hasCorrectStartEndPropertyTag;
 }
 
+
+////////////////////////////////////////////////////////////
 std::string inline XMLUtil::trim(const std::string &line)
 {
     size_t start = line.find_first_not_of(" \t\n\r");

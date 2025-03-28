@@ -1,3 +1,7 @@
+////////////////////////////////////////////////////////////
+// Headers
+////////////////////////////////////////////////////////////
+
 #include "FakeCodectionsProvider.h"
 
 #include "../Types/CodeAction.h"
@@ -9,6 +13,9 @@
 
 namespace ls6502
 {
+
+
+////////////////////////////////////////////////////////////
 std::vector<CodeAction> FakeCodeActionsProvider::getCodeActions(const std::string &document,
                                                                 const std::string &URI)
 {
@@ -19,6 +26,8 @@ std::vector<CodeAction> FakeCodeActionsProvider::getCodeActions(const std::strin
     return codeActions;
 }
 
+
+////////////////////////////////////////////////////////////
 void FakeCodeActionsProvider::fillFakeCodeActions(std::vector<CodeAction> &codeActions,
                                                   const std::string &URI)
 {
@@ -32,6 +41,8 @@ void FakeCodeActionsProvider::fillFakeCodeActions(std::vector<CodeAction> &codeA
     codeActions[2] = createFakeCodeAction(workspaceEdit, "Fake code action 3");
 }
 
+
+////////////////////////////////////////////////////////////
 CodeAction FakeCodeActionsProvider::createFakeCodeAction(const WorkspaceEdit &workspaceEdit,
                                                          const std::string &title)
 {

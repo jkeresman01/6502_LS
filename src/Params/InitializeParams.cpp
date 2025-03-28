@@ -1,3 +1,7 @@
+////////////////////////////////////////////////////////////
+// Headers
+////////////////////////////////////////////////////////////
+
 #include "InitializeParams.h"
 
 #include <string>
@@ -8,12 +12,16 @@
 namespace ls6502
 {
 
+
+////////////////////////////////////////////////////////////
 InitializeParams::InitializeParams(const nlohmann::json &jsonInitializeParams)
 {
     setProccessId(jsonInitializeParams);
     setClientInfo(jsonInitializeParams);
 }
 
+
+////////////////////////////////////////////////////////////
 void InitializeParams::setProccessId(const nlohmann::json &jsonRPC)
 {
     auto it = jsonRPC.find("processId");
@@ -27,6 +35,8 @@ void InitializeParams::setProccessId(const nlohmann::json &jsonRPC)
     m_processId = jsonRPC["processId"];
 }
 
+
+////////////////////////////////////////////////////////////
 void InitializeParams::setLocale(const nlohmann::json &jsonRPC)
 {
     auto it = jsonRPC.find("locale");
@@ -40,6 +50,8 @@ void InitializeParams::setLocale(const nlohmann::json &jsonRPC)
     m_locale = jsonRPC["locale"];
 }
 
+
+////////////////////////////////////////////////////////////
 void InitializeParams::setClientInfo(const nlohmann::json &jsonRPC)
 {
     nlohmann::json clientInfoJson = jsonRPC["clientInfo"];
@@ -48,6 +60,8 @@ void InitializeParams::setClientInfo(const nlohmann::json &jsonRPC)
     m_clientInfo.version = clientInfoJson["version"];
 }
 
+
+////////////////////////////////////////////////////////////
 void InitializeParams::setTraceLevel(const nlohmann::json &jsonRPC)
 {
     auto it = jsonRPC.find("trace");

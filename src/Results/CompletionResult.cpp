@@ -1,3 +1,7 @@
+////////////////////////////////////////////////////////////
+// Headers
+////////////////////////////////////////////////////////////
+
 #include "CompletionResult.h"
 
 #include <iostream>
@@ -7,11 +11,15 @@
 namespace ls6502
 {
 
+
+////////////////////////////////////////////////////////////
 CompletionResult::CompletionResult(const std::vector<CompletionItem> &completionItems)
     : m_completionItems(completionItems)
 {
 }
 
+
+////////////////////////////////////////////////////////////
 nlohmann::json CompletionResult::toJson() const
 {
     std::vector<nlohmann::json> completions(m_completionItems.size());

@@ -1,7 +1,13 @@
+////////////////////////////////////////////////////////////
+// Headers
+////////////////////////////////////////////////////////////
+
 #include "FakeDefinitionProvider.h"
 
 namespace ls6502
 {
+
+////////////////////////////////////////////////////////////
 Location FakeDefinitionProvider::provideDefinitionLocation(const std::string &document,
                                                            const Position &position, const std::string &URI)
 {

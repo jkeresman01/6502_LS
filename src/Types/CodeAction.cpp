@@ -1,3 +1,7 @@
+////////////////////////////////////////////////////////////
+// Headers
+////////////////////////////////////////////////////////////
+
 #include "CodeAction.h"
 
 #include <string>
@@ -5,10 +9,14 @@
 namespace ls6502
 {
 
+
+////////////////////////////////////////////////////////////
 CodeAction::CodeAction(const std::string &title, const CodeActionKind &codeActionKind, const bool isPreffered,
                        const WorkspaceEdit &edit)
     : m_title(title), m_codeActionKind(codeActionKind), m_isPreffered(isPreffered), m_workspaceEdit(edit){};
 
+
+////////////////////////////////////////////////////////////
 std::string CodeAction::toString() const
 {
     std::stringstream ss;
@@ -21,6 +29,8 @@ std::string CodeAction::toString() const
     return ss.str();
 }
 
+
+////////////////////////////////////////////////////////////
 nlohmann::json CodeAction::toJson() const
 {
     nlohmann::json json;
@@ -33,30 +43,40 @@ nlohmann::json CodeAction::toJson() const
     return json;
 }
 
+
+////////////////////////////////////////////////////////////
 CodeAction::Builder &CodeAction::Builder::withTitle(const std::string &title)
 {
     m_title = title;
     return *this;
 }
 
+
+////////////////////////////////////////////////////////////
 CodeAction::Builder &CodeAction::Builder::withCodeActionKind(const CodeActionKind &codeActionKind)
 {
     m_codeActionKind = codeActionKind;
     return *this;
 }
 
+
+////////////////////////////////////////////////////////////
 CodeAction::Builder &CodeAction::Builder::withPrefferedFix(bool isPreffered)
 {
     m_isPreffered = isPreffered;
     return *this;
 }
 
+
+////////////////////////////////////////////////////////////
 CodeAction::Builder &CodeAction::Builder::withWorkspaceEdit(const WorkspaceEdit &workspaceEdit)
 {
     m_workspaceEdit = workspaceEdit;
     return *this;
 }
 
+
+////////////////////////////////////////////////////////////
 CodeAction CodeAction::Builder::build()
 {
     return CodeAction(m_title, m_codeActionKind, m_isPreffered, m_workspaceEdit);

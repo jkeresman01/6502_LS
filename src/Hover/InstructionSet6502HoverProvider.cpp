@@ -1,3 +1,7 @@
+////////////////////////////////////////////////////////////
+// Headers
+////////////////////////////////////////////////////////////
+
 #include "InstructionSet6502HoverProvider.h"
 
 #include <algorithm>
@@ -13,12 +17,16 @@
 namespace ls6502
 {
 
+
+////////////////////////////////////////////////////////////
 InstructionSet6502HoverProvider::InstructionSet6502HoverProvider()
     : m_instructionSetRepository(InstructionSetRepoFactory::create())
 {
     m_instructionSet = m_instructionSetRepository->load();
 }
 
+
+////////////////////////////////////////////////////////////
 HoverItem InstructionSet6502HoverProvider::getHoverItem(const std::string &document, const Position &position)
 {
     std::string instruction = DocumentUtil::extractPrefix(document, position);

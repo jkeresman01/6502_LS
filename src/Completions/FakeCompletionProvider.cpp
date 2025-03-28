@@ -1,3 +1,7 @@
+////////////////////////////////////////////////////////////
+// Headers
+////////////////////////////////////////////////////////////
+
 #include "FakeCompletionProvider.h"
 
 #include "../Types/CompletionItem.h"
@@ -7,6 +11,8 @@
 namespace ls6502
 {
 
+
+////////////////////////////////////////////////////////////
 std::vector<CompletionItem> FakeCompletionProvider::getCompletions(const std::string &document,
                                                                    const Position &position)
 {
@@ -18,6 +24,8 @@ std::vector<CompletionItem> FakeCompletionProvider::getCompletions(const std::st
     return completions;
 }
 
+
+////////////////////////////////////////////////////////////
 void FakeCompletionProvider::fillFakeComletions(std::vector<CompletionItem> &completions)
 {
     completions.emplace_back("dnsClient", CompletionItemKind::TEXT, "DNS client test 1 documentation",

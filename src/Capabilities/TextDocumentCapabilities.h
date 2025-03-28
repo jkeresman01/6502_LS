@@ -1,5 +1,9 @@
 #pragma once
 
+////////////////////////////////////////////////////////////
+// Headers
+////////////////////////////////////////////////////////////
+
 #include <nlohmann/json.hpp>
 
 #include "../Capabilities/TextDocumentSyncClientCapabilites.h"
@@ -18,7 +22,8 @@ namespace ls6502
 //////////////////////////////////////////////////////////////
 class TextDocumentCapabilities
 {
-    // TODO rest of the capabilities only sync and hover are currently included
+    // TODO add rest of the capabilities only sync and hover are 
+    // currently included
 
   public:
     //////////////////////////////////////////////////////////////

@@ -1,5 +1,9 @@
 #pragma once
 
+////////////////////////////////////////////////////////////
+// Headers
+////////////////////////////////////////////////////////////
+
 #include <algorithm>
 #include <functional>
 #include <string>
@@ -56,6 +60,8 @@ class StringUtil
 /// Implementation of inline defined functions
 /////////////////////////////////////////////////////////////////////
 
+
+////////////////////////////////////////////////////////////
 void inline StringUtil::trim(std::string &string)
 {
     size_t start = string.find_first_not_of(" \t\n\r\f\v");
@@ -69,11 +75,16 @@ void inline StringUtil::trim(std::string &string)
     string = string.substr(start, end - start + 1);
 }
 
+
+////////////////////////////////////////////////////////////
 void inline StringUtil::toUpper(std::string &string)
 {
     std::transform(string.begin(), string.end(), string.begin(),
                    std::ptr_fun<int32_t, int32_t>(std::toupper));
 }
+
+
+////////////////////////////////////////////////////////////
 void inline StringUtil::toLower(std::string &string)
 {
     std::transform(string.begin(), string.end(), string.begin(),

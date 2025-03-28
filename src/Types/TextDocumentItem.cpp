@@ -1,9 +1,16 @@
+////////////////////////////////////////////////////////////
+// Headers
+////////////////////////////////////////////////////////////
+
 #include "TextDocumentItem.h"
 
 #include "../Utils/Logger.h"
 
 namespace ls6502
 {
+
+
+////////////////////////////////////////////////////////////
 TextDocumentItem::TextDocumentItem(const nlohmann::json &jsonRPC)
 {
     setURI(jsonRPC);
@@ -12,6 +19,8 @@ TextDocumentItem::TextDocumentItem(const nlohmann::json &jsonRPC)
     setText(jsonRPC);
 }
 
+
+////////////////////////////////////////////////////////////
 void TextDocumentItem::setURI(const nlohmann::json &jsonRPC)
 {
     auto it = jsonRPC.find("uri");
@@ -25,6 +34,8 @@ void TextDocumentItem::setURI(const nlohmann::json &jsonRPC)
     m_URI = jsonRPC["uri"];
 }
 
+
+////////////////////////////////////////////////////////////
 void TextDocumentItem::setLanguageId(const nlohmann::json &jsonRPC)
 {
     auto it = jsonRPC.find("languageId");
@@ -38,6 +49,8 @@ void TextDocumentItem::setLanguageId(const nlohmann::json &jsonRPC)
     m_languageId = jsonRPC["languageId"];
 }
 
+
+////////////////////////////////////////////////////////////
 void TextDocumentItem::setTextVersion(const nlohmann::json &jsonRPC)
 {
     auto it = jsonRPC.find("version");
@@ -51,6 +64,8 @@ void TextDocumentItem::setTextVersion(const nlohmann::json &jsonRPC)
     m_version = jsonRPC["version"];
 }
 
+
+////////////////////////////////////////////////////////////
 void TextDocumentItem::setText(const nlohmann::json &jsonRPC)
 {
     auto it = jsonRPC.find("text");

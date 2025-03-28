@@ -1,14 +1,23 @@
+////////////////////////////////////////////////////////////
+// Headers
+////////////////////////////////////////////////////////////
+
 #include "DidOpenTextDocumentParams.h"
 
 #include "../Utils/Logger.h"
 
 namespace ls6502
 {
+
+
+////////////////////////////////////////////////////////////
 DidOpenTextDocumentParams::DidOpenTextDocumentParams(const nlohmann::json &jsonRPC)
 {
     setTextDocumentItemKind(jsonRPC);
 }
 
+
+////////////////////////////////////////////////////////////
 void DidOpenTextDocumentParams::setTextDocumentItemKind(const nlohmann::json &jsonRPC)
 {
     auto it = jsonRPC.find("textDocument");

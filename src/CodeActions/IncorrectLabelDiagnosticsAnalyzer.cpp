@@ -1,7 +1,14 @@
+////////////////////////////////////////////////////////////
+// Headers
+////////////////////////////////////////////////////////////
+
 #include "IncorrectLabelDiagnosticsAnalyzer.h"
 
 namespace ls6502
 {
+
+
+////////////////////////////////////////////////////////////
 std::vector<CodeAction> IncorrectLabelDiagnosticsAnalyzer::provideCodeActions(const Diagnostic &diagnostic,
                                                                               const std::string &document,
                                                                               const std::string &URI)
@@ -21,6 +28,8 @@ std::vector<CodeAction> IncorrectLabelDiagnosticsAnalyzer::provideCodeActions(co
     return m_codeActions;
 }
 
+
+////////////////////////////////////////////////////////////
 CodeAction IncorrectLabelDiagnosticsAnalyzer::createCodeAction(const WorkspaceEdit &workspaceEdit)
 {
     return CodeAction::Builder()

@@ -1,3 +1,7 @@
+////////////////////////////////////////////////////////////
+// Headers
+////////////////////////////////////////////////////////////
+
 #include "RequestMessage.h"
 
 #include "../Utils/Logger.h"
@@ -8,12 +12,16 @@
 namespace ls6502
 {
 
+
+////////////////////////////////////////////////////////////
 RequestMessage::RequestMessage(const nlohmann::json &jsonRPC) : Message("2.0")
 {
     setId(jsonRPC);
     setMethod(jsonRPC);
 }
 
+
+////////////////////////////////////////////////////////////
 void RequestMessage::setId(const nlohmann::json &jsonRPC)
 {
     auto it = jsonRPC.find("id");
@@ -27,6 +35,8 @@ void RequestMessage::setId(const nlohmann::json &jsonRPC)
     m_id = jsonRPC["id"];
 }
 
+
+////////////////////////////////////////////////////////////
 void RequestMessage::setMethod(const nlohmann::json &jsonRPC)
 {
     auto it = jsonRPC.find("method");

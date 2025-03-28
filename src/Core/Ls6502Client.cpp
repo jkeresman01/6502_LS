@@ -1,3 +1,7 @@
+////////////////////////////////////////////////////////////
+// Headers
+////////////////////////////////////////////////////////////
+
 #include "Ls6502Client.h"
 
 #include <memory>
@@ -7,6 +11,8 @@
 namespace ls6502
 {
 
+
+////////////////////////////////////////////////////////////
 Ls6502Client::Ls6502Client(const ClientInfo &clientInfo,
                            const std::shared_ptr<ClientCapabilities> &clientCapabilites)
 {
@@ -14,16 +20,22 @@ Ls6502Client::Ls6502Client(const ClientInfo &clientInfo,
     registerCapabilites(clientCapabilites);
 }
 
+
+////////////////////////////////////////////////////////////
 void Ls6502Client::saveInfo(const ClientInfo &clientInfo)
 {
     m_clientInfo = clientInfo;
 }
 
+
+////////////////////////////////////////////////////////////
 void Ls6502Client::registerCapabilites(const std::shared_ptr<ClientCapabilities> &clientCapabilites)
 {
     m_clientCapabilities = clientCapabilites;
 }
 
+
+////////////////////////////////////////////////////////////
 void Ls6502Client::addDocument(const std::string &URI, const std::string &document)
 {
     m_documentsByURI.emplace(URI, document);
@@ -32,6 +44,8 @@ void Ls6502Client::addDocument(const std::string &URI, const std::string &docume
                       m_clientInfo.toString().c_str()));
 }
 
+
+////////////////////////////////////////////////////////////
 std::string Ls6502Client::getDocumentByURI(const std::string &URI) const
 {
     DocumentsMapT::const_iterator it = m_documentsByURI.find(URI);
@@ -45,6 +59,8 @@ std::string Ls6502Client::getDocumentByURI(const std::string &URI) const
     return it->second;
 }
 
+
+////////////////////////////////////////////////////////////
 void Ls6502Client::updateDocumentWithURI(const std::string &URI, const std::string &document)
 {
     m_documentsByURI[URI] = document;

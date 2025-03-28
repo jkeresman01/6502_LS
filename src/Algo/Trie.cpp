@@ -1,9 +1,15 @@
+////////////////////////////////////////////////////////////
+// Headers
+////////////////////////////////////////////////////////////
+
 #include "Trie.h"
 
 #include <memory>
 
 namespace ls6502
 {
+
+////////////////////////////////////////////////////////////
 void Trie::insert(const std::string &word)
 {
     std::shared_ptr<Node> current = m_root;
@@ -17,6 +23,8 @@ void Trie::insert(const std::string &word)
     current->isLeaf = true;
 }
 
+
+////////////////////////////////////////////////////////////
 std::vector<std::string> Trie::getCompletionWords(const std::string &prefix) const
 {
     std::vector<std::string> completionOptions;
@@ -30,6 +38,8 @@ std::vector<std::string> Trie::getCompletionWords(const std::string &prefix) con
     return completionOptions;
 }
 
+
+////////////////////////////////////////////////////////////
 std::shared_ptr<Node> Trie::getNode(const std::string &prefix) const
 {
     std::shared_ptr<Node> current = m_root;
@@ -47,6 +57,8 @@ std::shared_ptr<Node> Trie::getNode(const std::string &prefix) const
     return current;
 }
 
+
+////////////////////////////////////////////////////////////
 void Trie::findAllWords(std::shared_ptr<Node> node, const std::string &prefix,
                         std::vector<std::string> &results) const
 {

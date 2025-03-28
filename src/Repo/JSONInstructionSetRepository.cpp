@@ -1,8 +1,15 @@
+////////////////////////////////////////////////////////////
+// Headers
+////////////////////////////////////////////////////////////
+
 #include "JSONInstructionSetRepository.h"
 #include "../Utils/Logger.h"
 
 namespace ls6502
 {
+
+
+////////////////////////////////////////////////////////////
 InstructionSetMapT JSONInstructionSetRepository::load()
 {
     std::ifstream instructionSetFile(INSTRUCTION_SET_FILE_PATH);
@@ -20,6 +27,8 @@ InstructionSetMapT JSONInstructionSetRepository::load()
     return m_instructionSet;
 }
 
+
+////////////////////////////////////////////////////////////
 void JSONInstructionSetRepository::load(std::ifstream &in)
 {
     nlohmann::json jsonData;
@@ -38,6 +47,8 @@ void JSONInstructionSetRepository::load(std::ifstream &in)
     }
 }
 
+
+////////////////////////////////////////////////////////////
 void JSONInstructionSetRepository::loadInstructionSet(const nlohmann::json &jsonData)
 {
     for (const auto &jsonInstruction : jsonData["instructions"])
@@ -72,6 +83,8 @@ void JSONInstructionSetRepository::loadInstructionSet(const nlohmann::json &json
     }
 }
 
+
+////////////////////////////////////////////////////////////
 void JSONInstructionSetRepository::loadMnemonic(const nlohmann::json &jsonData, Instruction &instruction)
 {
     if (jsonData.contains("mnemonic"))
@@ -84,6 +97,8 @@ void JSONInstructionSetRepository::loadMnemonic(const nlohmann::json &jsonData, 
     }
 }
 
+
+////////////////////////////////////////////////////////////
 void JSONInstructionSetRepository::loadDescription(const nlohmann::json &jsonData, Instruction &instruction)
 {
     if (jsonData.contains("description"))
@@ -97,6 +112,8 @@ void JSONInstructionSetRepository::loadDescription(const nlohmann::json &jsonDat
     }
 }
 
+
+////////////////////////////////////////////////////////////
 void JSONInstructionSetRepository::loadOperation(const nlohmann::json &jsonData, Instruction &instruction)
 {
     if (jsonData.contains("operation"))
@@ -109,6 +126,8 @@ void JSONInstructionSetRepository::loadOperation(const nlohmann::json &jsonData,
     }
 }
 
+
+////////////////////////////////////////////////////////////
 void JSONInstructionSetRepository::loadFlags(const nlohmann::json &jsonData, Instruction &instruction)
 {
     bool isValidJSONFormat = jsonData.contains("flags") && jsonData["flags"].is_object();
@@ -133,6 +152,8 @@ void JSONInstructionSetRepository::loadFlags(const nlohmann::json &jsonData, Ins
     }
 }
 
+
+////////////////////////////////////////////////////////////
 void JSONInstructionSetRepository::loadAddressingMode(const nlohmann::json &jsonData,
                                                       AddressingMode &addressingMode)
 {
@@ -145,6 +166,8 @@ void JSONInstructionSetRepository::loadAddressingMode(const nlohmann::json &json
     addressingMode.hasExtraCycle = jsonData.value("extra_cycle", false);
 }
 
+
+////////////////////////////////////////////////////////////
 void JSONInstructionSetRepository::loadMode(const nlohmann::json &jsonData, AddressingMode &addressingMode)
 {
     if (jsonData.contains("mode"))
@@ -158,6 +181,8 @@ void JSONInstructionSetRepository::loadMode(const nlohmann::json &jsonData, Addr
     }
 }
 
+
+////////////////////////////////////////////////////////////
 void JSONInstructionSetRepository::loadAssembler(const nlohmann::json &jsonData,
                                                  AddressingMode &addressingMode)
 {
@@ -172,6 +197,8 @@ void JSONInstructionSetRepository::loadAssembler(const nlohmann::json &jsonData,
     }
 }
 
+
+////////////////////////////////////////////////////////////
 void JSONInstructionSetRepository::loadOpcode(const nlohmann::json &jsonData, AddressingMode &addressingMode)
 {
     if (jsonData.contains("opcode"))
@@ -185,6 +212,8 @@ void JSONInstructionSetRepository::loadOpcode(const nlohmann::json &jsonData, Ad
     }
 }
 
+
+////////////////////////////////////////////////////////////
 void JSONInstructionSetRepository::loadBytes(const nlohmann::json &jsonData, AddressingMode &addressingMode)
 {
     if (jsonData.contains("bytes"))
@@ -198,6 +227,8 @@ void JSONInstructionSetRepository::loadBytes(const nlohmann::json &jsonData, Add
     }
 }
 
+
+////////////////////////////////////////////////////////////
 void JSONInstructionSetRepository::loadCycles(const nlohmann::json &jsonData, AddressingMode &addressingMode)
 {
     if (jsonData.contains("cycles"))

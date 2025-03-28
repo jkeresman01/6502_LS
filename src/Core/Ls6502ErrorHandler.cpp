@@ -1,3 +1,6 @@
+////////////////////////////////////////////////////////////
+// Headers
+////////////////////////////////////////////////////////////
 #include "Ls6502ErrorHandler.h"
 
 #include "../Messages/Response/ResponseMessage.h"
@@ -8,6 +11,8 @@
 namespace ls6502
 {
 
+
+////////////////////////////////////////////////////////////
 void Ls6502ErrorHandler::handleServerNotInitalizedError(int64_t id)
 {
     LS_6502_DEBUG("Handling server not initialized error");
@@ -19,6 +24,8 @@ void Ls6502ErrorHandler::handleServerNotInitalizedError(int64_t id)
     handleError(serverNotInitializedError, id);
 }
 
+
+////////////////////////////////////////////////////////////
 void Ls6502ErrorHandler::handleParseError(int64_t id)
 {
     LS_6502_DEBUG("Handling parse error");
@@ -30,6 +37,8 @@ void Ls6502ErrorHandler::handleParseError(int64_t id)
     handleError(parseError, id);
 }
 
+
+////////////////////////////////////////////////////////////
 void Ls6502ErrorHandler::handleMethodNotFoundError(int64_t id)
 {
     LS_6502_DEBUG("Handling method not found error");
@@ -41,6 +50,8 @@ void Ls6502ErrorHandler::handleMethodNotFoundError(int64_t id)
     handleError(methodNotFoundError, id);
 }
 
+
+////////////////////////////////////////////////////////////
 void Ls6502ErrorHandler::handleInternalError(int64_t id)
 {
     LS_6502_DEBUG("Handling internal server error");
@@ -52,6 +63,8 @@ void Ls6502ErrorHandler::handleInternalError(int64_t id)
     handleError(internalServerError, id);
 }
 
+
+////////////////////////////////////////////////////////////
 void Ls6502ErrorHandler::handleReceivedReqAfterShutdownError(int64_t id)
 {
     LS_6502_DEBUG("Handling invalid request error");
@@ -63,6 +76,8 @@ void Ls6502ErrorHandler::handleReceivedReqAfterShutdownError(int64_t id)
     handleError(invalidRequestError, id);
 }
 
+
+////////////////////////////////////////////////////////////
 void Ls6502ErrorHandler::handleError(const ResponseError &responseError, int64_t id)
 {
     LS_6502_DEBUG(STR("Sending response error: %s", responseError.toString().c_str()));

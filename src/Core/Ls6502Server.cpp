@@ -1,3 +1,7 @@
+////////////////////////////////////////////////////////////
+// Headers
+////////////////////////////////////////////////////////////
+
 #include "Ls6502Server.h"
 
 #include <memory>
@@ -12,18 +16,24 @@
 namespace ls6502
 {
 
+
+////////////////////////////////////////////////////////////
 void Ls6502Server::init()
 {
-    ConfigurationManager::getInstance()->load();
-
     LS_6502_DEBUG("Initializing Ls6502 server");
+
+    ConfigurationManager::getInstance()->load();
 }
 
+
+////////////////////////////////////////////////////////////
 void Ls6502Server::shutdown()
 {
     LS_6502_DEBUG("Successful shutdown of Ls6502 server");
 }
 
+
+////////////////////////////////////////////////////////////
 void Ls6502Server::run()
 {
     LS_6502_DEBUG("Ls6502 server successfully started");
@@ -34,6 +44,8 @@ void Ls6502Server::run()
     }
 }
 
+
+////////////////////////////////////////////////////////////
 void Ls6502Server::handleRequest(const std::string &request)
 {
     nlohmann::json jsonRPC = MessageUtil::tryParse(request);

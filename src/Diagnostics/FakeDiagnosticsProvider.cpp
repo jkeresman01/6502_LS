@@ -1,18 +1,28 @@
+////////////////////////////////////////////////////////////
+// Headers
+////////////////////////////////////////////////////////////
+
 #include "FakeDiagnosticsProvider.h"
 
 namespace ls6502
 {
 
+
+////////////////////////////////////////////////////////////
 FakeDiagnosticsProvider::FakeDiagnosticsProvider()
 {
     fillFakeDiagnostics();
 }
 
+
+////////////////////////////////////////////////////////////
 FakeDiagnosticsProvider::FakeDiagnosticsProvider(const std::vector<Diagnostic> &mockDiagnostics)
     : m_diagnostics(mockDiagnostics)
 {
 }
 
+
+////////////////////////////////////////////////////////////
 std::vector<Diagnostic> FakeDiagnosticsProvider::getDiagnostics(const std::string &document)
 {
     (void)document;
@@ -20,6 +30,8 @@ std::vector<Diagnostic> FakeDiagnosticsProvider::getDiagnostics(const std::strin
     return m_diagnostics;
 }
 
+
+////////////////////////////////////////////////////////////
 void FakeDiagnosticsProvider::fillFakeDiagnostics()
 {
     fillFakeHints();
@@ -28,6 +40,8 @@ void FakeDiagnosticsProvider::fillFakeDiagnostics()
     fillFakeInfo();
 }
 
+
+////////////////////////////////////////////////////////////
 void FakeDiagnosticsProvider::fillFakeErrors()
 {
     m_diagnostics.emplace_back(Range{10, 10}, DiagnosticSeverity::ERROR, typeid(*this).name(),
@@ -38,6 +52,8 @@ void FakeDiagnosticsProvider::fillFakeErrors()
                                "Third ERROR message");
 }
 
+
+////////////////////////////////////////////////////////////
 void FakeDiagnosticsProvider::fillFakeWarnings()
 {
     m_diagnostics.emplace_back(Range{40, 10}, DiagnosticSeverity::WARNING, typeid(*this).name(),
@@ -48,6 +64,8 @@ void FakeDiagnosticsProvider::fillFakeWarnings()
                                "Third WARNING message");
 }
 
+
+////////////////////////////////////////////////////////////
 void FakeDiagnosticsProvider::fillFakeHints()
 {
     m_diagnostics.emplace_back(Range{70, 10}, DiagnosticSeverity::HINT, typeid(*this).name(),
@@ -58,6 +76,8 @@ void FakeDiagnosticsProvider::fillFakeHints()
                                "Third HINT message");
 }
 
+
+////////////////////////////////////////////////////////////
 void FakeDiagnosticsProvider::fillFakeInfo()
 {
     m_diagnostics.emplace_back(Range{100, 10}, DiagnosticSeverity::INFORMATION, typeid(*this).name(),

@@ -1,9 +1,16 @@
+////////////////////////////////////////////////////////////
+// Headers
+////////////////////////////////////////////////////////////
+
 #include "CompletionParams.h"
 
 #include "../Utils/Logger.h"
 
 namespace ls6502
 {
+
+
+////////////////////////////////////////////////////////////
 CompletionParams::CompletionParams(const nlohmann::json &jsonRPC)
 {
     setCompletionContext(jsonRPC["context"]);
@@ -11,6 +18,8 @@ CompletionParams::CompletionParams(const nlohmann::json &jsonRPC)
     setTextDocumentIdentifier(jsonRPC["textDocument"]);
 }
 
+
+////////////////////////////////////////////////////////////
 void CompletionParams::setCompletionContext(const nlohmann::json &jsonRPC)
 {
     auto it = jsonRPC.find("triggerKind");
@@ -24,12 +33,16 @@ void CompletionParams::setCompletionContext(const nlohmann::json &jsonRPC)
     m_completionContext.completionTriggerKind = jsonRPC["triggerKind"];
 }
 
+
+////////////////////////////////////////////////////////////
 void CompletionParams::setPosition(const nlohmann::json &jsonRPC)
 {
     m_position.character = jsonRPC["character"];
     m_position.line = jsonRPC["line"];
 }
 
+
+////////////////////////////////////////////////////////////
 void CompletionParams::setTextDocumentIdentifier(const nlohmann::json &jsonRPC)
 {
     auto it = jsonRPC.find("uri");

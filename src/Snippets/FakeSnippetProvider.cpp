@@ -1,3 +1,7 @@
+////////////////////////////////////////////////////////////
+// Headers
+////////////////////////////////////////////////////////////
+
 #include "FakeSnippetProvider.h"
 
 #include "../Types/CompletionItem.h"
@@ -7,11 +11,15 @@
 namespace ls6502
 {
 
+
+////////////////////////////////////////////////////////////
 FakeSnippetsProvider::FakeSnippetsProvider()
 {
     fillFakeSnippets();
 }
 
+
+////////////////////////////////////////////////////////////
 std::vector<CompletionItem> FakeSnippetsProvider::getSnippets(const std::string &prefix)
 {
     (void)prefix;
@@ -19,6 +27,8 @@ std::vector<CompletionItem> FakeSnippetsProvider::getSnippets(const std::string 
     return m_snippets;
 }
 
+
+////////////////////////////////////////////////////////////
 void FakeSnippetsProvider::fillFakeSnippets()
 {
     m_snippets.emplace_back("snippet 1", CompletionItemKind::SNIPPET, "", "", "snippet 1 insert text");

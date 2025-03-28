@@ -1,3 +1,7 @@
+////////////////////////////////////////////////////////////
+// Headers
+////////////////////////////////////////////////////////////
+
 #include "DefinitionProvider.h"
 
 #include "../Utils/DefinitionUtil.h"
@@ -6,6 +10,8 @@
 
 namespace ls6502
 {
+
+////////////////////////////////////////////////////////////
 Location DefinitionProvider::provideDefinitionLocation(const std::string &document, const Position &position,
                                                        const std::string &URI)
 {
