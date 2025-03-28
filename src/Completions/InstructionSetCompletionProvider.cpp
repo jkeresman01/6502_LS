@@ -59,7 +59,7 @@ void InstructionSetCompletionProvider::fillCompletionsForInstruction(const std::
         return;
     }
 
-    Instruction foundInstruction = it->second;
+    const Instruction &foundInstruction = it->second;
     createCompletionsForAllAddressingModes(foundInstruction);
 }
 
