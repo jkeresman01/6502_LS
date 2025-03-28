@@ -40,6 +40,14 @@ class FakeCompletionProvider : public ICompletionProvider
     ///
     //////////////////////////////////////////////////////////////
     void fillFakeComletions(std::vector<CompletionItem> &completions);
+
+  private:
+    //////////////////////////////////////////////////////////////
+    ///
+    /// @brief Number of fake completion items that will be provided
+    ///
+    //////////////////////////////////////////////////////////////
+    static constexpr uint32_t FAKE_COMPLETION_ITEMS_NO = 3;
 };
 
 } // namespace ls6502

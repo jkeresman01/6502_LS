@@ -13,7 +13,7 @@ std::vector<CompletionItem> FakeCompletionProvider::getCompletions(const std::st
     (void)document;
     (void)position;
 
-    std::vector<CompletionItem> completions;
+    std::vector<CompletionItem> completions(FAKE_COMPLETION_ITEMS_NO);
     fillFakeComletions(completions);
     return completions;
 }
