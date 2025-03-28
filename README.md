@@ -34,7 +34,7 @@ A language server is a tool that provides language-specific features like auto-c
 
 For more information visit official microsofts documentation.
 
-### Completions [intelisense]  ###
+### Completions  ###
 
 [![asciicast](https://asciinema.org/a/Vpxr4wl0QqZ83fRqBJO7xGunM.svg)](https://asciinema.org/a/Vpxr4wl0QqZ83fRqBJO7xGunM)
 
