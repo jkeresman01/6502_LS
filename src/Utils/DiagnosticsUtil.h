@@ -67,16 +67,22 @@ class DiagnosticsUtil
 /// Implementation of inline defined functions
 /////////////////////////////////////////////////////////////////////
 
+
+////////////////////////////////////////////////////////////
 bool inline DiagnosticsUtil::isLabelMissingSemicolon(const Diagnostic &diagnostic)
 {
     return diagnostic.getMessage().find("Label missing ':'") != std::string::npos;
 }
 
+
+////////////////////////////////////////////////////////////
 bool inline DiagnosticsUtil::isInstructionUnsupproted(const Diagnostic &diagnostic)
 {
     return diagnostic.getMessage().find("Unsupported instruction") != std::string::npos;
 }
 
+
+////////////////////////////////////////////////////////////
 bool inline DiagnosticsUtil::isInstructionUsageIncorrect(const Diagnostic &diagnostic)
 {
     return diagnostic.getMessage().find("Incorrect instruction usage") != std::string::npos;
