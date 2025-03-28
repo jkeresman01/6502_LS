@@ -11,7 +11,6 @@
 namespace ls6502
 {
 
-
 ////////////////////////////////////////////////////////////
 std::vector<CompletionItem> FakeCompletionProvider::getCompletions(const std::string &document,
                                                                    const Position &position)
@@ -23,7 +22,6 @@ std::vector<CompletionItem> FakeCompletionProvider::getCompletions(const std::st
     fillFakeComletions(completions);
     return completions;
 }
-
 
 ////////////////////////////////////////////////////////////
 void FakeCompletionProvider::fillFakeComletions(std::vector<CompletionItem> &completions)

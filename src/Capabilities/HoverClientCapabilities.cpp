@@ -7,7 +7,6 @@
 namespace ls6502
 {
 
-
 //////////////////////////////////////////////////////////////
 HoverClientCapabilities::HoverClientCapabilities(const nlohmann::json &jsonRPC)
     : m_isDynamicRegistrationSupported(false)

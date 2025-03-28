@@ -11,14 +11,12 @@ namespace ls6502
 class Ls6502ErrorDirector
 {
   public:
-
     ////////////////////////////////////////////////////////////
     static void buildServerNotInitializedError(ResponseError::Builder &responseErrorBuilder)
     {
         responseErrorBuilder.withErrorCode(ErrorCodes::SERVER_NOT_INITIALIZED)
             .withErrorMessage("Received request before initiliazition request was send!");
     }
-
 
     ////////////////////////////////////////////////////////////
     static void buildParseError(ResponseError::Builder &responseErrorBuilder)
@@ -27,7 +25,6 @@ class Ls6502ErrorDirector
             .withErrorMessage("Parsing error happened, while processing request!");
     }
 
-
     ////////////////////////////////////////////////////////////
     static void buildMethodNotFoundError(ResponseError::Builder &responseErrorBuilder)
     {
@@ -35,14 +32,12 @@ class Ls6502ErrorDirector
             .withErrorMessage("Didn't find method for given request");
     }
 
-
     ////////////////////////////////////////////////////////////
     static void buildInternalServerError(ResponseError::Builder &responseErrorBuilder)
     {
         responseErrorBuilder.withErrorCode(ErrorCodes::INTERNAL_ERROR)
             .withErrorMessage("Internal error happened");
     }
-
 
     ////////////////////////////////////////////////////////////
     static void buildRequestReceivedAfterShutdownError(ResponseError::Builder &responseErrorBuilder)

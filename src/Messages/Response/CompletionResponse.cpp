@@ -7,7 +7,6 @@
 namespace ls6502
 {
 
-
 ////////////////////////////////////////////////////////////
 CompletionResponse::CompletionResponse(const std::string &jsonRPC, int64_t &id,
                                        const CompletionResult &completionResult)
@@ -15,13 +14,11 @@ CompletionResponse::CompletionResponse(const std::string &jsonRPC, int64_t &id,
 {
 }
 
-
 ////////////////////////////////////////////////////////////
 nlohmann::json CompletionResponse::toJson() const
 {
     return {{"jsonrpc", m_jsonRPC}, {"id", m_id}, {"result", m_completionResult.toJson()}};
 }
-
 
 ////////////////////////////////////////////////////////////
 std::ostream &operator<<(std::ostream &os, const CompletionResponse &comletionResponse)

@@ -11,7 +11,6 @@
 namespace ls6502
 {
 
-
 ////////////////////////////////////////////////////////////
 Ls6502Client::Ls6502Client(const ClientInfo &clientInfo,
                            const std::shared_ptr<ClientCapabilities> &clientCapabilites)
@@ -20,20 +19,17 @@ Ls6502Client::Ls6502Client(const ClientInfo &clientInfo,
     registerCapabilites(clientCapabilites);
 }
 
-
 ////////////////////////////////////////////////////////////
 void Ls6502Client::saveInfo(const ClientInfo &clientInfo)
 {
     m_clientInfo = clientInfo;
 }
 
-
 ////////////////////////////////////////////////////////////
 void Ls6502Client::registerCapabilites(const std::shared_ptr<ClientCapabilities> &clientCapabilites)
 {
     m_clientCapabilities = clientCapabilites;
 }
-
 
 ////////////////////////////////////////////////////////////
 void Ls6502Client::addDocument(const std::string &URI, const std::string &document)
@@ -43,7 +39,6 @@ void Ls6502Client::addDocument(const std::string &URI, const std::string &docume
     LS_6502_DEBUG(STR("Added text document with URI: %s, for client: %s", URI.c_str(),
                       m_clientInfo.toString().c_str()));
 }
-
 
 ////////////////////////////////////////////////////////////
 std::string Ls6502Client::getDocumentByURI(const std::string &URI) const
@@ -58,7 +53,6 @@ std::string Ls6502Client::getDocumentByURI(const std::string &URI) const
 
     return it->second;
 }
-
 
 ////////////////////////////////////////////////////////////
 void Ls6502Client::updateDocumentWithURI(const std::string &URI, const std::string &document)

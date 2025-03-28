@@ -16,7 +16,6 @@ DidOpenTextDocumentRequest::DidOpenTextDocumentRequest(const nlohmann::json &jso
     setParams(jsonRPC);
 }
 
-
 ////////////////////////////////////////////////////////////
 void DidOpenTextDocumentRequest::setParams(const nlohmann::json &jsonRPC)
 {

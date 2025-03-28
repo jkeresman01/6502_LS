@@ -9,13 +9,11 @@
 namespace ls6502
 {
 
-
 ////////////////////////////////////////////////////////////
 CompletionRequest::CompletionRequest(const nlohmann::json &jsonRPC) : RequestMessage(jsonRPC)
 {
     setParams(jsonRPC);
 }
-
 
 ////////////////////////////////////////////////////////////
 void CompletionRequest::setParams(const nlohmann::json &jsonRPC)

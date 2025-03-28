@@ -8,16 +8,13 @@
 namespace ls6502
 {
 
-
 ////////////////////////////////////////////////////////////
 ResponseMessage::ResponseMessage(const std::string &jsonRpc, int64_t id) : Message(jsonRpc), m_id(id){};
-
 
 ////////////////////////////////////////////////////////////
 ResponseMessage::ResponseMessage(const std::string &jsonRpc, const int64_t id,
                                  const ResponseError &responseError)
     : Message(jsonRpc), m_id(id), m_responseError(responseError){};
-
 
 ////////////////////////////////////////////////////////////
 nlohmann::json ResponseMessage::toJson() const
@@ -31,7 +28,6 @@ nlohmann::json ResponseMessage::toJson() const
 
     return result;
 }
-
 
 ////////////////////////////////////////////////////////////
 std::ostream &operator<<(std::ostream &os, const ResponseMessage &responseMessage)

@@ -12,7 +12,6 @@
 namespace ls6502
 {
 
-
 ////////////////////////////////////////////////////////////
 AddressingModes AddressingModeUtil::stringToAddressingMode(const std::string &addressingMode)
 {
@@ -31,7 +30,6 @@ AddressingModes AddressingModeUtil::stringToAddressingMode(const std::string &ad
 
     return it->second;
 }
-
 
 ////////////////////////////////////////////////////////////
 const char *AddressingModeUtil::addressingModeToString(const AddressingModes addressingMode)

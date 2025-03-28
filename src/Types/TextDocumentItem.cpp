@@ -9,7 +9,6 @@
 namespace ls6502
 {
 
-
 ////////////////////////////////////////////////////////////
 TextDocumentItem::TextDocumentItem(const nlohmann::json &jsonRPC)
 {
@@ -18,7 +17,6 @@ TextDocumentItem::TextDocumentItem(const nlohmann::json &jsonRPC)
     setTextVersion(jsonRPC);
     setText(jsonRPC);
 }
-
 
 ////////////////////////////////////////////////////////////
 void TextDocumentItem::setURI(const nlohmann::json &jsonRPC)
@@ -34,7 +32,6 @@ void TextDocumentItem::setURI(const nlohmann::json &jsonRPC)
     m_URI = jsonRPC["uri"];
 }
 
-
 ////////////////////////////////////////////////////////////
 void TextDocumentItem::setLanguageId(const nlohmann::json &jsonRPC)
 {
@@ -49,7 +46,6 @@ void TextDocumentItem::setLanguageId(const nlohmann::json &jsonRPC)
     m_languageId = jsonRPC["languageId"];
 }
 
-
 ////////////////////////////////////////////////////////////
 void TextDocumentItem::setTextVersion(const nlohmann::json &jsonRPC)
 {
@@ -63,7 +59,6 @@ void TextDocumentItem::setTextVersion(const nlohmann::json &jsonRPC)
 
     m_version = jsonRPC["version"];
 }
-
 
 ////////////////////////////////////////////////////////////
 void TextDocumentItem::setText(const nlohmann::json &jsonRPC)

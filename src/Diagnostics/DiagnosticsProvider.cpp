@@ -18,13 +18,11 @@
 namespace ls6502
 {
 
-
 ////////////////////////////////////////////////////////////
 DiagnosticsProvider::DiagnosticsProvider() : m_instructionSetRepository(InstructionSetRepoFactory::create())
 {
     m_instructionSet = m_instructionSetRepository->load();
 }
-
 
 ////////////////////////////////////////////////////////////
 std::vector<Diagnostic> DiagnosticsProvider::getDiagnostics(const std::string &document)
@@ -43,7 +41,6 @@ std::vector<Diagnostic> DiagnosticsProvider::getDiagnostics(const std::string &d
     return m_diagnostics;
 }
 
-
 ////////////////////////////////////////////////////////////
 void DiagnosticsProvider::checkMalformedLabel(const std::string &line, size_t lineNumber)
 {
@@ -61,7 +58,6 @@ void DiagnosticsProvider::checkMalformedLabel(const std::string &line, size_t li
                                    typeid(*this).name(), "Label missing ':' at end");
     }
 }
-
 
 ////////////////////////////////////////////////////////////
 void DiagnosticsProvider::checkUnsupportedInstructions(const std::string &line, size_t lineNumber)
@@ -84,7 +80,6 @@ void DiagnosticsProvider::checkUnsupportedInstructions(const std::string &line, 
                                    "Unsupported instruction: " + mnemonic);
     }
 }
-
 
 ////////////////////////////////////////////////////////////
 void DiagnosticsProvider::checkGeneralSyntaxErrors(const std::string &line, size_t lineNumber)

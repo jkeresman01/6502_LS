@@ -9,13 +9,11 @@
 namespace ls6502
 {
 
-
 ////////////////////////////////////////////////////////////
 DidOpenTextDocumentParams::DidOpenTextDocumentParams(const nlohmann::json &jsonRPC)
 {
     setTextDocumentItemKind(jsonRPC);
 }
-
 
 ////////////////////////////////////////////////////////////
 void DidOpenTextDocumentParams::setTextDocumentItemKind(const nlohmann::json &jsonRPC)

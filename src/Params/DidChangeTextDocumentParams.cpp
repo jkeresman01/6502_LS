@@ -9,14 +9,12 @@
 namespace ls6502
 {
 
-
 ////////////////////////////////////////////////////////////
 DidChangeTextDocumentParams::DidChangeTextDocumentParams(const nlohmann::json &jsonRPC)
 {
     setTextDocumentIdentifier(jsonRPC["textDocument"]);
     setContentChanges(jsonRPC["contentChanges"][0]);
 }
-
 
 ////////////////////////////////////////////////////////////
 void DidChangeTextDocumentParams::setTextDocumentIdentifier(const nlohmann::json &jsonRPC)
@@ -31,7 +29,6 @@ void DidChangeTextDocumentParams::setTextDocumentIdentifier(const nlohmann::json
 
     m_textDocument.URI = jsonRPC["uri"];
 }
-
 
 ////////////////////////////////////////////////////////////
 void DidChangeTextDocumentParams::setContentChanges(const nlohmann::json &jsonRPC)

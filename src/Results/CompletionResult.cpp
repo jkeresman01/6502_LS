@@ -11,13 +11,11 @@
 namespace ls6502
 {
 
-
 ////////////////////////////////////////////////////////////
 CompletionResult::CompletionResult(const std::vector<CompletionItem> &completionItems)
     : m_completionItems(completionItems)
 {
 }
-
 
 ////////////////////////////////////////////////////////////
 nlohmann::json CompletionResult::toJson() const

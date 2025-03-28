@@ -7,7 +7,6 @@
 namespace ls6502
 {
 
-
 ////////////////////////////////////////////////////////////
 CodeActionResponse::CodeActionResponse(const std::string &jsonRPC, const int64_t id,
                                        const CodeActionResult &codeActionResult)
@@ -15,13 +14,11 @@ CodeActionResponse::CodeActionResponse(const std::string &jsonRPC, const int64_t
 {
 }
 
-
 ////////////////////////////////////////////////////////////
 nlohmann::json CodeActionResponse::toJson() const
 {
     return {{"jsonrpc", m_jsonRPC}, {"id", m_id}, {"result", m_codeActionResult.toJson()}};
 }
-
 
 ////////////////////////////////////////////////////////////
 std::ostream &operator<<(std::ostream &os, const CodeActionResponse &codeActionResponse)

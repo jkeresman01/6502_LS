@@ -14,7 +14,6 @@
 namespace ls6502
 {
 
-
 ////////////////////////////////////////////////////////////
 std::vector<CodeAction> FakeCodeActionsProvider::getCodeActions(const std::string &document,
                                                                 const std::string &URI)
@@ -25,7 +24,6 @@ std::vector<CodeAction> FakeCodeActionsProvider::getCodeActions(const std::strin
     fillFakeCodeActions(codeActions, URI);
     return codeActions;
 }
-
 
 ////////////////////////////////////////////////////////////
 void FakeCodeActionsProvider::fillFakeCodeActions(std::vector<CodeAction> &codeActions,
@@ -40,7 +38,6 @@ void FakeCodeActionsProvider::fillFakeCodeActions(std::vector<CodeAction> &codeA
     codeActions[1] = createFakeCodeAction(workspaceEdit, "Fake code action 2");
     codeActions[2] = createFakeCodeAction(workspaceEdit, "Fake code action 3");
 }
-
 
 ////////////////////////////////////////////////////////////
 CodeAction FakeCodeActionsProvider::createFakeCodeAction(const WorkspaceEdit &workspaceEdit,

@@ -9,13 +9,11 @@
 namespace ls6502
 {
 
-
 ////////////////////////////////////////////////////////////
 void WorkspaceEdit::addChange(const std::pair<std::string, std::vector<TextEdit>> &textEdit)
 {
     m_changes.insert(textEdit);
 }
-
 
 ////////////////////////////////////////////////////////////
 nlohmann::json WorkspaceEdit::toJson() const
@@ -36,7 +34,6 @@ nlohmann::json WorkspaceEdit::toJson() const
 
     return json;
 }
-
 
 ////////////////////////////////////////////////////////////
 std::string WorkspaceEdit::toString() const

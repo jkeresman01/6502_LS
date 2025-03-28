@@ -9,13 +9,11 @@
 namespace ls6502
 {
 
-
 ////////////////////////////////////////////////////////////
 DefintionRequest::DefintionRequest(const nlohmann::json &jsonRPC) : RequestMessage(jsonRPC)
 {
     setParams(jsonRPC);
 }
-
 
 ////////////////////////////////////////////////////////////
 void DefintionRequest::setParams(const nlohmann::json &jsonRPC)

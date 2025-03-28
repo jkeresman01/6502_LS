@@ -74,7 +74,6 @@ class XMLUtil
 /// Implementation of inline defined functions
 /////////////////////////////////////////////////////////////////////
 
-
 ////////////////////////////////////////////////////////////
 std::pair<std::string, std::string> inline XMLUtil::parseFromFileLine(const std::string &line)
 {
@@ -100,7 +99,6 @@ std::pair<std::string, std::string> inline XMLUtil::parseFromFileLine(const std:
     return property;
 }
 
-
 ////////////////////////////////////////////////////////////
 bool inline XMLUtil::isValidXMLLine(const std::string_view &line)
 {
@@ -109,7 +107,6 @@ bool inline XMLUtil::isValidXMLLine(const std::string_view &line)
 
     return hasCorrectStartPropertyTag and hasCorrectStartEndPropertyTag;
 }
-
 
 ////////////////////////////////////////////////////////////
 std::string inline XMLUtil::trim(const std::string &line)

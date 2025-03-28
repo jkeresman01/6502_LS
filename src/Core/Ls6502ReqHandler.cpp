@@ -40,7 +40,6 @@
 namespace ls6502
 {
 
-
 ////////////////////////////////////////////////////////////
 Ls6502ReqHandler::Ls6502ReqHandler()
     : m_diagnosticsProvider(DiagnosticsProviderFactory::create()),
@@ -50,7 +49,6 @@ Ls6502ReqHandler::Ls6502ReqHandler()
       m_codeActionsProvider(CodeActionsProviderFactory::create())
 {
 }
-
 
 ////////////////////////////////////////////////////////////
 void Ls6502ReqHandler::initializeReq(const std::shared_ptr<InitializeRequest> &initializeRequest)
@@ -80,7 +78,6 @@ void Ls6502ReqHandler::initializeReq(const std::shared_ptr<InitializeRequest> &i
         STR("Initialize response was successfully sent for client: %s", clientInfo.toString().c_str()));
 }
 
-
 ////////////////////////////////////////////////////////////
 void Ls6502ReqHandler::textDocumentDidOpenReq(
     const std::shared_ptr<DidOpenTextDocumentRequest> &didOpenTextDocumentReq)
@@ -109,7 +106,6 @@ void Ls6502ReqHandler::textDocumentDidOpenReq(
     LS_6502_DEBUG("Request with method: textDocument/didOpen was successfully processed");
 }
 
-
 ////////////////////////////////////////////////////////////
 void Ls6502ReqHandler::textDocumentDidChangeReq(
     const std::shared_ptr<DidChangeTextDocumentRequest> &didChangeTextDocumentReq)
@@ -136,7 +132,6 @@ void Ls6502ReqHandler::textDocumentDidChangeReq(
     LS_6502_DEBUG("Response successfully sent for textDocument/didChangerequest");
 }
 
-
 ////////////////////////////////////////////////////////////
 void Ls6502ReqHandler::textDocumentCompletionReq(const std::shared_ptr<CompletionRequest> &completionReq)
 {
@@ -161,7 +156,6 @@ void Ls6502ReqHandler::textDocumentCompletionReq(const std::shared_ptr<Completio
     LS_6502_DEBUG("Response successfully sent for textDocument/completion request");
 }
 
-
 ////////////////////////////////////////////////////////////
 void Ls6502ReqHandler::textDocumentHoverReq(const std::shared_ptr<HoverRequest> &hoverTextDocumentReq)
 {
@@ -184,7 +178,6 @@ void Ls6502ReqHandler::textDocumentHoverReq(const std::shared_ptr<HoverRequest> 
     Rpc::send(hoverResponse);
 }
 
-
 ////////////////////////////////////////////////////////////
 void Ls6502ReqHandler::textDocumentCodeActionReq(const std::shared_ptr<CodeActionRequest> &codeActionRequest)
 {
@@ -205,7 +198,6 @@ void Ls6502ReqHandler::textDocumentCodeActionReq(const std::shared_ptr<CodeActio
     Rpc::send(codeActionsResponse);
 }
 
-
 ////////////////////////////////////////////////////////////
 void Ls6502ReqHandler::textDocumentDefinitionReq(const std::shared_ptr<DefintionRequest> &defintionRequest)
 {
@@ -220,7 +212,6 @@ void Ls6502ReqHandler::textDocumentDefinitionReq(const std::shared_ptr<Defintion
 
     const Location &location = m_definitionProvider->provideDefinitionLocation(document, position, document);
 }
-
 
 ////////////////////////////////////////////////////////////
 void Ls6502ReqHandler::shutdownReq(const std::shared_ptr<ShutdownRequest> &shutdownRequest)

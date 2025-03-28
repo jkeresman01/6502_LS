@@ -11,7 +11,6 @@
 namespace ls6502
 {
 
-
 ////////////////////////////////////////////////////////////
 SnippetsMultimapT SnippetRepository::load()
 {
@@ -28,7 +27,6 @@ SnippetsMultimapT SnippetRepository::load()
 
     return m_snippets;
 }
-
 
 ////////////////////////////////////////////////////////////
 void SnippetRepository::load(std::ifstream &snippetsFile)

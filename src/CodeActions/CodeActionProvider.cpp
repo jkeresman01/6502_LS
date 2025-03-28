@@ -13,10 +13,8 @@
 namespace ls6502
 {
 
-
 ////////////////////////////////////////////////////////////
 CodeActionProvider::CodeActionProvider() : m_diagnosticsProvider(DiagnosticsProviderFactory::create()) {}
-
 
 ////////////////////////////////////////////////////////////
 void CodeActionProvider::setDiagnosticsProvider(
@@ -24,7 +22,6 @@ void CodeActionProvider::setDiagnosticsProvider(
 {
     m_diagnosticsProvider = diagnosticsProvider;
 };
-
 
 ////////////////////////////////////////////////////////////
 std::vector<CodeAction> CodeActionProvider::getCodeActions(const std::string &document,

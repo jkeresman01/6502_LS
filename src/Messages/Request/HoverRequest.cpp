@@ -9,13 +9,11 @@
 namespace ls6502
 {
 
-
 ////////////////////////////////////////////////////////////
 HoverRequest::HoverRequest(const nlohmann::json &jsonRPC) : RequestMessage(jsonRPC)
 {
     setParams(jsonRPC);
 }
-
 
 ////////////////////////////////////////////////////////////
 void HoverRequest::setParams(const nlohmann::json &jsonRPC)

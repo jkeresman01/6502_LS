@@ -13,7 +13,6 @@
 namespace ls6502
 {
 
-
 ////////////////////////////////////////////////////////////
 InstructionSetCompletionProvider::InstructionSetCompletionProvider()
     : m_instructionSetRepository(InstructionSetRepoFactory::create())
@@ -21,7 +20,6 @@ InstructionSetCompletionProvider::InstructionSetCompletionProvider()
     m_instructionSet = m_instructionSetRepository->load();
     loadInstructionSetTrie();
 }
-
 
 ////////////////////////////////////////////////////////////
 void InstructionSetCompletionProvider::loadInstructionSetTrie()
@@ -31,7 +29,6 @@ void InstructionSetCompletionProvider::loadInstructionSetTrie()
         m_instructionSetTrie->insert(mnemonic);
     }
 }
-
 
 ////////////////////////////////////////////////////////////
 std::vector<CompletionItem> InstructionSetCompletionProvider::getCompletions(const std::string &document,
@@ -45,7 +42,6 @@ std::vector<CompletionItem> InstructionSetCompletionProvider::getCompletions(con
 
     return mapInstructionsToCompletions(instructions);
 }
-
 
 ////////////////////////////////////////////////////////////
 std::vector<CompletionItem> InstructionSetCompletionProvider::mapInstructionsToCompletions(
@@ -62,7 +58,6 @@ std::vector<CompletionItem> InstructionSetCompletionProvider::mapInstructionsToC
     return m_completionItems;
 }
 
-
 ////////////////////////////////////////////////////////////
 void InstructionSetCompletionProvider::fillCompletionsForInstruction(const std::string &instruction)
 {
@@ -77,7 +72,6 @@ void InstructionSetCompletionProvider::fillCompletionsForInstruction(const std::
     const Instruction &foundInstruction = it->second;
     createCompletionsForAllAddressingModes(foundInstruction);
 }
-
 
 ////////////////////////////////////////////////////////////
 void InstructionSetCompletionProvider::createCompletionsForAllAddressingModes(const Instruction &instruction)

@@ -7,20 +7,17 @@
 namespace ls6502
 {
 
-
 ////////////////////////////////////////////////////////////
 FakeDiagnosticsProvider::FakeDiagnosticsProvider()
 {
     fillFakeDiagnostics();
 }
 
-
 ////////////////////////////////////////////////////////////
 FakeDiagnosticsProvider::FakeDiagnosticsProvider(const std::vector<Diagnostic> &mockDiagnostics)
     : m_diagnostics(mockDiagnostics)
 {
 }
-
 
 ////////////////////////////////////////////////////////////
 std::vector<Diagnostic> FakeDiagnosticsProvider::getDiagnostics(const std::string &document)
@@ -30,7 +27,6 @@ std::vector<Diagnostic> FakeDiagnosticsProvider::getDiagnostics(const std::strin
     return m_diagnostics;
 }
 
-
 ////////////////////////////////////////////////////////////
 void FakeDiagnosticsProvider::fillFakeDiagnostics()
 {
@@ -39,7 +35,6 @@ void FakeDiagnosticsProvider::fillFakeDiagnostics()
     fillFakeErrors();
     fillFakeInfo();
 }
-
 
 ////////////////////////////////////////////////////////////
 void FakeDiagnosticsProvider::fillFakeErrors()
@@ -52,7 +47,6 @@ void FakeDiagnosticsProvider::fillFakeErrors()
                                "Third ERROR message");
 }
 
-
 ////////////////////////////////////////////////////////////
 void FakeDiagnosticsProvider::fillFakeWarnings()
 {
@@ -64,7 +58,6 @@ void FakeDiagnosticsProvider::fillFakeWarnings()
                                "Third WARNING message");
 }
 
-
 ////////////////////////////////////////////////////////////
 void FakeDiagnosticsProvider::fillFakeHints()
 {
@@ -75,7 +68,6 @@ void FakeDiagnosticsProvider::fillFakeHints()
     m_diagnostics.emplace_back(Range{90, 10}, DiagnosticSeverity::HINT, typeid(*this).name(),
                                "Third HINT message");
 }
-
 
 ////////////////////////////////////////////////////////////
 void FakeDiagnosticsProvider::fillFakeInfo()

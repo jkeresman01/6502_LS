@@ -58,7 +58,6 @@ class MessageUtil
 /// Implementation of inline defined functions
 /////////////////////////////////////////////////////////////////////
 
-
 ////////////////////////////////////////////////////////////
 inline nlohmann::json MessageUtil::tryParse(const std::string &request)
 {
@@ -74,7 +73,6 @@ inline nlohmann::json MessageUtil::tryParse(const std::string &request)
 
     return jsonRequest;
 }
-
 
 ////////////////////////////////////////////////////////////
 inline RequestType MessageUtil::getMethod(const nlohmann::json &request)

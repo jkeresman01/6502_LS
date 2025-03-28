@@ -22,7 +22,7 @@ namespace ls6502
 //////////////////////////////////////////////////////////////
 class TextDocumentCapabilities
 {
-    // TODO add rest of the capabilities only sync and hover are 
+    // TODO add rest of the capabilities only sync and hover are
     // currently included
 
   public:

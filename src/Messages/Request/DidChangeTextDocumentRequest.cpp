@@ -9,14 +9,12 @@
 namespace ls6502
 {
 
-
 ////////////////////////////////////////////////////////////
 DidChangeTextDocumentRequest::DidChangeTextDocumentRequest(const nlohmann::json &jsonRPC)
     : NotificationMessage(jsonRPC)
 {
     setParams(jsonRPC);
 }
-
 
 ////////////////////////////////////////////////////////////
 void DidChangeTextDocumentRequest::setParams(const nlohmann::json &jsonRPC)

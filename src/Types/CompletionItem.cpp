@@ -7,13 +7,11 @@
 namespace ls6502
 {
 
-
 ////////////////////////////////////////////////////////////
 CompletionItem::CompletionItem(const std::string &label, const CompletionItemKind completionItemKind,
                                const std::string &detail, const std::string &documentation,
                                const std::string &insertedText)
     : m_label(label), m_detail(detail), m_documentation(documentation){};
-
 
 ////////////////////////////////////////////////////////////
 CompletionItem::Builder &CompletionItem::Builder::withLabel(const std::string &label)
@@ -22,14 +20,12 @@ CompletionItem::Builder &CompletionItem::Builder::withLabel(const std::string &l
     return *this;
 }
 
-
 ////////////////////////////////////////////////////////////
 CompletionItem::Builder &CompletionItem::Builder::withDetail(const std::string detail)
 {
     m_detail = detail;
     return *this;
 }
-
 
 ////////////////////////////////////////////////////////////
 CompletionItem::Builder &CompletionItem::Builder::withInsertedText(const std::string &insertedText)
@@ -38,14 +34,12 @@ CompletionItem::Builder &CompletionItem::Builder::withInsertedText(const std::st
     return *this;
 }
 
-
 ////////////////////////////////////////////////////////////
 CompletionItem::Builder &CompletionItem::Builder::withDocumentation(const std::string &documentation)
 {
     m_documentation = documentation;
     return *this;
 }
-
 
 ////////////////////////////////////////////////////////////
 CompletionItem::Builder &CompletionItem::Builder::withCompletionItemKind(
@@ -54,7 +48,6 @@ CompletionItem::Builder &CompletionItem::Builder::withCompletionItemKind(
     m_completionItemKind = completionItemKind;
     return *this;
 }
-
 
 ////////////////////////////////////////////////////////////
 nlohmann::json CompletionItem::toJson() const

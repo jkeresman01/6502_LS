@@ -53,14 +53,12 @@ class TimeUtil
 /// Implementation of inline defined functions
 /////////////////////////////////////////////////////////////////////
 
-
 ////////////////////////////////////////////////////////////
 inline std::time_t TimeUtil::now()
 {
     time_point<high_resolution_clock> currentTime = high_resolution_clock::now();
     return high_resolution_clock::to_time_t(currentTime);
 }
-
 
 ////////////////////////////////////////////////////////////
 inline std::ostream &TimeUtil::putTime(std::ostream &out, const std::time_t &time)

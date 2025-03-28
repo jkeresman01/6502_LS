@@ -11,14 +11,12 @@
 namespace ls6502
 {
 
-
 ////////////////////////////////////////////////////////////
 InitializeResponse::InitializeResponse(const std::string &jsonRPC, const int64_t &id,
                                        const InitializeResult &initializeResult)
     : ResponseMessage(jsonRPC, id), m_initializeResut(initializeResult)
 {
 }
-
 
 ////////////////////////////////////////////////////////////
 nlohmann::json InitializeResponse::toJson() const
@@ -29,7 +27,6 @@ nlohmann::json InitializeResponse::toJson() const
              {{"serverInfo", m_initializeResut.getServerInfo().toJson()},
               {"capabilities", m_initializeResut.getServerCapabilities().toJson()}}}};
 }
-
 
 ////////////////////////////////////////////////////////////
 std::string InitializeResponse::toString() const

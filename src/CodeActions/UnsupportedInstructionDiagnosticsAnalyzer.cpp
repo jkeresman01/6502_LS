@@ -13,7 +13,6 @@
 namespace ls6502
 {
 
-
 ////////////////////////////////////////////////////////////
 std::vector<CodeAction> UnsupportedInstructionDiagnosticsAnalyzer::provideCodeActions(
     const Diagnostic &diagnostic, const std::string &document, const std::string &URI)
@@ -34,7 +33,6 @@ std::vector<CodeAction> UnsupportedInstructionDiagnosticsAnalyzer::provideCodeAc
 
     return m_codeActions;
 }
-
 
 ////////////////////////////////////////////////////////////
 CodeAction UnsupportedInstructionDiagnosticsAnalyzer::createCodeAction(const WorkspaceEdit &workspaceEdit)

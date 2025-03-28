@@ -14,13 +14,11 @@ PublishDiagnosticsNoticifation::PublishDiagnosticsNoticifation(
 {
 }
 
-
 ////////////////////////////////////////////////////////////
 nlohmann::json PublishDiagnosticsNoticifation::toJson() const
 {
     return {{"jsonrpc", m_jsonRPC}, {"method", m_method}, {"params", m_diagnosticsParams->toJson()}};
 }
-
 
 ////////////////////////////////////////////////////////////
 std::ostream &operator<<(std::ostream &os,

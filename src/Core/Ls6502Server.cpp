@@ -16,7 +16,6 @@
 namespace ls6502
 {
 
-
 ////////////////////////////////////////////////////////////
 void Ls6502Server::init()
 {
@@ -25,13 +24,11 @@ void Ls6502Server::init()
     ConfigurationManager::getInstance()->load();
 }
 
-
 ////////////////////////////////////////////////////////////
 void Ls6502Server::shutdown()
 {
     LS_6502_DEBUG("Successful shutdown of Ls6502 server");
 }
-
 
 ////////////////////////////////////////////////////////////
 void Ls6502Server::run()
@@ -43,7 +40,6 @@ void Ls6502Server::run()
         handleRequest(Rpc::receive());
     }
 }
-
 
 ////////////////////////////////////////////////////////////
 void Ls6502Server::handleRequest(const std::string &request)

@@ -12,14 +12,12 @@
 namespace ls6502
 {
 
-
 ////////////////////////////////////////////////////////////
 InitializeParams::InitializeParams(const nlohmann::json &jsonInitializeParams)
 {
     setProccessId(jsonInitializeParams);
     setClientInfo(jsonInitializeParams);
 }
-
 
 ////////////////////////////////////////////////////////////
 void InitializeParams::setProccessId(const nlohmann::json &jsonRPC)
@@ -35,7 +33,6 @@ void InitializeParams::setProccessId(const nlohmann::json &jsonRPC)
     m_processId = jsonRPC["processId"];
 }
 
-
 ////////////////////////////////////////////////////////////
 void InitializeParams::setLocale(const nlohmann::json &jsonRPC)
 {
@@ -50,7 +47,6 @@ void InitializeParams::setLocale(const nlohmann::json &jsonRPC)
     m_locale = jsonRPC["locale"];
 }
 
-
 ////////////////////////////////////////////////////////////
 void InitializeParams::setClientInfo(const nlohmann::json &jsonRPC)
 {
@@ -59,7 +55,6 @@ void InitializeParams::setClientInfo(const nlohmann::json &jsonRPC)
     m_clientInfo.name = clientInfoJson["name"];
     m_clientInfo.version = clientInfoJson["version"];
 }
-
 
 ////////////////////////////////////////////////////////////
 void InitializeParams::setTraceLevel(const nlohmann::json &jsonRPC)

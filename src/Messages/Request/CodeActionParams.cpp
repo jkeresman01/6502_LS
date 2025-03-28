@@ -9,13 +9,11 @@
 namespace ls6502
 {
 
-
 ////////////////////////////////////////////////////////////
 CodeActionRequest::CodeActionRequest(const nlohmann::json &jsonRPC) : RequestMessage(jsonRPC)
 {
     setParams(jsonRPC);
 }
-
 
 ////////////////////////////////////////////////////////////
 void CodeActionRequest::setParams(const nlohmann::json &jsonRPC)
