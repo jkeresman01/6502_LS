@@ -4,30 +4,32 @@
 // Headers
 ////////////////////////////////////////////////////////////
 
-#include "IDefinitionProvider.h"
+#include "../../Types/Location.h"
+#include "../IDefinitionProvider.h"
 
 namespace ls6502
 {
 //////////////////////////////////////////////////////////////
 ///
-/// @class FakeDefinitionProvider
+/// @class DefinitionProvider
 ///
-/// @brief A mock implementation of IDefinitionProvider
-///         for testing or demonstration purposes.
+/// @brief Provides the location of a definition in the source code
+///        based on a given document and position.
 ///
 //////////////////////////////////////////////////////////////
-class FakeDefinitionProvider : public IDefinitionProvider
+class DefinitionProvider : public IDefinitionProvider
 {
   public:
     //////////////////////////////////////////////////////////////
     ///
-    /// @brief Provides a fake location of a definition
+    /// @brief Provides the location of a definition
     ///
     /// @param [in] document
     /// @param [in] position
     /// @param [in] URI
     ///
-    /// @return A fake location of the definition
+    /// @return The location of the definition, including
+    ///         line and column information.
     ///
     //////////////////////////////////////////////////////////////
     virtual Location provideDefinitionLocation(const std::string &document, const Position &position,

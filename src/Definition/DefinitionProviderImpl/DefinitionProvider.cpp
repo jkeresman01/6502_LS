@@ -2,11 +2,11 @@
 // Headers
 ////////////////////////////////////////////////////////////
 
-#include "DefinitionProvider.h"
+#include "../DefinitionProvider.h"
 
-#include "../Utils/DefinitionUtil.h"
-#include "../Utils/DocumentUtil.h"
-#include "../Utils/Logger.h"
+#include "../../Utils/DefinitionUtil.h"
+#include "../../Utils/DocumentUtil.h"
+#include "../../Utils/Logger.h"
 
 namespace ls6502
 {
