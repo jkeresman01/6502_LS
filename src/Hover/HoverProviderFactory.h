@@ -8,9 +8,9 @@
 #include <string>
 
 #include "../Config/ConfigurationManager.h"
-#include "FakeHoverProvider.h"
+#include "HoverProviderMockImpl/FakeHoverProvider.h"
+#include "HoverProviderImpl/InstructionSet6502HoverProvider.h"
 #include "IHoverProvider.h"
-#include "InstructionSet6502HoverProvider.h"
 
 namespace ls6502
 {
