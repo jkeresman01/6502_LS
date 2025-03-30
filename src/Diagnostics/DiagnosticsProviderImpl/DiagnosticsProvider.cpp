@@ -9,11 +9,11 @@
 #include <string>
 #include <vector>
 
-#include "../Repo/InstructionSetRepoFactory.h"
-#include "../Types/Range.h"
-#include "../Utils/DocumentUtil.h"
-#include "../Utils/Logger.h"
-#include "../Utils/StringUtil.h"
+#include "../../Repo/InstructionSetRepoFactory.h"
+#include "../../Types/Range.h"
+#include "../../Utils/DocumentUtil.h"
+#include "../../Utils/Logger.h"
+#include "../../Utils/StringUtil.h"
 
 namespace ls6502
 {

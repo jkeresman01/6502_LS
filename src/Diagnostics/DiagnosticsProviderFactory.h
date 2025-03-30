@@ -6,7 +6,8 @@
 
 #include <memory>
 
-#include "FakeDiagnosticsProvider.h"
+#include "DiagnosticsProviderMockImpl/FakeDiagnosticsProvider.h"
+#include "DiagnosticsProviderImpl/DiagnosticsProvider.h"
 #include "IDiagnosticsProvider.h"
 
 #include "../Config/ConfigurationManager.h"

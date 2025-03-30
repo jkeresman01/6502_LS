@@ -8,8 +8,8 @@
 #include <string>
 #include <unordered_map>
 
-#include "../Repo/IInstructionSetRepository.h"
-#include "IDiagnosticsProvider.h"
+#include "../../Repo/IInstructionSetRepository.h"
+#include "../IDiagnosticsProvider.h"
 
 namespace ls6502
 {

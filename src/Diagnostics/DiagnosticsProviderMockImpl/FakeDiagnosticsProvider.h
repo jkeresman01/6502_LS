@@ -6,8 +6,8 @@
 
 #include <vector>
 
-#include "../Types/Diagnostic.h"
-#include "IDiagnosticsProvider.h"
+#include "../../Types/Diagnostic.h"
+#include "../IDiagnosticsProvider.h"
 
 namespace ls6502
 {
