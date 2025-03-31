@@ -53,7 +53,7 @@ void ConfigurationManager::load(std::ifstream &in)
 ////////////////////////////////////////////////////////////
 void ConfigurationManager::readPropertyFromFileLine(const std::string &line)
 {
-    std::pair<std::string, std::string> property = XMLUtil::parseFromFileLine(line);
+    const std::pair<std::string, std::string> &property = XMLUtil::parseFromFileLine(line);
 
     bool isValidProperty = property.first != "" and property.second != "";
 
