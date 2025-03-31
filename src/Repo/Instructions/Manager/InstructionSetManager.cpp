@@ -22,10 +22,11 @@ InstructionsSetMapT InstructionSetManager::getAllInstructions() const
 std::optional<std::vector<std::string>> InstructionSetManager::getInstructionsByPrefix(
     const std::string &prefix) const
 {
-    if (m_instructionSet.empty())
-    {
-        m_instructionSet = m_instructionSetRepository->load();
-    }
+    loadInstructionSetTrie();
+
+    const std::vector<std::string> &instructions = m_instructionSetTrie->getCompletionWords();
+
+    return instructions.empty() ? std::nullopt : std::make_optional<std::vector<std::string>>(instructions);
 }
 
 ////////////////////////////////////////////////////////////
