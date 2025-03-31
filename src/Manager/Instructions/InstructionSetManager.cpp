@@ -22,7 +22,7 @@ InstructionsSetMapT InstructionSetManager::getAllInstructions()
 
 ////////////////////////////////////////////////////////////
 std::optional<std::vector<std::string>> InstructionSetManager::getInstructionsByPrefix(
-    const std::string &prefix) const
+    const std::string &prefix)
 {
     loadInstructionSetTrie();
 

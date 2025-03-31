@@ -70,7 +70,7 @@ class InstructionSetManager
     ///
     /// @brief Returns the singleton instance of InstructionSetManager
     ///
-    /// @return Reference to the singleton instance
+
     ///
     //////////////////////////////////////////////////////////////
     static InstructionSetManager &getInstance();
@@ -82,7 +82,7 @@ class InstructionSetManager
     /// @return A map containing all instructions
     ///
     //////////////////////////////////////////////////////////////
-    InstructionsSetMapT getAllInstructions() const;
+    InstructionsSetMapT getAllInstructions();
 
     //////////////////////////////////////////////////////////////
     ///
