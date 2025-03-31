@@ -4,11 +4,9 @@
 
 #include "InstructionSet6502HoverProvider.h"
 
-#include <algorithm>
-#include <cstdint>
-
 #include "../../Repo/InstructionSetRepoFactory.h"
 #include "../../Types/HoverItem.h"
+#include "../../Manager/Instructions/InstructionSetManager.h"
 #include "../../Types/Position.h"
 #include "../../Utils/DocumentUtil.h"
 #include "../../Utils/Logger.h"
@@ -18,28 +16,19 @@ namespace ls6502
 {
 
 ////////////////////////////////////////////////////////////
-InstructionSet6502HoverProvider::InstructionSet6502HoverProvider()
-    : m_instructionSetRepository(InstructionSetRepoFactory::create())
-{
-    m_instructionSet = m_instructionSetRepository->load();
-}
-
-////////////////////////////////////////////////////////////
 HoverItem InstructionSet6502HoverProvider::getHoverItem(const std::string &document, const Position &position)
 {
-    std::string instruction = DocumentUtil::extractPrefix(document, position);
+    std::string mnemonic = DocumentUtil::extractPrefix(document, position);
 
-    StringUtil::toUpper(instruction);
+    StringUtil::toUpper(mnemonic);
 
-    LS_6502_DEBUG(STR("Hover items are requested for instruction: %s", instruction.c_str()));
+    LS_6502_DEBUG(STR("Hover item is requested for mnemonic: %s", mnemonic.c_str()));
 
     HoverItem hoverItem;
 
-    InstructionSetMapT::iterator it = m_instructionSet.find(instruction);
-
-    if (it == m_instructionSet.end())
+    if (auto it = InstructionSetManager::getInstance().getInstructionByMnemonic(mnemonic))
     {
-        std::string invalidInstructionStr = STR("%s isn't valid 6502 ASM instruction!", instruction.c_str());
+        std::string invalidInstructionStr = STR("%s isn't valid 6502 ASM instruction!", mnemonic.c_str());
 
         LS_6502_DEBUG(invalidInstructionStr);
 
@@ -47,8 +36,7 @@ HoverItem InstructionSet6502HoverProvider::getHoverItem(const std::string &docum
     }
     else
     {
-        Instruction instructionDetails = it->second;
-        hoverItem.text = instructionDetails.toString();
+        hoverItem.text = it->toString();
     }
 
     return hoverItem;

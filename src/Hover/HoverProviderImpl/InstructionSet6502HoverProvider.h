@@ -7,19 +7,12 @@
 #include <memory>
 #include <vector>
 
-#include "../../Repo/IInstructionSetRepository.h"
+#include "../../Repo/Instructions/IInstructionSetRepository.h"
 #include "../../Types/Position.h"
 #include "../IHoverProvider.h"
 
 namespace ls6502
 {
-
-//////////////////////////////////////////////////////////////
-///
-/// Typedefs
-///
-//////////////////////////////////////////////////////////////
-typedef std::unordered_map<std::string, Instruction> InstructionSetMapT;
 
 //////////////////////////////////////////////////////////////
 ///
@@ -37,7 +30,7 @@ class InstructionSet6502HoverProvider : public IHoverProvider
     /// @brief Constructor.
     ///
     //////////////////////////////////////////////////////////////
-    InstructionSet6502HoverProvider();
+    InstructionSet6502HoverProvider() = default;
 
     //////////////////////////////////////////////////////////////
     ///
@@ -51,20 +44,5 @@ class InstructionSet6502HoverProvider : public IHoverProvider
     ///
     //////////////////////////////////////////////////////////////
     HoverItem getHoverItem(const std::string &document, const Position &position) override;
-
-  private:
-    //////////////////////////////////////////////////////////////
-    ///
-    /// @brief Repository for retrieving 6502 instruction set data.
-    ///
-    //////////////////////////////////////////////////////////////
-    std::shared_ptr<IInstructionSetRepository> m_instructionSetRepository;
-
-    //////////////////////////////////////////////////////////////
-    ///
-    /// @brief A mapping of instruction mnemonics to their details.
-    ///
-    //////////////////////////////////////////////////////////////
-    InstructionSetMapT m_instructionSet;
 };
 } // namespace ls6502
