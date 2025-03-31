@@ -33,15 +33,14 @@ std::vector<CompletionItem> InstructionSetCompletionProvider::getCompletions(con
 std::vector<CompletionItem> InstructionSetCompletionProvider::mapInstructionsToCompletions(
     const std::vector<std::string> &instructions)
 {
-    m_completionItems.clear();
-    m_completionItems.reserve(instructions.size());
+    std::vector<CompletionItem> completionItems(instructions.size());
 
     for (const auto &instruction : instructions)
     {
         fillCompletionsForInstruction(instruction);
     }
 
-    return m_completionItems;
+    return completionItems;
 }
 
 ////////////////////////////////////////////////////////////
