@@ -4,8 +4,8 @@
 // Headers
 ////////////////////////////////////////////////////////////
 
-#include "../ICompletionProvider.h"
 #include "../../Types/CompletionItem.h"
+#include "../ICompletionProvider.h"
 
 #include <vector>
 

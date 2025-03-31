@@ -6,8 +6,8 @@
 
 #include <memory>
 
-#include "IInstructionSetRepository.h"
-#include "JSONInstructionSetRepository.h"
+#include "../IInstructionSetRepository.h"
+#include "../JsonRepositoryImpl/JSONInstructionSetRepository.h"
 
 namespace ls6502
 {

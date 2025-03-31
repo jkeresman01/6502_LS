@@ -6,7 +6,7 @@
 
 #include <unordered_map>
 
-#include "../Types/Instruction.h"
+#include "../../Types/Instruction.h"
 
 namespace ls6502
 {
