@@ -2,6 +2,8 @@
 // Headers
 ////////////////////////////////////////////////////////////
 
+#include <optional>
+
 #include "InstructionSetManager.h"
 
 #include "../../../Utils/Logger.h"
@@ -11,7 +13,7 @@ namespace ls6502
 {
 
 ////////////////////////////////////////////////////////////
-InstructionsSetMapT InstructionSetManager::getAllInstructions() const
+InstructionsSetMapT InstructionSetManager::getAllInstructions()
 {
     loadInstructions();
 
@@ -30,7 +32,7 @@ std::optional<std::vector<std::string>> InstructionSetManager::getInstructionsBy
 }
 
 ////////////////////////////////////////////////////////////
-std::optional<Instruction> InstructionSetManager::getInstructionsByMnemonic(const std::string &mnemonic) const
+std::optional<Instruction> InstructionSetManager::getInstructionsByMnemonic(const std::string &mnemonic)
 {
     loadInstructions();
 

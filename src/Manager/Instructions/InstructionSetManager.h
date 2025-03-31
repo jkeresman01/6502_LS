@@ -6,9 +6,9 @@
 
 #include <memory>
 
-#include "../../../Algo/Trie.h"
-#include "../../../Types/Instruction.h"
-#include "../FactoryImpl/InstructionSetRepoFactory.h"
+#include "../../Algo/Trie.h"
+#include "../../Repo/Instructions/FactoryImpl/InstructionSetRepoFactory.h"
+#include "../../Types/Instruction.h"
 #include "../IInstructionSetRepository.h"
 
 namespace ls6502
@@ -92,7 +92,7 @@ class InstructionSetManager
     /// @return A vector of matching instruction mnemonics, if found
     ///
     //////////////////////////////////////////////////////////////
-    std::optional<std::vector<std::string>> getInstructionsByPrefix(const std::string &prefix) const;
+    std::optional<std::vector<std::string>> getInstructionsByPrefix(const std::string &prefix);
 
     //////////////////////////////////////////////////////////////
     ///
@@ -102,7 +102,7 @@ class InstructionSetManager
     /// @return The corresponding instruction, if found
     ///
     //////////////////////////////////////////////////////////////
-    std::optional<Instruction> getInstructionsByMnemonic(const std::string &mnemonic) const;
+    std::optional<Instruction> getInstructionsByMnemonic(const std::string &mnemonic);
 
   private:
     //////////////////////////////////////////////////////////////
