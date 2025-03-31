@@ -32,7 +32,7 @@ std::optional<std::vector<std::string>> InstructionSetManager::getInstructionsBy
 }
 
 ////////////////////////////////////////////////////////////
-std::optional<Instruction> InstructionSetManager::getInstructionsByMnemonic(const std::string &mnemonic)
+std::optional<Instruction> InstructionSetManager::getInstructionByMnemonic(const std::string &mnemonic)
 {
     loadInstructions();
 

@@ -102,7 +102,7 @@ class InstructionSetManager
     /// @return The corresponding instruction, if found
     ///
     //////////////////////////////////////////////////////////////
-    std::optional<Instruction> getInstructionsByMnemonic(const std::string &mnemonic);
+    std::optional<Instruction> getInstructionByMnemonic(const std::string &mnemonic);
 
   private:
     //////////////////////////////////////////////////////////////
