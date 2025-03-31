@@ -62,7 +62,8 @@ class InstructionSetCompletionProvider : public ICompletionProvider
     /// @return A vector of corresponding completion items
     ///
     /////////////////////////////////////////////////////////////////////
-    std::vector<CompletionItem> mapInstructionsToCompletions(const std::string &mnemonic, std::vector<CompletionItem> &completionItems);
+    std::vector<CompletionItem> mapInstructionsToCompletions(const std::string &mnemonic,
+                                                             std::vector<CompletionItem> &completionItems);
 
     /////////////////////////////////////////////////////////////////////
     ///
@@ -71,7 +72,8 @@ class InstructionSetCompletionProvider : public ICompletionProvider
     /// @param [in] instruction
     ///
     /////////////////////////////////////////////////////////////////////
-    void createCompletionsForAllAddressingModes(const Instruction &mnemonic, std::vector<CompletionItem> &completionItems);
+    void createCompletionsForAllAddressingModes(const Instruction &mnemonic,
+                                                std::vector<CompletionItem> &completionItems);
 
     /////////////////////////////////////////////////////////////////////
     ///
@@ -80,6 +82,7 @@ class InstructionSetCompletionProvider : public ICompletionProvider
     /// @param [in] instruction
     ///
     /////////////////////////////////////////////////////////////////////
-    void fillCompletionsForInstruction(const std::string &instruction, std::vector<CompletionItem> &completionItems);
+    void fillCompletionsForInstruction(const std::string &instruction,
+                                       std::vector<CompletionItem> &completionItems);
 };
 } // namespace ls6502

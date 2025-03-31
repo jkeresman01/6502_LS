@@ -44,7 +44,8 @@ std::vector<CompletionItem> InstructionSetCompletionProvider::mapInstructionsToC
 }
 
 ////////////////////////////////////////////////////////////
-void InstructionSetCompletionProvider::fillCompletionsForInstruction(const std::string &mnemonic, std::vector<CompletionItem> &completionItems)
+void InstructionSetCompletionProvider::fillCompletionsForInstruction(
+    const std::string &mnemonic, std::vector<CompletionItem> &completionItems)
 {
     if (auto it = InstructionSetManager::getInstance().getInstructionByMnemonic(mnemonic))
     {
@@ -57,13 +58,14 @@ void InstructionSetCompletionProvider::fillCompletionsForInstruction(const std::
 }
 
 ////////////////////////////////////////////////////////////
-void InstructionSetCompletionProvider::createCompletionsForAllAddressingModes(const Instruction &mnemonic, std::vector<CompletionItem> &completionItems)
+void InstructionSetCompletionProvider::createCompletionsForAllAddressingModes(
+    const Instruction &mnemonic, std::vector<CompletionItem> &completionItems)
 {
     for (const auto &addressingMode : instruction.addressingModes)
     {
         completionItems.emplace_back(addressingMode.assembler, CompletionItemKind::TEXT,
-                                       instruction.description, addressingMode.getDetails(),
-                                       addressingMode.getDetails());
+                                     instruction.description, addressingMode.getDetails(),
+                                     addressingMode.getDetails());
     }
 }
 
