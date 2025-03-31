@@ -4,31 +4,15 @@
 
 #include "InstructionSetCompletionProvider.h"
 
-#include "../Repo/InstructionSetRepoFactory.h"
-#include "../Types/Position.h"
-#include "../Utils/DocumentUtil.h"
-#include "../Utils/Logger.h"
-#include "../Utils/StringUtil.h"
+#include "../../Manager/Instructions/InstructionSetManager.h"
+#include "../../Repo/InstructionSetRepoFactory.h"
+#include "../../Types/Position.h"
+#include "../../Utils/DocumentUtil.h"
+#include "../../Utils/Logger.h"
+#include "../../Utils/StringUtil.h"
 
 namespace ls6502
 {
-
-////////////////////////////////////////////////////////////
-InstructionSetCompletionProvider::InstructionSetCompletionProvider()
-    : m_instructionSetRepository(InstructionSetRepoFactory::create())
-{
-    m_instructionSet = m_instructionSetRepository->load();
-    loadInstructionSetTrie();
-}
-
-////////////////////////////////////////////////////////////
-void InstructionSetCompletionProvider::loadInstructionSetTrie()
-{
-    for (const auto &[mnemonic, _] : m_instructionSet)
-    {
-        m_instructionSetTrie->insert(mnemonic);
-    }
-}
 
 ////////////////////////////////////////////////////////////
 std::vector<CompletionItem> InstructionSetCompletionProvider::getCompletions(const std::string &document,
@@ -38,9 +22,10 @@ std::vector<CompletionItem> InstructionSetCompletionProvider::getCompletions(con
 
     StringUtil::toUpper(prefix);
 
-    const std::vector<std::string> &instructions = m_instructionSetTrie->getCompletionWords(prefix);
+    std::optional<std::vector<std::string>> &instructions =
+        InstructionSetManager::getInstance().getInstructionsByPrefix(prefix);
 
-    return mapInstructionsToCompletions(instructions);
+    return instructions ? mapInstructionsToCompletions(instructions.value()) : std::vector<std::string>();
 }
 
 ////////////////////////////////////////////////////////////

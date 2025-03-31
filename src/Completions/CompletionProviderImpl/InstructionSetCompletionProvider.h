@@ -7,10 +7,10 @@
 #include <unordered_map>
 #include <vector>
 
-#include "../Algo/Trie.h"
-#include "../Repo/IInstructionSetRepository.h"
-#include "../Types/Instruction.h"
-#include "ICompletionProvider.h"
+#include "../../Algo/Trie.h"
+#include "../../Repo/IInstructionSetRepository.h"
+#include "../../Types/Instruction.h"
+#include "../ICompletionProvider.h"
 
 namespace ls6502
 {
@@ -37,7 +37,7 @@ class InstructionSetCompletionProvider : public ICompletionProvider
     /// @brief Constructor for InstructionSetCompletionProvider
     ///
     /////////////////////////////////////////////////////////////////////
-    InstructionSetCompletionProvider();
+    InstructionSetCompletionProvider() = default;
 
     /////////////////////////////////////////////////////////////////////
     ///
@@ -53,13 +53,6 @@ class InstructionSetCompletionProvider : public ICompletionProvider
                                                        const Position &position) override;
 
   private:
-    /////////////////////////////////////////////////////////////////////
-    ///
-    /// @brief Loads instruction set data into a trie structure
-    ///
-    /////////////////////////////////////////////////////////////////////
-    void loadInstructionSetTrie();
-
     /////////////////////////////////////////////////////////////////////
     ///
     /// @brief Maps a list of instructions to completion items
