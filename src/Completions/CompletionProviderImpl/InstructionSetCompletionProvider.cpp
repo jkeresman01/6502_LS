@@ -25,7 +25,8 @@ std::vector<CompletionItem> InstructionSetCompletionProvider::getCompletions(con
     std::optional<std::vector<std::string>> &instructions =
         InstructionSetManager::getInstance().getInstructionsByPrefix(prefix);
 
-    return instructions ? mapInstructionsToCompletions(instructions.value()) : std::vector<std::string>();
+    return instructions.has_value() ? mapInstructionsToCompletions(instructions.value())
+                                    : std::vector<std::string>();
 }
 
 ////////////////////////////////////////////////////////////
@@ -44,18 +45,17 @@ std::vector<CompletionItem> InstructionSetCompletionProvider::mapInstructionsToC
 }
 
 ////////////////////////////////////////////////////////////
-void InstructionSetCompletionProvider::fillCompletionsForInstruction(const std::string &instruction)
+void InstructionSetCompletionProvider::fillCompletionsForInstruction(const std::string &mnemonic)
 {
-    InstructionSetMapT::iterator it = m_instructionSet.find(instruction);
-
-    if (it == m_instructionSet.end())
+    if (auto it = InstructionSetManager::getInstance().getInstructionByMnemonic(mnemonic))
     {
-        LS_6502_WARN(STR("%s isn't a valid 6502 assembly instruction", instruction.c_str()));
-        return;
+        const Instruction &foundInstruction = it->second;
+        createCompletionsForAllAddressingModes(foundInstruction);
     }
-
-    const Instruction &foundInstruction = it->second;
-    createCompletionsForAllAddressingModes(foundInstruction);
+    else
+    {
+        LS_6502_ERROR(STR("Unkown instruction, mnemonic: %s", mnemonic.c_str()));
+    }
 }
 
 ////////////////////////////////////////////////////////////
