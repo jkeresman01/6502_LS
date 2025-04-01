@@ -59,7 +59,7 @@ void InstructionSetCompletionProvider::fillCompletionsForInstruction(
 
 ////////////////////////////////////////////////////////////
 void InstructionSetCompletionProvider::createCompletionsForAllAddressingModes(
-    const Instruction &mnemonic, std::vector<CompletionItem> &completionItems)
+    const Instruction &instruction, std::vector<CompletionItem> &completionItems)
 {
     for (const auto &addressingMode : instruction.addressingModes)
     {
