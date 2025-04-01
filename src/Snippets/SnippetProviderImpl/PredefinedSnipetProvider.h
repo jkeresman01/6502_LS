@@ -9,18 +9,11 @@
 #include <string>
 #include <vector>
 
-#include "ISnippetProvider.h"
-#include "ISnippetRepository.h"
+#include "../../Repo/ISnippetRepository.h"
+#include "../ISnippetProvider.h"
 
 namespace ls6502
 {
-
-//////////////////////////////////////////////////////////////
-///
-/// Typedefs
-///
-//////////////////////////////////////////////////////////////
-typedef std::multimap<std::string, std::string> SnippetMultimapT;
 
 //////////////////////////////////////////////////////////////
 ///
@@ -66,20 +59,5 @@ class PredefinedSnippetProvider : public ISnippetProvider
     //////////////////////////////////////////////////////////////
     std::vector<CompletionItem> getCompletions(const std::vector<std::string> &snippets,
                                                const std::string &prefix);
-
-  private:
-    //////////////////////////////////////////////////////////////
-    ///
-    /// @brief Stores all predefined snippets as a multimap.
-    ///
-    //////////////////////////////////////////////////////////////
-    SnippetMultimapT m_snippets;
-
-    //////////////////////////////////////////////////////////////
-    ///
-    /// @brief Unique pointer to an instance of ISnippetRepository
-    ///
-    //////////////////////////////////////////////////////////////
-    std::shared_ptr<ISnippetRepository> m_snippetRepository;
 };
 } // namespace ls6502

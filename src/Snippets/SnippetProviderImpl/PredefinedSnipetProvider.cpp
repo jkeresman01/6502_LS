@@ -4,30 +4,23 @@
 
 #include "PredefinedSnipetProvider.h"
 
-#include "SnippetRepositoryFactory.h"
+#include "../../Manager/Snippets/SnippetsManager.h"
+#include "../../Utils/Logger.h"
 
 namespace ls6502
 {
 
 ////////////////////////////////////////////////////////////
-PredefinedSnippetProvider::PredefinedSnippetProvider()
-    : m_snippetRepository(SnippetRepositoryFactory::create())
-{
-    m_snippets = m_snippetRepository->load();
-}
-
-////////////////////////////////////////////////////////////
 std::vector<CompletionItem> PredefinedSnippetProvider::getSnippets(const std::string &prefix)
 {
-    std::vector<std::string> snippets;
-    const auto &range = m_snippets.equal_range(prefix);
-
-    for (auto it = range.first; it != range.second; ++it)
+    if (auto it = SnippetsManager::getInstance().getSnippetsByMnemonic(prefix))
     {
-        snippets.emplace_back(it->second);
+        return getCompletions(*it);
     }
-
-    return getCompletions(snippets, prefix);
+    else
+    {
+        LS_6502_WARN(STR("No snippets for this prefix: %s", prefix.c_str()));
+    }
 }
 
 ////////////////////////////////////////////////////////////

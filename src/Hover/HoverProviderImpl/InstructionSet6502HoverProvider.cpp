@@ -4,9 +4,9 @@
 
 #include "InstructionSet6502HoverProvider.h"
 
+#include "../../Manager/Instructions/InstructionSetManager.h"
 #include "../../Repo/InstructionSetRepoFactory.h"
 #include "../../Types/HoverItem.h"
-#include "../../Manager/Instructions/InstructionSetManager.h"
 #include "../../Types/Position.h"
 #include "../../Utils/DocumentUtil.h"
 #include "../../Utils/Logger.h"
