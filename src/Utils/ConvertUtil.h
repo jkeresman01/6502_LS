@@ -51,12 +51,12 @@ template <typename T> inline T Converter::convert(const std::string &input)
 
     if (!(converter >> result))
     {
-        LS_6502_ERROR(STR("Conversion failed: invalid input '%s'", input));
+        LS_6502_ERROR(STR("Conversion failed: invalid input '%s'", input.c_str()));
     }
 
     if (!converter.eof())
     {
-        LS_6502_ERROR(STR("Conversion failed: extra characters in input '%s'", input));
+        LS_6502_ERROR(STR("Conversion failed: extra characters in input '%s'", input.c_str()));
     }
 
     return result;
