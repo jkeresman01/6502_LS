@@ -9,7 +9,7 @@
 #include <string>
 #include <vector>
 
-#include "../../Repo/InstructionSetRepoFactory.h"
+#include "../../Repo/Instructions/FactoryImpl/InstructionSetRepoFactory.h"
 #include "../../Types/Range.h"
 #include "../../Utils/DocumentUtil.h"
 #include "../../Utils/Logger.h"
@@ -17,6 +17,8 @@
 
 namespace ls6502
 {
+
+//TODO refactor this whole thing
 
 ////////////////////////////////////////////////////////////
 DiagnosticsProvider::DiagnosticsProvider() : m_instructionSetRepository(InstructionSetRepoFactory::create())
@@ -49,13 +51,12 @@ void DiagnosticsProvider::checkMalformedLabel(const std::string &line, size_t li
 
     InstructionSetMapT::iterator it = m_instructionSet.find(line);
 
-    bool isValid6502Instruction = it != m_instructionSet.end();
     bool isMissingColon = std::regex_match(line, match, labelRegex);
 
-    if (!isValid6502Instruction and isMissingColon)
+    if (isMissingColon)
     {
         m_diagnostics.emplace_back(Range{lineNumber, 0, lineNumber, line.size()}, DiagnosticSeverity::WARNING,
-                                   typeid(*this).name(), "Label missing ':' at end");
+                                   typeid(*this).name(), "Malformed label");
     }
 }
 

@@ -4,9 +4,10 @@
 
 #include "FakeCompletionProvider.h"
 
+#include <vector>
+
 #include "../../Types/CompletionItem.h"
 
-#include <vector>
 
 namespace ls6502
 {

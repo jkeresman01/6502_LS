@@ -6,9 +6,9 @@
 
 #include <memory>
 
-#include "CodeActionProvider.h"
-#include "FakeCodectionsProvider.h"
-#include "ICodeActionsProvider.h"
+#include "../CodeActionProviderImpl/CodeActionProvider.h"
+#include "../CodeActionProviderMockImpl/FakeCodectionsProvider.h"
+#include "../ICodeActionsProvider.h"
 
 #include "../Config/ConfigurationManager.h"
 #include "../Utils/Logger.h"

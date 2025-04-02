@@ -6,7 +6,7 @@
 
 #include <nlohmann/json.hpp>
 
-#include "IInstructionSetRepository.h"
+#include "../IInstructionSetRepository.h"
 
 namespace ls6502
 {
@@ -169,6 +169,8 @@ class JSONInstructionSetRepository : public IInstructionSetRepository
     /// @brief Path to the JSON instruction set
     ///
     /////////////////////////////////////////////////////////////////////
+    
+    //TODO change
     const char *INSTRUCTION_SET_FILE_PATH = "/home/josip/git/cpp/6502_LS/instructions/instructions.json";
 };
 

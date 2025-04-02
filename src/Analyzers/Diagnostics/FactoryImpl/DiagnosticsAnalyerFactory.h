@@ -4,10 +4,10 @@
 // Headers
 ////////////////////////////////////////////////////////////
 
-#include "IDiagnosticsAnalyzer.h"
-#include "IncorrectLabelDiagnosticsAnalyzer.h"
-#include "UnsupportedInstructionDiagnosticsAnalyzer.h"
-#include "WrongInstructionUsageDiagnosticsAnalyzer.h"
+#include "../IDiagnosticsAnalyzer.h"
+#include "../DiagnosticsAnalyerImpl/IncorrectLabelDiagnosticsAnalyzer.h"
+#include "../DiagnosticsAnalyerImpl/UnsupportedInstructionDiagnosticsAnalyzer.h"
+#include "../DiagnosticsAnalyerImpl/WrongInstructionUsageDiagnosticsAnalyzer.h"
 
 #include "../Types/Diagnostic.h"
 #include "../Utils/DiagnosticsUtil.h"

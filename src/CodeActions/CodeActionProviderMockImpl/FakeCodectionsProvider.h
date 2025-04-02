@@ -5,7 +5,7 @@
 ////////////////////////////////////////////////////////////
 
 #include "../Types/CodeAction.h"
-#include "ICodeActionsProvider.h"
+#include "../ICodeActionsProvider.h"
 
 namespace ls6502
 {

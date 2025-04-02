@@ -9,7 +9,7 @@
 #include "../../Algo/Trie.h"
 #include "../../Repo/Instructions/FactoryImpl/InstructionSetRepoFactory.h"
 #include "../../Types/Instruction.h"
-#include "../IInstructionSetRepository.h"
+#include "../../Repo/Instructions/IInstructionSetRepository.h"
 
 namespace ls6502
 {
@@ -92,7 +92,7 @@ class InstructionSetManager
     /// @return A vector of matching instruction mnemonics, if found
     ///
     //////////////////////////////////////////////////////////////
-    std::optional<std::vector<std::string>> getInstructionsByPrefix(const std::string &prefix);
+    std::vector<std::string> getInstructionsByPrefix(const std::string &prefix);
 
     //////////////////////////////////////////////////////////////
     ///

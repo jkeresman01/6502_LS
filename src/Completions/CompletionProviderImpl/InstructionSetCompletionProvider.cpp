@@ -4,8 +4,11 @@
 
 #include "InstructionSetCompletionProvider.h"
 
+#include <vector>
+#include <optional>
+
 #include "../../Manager/Instructions/InstructionSetManager.h"
-#include "../../Repo/InstructionSetRepoFactory.h"
+#include "../../Repo/Instructions/FactoryImpl/InstructionSetRepoFactory.h"
 #include "../../Types/Position.h"
 #include "../../Utils/DocumentUtil.h"
 #include "../../Utils/Logger.h"
@@ -22,11 +25,9 @@ std::vector<CompletionItem> InstructionSetCompletionProvider::getCompletions(con
 
     StringUtil::toUpper(prefix);
 
-    std::optional<std::vector<std::string>> &instructions =
-        InstructionSetManager::getInstance().getInstructionsByPrefix(prefix);
+    const std::vector<std::string> &instructions = InstructionSetManager::getInstance().getInstructionsByPrefix(prefix);
 
-    return instructions.has_value() ? mapInstructionsToCompletions(instructions.value())
-                                    : std::vector<std::string>();
+    return mapInstructionsToCompletions(instructions);
 }
 
 ////////////////////////////////////////////////////////////

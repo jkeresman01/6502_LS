@@ -6,8 +6,8 @@
 
 #include <memory>
 
-#include "ISnippetRepository.h"
-#include "SnippetRepository.h"
+#include "../ISnippetRepository.h"
+#include "../JsonRepositoryImpl/JsonSnippetRepository.h"
 
 namespace ls6502
 {

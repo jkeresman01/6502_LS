@@ -6,10 +6,9 @@
 
 #include <memory>
 
-#include "FakeCompletionProvider.h"
-#include "ICompletionProvider.h"
-#include "InstructionSetCompletionProvider.h"
-
+#include "../CompletionProviderMockImpl/FakeCompletionProvider.h"
+#include "../CompletionProviderImpl/InstructionSetCompletionProvider.h"
+#include "../ICompletionProvider.h"
 #include "../Config/ConfigurationManager.h"
 #include "../Utils/Logger.h"
 

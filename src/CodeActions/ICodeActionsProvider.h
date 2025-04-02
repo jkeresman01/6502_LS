@@ -4,9 +4,9 @@
 // Headers
 ////////////////////////////////////////////////////////////
 
-#include "../Types/CodeAction.h"
-
 #include <vector>
+
+#include "../Types/CodeAction.h"
 
 namespace ls6502
 {

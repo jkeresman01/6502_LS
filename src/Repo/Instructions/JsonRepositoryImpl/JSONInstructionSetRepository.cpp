@@ -4,6 +4,7 @@
 
 #include "JSONInstructionSetRepository.h"
 #include "../Utils/Logger.h"
+#include "../Types/Instruction.h"
 
 namespace ls6502
 {

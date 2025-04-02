@@ -6,10 +6,9 @@
 
 #include <memory>
 
-#include "DefinitionProviderImpl/DefinitionProvider.h"
-#include "DefinitionProviderMockImpl/FakeDefinitionProvider.h"
-#include "IDefinitionProvider.h"
-
+#include "../DefinitionProviderImpl/DefinitionProvider.h"
+#include "../DefinitionProviderMockImpl/FakeDefinitionProvider.h"
+#include "../IDefinitionProvider.h"
 #include "../Config/ConfigurationManager.h"
 #include "../Utils/Logger.h"
 

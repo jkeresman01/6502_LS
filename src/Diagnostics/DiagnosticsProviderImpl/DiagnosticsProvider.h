@@ -8,7 +8,7 @@
 #include <string>
 #include <unordered_map>
 
-#include "../../Repo/IInstructionSetRepository.h"
+#include "../../Repo/Instructions/IInstructionSetRepository.h"
 #include "../IDiagnosticsProvider.h"
 
 namespace ls6502

@@ -4,8 +4,8 @@
 // Headers
 ////////////////////////////////////////////////////////////
 
-#include <map>
 #include <string>
+#include <unordered_map>
 
 namespace ls6502
 {
@@ -35,6 +35,6 @@ class ISnippetRepository
     ///         the value is the corresponding snippet code.
     ///
     //////////////////////////////////////////////////////////////
-    virtual std::multimap<std::string, std::string> load() = 0;
+    virtual std::unordered_multimap<std::string, std::string> load() = 0;
 };
 } // namespace ls6502

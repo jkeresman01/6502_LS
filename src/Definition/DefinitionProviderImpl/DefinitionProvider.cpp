@@ -2,7 +2,7 @@
 // Headers
 ////////////////////////////////////////////////////////////
 
-#include "../DefinitionProvider.h"
+#include "DefinitionProvider.h"
 
 #include "../../Utils/DefinitionUtil.h"
 #include "../../Utils/DocumentUtil.h"

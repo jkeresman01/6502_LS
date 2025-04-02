@@ -8,8 +8,7 @@
 
 #include "../Diagnostics/IDiagnosticsProvider.h"
 #include "../Types/CodeAction.h"
-#include "ICodeActionsProvider.h"
-#include "IDiagnosticsAnalyzer.h"
+#include "../ICodeActionsProvider.h"
 
 namespace ls6502
 {

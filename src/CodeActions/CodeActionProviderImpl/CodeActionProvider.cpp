@@ -7,8 +7,8 @@
 #include <algorithm>
 #include <string>
 
-#include "../Diagnostics/DiagnosticsProviderFactory.h"
-#include "DiagnosticsAnalyerFactory.h"
+#include "../Diagnostics/FactoryImpl/DiagnosticsProviderFactory.h"
+#include "../Analyzers/Diagnostics/FactoryImpl/DiagnosticsAnalyerFactory.h"
 
 namespace ls6502
 {

@@ -3,12 +3,13 @@
 ////////////////////////////////////////////////////////////
 // Headers
 ////////////////////////////////////////////////////////////
+
 #include <memory>
 #include <unordered_map>
 #include <vector>
 
 #include "../../Algo/Trie.h"
-#include "../../Repo/IInstructionSetRepository.h"
+#include "../../Repo/Instructions/IInstructionSetRepository.h"
 #include "../../Types/Instruction.h"
 #include "../ICompletionProvider.h"
 
@@ -55,8 +56,7 @@ class InstructionSetCompletionProvider : public ICompletionProvider
     /// @return A vector of corresponding completion items
     ///
     /////////////////////////////////////////////////////////////////////
-    std::vector<CompletionItem> mapInstructionsToCompletions(const std::string &mnemonic,
-                                                             std::vector<CompletionItem> &completionItems);
+    std::vector<CompletionItem> mapInstructionsToCompletions(const std::vector<CompletionItem> &completions);
 
     /////////////////////////////////////////////////////////////////////
     ///

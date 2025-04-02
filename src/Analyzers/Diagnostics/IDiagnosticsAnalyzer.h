@@ -4,11 +4,11 @@
 // Headers
 ////////////////////////////////////////////////////////////
 
-#include "../Types/CodeAction.h"
-#include "../Types/Diagnostic.h"
-
 #include <string>
 #include <vector>
+
+#include "../Types/CodeAction.h"
+#include "../Types/Diagnostic.h"
 
 namespace ls6502
 {

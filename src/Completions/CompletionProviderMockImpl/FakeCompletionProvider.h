@@ -4,10 +4,10 @@
 // Headers
 ////////////////////////////////////////////////////////////
 
+#include <vector>
+
 #include "../../Types/CompletionItem.h"
 #include "../ICompletionProvider.h"
-
-#include <vector>
 
 namespace ls6502
 {

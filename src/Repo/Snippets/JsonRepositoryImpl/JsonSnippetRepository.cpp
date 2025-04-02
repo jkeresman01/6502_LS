@@ -2,7 +2,7 @@
 // Headers
 ////////////////////////////////////////////////////////////
 
-#include "SnippetRepository.h"
+#include "JsonSnippetRepository.h"
 
 #include <nlohmann/json.hpp>
 

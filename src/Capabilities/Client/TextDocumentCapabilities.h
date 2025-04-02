@@ -6,7 +6,7 @@
 
 #include <nlohmann/json.hpp>
 
-#include "../Capabilities/TextDocumentSyncClientCapabilites.h"
+#include "TextDocumentSyncClientCapabilites.h"
 #include "HoverClientCapabilities.h"
 
 namespace ls6502

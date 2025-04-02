@@ -8,7 +8,7 @@
 #include <string>
 #include <unordered_map>
 
-#include "../Capabilities/ClientCapabilites.h"
+#include "../Capabilities/Client/ClientCapabilites.h"
 #include "../Types/ClientInfo.h"
 
 namespace ls6502

@@ -6,8 +6,8 @@
 
 #include "InstructionSetManager.h"
 
-#include "../../../Utils/Logger.h"
-#include "../FactoryImpl/InstructionSetRepoFactory.h"
+#include "../../Utils/Logger.h"
+#include "../../Repo/Instructions/FactoryImpl/InstructionSetRepoFactory.h"
 
 namespace ls6502
 {
@@ -16,19 +16,15 @@ namespace ls6502
 InstructionsSetMapT InstructionSetManager::getAllInstructions()
 {
     loadInstructions();
-
     return m_instructionSet;
 }
 
 ////////////////////////////////////////////////////////////
-std::optional<std::vector<std::string>> InstructionSetManager::getInstructionsByPrefix(
+std::vector<std::string> InstructionSetManager::getInstructionsByPrefix(
     const std::string &prefix)
 {
     loadInstructionSetTrie();
-
-    const std::vector<std::string> &instructions = m_instructionSetTrie->getCompletionWords();
-
-    return instructions.empty() ? std::nullopt : std::make_optional<std::vector<std::string>>(instructions);
+    return m_instructionSetTrie->getCompletionWords();
 }
 
 ////////////////////////////////////////////////////////////

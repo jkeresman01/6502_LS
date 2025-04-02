@@ -4,11 +4,10 @@
 // Headers
 ////////////////////////////////////////////////////////////
 
-#include "ISnippetRepository.h"
-#include "SnippetRepository.h"
-
-#include <map>
+#include <unordered_map>
 #include <string>
+
+#include "../ISnippetRepository.h"
 
 namespace ls6502
 {
@@ -17,7 +16,7 @@ namespace ls6502
 /// Typedefs
 ///
 //////////////////////////////////////////////////////////////
-typedef std::multimap<std::string, std::string> SnippetsMultimapT;
+typedef std::unordered_multimap<std::string, std::string> SnippetsMultimapT;
 
 //////////////////////////////////////////////////////////////
 ///
