@@ -7,7 +7,7 @@
 #include <ostream>
 #include <string>
 
-#include "../Capabilities/ServerCapabilities.h"
+#include "../Capabilities/Server/ServerCapabilities.h"
 #include "../Results/InitializeResult.h"
 #include "../Types/ServerInfo.h"
 #include "ResponseError.h"

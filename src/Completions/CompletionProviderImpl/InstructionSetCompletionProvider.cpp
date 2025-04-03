@@ -38,7 +38,7 @@ std::vector<CompletionItem> InstructionSetCompletionProvider::mapInstructionsToC
 
     for (const auto &instruction : instructions)
     {
-        fillCompletionsForInstruction(instruction);
+        fillCompletionsForInstruction(instruction, completionItems);
     }
 
     return completionItems;

@@ -9,7 +9,7 @@
 #include <string>
 #include <vector>
 
-#include "../../Repo/ISnippetRepository.h"
+#include "../../Repo/Snippets/ISnippetRepository.h"
 #include "../ISnippetProvider.h"
 
 namespace ls6502

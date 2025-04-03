@@ -6,7 +6,7 @@
 
 #include "../Types/CodeAction.h"
 #include "../Types/Diagnostic.h"
-#include "IDiagnosticsAnalyzer.h"
+#include "../Analyzers/Diagnostics/IDiagnosticsAnalyzer.h"
 
 #include <string>
 #include <vector>

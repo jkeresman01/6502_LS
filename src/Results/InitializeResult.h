@@ -6,7 +6,7 @@
 
 #include <string>
 
-#include "../Capabilities/ServerCapabilities.h"
+#include "../Capabilities/Server/ServerCapabilities.h"
 #include "../Messages/Response/ResponseMessage.h"
 #include "../Types/ServerInfo.h"
 

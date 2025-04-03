@@ -1,4 +1,4 @@
-#pragma onceEnu
+#pragma once
 
 namespace ls6502
 {

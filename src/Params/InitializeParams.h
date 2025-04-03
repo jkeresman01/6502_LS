@@ -11,7 +11,7 @@
 #include <optional>
 #include <string>
 
-#include "../Capabilities/ClientCapabilites.h"
+#include "../Capabilities/Client/ClientCapabilites.h"
 #include "../Enums/TraceValue.h"
 #include "../Types/ClientInfo.h"
 

@@ -9,9 +9,9 @@
 
 #include "../Config/ConfigurationManager.h"
 #include "../Utils/Logger.h"
-#include "FakeSnippetProvider.h"
 #include "ISnippetProvider.h"
-#include "PredefinedSnipetProvider.h"
+#include "SnippetProviderMockImpl/FakeSnippetProvider.h"
+#include "SnippetProviderImpl/PredefinedSnipetProvider.h"
 
 namespace ls6502
 {

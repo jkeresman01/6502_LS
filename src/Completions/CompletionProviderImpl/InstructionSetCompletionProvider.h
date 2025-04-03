@@ -56,7 +56,7 @@ class InstructionSetCompletionProvider : public ICompletionProvider
     /// @return A vector of corresponding completion items
     ///
     /////////////////////////////////////////////////////////////////////
-    std::vector<CompletionItem> mapInstructionsToCompletions(const std::vector<CompletionItem> &completions);
+    std::vector<CompletionItem> mapInstructionsToCompletions(const std::vector<std::string> &completions);
 
     /////////////////////////////////////////////////////////////////////
     ///
