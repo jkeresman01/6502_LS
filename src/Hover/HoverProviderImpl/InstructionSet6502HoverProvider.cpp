@@ -5,7 +5,7 @@
 #include "InstructionSet6502HoverProvider.h"
 
 #include "../../Manager/Instructions/InstructionSetManager.h"
-#include "../../Repo/Instructions/InstructionSetRepoFactory.h"
+#include "../../Repo/Instructions/FactoryImpl/InstructionSetRepoFactory.h"
 #include "../../Types/HoverItem.h"
 #include "../../Types/Position.h"
 #include "../../Utils/DocumentUtil.h"
@@ -25,6 +25,7 @@ HoverItem InstructionSet6502HoverProvider::getHoverItem(const std::string &docum
     LS_6502_DEBUG(STR("Hover item is requested for mnemonic: %s", mnemonic.c_str()));
 
     HoverItem hoverItem;
+
 
     if (auto it = InstructionSetManager::getInstance().getInstructionByMnemonic(mnemonic))
     {

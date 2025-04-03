@@ -72,7 +72,7 @@ void JSONInstructionSetRepository::loadInstructionSet(const nlohmann::json &json
         {
             AddressingMode addressingMode;
             loadAddressingMode(mode, addressingMode);
-            instruction.addressingModes.push_back(addressingMode);
+            instruction.addressingModes.emplace_back(addressingMode);
         }
 
         m_instructionSet[instruction.mnemonic] = instruction;
