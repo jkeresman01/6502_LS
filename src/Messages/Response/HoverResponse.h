@@ -40,7 +40,7 @@ public:
     /// @return A JSON object representing the HoverResponse.
     ///
     //////////////////////////////////////////////////////////////
-    virtual nlohmann::json toJson() const;
+    virtual nlohmann::json toJson() const override;
 
     //////////////////////////////////////////////////////////////
     ///
