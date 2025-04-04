@@ -42,8 +42,8 @@ public:
 ////////////////////////////////////////////////////////////
 inline Position& DefinitionUtil::findLabelPosition(const std::string& label, const std::string& document)
 {
-    std::regex        labelPattern("\\b" + label + "\\b");
-    std::smatch       match;
+    std::regex  labelPattern("\\b" + label + "\\b");
+    std::smatch match;
 
     std::stringstream ss(document);
 

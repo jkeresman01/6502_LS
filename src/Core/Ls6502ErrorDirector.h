@@ -48,6 +48,5 @@ public:
         responseErrorBuilder.withErrorCode(ErrorCodes::INVALID_REQUEST)
             .withErrorMessage("Received request after shutdown");
     }
-
 };
 } // namespace ls6502

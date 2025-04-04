@@ -21,7 +21,7 @@ std::vector<CodeAction> UnsupportedInstructionDiagnosticsAnalyzer::provideCodeAc
 {
     m_codeActions.clear();
 
-    WorkspaceEdit         workspaceEdit;
+    WorkspaceEdit workspaceEdit;
 
     std::vector<TextEdit> textEdits;
 
