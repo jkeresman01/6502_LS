@@ -46,6 +46,10 @@ void ConfigurationManager::load(std::ifstream& in)
         {
             readPropertyFromFileLine(line);
         }
+        else
+        {
+            LS_6502_ERROR(STR("Malformed XML property line: ", line.c_str()));
+        }
     }
 }
 
