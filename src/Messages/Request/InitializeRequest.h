@@ -22,7 +22,7 @@ namespace ls6502
 //////////////////////////////////////////////////////////////
 class InitializeRequest : public RequestMessage
 {
-  public:
+public:
     //////////////////////////////////////////////////////////////
     ///
     /// @brief Constructs the Initialize request from JSON RPC
@@ -30,7 +30,7 @@ class InitializeRequest : public RequestMessage
     /// @param [in] jsonRPC
     ///
     //////////////////////////////////////////////////////////////
-    explicit InitializeRequest(const nlohmann::json &jsonRPC);
+    explicit InitializeRequest(const nlohmann::json& jsonRPC);
 
     //////////////////////////////////////////////////////////////
     ///
@@ -39,9 +39,12 @@ class InitializeRequest : public RequestMessage
     /// @return InitializeParams
     ///
     //////////////////////////////////////////////////////////////
-    std::shared_ptr<InitializeParams> getInitializeParams() const { return m_initializeParams; };
+    std::shared_ptr<InitializeParams> getInitializeParams() const
+    {
+        return m_initializeParams;
+    };
 
-  private:
+private:
     //////////////////////////////////////////////////////////////
     ///
     /// @brief Mutator method for initialize params
@@ -49,9 +52,9 @@ class InitializeRequest : public RequestMessage
     /// @param [in] jsonRPC
     ///
     //////////////////////////////////////////////////////////////
-    void setInitializeParams(const nlohmann::json &jsonRPC);
+    void setInitializeParams(const nlohmann::json& jsonRPC);
 
-  private:
+private:
     //////////////////////////////////////////////////////////////
     ///
     /// @brief Paramters used in Initalize Request

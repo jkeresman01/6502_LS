@@ -28,14 +28,14 @@ SnippetsMultimapT SnippetRepository::load()
 }
 
 ////////////////////////////////////////////////////////////
-void SnippetRepository::load(std::ifstream &snippetsFile)
+void SnippetRepository::load(std::ifstream& snippetsFile)
 {
     nlohmann::json snippetsJson;
     snippetsFile >> snippetsJson;
 
-    for (auto &[mnemonic, snippets] : snippetsJson.items())
+    for (auto& [mnemonic, snippets] : snippetsJson.items())
     {
-        for (const auto &snippet : snippets)
+        for (const auto& snippet : snippets)
         {
             m_snippets.emplace(mnemonic, snippet);
         }

@@ -10,7 +10,7 @@ namespace ls6502
 {
 
 ////////////////////////////////////////////////////////////
-CodeActionParams::CodeActionParams(const nlohmann::json &jsonRPC)
+CodeActionParams::CodeActionParams(const nlohmann::json& jsonRPC)
 {
     setRange(jsonRPC);
     setURI(jsonRPC["textDocument"]);
@@ -18,7 +18,7 @@ CodeActionParams::CodeActionParams(const nlohmann::json &jsonRPC)
 }
 
 ////////////////////////////////////////////////////////////
-void CodeActionParams::setRange(const nlohmann::json &jsonRPC)
+void CodeActionParams::setRange(const nlohmann::json& jsonRPC)
 {
     auto it = jsonRPC.find("range");
 
@@ -35,21 +35,21 @@ void CodeActionParams::setRange(const nlohmann::json &jsonRPC)
 }
 
 ////////////////////////////////////////////////////////////
-void CodeActionParams::setStartPosition(const nlohmann::json &jsonRPC)
+void CodeActionParams::setStartPosition(const nlohmann::json& jsonRPC)
 {
-    m_range.start.line = jsonRPC["line"];
+    m_range.start.line      = jsonRPC["line"];
     m_range.start.character = jsonRPC["character"];
 }
 
 ////////////////////////////////////////////////////////////
-void CodeActionParams::setEndPosition(const nlohmann::json &jsonRPC)
+void CodeActionParams::setEndPosition(const nlohmann::json& jsonRPC)
 {
-    m_range.end.line = jsonRPC["line"];
+    m_range.end.line      = jsonRPC["line"];
     m_range.end.character = jsonRPC["character"];
 }
 
 ////////////////////////////////////////////////////////////
-void CodeActionParams::setURI(const nlohmann::json &jsonRPC)
+void CodeActionParams::setURI(const nlohmann::json& jsonRPC)
 {
     auto it = jsonRPC.find("uri");
 

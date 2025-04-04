@@ -16,7 +16,7 @@ namespace ls6502
 {
 
 ////////////////////////////////////////////////////////////
-HoverItem InstructionSet6502HoverProvider::getHoverItem(const std::string &document, const Position &position)
+HoverItem InstructionSet6502HoverProvider::getHoverItem(const std::string& document, const Position& position)
 {
     std::string mnemonic = DocumentUtil::extractPrefix(document, position);
 

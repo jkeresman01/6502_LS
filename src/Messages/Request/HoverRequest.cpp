@@ -10,13 +10,13 @@ namespace ls6502
 {
 
 ////////////////////////////////////////////////////////////
-HoverRequest::HoverRequest(const nlohmann::json &jsonRPC) : RequestMessage(jsonRPC)
+HoverRequest::HoverRequest(const nlohmann::json& jsonRPC) : RequestMessage(jsonRPC)
 {
     setParams(jsonRPC);
 }
 
 ////////////////////////////////////////////////////////////
-void HoverRequest::setParams(const nlohmann::json &jsonRPC)
+void HoverRequest::setParams(const nlohmann::json& jsonRPC)
 {
     auto it = jsonRPC.find("params");
 

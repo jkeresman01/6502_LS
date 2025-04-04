@@ -14,11 +14,13 @@ namespace ls6502
 
 ////////////////////////////////////////////////////////////
 std::vector<CodeAction> UnsupportedInstructionDiagnosticsAnalyzer::provideCodeActions(
-  const Diagnostic &diagnostic, const std::string &document, const std::string &URI)
+    const Diagnostic&  diagnostic,
+    const std::string& document,
+    const std::string& URI)
 {
     m_codeActions.clear();
 
-    WorkspaceEdit workspaceEdit;
+    WorkspaceEdit         workspaceEdit;
     std::vector<TextEdit> textEdits;
 
     Range range = diagnostic.getRange();
@@ -34,14 +36,14 @@ std::vector<CodeAction> UnsupportedInstructionDiagnosticsAnalyzer::provideCodeAc
 }
 
 ////////////////////////////////////////////////////////////
-CodeAction UnsupportedInstructionDiagnosticsAnalyzer::createCodeAction(const WorkspaceEdit &workspaceEdit)
+CodeAction UnsupportedInstructionDiagnosticsAnalyzer::createCodeAction(const WorkspaceEdit& workspaceEdit)
 {
     return CodeAction::Builder()
-      .withTitle("Replace unsupported instruction")
-      .withCodeActionKind(CodeActionKind::REFACTOR)
-      .withPrefferedFix(false)
-      .withWorkspaceEdit(workspaceEdit)
-      .build();
+        .withTitle("Replace unsupported instruction")
+        .withCodeActionKind(CodeActionKind::REFACTOR)
+        .withPrefferedFix(false)
+        .withWorkspaceEdit(workspaceEdit)
+        .build();
 }
 
 } // namespace ls6502

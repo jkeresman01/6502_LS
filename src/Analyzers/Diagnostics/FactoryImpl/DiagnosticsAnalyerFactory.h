@@ -28,7 +28,7 @@ namespace ls6502
 //////////////////////////////////////////////////////////////
 class DiagnosticsAnalyzerFactory
 {
-  public:
+public:
     //////////////////////////////////////////////////////////////
     ///
     /// @brief Creates an instance of the appropriate
@@ -40,7 +40,7 @@ class DiagnosticsAnalyzerFactory
     ///         corresponding to the diagnostic type.
     ///
     //////////////////////////////////////////////////////////////
-    static std::shared_ptr<IDiagnosticsAnalyzer> getInstance(const Diagnostic &diagnostic)
+    static std::shared_ptr<IDiagnosticsAnalyzer> getInstance(const Diagnostic& diagnostic)
     {
         if (DiagnosticsUtil::isLabelMissingSemicolon(diagnostic))
         {

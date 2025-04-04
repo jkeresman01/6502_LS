@@ -26,7 +26,7 @@ DiagnosticsProvider::DiagnosticsProvider() : m_instructionSetRepository(Instruct
 }
 
 ////////////////////////////////////////////////////////////
-std::vector<Diagnostic> DiagnosticsProvider::getDiagnostics(const std::string &document)
+std::vector<Diagnostic> DiagnosticsProvider::getDiagnostics(const std::string& document)
 {
     m_diagnostics.clear();
 
@@ -43,9 +43,9 @@ std::vector<Diagnostic> DiagnosticsProvider::getDiagnostics(const std::string &d
 }
 
 ////////////////////////////////////////////////////////////
-void DiagnosticsProvider::checkMalformedLabel(const std::string &line, size_t lineNumber)
+void DiagnosticsProvider::checkMalformedLabel(const std::string& line, size_t lineNumber)
 {
-    std::regex labelRegex(R"(^\s*([A-Za-z_][A-Za-z0-9_]*)\s*$)");
+    std::regex  labelRegex(R"(^\s*([A-Za-z_][A-Za-z0-9_]*)\s*$)");
     std::smatch match;
 
     InstructionSetMapT::iterator it = m_instructionSet.find(line);
@@ -54,13 +54,15 @@ void DiagnosticsProvider::checkMalformedLabel(const std::string &line, size_t li
 
     if (isMissingColon)
     {
-        m_diagnostics.emplace_back(Range{lineNumber, 0, lineNumber, line.size()}, DiagnosticSeverity::WARNING,
-                                   typeid(*this).name(), "Malformed label");
+        m_diagnostics.emplace_back(Range{lineNumber, 0, lineNumber, line.size()},
+                                   DiagnosticSeverity::WARNING,
+                                   typeid(*this).name(),
+                                   "Malformed label");
     }
 }
 
 ////////////////////////////////////////////////////////////
-void DiagnosticsProvider::checkUnsupportedInstructions(const std::string &line, size_t lineNumber)
+void DiagnosticsProvider::checkUnsupportedInstructions(const std::string& line, size_t lineNumber)
 {
     std::istringstream iss(line);
 
@@ -76,13 +78,14 @@ void DiagnosticsProvider::checkUnsupportedInstructions(const std::string &line, 
     if (!mnemonic.empty() and !isValid6502ASMInstruction)
     {
         m_diagnostics.emplace_back(Range{lineNumber, 0, lineNumber, mnemonic.size()},
-                                   DiagnosticSeverity::ERROR, typeid(*this).name(),
+                                   DiagnosticSeverity::ERROR,
+                                   typeid(*this).name(),
                                    "Unsupported instruction: " + mnemonic);
     }
 }
 
 ////////////////////////////////////////////////////////////
-void DiagnosticsProvider::checkGeneralSyntaxErrors(const std::string &line, size_t lineNumber)
+void DiagnosticsProvider::checkGeneralSyntaxErrors(const std::string& line, size_t lineNumber)
 {
     std::regex validSyntaxRegex(R"(^\s*([A-Za-z_][A-Za-z0-9_]*:)?\s*([A-Z]{2,3})?\s*([^;]*)?(;.*)?$)");
 
@@ -90,8 +93,10 @@ void DiagnosticsProvider::checkGeneralSyntaxErrors(const std::string &line, size
 
     if (!isValidSyntax)
     {
-        m_diagnostics.emplace_back(Range{lineNumber, 0, lineNumber, line.size()}, DiagnosticSeverity::ERROR,
-                                   typeid(*this).name(), "General syntax error");
+        m_diagnostics.emplace_back(Range{lineNumber, 0, lineNumber, line.size()},
+                                   DiagnosticSeverity::ERROR,
+                                   typeid(*this).name(),
+                                   "General syntax error");
     }
 }
 } // namespace ls6502

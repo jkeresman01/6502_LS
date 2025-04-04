@@ -10,14 +10,14 @@ namespace ls6502
 {
 
 ////////////////////////////////////////////////////////////
-DidChangeTextDocumentParams::DidChangeTextDocumentParams(const nlohmann::json &jsonRPC)
+DidChangeTextDocumentParams::DidChangeTextDocumentParams(const nlohmann::json& jsonRPC)
 {
     setTextDocumentIdentifier(jsonRPC["textDocument"]);
     setContentChanges(jsonRPC["contentChanges"][0]);
 }
 
 ////////////////////////////////////////////////////////////
-void DidChangeTextDocumentParams::setTextDocumentIdentifier(const nlohmann::json &jsonRPC)
+void DidChangeTextDocumentParams::setTextDocumentIdentifier(const nlohmann::json& jsonRPC)
 {
     auto it = jsonRPC.find("uri");
 
@@ -31,7 +31,7 @@ void DidChangeTextDocumentParams::setTextDocumentIdentifier(const nlohmann::json
 }
 
 ////////////////////////////////////////////////////////////
-void DidChangeTextDocumentParams::setContentChanges(const nlohmann::json &jsonRPC)
+void DidChangeTextDocumentParams::setContentChanges(const nlohmann::json& jsonRPC)
 {
     auto it = jsonRPC.find("text");
 

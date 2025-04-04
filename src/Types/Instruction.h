@@ -21,7 +21,7 @@ namespace ls6502
 //////////////////////////////////////////////////////////////
 struct Instruction
 {
-  public:
+public:
     //////////////////////////////////////////////////////////////
     ///
     /// @brief The mnemonic of the instruction.
@@ -92,7 +92,7 @@ struct Instruction
         return ss.str();
     }
 
-  private:
+private:
     //////////////////////////////////////////////////////////////
     ///
     /// @brief Appends flag information to the provided
@@ -102,9 +102,9 @@ struct Instruction
     ///        flag details are added.
     ///
     //////////////////////////////////////////////////////////////
-    void putFlags(std::ostringstream &ss) const
+    void putFlags(std::ostringstream& ss) const
     {
-        for (const auto &[flag, value] : flags)
+        for (const auto& [flag, value] : flags)
         {
             ss << flag << "=" << (value ? "1" : "0") << " ";
         }
@@ -121,9 +121,9 @@ struct Instruction
     ///         mode details are added.
     ///
     //////////////////////////////////////////////////////////////
-    void putAddressingModes(std::ostringstream &ss) const
+    void putAddressingModes(std::ostringstream& ss) const
     {
-        for (const auto &addressingMode : addressingModes)
+        for (const auto& addressingMode : addressingModes)
         {
             ss << addressingMode.toString();
         }

@@ -33,48 +33,48 @@ namespace ls6502
 {
 
 ////////////////////////////////////////////////////////////
-void Ls6502Facade::handleRequest(const nlohmann::json &request)
+void Ls6502Facade::handleRequest(const nlohmann::json& request)
 {
     switch (MessageUtil::getMethod(request))
     {
-    case RequestType::INITIALIZE:
-        handleInitializeRequest(request);
-        break;
-    case RequestType::INITIALIZED:
-        handleInitializedRequest(request);
-        break;
-    case RequestType::TEXT_DOCUMENT_DID_OPEN:
-        handleTextDocumentDidOpenRequest(request);
-        break;
-    case RequestType::TEXT_DOCUMENT_DID_CHANGE:
-        handleTextDocumentDidChangeRequest(request);
-        break;
-    case RequestType::TEXT_DOCUMENT_COMPLETION:
-        handleTextDocumentCompletionRequest(request);
-        break;
-    case RequestType::TEXT_DOCUMENT_HOVER:
-        handleTextDocumentHoverRequest(request);
-        break;
-    case RequestType::TEXT_DOCUMENT_CODE_ACTION:
-        handleTextDocumentCodeActionRequest(request);
-        break;
-    case RequestType::TEXT_DOCUMENT_DEFINITION:
-        handleTextDocumentDefintionRequest(request);
-        break;
-    case RequestType::SHUTDOWN:
-        handleShutdownRequest(request);
-        break;
-    case RequestType::EXIT:
-        handleExitRequest(request);
-        break;
-    default:
-        LS_6502_ERROR("Received request/notification with method: UNKNOWN_TYPE");
-        break;
+        case RequestType::INITIALIZE:
+            handleInitializeRequest(request);
+            break;
+        case RequestType::INITIALIZED:
+            handleInitializedRequest(request);
+            break;
+        case RequestType::TEXT_DOCUMENT_DID_OPEN:
+            handleTextDocumentDidOpenRequest(request);
+            break;
+        case RequestType::TEXT_DOCUMENT_DID_CHANGE:
+            handleTextDocumentDidChangeRequest(request);
+            break;
+        case RequestType::TEXT_DOCUMENT_COMPLETION:
+            handleTextDocumentCompletionRequest(request);
+            break;
+        case RequestType::TEXT_DOCUMENT_HOVER:
+            handleTextDocumentHoverRequest(request);
+            break;
+        case RequestType::TEXT_DOCUMENT_CODE_ACTION:
+            handleTextDocumentCodeActionRequest(request);
+            break;
+        case RequestType::TEXT_DOCUMENT_DEFINITION:
+            handleTextDocumentDefintionRequest(request);
+            break;
+        case RequestType::SHUTDOWN:
+            handleShutdownRequest(request);
+            break;
+        case RequestType::EXIT:
+            handleExitRequest(request);
+            break;
+        default:
+            LS_6502_ERROR("Received request/notification with method: UNKNOWN_TYPE");
+            break;
     }
 }
 
 ////////////////////////////////////////////////////////////
-void Ls6502Facade::handleInitializeRequest(const nlohmann::json &request)
+void Ls6502Facade::handleInitializeRequest(const nlohmann::json& request)
 {
     LS_6502_DEBUG("Received request with method: initialize");
 
@@ -88,7 +88,7 @@ void Ls6502Facade::handleInitializeRequest(const nlohmann::json &request)
 }
 
 ////////////////////////////////////////////////////////////
-void Ls6502Facade::handleShutdownRequest(const nlohmann::json &request)
+void Ls6502Facade::handleShutdownRequest(const nlohmann::json& request)
 {
     LS_6502_DEBUG("Received request with method: shutdown");
 
@@ -100,7 +100,7 @@ void Ls6502Facade::handleShutdownRequest(const nlohmann::json &request)
 }
 
 ////////////////////////////////////////////////////////////
-void Ls6502Facade::handleInitializedRequest(const nlohmann::json &request)
+void Ls6502Facade::handleInitializedRequest(const nlohmann::json& request)
 {
     LS_6502_DEBUG("Received notification with method: initialized");
 
@@ -112,7 +112,7 @@ void Ls6502Facade::handleInitializedRequest(const nlohmann::json &request)
 }
 
 ////////////////////////////////////////////////////////////
-void Ls6502Facade::handleTextDocumentDidOpenRequest(const nlohmann::json &request)
+void Ls6502Facade::handleTextDocumentDidOpenRequest(const nlohmann::json& request)
 {
     LS_6502_DEBUG("Received notification with method: textDocument/didOpen");
 
@@ -120,14 +120,14 @@ void Ls6502Facade::handleTextDocumentDidOpenRequest(const nlohmann::json &reques
 
     ensureNoReqIsProcessedAfterShutdown(request);
 
-    std::shared_ptr<DidOpenTextDocumentRequest> didOpenTextDocumentNotification
-      = MessageFactory::createDidOpenTextDocumentReq(request);
+    std::shared_ptr<DidOpenTextDocumentRequest>
+        didOpenTextDocumentNotification = MessageFactory::createDidOpenTextDocumentReq(request);
 
     m_ls6502ReqHandler->textDocumentDidOpenReq(didOpenTextDocumentNotification);
 }
 
 ////////////////////////////////////////////////////////////
-void Ls6502Facade::handleTextDocumentDidChangeRequest(const nlohmann::json &request)
+void Ls6502Facade::handleTextDocumentDidChangeRequest(const nlohmann::json& request)
 {
     LS_6502_DEBUG("Received request with method: textDocument/didChange");
 
@@ -135,14 +135,14 @@ void Ls6502Facade::handleTextDocumentDidChangeRequest(const nlohmann::json &requ
 
     ensureNoReqIsProcessedAfterShutdown(request);
 
-    std::shared_ptr<DidChangeTextDocumentRequest> didChangeTextDocumentReq
-      = MessageFactory::createDidChangeTextDocumentReq(request);
+    std::shared_ptr<DidChangeTextDocumentRequest> didChangeTextDocumentReq = MessageFactory::createDidChangeTextDocumentReq(
+        request);
 
     m_ls6502ReqHandler->textDocumentDidChangeReq(didChangeTextDocumentReq);
 }
 
 ////////////////////////////////////////////////////////////
-void Ls6502Facade::handleTextDocumentCompletionRequest(const nlohmann::json &request)
+void Ls6502Facade::handleTextDocumentCompletionRequest(const nlohmann::json& request)
 {
     LS_6502_DEBUG("Received request with method: textDocument/completion");
 
@@ -156,7 +156,7 @@ void Ls6502Facade::handleTextDocumentCompletionRequest(const nlohmann::json &req
 }
 
 ////////////////////////////////////////////////////////////
-void Ls6502Facade::handleExitRequest(const nlohmann::json &request)
+void Ls6502Facade::handleExitRequest(const nlohmann::json& request)
 {
     LS_6502_DEBUG("Received notification with method: exit");
 
@@ -175,7 +175,7 @@ void Ls6502Facade::handleExitRequest(const nlohmann::json &request)
 }
 
 ////////////////////////////////////////////////////////////
-void Ls6502Facade::handleTextDocumentHoverRequest(const nlohmann::json &request)
+void Ls6502Facade::handleTextDocumentHoverRequest(const nlohmann::json& request)
 {
     LS_6502_DEBUG("Received request with method: textDocument/hover");
 
@@ -189,7 +189,7 @@ void Ls6502Facade::handleTextDocumentHoverRequest(const nlohmann::json &request)
 }
 
 ////////////////////////////////////////////////////////////
-void Ls6502Facade::handleTextDocumentCodeActionRequest(const nlohmann::json &request)
+void Ls6502Facade::handleTextDocumentCodeActionRequest(const nlohmann::json& request)
 {
     LS_6502_DEBUG("Received request with method: textDocument/codeAction");
 
@@ -203,7 +203,7 @@ void Ls6502Facade::handleTextDocumentCodeActionRequest(const nlohmann::json &req
 }
 
 ////////////////////////////////////////////////////////////
-void Ls6502Facade::handleTextDocumentDefintionRequest(const nlohmann::json &request)
+void Ls6502Facade::handleTextDocumentDefintionRequest(const nlohmann::json& request)
 {
     LS_6502_DEBUG("Received request with method: textDocument/codeAction");
 
@@ -211,14 +211,13 @@ void Ls6502Facade::handleTextDocumentDefintionRequest(const nlohmann::json &requ
 
     ensureNoReqIsProcessedAfterShutdown(request);
 
-    std::shared_ptr<DefintionRequest> definitionRequest
-      = MessageFactory::createGoToDefinitionRequest(request);
+    std::shared_ptr<DefintionRequest> definitionRequest = MessageFactory::createGoToDefinitionRequest(request);
 
     m_ls6502ReqHandler->textDocumentDefinitionReq(definitionRequest);
 }
 
 ////////////////////////////////////////////////////////////
-void Ls6502Facade::ensureNoReqIsProcessedAfterShutdown(const nlohmann::json &request)
+void Ls6502Facade::ensureNoReqIsProcessedAfterShutdown(const nlohmann::json& request)
 {
     bool isShutdownReqReceived = m_ls6502Counters->getValue(RequestType::SHUTDOWN) != 0;
 

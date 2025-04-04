@@ -22,7 +22,7 @@ namespace ls6502
 //////////////////////////////////////////////////////////////
 class CodeAction
 {
-  public:
+public:
     //////////////////////////////////////////////////////////////
     ///
     /// @brief Default constructor
@@ -40,15 +40,20 @@ class CodeAction
     /// @param [in] edit
     ///
     //////////////////////////////////////////////////////////////
-    CodeAction(const std::string &title, const CodeActionKind &codeActionKind, const bool isPreffered,
-               const WorkspaceEdit &edit);
+    CodeAction(const std::string&    title,
+               const CodeActionKind& codeActionKind,
+               const bool            isPreffered,
+               const WorkspaceEdit&  edit);
 
     //////////////////////////////////////////////////////////////
     ///
     /// @brief Accessor method for title
     ///
     //////////////////////////////////////////////////////////////
-    std::string getTitle() const { return m_title; };
+    std::string getTitle() const
+    {
+        return m_title;
+    };
 
     //////////////////////////////////////////////////////////////
     ///
@@ -77,7 +82,7 @@ class CodeAction
     //////////////////////////////////////////////////////////////
     class Builder
     {
-      public:
+    public:
         //////////////////////////////////////////////////////////////
         ///
         /// @brief Sets the title of the CodeAction.
@@ -87,7 +92,7 @@ class CodeAction
         /// @return Reference to the Builder for method chaining.
         ///
         //////////////////////////////////////////////////////////////
-        Builder &withTitle(const std::string &title);
+        Builder& withTitle(const std::string& title);
 
         //////////////////////////////////////////////////////////////
         ///
@@ -98,7 +103,7 @@ class CodeAction
         /// @return Reference to the Builder for method chaining.
         ///
         //////////////////////////////////////////////////////////////
-        Builder &withCodeActionKind(const CodeActionKind &codeActionKind);
+        Builder& withCodeActionKind(const CodeActionKind& codeActionKind);
 
         //////////////////////////////////////////////////////////////
         ///
@@ -109,7 +114,7 @@ class CodeAction
         /// @return Reference to the Builder for method chaining.
         ///
         //////////////////////////////////////////////////////////////
-        Builder &withPrefferedFix(bool isPreffered);
+        Builder& withPrefferedFix(bool isPreffered);
 
         //////////////////////////////////////////////////////////////
         ///
@@ -120,7 +125,7 @@ class CodeAction
         /// @return Reference to the Builder for method chaining.
         ///
         //////////////////////////////////////////////////////////////
-        Builder &withWorkspaceEdit(const WorkspaceEdit &workspaceEdit);
+        Builder& withWorkspaceEdit(const WorkspaceEdit& workspaceEdit);
 
         //////////////////////////////////////////////////////////////
         ///
@@ -131,7 +136,7 @@ class CodeAction
         //////////////////////////////////////////////////////////////
         CodeAction build();
 
-      private:
+    private:
         //////////////////////////////////////////////////////////////
         ///
         /// @brief Title of the code action.
@@ -161,7 +166,7 @@ class CodeAction
         WorkspaceEdit m_workspaceEdit;
     };
 
-  private:
+private:
     //////////////////////////////////////////////////////////////
     ///
     /// @brief Title of the code action.

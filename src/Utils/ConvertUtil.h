@@ -21,7 +21,7 @@ namespace ls6502
 /////////////////////////////////////////////////////////////////////
 class Converter
 {
-  public:
+public:
     /////////////////////////////////////////////////////////////////////
     ///
     /// @brief Delete default constructor to prevent instantiation
@@ -36,7 +36,8 @@ class Converter
     /// @param [in] input
     ///
     /////////////////////////////////////////////////////////////////////
-    template <typename T> static T convert(const std::string &input);
+    template <typename T>
+    static T convert(const std::string& input);
 };
 
 /////////////////////////////////////////////////////////////////////
@@ -44,9 +45,10 @@ class Converter
 /////////////////////////////////////////////////////////////////////
 
 ////////////////////////////////////////////////////////////
-template <typename T> inline T Converter::convert(const std::string &input)
+template <typename T>
+inline T Converter::convert(const std::string& input)
 {
-    T result;
+    T                 result;
     std::stringstream converter(input);
 
     if (!(converter >> result))

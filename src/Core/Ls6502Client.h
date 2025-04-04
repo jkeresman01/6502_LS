@@ -30,7 +30,7 @@ typedef std::unordered_map<std::string, std::string> DocumentsMapT;
 //////////////////////////////////////////////////////////////
 class Ls6502Client
 {
-  public:
+public:
     //////////////////////////////////////////////////////////////
     ///
     /// @brief Default constructor
@@ -47,7 +47,7 @@ class Ls6502Client
     /// @param [in] clientCapabilites
     ///
     //////////////////////////////////////////////////////////////
-    Ls6502Client(const ClientInfo &clientInfo, const std::shared_ptr<ClientCapabilities> &clientCapabilites);
+    Ls6502Client(const ClientInfo& clientInfo, const std::shared_ptr<ClientCapabilities>& clientCapabilites);
 
     //////////////////////////////////////////////////////////////
     ///
@@ -57,7 +57,7 @@ class Ls6502Client
     /// @param [in] clientCapabilites
     ///
     //////////////////////////////////////////////////////////////
-    void registerCapabilites(const std::shared_ptr<ClientCapabilities> &clientCapabilites);
+    void registerCapabilites(const std::shared_ptr<ClientCapabilities>& clientCapabilites);
 
     //////////////////////////////////////////////////////////////
     ///
@@ -66,7 +66,7 @@ class Ls6502Client
     /// @param [in] clientInfo
     ///
     //////////////////////////////////////////////////////////////
-    void saveInfo(const ClientInfo &clientInfo);
+    void saveInfo(const ClientInfo& clientInfo);
 
     //////////////////////////////////////////////////////////////
     ///
@@ -76,7 +76,7 @@ class Ls6502Client
     /// @param [in] document
     ///
     //////////////////////////////////////////////////////////////
-    void addDocument(const std::string &URI, const std::string &document);
+    void addDocument(const std::string& URI, const std::string& document);
 
     //////////////////////////////////////////////////////////////
     ///
@@ -86,7 +86,7 @@ class Ls6502Client
     /// @param [in] document
     ///
     //////////////////////////////////////////////////////////////
-    void updateDocumentWithURI(const std::string &URI, const std::string &document);
+    void updateDocumentWithURI(const std::string& URI, const std::string& document);
 
     //////////////////////////////////////////////////////////////
     ///
@@ -95,7 +95,7 @@ class Ls6502Client
     /// @param [in] URI
     ///
     //////////////////////////////////////////////////////////////
-    std::string getDocumentByURI(const std::string &URI) const;
+    std::string getDocumentByURI(const std::string& URI) const;
 
     //////////////////////////////////////////////////////////////
     ///
@@ -104,9 +104,12 @@ class Ls6502Client
     /// @return clientInfo
     ///
     //////////////////////////////////////////////////////////////
-    std::string getInfo() const { return m_clientInfo.toString(); };
+    std::string getInfo() const
+    {
+        return m_clientInfo.toString();
+    };
 
-  private:
+private:
     //////////////////////////////////////////////////////////////
     ///
     /// @brief Client capabilites

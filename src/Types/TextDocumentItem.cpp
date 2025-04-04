@@ -10,7 +10,7 @@ namespace ls6502
 {
 
 ////////////////////////////////////////////////////////////
-TextDocumentItem::TextDocumentItem(const nlohmann::json &jsonRPC)
+TextDocumentItem::TextDocumentItem(const nlohmann::json& jsonRPC)
 {
     setURI(jsonRPC);
     setLanguageId(jsonRPC);
@@ -19,7 +19,7 @@ TextDocumentItem::TextDocumentItem(const nlohmann::json &jsonRPC)
 }
 
 ////////////////////////////////////////////////////////////
-void TextDocumentItem::setURI(const nlohmann::json &jsonRPC)
+void TextDocumentItem::setURI(const nlohmann::json& jsonRPC)
 {
     auto it = jsonRPC.find("uri");
 
@@ -33,7 +33,7 @@ void TextDocumentItem::setURI(const nlohmann::json &jsonRPC)
 }
 
 ////////////////////////////////////////////////////////////
-void TextDocumentItem::setLanguageId(const nlohmann::json &jsonRPC)
+void TextDocumentItem::setLanguageId(const nlohmann::json& jsonRPC)
 {
     auto it = jsonRPC.find("languageId");
 
@@ -47,7 +47,7 @@ void TextDocumentItem::setLanguageId(const nlohmann::json &jsonRPC)
 }
 
 ////////////////////////////////////////////////////////////
-void TextDocumentItem::setTextVersion(const nlohmann::json &jsonRPC)
+void TextDocumentItem::setTextVersion(const nlohmann::json& jsonRPC)
 {
     auto it = jsonRPC.find("version");
 
@@ -61,7 +61,7 @@ void TextDocumentItem::setTextVersion(const nlohmann::json &jsonRPC)
 }
 
 ////////////////////////////////////////////////////////////
-void TextDocumentItem::setText(const nlohmann::json &jsonRPC)
+void TextDocumentItem::setText(const nlohmann::json& jsonRPC)
 {
     auto it = jsonRPC.find("text");
 

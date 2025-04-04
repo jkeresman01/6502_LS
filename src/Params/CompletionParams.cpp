@@ -10,7 +10,7 @@ namespace ls6502
 {
 
 ////////////////////////////////////////////////////////////
-CompletionParams::CompletionParams(const nlohmann::json &jsonRPC)
+CompletionParams::CompletionParams(const nlohmann::json& jsonRPC)
 {
     setCompletionContext(jsonRPC["context"]);
     setPosition(jsonRPC["position"]);
@@ -18,7 +18,7 @@ CompletionParams::CompletionParams(const nlohmann::json &jsonRPC)
 }
 
 ////////////////////////////////////////////////////////////
-void CompletionParams::setCompletionContext(const nlohmann::json &jsonRPC)
+void CompletionParams::setCompletionContext(const nlohmann::json& jsonRPC)
 {
     auto it = jsonRPC.find("triggerKind");
 
@@ -32,14 +32,14 @@ void CompletionParams::setCompletionContext(const nlohmann::json &jsonRPC)
 }
 
 ////////////////////////////////////////////////////////////
-void CompletionParams::setPosition(const nlohmann::json &jsonRPC)
+void CompletionParams::setPosition(const nlohmann::json& jsonRPC)
 {
     m_position.character = jsonRPC["character"];
-    m_position.line = jsonRPC["line"];
+    m_position.line      = jsonRPC["line"];
 }
 
 ////////////////////////////////////////////////////////////
-void CompletionParams::setTextDocumentIdentifier(const nlohmann::json &jsonRPC)
+void CompletionParams::setTextDocumentIdentifier(const nlohmann::json& jsonRPC)
 {
     auto it = jsonRPC.find("uri");
 

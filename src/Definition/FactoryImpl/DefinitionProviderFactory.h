@@ -25,7 +25,7 @@ namespace ls6502
 //////////////////////////////////////////////////////////////
 class DefinitionProviderFactory
 {
-  public:
+public:
     //////////////////////////////////////////////////////////////
     ///
     /// @brief Deleted constructor to prevent instantiation.
@@ -43,8 +43,8 @@ class DefinitionProviderFactory
     //////////////////////////////////////////////////////////////
     static std::shared_ptr<IDefinitionProvider> create()
     {
-        const std::string &definitionProvider
-          = ConfigurationManager::getInstance()->getProperty("definition");
+        const std::string& definitionProvider = ConfigurationManager::getInstance()->getProperty(
+            "definition");
 
         LS_6502_DEBUG(STR("Definition provider: %s", definitionProvider.c_str()));
 

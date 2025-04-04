@@ -19,14 +19,14 @@ InstructionsSetMapT InstructionSetManager::getAllInstructions()
 }
 
 ////////////////////////////////////////////////////////////
-std::vector<std::string> InstructionSetManager::getInstructionsByPrefix(const std::string &prefix)
+std::vector<std::string> InstructionSetManager::getInstructionsByPrefix(const std::string& prefix)
 {
     loadInstructionSetTrie();
     return m_instructionSetTrie->getCompletionWords(prefix);
 }
 
 ////////////////////////////////////////////////////////////
-std::optional<Instruction> InstructionSetManager::getInstructionByMnemonic(const std::string &mnemonic)
+std::optional<Instruction> InstructionSetManager::getInstructionByMnemonic(const std::string& mnemonic)
 {
     loadInstructions();
 
@@ -55,14 +55,14 @@ void InstructionSetManager::loadInstructionSetTrie()
 {
     loadInstructions();
 
-    for (const auto &[mnemonic, _] : m_instructionSet)
+    for (const auto& [mnemonic, _] : m_instructionSet)
     {
         m_instructionSetTrie->insert(mnemonic);
     }
 }
 
 ////////////////////////////////////////////////////////////
-InstructionSetManager &InstructionSetManager::getInstance()
+InstructionSetManager& InstructionSetManager::getInstance()
 {
     static InstructionSetManager instance;
     return instance;

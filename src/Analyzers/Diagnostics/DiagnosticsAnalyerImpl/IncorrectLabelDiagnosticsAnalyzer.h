@@ -24,7 +24,7 @@ namespace ls6502
 //////////////////////////////////////////////////////////////
 class IncorrectLabelDiagnosticsAnalyzer : public IDiagnosticsAnalyzer
 {
-  public:
+public:
     //////////////////////////////////////////////////////////////
     ///
     /// @brief Provides code actions based on a given diagnostic.
@@ -37,10 +37,11 @@ class IncorrectLabelDiagnosticsAnalyzer : public IDiagnosticsAnalyzer
     ///         fixes or improvements for the diagnostic.
     ///
     //////////////////////////////////////////////////////////////
-    std::vector<CodeAction> provideCodeActions(const Diagnostic &diagnostic, const std::string &document,
-                                               const std::string &URI) override;
+    std::vector<CodeAction> provideCodeActions(const Diagnostic&  diagnostic,
+                                               const std::string& document,
+                                               const std::string& URI) override;
 
-  private:
+private:
     //////////////////////////////////////////////////////////////
     ///
     /// @brief Creates a code action based on the provided
@@ -51,9 +52,9 @@ class IncorrectLabelDiagnosticsAnalyzer : public IDiagnosticsAnalyzer
     /// @return A CodeAction object representing the suggested fix.
     ///
     //////////////////////////////////////////////////////////////
-    CodeAction createCodeAction(const WorkspaceEdit &workspaceEdit);
+    CodeAction createCodeAction(const WorkspaceEdit& workspaceEdit);
 
-  private:
+private:
     //////////////////////////////////////////////////////////////
     ///
     /// @brief Stores available code actions for the analyzer.

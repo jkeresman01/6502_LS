@@ -23,7 +23,7 @@ namespace ls6502
 //////////////////////////////////////////////////////////////
 class CompletionResult
 {
-  public:
+public:
     //////////////////////////////////////////////////////////////
     ///
     /// @brief Constructs a CompletionResult with a provided vector of
@@ -32,7 +32,7 @@ class CompletionResult
     /// @param [in] completionItems
     ///
     //////////////////////////////////////////////////////////////
-    explicit CompletionResult(const std::vector<CompletionItem> &completionItems);
+    explicit CompletionResult(const std::vector<CompletionItem>& completionItems);
 
     //////////////////////////////////////////////////////////////
     ///
@@ -43,7 +43,7 @@ class CompletionResult
     //////////////////////////////////////////////////////////////
     nlohmann::json toJson() const;
 
-  private:
+private:
     //////////////////////////////////////////////////////////////
     ///
     /// @brief Stores a list of completion items for a completion response.

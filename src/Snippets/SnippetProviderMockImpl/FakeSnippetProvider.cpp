@@ -17,7 +17,7 @@ FakeSnippetsProvider::FakeSnippetsProvider()
 }
 
 ////////////////////////////////////////////////////////////
-std::vector<CompletionItem> FakeSnippetsProvider::getSnippets(const std::string &prefix)
+std::vector<CompletionItem> FakeSnippetsProvider::getSnippets(const std::string& prefix)
 {
     (void)prefix;
 
@@ -26,7 +26,7 @@ std::vector<CompletionItem> FakeSnippetsProvider::getSnippets(const std::string 
 }
 
 ////////////////////////////////////////////////////////////
-void FakeSnippetsProvider::fillFakeSnippets(std::vector<CompletionItem> &snippets)
+void FakeSnippetsProvider::fillFakeSnippets(std::vector<CompletionItem>& snippets)
 {
     m_snippets.emplace_back("snippet 1", CompletionItemKind::SNIPPET, "", "", "snippet 1 insert text");
     m_snippets.emplace_back("snippet 2", CompletionItemKind::SNIPPET, "", "", "snippet 2 insert text");

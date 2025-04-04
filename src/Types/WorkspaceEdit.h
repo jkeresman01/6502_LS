@@ -31,7 +31,7 @@ typedef std::unordered_map<std::string, std::vector<TextEdit>> ChangesT;
 //////////////////////////////////////////////////////////////
 class WorkspaceEdit
 {
-  public:
+public:
     //////////////////////////////////////////////////////////////
     ///
     /// @brief Default constructor for WorkspaceEdit.
@@ -48,7 +48,7 @@ class WorkspaceEdit
     ///        path (string) and a vector of TextEdit objects.
     ///
     //////////////////////////////////////////////////////////////
-    void addChange(const std::pair<std::string, std::vector<TextEdit>> &textEdit);
+    void addChange(const std::pair<std::string, std::vector<TextEdit>>& textEdit);
 
     //////////////////////////////////////////////////////////////
     ///
@@ -68,7 +68,7 @@ class WorkspaceEdit
     //////////////////////////////////////////////////////////////
     std::string toString() const;
 
-  private:
+private:
     //////////////////////////////////////////////////////////////
     ///
     /// @brief A map of file paths to text edit operations.

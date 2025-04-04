@@ -21,18 +21,18 @@ namespace ls6502
 //////////////////////////////////////////////////////////////
 class Ls6502ErrorHandler
 {
-  public:
+public:
     //////////////////////////////////////////////////////////////
     ///
     /// @brief Constructors (default, copy, move)
     ///        and assignment operators
     ///
     //////////////////////////////////////////////////////////////
-    Ls6502ErrorHandler() = default;
-    Ls6502ErrorHandler(const Ls6502ErrorHandler &) = delete;
-    Ls6502ErrorHandler(Ls6502ErrorHandler &&) = delete;
-    Ls6502ErrorHandler &operator=(const Ls6502ErrorHandler &) = delete;
-    Ls6502ErrorHandler &operator=(Ls6502ErrorHandler &&) = delete;
+    Ls6502ErrorHandler()                                     = default;
+    Ls6502ErrorHandler(const Ls6502ErrorHandler&)            = delete;
+    Ls6502ErrorHandler(Ls6502ErrorHandler&&)                 = delete;
+    Ls6502ErrorHandler& operator=(const Ls6502ErrorHandler&) = delete;
+    Ls6502ErrorHandler& operator=(Ls6502ErrorHandler&&)      = delete;
 
     //////////////////////////////////////////////////////////////
     ///
@@ -79,7 +79,7 @@ class Ls6502ErrorHandler
     //////////////////////////////////////////////////////////////
     void handleReceivedReqAfterShutdownError(int64_t id);
 
-  private:
+private:
     //////////////////////////////////////////////////////////////
     ///
     /// @brief Handles the error
@@ -88,6 +88,6 @@ class Ls6502ErrorHandler
     /// @param [in] id
     ///
     //////////////////////////////////////////////////////////////
-    void handleError(const ResponseError &responseError, int64_t id);
+    void handleError(const ResponseError& responseError, int64_t id);
 };
 } // namespace ls6502

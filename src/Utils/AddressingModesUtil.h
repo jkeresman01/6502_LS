@@ -31,7 +31,7 @@ typedef std::unordered_map<AddressingModes, std::string> AddressingModeStringMap
 //////////////////////////////////////////////////////////////
 class AddressingModeUtil
 {
-  public:
+public:
     //////////////////////////////////////////////////////////////
     ///
     /// @brief Deleted default constructor to prevent instantiation.
@@ -49,7 +49,7 @@ class AddressingModeUtil
     /// @return The corresponding AddressingModes enum value.
     ///
     //////////////////////////////////////////////////////////////
-    static AddressingModes stringToAddressingMode(const std::string &addressingMode);
+    static AddressingModes stringToAddressingMode(const std::string& addressingMode);
 
     //////////////////////////////////////////////////////////////
     ///
@@ -61,7 +61,7 @@ class AddressingModeUtil
     /// @return A C-string representing the addressing mode.
     ///
     //////////////////////////////////////////////////////////////
-    static const char *addressingModeToString(const AddressingModes addressingMode);
+    static const char* addressingModeToString(const AddressingModes addressingMode);
 };
 
 } // namespace ls6502

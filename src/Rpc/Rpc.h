@@ -22,7 +22,7 @@ namespace ls6502
 /////////////////////////////////////////////////////////////////////
 class Rpc
 {
-  public:
+public:
     /////////////////////////////////////////////////////////////////////
     ///
     /// @brief Delete default constructor to prevent instantiation
@@ -37,7 +37,10 @@ class Rpc
     /// @param [in] response
     ///
     /////////////////////////////////////////////////////////////////////
-    static void send(const Message &response) { std::cout << response << std::endl; }
+    static void send(const Message& response)
+    {
+        std::cout << response << std::endl;
+    }
 
     /////////////////////////////////////////////////////////////////////
     ///
@@ -46,7 +49,7 @@ class Rpc
     /////////////////////////////////////////////////////////////////////
     static std::string receive();
 
-  private:
+private:
     /////////////////////////////////////////////////////////////////////
     ///
     /// @brief Read content length from JSON RPC request
@@ -74,7 +77,7 @@ inline std::string Rpc::receive()
 inline uint32_t Rpc::extractContentLength()
 {
     std::string header;
-    uint32_t contentLength = 0;
+    uint32_t    contentLength = 0;
 
     while (getline(std::cin, header))
     {

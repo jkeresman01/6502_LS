@@ -9,8 +9,10 @@ namespace ls6502
 
 ////////////////////////////////////////////////////////////
 PublishDiagnosticsNoticifation::PublishDiagnosticsNoticifation(
-  const std::string &method, const std::shared_ptr<PublishDiagnosticsParams> &diagnosticsParams)
-    : NotificationMessage(method), m_diagnosticsParams(diagnosticsParams)
+    const std::string&                               method,
+    const std::shared_ptr<PublishDiagnosticsParams>& diagnosticsParams) :
+NotificationMessage(method),
+m_diagnosticsParams(diagnosticsParams)
 {
 }
 
@@ -21,8 +23,7 @@ nlohmann::json PublishDiagnosticsNoticifation::toJson() const
 }
 
 ////////////////////////////////////////////////////////////
-std::ostream &operator<<(std::ostream &os,
-                         const PublishDiagnosticsNoticifation &publishDiagsnosticsNotification)
+std::ostream& operator<<(std::ostream& os, const PublishDiagnosticsNoticifation& publishDiagsnosticsNotification)
 {
     nlohmann::json jsonRPC = publishDiagsnosticsNotification.toJson();
 

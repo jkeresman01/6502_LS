@@ -21,7 +21,7 @@ namespace ls6502
 //////////////////////////////////////////////////////////////
 class CompletionItem
 {
-  public:
+public:
     //////////////////////////////////////////////////////////////
     ///
     /// @brief Constructs textDocument/completion item
@@ -39,9 +39,11 @@ class CompletionItem
     /// @param [in] detail
     ///
     //////////////////////////////////////////////////////////////
-    CompletionItem(const std::string &label, const CompletionItemKind completionItemKind,
-                   const std::string &detail, const std::string &documentation,
-                   const std::string &insertedText);
+    CompletionItem(const std::string&       label,
+                   const CompletionItemKind completionItemKind,
+                   const std::string&       detail,
+                   const std::string&       documentation,
+                   const std::string&       insertedText);
 
     //////////////////////////////////////////////////////////////
     ///
@@ -50,14 +52,20 @@ class CompletionItem
     /// @return insert text
     ///
     //////////////////////////////////////////////////////////////
-    std::string getInsertedText() const { return m_insertText; }
+    std::string getInsertedText() const
+    {
+        return m_insertText;
+    }
 
     //////////////////////////////////////////////////////////////
     ///
     /// @brief Accessor method for inserted text
     ///
     //////////////////////////////////////////////////////////////
-    std::string getLabel() const { return m_label; }
+    std::string getLabel() const
+    {
+        return m_label;
+    }
 
     //////////////////////////////////////////////////////////////
     ///
@@ -66,7 +74,10 @@ class CompletionItem
     /// @return details
     ///
     //////////////////////////////////////////////////////////////
-    std::string getDetails() const { return m_detail; }
+    std::string getDetails() const
+    {
+        return m_detail;
+    }
 
     //////////////////////////////////////////////////////////////
     ///
@@ -75,7 +86,7 @@ class CompletionItem
     //////////////////////////////////////////////////////////////
     class Builder
     {
-      public:
+    public:
         //////////////////////////////////////////////////////////////
         ///
         /// @brief Sets the label of the completion item
@@ -85,7 +96,7 @@ class CompletionItem
         /// @return Reference to the Builder for method chaining.
         ///
         //////////////////////////////////////////////////////////////
-        Builder &withLabel(const std::string &label);
+        Builder& withLabel(const std::string& label);
 
         //////////////////////////////////////////////////////////////
         ///
@@ -96,7 +107,7 @@ class CompletionItem
         /// @return Reference to the Builder for method chaining.
         ///
         //////////////////////////////////////////////////////////////
-        Builder &withDetail(const std::string detail);
+        Builder& withDetail(const std::string detail);
 
         //////////////////////////////////////////////////////////////
         ///
@@ -107,7 +118,7 @@ class CompletionItem
         /// @return Reference to the Builder for method chaining.
         ///
         //////////////////////////////////////////////////////////////
-        Builder &withInsertedText(const std::string &insertedText);
+        Builder& withInsertedText(const std::string& insertedText);
 
         //////////////////////////////////////////////////////////////
         ///
@@ -118,7 +129,7 @@ class CompletionItem
         /// @return Reference to the Builder for method chaining.
         ///
         //////////////////////////////////////////////////////////////
-        Builder &withDocumentation(const std::string &documentation);
+        Builder& withDocumentation(const std::string& documentation);
 
         //////////////////////////////////////////////////////////////
         ///
@@ -129,9 +140,9 @@ class CompletionItem
         /// @return Reference to the Builder for method chaining.
         ///
         //////////////////////////////////////////////////////////////
-        Builder &withCompletionItemKind(const CompletionItemKind &completionItemKind);
+        Builder& withCompletionItemKind(const CompletionItemKind& completionItemKind);
 
-      private:
+    private:
         std::string m_label;
 
         //////////////////////////////////////////////////////////////

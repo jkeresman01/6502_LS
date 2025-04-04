@@ -19,7 +19,7 @@ namespace ls6502
 //////////////////////////////////////////////////////////////
 class ServerCapabilitiesDirector
 {
-  public:
+public:
     //////////////////////////////////////////////////////////////
     ///
     /// @brief Deleted default constructor to prevent instantiation.
@@ -35,14 +35,14 @@ class ServerCapabilitiesDirector
     /// @param [in] serverCapabilitesBuilder
     ///
     //////////////////////////////////////////////////////////////
-    static void constructDefaultServerCapabilities(ServerCapabilities::Builder &serverCapabilitesBuilder)
+    static void constructDefaultServerCapabilities(ServerCapabilities::Builder& serverCapabilitesBuilder)
     {
         serverCapabilitesBuilder.withTextDocumentSyncKind(TextDocumentSyncKind::FULL)
-          .withHoverSupport(true)
-          .withSnippetSupport(true)
-          .withCompletionSupport(true)
-          .withDefinitionSupport(true)
-          .withCodeActionSupport(true);
+            .withHoverSupport(true)
+            .withSnippetSupport(true)
+            .withCompletionSupport(true)
+            .withDefinitionSupport(true)
+            .withCodeActionSupport(true);
     }
 };
 

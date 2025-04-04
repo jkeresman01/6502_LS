@@ -21,7 +21,7 @@ namespace ls6502
 //////////////////////////////////////////////////////////////
 class Trie
 {
-  public:
+public:
     //////////////////////////////////////////////////////////////
     ///
     /// @brief Default constructor
@@ -36,7 +36,7 @@ class Trie
     /// @param [in] word
     ///
     //////////////////////////////////////////////////////////////
-    void insert(const std::string &word);
+    void insert(const std::string& word);
 
     //////////////////////////////////////////////////////////////
     ///
@@ -48,9 +48,9 @@ class Trie
     /// @return A vector containing all words that match the prefix
     ///
     //////////////////////////////////////////////////////////////
-    std::vector<std::string> getCompletionWords(const std::string &prefix) const;
+    std::vector<std::string> getCompletionWords(const std::string& prefix) const;
 
-  private:
+private:
     //////////////////////////////////////////////////////////////
     ///
     /// @brief Retrieves the TrieNode corresponding to the
@@ -62,7 +62,7 @@ class Trie
     ///         with the prefix, or nullptr if no such node exists
     ///
     //////////////////////////////////////////////////////////////
-    std::shared_ptr<Node> getNode(const std::string &prefix) const;
+    std::shared_ptr<Node> getNode(const std::string& prefix) const;
 
     //////////////////////////////////////////////////////////////
     ///
@@ -73,10 +73,9 @@ class Trie
     /// @param [in] results
     ///
     //////////////////////////////////////////////////////////////
-    void findAllWords(std::shared_ptr<Node> node, const std::string &prefix,
-                      std::vector<std::string> &results) const;
+    void findAllWords(std::shared_ptr<Node> node, const std::string& prefix, std::vector<std::string>& results) const;
 
-  private:
+private:
     //////////////////////////////////////////////////////////////
     ///
     /// @brief The root node of the trie

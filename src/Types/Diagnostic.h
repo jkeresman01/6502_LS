@@ -25,7 +25,7 @@ namespace ls6502
 //////////////////////////////////////////////////////////////
 class Diagnostic
 {
-  public:
+public:
     //////////////////////////////////////////////////////////////
     ///
     /// @brief Default constructor
@@ -43,8 +43,10 @@ class Diagnostic
     /// @param [in] message
     ///
     //////////////////////////////////////////////////////////////
-    Diagnostic(const Range &range, const DiagnosticSeverity &severity, const std::string &source,
-               const std::string &message);
+    Diagnostic(const Range&              range,
+               const DiagnosticSeverity& severity,
+               const std::string&        source,
+               const std::string&        message);
 
     //////////////////////////////////////////////////////////////
     ///
@@ -69,7 +71,10 @@ class Diagnostic
     /// @return diagnostics message
     ///
     //////////////////////////////////////////////////////////////
-    std::string getMessage() const { return m_message; };
+    std::string getMessage() const
+    {
+        return m_message;
+    };
 
     //////////////////////////////////////////////////////////////
     ///
@@ -78,9 +83,12 @@ class Diagnostic
     /// @return diagnostics range
     ///
     //////////////////////////////////////////////////////////////
-    Range getRange() const { return m_range; };
+    Range getRange() const
+    {
+        return m_range;
+    };
 
-  private:
+private:
     //////////////////////////////////////////////////////////////
     ///
     /// @brief The range in the source code where the diagnostic applies.

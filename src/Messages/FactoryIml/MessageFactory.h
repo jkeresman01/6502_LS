@@ -30,7 +30,7 @@ namespace ls6502
 //////////////////////////////////////////////////////////////
 class MessageFactory
 {
-  public:
+public:
     //////////////////////////////////////////////////////////////
     ///
     /// @brief Deleted constructor to prevent instantiation.
@@ -47,7 +47,7 @@ class MessageFactory
     /// @return A shared pointer to an InitializeRequest object.
     ///
     //////////////////////////////////////////////////////////////
-    static std::shared_ptr<InitializeRequest> createInitializeReq(const nlohmann::json &jsonRPC)
+    static std::shared_ptr<InitializeRequest> createInitializeReq(const nlohmann::json& jsonRPC)
     {
         return std::make_shared<InitializeRequest>(jsonRPC);
     }
@@ -61,7 +61,7 @@ class MessageFactory
     /// @return A shared pointer to an ShutdownRequest object.
     ///
     //////////////////////////////////////////////////////////////
-    static std::shared_ptr<ShutdownRequest> createShutdownReq(const nlohmann::json &jsonRPC)
+    static std::shared_ptr<ShutdownRequest> createShutdownReq(const nlohmann::json& jsonRPC)
     {
         return std::make_shared<ShutdownRequest>(jsonRPC);
     }
@@ -75,8 +75,7 @@ class MessageFactory
     /// @return A shared pointer to an DidOpenTextDocumentRequest object.
     ///
     //////////////////////////////////////////////////////////////
-    static std::shared_ptr<DidOpenTextDocumentRequest> createDidOpenTextDocumentReq(
-      const nlohmann::json &jsonRPC)
+    static std::shared_ptr<DidOpenTextDocumentRequest> createDidOpenTextDocumentReq(const nlohmann::json& jsonRPC)
     {
         return std::make_shared<DidOpenTextDocumentRequest>(jsonRPC);
     }
@@ -90,8 +89,7 @@ class MessageFactory
     /// @return A shared pointer to an DidChangeTextDocument object.
     ///
     //////////////////////////////////////////////////////////////
-    static std::shared_ptr<DidChangeTextDocumentRequest> createDidChangeTextDocumentReq(
-      const nlohmann::json &jsonRPC)
+    static std::shared_ptr<DidChangeTextDocumentRequest> createDidChangeTextDocumentReq(const nlohmann::json& jsonRPC)
     {
         return std::make_shared<DidChangeTextDocumentRequest>(jsonRPC);
     }
@@ -105,7 +103,7 @@ class MessageFactory
     /// @return A shared pointer to an Completion request object.
     ///
     //////////////////////////////////////////////////////////////
-    static std::shared_ptr<CompletionRequest> createCompletionReq(const nlohmann::json &jsonRPC)
+    static std::shared_ptr<CompletionRequest> createCompletionReq(const nlohmann::json& jsonRPC)
     {
         return std::make_shared<CompletionRequest>(jsonRPC);
     }
@@ -119,7 +117,7 @@ class MessageFactory
     /// @return A shared pointer to an Hover request object.
     ///
     //////////////////////////////////////////////////////////////
-    static std::shared_ptr<HoverRequest> createHoverReq(const nlohmann::json &jsonRPC)
+    static std::shared_ptr<HoverRequest> createHoverReq(const nlohmann::json& jsonRPC)
     {
         return std::make_shared<HoverRequest>(jsonRPC);
     }
@@ -133,7 +131,7 @@ class MessageFactory
     /// @return A shared pointer to an code action request object.
     ///
     //////////////////////////////////////////////////////////////
-    static std::shared_ptr<CodeActionRequest> createCodeActionRequest(const nlohmann::json &jsonRPC)
+    static std::shared_ptr<CodeActionRequest> createCodeActionRequest(const nlohmann::json& jsonRPC)
     {
         return std::make_shared<CodeActionRequest>(jsonRPC);
     }
@@ -147,7 +145,7 @@ class MessageFactory
     /// @return A shared pointer to an go to definition request objecy
     ///
     //////////////////////////////////////////////////////////////
-    static std::shared_ptr<DefintionRequest> createGoToDefinitionRequest(const nlohmann::json &jsonRPC)
+    static std::shared_ptr<DefintionRequest> createGoToDefinitionRequest(const nlohmann::json& jsonRPC)
     {
         return std::make_shared<DefintionRequest>(jsonRPC);
     }

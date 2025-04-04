@@ -41,7 +41,7 @@ void Ls6502Server::run()
 }
 
 ////////////////////////////////////////////////////////////
-void Ls6502Server::handleRequest(const std::string &request)
+void Ls6502Server::handleRequest(const std::string& request)
 {
     nlohmann::json jsonRPC = MessageUtil::tryParse(request);
     m_6502Facade->handleRequest(jsonRPC);

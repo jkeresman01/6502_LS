@@ -14,8 +14,8 @@ namespace ls6502
 {
 
 ////////////////////////////////////////////////////////////
-ConfigurationManager *ConfigurationManager::s_instance = nullptr;
-std::mutex ConfigurationManager::s_mutex;
+ConfigurationManager* ConfigurationManager::s_instance = nullptr;
+std::mutex            ConfigurationManager::s_mutex;
 
 ////////////////////////////////////////////////////////////
 void ConfigurationManager::load()
@@ -36,7 +36,7 @@ void ConfigurationManager::load()
 }
 
 ////////////////////////////////////////////////////////////
-void ConfigurationManager::load(std::ifstream &in)
+void ConfigurationManager::load(std::ifstream& in)
 {
     std::string line;
 
@@ -50,16 +50,16 @@ void ConfigurationManager::load(std::ifstream &in)
 }
 
 ////////////////////////////////////////////////////////////
-void ConfigurationManager::readPropertyFromFileLine(const std::string &line)
+void ConfigurationManager::readPropertyFromFileLine(const std::string& line)
 {
-    const std::pair<std::string, std::string> &property = XMLUtil::parseFromFileLine(line);
+    const std::pair<std::string, std::string>& property = XMLUtil::parseFromFileLine(line);
 
     bool isValidProperty = property.first != "" and property.second != "";
 
     if (!isValidProperty)
     {
         LS_6502_WARN(
-          STR("Found empty property: [\"%s\"] : [\"%s\"]", property.first.c_str(), property.second.c_str()));
+            STR("Found empty property: [\"%s\"] : [\"%s\"]", property.first.c_str(), property.second.c_str()));
         return;
     }
 
@@ -67,7 +67,7 @@ void ConfigurationManager::readPropertyFromFileLine(const std::string &line)
 }
 
 ////////////////////////////////////////////////////////////
-std::string ConfigurationManager::getProperty(const std::string &propertyName)
+std::string ConfigurationManager::getProperty(const std::string& propertyName)
 {
     auto it = m_properties.find(propertyName);
 
@@ -90,7 +90,7 @@ ConfigurationManager::~ConfigurationManager()
 }
 
 ////////////////////////////////////////////////////////////
-ConfigurationManager *ConfigurationManager::getInstance()
+ConfigurationManager* ConfigurationManager::getInstance()
 {
     std::lock_guard<std::mutex> lock(s_mutex);
 

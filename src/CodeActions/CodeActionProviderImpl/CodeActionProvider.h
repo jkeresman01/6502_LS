@@ -23,7 +23,7 @@ namespace ls6502
 /////////////////////////////////////////////////////////////////////
 class CodeActionProvider : public ICodeActionsProvider
 {
-  public:
+public:
     /////////////////////////////////////////////////////////////////////
     ///
     /// @brief Constructor for CodeActionProvider
@@ -41,7 +41,7 @@ class CodeActionProvider : public ICodeActionsProvider
     /// @return A vector of available code actions
     ///
     /////////////////////////////////////////////////////////////////////
-    std::vector<CodeAction> getCodeActions(const std::string &document, const std::string &URI) override;
+    std::vector<CodeAction> getCodeActions(const std::string& document, const std::string& URI) override;
 
     /////////////////////////////////////////////////////////////////////
     ///
@@ -50,9 +50,9 @@ class CodeActionProvider : public ICodeActionsProvider
     /// @param [in] diagnosticsProvider
     ///
     /////////////////////////////////////////////////////////////////////
-    void setDiagnosticsProvider(const std::shared_ptr<IDiagnosticsProvider> &diagnosticsProvider);
+    void setDiagnosticsProvider(const std::shared_ptr<IDiagnosticsProvider>& diagnosticsProvider);
 
-  private:
+private:
     /////////////////////////////////////////////////////////////////////
     ///
     /// @brief Provider for document diagnostics

@@ -22,7 +22,7 @@ namespace ls6502
 //////////////////////////////////////////////////////////////
 class IDiagnosticsProvider
 {
-  public:
+public:
     //////////////////////////////////////////////////////////////
     ///
     /// @brief Retrieves a list of diagnostics for a given
@@ -35,7 +35,7 @@ class IDiagnosticsProvider
     ///         diagnostics for the specified document and position.
     ///
     //////////////////////////////////////////////////////////////
-    virtual std::vector<Diagnostic> getDiagnostics(const std::string &document) = 0;
+    virtual std::vector<Diagnostic> getDiagnostics(const std::string& document) = 0;
 };
 
 } // namespace ls6502

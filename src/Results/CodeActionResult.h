@@ -20,7 +20,7 @@ namespace ls6502
 //////////////////////////////////////////////////////////////
 class CodeActionResult
 {
-  public:
+public:
     //////////////////////////////////////////////////////////////
     ///
     /// @brief Constructs a CodeActionResult with the given list
@@ -29,7 +29,7 @@ class CodeActionResult
     /// @param [in] codeActions
     ///
     //////////////////////////////////////////////////////////////
-    explicit CodeActionResult(const std::vector<CodeAction> &codeActions) : m_codeActions(codeActions){};
+    explicit CodeActionResult(const std::vector<CodeAction>& codeActions) : m_codeActions(codeActions){};
 
     //////////////////////////////////////////////////////////////
     ///
@@ -41,7 +41,7 @@ class CodeActionResult
     //////////////////////////////////////////////////////////////
     nlohmann::json toJson() const;
 
-  private:
+private:
     //////////////////////////////////////////////////////////////
     ///
     /// @brief A vector of CodeAction objects that are included in the result.

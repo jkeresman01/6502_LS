@@ -15,7 +15,7 @@ namespace ls6502
 {
 class CompletionParams
 {
-  public:
+public:
     //////////////////////////////////////////////////////////////
     ///
     /// @brief Constructs the Completion request from JSON RPC
@@ -23,7 +23,7 @@ class CompletionParams
     /// @param [in] jsonRPC
     ///
     //////////////////////////////////////////////////////////////
-    explicit CompletionParams(const nlohmann::json &jsonRPC);
+    explicit CompletionParams(const nlohmann::json& jsonRPC);
 
     //////////////////////////////////////////////////////////////
     ///
@@ -31,7 +31,10 @@ class CompletionParams
     ///        completion is requested
     ///
     //////////////////////////////////////////////////////////////
-    Position getPosition() const { return m_position; };
+    Position getPosition() const
+    {
+        return m_position;
+    };
 
     //////////////////////////////////////////////////////////////
     /// NotificationMessage
@@ -39,31 +42,34 @@ class CompletionParams
     ///        completion is requested
     ///
     //////////////////////////////////////////////////////////////
-    std::string getURI() const { return m_textDocumentIdentifier.URI; }
+    std::string getURI() const
+    {
+        return m_textDocumentIdentifier.URI;
+    }
 
-  private:
+private:
     //////////////////////////////////////////////////////////////
     ///
     /// @brief Mutator method for text document context
     ///
     //////////////////////////////////////////////////////////////
-    void setCompletionContext(const nlohmann::json &jsonRPC);
+    void setCompletionContext(const nlohmann::json& jsonRPC);
 
     //////////////////////////////////////////////////////////////
     ///
     /// @brief Mutator method for text document range
     ///
     //////////////////////////////////////////////////////////////
-    void setPosition(const nlohmann::json &jsonRPC);
+    void setPosition(const nlohmann::json& jsonRPC);
 
     //////////////////////////////////////////////////////////////
     ///
     /// @brief Mutator method for text document identifier
     ///
     //////////////////////////////////////////////////////////////
-    void setTextDocumentIdentifier(const nlohmann::json &jsonRPC);
+    void setTextDocumentIdentifier(const nlohmann::json& jsonRPC);
 
-  private:
+private:
     //////////////////////////////////////////////////////////////
     ///
     /// @brief Completion context

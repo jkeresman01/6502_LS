@@ -21,7 +21,7 @@ namespace ls6502
 //////////////////////////////////////////////////////////////
 class DidOpenTextDocumentRequest : public NotificationMessage
 {
-  public:
+public:
     //////////////////////////////////////////////////////////////
     ///
     /// @brief Constructs a DidOpenTextDocumentRequest from a JSON-RPC request.
@@ -29,7 +29,7 @@ class DidOpenTextDocumentRequest : public NotificationMessage
     /// @param [in] jsonRPC
     ///
     //////////////////////////////////////////////////////////////
-    explicit DidOpenTextDocumentRequest(const nlohmann::json &jsonRPC);
+    explicit DidOpenTextDocumentRequest(const nlohmann::json& jsonRPC);
 
     //////////////////////////////////////////////////////////////
     ///
@@ -38,9 +38,12 @@ class DidOpenTextDocumentRequest : public NotificationMessage
     /// @param [in] textDocument/didOpen params
     ///
     //////////////////////////////////////////////////////////////
-    std::shared_ptr<DidOpenTextDocumentParams> getParams() const { return m_params; };
+    std::shared_ptr<DidOpenTextDocumentParams> getParams() const
+    {
+        return m_params;
+    };
 
-  private:
+private:
     //////////////////////////////////////////////////////////////
     ///
     /// @brief Sets the parameters for the textDocument/didOpen request.
@@ -48,9 +51,9 @@ class DidOpenTextDocumentRequest : public NotificationMessage
     /// @param [in] jsonRPC
     ///
     //////////////////////////////////////////////////////////////
-    void setParams(const nlohmann::json &jsonRPC);
+    void setParams(const nlohmann::json& jsonRPC);
 
-  private:
+private:
     //////////////////////////////////////////////////////////////
     ///
     /// @brief Holds the parameters for the textDocument/didOpen request

@@ -22,7 +22,7 @@ namespace ls6502
 //////////////////////////////////////////////////////////////
 class ShutdownResponse : public ResponseMessage
 {
-  public:
+public:
     //////////////////////////////////////////////////////////////
     ///
     /// @brief Constructs a ShutdownResponse message.
@@ -31,7 +31,9 @@ class ShutdownResponse : public ResponseMessage
     /// @param [in] id
     ///
     //////////////////////////////////////////////////////////////
-    ShutdownResponse(const std::string &jsonRPC, int64_t id) : ResponseMessage(jsonRPC, id) {}
+    ShutdownResponse(const std::string& jsonRPC, int64_t id) : ResponseMessage(jsonRPC, id)
+    {
+    }
 
     //////////////////////////////////////////////////////////////
     ///
@@ -43,7 +45,7 @@ class ShutdownResponse : public ResponseMessage
     nlohmann::json toJson() const override
     {
         nlohmann::json json = ResponseMessage::toJson();
-        json["result"] = nullptr;
+        json["result"]      = nullptr;
         return json;
     }
 };

@@ -24,7 +24,7 @@ namespace ls6502
 //////////////////////////////////////////////////////////////
 class HoverRequest : public RequestMessage
 {
-  public:
+public:
     //////////////////////////////////////////////////////////////
     ///
     /// @brief Constructs the Hover request from JSON RPC
@@ -32,7 +32,7 @@ class HoverRequest : public RequestMessage
     /// @param [in] jsonRPC
     ///
     //////////////////////////////////////////////////////////////
-    explicit HoverRequest(const nlohmann::json &jsonRPC);
+    explicit HoverRequest(const nlohmann::json& jsonRPC);
 
     //////////////////////////////////////////////////////////////
     ///
@@ -41,9 +41,12 @@ class HoverRequest : public RequestMessage
     /// @return HoverParams
     ///
     //////////////////////////////////////////////////////////////
-    std::shared_ptr<HoverParams> getParams() const { return m_hoverParams; };
+    std::shared_ptr<HoverParams> getParams() const
+    {
+        return m_hoverParams;
+    };
 
-  private:
+private:
     //////////////////////////////////////////////////////////////
     ///
     /// @brief Mutator method for hover params
@@ -51,9 +54,9 @@ class HoverRequest : public RequestMessage
     /// @param [in] jsonRPC
     ///
     //////////////////////////////////////////////////////////////
-    void setParams(const nlohmann::json &jsonRPC);
+    void setParams(const nlohmann::json& jsonRPC);
 
-  private:
+private:
     //////////////////////////////////////////////////////////////
     ///
     /// @brief Paramters used in Hover Request

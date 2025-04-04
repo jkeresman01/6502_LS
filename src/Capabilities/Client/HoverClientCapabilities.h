@@ -21,7 +21,7 @@ namespace ls6502
 //////////////////////////////////////////////////////////////
 class HoverClientCapabilities
 {
-  public:
+public:
     //////////////////////////////////////////////////////////////
     ///
     /// @brief Constructs the HoverClientCapabilities from jsonRPC request
@@ -29,9 +29,9 @@ class HoverClientCapabilities
     /// @param [in] jsonRPC
     ///
     //////////////////////////////////////////////////////////////
-    explicit HoverClientCapabilities(const nlohmann::json &jsonRPC);
+    explicit HoverClientCapabilities(const nlohmann::json& jsonRPC);
 
-  private:
+private:
     //////////////////////////////////////////////////////////////
     ///
     /// @brief Client supports the follow content formats if the content

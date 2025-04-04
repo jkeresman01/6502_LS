@@ -24,7 +24,7 @@ namespace ls6502
 /////////////////////////////////////////////////////////////////////
 class HoverProviderFactory
 {
-  public:
+public:
     /////////////////////////////////////////////////////////////////////
     ///
     /// @brief Deleted constructor
@@ -41,7 +41,7 @@ class HoverProviderFactory
     /////////////////////////////////////////////////////////////////////
     static std::shared_ptr<IHoverProvider> create()
     {
-        const std::string &hoverProvider = ConfigurationManager::getInstance()->getProperty("hoverProvider");
+        const std::string& hoverProvider = ConfigurationManager::getInstance()->getProperty("hoverProvider");
 
         if (hoverProvider == "fake")
         {

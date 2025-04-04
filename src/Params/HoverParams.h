@@ -12,7 +12,7 @@ namespace ls6502
 {
 class HoverParams : public TextDocumentPositionParams
 {
-  public:
+public:
     //////////////////////////////////////////////////////////////
     ///
     /// @brief Constructs the HoverParams object from JSON RPC
@@ -20,7 +20,7 @@ class HoverParams : public TextDocumentPositionParams
     /// @param [in] jsonRPC JSON object containing hover parameters
     ///
     //////////////////////////////////////////////////////////////
-    explicit HoverParams(const nlohmann::json &jsonRPC) : TextDocumentPositionParams(jsonRPC){};
+    explicit HoverParams(const nlohmann::json& jsonRPC) : TextDocumentPositionParams(jsonRPC){};
 };
 
 } // namespace ls6502

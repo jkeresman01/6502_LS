@@ -19,7 +19,7 @@ namespace ls6502
 //////////////////////////////////////////////////////////////
 class DefinitionProvider : public IDefinitionProvider
 {
-  public:
+public:
     //////////////////////////////////////////////////////////////
     ///
     /// @brief Provides the location of a definition
@@ -32,7 +32,8 @@ class DefinitionProvider : public IDefinitionProvider
     ///         line and column information.
     ///
     //////////////////////////////////////////////////////////////
-    virtual Location provideDefinitionLocation(const std::string &document, const Position &position,
-                                               const std::string &URI) override;
+    virtual Location provideDefinitionLocation(const std::string& document,
+                                               const Position&    position,
+                                               const std::string& URI) override;
 };
 } // namespace ls6502

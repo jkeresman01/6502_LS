@@ -21,7 +21,7 @@ namespace ls6502
 //////////////////////////////////////////////////////////////
 class FakeCodeActionsProvider : public ICodeActionsProvider
 {
-  public:
+public:
     //////////////////////////////////////////////////////////////
     ///
     /// @brief Retrieves a list of fake code actions for a given URI.
@@ -32,9 +32,9 @@ class FakeCodeActionsProvider : public ICodeActionsProvider
     ///         fake code actions.
     ///
     //////////////////////////////////////////////////////////////
-    std::vector<CodeAction> getCodeActions(const std::string &document, const std::string &URI) override;
+    std::vector<CodeAction> getCodeActions(const std::string& document, const std::string& URI) override;
 
-  private:
+private:
     //////////////////////////////////////////////////////////////
     ///
     /// @brief Populates the provided vector with fake code actions.
@@ -43,7 +43,7 @@ class FakeCodeActionsProvider : public ICodeActionsProvider
     /// @param [in] URI
     ///
     //////////////////////////////////////////////////////////////
-    void fillFakeCodeActions(std::vector<CodeAction> &codeAction, const std::string &URI);
+    void fillFakeCodeActions(std::vector<CodeAction>& codeAction, const std::string& URI);
 
     //////////////////////////////////////////////////////////////
     ///
@@ -52,7 +52,7 @@ class FakeCodeActionsProvider : public ICodeActionsProvider
     /// @param [in] codeAction
     ///
     //////////////////////////////////////////////////////////////
-    void logCodeActions(std::vector<CodeAction> &codeAction);
+    void logCodeActions(std::vector<CodeAction>& codeAction);
 
     //////////////////////////////////////////////////////////////
     ///
@@ -62,9 +62,9 @@ class FakeCodeActionsProvider : public ICodeActionsProvider
     /// @param [in] workspaceEdit
     ///
     //////////////////////////////////////////////////////////////
-    CodeAction createFakeCodeAction(const WorkspaceEdit &worskpaceEdit, const std::string &label);
+    CodeAction createFakeCodeAction(const WorkspaceEdit& worskpaceEdit, const std::string& label);
 
-  private:
+private:
     //////////////////////////////////////////////////////////////
     ///
     /// @brief Number of fake code actions that will be provided

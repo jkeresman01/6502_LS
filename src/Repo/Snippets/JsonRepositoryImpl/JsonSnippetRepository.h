@@ -27,7 +27,7 @@ typedef std::unordered_multimap<std::string, std::string> SnippetsMultimapT;
 //////////////////////////////////////////////////////////////
 class SnippetRepository : public ISnippetRepository
 {
-  public:
+public:
     //////////////////////////////////////////////////////////////
     ///
     /// @brief Loads predefined snippets for 6502 ASM
@@ -35,7 +35,7 @@ class SnippetRepository : public ISnippetRepository
     //////////////////////////////////////////////////////////////
     SnippetsMultimapT load() override;
 
-  private:
+private:
     //////////////////////////////////////////////////////////////
     ///
     /// @brief Loads predefined snippets for 6502 ASM
@@ -44,15 +44,15 @@ class SnippetRepository : public ISnippetRepository
     /// @param [in] snippetsFile
     ///
     //////////////////////////////////////////////////////////////
-    void load(std::ifstream &snippetsFile);
+    void load(std::ifstream& snippetsFile);
 
-  private:
+private:
     //////////////////////////////////////////////////////////////
     ///
     /// @brief Path to the predefined 6502 ASM snippets
     ///
     //////////////////////////////////////////////////////////////
-    const char *PREDEFINED_SNIPPETS_PATH = "../../snippets/snippets.json";
+    const char* PREDEFINED_SNIPPETS_PATH = "../../snippets/snippets.json";
 
     //////////////////////////////////////////////////////////////
     ///

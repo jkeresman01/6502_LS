@@ -24,7 +24,7 @@ namespace ls6502
 /////////////////////////////////////////////////////////////////////
 class DocumentUtil
 {
-  public:
+public:
     /////////////////////////////////////////////////////////////////////
     ///
     /// @brief Delete default constructor to prevent instantiation
@@ -44,7 +44,7 @@ class DocumentUtil
     ///         at the given position.
     ///
     /////////////////////////////////////////////////////////////////////
-    static std::string extractPrefix(const std::string &document, const Position &position);
+    static std::string extractPrefix(const std::string& document, const Position& position);
 
     /////////////////////////////////////////////////////////////////////
     ///
@@ -55,9 +55,9 @@ class DocumentUtil
     /// @return A vector containing individual lines.
     ///
     /////////////////////////////////////////////////////////////////////
-    static std::vector<std::string> splitDocumentIntoLines(const std::string &document);
+    static std::vector<std::string> splitDocumentIntoLines(const std::string& document);
 
-  private:
+private:
     /////////////////////////////////////////////////////////////////////
     ///
     /// @brief Extract the word under the cursor at the given position.
@@ -68,7 +68,7 @@ class DocumentUtil
     /// @return Extracted line from the file
     ///
     /////////////////////////////////////////////////////////////////////
-    static std::string extractLine(const std::string &document, const Position &position);
+    static std::string extractLine(const std::string& document, const Position& position);
 
     /////////////////////////////////////////////////////////////////////
     ///
@@ -80,7 +80,7 @@ class DocumentUtil
     /// @return words start position
     ///
     /////////////////////////////////////////////////////////////////////
-    static size_t findStartOfTheWord(const std::string &line, const Position &position);
+    static size_t findStartOfTheWord(const std::string& line, const Position& position);
 
     /////////////////////////////////////////////////////////////////////
     ///
@@ -92,7 +92,7 @@ class DocumentUtil
     /// @return words end position
     ///
     /////////////////////////////////////////////////////////////////////
-    static size_t findEndOfTheWord(const std::string &line, const Position &position);
+    static size_t findEndOfTheWord(const std::string& line, const Position& position);
 };
 
 /////////////////////////////////////////////////////////////////////
@@ -100,11 +100,11 @@ class DocumentUtil
 /////////////////////////////////////////////////////////////////////
 
 ////////////////////////////////////////////////////////////
-std::vector<std::string> inline DocumentUtil::splitDocumentIntoLines(const std::string &document)
+inline std::vector<std::string> DocumentUtil::splitDocumentIntoLines(const std::string& document)
 {
     std::vector<std::string> lines;
-    std::stringstream ss(document);
-    std::string line;
+    std::stringstream        ss(document);
+    std::string              line;
 
     while (std::getline(ss, line))
     {
@@ -115,35 +115,38 @@ std::vector<std::string> inline DocumentUtil::splitDocumentIntoLines(const std::
 }
 
 ////////////////////////////////////////////////////////////
-std::string inline DocumentUtil::extractPrefix(const std::string &document, const Position &position)
+inline std::string DocumentUtil::extractPrefix(const std::string& document, const Position& position)
 {
-    const std::string &line = extractLine(document, position);
+    const std::string& line = extractLine(document, position);
 
     bool isValidPosition = position.character < line.size();
 
     if (!isValidPosition)
     {
         LS_6502_WARN(STR("Invalid position, when trying to extract prefix, at line %zu, character %zu:",
-                         position.line, position.character));
+                         position.line,
+                         position.character));
         return std::string();
     }
 
     size_t start = findStartOfTheWord(line, position);
-    size_t end = findEndOfTheWord(line, position);
+    size_t end   = findEndOfTheWord(line, position);
 
     std::string word = line.substr(start, end - start);
 
-    LS_6502_DEBUG(STR("Extracted word \"%s\" from document at line %zu, character %zu", word.c_str(),
-                      position.line, position.character));
+    LS_6502_DEBUG(STR("Extracted word \"%s\" from document at line %zu, character %zu",
+                      word.c_str(),
+                      position.line,
+                      position.character));
 
     return word;
 }
 
 ////////////////////////////////////////////////////////////
-std::string inline DocumentUtil::extractLine(const std::string &document, const Position &position)
+inline std::string DocumentUtil::extractLine(const std::string& document, const Position& position)
 {
     std::stringstream ss(document);
-    std::string line;
+    std::string       line;
 
     for (size_t i = 0; i <= position.line; ++i)
     {
@@ -157,7 +160,7 @@ std::string inline DocumentUtil::extractLine(const std::string &document, const 
 }
 
 ////////////////////////////////////////////////////////////
-size_t inline DocumentUtil::findStartOfTheWord(const std::string &line, const Position &position)
+inline size_t DocumentUtil::findStartOfTheWord(const std::string& line, const Position& position)
 {
     size_t start = position.character;
 
@@ -170,7 +173,7 @@ size_t inline DocumentUtil::findStartOfTheWord(const std::string &line, const Po
 }
 
 ////////////////////////////////////////////////////////////
-size_t inline DocumentUtil::findEndOfTheWord(const std::string &line, const Position &position)
+inline size_t DocumentUtil::findEndOfTheWord(const std::string& line, const Position& position)
 {
     size_t end = position.character;
 

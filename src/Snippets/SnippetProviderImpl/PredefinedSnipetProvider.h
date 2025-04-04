@@ -24,7 +24,7 @@ namespace ls6502
 //////////////////////////////////////////////////////////////
 class PredefinedSnippetProvider : public ISnippetProvider
 {
-  public:
+public:
     //////////////////////////////////////////////////////////////
     ///
     /// @brief Constructs a PredefinedSnippetProvider instance.
@@ -43,9 +43,9 @@ class PredefinedSnippetProvider : public ISnippetProvider
     ///         the given prefix.
     ///
     //////////////////////////////////////////////////////////////
-    std::vector<CompletionItem> getSnippets(const std::string &prefix) override;
+    std::vector<CompletionItem> getSnippets(const std::string& prefix) override;
 
-  private:
+private:
     //////////////////////////////////////////////////////////////
     ///
     /// @brief Filters snippets based on the given prefix
@@ -57,7 +57,6 @@ class PredefinedSnippetProvider : public ISnippetProvider
     /// @return A vector of CompletionItem objects.
     ///
     //////////////////////////////////////////////////////////////
-    std::vector<CompletionItem> getCompletions(const std::vector<std::string> &snippets,
-                                               const std::string &prefix);
+    std::vector<CompletionItem> getCompletions(const std::vector<std::string>& snippets, const std::string& prefix);
 };
 } // namespace ls6502

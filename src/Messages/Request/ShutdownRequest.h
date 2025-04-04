@@ -19,7 +19,7 @@ namespace ls6502
 
 class ShutdownRequest : public RequestMessage
 {
-  public:
+public:
     //////////////////////////////////////////////////////////////
     ///
     /// @brief Constructs the Initialize request from JSON RPC
@@ -27,6 +27,6 @@ class ShutdownRequest : public RequestMessage
     /// @param [in] jsonRPC
     ///
     //////////////////////////////////////////////////////////////
-    explicit ShutdownRequest(const nlohmann::json &jsonRPC) : RequestMessage(jsonRPC){};
+    explicit ShutdownRequest(const nlohmann::json& jsonRPC) : RequestMessage(jsonRPC){};
 };
 } // namespace ls6502

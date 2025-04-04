@@ -20,7 +20,7 @@ namespace ls6502
 //////////////////////////////////////////////////////////////
 class ISnippetProvider
 {
-  public:
+public:
     //////////////////////////////////////////////////////////////
     ///
     /// @brief Virtual destructor to ensure proper cleanup of derived classes.
@@ -36,6 +36,6 @@ class ISnippetProvider
     /// @return A vector of CompletionItem objects representing matching snippets.
     ///
     //////////////////////////////////////////////////////////////
-    virtual std::vector<CompletionItem> getSnippets(const std::string &prefix) = 0;
+    virtual std::vector<CompletionItem> getSnippets(const std::string& prefix) = 0;
 };
 } // namespace ls6502

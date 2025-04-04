@@ -30,7 +30,7 @@ typedef std::unordered_map<std::string, Instruction> InstructionSetMapT;
 /////////////////////////////////////////////////////////////////////
 class DiagnosticsProvider : public IDiagnosticsProvider
 {
-  public:
+public:
     /////////////////////////////////////////////////////////////////////
     ///
     /// @brief Constructor for DiagnosticsProvider
@@ -47,9 +47,9 @@ class DiagnosticsProvider : public IDiagnosticsProvider
     /// @return A vector of diagnostic issues found in the document
     ///
     /////////////////////////////////////////////////////////////////////
-    std::vector<Diagnostic> getDiagnostics(const std::string &document) override;
+    std::vector<Diagnostic> getDiagnostics(const std::string& document) override;
 
-  private:
+private:
     /////////////////////////////////////////////////////////////////////
     ///
     /// @brief Checks for malformed labels in a given line
@@ -58,7 +58,7 @@ class DiagnosticsProvider : public IDiagnosticsProvider
     /// @param [in] lineNumber
     ///
     /////////////////////////////////////////////////////////////////////
-    void checkMalformedLabel(const std::string &line, size_t lineNumber);
+    void checkMalformedLabel(const std::string& line, size_t lineNumber);
 
     /////////////////////////////////////////////////////////////////////
     ///
@@ -68,7 +68,7 @@ class DiagnosticsProvider : public IDiagnosticsProvider
     /// @param [in] lineNumber
     ///
     /////////////////////////////////////////////////////////////////////
-    void checkUnsupportedInstructions(const std::string &line, size_t lineNumber);
+    void checkUnsupportedInstructions(const std::string& line, size_t lineNumber);
 
     /////////////////////////////////////////////////////////////////////
     ///
@@ -78,9 +78,9 @@ class DiagnosticsProvider : public IDiagnosticsProvider
     /// @param [in] lineNumber
     ///
     /////////////////////////////////////////////////////////////////////
-    void checkGeneralSyntaxErrors(const std::string &line, size_t lineNumber);
+    void checkGeneralSyntaxErrors(const std::string& line, size_t lineNumber);
 
-  private:
+private:
     /////////////////////////////////////////////////////////////////////
     ///
     /// @brief Repository for instruction set data

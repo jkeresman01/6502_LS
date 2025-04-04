@@ -8,42 +8,45 @@ namespace ls6502
 {
 
 ////////////////////////////////////////////////////////////
-CompletionItem::CompletionItem(const std::string &label, const CompletionItemKind completionItemKind,
-                               const std::string &detail, const std::string &documentation,
-                               const std::string &insertedText)
-    : m_label(label), m_detail(detail), m_documentation(documentation){};
+CompletionItem::CompletionItem(const std::string&       label,
+                               const CompletionItemKind completionItemKind,
+                               const std::string&       detail,
+                               const std::string&       documentation,
+                               const std::string&       insertedText) :
+m_label(label),
+m_detail(detail),
+m_documentation(documentation){};
 
 ////////////////////////////////////////////////////////////
-CompletionItem::Builder &CompletionItem::Builder::withLabel(const std::string &label)
+CompletionItem::Builder& CompletionItem::Builder::withLabel(const std::string& label)
 {
     m_label = label;
     return *this;
 }
 
 ////////////////////////////////////////////////////////////
-CompletionItem::Builder &CompletionItem::Builder::withDetail(const std::string detail)
+CompletionItem::Builder& CompletionItem::Builder::withDetail(const std::string detail)
 {
     m_detail = detail;
     return *this;
 }
 
 ////////////////////////////////////////////////////////////
-CompletionItem::Builder &CompletionItem::Builder::withInsertedText(const std::string &insertedText)
+CompletionItem::Builder& CompletionItem::Builder::withInsertedText(const std::string& insertedText)
 {
     m_insertedText = insertedText;
     return *this;
 }
 
 ////////////////////////////////////////////////////////////
-CompletionItem::Builder &CompletionItem::Builder::withDocumentation(const std::string &documentation)
+CompletionItem::Builder& CompletionItem::Builder::withDocumentation(const std::string& documentation)
 {
     m_documentation = documentation;
     return *this;
 }
 
 ////////////////////////////////////////////////////////////
-CompletionItem::Builder &CompletionItem::Builder::withCompletionItemKind(
-  const CompletionItemKind &completionItemKind)
+CompletionItem::Builder& CompletionItem::Builder::withCompletionItemKind(const CompletionItemKind& completionItemKind)
 {
     m_completionItemKind = completionItemKind;
     return *this;

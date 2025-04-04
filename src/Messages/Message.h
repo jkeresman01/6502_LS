@@ -22,7 +22,7 @@ namespace ls6502
 //////////////////////////////////////////////////////////////
 class Message
 {
-  public:
+public:
     //////////////////////////////////////////////////////////////
     ///
     /// @brief Constructs the Message from jsonRPC
@@ -30,7 +30,7 @@ class Message
     /// @param [in] jsonRPC
     ///
     //////////////////////////////////////////////////////////////
-    explicit Message(const std::string &jsonRPC);
+    explicit Message(const std::string& jsonRPC);
 
     //////////////////////////////////////////////////////////////
     ///
@@ -51,9 +51,9 @@ class Message
     /// @return The modified output stream.
     ///
     //////////////////////////////////////////////////////////////
-    friend std::ostream &operator<<(std::ostream &os, const Message &mesage);
+    friend std::ostream& operator<<(std::ostream& os, const Message& mesage);
 
-  protected:
+protected:
     //////////////////////////////////////////////////////////////
     ///
     /// @brief RPC version, language server protocol always

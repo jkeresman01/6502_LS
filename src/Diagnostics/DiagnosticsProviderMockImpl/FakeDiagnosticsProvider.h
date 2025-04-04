@@ -23,7 +23,7 @@ namespace ls6502
 //////////////////////////////////////////////////////////////
 class FakeDiagnosticsProvider : public IDiagnosticsProvider
 {
-  public:
+public:
     //////////////////////////////////////////////////////////////
     ///
     /// @brief Mock constructor for FakeDiagnosticsProvider.
@@ -38,7 +38,7 @@ class FakeDiagnosticsProvider : public IDiagnosticsProvider
     /// @param [in] mockDiagnostics
     ///
     //////////////////////////////////////////////////////////////
-    explicit FakeDiagnosticsProvider(const std::vector<Diagnostic> &mockDiagnostics);
+    explicit FakeDiagnosticsProvider(const std::vector<Diagnostic>& mockDiagnostics);
 
     //////////////////////////////////////////////////////////////
     ///
@@ -52,9 +52,9 @@ class FakeDiagnosticsProvider : public IDiagnosticsProvider
     ///         the fake diagnostics.
     ///
     //////////////////////////////////////////////////////////////
-    std::vector<Diagnostic> getDiagnostics(const std::string &document) override;
+    std::vector<Diagnostic> getDiagnostics(const std::string& document) override;
 
-  private:
+private:
     //////////////////////////////////////////////////////////////
     ///
     /// @brief Fills the diagnostics vector with a combination
@@ -95,7 +95,7 @@ class FakeDiagnosticsProvider : public IDiagnosticsProvider
     //////////////////////////////////////////////////////////////
     void fillFakeInfo();
 
-  private:
+private:
     //////////////////////////////////////////////////////////////
     ///
     /// @brief Diagnostics

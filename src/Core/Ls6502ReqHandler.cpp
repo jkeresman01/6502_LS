@@ -40,24 +40,25 @@ namespace ls6502
 {
 
 ////////////////////////////////////////////////////////////
-Ls6502ReqHandler::Ls6502ReqHandler()
-    : m_diagnosticsProvider(DiagnosticsProviderFactory::create()),
-      m_completionProvider(CompletionProviderFactory::create()),
-      m_definitionProvider(DefinitionProviderFactory::create()),
-      m_hoverProvider(HoverProviderFactory::create()), m_snippetProvider(SnippetProviderFactory::create()),
-      m_codeActionsProvider(CodeActionsProviderFactory::create())
+Ls6502ReqHandler::Ls6502ReqHandler() :
+m_diagnosticsProvider(DiagnosticsProviderFactory::create()),
+m_completionProvider(CompletionProviderFactory::create()),
+m_definitionProvider(DefinitionProviderFactory::create()),
+m_hoverProvider(HoverProviderFactory::create()),
+m_snippetProvider(SnippetProviderFactory::create()),
+m_codeActionsProvider(CodeActionsProviderFactory::create())
 {
 }
 
 ////////////////////////////////////////////////////////////
-void Ls6502ReqHandler::initializeReq(const std::shared_ptr<InitializeRequest> &initializeRequest)
+void Ls6502ReqHandler::initializeReq(const std::shared_ptr<InitializeRequest>& initializeRequest)
 {
     LS_6502_DEBUG("Processing textDocument/initialize request");
 
-    std::shared_ptr<InitializeParams> initializeParams = initializeRequest->getInitializeParams();
-    std::shared_ptr<ClientCapabilities> capabilities = initializeParams->getClientCapabilites();
+    std::shared_ptr<InitializeParams>   initializeParams = initializeRequest->getInitializeParams();
+    std::shared_ptr<ClientCapabilities> capabilities     = initializeParams->getClientCapabilites();
 
-    const ClientInfo &clientInfo = initializeParams->getClientInfo();
+    const ClientInfo& clientInfo = initializeParams->getClientInfo();
 
     LS_6502_DEBUG(STR("Client: %s has sent initializtion request", clientInfo.toString().c_str()));
 
@@ -68,35 +69,33 @@ void Ls6502ReqHandler::initializeReq(const std::shared_ptr<InitializeRequest> &i
     ServerCapabilitiesDirector::constructDefaultServerCapabilities(serverCapabilitiesBuilder);
     ServerCapabilities serverCapabilites = serverCapabilitiesBuilder.build();
 
-    InitializeResult initializeResult({"Ls6502", "0.0.0.0.0.1-alpha"}, serverCapabilites);
+    InitializeResult   initializeResult({"Ls6502", "0.0.0.0.0.1-alpha"}, serverCapabilites);
     InitializeResponse initializeResponse("2.0", initializeRequest->getId(), initializeResult);
 
     Rpc::send(initializeResponse);
 
-    LS_6502_DEBUG(
-      STR("Initialize response was successfully sent for client: %s", clientInfo.toString().c_str()));
+    LS_6502_DEBUG(STR("Initialize response was successfully sent for client: %s", clientInfo.toString().c_str()));
 }
 
 ////////////////////////////////////////////////////////////
-void Ls6502ReqHandler::textDocumentDidOpenReq(
-  const std::shared_ptr<DidOpenTextDocumentRequest> &didOpenTextDocumentReq)
+void Ls6502ReqHandler::textDocumentDidOpenReq(const std::shared_ptr<DidOpenTextDocumentRequest>& didOpenTextDocumentReq)
 {
     LS_6502_DEBUG("Processing textDocument/didOpen request");
 
-    std::shared_ptr<DidOpenTextDocumentParams> didOpenParams = didOpenTextDocumentReq->getParams();
-    std::shared_ptr<TextDocumentItem> textDocumentItem = didOpenParams->getTextDocumentItem();
+    std::shared_ptr<DidOpenTextDocumentParams> didOpenParams    = didOpenTextDocumentReq->getParams();
+    std::shared_ptr<TextDocumentItem>          textDocumentItem = didOpenParams->getTextDocumentItem();
 
-    const std::string &URI = textDocumentItem->getURI();
-    const std::string &textDocumentContent = textDocumentItem->getText();
+    const std::string& URI                 = textDocumentItem->getURI();
+    const std::string& textDocumentContent = textDocumentItem->getText();
 
     m_ls6502Client->addDocument(URI, textDocumentContent);
 
-    const std::string &document = m_ls6502Client->getDocumentByURI(URI);
+    const std::string& document = m_ls6502Client->getDocumentByURI(URI);
 
-    const std::vector<Diagnostic> &diagnostics = m_diagnosticsProvider->getDiagnostics(document);
+    const std::vector<Diagnostic>& diagnostics = m_diagnosticsProvider->getDiagnostics(document);
 
-    std::shared_ptr<PublishDiagnosticsParams> diagnosticsParams
-      = std::make_shared<PublishDiagnosticsParams>(URI, diagnostics);
+    std::shared_ptr<PublishDiagnosticsParams>
+        diagnosticsParams = std::make_shared<PublishDiagnosticsParams>(URI, diagnostics);
     PublishDiagnosticsNoticifation publishDiagnosticsNotification("textDocument/publishDiagnostics",
                                                                   diagnosticsParams);
 
@@ -106,23 +105,22 @@ void Ls6502ReqHandler::textDocumentDidOpenReq(
 }
 
 ////////////////////////////////////////////////////////////
-void Ls6502ReqHandler::textDocumentDidChangeReq(
-  const std::shared_ptr<DidChangeTextDocumentRequest> &didChangeTextDocumentReq)
+void Ls6502ReqHandler::textDocumentDidChangeReq(const std::shared_ptr<DidChangeTextDocumentRequest>& didChangeTextDocumentReq)
 {
     LS_6502_DEBUG("Processing textDocument/didChange request");
 
     std::shared_ptr<DidChangeTextDocumentParams> didChangeParams = didChangeTextDocumentReq->getParams();
 
-    const std::string &URI = didChangeParams->getChangedDocumentURI();
-    const std::string &contentChanges = didChangeParams->getContentChanges();
+    const std::string& URI            = didChangeParams->getChangedDocumentURI();
+    const std::string& contentChanges = didChangeParams->getContentChanges();
 
     m_ls6502Client->updateDocumentWithURI(URI, contentChanges);
 
-    const std::string &document = m_ls6502Client->getDocumentByURI(URI);
-    const std::vector<Diagnostic> &diagnostics = m_diagnosticsProvider->getDiagnostics(document);
+    const std::string&             document    = m_ls6502Client->getDocumentByURI(URI);
+    const std::vector<Diagnostic>& diagnostics = m_diagnosticsProvider->getDiagnostics(document);
 
-    std::shared_ptr<PublishDiagnosticsParams> diagnosticsParams
-      = std::make_shared<PublishDiagnosticsParams>(URI, diagnostics);
+    std::shared_ptr<PublishDiagnosticsParams>
+        diagnosticsParams = std::make_shared<PublishDiagnosticsParams>(URI, diagnostics);
     PublishDiagnosticsNoticifation publishDiagnosticsNotification("textDocument/publishDiagnostics",
                                                                   diagnosticsParams);
 
@@ -132,22 +130,21 @@ void Ls6502ReqHandler::textDocumentDidChangeReq(
 }
 
 ////////////////////////////////////////////////////////////
-void Ls6502ReqHandler::textDocumentCompletionReq(const std::shared_ptr<CompletionRequest> &completionReq)
+void Ls6502ReqHandler::textDocumentCompletionReq(const std::shared_ptr<CompletionRequest>& completionReq)
 {
     LS_6502_DEBUG("Processing textDocument/completion request");
 
     std::shared_ptr<CompletionParams> completionParams = completionReq->getParams();
 
-    const Position &position = completionParams->getPosition();
-    const std::string &URI = completionParams->getURI();
+    const Position&    position = completionParams->getPosition();
+    const std::string& URI      = completionParams->getURI();
 
-    const std::string &document = m_ls6502Client->getDocumentByURI(URI);
-    const std::vector<CompletionItem> &completionItems
-      = m_completionProvider->getCompletions(document, position);
+    const std::string& document = m_ls6502Client->getDocumentByURI(URI);
+    const std::vector<CompletionItem>& completionItems = m_completionProvider->getCompletions(document, position);
 
     int64_t requestId = completionReq->getId();
 
-    CompletionResult completionResult(completionItems);
+    CompletionResult   completionResult(completionItems);
     CompletionResponse completionResponse{"2.0", requestId, completionResult};
 
     Rpc::send(completionResponse);
@@ -156,64 +153,64 @@ void Ls6502ReqHandler::textDocumentCompletionReq(const std::shared_ptr<Completio
 }
 
 ////////////////////////////////////////////////////////////
-void Ls6502ReqHandler::textDocumentHoverReq(const std::shared_ptr<HoverRequest> &hoverTextDocumentReq)
+void Ls6502ReqHandler::textDocumentHoverReq(const std::shared_ptr<HoverRequest>& hoverTextDocumentReq)
 {
     LS_6502_DEBUG("Processing textDocument/hover request");
 
     std::shared_ptr<HoverParams> hoverParams = hoverTextDocumentReq->getParams();
 
-    const std::string &URI = hoverParams->getTextDocumentIdentifier().URI;
+    const std::string& URI = hoverParams->getTextDocumentIdentifier().URI;
 
-    const Position &position = hoverParams->getPosition();
-    const std::string &document = m_ls6502Client->getDocumentByURI(URI);
+    const Position&    position = hoverParams->getPosition();
+    const std::string& document = m_ls6502Client->getDocumentByURI(URI);
 
     int64_t requestId = hoverTextDocumentReq->getId();
 
-    const HoverItem &hoverItem = m_hoverProvider->getHoverItem(document, position);
+    const HoverItem& hoverItem = m_hoverProvider->getHoverItem(document, position);
 
-    HoverResult hoverResult(hoverItem.text);
+    HoverResult   hoverResult(hoverItem.text);
     HoverResponse hoverResponse("2.0", requestId, hoverResult);
 
     Rpc::send(hoverResponse);
 }
 
 ////////////////////////////////////////////////////////////
-void Ls6502ReqHandler::textDocumentCodeActionReq(const std::shared_ptr<CodeActionRequest> &codeActionRequest)
+void Ls6502ReqHandler::textDocumentCodeActionReq(const std::shared_ptr<CodeActionRequest>& codeActionRequest)
 {
     LS_6502_DEBUG("Processing textDocument/codeAction request");
 
     std::shared_ptr<CodeActionParams> codeActionParams = codeActionRequest->getParams();
 
-    const std::string &URI = codeActionParams->getURI();
-    const std::string &document = m_ls6502Client->getDocumentByURI(URI);
+    const std::string& URI      = codeActionParams->getURI();
+    const std::string& document = m_ls6502Client->getDocumentByURI(URI);
 
-    const std::vector<CodeAction> &codeActions = m_codeActionsProvider->getCodeActions(document, URI);
+    const std::vector<CodeAction>& codeActions = m_codeActionsProvider->getCodeActions(document, URI);
 
     int64_t requestId = codeActionRequest->getId();
 
-    CodeActionResult codeActionResult({codeActions});
+    CodeActionResult   codeActionResult({codeActions});
     CodeActionResponse codeActionsResponse{"2.0", requestId, codeActionResult};
 
     Rpc::send(codeActionsResponse);
 }
 
 ////////////////////////////////////////////////////////////
-void Ls6502ReqHandler::textDocumentDefinitionReq(const std::shared_ptr<DefintionRequest> &defintionRequest)
+void Ls6502ReqHandler::textDocumentDefinitionReq(const std::shared_ptr<DefintionRequest>& defintionRequest)
 {
     LS_6502_DEBUG("Processing textDocument/definition request");
 
     std::shared_ptr<DefinitionParams> definitionParams = defintionRequest->getParams();
 
-    const std::string &URI = definitionParams->getTextDocumentIdentifier().URI;
-    const Position &position = definitionParams->getPosition();
+    const std::string& URI      = definitionParams->getTextDocumentIdentifier().URI;
+    const Position&    position = definitionParams->getPosition();
 
-    const std::string &document = m_ls6502Client->getDocumentByURI(URI);
+    const std::string& document = m_ls6502Client->getDocumentByURI(URI);
 
-    const Location &location = m_definitionProvider->provideDefinitionLocation(document, position, document);
+    const Location& location = m_definitionProvider->provideDefinitionLocation(document, position, document);
 }
 
 ////////////////////////////////////////////////////////////
-void Ls6502ReqHandler::shutdownReq(const std::shared_ptr<ShutdownRequest> &shutdownRequest)
+void Ls6502ReqHandler::shutdownReq(const std::shared_ptr<ShutdownRequest>& shutdownRequest)
 {
     LS_6502_DEBUG("Processing shutdown request");
 

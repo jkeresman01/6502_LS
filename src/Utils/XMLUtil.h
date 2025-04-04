@@ -18,7 +18,7 @@ namespace ls6502
 /////////////////////////////////////////////////////////////////////
 class XMLUtil
 {
-  public:
+public:
     /////////////////////////////////////////////////////////////////////
     ///
     /// @brief Delete default constructor to prevent instantiation
@@ -33,7 +33,7 @@ class XMLUtil
     /// @param [in] line from XML file
     ///
     /////////////////////////////////////////////////////////////////////
-    static std::pair<std::string, std::string> parseFromFileLine(const std::string &line);
+    static std::pair<std::string, std::string> parseFromFileLine(const std::string& line);
 
     /////////////////////////////////////////////////////////////////////
     ///
@@ -44,9 +44,9 @@ class XMLUtil
     /// @return true if is valid XML line
     ///
     /////////////////////////////////////////////////////////////////////
-    static bool isValidXMLLine(const std::string_view &line);
+    static bool isValidXMLLine(const std::string_view& line);
 
-  private:
+private:
     /////////////////////////////////////////////////////////////////////
     ///
     /// @brief Trims line from XML file
@@ -56,7 +56,7 @@ class XMLUtil
     /// @return trimed line
     ///
     /////////////////////////////////////////////////////////////////////
-    std::string trim(const std::string &line);
+    std::string trim(const std::string& line);
 
     /////////////////////////////////////////////////////////////////////
     ///
@@ -67,7 +67,7 @@ class XMLUtil
     /// @return true if is valid propery
     ///
     /////////////////////////////////////////////////////////////////////
-    bool isValidPropertyXMLLine(const std::string &line);
+    bool isValidPropertyXMLLine(const std::string& line);
 };
 
 /////////////////////////////////////////////////////////////////////
@@ -75,22 +75,22 @@ class XMLUtil
 /////////////////////////////////////////////////////////////////////
 
 ////////////////////////////////////////////////////////////
-std::pair<std::string, std::string> inline XMLUtil::parseFromFileLine(const std::string &line)
+inline std::pair<std::string, std::string> XMLUtil::parseFromFileLine(const std::string& line)
 {
     size_t nameStart = line.find("name=\"") + 6;
-    size_t nameEnd = line.find("\"", nameStart);
+    size_t nameEnd   = line.find("\"", nameStart);
 
     size_t valueStart = line.find(">", nameEnd) + 1;
-    size_t valueEnd = line.find("</property>", valueStart);
+    size_t valueEnd   = line.find("</property>", valueStart);
 
-    bool hasName = nameStart != std::string::npos and nameEnd != std::string::npos;
+    bool hasName  = nameStart != std::string::npos and nameEnd != std::string::npos;
     bool hasValue = valueStart != std::string::npos and valueEnd != std::string::npos;
 
     std::pair<std::string, std::string> property;
 
     if (hasName and hasValue)
     {
-        std::string propertyName = line.substr(nameStart, nameEnd - nameStart);
+        std::string propertyName  = line.substr(nameStart, nameEnd - nameStart);
         std::string propertyValue = line.substr(valueStart, valueEnd - valueStart);
 
         property = std::make_pair(propertyName, propertyValue);
@@ -100,19 +100,19 @@ std::pair<std::string, std::string> inline XMLUtil::parseFromFileLine(const std:
 }
 
 ////////////////////////////////////////////////////////////
-bool inline XMLUtil::isValidXMLLine(const std::string_view &line)
+inline bool XMLUtil::isValidXMLLine(const std::string_view& line)
 {
-    bool hasCorrectStartPropertyTag = line.find("<property") != std::string::npos;
+    bool hasCorrectStartPropertyTag    = line.find("<property") != std::string::npos;
     bool hasCorrectStartEndPropertyTag = line.find("</property>") != std::string::npos;
 
     return hasCorrectStartPropertyTag and hasCorrectStartEndPropertyTag;
 }
 
 ////////////////////////////////////////////////////////////
-std::string inline XMLUtil::trim(const std::string &line)
+inline std::string XMLUtil::trim(const std::string& line)
 {
     size_t start = line.find_first_not_of(" \t\n\r");
-    size_t end = line.find_last_not_of(" \t\n\r");
+    size_t end   = line.find_last_not_of(" \t\n\r");
 
     bool isAllWhitespaceLine = start or end;
 

@@ -21,7 +21,7 @@ namespace ls6502
 //////////////////////////////////////////////////////////////
 class HoverResponse : public ResponseMessage
 {
-  public:
+public:
     //////////////////////////////////////////////////////////////
     ///
     /// @brief Constructs a HoverResponse with given parameters.
@@ -31,7 +31,7 @@ class HoverResponse : public ResponseMessage
     /// @param [in] hoverResult
     ///
     //////////////////////////////////////////////////////////////
-    HoverResponse(const std::string &jsonRPC, const int64_t id, const HoverResult &hoverResult);
+    HoverResponse(const std::string& jsonRPC, const int64_t id, const HoverResult& hoverResult);
 
     //////////////////////////////////////////////////////////////
     ///
@@ -52,9 +52,9 @@ class HoverResponse : public ResponseMessage
     /// @return The modified output stream.
     ///
     //////////////////////////////////////////////////////////////
-    friend std::ostream &operator<<(std::ostream &os, const HoverResponse &hoverResponse);
+    friend std::ostream& operator<<(std::ostream& os, const HoverResponse& hoverResponse);
 
-  private:
+private:
     //////////////////////////////////////////////////////////////
     ///
     /// @brief The hover result associated with this response.

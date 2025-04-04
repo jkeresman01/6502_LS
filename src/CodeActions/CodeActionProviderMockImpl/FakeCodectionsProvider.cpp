@@ -14,8 +14,7 @@ namespace ls6502
 {
 
 ////////////////////////////////////////////////////////////
-std::vector<CodeAction> FakeCodeActionsProvider::getCodeActions(const std::string &document,
-                                                                const std::string &URI)
+std::vector<CodeAction> FakeCodeActionsProvider::getCodeActions(const std::string& document, const std::string& URI)
 {
     (void)document;
 
@@ -25,8 +24,7 @@ std::vector<CodeAction> FakeCodeActionsProvider::getCodeActions(const std::strin
 }
 
 ////////////////////////////////////////////////////////////
-void FakeCodeActionsProvider::fillFakeCodeActions(std::vector<CodeAction> &codeActions,
-                                                  const std::string &URI)
+void FakeCodeActionsProvider::fillFakeCodeActions(std::vector<CodeAction>& codeActions, const std::string& URI)
 {
     std::vector<TextEdit> textEdits{{{{2, 0}, {4, 10}}, "New text"}};
 
@@ -39,15 +37,14 @@ void FakeCodeActionsProvider::fillFakeCodeActions(std::vector<CodeAction> &codeA
 }
 
 ////////////////////////////////////////////////////////////
-CodeAction FakeCodeActionsProvider::createFakeCodeAction(const WorkspaceEdit &workspaceEdit,
-                                                         const std::string &title)
+CodeAction FakeCodeActionsProvider::createFakeCodeAction(const WorkspaceEdit& workspaceEdit, const std::string& title)
 {
     return CodeAction::Builder()
-      .withTitle(title)
-      .withCodeActionKind(CodeActionKind::QUICK_FIX)
-      .withPrefferedFix(false)
-      .withWorkspaceEdit(workspaceEdit)
-      .build();
+        .withTitle(title)
+        .withCodeActionKind(CodeActionKind::QUICK_FIX)
+        .withPrefferedFix(false)
+        .withWorkspaceEdit(workspaceEdit)
+        .build();
 }
 
 } // namespace ls6502

@@ -54,6 +54,9 @@ struct ServerInfo
     /// @return Serializes ServerInfo to JSON
     ///
     //////////////////////////////////////////////////////////////
-    nlohmann::json toJson() const { return {{"name", name}, {"version", version}}; }
+    nlohmann::json toJson() const
+    {
+        return {{"name", name}, {"version", version}};
+    }
 };
 } // namespace ls6502

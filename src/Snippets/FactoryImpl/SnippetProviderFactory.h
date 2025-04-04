@@ -24,7 +24,7 @@ namespace ls6502
 //////////////////////////////////////////////////////////////
 class SnippetProviderFactory
 {
-  public:
+public:
     //////////////////////////////////////////////////////////////
     ///
     /// @brief Deleted default constructor to prevent instantiation.
@@ -41,8 +41,8 @@ class SnippetProviderFactory
     //////////////////////////////////////////////////////////////
     static std::shared_ptr<ISnippetProvider> create()
     {
-        const std::string &snippetsProvider
-          = ConfigurationManager::getInstance()->getProperty("snippetsProvider");
+        const std::string& snippetsProvider = ConfigurationManager::getInstance()->getProperty(
+            "snippetsProvider");
 
         LS_6502_DEBUG(STR("Snippets provider: %s", snippetsProvider.c_str()));
 

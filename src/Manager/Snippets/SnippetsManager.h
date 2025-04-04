@@ -31,7 +31,7 @@ typedef std::unordered_multimap<std::string, std::string> SnippetsMapT;
 //////////////////////////////////////////////////////////////
 class SnippetsManager
 {
-  public:
+public:
     //////////////////////////////////////////////////////////////
     ///
     /// @brief Constructor
@@ -44,28 +44,28 @@ class SnippetsManager
     /// @brief Deleted copy constructor
     ///
     //////////////////////////////////////////////////////////////
-    SnippetsManager(const SnippetsManager &) = delete;
+    SnippetsManager(const SnippetsManager&) = delete;
 
     //////////////////////////////////////////////////////////////
     ///
     /// @brief Deleted move constructor
     ///
     //////////////////////////////////////////////////////////////
-    SnippetsManager(SnippetsManager &&) = delete;
+    SnippetsManager(SnippetsManager&&) = delete;
 
     //////////////////////////////////////////////////////////////
     ///
     /// @brief Deleted copy assignment operator
     ///
     //////////////////////////////////////////////////////////////
-    SnippetsManager &operator=(const SnippetsManager &) = delete;
+    SnippetsManager& operator=(const SnippetsManager&) = delete;
 
     //////////////////////////////////////////////////////////////
     ///
     /// @brief Deleted move assignment operator
     ///
     //////////////////////////////////////////////////////////////
-    SnippetsManager &operator=(SnippetsManager &&) = delete;
+    SnippetsManager& operator=(SnippetsManager&&) = delete;
 
     //////////////////////////////////////////////////////////////
     ///
@@ -74,7 +74,7 @@ class SnippetsManager
     /// @return Reference to the singleton instance
     ///
     //////////////////////////////////////////////////////////////
-    static SnippetsManager &getInstance();
+    static SnippetsManager& getInstance();
 
     //////////////////////////////////////////////////////////////
     ///
@@ -94,9 +94,9 @@ class SnippetsManager
     /// @return A vector of matching snippets
     ///
     //////////////////////////////////////////////////////////////
-    std::optional<std::vector<std::string>> getSnippetsByMnemonic(const std::string &mnemonic);
+    std::optional<std::vector<std::string>> getSnippetsByMnemonic(const std::string& mnemonic);
 
-  private:
+private:
     //////////////////////////////////////////////////////////////
     ///
     /// @brief Loads all available snippets into memory
@@ -104,7 +104,7 @@ class SnippetsManager
     //////////////////////////////////////////////////////////////
     void loadSnippets();
 
-  private:
+private:
     //////////////////////////////////////////////////////////////
     ///
     /// @brief Shared repository for accessing snippet sets

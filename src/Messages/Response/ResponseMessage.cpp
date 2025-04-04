@@ -9,12 +9,13 @@ namespace ls6502
 {
 
 ////////////////////////////////////////////////////////////
-ResponseMessage::ResponseMessage(const std::string &jsonRpc, int64_t id) : Message(jsonRpc), m_id(id){};
+ResponseMessage::ResponseMessage(const std::string& jsonRpc, int64_t id) : Message(jsonRpc), m_id(id){};
 
 ////////////////////////////////////////////////////////////
-ResponseMessage::ResponseMessage(const std::string &jsonRpc, const int64_t id,
-                                 const ResponseError &responseError)
-    : Message(jsonRpc), m_id(id), m_responseError(responseError){};
+ResponseMessage::ResponseMessage(const std::string& jsonRpc, const int64_t id, const ResponseError& responseError) :
+Message(jsonRpc),
+m_id(id),
+m_responseError(responseError){};
 
 ////////////////////////////////////////////////////////////
 nlohmann::json ResponseMessage::toJson() const
@@ -30,7 +31,7 @@ nlohmann::json ResponseMessage::toJson() const
 }
 
 ////////////////////////////////////////////////////////////
-std::ostream &operator<<(std::ostream &os, const ResponseMessage &responseMessage)
+std::ostream& operator<<(std::ostream& os, const ResponseMessage& responseMessage)
 {
     nlohmann::json jsonRPC = responseMessage.toJson();
 

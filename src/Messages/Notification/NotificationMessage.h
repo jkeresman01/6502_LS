@@ -23,7 +23,7 @@ namespace ls6502
 //////////////////////////////////////////////////////////////
 class NotificationMessage : public Message
 {
-  public:
+public:
     //////////////////////////////////////////////////////////////
     ///
     /// @brief Constructs a NotificationMessage with the specified
@@ -32,7 +32,7 @@ class NotificationMessage : public Message
     /// @param [in] jsonRPC
     ///
     //////////////////////////////////////////////////////////////
-    explicit NotificationMessage(const nlohmann::json &jsonRPC);
+    explicit NotificationMessage(const nlohmann::json& jsonRPC);
 
     //////////////////////////////////////////////////////////////
     ///
@@ -42,7 +42,7 @@ class NotificationMessage : public Message
     /// @param [in] method
     ///
     //////////////////////////////////////////////////////////////
-    explicit NotificationMessage(const std::string &method);
+    explicit NotificationMessage(const std::string& method);
 
     //////////////////////////////////////////////////////////////
     ///
@@ -54,7 +54,7 @@ class NotificationMessage : public Message
     //////////////////////////////////////////////////////////////
     nlohmann::json toJson() const override;
 
-  protected:
+protected:
     //////////////////////////////////////////////////////////////
     ///
     /// @brief The method of the notification, which describes the action or event.

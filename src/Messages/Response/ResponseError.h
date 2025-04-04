@@ -23,7 +23,7 @@ namespace ls6502
 //////////////////////////////////////////////////////////////
 class ResponseError
 {
-  public:
+public:
     //////////////////////////////////////////////////////////////
     ///
     /// @brief Constructs a ResponseError with a specific code and message.
@@ -32,7 +32,7 @@ class ResponseError
     /// @param [in] message
     ///
     //////////////////////////////////////////////////////////////
-    ResponseError(const ErrorCodes &errorCode, const std::string &message);
+    ResponseError(const ErrorCodes& errorCode, const std::string& message);
 
     //////////////////////////////////////////////////////////////
     ///
@@ -41,7 +41,10 @@ class ResponseError
     /// @return Error code
     ///
     //////////////////////////////////////////////////////////////
-    ErrorCodes getErrorCode() const { return m_errorCode; }
+    ErrorCodes getErrorCode() const
+    {
+        return m_errorCode;
+    }
 
     //////////////////////////////////////////////////////////////
     ///
@@ -50,7 +53,10 @@ class ResponseError
     /// @return Error message
     ///
     //////////////////////////////////////////////////////////////
-    std::string getErrorMessage() const { return m_message; }
+    std::string getErrorMessage() const
+    {
+        return m_message;
+    }
 
     //////////////////////////////////////////////////////////////
     ///
@@ -79,20 +85,20 @@ class ResponseError
     //////////////////////////////////////////////////////////////
     class Builder
     {
-      public:
+    public:
         //////////////////////////////////////////////////////////////
         ///
         /// @brief Sets the error code in response error
         ///
         //////////////////////////////////////////////////////////////
-        Builder &withErrorCode(const ErrorCodes &errorCode);
+        Builder& withErrorCode(const ErrorCodes& errorCode);
 
         //////////////////////////////////////////////////////////////
         ///
         /// @brief Sets the error message in response errror
         ///
         //////////////////////////////////////////////////////////////
-        Builder &withErrorMessage(const std::string &message);
+        Builder& withErrorMessage(const std::string& message);
 
         //////////////////////////////////////////////////////////////
         ///
@@ -101,7 +107,7 @@ class ResponseError
         //////////////////////////////////////////////////////////////
         ResponseError build() const;
 
-      private:
+    private:
         //////////////////////////////////////////////////////////////
         ///
         /// @brief The error code representing the type of error.
@@ -117,7 +123,7 @@ class ResponseError
         std::string m_message;
     };
 
-  private:
+private:
     //////////////////////////////////////////////////////////////
     ///
     /// @brief The error code representing the type of error.

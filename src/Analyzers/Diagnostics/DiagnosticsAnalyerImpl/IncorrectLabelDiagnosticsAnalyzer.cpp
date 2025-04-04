@@ -8,13 +8,13 @@ namespace ls6502
 {
 
 ////////////////////////////////////////////////////////////
-std::vector<CodeAction> IncorrectLabelDiagnosticsAnalyzer::provideCodeActions(const Diagnostic &diagnostic,
-                                                                              const std::string &document,
-                                                                              const std::string &URI)
+std::vector<CodeAction> IncorrectLabelDiagnosticsAnalyzer::provideCodeActions(const Diagnostic&  diagnostic,
+                                                                              const std::string& document,
+                                                                              const std::string& URI)
 {
     m_codeActions.clear();
 
-    Range range = diagnostic.getRange();
+    Range       range           = diagnostic.getRange();
     std::string replacementText = document.substr(range.start.character, range.end.character) + ":";
 
     std::vector<TextEdit> textEdits{{range, replacementText}};
@@ -28,14 +28,14 @@ std::vector<CodeAction> IncorrectLabelDiagnosticsAnalyzer::provideCodeActions(co
 }
 
 ////////////////////////////////////////////////////////////
-CodeAction IncorrectLabelDiagnosticsAnalyzer::createCodeAction(const WorkspaceEdit &workspaceEdit)
+CodeAction IncorrectLabelDiagnosticsAnalyzer::createCodeAction(const WorkspaceEdit& workspaceEdit)
 {
     return CodeAction::Builder()
-      .withTitle("Add missing ':' to label")
-      .withCodeActionKind(CodeActionKind::QUICK_FIX)
-      .withPrefferedFix(true)
-      .withWorkspaceEdit(workspaceEdit)
-      .build();
+        .withTitle("Add missing ':' to label")
+        .withCodeActionKind(CodeActionKind::QUICK_FIX)
+        .withPrefferedFix(true)
+        .withWorkspaceEdit(workspaceEdit)
+        .build();
 }
 
 } // namespace ls6502

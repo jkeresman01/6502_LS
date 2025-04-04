@@ -22,7 +22,7 @@ namespace ls6502
 //////////////////////////////////////////////////////////////
 class DidChangeTextDocumentParams
 {
-  public:
+public:
     //////////////////////////////////////////////////////////////
     ///
     /// @brief Constructs DidChangeTextDocumentParams from a JSON-RPC
@@ -30,23 +30,29 @@ class DidChangeTextDocumentParams
     /// @param [in] jsonRPC
     ///
     //////////////////////////////////////////////////////////////
-    explicit DidChangeTextDocumentParams(const nlohmann::json &jsonRPC);
+    explicit DidChangeTextDocumentParams(const nlohmann::json& jsonRPC);
 
     //////////////////////////////////////////////////////////////
     ///
     /// @brief Accessor method for changed docuemnt URI
     ///
     //////////////////////////////////////////////////////////////
-    std::string getChangedDocumentURI() const { return m_textDocument.URI; };
+    std::string getChangedDocumentURI() const
+    {
+        return m_textDocument.URI;
+    };
 
     //////////////////////////////////////////////////////////////
     ///
     /// @brief Accessor method for document changes
     ///
     //////////////////////////////////////////////////////////////
-    std::string getContentChanges() const { return m_contentChanges; };
+    std::string getContentChanges() const
+    {
+        return m_contentChanges;
+    };
 
-  private:
+private:
     //////////////////////////////////////////////////////////////
     ///
     /// @brief Mutator method for text document identifier
@@ -54,7 +60,7 @@ class DidChangeTextDocumentParams
     /// @param [in] jsonRPC
     ///
     //////////////////////////////////////////////////////////////
-    void setTextDocumentIdentifier(const nlohmann::json &jsonRPC);
+    void setTextDocumentIdentifier(const nlohmann::json& jsonRPC);
 
     //////////////////////////////////////////////////////////////
     ///
@@ -63,9 +69,9 @@ class DidChangeTextDocumentParams
     /// @param [in] jsonRPC The JSON-RPC object containing LSP message data.
     ///
     //////////////////////////////////////////////////////////////
-    void setContentChanges(const nlohmann::json &jsonRPC);
+    void setContentChanges(const nlohmann::json& jsonRPC);
 
-  private:
+private:
     //////////////////////////////////////////////////////////////
     ///
     /// @brief Identifier of the text document that has changed.

@@ -22,7 +22,7 @@ namespace ls6502
 //////////////////////////////////////////////////////////////
 class ICompletionProvider
 {
-  public:
+public:
     //////////////////////////////////////////////////////////////
     ///
     /// @brief Pure virtual function to retrieve completion items.
@@ -31,8 +31,7 @@ class ICompletionProvider
     ///         the available completions.
     ///
     //////////////////////////////////////////////////////////////
-    virtual std::vector<CompletionItem> getCompletions(const std::string &document, const Position &position)
-      = 0;
+    virtual std::vector<CompletionItem> getCompletions(const std::string& document, const Position& position) = 0;
 };
 
 } // namespace ls6502

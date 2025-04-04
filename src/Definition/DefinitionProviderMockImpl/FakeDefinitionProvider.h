@@ -18,7 +18,7 @@ namespace ls6502
 //////////////////////////////////////////////////////////////
 class FakeDefinitionProvider : public IDefinitionProvider
 {
-  public:
+public:
     //////////////////////////////////////////////////////////////
     ///
     /// @brief Provides a fake location of a definition
@@ -30,7 +30,8 @@ class FakeDefinitionProvider : public IDefinitionProvider
     /// @return A fake location of the definition
     ///
     //////////////////////////////////////////////////////////////
-    virtual Location provideDefinitionLocation(const std::string &document, const Position &position,
-                                               const std::string &URI) override;
+    virtual Location provideDefinitionLocation(const std::string& document,
+                                               const Position&    position,
+                                               const std::string& URI) override;
 };
 } // namespace ls6502

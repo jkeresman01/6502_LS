@@ -27,7 +27,7 @@ typedef std::unordered_map<std::string, Instruction> InstructionSetMapT;
 /////////////////////////////////////////////////////////////////////
 class JSONInstructionSetRepository : public IInstructionSetRepository
 {
-  public:
+public:
     /////////////////////////////////////////////////////////////////////
     ///
     /// @brief Loads the instruction set from a JSON file
@@ -37,7 +37,7 @@ class JSONInstructionSetRepository : public IInstructionSetRepository
     /////////////////////////////////////////////////////////////////////
     InstructionSetMapT load() override;
 
-  private:
+private:
     /////////////////////////////////////////////////////////////////////
     ///
     /// @brief Loads instruction set data from an input file stream
@@ -45,7 +45,7 @@ class JSONInstructionSetRepository : public IInstructionSetRepository
     /// @param [in] in
     ///
     /////////////////////////////////////////////////////////////////////
-    void load(std::ifstream &in);
+    void load(std::ifstream& in);
 
     /////////////////////////////////////////////////////////////////////
     ///
@@ -54,7 +54,7 @@ class JSONInstructionSetRepository : public IInstructionSetRepository
     /// @param [in] jsonData
     ///
     /////////////////////////////////////////////////////////////////////
-    void loadInstructionSet(const nlohmann::json &jsonData);
+    void loadInstructionSet(const nlohmann::json& jsonData);
 
     /////////////////////////////////////////////////////////////////////
     ///
@@ -64,7 +64,7 @@ class JSONInstructionSetRepository : public IInstructionSetRepository
     /// @param [in] instruction
     ///
     /////////////////////////////////////////////////////////////////////
-    void loadMnemonic(const nlohmann::json &jsonData, Instruction &instruction);
+    void loadMnemonic(const nlohmann::json& jsonData, Instruction& instruction);
 
     /////////////////////////////////////////////////////////////////////
     ///
@@ -74,7 +74,7 @@ class JSONInstructionSetRepository : public IInstructionSetRepository
     /// @param [in] instruction
     ///
     /////////////////////////////////////////////////////////////////////
-    void loadDescription(const nlohmann::json &jsonData, Instruction &instruction);
+    void loadDescription(const nlohmann::json& jsonData, Instruction& instruction);
 
     /////////////////////////////////////////////////////////////////////
     ///
@@ -84,7 +84,7 @@ class JSONInstructionSetRepository : public IInstructionSetRepository
     /// @param [in] instruction
     ///
     /////////////////////////////////////////////////////////////////////
-    void loadOperation(const nlohmann::json &jsonData, Instruction &instruction);
+    void loadOperation(const nlohmann::json& jsonData, Instruction& instruction);
 
     /////////////////////////////////////////////////////////////////////
     ///
@@ -94,7 +94,7 @@ class JSONInstructionSetRepository : public IInstructionSetRepository
     /// @param [in] instruction
     ///
     /////////////////////////////////////////////////////////////////////
-    void loadFlags(const nlohmann::json &jsonData, Instruction &instruction);
+    void loadFlags(const nlohmann::json& jsonData, Instruction& instruction);
 
     /////////////////////////////////////////////////////////////////////
     ///
@@ -104,7 +104,7 @@ class JSONInstructionSetRepository : public IInstructionSetRepository
     /// @param [in] instruction
     ///
     /////////////////////////////////////////////////////////////////////
-    void loadAddressingMode(const nlohmann::json &jsonData, AddressingMode &instruction);
+    void loadAddressingMode(const nlohmann::json& jsonData, AddressingMode& instruction);
 
     /////////////////////////////////////////////////////////////////////
     ///
@@ -114,7 +114,7 @@ class JSONInstructionSetRepository : public IInstructionSetRepository
     /// @param [in] addressingMode
     ///
     /////////////////////////////////////////////////////////////////////
-    void loadMode(const nlohmann::json &jsonData, AddressingMode &addressingMode);
+    void loadMode(const nlohmann::json& jsonData, AddressingMode& addressingMode);
 
     /////////////////////////////////////////////////////////////////////
     ///
@@ -124,7 +124,7 @@ class JSONInstructionSetRepository : public IInstructionSetRepository
     /// @param [in] addressingMode
     ///
     /////////////////////////////////////////////////////////////////////
-    void loadAssembler(const nlohmann::json &jsonData, AddressingMode &addressingMode);
+    void loadAssembler(const nlohmann::json& jsonData, AddressingMode& addressingMode);
 
     /////////////////////////////////////////////////////////////////////
     ///
@@ -134,7 +134,7 @@ class JSONInstructionSetRepository : public IInstructionSetRepository
     /// @param [in] addressingMode
     ///
     /////////////////////////////////////////////////////////////////////
-    void loadOpcode(const nlohmann::json &jsonData, AddressingMode &addressingMode);
+    void loadOpcode(const nlohmann::json& jsonData, AddressingMode& addressingMode);
 
     /////////////////////////////////////////////////////////////////////
     ///
@@ -144,7 +144,7 @@ class JSONInstructionSetRepository : public IInstructionSetRepository
     /// @param [in] addressingMode
     ///
     /////////////////////////////////////////////////////////////////////
-    void loadBytes(const nlohmann::json &jsonData, AddressingMode &addressingMode);
+    void loadBytes(const nlohmann::json& jsonData, AddressingMode& addressingMode);
 
     /////////////////////////////////////////////////////////////////////
     ///
@@ -154,9 +154,9 @@ class JSONInstructionSetRepository : public IInstructionSetRepository
     /// @param [in] addressingMode
     ///
     /////////////////////////////////////////////////////////////////////
-    void loadCycles(const nlohmann::json &jsonData, AddressingMode &addressingMode);
+    void loadCycles(const nlohmann::json& jsonData, AddressingMode& addressingMode);
 
-  private:
+private:
     /////////////////////////////////////////////////////////////////////
     ///
     /// @brief Map of instruction names to Instruction objects
@@ -171,7 +171,7 @@ class JSONInstructionSetRepository : public IInstructionSetRepository
     /////////////////////////////////////////////////////////////////////
 
     // TODO change
-    const char *INSTRUCTION_SET_FILE_PATH = "/home/josip/git/cpp/6502_LS/instructions/instructions.json";
+    const char* INSTRUCTION_SET_FILE_PATH = "/home/josip/git/cpp/6502_LS/instructions/instructions.json";
 };
 
 } // namespace ls6502

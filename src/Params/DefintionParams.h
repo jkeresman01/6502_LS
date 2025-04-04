@@ -12,7 +12,7 @@ namespace ls6502
 {
 class DefinitionParams : public TextDocumentPositionParams
 {
-  public:
+public:
     //////////////////////////////////////////////////////////////
     ///
     /// @brief Constructs the DefinitionParams object from JSON RPC
@@ -20,7 +20,7 @@ class DefinitionParams : public TextDocumentPositionParams
     /// @param [in] jsonRPC JSON object containing definition parameters
     ///
     //////////////////////////////////////////////////////////////
-    explicit DefinitionParams(const nlohmann::json &jsonRPC) : TextDocumentPositionParams(jsonRPC){};
+    explicit DefinitionParams(const nlohmann::json& jsonRPC) : TextDocumentPositionParams(jsonRPC){};
 };
 
 } // namespace ls6502

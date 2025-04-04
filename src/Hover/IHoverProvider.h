@@ -22,7 +22,7 @@ namespace ls6502
 //////////////////////////////////////////////////////////////
 class IHoverProvider
 {
-  public:
+public:
     //////////////////////////////////////////////////////////////
     ///
     /// @brief Retrieves a hover item for a given document
@@ -34,6 +34,6 @@ class IHoverProvider
     /// @return A HoverItem representing hover information.
     ///
     //////////////////////////////////////////////////////////////
-    virtual HoverItem getHoverItem(const std::string &document, const Position &position) = 0;
+    virtual HoverItem getHoverItem(const std::string& document, const Position& position) = 0;
 };
 } // namespace ls6502

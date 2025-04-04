@@ -23,7 +23,7 @@ namespace ls6502
 //////////////////////////////////////////////////////////////
 class DidChangeTextDocumentRequest : public NotificationMessage
 {
-  public:
+public:
     //////////////////////////////////////////////////////////////
     ///
     /// @brief Constructs textDocument/didChange from a JSON-RPC
@@ -31,7 +31,7 @@ class DidChangeTextDocumentRequest : public NotificationMessage
     /// @param [in] jsonRPC
     ///
     //////////////////////////////////////////////////////////////
-    explicit DidChangeTextDocumentRequest(const nlohmann::json &jsonRPC);
+    explicit DidChangeTextDocumentRequest(const nlohmann::json& jsonRPC);
 
     //////////////////////////////////////////////////////////////
     ///
@@ -40,9 +40,12 @@ class DidChangeTextDocumentRequest : public NotificationMessage
     /// @return textDocument/didChange params
     ///
     //////////////////////////////////////////////////////////////
-    std::shared_ptr<DidChangeTextDocumentParams> getParams() const { return m_didChangeTextDocumentParams; };
+    std::shared_ptr<DidChangeTextDocumentParams> getParams() const
+    {
+        return m_didChangeTextDocumentParams;
+    };
 
-  private:
+private:
     //////////////////////////////////////////////////////////////
     ///
     /// @brief Mutator method for textDocument/didChange params
@@ -50,9 +53,9 @@ class DidChangeTextDocumentRequest : public NotificationMessage
     /// @param [in] jsonRPC
     ///
     //////////////////////////////////////////////////////////////
-    void setParams(const nlohmann::json &jsonRPC);
+    void setParams(const nlohmann::json& jsonRPC);
 
-  private:
+private:
     //////////////////////////////////////////////////////////////
     ///
     /// @brief textDocument/didChange parameters

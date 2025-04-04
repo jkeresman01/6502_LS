@@ -19,11 +19,12 @@
 
 #define MAX_BUFFER_SIZE 256
 
-#define STR(format, ...) \
-    [](const char *fmt, auto... args) { \
-        char buffer[MAX_BUFFER_SIZE]; \
+#define STR(format, ...)                                \
+    [](const char* fmt, auto... args)                   \
+    {                                                   \
+        char buffer[MAX_BUFFER_SIZE];                   \
         snprintf(buffer, sizeof(buffer), fmt, args...); \
-        return std::string(buffer); \
+        return std::string(buffer);                     \
     }(format, __VA_ARGS__)
 
 #define LOG(severity, message) ls6502::Logger::log(severity, message, __FILE__, __LINE__)
@@ -38,13 +39,12 @@ namespace ls6502
 
 class Logger
 {
-  public:
+public:
     ////////////////////////////////////////////////////////////
     Logger() = delete;
 
     ////////////////////////////////////////////////////////////
-    static void log(const std::string &severity, const std::string &message, const char *file,
-                    uint32_t lineNumber)
+    static void log(const std::string& severity, const std::string& message, const char* file, uint32_t lineNumber)
     {
         std::ofstream logfile("/tmp/log.txt", std::ios::app);
 
@@ -59,10 +59,13 @@ class Logger
         logfile.close();
     }
 
-  private:
+private:
     ////////////////////////////////////////////////////////////
-    static void putLogMessage(std::ofstream &log, const std::string &message, const std::string &severity,
-                              uint32_t lineNumber, const char *file)
+    static void putLogMessage(std::ofstream&     log,
+                              const std::string& message,
+                              const std::string& severity,
+                              uint32_t           lineNumber,
+                              const char*        file)
     {
         log << "[";
         TimeUtil::putTime(log, TimeUtil::now());

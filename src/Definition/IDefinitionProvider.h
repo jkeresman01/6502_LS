@@ -19,7 +19,7 @@ namespace ls6502
 //////////////////////////////////////////////////////////////
 class IDefinitionProvider
 {
-  public:
+public:
     //////////////////////////////////////////////////////////////
     ///
     /// @brief Locates the definition of a symbol under the cursor
@@ -32,8 +32,8 @@ class IDefinitionProvider
     ///         line and column information.
     ///
     //////////////////////////////////////////////////////////////
-    virtual Location provideDefinitionLocation(const std::string &document, const Position &position,
-                                               const std::string &URI)
-      = 0;
+    virtual Location provideDefinitionLocation(const std::string& document,
+                                               const Position&    position,
+                                               const std::string& URI) = 0;
 };
 } // namespace ls6502

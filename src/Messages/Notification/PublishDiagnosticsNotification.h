@@ -26,7 +26,7 @@ namespace ls6502
 //////////////////////////////////////////////////////////////
 class PublishDiagnosticsNoticifation : public NotificationMessage
 {
-  public:
+public:
     //////////////////////////////////////////////////////////////
     ///
     /// @brief Constructs a PublishDiagnosticsNoticifation with the
@@ -36,8 +36,8 @@ class PublishDiagnosticsNoticifation : public NotificationMessage
     /// @param [in] diagnosticsParams
     ///
     //////////////////////////////////////////////////////////////
-    PublishDiagnosticsNoticifation(const std::string &method,
-                                   const std::shared_ptr<PublishDiagnosticsParams> &diagnosticsParams);
+    PublishDiagnosticsNoticifation(const std::string&                               method,
+                                   const std::shared_ptr<PublishDiagnosticsParams>& diagnosticsParams);
 
     //////////////////////////////////////////////////////////////
     ///
@@ -59,8 +59,8 @@ class PublishDiagnosticsNoticifation : public NotificationMessage
     /// @return Reference to the output stream.
     ///
     //////////////////////////////////////////////////////////////
-    friend std::ostream &operator<<(std::ostream &os,
-                                    const PublishDiagnosticsNoticifation &publishDiagsnosticsNotification);
+    friend std::ostream& operator<<(std::ostream&                         os,
+                                    const PublishDiagnosticsNoticifation& publishDiagsnosticsNotification);
 
     //////////////////////////////////////////////////////////////
     ///
@@ -69,9 +69,12 @@ class PublishDiagnosticsNoticifation : public NotificationMessage
     /// @return Shared pointer to the diagnostics parameters.
     ///
     //////////////////////////////////////////////////////////////
-    std::shared_ptr<PublishDiagnosticsParams> getParams() const { return m_diagnosticsParams; };
+    std::shared_ptr<PublishDiagnosticsParams> getParams() const
+    {
+        return m_diagnosticsParams;
+    };
 
-  private:
+private:
     //////////////////////////////////////////////////////////////
     ///
     /// @brief The diagnostics parameters associated with this notification.

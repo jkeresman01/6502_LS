@@ -9,7 +9,7 @@ namespace ls6502
 {
 
 ////////////////////////////////////////////////////////////
-void Trie::insert(const std::string &word)
+void Trie::insert(const std::string& word)
 {
     std::shared_ptr<Node> current = m_root;
 
@@ -23,10 +23,10 @@ void Trie::insert(const std::string &word)
 }
 
 ////////////////////////////////////////////////////////////
-std::vector<std::string> Trie::getCompletionWords(const std::string &prefix) const
+std::vector<std::string> Trie::getCompletionWords(const std::string& prefix) const
 {
     std::vector<std::string> completionOptions;
-    std::shared_ptr<Node> node = getNode(prefix);
+    std::shared_ptr<Node>    node = getNode(prefix);
 
     if (node)
     {
@@ -37,7 +37,7 @@ std::vector<std::string> Trie::getCompletionWords(const std::string &prefix) con
 }
 
 ////////////////////////////////////////////////////////////
-std::shared_ptr<Node> Trie::getNode(const std::string &prefix) const
+std::shared_ptr<Node> Trie::getNode(const std::string& prefix) const
 {
     std::shared_ptr<Node> current = m_root;
 
@@ -55,15 +55,14 @@ std::shared_ptr<Node> Trie::getNode(const std::string &prefix) const
 }
 
 ////////////////////////////////////////////////////////////
-void Trie::findAllWords(std::shared_ptr<Node> node, const std::string &prefix,
-                        std::vector<std::string> &results) const
+void Trie::findAllWords(std::shared_ptr<Node> node, const std::string& prefix, std::vector<std::string>& results) const
 {
     if (node->isLeaf)
     {
         results.push_back(prefix);
     }
 
-    for (const auto &pair : node->children)
+    for (const auto& pair : node->children)
     {
         findAllWords(pair.second, prefix + pair.first, results);
     }

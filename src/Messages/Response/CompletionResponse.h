@@ -24,7 +24,7 @@ namespace ls6502
 //////////////////////////////////////////////////////////////
 class CompletionResponse : public ResponseMessage
 {
-  public:
+public:
     //////////////////////////////////////////////////////////////
     ///
     /// @brief Constructs a CompletionResponse with the given JSON-RPC
@@ -34,7 +34,7 @@ class CompletionResponse : public ResponseMessage
     /// @param [in] completionResult
     ///
     //////////////////////////////////////////////////////////////
-    CompletionResponse(const std::string &jsonRPC, int64_t &id, const CompletionResult &completionResult);
+    CompletionResponse(const std::string& jsonRPC, int64_t& id, const CompletionResult& completionResult);
 
     //////////////////////////////////////////////////////////////
     ///
@@ -55,9 +55,9 @@ class CompletionResponse : public ResponseMessage
     /// @return The modified output stream.
     ///
     //////////////////////////////////////////////////////////////
-    friend std::ostream &operator<<(std::ostream &os, const CompletionResponse &completionResponse);
+    friend std::ostream& operator<<(std::ostream& os, const CompletionResponse& completionResponse);
 
-  private:
+private:
     //////////////////////////////////////////////////////////////
     ///
     /// @brief Holds the completion result data, which includes a list of

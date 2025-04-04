@@ -27,17 +27,17 @@ typedef std::unordered_map<std::string, std::string> PropertiesT;
 //////////////////////////////////////////////////////////////
 class ConfigurationManager
 {
-  public:
+public:
     //////////////////////////////////////////////////////////////
     ///
     /// @brief Constructors (default, copy, move)
     ///        and assignment operators
     ///
     //////////////////////////////////////////////////////////////
-    ConfigurationManager(const ConfigurationManager &) = delete;
-    ConfigurationManager(ConfigurationManager &&) = delete;
-    ConfigurationManager &operator=(const ConfigurationManager &) = delete;
-    ConfigurationManager &operator=(ConfigurationManager &&) = delete;
+    ConfigurationManager(const ConfigurationManager&)            = delete;
+    ConfigurationManager(ConfigurationManager&&)                 = delete;
+    ConfigurationManager& operator=(const ConfigurationManager&) = delete;
+    ConfigurationManager& operator=(ConfigurationManager&&)      = delete;
 
     //////////////////////////////////////////////////////////////
     ///
@@ -60,7 +60,7 @@ class ConfigurationManager
     /// @param [in] in
     ///
     //////////////////////////////////////////////////////////////
-    void load(std::ifstream &in);
+    void load(std::ifstream& in);
 
     //////////////////////////////////////////////////////////////
     ///
@@ -69,7 +69,7 @@ class ConfigurationManager
     /// @return Pointer to the single instance of ConfigurationManager
     ///
     //////////////////////////////////////////////////////////////
-    static ConfigurationManager *getInstance();
+    static ConfigurationManager* getInstance();
 
     //////////////////////////////////////////////////////////////
     ///
@@ -80,9 +80,9 @@ class ConfigurationManager
     /// @return The value associated with the given key
     ///
     //////////////////////////////////////////////////////////////
-    std::string getProperty(const std::string &key);
+    std::string getProperty(const std::string& key);
 
-  private:
+private:
     //////////////////////////////////////////////////////////////
     ///
     /// @brief Read propery from file line
@@ -90,9 +90,9 @@ class ConfigurationManager
     /// @param [in] line
     ///
     //////////////////////////////////////////////////////////////
-    void readPropertyFromFileLine(const std::string &line);
+    void readPropertyFromFileLine(const std::string& line);
 
-  private:
+private:
     //////////////////////////////////////////////////////////////
     ///
     /// @brief Private constructor
@@ -103,13 +103,13 @@ class ConfigurationManager
     //////////////////////////////////////////////////////////////
     ConfigurationManager() = default;
 
-  private:
+private:
     //////////////////////////////////////////////////////////////
     ///
     /// @brief Pointer to the singleton instance
     ///
     //////////////////////////////////////////////////////////////
-    static ConfigurationManager *s_instance;
+    static ConfigurationManager* s_instance;
 
     //////////////////////////////////////////////////////////////
     ///
@@ -123,7 +123,7 @@ class ConfigurationManager
     /// @brief Path to the XML configuration file
     ///
     //////////////////////////////////////////////////////////////
-    const char *XML_CONFIGURATION_PATH = "../../config/config.xml";
+    const char* XML_CONFIGURATION_PATH = "../../config/config.xml";
 
     //////////////////////////////////////////////////////////////
     ///

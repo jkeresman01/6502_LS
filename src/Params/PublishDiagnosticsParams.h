@@ -14,7 +14,7 @@ namespace ls6502
 {
 class PublishDiagnosticsParams
 {
-  public:
+public:
     //////////////////////////////////////////////////////////////
     ///
     /// @brief Constructs the PublishDiagnosticsParams object
@@ -23,7 +23,7 @@ class PublishDiagnosticsParams
     /// @param [in] diagnostics
     ///
     //////////////////////////////////////////////////////////////
-    PublishDiagnosticsParams(const std::string &URI, const std::vector<Diagnostic> &diagnostics);
+    PublishDiagnosticsParams(const std::string& URI, const std::vector<Diagnostic>& diagnostics);
 
     //////////////////////////////////////////////////////////////
     ///
@@ -34,7 +34,7 @@ class PublishDiagnosticsParams
     //////////////////////////////////////////////////////////////
     nlohmann::json toJson() const;
 
-  private:
+private:
     //////////////////////////////////////////////////////////////
     ///
     /// @brief Converts diagnostic items to JSON format
@@ -44,7 +44,7 @@ class PublishDiagnosticsParams
     //////////////////////////////////////////////////////////////
     nlohmann::json dianosticItemsToJson() const;
 
-  private:
+private:
     //////////////////////////////////////////////////////////////
     ///
     /// @brief The URI of the document for which diagnostics are published

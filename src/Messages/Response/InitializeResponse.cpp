@@ -11,9 +11,11 @@ namespace ls6502
 {
 
 ////////////////////////////////////////////////////////////
-InitializeResponse::InitializeResponse(const std::string &jsonRPC, const int64_t &id,
-                                       const InitializeResult &initializeResult)
-    : ResponseMessage(jsonRPC, id), m_initializeResut(initializeResult)
+InitializeResponse::InitializeResponse(const std::string&      jsonRPC,
+                                       const int64_t&          id,
+                                       const InitializeResult& initializeResult) :
+ResponseMessage(jsonRPC, id),
+m_initializeResut(initializeResult)
 {
 }
 
@@ -35,7 +37,7 @@ std::string InitializeResponse::toString() const
     return ss.str();
 }
 
-std::ostream &operator<<(std::ostream &os, const InitializeResponse &initializeResponse)
+std::ostream& operator<<(std::ostream& os, const InitializeResponse& initializeResponse)
 {
     nlohmann::json jsonRPC = initializeResponse.toJson();
 

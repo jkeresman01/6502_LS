@@ -21,7 +21,7 @@ namespace ls6502
 //////////////////////////////////////////////////////////////
 class TextDocumentCompletionParams : public TextDocumentPositionParams
 {
-  public:
+public:
     //////////////////////////////////////////////////////////////
     ///
     /// @brief Constructs TextDocumentCompletionParams from a JSON RPC request.
@@ -29,7 +29,7 @@ class TextDocumentCompletionParams : public TextDocumentPositionParams
     /// @param [in] jsonRPC
     ///
     //////////////////////////////////////////////////////////////
-    TextDocumentCompletionParams(const nlohmann::json &jsonRPC) : TextDocumentPositionParams(jsonRPC){};
+    TextDocumentCompletionParams(const nlohmann::json& jsonRPC) : TextDocumentPositionParams(jsonRPC){};
 };
 
 } // namespace ls6502

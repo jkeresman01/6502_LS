@@ -28,7 +28,7 @@ namespace ls6502
 //////////////////////////////////////////////////////////////
 class InitializeParams
 {
-  public:
+public:
     //////////////////////////////////////////////////////////////
     ///
     /// @brief Constructs the InitializeParams from JSON RPC
@@ -36,7 +36,7 @@ class InitializeParams
     /// @param [in] jsonRPC
     ///
     //////////////////////////////////////////////////////////////
-    explicit InitializeParams(const nlohmann::json &jsonInitializeParams);
+    explicit InitializeParams(const nlohmann::json& jsonInitializeParams);
 
     //////////////////////////////////////////////////////////////
     ///
@@ -45,7 +45,10 @@ class InitializeParams
     /// @return ClientInfo
     ///
     //////////////////////////////////////////////////////////////
-    ClientInfo getClientInfo() const { return m_clientInfo; };
+    ClientInfo getClientInfo() const
+    {
+        return m_clientInfo;
+    };
 
     //////////////////////////////////////////////////////////////
     ///
@@ -54,9 +57,12 @@ class InitializeParams
     /// @return ClientCapabilities
     ///
     //////////////////////////////////////////////////////////////
-    std::shared_ptr<ClientCapabilities> getClientCapabilites() const { return m_capabilities; };
+    std::shared_ptr<ClientCapabilities> getClientCapabilites() const
+    {
+        return m_capabilities;
+    };
 
-  private:
+private:
     //////////////////////////////////////////////////////////////
     ///
     /// @brief Mutator method for setting and validataing processId
@@ -64,7 +70,7 @@ class InitializeParams
     /// @param [in] jsoRPC
     ///
     //////////////////////////////////////////////////////////////
-    void setProccessId(const nlohmann::json &jsonRPC);
+    void setProccessId(const nlohmann::json& jsonRPC);
 
     //////////////////////////////////////////////////////////////
     ///
@@ -73,7 +79,7 @@ class InitializeParams
     /// @param [in] jsoRPC
     ///
     //////////////////////////////////////////////////////////////
-    void setLocale(const nlohmann::json &jsonRPC);
+    void setLocale(const nlohmann::json& jsonRPC);
 
     //////////////////////////////////////////////////////////////
     ///
@@ -82,7 +88,7 @@ class InitializeParams
     /// @param [in] jsoRPC
     ///
     //////////////////////////////////////////////////////////////
-    void setClientInfo(const nlohmann::json &jsonRPC);
+    void setClientInfo(const nlohmann::json& jsonRPC);
 
     //////////////////////////////////////////////////////////////
     ///
@@ -91,9 +97,9 @@ class InitializeParams
     /// @param [in] jsoRPC
     ///
     //////////////////////////////////////////////////////////////
-    void setTraceLevel(const nlohmann::json &jsonRPC);
+    void setTraceLevel(const nlohmann::json& jsonRPC);
 
-  private:
+private:
     //////////////////////////////////////////////////////////////
     ///
     /// @brief The process Id of the parent process that started

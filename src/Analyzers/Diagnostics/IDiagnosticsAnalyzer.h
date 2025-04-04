@@ -23,7 +23,7 @@ namespace ls6502
 //////////////////////////////////////////////////////////////
 class IDiagnosticsAnalyzer
 {
-  public:
+public:
     //////////////////////////////////////////////////////////////
     ///
     /// @brief Pure virtual function to provide code actions based
@@ -37,8 +37,8 @@ class IDiagnosticsAnalyzer
     ///         available fixes or suggestions for the diagnostic.
     ///
     //////////////////////////////////////////////////////////////
-    virtual std::vector<CodeAction> provideCodeActions(const Diagnostic &diagnostic,
-                                                       const std::string &document, const std::string &URI)
-      = 0;
+    virtual std::vector<CodeAction> provideCodeActions(const Diagnostic&  diagnostic,
+                                                       const std::string& document,
+                                                       const std::string& URI) = 0;
 };
 } // namespace ls6502

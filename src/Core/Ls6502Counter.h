@@ -13,7 +13,7 @@ namespace ls6502
 {
 class Ls6502Counter
 {
-  public:
+public:
     //////////////////////////////////////////////////////////////
     ///
     /// @brief Constructors (default, copy, move)
@@ -21,10 +21,10 @@ class Ls6502Counter
     ///
     //////////////////////////////////////////////////////////////
     Ls6502Counter();
-    Ls6502Counter(const Ls6502Counter &) = delete;
-    Ls6502Counter(Ls6502Counter &&) = delete;
-    Ls6502Counter &operator=(const Ls6502Counter &) = delete;
-    Ls6502Counter &operator=(Ls6502Counter &&) = delete;
+    Ls6502Counter(const Ls6502Counter&)            = delete;
+    Ls6502Counter(Ls6502Counter&&)                 = delete;
+    Ls6502Counter& operator=(const Ls6502Counter&) = delete;
+    Ls6502Counter& operator=(Ls6502Counter&&)      = delete;
 
     //////////////////////////////////////////////////////////////
     ///
@@ -51,7 +51,7 @@ class Ls6502Counter
     //////////////////////////////////////////////////////////////
     uint32_t getSum() const;
 
-  private:
+private:
     //////////////////////////////////////////////////////////////
     ///
     /// @brief Keeps track of received requests

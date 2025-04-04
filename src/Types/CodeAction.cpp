@@ -9,9 +9,14 @@ namespace ls6502
 {
 
 ////////////////////////////////////////////////////////////
-CodeAction::CodeAction(const std::string &title, const CodeActionKind &codeActionKind, const bool isPreffered,
-                       const WorkspaceEdit &edit)
-    : m_title(title), m_codeActionKind(codeActionKind), m_isPreffered(isPreffered), m_workspaceEdit(edit){};
+CodeAction::CodeAction(const std::string&    title,
+                       const CodeActionKind& codeActionKind,
+                       const bool            isPreffered,
+                       const WorkspaceEdit&  edit) :
+m_title(title),
+m_codeActionKind(codeActionKind),
+m_isPreffered(isPreffered),
+m_workspaceEdit(edit){};
 
 ////////////////////////////////////////////////////////////
 std::string CodeAction::toString() const
@@ -31,37 +36,37 @@ nlohmann::json CodeAction::toJson() const
 {
     nlohmann::json json;
 
-    json["title"] = m_title;
-    json["kind"] = m_codeActionKind;
+    json["title"]       = m_title;
+    json["kind"]        = m_codeActionKind;
     json["isPreffered"] = m_isPreffered;
-    json["edit"] = m_workspaceEdit.toJson();
+    json["edit"]        = m_workspaceEdit.toJson();
 
     return json;
 }
 
 ////////////////////////////////////////////////////////////
-CodeAction::Builder &CodeAction::Builder::withTitle(const std::string &title)
+CodeAction::Builder& CodeAction::Builder::withTitle(const std::string& title)
 {
     m_title = title;
     return *this;
 }
 
 ////////////////////////////////////////////////////////////
-CodeAction::Builder &CodeAction::Builder::withCodeActionKind(const CodeActionKind &codeActionKind)
+CodeAction::Builder& CodeAction::Builder::withCodeActionKind(const CodeActionKind& codeActionKind)
 {
     m_codeActionKind = codeActionKind;
     return *this;
 }
 
 ////////////////////////////////////////////////////////////
-CodeAction::Builder &CodeAction::Builder::withPrefferedFix(bool isPreffered)
+CodeAction::Builder& CodeAction::Builder::withPrefferedFix(bool isPreffered)
 {
     m_isPreffered = isPreffered;
     return *this;
 }
 
 ////////////////////////////////////////////////////////////
-CodeAction::Builder &CodeAction::Builder::withWorkspaceEdit(const WorkspaceEdit &workspaceEdit)
+CodeAction::Builder& CodeAction::Builder::withWorkspaceEdit(const WorkspaceEdit& workspaceEdit)
 {
     m_workspaceEdit = workspaceEdit;
     return *this;

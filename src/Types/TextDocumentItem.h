@@ -21,7 +21,7 @@ namespace ls6502
 //////////////////////////////////////////////////////////////
 class TextDocumentItem
 {
-  public:
+public:
     //////////////////////////////////////////////////////////////
     ///
     /// @brief Constructs the TextDocumentItem from a JSON-RPC request.
@@ -29,7 +29,7 @@ class TextDocumentItem
     /// @param [in] jsonRPC The JSON object containing the TextDocumentItem information.
     ///
     //////////////////////////////////////////////////////////////
-    explicit TextDocumentItem(const nlohmann::json &jsonRPC);
+    explicit TextDocumentItem(const nlohmann::json& jsonRPC);
 
     //////////////////////////////////////////////////////////////
     ///
@@ -38,7 +38,10 @@ class TextDocumentItem
     /// @return URI
     ///
     //////////////////////////////////////////////////////////////
-    std::string getURI() const { return m_URI; }
+    std::string getURI() const
+    {
+        return m_URI;
+    }
 
     //////////////////////////////////////////////////////////////
     ///
@@ -47,7 +50,10 @@ class TextDocumentItem
     /// @return A string representing the language ID.
     ///
     //////////////////////////////////////////////////////////////
-    std::string getLanguageId() const { return m_languageId; }
+    std::string getLanguageId() const
+    {
+        return m_languageId;
+    }
 
     //////////////////////////////////////////////////////////////
     ///
@@ -56,7 +62,10 @@ class TextDocumentItem
     /// @return version
     ///
     //////////////////////////////////////////////////////////////
-    int64_t getVersion() const { return m_version; }
+    int64_t getVersion() const
+    {
+        return m_version;
+    }
 
     //////////////////////////////////////////////////////////////
     ///
@@ -65,9 +74,12 @@ class TextDocumentItem
     /// @return text
     ///
     //////////////////////////////////////////////////////////////
-    std::string getText() const { return m_text; }
+    std::string getText() const
+    {
+        return m_text;
+    }
 
-  private:
+private:
     //////////////////////////////////////////////////////////////
     ///
     /// @brief Mutator method for URI
@@ -75,7 +87,7 @@ class TextDocumentItem
     /// @param [in] jsonRPC
     ///
     //////////////////////////////////////////////////////////////
-    void setURI(const nlohmann::json &jsonRPC);
+    void setURI(const nlohmann::json& jsonRPC);
 
     //////////////////////////////////////////////////////////////
     ///
@@ -84,7 +96,7 @@ class TextDocumentItem
     /// @param [in] jsonRPC
     ///
     //////////////////////////////////////////////////////////////
-    void setLanguageId(const nlohmann::json &jsonRPC);
+    void setLanguageId(const nlohmann::json& jsonRPC);
 
     //////////////////////////////////////////////////////////////
     ///
@@ -93,7 +105,7 @@ class TextDocumentItem
     /// @param [in] jsonRPC
     ///
     //////////////////////////////////////////////////////////////
-    void setTextVersion(const nlohmann::json &jsonRPC);
+    void setTextVersion(const nlohmann::json& jsonRPC);
 
     //////////////////////////////////////////////////////////////
     ///
@@ -102,9 +114,9 @@ class TextDocumentItem
     /// @param [in] jsonRPC
     ///
     //////////////////////////////////////////////////////////////
-    void setText(const nlohmann::json &jsonRPC);
+    void setText(const nlohmann::json& jsonRPC);
 
-  private:
+private:
     //////////////////////////////////////////////////////////////
     ///
     /// @brief The URI of the text document.

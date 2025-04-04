@@ -24,7 +24,7 @@ class ClientCapabilities
 {
     // TODO reset of the capilites (only text is provided for now)
 
-  public:
+public:
     //////////////////////////////////////////////////////////////
     ///
     /// @brief Default constructor for ClientCapabilities
@@ -39,7 +39,7 @@ class ClientCapabilities
     /// @param [in] jsonRPC
     ///
     //////////////////////////////////////////////////////////////
-    explicit ClientCapabilities(const nlohmann::json &jsonRPC);
+    explicit ClientCapabilities(const nlohmann::json& jsonRPC);
 
     //////////////////////////////////////////////////////////////
     ///
@@ -49,9 +49,12 @@ class ClientCapabilities
     /// @return TextDocumentCapabilities
     ///
     //////////////////////////////////////////////////////////////
-    std::shared_ptr<TextDocumentCapabilities> getTextDocumentCapabilities() const { return m_textDocument; };
+    std::shared_ptr<TextDocumentCapabilities> getTextDocumentCapabilities() const
+    {
+        return m_textDocument;
+    };
 
-  private:
+private:
     //////////////////////////////////////////////////////////////
     ///
     /// @brief TextDocumentClientCapabilities define capabilities

@@ -48,8 +48,8 @@ struct Range
     nlohmann::json toJson() const
     {
         return {
-          {"start", start.toJson()},
-          {"end", end.toJson()},
+            {"start", start.toJson()},
+            {"end", end.toJson()},
         };
     }
 

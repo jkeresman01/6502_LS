@@ -25,7 +25,7 @@ namespace ls6502
 //////////////////////////////////////////////////////////////
 class CodeActionsProviderFactory
 {
-  public:
+public:
     //////////////////////////////////////////////////////////////
     ///
     /// @brief Deleted constructor to prevent instantiation.
@@ -43,8 +43,8 @@ class CodeActionsProviderFactory
     //////////////////////////////////////////////////////////////
     static std::shared_ptr<ICodeActionsProvider> create()
     {
-        const std::string &codeActionProvider
-          = ConfigurationManager::getInstance()->getProperty("codeActionProvider");
+        const std::string& codeActionProvider = ConfigurationManager::getInstance()->getProperty(
+            "codeActionProvider");
 
         LS_6502_DEBUG(STR("Code action provider: %s", codeActionProvider.c_str()));
 

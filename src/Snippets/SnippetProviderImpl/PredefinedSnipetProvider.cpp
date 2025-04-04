@@ -11,7 +11,7 @@ namespace ls6502
 {
 
 ////////////////////////////////////////////////////////////
-std::vector<CompletionItem> PredefinedSnippetProvider::getSnippets(const std::string &prefix)
+std::vector<CompletionItem> PredefinedSnippetProvider::getSnippets(const std::string& prefix)
 {
     if (auto it = SnippetsManager::getInstance().getSnippetsByMnemonic(prefix))
     {
@@ -24,8 +24,8 @@ std::vector<CompletionItem> PredefinedSnippetProvider::getSnippets(const std::st
 }
 
 ////////////////////////////////////////////////////////////
-std::vector<CompletionItem> PredefinedSnippetProvider::getCompletions(
-  const std::vector<std::string> &snippets, const std::string &prefix)
+std::vector<CompletionItem> PredefinedSnippetProvider::getCompletions(const std::vector<std::string>& snippets,
+                                                                      const std::string& prefix)
 {
     std::vector<CompletionItem> completionItems(snippets.size());
 

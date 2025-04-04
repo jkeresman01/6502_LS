@@ -26,7 +26,7 @@ namespace ls6502
 //////////////////////////////////////////////////////////////
 class InitializeResponse : public ResponseMessage
 {
-  public:
+public:
     //////////////////////////////////////////////////////////////
     ///
     /// @brief Constructs an InitializeResponse with the provided
@@ -35,8 +35,7 @@ class InitializeResponse : public ResponseMessage
     /// @param [in] initializeResult
     ///
     //////////////////////////////////////////////////////////////
-    InitializeResponse(const std::string &jsonRPC, const int64_t &id,
-                       const InitializeResult &initializeResult);
+    InitializeResponse(const std::string& jsonRPC, const int64_t& id, const InitializeResult& initializeResult);
 
     //////////////////////////////////////////////////////////////
     ///
@@ -47,7 +46,7 @@ class InitializeResponse : public ResponseMessage
     /// @param [in] responseError
     ///
     //////////////////////////////////////////////////////////////
-    InitializeResponse(const InitializeResult &initializeResult, const ResponseError &responseErro);
+    InitializeResponse(const InitializeResult& initializeResult, const ResponseError& responseErro);
 
     //////////////////////////////////////////////////////////////
     ///
@@ -77,9 +76,9 @@ class InitializeResponse : public ResponseMessage
     /// @return The modified output stream.
     ///
     //////////////////////////////////////////////////////////////
-    friend std::ostream &operator<<(std::ostream &os, const InitializeResponse &initializeResponse);
+    friend std::ostream& operator<<(std::ostream& os, const InitializeResponse& initializeResponse);
 
-  private:
+private:
     //////////////////////////////////////////////////////////////
     ///
     /// @brief Result of initliaziation request

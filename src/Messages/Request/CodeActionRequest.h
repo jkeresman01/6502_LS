@@ -24,7 +24,7 @@ namespace ls6502
 //////////////////////////////////////////////////////////////
 class CodeActionRequest : public RequestMessage
 {
-  public:
+public:
     //////////////////////////////////////////////////////////////
     ///
     /// @brief Constructs the Code action request from JSON RPC
@@ -32,24 +32,27 @@ class CodeActionRequest : public RequestMessage
     /// @param [in] jsonRPC
     ///
     //////////////////////////////////////////////////////////////
-    explicit CodeActionRequest(const nlohmann::json &jsonRPC);
+    explicit CodeActionRequest(const nlohmann::json& jsonRPC);
 
     //////////////////////////////////////////////////////////////
     ///
     /// @brief Accessor method for text document code action params
     ///
     //////////////////////////////////////////////////////////////
-    std::shared_ptr<CodeActionParams> getParams() const { return m_codeActionParams; };
+    std::shared_ptr<CodeActionParams> getParams() const
+    {
+        return m_codeActionParams;
+    };
 
-  private:
+private:
     //////////////////////////////////////////////////////////////
     ///
     /// @brief Mutator method for text document code action params
     ///
     //////////////////////////////////////////////////////////////
-    void setParams(const nlohmann::json &jsonRPC);
+    void setParams(const nlohmann::json& jsonRPC);
 
-  private:
+private:
     //////////////////////////////////////////////////////////////
     ///
     /// @brief textDocument/codeAction params

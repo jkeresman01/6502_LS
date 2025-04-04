@@ -22,7 +22,7 @@ namespace ls6502
 //////////////////////////////////////////////////////////////
 class DidOpenTextDocumentParams
 {
-  public:
+public:
     //////////////////////////////////////////////////////////////
     ///
     /// @brief Constructs a DidOpenTextDocumentParams object
@@ -31,7 +31,7 @@ class DidOpenTextDocumentParams
     /// @param [in] jsonRPC
     ///
     //////////////////////////////////////////////////////////////
-    explicit DidOpenTextDocumentParams(const nlohmann::json &jsonRPC);
+    explicit DidOpenTextDocumentParams(const nlohmann::json& jsonRPC);
 
     //////////////////////////////////////////////////////////////
     ///
@@ -40,9 +40,12 @@ class DidOpenTextDocumentParams
     /// @return TextDocumentItem
     ///
     //////////////////////////////////////////////////////////////
-    std::shared_ptr<TextDocumentItem> getTextDocumentItem() const { return m_textDocumentItem; };
+    std::shared_ptr<TextDocumentItem> getTextDocumentItem() const
+    {
+        return m_textDocumentItem;
+    };
 
-  private:
+private:
     //////////////////////////////////////////////////////////////
     ///
     /// @brief Mutator method for TextDocumentItem
@@ -50,9 +53,9 @@ class DidOpenTextDocumentParams
     /// @param [in] jsonRPC
     ///
     //////////////////////////////////////////////////////////////
-    void setTextDocumentItemKind(const nlohmann::json &jsonRPC);
+    void setTextDocumentItemKind(const nlohmann::json& jsonRPC);
 
-  private:
+private:
     //////////////////////////////////////////////////////////////
     ///
     /// @brief Contains the details of the text document that was opened,

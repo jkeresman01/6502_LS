@@ -16,12 +16,12 @@ SnippetsMapT SnippetsManager::getAllSnippets()
 }
 
 ////////////////////////////////////////////////////////////
-std::optional<std::vector<std::string>> SnippetsManager::getSnippetsByMnemonic(const std::string &mnemonic)
+std::optional<std::vector<std::string>> SnippetsManager::getSnippetsByMnemonic(const std::string& mnemonic)
 {
     loadSnippets();
 
     std::vector<std::string> snippets;
-    const auto &range = m_snippets.equal_range(mnemonic);
+    const auto&              range = m_snippets.equal_range(mnemonic);
 
     for (auto it = range.first; it != range.second; ++it)
     {
@@ -41,7 +41,7 @@ void SnippetsManager::loadSnippets()
 }
 
 ////////////////////////////////////////////////////////////
-SnippetsManager &SnippetsManager::getInstance()
+SnippetsManager& SnippetsManager::getInstance()
 {
     static SnippetsManager instance;
     return instance;

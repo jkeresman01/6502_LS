@@ -23,7 +23,7 @@ namespace ls6502
 /////////////////////////////////////////////////////////////////////
 class TimeUtil
 {
-  public:
+public:
     /////////////////////////////////////////////////////////////////////
     ///
     /// @brief Delete default constructor to prevent instantiation
@@ -46,7 +46,7 @@ class TimeUtil
     /// @param [in] time
     ///
     /////////////////////////////////////////////////////////////////////
-    static std::ostream &putTime(std::ostream &out, const std::time_t &time);
+    static std::ostream& putTime(std::ostream& out, const std::time_t& time);
 };
 
 /////////////////////////////////////////////////////////////////////
@@ -61,7 +61,7 @@ inline std::time_t TimeUtil::now()
 }
 
 ////////////////////////////////////////////////////////////
-inline std::ostream &TimeUtil::putTime(std::ostream &out, const std::time_t &time)
+inline std::ostream& TimeUtil::putTime(std::ostream& out, const std::time_t& time)
 {
     return out << std::put_time(std::localtime(&time), "%Y-%m-%d %H:%M:%S");
 }

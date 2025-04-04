@@ -27,7 +27,7 @@ class ServerCapabilities
 {
     // TODO: Extend the implementation for additional capabilities.
 
-  public:
+public:
     //////////////////////////////////////////////////////////////
     ///
     /// @brief Constructs server capabilities
@@ -40,9 +40,12 @@ class ServerCapabilities
     /// @param [in] areDefinitionsSupported
     ///
     //////////////////////////////////////////////////////////////
-    ServerCapabilities(const TextDocumentSyncKind &textDocumentSyncKind, bool areSnippetsSupported,
-                       bool isHoverSupported, bool areCompletionsSupported, bool areCodeActionsSupported,
-                       bool areDefintionsSupported);
+    ServerCapabilities(const TextDocumentSyncKind& textDocumentSyncKind,
+                       bool                        areSnippetsSupported,
+                       bool                        isHoverSupported,
+                       bool                        areCompletionsSupported,
+                       bool                        areCodeActionsSupported,
+                       bool                        areDefintionsSupported);
 
     //////////////////////////////////////////////////////////////
     ///
@@ -54,7 +57,7 @@ class ServerCapabilities
     //////////////////////////////////////////////////////////////
     class Builder
     {
-      public:
+    public:
         //////////////////////////////////////////////////////////////
         ///
         /// @brief Sets the text document synchronization kind.
@@ -64,7 +67,7 @@ class ServerCapabilities
         /// @return Reference to the Builder for method chaining.
         ///
         //////////////////////////////////////////////////////////////
-        Builder &withTextDocumentSyncKind(const TextDocumentSyncKind &textDocuemntSyncKind);
+        Builder& withTextDocumentSyncKind(const TextDocumentSyncKind& textDocuemntSyncKind);
 
         //////////////////////////////////////////////////////////////
         ///
@@ -75,7 +78,7 @@ class ServerCapabilities
         /// @return Reference to the Builder for method chaining.
         ///
         //////////////////////////////////////////////////////////////
-        Builder &withSnippetSupport(bool areSnippetsSupported);
+        Builder& withSnippetSupport(bool areSnippetsSupported);
 
         //////////////////////////////////////////////////////////////
         ///
@@ -86,7 +89,7 @@ class ServerCapabilities
         /// @return Reference to the Builder for method chaining.
         ///
         //////////////////////////////////////////////////////////////
-        Builder &withHoverSupport(bool isHoverSupported);
+        Builder& withHoverSupport(bool isHoverSupported);
 
         //////////////////////////////////////////////////////////////
         ///
@@ -97,7 +100,7 @@ class ServerCapabilities
         /// @return Reference to the Builder for method chaining.
         ///
         //////////////////////////////////////////////////////////////
-        Builder &withCompletionSupport(bool areCompletionsSupported);
+        Builder& withCompletionSupport(bool areCompletionsSupported);
 
         //////////////////////////////////////////////////////////////
         ///
@@ -108,7 +111,7 @@ class ServerCapabilities
         /// @return Reference to the Builder for method chaining.
         ///
         //////////////////////////////////////////////////////////////
-        Builder &withCodeActionSupport(bool areCodeActionsSupported);
+        Builder& withCodeActionSupport(bool areCodeActionsSupported);
 
         //////////////////////////////////////////////////////////////
         ///
@@ -119,7 +122,7 @@ class ServerCapabilities
         /// @return Reference to the Builder for method chaining.
         ///
         //////////////////////////////////////////////////////////////
-        Builder &withDefinitionSupport(bool areDefintionsSupported);
+        Builder& withDefinitionSupport(bool areDefintionsSupported);
 
         //////////////////////////////////////////////////////////////
         ///
@@ -131,7 +134,7 @@ class ServerCapabilities
         //////////////////////////////////////////////////////////////
         ServerCapabilities build() const;
 
-      private:
+    private:
         //////////////////////////////////////////////////////////////
         ///
         /// @brief Synchronization kind for text documents.
@@ -185,7 +188,7 @@ class ServerCapabilities
     //////////////////////////////////////////////////////////////
     nlohmann::json toJson() const;
 
-  private:
+private:
     //////////////////////////////////////////////////////////////
     ///
     /// @brief Synchronization kind for text documents.

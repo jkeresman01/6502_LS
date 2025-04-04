@@ -25,7 +25,7 @@ class TextDocumentCapabilities
     // TODO add rest of the capabilities only sync and hover are
     // currently included
 
-  public:
+public:
     //////////////////////////////////////////////////////////////
     ///
     /// @brief Constructs the TextDocumentCapabilities from jsonRPC request
@@ -33,7 +33,7 @@ class TextDocumentCapabilities
     /// @param [in] jsonRPC
     ///
     //////////////////////////////////////////////////////////////
-    explicit TextDocumentCapabilities(const nlohmann::json &jsonRPC);
+    explicit TextDocumentCapabilities(const nlohmann::json& jsonRPC);
 
     //////////////////////////////////////////////////////////////
     ///
@@ -42,7 +42,10 @@ class TextDocumentCapabilities
     /// @param [in] synchronization capabilites
     ///
     //////////////////////////////////////////////////////////////
-    TextDocumentSyncClientCapabilities getTextDocumentSyncCapabilites() const { return m_synchronization; };
+    TextDocumentSyncClientCapabilities getTextDocumentSyncCapabilites() const
+    {
+        return m_synchronization;
+    };
 
     //////////////////////////////////////////////////////////////
     ///
@@ -51,9 +54,12 @@ class TextDocumentCapabilities
     /// @param [in] hover capabilites
     ///
     //////////////////////////////////////////////////////////////
-    HoverClientCapabilities getHoverCapabilities() const { return m_hover; };
+    HoverClientCapabilities getHoverCapabilities() const
+    {
+        return m_hover;
+    };
 
-  private:
+private:
     //////////////////////////////////////////////////////////////
     ///
     /// @brief Capabilities specific to the textDocument syncrhonization

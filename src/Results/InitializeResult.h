@@ -23,7 +23,7 @@ namespace ls6502
 //////////////////////////////////////////////////////////////
 class InitializeResult
 {
-  public:
+public:
     //////////////////////////////////////////////////////////////
     ///
     /// @brief Constructs an InitializeResult with the provided
@@ -33,7 +33,7 @@ class InitializeResult
     /// @param [in] serverCapabilities
     ///
     //////////////////////////////////////////////////////////////
-    InitializeResult(const ServerInfo &serverInfo, const ServerCapabilities &serverCapabilities);
+    InitializeResult(const ServerInfo& serverInfo, const ServerCapabilities& serverCapabilities);
 
     //////////////////////////////////////////////////////////////
     ///
@@ -42,7 +42,10 @@ class InitializeResult
     /// @return ServerInfo
     ///
     //////////////////////////////////////////////////////////////
-    ServerInfo getServerInfo() const { return m_serverInfo; };
+    ServerInfo getServerInfo() const
+    {
+        return m_serverInfo;
+    };
 
     //////////////////////////////////////////////////////////////
     ///
@@ -51,7 +54,10 @@ class InitializeResult
     /// @return ServerCapabilities
     ///
     //////////////////////////////////////////////////////////////
-    ServerCapabilities getServerCapabilities() const { return m_serverCapabilities; };
+    ServerCapabilities getServerCapabilities() const
+    {
+        return m_serverCapabilities;
+    };
 
     //////////////////////////////////////////////////////////////
     ///
@@ -71,7 +77,7 @@ class InitializeResult
     //////////////////////////////////////////////////////////////
     std::string toString() const;
 
-  private:
+private:
     //////////////////////////////////////////////////////////////
     ///
     /// @brief Information about the server, such as its name and version.

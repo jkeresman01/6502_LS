@@ -21,7 +21,7 @@ namespace ls6502
 //////////////////////////////////////////////////////////////
 class TextEdit
 {
-  public:
+public:
     //////////////////////////////////////////////////////////////
     ///
     /// @brief Constructs a TextEdit with a specified range and new text.
@@ -30,7 +30,7 @@ class TextEdit
     /// @param [in] newText
     ///
     //////////////////////////////////////////////////////////////
-    TextEdit(const Range &range, const std::string &newText) : m_range(range), m_newText(newText){};
+    TextEdit(const Range& range, const std::string& newText) : m_range(range), m_newText(newText){};
 
     //////////////////////////////////////////////////////////////
     ///
@@ -39,7 +39,10 @@ class TextEdit
     /// @return A JSON object representing the TextEdit.
     ///
     //////////////////////////////////////////////////////////////
-    nlohmann::json toJson() const { return {{"range", m_range.toJson()}, {"newText", m_newText}}; };
+    nlohmann::json toJson() const
+    {
+        return {{"range", m_range.toJson()}, {"newText", m_newText}};
+    };
 
     //////////////////////////////////////////////////////////////
     ///
@@ -56,7 +59,7 @@ class TextEdit
         return ss.str();
     }
 
-  private:
+private:
     //////////////////////////////////////////////////////////////
     ///
     /// @brief The range where the edit is applied.

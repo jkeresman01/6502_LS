@@ -20,7 +20,7 @@ namespace ls6502
 /////////////////////////////////////////////////////////////////////
 class TraceUtil
 {
-  public:
+public:
     /////////////////////////////////////////////////////////////////////
     ///
     /// @brief Delete default constructor to prevent instantiation
@@ -35,7 +35,7 @@ class TraceUtil
     /// @param [in] traceValueStr
     ///
     /////////////////////////////////////////////////////////////////////
-    static TraceValue getTraceValue(const std::string &traceValueStr);
+    static TraceValue getTraceValue(const std::string& traceValueStr);
 };
 
 /////////////////////////////////////////////////////////////////////
@@ -43,7 +43,7 @@ class TraceUtil
 /////////////////////////////////////////////////////////////////////
 
 ////////////////////////////////////////////////////////////
-TraceValue inline getTraceValue(const std::string &traceValueStr)
+inline TraceValue getTraceValue(const std::string& traceValueStr)
 {
     if (traceValueStr == "messages")
     {

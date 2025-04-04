@@ -8,7 +8,7 @@ namespace ls6502
 {
 
 ////////////////////////////////////////////////////////////
-HoverItem FakeHoverProvider::getHoverItem(const std::string &document, const Position &position)
+HoverItem FakeHoverProvider::getHoverItem(const std::string& document, const Position& position)
 {
     (void)document;
     (void)position;

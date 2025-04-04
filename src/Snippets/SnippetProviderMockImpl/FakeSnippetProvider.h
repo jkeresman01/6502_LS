@@ -21,7 +21,7 @@ namespace ls6502
 //////////////////////////////////////////////////////////////
 class FakeSnippetsProvider : public ISnippetProvider
 {
-  public:
+public:
     //////////////////////////////////////////////////////////////
     ///
     /// @brief Construction, fills fake snippets
@@ -38,9 +38,9 @@ class FakeSnippetsProvider : public ISnippetProvider
     /// @return A vector of matching CompletionItems(CompletionItemKind::SNIPPET)
     ///
     //////////////////////////////////////////////////////////////
-    std::vector<CompletionItem> getSnippets(const std::string &prefix) override;
+    std::vector<CompletionItem> getSnippets(const std::string& prefix) override;
 
-  private:
+private:
     //////////////////////////////////////////////////////////////
     ///
     /// @brief Populates a vector with fake snippets.

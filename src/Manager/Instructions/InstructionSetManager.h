@@ -30,7 +30,7 @@ typedef std::unordered_map<std::string, Instruction> InstructionsSetMapT;
 //////////////////////////////////////////////////////////////
 class InstructionSetManager
 {
-  public:
+public:
     //////////////////////////////////////////////////////////////
     ///
     /// @brief Constructor
@@ -43,28 +43,28 @@ class InstructionSetManager
     /// @brief Deleted copy constructor
     ///
     //////////////////////////////////////////////////////////////
-    InstructionSetManager(const InstructionSetManager &) = delete;
+    InstructionSetManager(const InstructionSetManager&) = delete;
 
     //////////////////////////////////////////////////////////////
     ///
     /// @brief Deleted move constructor
     ///
     //////////////////////////////////////////////////////////////
-    InstructionSetManager(InstructionSetManager &&) = delete;
+    InstructionSetManager(InstructionSetManager&&) = delete;
 
     //////////////////////////////////////////////////////////////
     ///
     /// @brief Deleted copy assignment operator
     ///
     //////////////////////////////////////////////////////////////
-    InstructionSetManager &operator=(const InstructionSetManager &) = delete;
+    InstructionSetManager& operator=(const InstructionSetManager&) = delete;
 
     //////////////////////////////////////////////////////////////
     ///
     /// @brief Deleted move assignment operator
     ///
     //////////////////////////////////////////////////////////////
-    InstructionSetManager &operator=(InstructionSetManager &&) = delete;
+    InstructionSetManager& operator=(InstructionSetManager&&) = delete;
 
     //////////////////////////////////////////////////////////////
     ///
@@ -73,7 +73,7 @@ class InstructionSetManager
 
     ///
     //////////////////////////////////////////////////////////////
-    static InstructionSetManager &getInstance();
+    static InstructionSetManager& getInstance();
 
     //////////////////////////////////////////////////////////////
     ///
@@ -93,7 +93,7 @@ class InstructionSetManager
     /// @return A vector of matching instruction mnemonics, if found
     ///
     //////////////////////////////////////////////////////////////
-    std::vector<std::string> getInstructionsByPrefix(const std::string &prefix);
+    std::vector<std::string> getInstructionsByPrefix(const std::string& prefix);
 
     //////////////////////////////////////////////////////////////
     ///
@@ -104,9 +104,9 @@ class InstructionSetManager
     /// @return The corresponding instruction, if found
     ///
     //////////////////////////////////////////////////////////////
-    std::optional<Instruction> getInstructionByMnemonic(const std::string &mnemonic);
+    std::optional<Instruction> getInstructionByMnemonic(const std::string& mnemonic);
 
-  private:
+private:
     //////////////////////////////////////////////////////////////
     ///
     /// @brief Loads all available instructions into memory
@@ -121,7 +121,7 @@ class InstructionSetManager
     //////////////////////////////////////////////////////////////
     void loadInstructionSetTrie();
 
-  private:
+private:
     //////////////////////////////////////////////////////////////
     ///
     /// @brief Trie structure for fast instruction lookup

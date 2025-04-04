@@ -24,7 +24,7 @@ namespace ls6502
 //////////////////////////////////////////////////////////////
 class CompletionRequest : public RequestMessage
 {
-  public:
+public:
     //////////////////////////////////////////////////////////////
     ///
     /// @brief Constructs the Completion request from JSON RPC
@@ -32,24 +32,27 @@ class CompletionRequest : public RequestMessage
     /// @param [in] jsonRPC
     ///
     //////////////////////////////////////////////////////////////
-    explicit CompletionRequest(const nlohmann::json &jsonRPC);
+    explicit CompletionRequest(const nlohmann::json& jsonRPC);
 
     //////////////////////////////////////////////////////////////
     ///
     /// @brief Accessor method for text document completion params
     ///
     //////////////////////////////////////////////////////////////
-    std::shared_ptr<CompletionParams> getParams() const { return m_completionParams; };
+    std::shared_ptr<CompletionParams> getParams() const
+    {
+        return m_completionParams;
+    };
 
-  private:
+private:
     //////////////////////////////////////////////////////////////
     ///
     /// @brief Mutator method for text document completion params
     ///
     //////////////////////////////////////////////////////////////
-    void setParams(const nlohmann::json &jsonRPC);
+    void setParams(const nlohmann::json& jsonRPC);
 
-  private:
+private:
     //////////////////////////////////////////////////////////////
     ///
     /// @brief textDocument/completion params

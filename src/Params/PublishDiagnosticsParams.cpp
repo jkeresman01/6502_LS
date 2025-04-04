@@ -8,16 +8,17 @@ namespace ls6502
 {
 
 ////////////////////////////////////////////////////////////
-PublishDiagnosticsParams::PublishDiagnosticsParams(const std::string &URI,
-                                                   const std::vector<Diagnostic> &diagnostics)
-    : m_URI(URI), m_diagnostics(diagnostics){};
+PublishDiagnosticsParams::PublishDiagnosticsParams(const std::string&             URI,
+                                                   const std::vector<Diagnostic>& diagnostics) :
+m_URI(URI),
+m_diagnostics(diagnostics){};
 
 ////////////////////////////////////////////////////////////
 nlohmann::json PublishDiagnosticsParams::toJson() const
 {
     return {
-      {"uri", m_URI},
-      {"diagnostics", dianosticItemsToJson()},
+        {"uri", m_URI},
+        {"diagnostics", dianosticItemsToJson()},
     };
 }
 

@@ -20,7 +20,7 @@ namespace ls6502
 /////////////////////////////////////////////////////////////////////
 class StringUtil
 {
-  public:
+public:
     /////////////////////////////////////////////////////////////////////
     ///
     /// @brief Delete default constructor to prevent instantiation
@@ -35,7 +35,7 @@ class StringUtil
     /// @param [in] string
     ///
     /////////////////////////////////////////////////////////////////////
-    static void trim(std::string &string);
+    static void trim(std::string& string);
 
     /////////////////////////////////////////////////////////////////////
     ///
@@ -44,7 +44,7 @@ class StringUtil
     /// @param [in] string
     ///
     /////////////////////////////////////////////////////////////////////
-    static void toUpper(std::string &string);
+    static void toUpper(std::string& string);
 
     /////////////////////////////////////////////////////////////////////
     ///
@@ -53,7 +53,7 @@ class StringUtil
     /// @param [in] string
     ///
     /////////////////////////////////////////////////////////////////////
-    static void toLower(std::string &string);
+    static void toLower(std::string& string);
 };
 
 /////////////////////////////////////////////////////////////////////
@@ -61,7 +61,7 @@ class StringUtil
 /////////////////////////////////////////////////////////////////////
 
 ////////////////////////////////////////////////////////////
-void inline StringUtil::trim(std::string &string)
+inline void StringUtil::trim(std::string& string)
 {
     size_t start = string.find_first_not_of(" \t\n\r\f\v");
 
@@ -71,21 +71,19 @@ void inline StringUtil::trim(std::string &string)
     }
 
     size_t end = string.find_last_not_of(" \t\n\r\f\v");
-    string = string.substr(start, end - start + 1);
+    string     = string.substr(start, end - start + 1);
 }
 
 ////////////////////////////////////////////////////////////
-void inline StringUtil::toUpper(std::string &string)
+inline void StringUtil::toUpper(std::string& string)
 {
-    std::transform(string.begin(), string.end(), string.begin(),
-                   std::ptr_fun<int32_t, int32_t>(std::toupper));
+    std::transform(string.begin(), string.end(), string.begin(), std::ptr_fun<int32_t, int32_t>(std::toupper));
 }
 
 ////////////////////////////////////////////////////////////
-void inline StringUtil::toLower(std::string &string)
+inline void StringUtil::toLower(std::string& string)
 {
-    std::transform(string.begin(), string.end(), string.begin(),
-                   std::ptr_fun<int32_t, int32_t>(std::tolower));
+    std::transform(string.begin(), string.end(), string.begin(), std::ptr_fun<int32_t, int32_t>(std::tolower));
 }
 
 } // namespace ls6502

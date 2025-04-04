@@ -21,22 +21,25 @@ namespace ls6502
 //////////////////////////////////////////////////////////////
 class RequestMessage : public Message
 {
-  public:
+public:
     //////////////////////////////////////////////////////////////
     ///
     /// @brief Constructs the RequestMessage from json RPC
     ///
     //////////////////////////////////////////////////////////////
-    explicit RequestMessage(const nlohmann::json &jsonRPC);
+    explicit RequestMessage(const nlohmann::json& jsonRPC);
 
     //////////////////////////////////////////////////////////////
     ///
     /// @brief Accessor method for getting the ID of request message
     ///
     //////////////////////////////////////////////////////////////
-    int64_t getId() const { return m_id; };
+    int64_t getId() const
+    {
+        return m_id;
+    };
 
-  private:
+private:
     //////////////////////////////////////////////////////////////
     ///
     /// @brief Mutator method for setting and validating request ID
@@ -44,7 +47,7 @@ class RequestMessage : public Message
     /// @param [in] jsonRPC
     ///
     //////////////////////////////////////////////////////////////
-    void setId(const nlohmann::json &jsonRPC);
+    void setId(const nlohmann::json& jsonRPC);
 
     //////////////////////////////////////////////////////////////
     ///
@@ -53,9 +56,9 @@ class RequestMessage : public Message
     /// @param [in] jsonRPC
     ///
     //////////////////////////////////////////////////////////////
-    void setMethod(const nlohmann::json &jsonRPC);
+    void setMethod(const nlohmann::json& jsonRPC);
 
-  protected:
+protected:
     //////////////////////////////////////////////////////////////
     ///
     /// @brief The request ID

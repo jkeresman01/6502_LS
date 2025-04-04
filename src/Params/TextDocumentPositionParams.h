@@ -22,7 +22,7 @@ namespace ls6502
 //////////////////////////////////////////////////////////////
 class TextDocumentPositionParams
 {
-  public:
+public:
     //////////////////////////////////////////////////////////////
     ///
     /// @brief Constructs TextDocumentPositionParams from JSON RPC requst
@@ -30,7 +30,7 @@ class TextDocumentPositionParams
     /// @param [in] jsonRPC
     ///
     //////////////////////////////////////////////////////////////
-    explicit TextDocumentPositionParams(const nlohmann::json &jsonRPC);
+    explicit TextDocumentPositionParams(const nlohmann::json& jsonRPC);
 
     //////////////////////////////////////////////////////////////
     ///
@@ -39,7 +39,10 @@ class TextDocumentPositionParams
     /// @return text document identifier
     ///
     //////////////////////////////////////////////////////////////
-    TextDocumentIdentifier getTextDocumentIdentifier() const { return m_textDocument; };
+    TextDocumentIdentifier getTextDocumentIdentifier() const
+    {
+        return m_textDocument;
+    };
 
     //////////////////////////////////////////////////////////////
     ///
@@ -48,9 +51,12 @@ class TextDocumentPositionParams
     /// @return position
     ///
     //////////////////////////////////////////////////////////////
-    Position getPosition() const { return m_position; };
+    Position getPosition() const
+    {
+        return m_position;
+    };
 
-  private:
+private:
     //////////////////////////////////////////////////////////////
     ///
     /// @brief Initializes the text document identifier from JSON data.
@@ -58,7 +64,7 @@ class TextDocumentPositionParams
     /// @param [in] jsonRPC
     ///
     //////////////////////////////////////////////////////////////
-    void setTextDocumentIdentifier(const nlohmann::json &jsonRPC);
+    void setTextDocumentIdentifier(const nlohmann::json& jsonRPC);
 
     //////////////////////////////////////////////////////////////
     ///
@@ -67,9 +73,9 @@ class TextDocumentPositionParams
     /// @param [in] jsonRPC
     ///
     //////////////////////////////////////////////////////////////
-    void setPosition(const nlohmann::json &jsonRPC);
+    void setPosition(const nlohmann::json& jsonRPC);
 
-  private:
+private:
     //////////////////////////////////////////////////////////////
     ///
     /// @brief Identifies the text document associated with this request.

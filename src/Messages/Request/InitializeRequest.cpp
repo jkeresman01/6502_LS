@@ -10,13 +10,13 @@ namespace ls6502
 {
 
 ////////////////////////////////////////////////////////////
-InitializeRequest::InitializeRequest(const nlohmann::json &jsonRPC) : RequestMessage(jsonRPC)
+InitializeRequest::InitializeRequest(const nlohmann::json& jsonRPC) : RequestMessage(jsonRPC)
 {
     setInitializeParams(jsonRPC);
 }
 
 ////////////////////////////////////////////////////////////
-void InitializeRequest::setInitializeParams(const nlohmann::json &jsonRPC)
+void InitializeRequest::setInitializeParams(const nlohmann::json& jsonRPC)
 {
     auto it = jsonRPC.find("params");
 

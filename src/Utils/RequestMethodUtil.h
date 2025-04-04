@@ -22,7 +22,7 @@ namespace ls6502
 /////////////////////////////////////////////////////////////////////
 class RequestMethodUtil
 {
-  public:
+public:
     /////////////////////////////////////////////////////////////////////
     ///
     /// @brief Delete default constructor to prevent instantiation
@@ -37,7 +37,7 @@ class RequestMethodUtil
     /// @param [in] method
     ///
     /////////////////////////////////////////////////////////////////////
-    static RequestType getType(const std::string &method);
+    static RequestType getType(const std::string& method);
 };
 
 /////////////////////////////////////////////////////////////////////
@@ -45,7 +45,7 @@ class RequestMethodUtil
 /////////////////////////////////////////////////////////////////////
 
 ////////////////////////////////////////////////////////////
-RequestType inline RequestMethodUtil::getType(const std::string &method)
+inline RequestType RequestMethodUtil::getType(const std::string& method)
 {
     if (method == "initialize")
     {

@@ -71,8 +71,7 @@ struct TextDocumentSyncClientCapabilities
         ss << std::string(optionWidth + resultWidth, '-') << std::endl;
 
         ss << std::setw(optionWidth) << std::left << "Dynamic Registration";
-        ss << std::setw(resultWidth) << std::left << (isDynamicRegistrationSupported ? "Yes" : "No")
-           << std::endl;
+        ss << std::setw(resultWidth) << std::left << (isDynamicRegistrationSupported ? "Yes" : "No") << std::endl;
 
         ss << std::setw(optionWidth) << std::left << "Will Save Supported";
         ss << std::setw(resultWidth) << std::left << (isWillSaveSupported ? "Yes" : "No") << std::endl;

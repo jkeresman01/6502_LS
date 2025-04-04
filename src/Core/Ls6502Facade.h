@@ -26,18 +26,18 @@ namespace ls6502
 //////////////////////////////////////////////////////////////
 class Ls6502Facade
 {
-  public:
+public:
     //////////////////////////////////////////////////////////////
     ///
     /// @brief Constructors (default, copy, move)
     ///        and assignment operators
     ///
     //////////////////////////////////////////////////////////////
-    Ls6502Facade() = default;
-    Ls6502Facade(const Ls6502Facade &) = delete;
-    Ls6502Facade(Ls6502Facade &&) = delete;
-    Ls6502Facade &operator=(const Ls6502Facade &) = delete;
-    Ls6502Facade &operator=(Ls6502Facade &&) = delete;
+    Ls6502Facade()                               = default;
+    Ls6502Facade(const Ls6502Facade&)            = delete;
+    Ls6502Facade(Ls6502Facade&&)                 = delete;
+    Ls6502Facade& operator=(const Ls6502Facade&) = delete;
+    Ls6502Facade& operator=(Ls6502Facade&&)      = delete;
 
     //////////////////////////////////////////////////////////////
     ///
@@ -46,9 +46,9 @@ class Ls6502Facade
     /// @param [in] String representation of incoming request
     ///
     //////////////////////////////////////////////////////////////
-    void handleRequest(const nlohmann::json &request);
+    void handleRequest(const nlohmann::json& request);
 
-  private:
+private:
     //////////////////////////////////////////////////////////////
     ///
     /// @brief Entry point for handling initialize request
@@ -56,7 +56,7 @@ class Ls6502Facade
     /// @param [in] jsonRPC request
     ///
     //////////////////////////////////////////////////////////////
-    void handleInitializeRequest(const nlohmann::json &request);
+    void handleInitializeRequest(const nlohmann::json& request);
 
     //////////////////////////////////////////////////////////////
     ///
@@ -65,7 +65,7 @@ class Ls6502Facade
     /// @param [in] jsonRPC request
     ///
     //////////////////////////////////////////////////////////////
-    void handleShutdownRequest(const nlohmann::json &request);
+    void handleShutdownRequest(const nlohmann::json& request);
 
     //////////////////////////////////////////////////////////////
     ///
@@ -74,7 +74,7 @@ class Ls6502Facade
     /// @param [in] jsonRPC request
     ///
     //////////////////////////////////////////////////////////////
-    void handleInitializedRequest(const nlohmann::json &request);
+    void handleInitializedRequest(const nlohmann::json& request);
 
     //////////////////////////////////////////////////////////////
     ///
@@ -83,7 +83,7 @@ class Ls6502Facade
     /// @param [in] jsonRPC request
     ///
     //////////////////////////////////////////////////////////////
-    void handleTextDocumentDidOpenRequest(const nlohmann::json &request);
+    void handleTextDocumentDidOpenRequest(const nlohmann::json& request);
 
     //////////////////////////////////////////////////////////////
     ///
@@ -92,7 +92,7 @@ class Ls6502Facade
     /// @param [in] jsonRPC request
     ///
     //////////////////////////////////////////////////////////////
-    void handleTextDocumentDidChangeRequest(const nlohmann::json &request);
+    void handleTextDocumentDidChangeRequest(const nlohmann::json& request);
 
     //////////////////////////////////////////////////////////////
     ///
@@ -101,7 +101,7 @@ class Ls6502Facade
     /// @param [in] jsonRPC request
     ///
     //////////////////////////////////////////////////////////////
-    void handleTextDocumentHoverRequest(const nlohmann::json &request);
+    void handleTextDocumentHoverRequest(const nlohmann::json& request);
 
     //////////////////////////////////////////////////////////////
     ///
@@ -110,7 +110,7 @@ class Ls6502Facade
     /// @param [in] jsonRPC request
     ///
     //////////////////////////////////////////////////////////////
-    void handleTextDocumentCompletionRequest(const nlohmann::json &request);
+    void handleTextDocumentCompletionRequest(const nlohmann::json& request);
 
     //////////////////////////////////////////////////////////////
     ///
@@ -119,7 +119,7 @@ class Ls6502Facade
     /// @param [in] jsonRPC request
     ///
     //////////////////////////////////////////////////////////////
-    void handleExitRequest(const nlohmann::json &request);
+    void handleExitRequest(const nlohmann::json& request);
 
     //////////////////////////////////////////////////////////////
     ///
@@ -128,7 +128,7 @@ class Ls6502Facade
     /// @param [in] jsonRPC request
     ///
     //////////////////////////////////////////////////////////////
-    void handleTextDocumentCodeActionRequest(const nlohmann::json &request);
+    void handleTextDocumentCodeActionRequest(const nlohmann::json& request);
 
     //////////////////////////////////////////////////////////////
     ///
@@ -137,9 +137,9 @@ class Ls6502Facade
     /// @param [in] jsonRPC request
     ///
     //////////////////////////////////////////////////////////////
-    void handleTextDocumentDefintionRequest(const nlohmann::json &request);
+    void handleTextDocumentDefintionRequest(const nlohmann::json& request);
 
-  private:
+private:
     //////////////////////////////////////////////////////////////
     ///
     /// @brief Ensures no request is processed after shudtown request
@@ -148,9 +148,9 @@ class Ls6502Facade
     /// @param [in] jsonRPC request
     ///
     //////////////////////////////////////////////////////////////
-    void ensureNoReqIsProcessedAfterShutdown(const nlohmann::json &request);
+    void ensureNoReqIsProcessedAfterShutdown(const nlohmann::json& request);
 
-  private:
+private:
     //////////////////////////////////////////////////////////////
     ///
     /// @brief Responsible for handling request such as init/shutdown

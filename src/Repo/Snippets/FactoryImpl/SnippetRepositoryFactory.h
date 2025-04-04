@@ -27,7 +27,7 @@ namespace ls6502
 //////////////////////////////////////////////////////////////
 class SnippetRepositoryFactory
 {
-  public:
+public:
     //////////////////////////////////////////////////////////////
     ///
     /// @brief Deleted constructor to prevent instantiation.
@@ -43,6 +43,9 @@ class SnippetRepositoryFactory
     ///         SnippetRepository instance.
     ///
     //////////////////////////////////////////////////////////////
-    static std::shared_ptr<ISnippetRepository> create() { return std::make_shared<SnippetRepository>(); }
+    static std::shared_ptr<ISnippetRepository> create()
+    {
+        return std::make_shared<SnippetRepository>();
+    }
 };
 } // namespace ls6502

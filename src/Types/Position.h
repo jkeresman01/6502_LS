@@ -43,7 +43,10 @@ struct Position
     /// @return Text document position in JSON format
     ///
     //////////////////////////////////////////////////////////////
-    nlohmann::json toJson() const { return {{"line", line}, {"character", character}}; }
+    nlohmann::json toJson() const
+    {
+        return {{"line", line}, {"character", character}};
+    }
 
     //////////////////////////////////////////////////////////////
     ///

@@ -20,7 +20,7 @@ namespace ls6502
 /////////////////////////////////////////////////////////////////////
 class DiagnosticsUtil
 {
-  public:
+public:
     /////////////////////////////////////////////////////////////////////
     ///
     /// @brief Delete default constructor to prevent instantiation
@@ -37,7 +37,7 @@ class DiagnosticsUtil
     /// @return true if label is missing semicolo, false otherwise
     ///
     /////////////////////////////////////////////////////////////////////
-    static bool isLabelMissingSemicolon(const Diagnostic &diagnostic);
+    static bool isLabelMissingSemicolon(const Diagnostic& diagnostic);
 
     /////////////////////////////////////////////////////////////////////
     ///
@@ -48,7 +48,7 @@ class DiagnosticsUtil
     /// @return true if label is missing semicolo, false otherwise
     ///
     /////////////////////////////////////////////////////////////////////
-    static bool isInstructionUnsupproted(const Diagnostic &diagnostic);
+    static bool isInstructionUnsupproted(const Diagnostic& diagnostic);
 
     /////////////////////////////////////////////////////////////////////
     ///
@@ -60,7 +60,7 @@ class DiagnosticsUtil
     /// @return true if instruction was incorrectly used, false otherwise
     ///
     /////////////////////////////////////////////////////////////////////
-    static bool isInstructionUsageIncorrect(const Diagnostic &diagnostic);
+    static bool isInstructionUsageIncorrect(const Diagnostic& diagnostic);
 };
 
 /////////////////////////////////////////////////////////////////////
@@ -68,19 +68,19 @@ class DiagnosticsUtil
 /////////////////////////////////////////////////////////////////////
 
 ////////////////////////////////////////////////////////////
-bool inline DiagnosticsUtil::isLabelMissingSemicolon(const Diagnostic &diagnostic)
+inline bool DiagnosticsUtil::isLabelMissingSemicolon(const Diagnostic& diagnostic)
 {
     return diagnostic.getMessage().find("Label missing ':'") != std::string::npos;
 }
 
 ////////////////////////////////////////////////////////////
-bool inline DiagnosticsUtil::isInstructionUnsupproted(const Diagnostic &diagnostic)
+inline bool DiagnosticsUtil::isInstructionUnsupproted(const Diagnostic& diagnostic)
 {
     return diagnostic.getMessage().find("Unsupported instruction") != std::string::npos;
 }
 
 ////////////////////////////////////////////////////////////
-bool inline DiagnosticsUtil::isInstructionUsageIncorrect(const Diagnostic &diagnostic)
+inline bool DiagnosticsUtil::isInstructionUsageIncorrect(const Diagnostic& diagnostic)
 {
     return diagnostic.getMessage().find("Incorrect instruction usage") != std::string::npos;
 }

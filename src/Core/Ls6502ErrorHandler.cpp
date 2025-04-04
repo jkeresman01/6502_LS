@@ -73,7 +73,7 @@ void Ls6502ErrorHandler::handleReceivedReqAfterShutdownError(int64_t id)
 }
 
 ////////////////////////////////////////////////////////////
-void Ls6502ErrorHandler::handleError(const ResponseError &responseError, int64_t id)
+void Ls6502ErrorHandler::handleError(const ResponseError& responseError, int64_t id)
 {
     LS_6502_DEBUG(STR("Sending response error: %s", responseError.toString().c_str()));
 

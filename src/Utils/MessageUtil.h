@@ -23,7 +23,7 @@ namespace ls6502
 /////////////////////////////////////////////////////////////////////
 class MessageUtil
 {
-  public:
+public:
     /////////////////////////////////////////////////////////////////////
     ///
     /// @brief Delete default constructor to prevent instantiation
@@ -40,7 +40,7 @@ class MessageUtil
     /// @return request method/type
     ///
     /////////////////////////////////////////////////////////////////////
-    static RequestType getMethod(const nlohmann::json &request);
+    static RequestType getMethod(const nlohmann::json& request);
 
     /////////////////////////////////////////////////////////////////////
     ///
@@ -51,7 +51,7 @@ class MessageUtil
     /// @return json object
     ///
     /////////////////////////////////////////////////////////////////////
-    static nlohmann::json tryParse(const std::string &request);
+    static nlohmann::json tryParse(const std::string& request);
 };
 
 /////////////////////////////////////////////////////////////////////
@@ -59,14 +59,13 @@ class MessageUtil
 /////////////////////////////////////////////////////////////////////
 
 ////////////////////////////////////////////////////////////
-inline nlohmann::json MessageUtil::tryParse(const std::string &request)
+inline nlohmann::json MessageUtil::tryParse(const std::string& request)
 {
     nlohmann::json jsonRequest;
     try
     {
         jsonRequest = nlohmann::json::parse(request);
-    }
-    catch (const std::exception &e)
+    } catch (const std::exception& e)
     {
         LS_6502_ERROR(STR("Failed to parse request: %s!", e.what()));
     }
@@ -75,7 +74,7 @@ inline nlohmann::json MessageUtil::tryParse(const std::string &request)
 }
 
 ////////////////////////////////////////////////////////////
-inline RequestType MessageUtil::getMethod(const nlohmann::json &request)
+inline RequestType MessageUtil::getMethod(const nlohmann::json& request)
 {
     auto it = request.find("method");
 

@@ -9,8 +9,9 @@ namespace ls6502
 {
 
 ////////////////////////////////////////////////////////////
-ResponseError::ResponseError(const ErrorCodes &errorCode, const std::string &message)
-    : m_errorCode(errorCode), m_message(message)
+ResponseError::ResponseError(const ErrorCodes& errorCode, const std::string& message) :
+m_errorCode(errorCode),
+m_message(message)
 {
 }
 
@@ -32,14 +33,14 @@ std::string ResponseError::toString() const
 }
 
 ////////////////////////////////////////////////////////////
-ResponseError::Builder &ResponseError::Builder::withErrorCode(const ErrorCodes &errorCode)
+ResponseError::Builder& ResponseError::Builder::withErrorCode(const ErrorCodes& errorCode)
 {
     m_errorCode = errorCode;
     return *this;
 }
 
 ////////////////////////////////////////////////////////////
-ResponseError::Builder &ResponseError::Builder::withErrorMessage(const std::string &message)
+ResponseError::Builder& ResponseError::Builder::withErrorMessage(const std::string& message)
 {
     m_message = message;
     return *this;

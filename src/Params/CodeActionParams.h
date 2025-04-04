@@ -12,7 +12,7 @@ namespace ls6502
 {
 class CodeActionParams
 {
-  public:
+public:
     //////////////////////////////////////////////////////////////
     ///
     /// @brief Constructs the CodeActionParams object from JSON RPC
@@ -20,7 +20,7 @@ class CodeActionParams
     /// @param [in] jsonRPC JSON object containing code action parameters
     ///
     //////////////////////////////////////////////////////////////
-    explicit CodeActionParams(const nlohmann::json &jsonRPC);
+    explicit CodeActionParams(const nlohmann::json& jsonRPC);
 
     //////////////////////////////////////////////////////////////
     ///
@@ -30,7 +30,10 @@ class CodeActionParams
     /// @return Range of the requested code action
     ///
     //////////////////////////////////////////////////////////////
-    Range getRange() const { return m_range; };
+    Range getRange() const
+    {
+        return m_range;
+    };
 
     //////////////////////////////////////////////////////////////
     ///
@@ -40,9 +43,12 @@ class CodeActionParams
     /// @return URI of the text document
     ///
     //////////////////////////////////////////////////////////////
-    std::string getURI() const { return m_URI; };
+    std::string getURI() const
+    {
+        return m_URI;
+    };
 
-  private:
+private:
     //////////////////////////////////////////////////////////////
     ///
     /// @brief Mutator method for setting the range from JSON RPC
@@ -50,7 +56,7 @@ class CodeActionParams
     /// @param [in] jsonRPC JSON object containing range details
     ///
     //////////////////////////////////////////////////////////////
-    void setRange(const nlohmann::json &jsonRPC);
+    void setRange(const nlohmann::json& jsonRPC);
 
     //////////////////////////////////////////////////////////////
     ///
@@ -60,7 +66,7 @@ class CodeActionParams
     /// @param [in] jsonRPC JSON object containing start position details
     ///
     //////////////////////////////////////////////////////////////
-    void setStartPosition(const nlohmann::json &jsonRPC);
+    void setStartPosition(const nlohmann::json& jsonRPC);
 
     //////////////////////////////////////////////////////////////
     ///
@@ -70,7 +76,7 @@ class CodeActionParams
     /// @param [in] jsonRPC JSON object containing end position details
     ///
     //////////////////////////////////////////////////////////////
-    void setEndPosition(const nlohmann::json &jsonRPC);
+    void setEndPosition(const nlohmann::json& jsonRPC);
 
     //////////////////////////////////////////////////////////////
     ///
@@ -80,9 +86,9 @@ class CodeActionParams
     /// @param [in] jsonRPC JSON object containing the document URI
     ///
     //////////////////////////////////////////////////////////////
-    void setURI(const nlohmann::json &jsonRPC);
+    void setURI(const nlohmann::json& jsonRPC);
 
-  private:
+private:
     //////////////////////////////////////////////////////////////
     ///
     /// @brief Range within which the code action is requested

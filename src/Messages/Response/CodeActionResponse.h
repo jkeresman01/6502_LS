@@ -21,7 +21,7 @@ namespace ls6502
 //////////////////////////////////////////////////////////////
 class CodeActionResponse : public ResponseMessage
 {
-  public:
+public:
     //////////////////////////////////////////////////////////////
     ///
     /// @brief Constructs a CodeActionResponse with given parameters.
@@ -31,8 +31,7 @@ class CodeActionResponse : public ResponseMessage
     /// @param [in] hoverResult
     ///
     //////////////////////////////////////////////////////////////
-    CodeActionResponse(const std::string &jsonRPC, const int64_t id,
-                       const CodeActionResult &codeActionResult);
+    CodeActionResponse(const std::string& jsonRPC, const int64_t id, const CodeActionResult& codeActionResult);
 
     //////////////////////////////////////////////////////////////
     ///
@@ -53,9 +52,9 @@ class CodeActionResponse : public ResponseMessage
     /// @return The modified output stream.
     ///
     //////////////////////////////////////////////////////////////
-    friend std::ostream &operator<<(std::ostream &os, const CodeActionResponse &codeActionResponse);
+    friend std::ostream& operator<<(std::ostream& os, const CodeActionResponse& codeActionResponse);
 
-  private:
+private:
     //////////////////////////////////////////////////////////////
     ///
     /// @brief The code action result associated with this response.

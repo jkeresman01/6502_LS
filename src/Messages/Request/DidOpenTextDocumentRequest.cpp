@@ -10,14 +10,14 @@ namespace ls6502
 {
 
 ////////////////////////////////////////////////////////////
-DidOpenTextDocumentRequest::DidOpenTextDocumentRequest(const nlohmann::json &jsonRPC)
-    : NotificationMessage(jsonRPC)
+DidOpenTextDocumentRequest::DidOpenTextDocumentRequest(const nlohmann::json& jsonRPC) :
+NotificationMessage(jsonRPC)
 {
     setParams(jsonRPC);
 }
 
 ////////////////////////////////////////////////////////////
-void DidOpenTextDocumentRequest::setParams(const nlohmann::json &jsonRPC)
+void DidOpenTextDocumentRequest::setParams(const nlohmann::json& jsonRPC)
 {
     auto it = jsonRPC.find("params");
 

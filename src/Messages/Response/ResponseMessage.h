@@ -27,7 +27,7 @@ namespace ls6502
 //////////////////////////////////////////////////////////////
 class ResponseMessage : public Message
 {
-  public:
+public:
     //////////////////////////////////////////////////////////////
     ///
     /// @brief Constructs a successful ResponseMessage.
@@ -36,7 +36,7 @@ class ResponseMessage : public Message
     /// @param [in] id
     ///
     //////////////////////////////////////////////////////////////
-    ResponseMessage(const std::string &jsonRpc, const int64_t id);
+    ResponseMessage(const std::string& jsonRpc, const int64_t id);
 
     //////////////////////////////////////////////////////////////
     ///
@@ -47,7 +47,7 @@ class ResponseMessage : public Message
     /// @param [in] responseError
     ///
     //////////////////////////////////////////////////////////////
-    ResponseMessage(const std::string &jsonRpc, const int64_t id, const ResponseError &responseError);
+    ResponseMessage(const std::string& jsonRpc, const int64_t id, const ResponseError& responseError);
 
     //////////////////////////////////////////////////////////////
     ///
@@ -68,9 +68,9 @@ class ResponseMessage : public Message
     /// @return The modified output stream.
     ///
     //////////////////////////////////////////////////////////////
-    friend std::ostream &operator<<(std::ostream &out, const ResponseMessage &responseMessage);
+    friend std::ostream& operator<<(std::ostream& out, const ResponseMessage& responseMessage);
 
-  protected:
+protected:
     //////////////////////////////////////////////////////////////
     ///
     /// @brief Unique identifier for the request associated

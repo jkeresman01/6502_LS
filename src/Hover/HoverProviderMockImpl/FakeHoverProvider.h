@@ -20,7 +20,7 @@ namespace ls6502
 /////////////////////////////////////////////////////////////////////
 class FakeHoverProvider : public IHoverProvider
 {
-  public:
+public:
     /////////////////////////////////////////////////////////////////////
     ///
     /// @brief Default constructor
@@ -38,7 +38,7 @@ class FakeHoverProvider : public IHoverProvider
     /// @return A HoverItem containing hover information
     ///
     /////////////////////////////////////////////////////////////////////
-    HoverItem getHoverItem(const std::string &document, const Position &position) override;
+    HoverItem getHoverItem(const std::string& document, const Position& position) override;
 };
 
 } // namespace ls6502

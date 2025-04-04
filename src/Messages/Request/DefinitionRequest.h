@@ -24,7 +24,7 @@ namespace ls6502
 //////////////////////////////////////////////////////////////
 class DefintionRequest : public RequestMessage
 {
-  public:
+public:
     //////////////////////////////////////////////////////////////
     ///
     /// @brief Constructs the Defintion request from JSON RPC
@@ -32,7 +32,7 @@ class DefintionRequest : public RequestMessage
     /// @param [in] jsonRPC
     ///
     //////////////////////////////////////////////////////////////
-    explicit DefintionRequest(const nlohmann::json &jsonRPC);
+    explicit DefintionRequest(const nlohmann::json& jsonRPC);
 
     //////////////////////////////////////////////////////////////
     ///
@@ -41,9 +41,12 @@ class DefintionRequest : public RequestMessage
     /// @return DefintionParams
     ///
     //////////////////////////////////////////////////////////////
-    std::shared_ptr<DefinitionParams> getParams() const { return m_hoverParams; };
+    std::shared_ptr<DefinitionParams> getParams() const
+    {
+        return m_hoverParams;
+    };
 
-  private:
+private:
     //////////////////////////////////////////////////////////////
     ///
     /// @brief Mutator method for hover params
@@ -51,9 +54,9 @@ class DefintionRequest : public RequestMessage
     /// @param [in] jsonRPC
     ///
     //////////////////////////////////////////////////////////////
-    void setParams(const nlohmann::json &jsonRPC);
+    void setParams(const nlohmann::json& jsonRPC);
 
-  private:
+private:
     //////////////////////////////////////////////////////////////
     ///
     /// @brief Paramters used in Defintion Request

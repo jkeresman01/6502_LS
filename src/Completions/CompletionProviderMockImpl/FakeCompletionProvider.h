@@ -23,7 +23,7 @@ namespace ls6502
 //////////////////////////////////////////////////////////////
 class FakeCompletionProvider : public ICompletionProvider
 {
-  public:
+public:
     //////////////////////////////////////////////////////////////
     ///
     /// @brief Retrieves a list of fake completion items.
@@ -32,10 +32,9 @@ class FakeCompletionProvider : public ICompletionProvider
     ///         the fake completions.
     ///
     //////////////////////////////////////////////////////////////
-    std::vector<CompletionItem> getCompletions(const std::string &document,
-                                               const Position &position) override;
+    std::vector<CompletionItem> getCompletions(const std::string& document, const Position& position) override;
 
-  private:
+private:
     //////////////////////////////////////////////////////////////
     ///
     /// @brief Populates the provided vector with fake completion items.
@@ -43,9 +42,9 @@ class FakeCompletionProvider : public ICompletionProvider
     /// @param [in] completions
     ///
     //////////////////////////////////////////////////////////////
-    void fillFakeComletions(std::vector<CompletionItem> &completions);
+    void fillFakeComletions(std::vector<CompletionItem>& completions);
 
-  private:
+private:
     //////////////////////////////////////////////////////////////
     ///
     /// @brief Number of fake completion items that will be provided

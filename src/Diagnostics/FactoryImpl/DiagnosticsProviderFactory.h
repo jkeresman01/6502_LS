@@ -25,7 +25,7 @@ namespace ls6502
 //////////////////////////////////////////////////////////////
 class DiagnosticsProviderFactory
 {
-  public:
+public:
     //////////////////////////////////////////////////////////////
     ///
     /// @brief Deleted constructor to prevent instantiation.
@@ -43,8 +43,8 @@ class DiagnosticsProviderFactory
     //////////////////////////////////////////////////////////////
     static std::shared_ptr<IDiagnosticsProvider> create()
     {
-        const std::string &diagnosticsProvider
-          = ConfigurationManager::getInstance()->getProperty("diagnosticsProvider");
+        const std::string& diagnosticsProvider = ConfigurationManager::getInstance()->getProperty(
+            "diagnosticsProvider");
 
         LS_6502_DEBUG(STR("Diagnostics provider: %s", diagnosticsProvider.c_str()));
 

@@ -10,8 +10,9 @@ namespace ls6502
 {
 
 ////////////////////////////////////////////////////////////
-InitializeResult::InitializeResult(const ServerInfo &serverInfo, const ServerCapabilities &serverCapabilites)
-    : m_serverInfo(serverInfo), m_serverCapabilities(serverCapabilites)
+InitializeResult::InitializeResult(const ServerInfo& serverInfo, const ServerCapabilities& serverCapabilites) :
+m_serverInfo(serverInfo),
+m_serverCapabilities(serverCapabilites)
 {
 }
 
