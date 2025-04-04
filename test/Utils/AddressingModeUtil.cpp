@@ -22,7 +22,7 @@ TEST_F(AddressingModesUtilTest, WillReturnCorrectAddressingModeEnumValue)
         {"Immediate", AddressingModes::IMMEDIATE},     {"Zero Page,X", AddressingModes::ZERO_PAGE_X},
         {"Zero Page,Y", AddressingModes::ZERO_PAGE_Y}, {"Absolute,X", AddressingModes::ABSOLUTE_X},
         {"Absolute,Y", AddressingModes::ABSOLUTE_Y},   {"Indirect", AddressingModes::INDIRECT_INDEXED},
-        {"UnknownMode", AddressingModes::INVALID},     {"", AddressingModes::INVALID}};
+        {"UnknownMode", AddressingModes::UNKOWN},     {"", AddressingModes::UNKOWN}};
 
     // WHEN
     // THEN
@@ -48,7 +48,7 @@ TEST_F(AddressingModesUtilTest, WillReturnCorrectAddressingModeBasedOnEnumValue)
                                        {AddressingModes::ABSOLUTE_X, "Absolute,X"},
                                        {AddressingModes::ABSOLUTE_Y, "Absolute,Y"},
                                        {AddressingModes::INDIRECT_INDEXED, "Indirect"},
-                                       {AddressingModes::INVALID, ""}};
+                                       {AddressingModes::UNKOWN, ""}};
 
     // WHEN
     // THEN
