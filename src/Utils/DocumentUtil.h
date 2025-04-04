@@ -99,6 +99,7 @@ private:
 /// Implementation of inline defined functions
 /////////////////////////////////////////////////////////////////////
 
+
 ////////////////////////////////////////////////////////////
 inline std::vector<std::string> DocumentUtil::splitDocumentIntoLines(const std::string& document)
 {
@@ -113,6 +114,7 @@ inline std::vector<std::string> DocumentUtil::splitDocumentIntoLines(const std::
 
     return lines;
 }
+
 
 ////////////////////////////////////////////////////////////
 inline std::string DocumentUtil::extractPrefix(const std::string& document, const Position& position)
@@ -142,6 +144,7 @@ inline std::string DocumentUtil::extractPrefix(const std::string& document, cons
     return word;
 }
 
+
 ////////////////////////////////////////////////////////////
 inline std::string DocumentUtil::extractLine(const std::string& document, const Position& position)
 {
@@ -159,6 +162,7 @@ inline std::string DocumentUtil::extractLine(const std::string& document, const 
     return line;
 }
 
+
 ////////////////////////////////////////////////////////////
 inline size_t DocumentUtil::findStartOfTheWord(const std::string& line, const Position& position)
 {
@@ -172,6 +176,7 @@ inline size_t DocumentUtil::findStartOfTheWord(const std::string& line, const Po
     return start;
 }
 
+
 ////////////////////////////////////////////////////////////
 inline size_t DocumentUtil::findEndOfTheWord(const std::string& line, const Position& position)
 {
@@ -184,5 +189,6 @@ inline size_t DocumentUtil::findEndOfTheWord(const std::string& line, const Posi
 
     return end;
 }
+
 
 } // namespace ls6502

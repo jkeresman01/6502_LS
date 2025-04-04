@@ -7,17 +7,20 @@
 namespace ls6502
 {
 
+
 ////////////////////////////////////////////////////////////
 FakeDiagnosticsProvider::FakeDiagnosticsProvider()
 {
     fillFakeDiagnostics();
 }
 
+
 ////////////////////////////////////////////////////////////
 FakeDiagnosticsProvider::FakeDiagnosticsProvider(const std::vector<Diagnostic>& mockDiagnostics) :
 m_diagnostics(mockDiagnostics)
 {
 }
+
 
 ////////////////////////////////////////////////////////////
 std::vector<Diagnostic> FakeDiagnosticsProvider::getDiagnostics(const std::string& document)
@@ -27,6 +30,7 @@ std::vector<Diagnostic> FakeDiagnosticsProvider::getDiagnostics(const std::strin
     return m_diagnostics;
 }
 
+
 ////////////////////////////////////////////////////////////
 void FakeDiagnosticsProvider::fillFakeDiagnostics()
 {
@@ -35,6 +39,7 @@ void FakeDiagnosticsProvider::fillFakeDiagnostics()
     fillFakeErrors();
     fillFakeInfo();
 }
+
 
 ////////////////////////////////////////////////////////////
 void FakeDiagnosticsProvider::fillFakeErrors()
@@ -47,6 +52,7 @@ void FakeDiagnosticsProvider::fillFakeErrors()
         .emplace_back(Range{30, 10}, DiagnosticSeverity::ERROR, typeid(*this).name(), "Third ERROR message");
 }
 
+
 ////////////////////////////////////////////////////////////
 void FakeDiagnosticsProvider::fillFakeWarnings()
 {
@@ -54,15 +60,18 @@ void FakeDiagnosticsProvider::fillFakeWarnings()
                                DiagnosticSeverity::WARNING,
                                typeid(*this).name(),
                                "First WARNING message");
+
     m_diagnostics.emplace_back(Range{50, 10},
                                DiagnosticSeverity::WARNING,
                                typeid(*this).name(),
                                "Second WARNING message");
+
     m_diagnostics.emplace_back(Range{60, 10},
                                DiagnosticSeverity::WARNING,
                                typeid(*this).name(),
                                "Third WARNING message");
 }
+
 
 ////////////////////////////////////////////////////////////
 void FakeDiagnosticsProvider::fillFakeHints()
@@ -75,6 +84,7 @@ void FakeDiagnosticsProvider::fillFakeHints()
         .emplace_back(Range{90, 10}, DiagnosticSeverity::HINT, typeid(*this).name(), "Third HINT message");
 }
 
+
 ////////////////////////////////////////////////////////////
 void FakeDiagnosticsProvider::fillFakeInfo()
 {
@@ -82,14 +92,17 @@ void FakeDiagnosticsProvider::fillFakeInfo()
                                DiagnosticSeverity::INFORMATION,
                                typeid(*this).name(),
                                "First INFORMATION message");
+
     m_diagnostics.emplace_back(Range{110, 10},
                                DiagnosticSeverity::INFORMATION,
                                typeid(*this).name(),
                                "Second INFORMATION message");
+
     m_diagnostics.emplace_back(Range{120, 10},
                                DiagnosticSeverity::INFORMATION,
                                typeid(*this).name(),
                                "Third INFORMATION message");
 }
+
 
 } // namespace ls6502

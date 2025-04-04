@@ -44,6 +44,7 @@ public:
 /// Implementation of inline defined functions
 /////////////////////////////////////////////////////////////////////
 
+
 ////////////////////////////////////////////////////////////
 inline RequestType RequestMethodUtil::getType(const std::string& method)
 {
@@ -71,7 +72,7 @@ inline RequestType RequestMethodUtil::getType(const std::string& method)
     {
         return RequestType::TEXT_DOCUMENT_CODE_ACTION;
     }
-    else if (method == "textDocument/codeAction")
+    else if (method == "textDocument/definition")
     {
         return RequestType::TEXT_DOCUMENT_DEFINITION;
     }
@@ -96,5 +97,6 @@ inline RequestType RequestMethodUtil::getType(const std::string& method)
         return RequestType::UNKNOWN;
     }
 }
+
 
 } // namespace ls6502

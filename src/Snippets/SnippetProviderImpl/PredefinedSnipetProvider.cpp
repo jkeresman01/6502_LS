@@ -10,6 +10,7 @@
 namespace ls6502
 {
 
+
 ////////////////////////////////////////////////////////////
 std::vector<CompletionItem> PredefinedSnippetProvider::getSnippets(const std::string& prefix)
 {
@@ -22,6 +23,7 @@ std::vector<CompletionItem> PredefinedSnippetProvider::getSnippets(const std::st
         LS_6502_WARN(STR("No snippets for this prefix: %s", prefix.c_str()));
     }
 }
+
 
 ////////////////////////////////////////////////////////////
 std::vector<CompletionItem> PredefinedSnippetProvider::getCompletions(const std::vector<std::string>& snippets,
@@ -36,4 +38,6 @@ std::vector<CompletionItem> PredefinedSnippetProvider::getCompletions(const std:
 
     return completionItems;
 }
+
+
 } // namespace ls6502

@@ -7,6 +7,7 @@
 namespace ls6502
 {
 
+
 ////////////////////////////////////////////////////////////
 PublishDiagnosticsNoticifation::PublishDiagnosticsNoticifation(
     const std::string&                               method,
@@ -16,11 +17,13 @@ m_diagnosticsParams(diagnosticsParams)
 {
 }
 
+
 ////////////////////////////////////////////////////////////
 nlohmann::json PublishDiagnosticsNoticifation::toJson() const
 {
     return {{"jsonrpc", m_jsonRPC}, {"method", m_method}, {"params", m_diagnosticsParams->toJson()}};
 }
+
 
 ////////////////////////////////////////////////////////////
 std::ostream& operator<<(std::ostream& os, const PublishDiagnosticsNoticifation& publishDiagsnosticsNotification)
@@ -32,5 +35,6 @@ std::ostream& operator<<(std::ostream& os, const PublishDiagnosticsNoticifation&
 
     return os;
 }
+
 
 } // namespace ls6502

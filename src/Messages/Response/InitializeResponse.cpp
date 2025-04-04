@@ -10,6 +10,7 @@
 namespace ls6502
 {
 
+
 ////////////////////////////////////////////////////////////
 InitializeResponse::InitializeResponse(const std::string&      jsonRPC,
                                        const int64_t&          id,
@@ -18,6 +19,7 @@ ResponseMessage(jsonRPC, id),
 m_initializeResut(initializeResult)
 {
 }
+
 
 ////////////////////////////////////////////////////////////
 nlohmann::json InitializeResponse::toJson() const
@@ -29,6 +31,7 @@ nlohmann::json InitializeResponse::toJson() const
               {"capabilities", m_initializeResut.getServerCapabilities().toJson()}}}};
 }
 
+
 ////////////////////////////////////////////////////////////
 std::string InitializeResponse::toString() const
 {
@@ -36,6 +39,7 @@ std::string InitializeResponse::toString() const
     ss << "Initialization response from server { " << m_initializeResut.toString() << " }";
     return ss.str();
 }
+
 
 std::ostream& operator<<(std::ostream& os, const InitializeResponse& initializeResponse)
 {
@@ -46,5 +50,6 @@ std::ostream& operator<<(std::ostream& os, const InitializeResponse& initializeR
 
     return os;
 }
+
 
 } // namespace ls6502

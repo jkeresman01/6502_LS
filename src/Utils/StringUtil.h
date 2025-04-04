@@ -60,6 +60,7 @@ public:
 /// Implementation of inline defined functions
 /////////////////////////////////////////////////////////////////////
 
+
 ////////////////////////////////////////////////////////////
 inline void StringUtil::trim(std::string& string)
 {
@@ -74,16 +75,19 @@ inline void StringUtil::trim(std::string& string)
     string     = string.substr(start, end - start + 1);
 }
 
+
 ////////////////////////////////////////////////////////////
 inline void StringUtil::toUpper(std::string& string)
 {
     std::transform(string.begin(), string.end(), string.begin(), std::ptr_fun<int32_t, int32_t>(std::toupper));
 }
 
+
 ////////////////////////////////////////////////////////////
 inline void StringUtil::toLower(std::string& string)
 {
     std::transform(string.begin(), string.end(), string.begin(), std::ptr_fun<int32_t, int32_t>(std::tolower));
 }
+
 
 } // namespace ls6502

@@ -9,11 +9,13 @@
 namespace ls6502
 {
 
+
 ////////////////////////////////////////////////////////////
 DefintionRequest::DefintionRequest(const nlohmann::json& jsonRPC) : RequestMessage(jsonRPC)
 {
     setParams(jsonRPC);
 }
+
 
 ////////////////////////////////////////////////////////////
 void DefintionRequest::setParams(const nlohmann::json& jsonRPC)
@@ -28,5 +30,6 @@ void DefintionRequest::setParams(const nlohmann::json& jsonRPC)
 
     m_hoverParams = std::make_shared<DefinitionParams>(jsonRPC["params"]);
 }
+
 
 } // namespace ls6502

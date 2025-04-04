@@ -9,6 +9,7 @@
 namespace ls6502
 {
 
+
 ////////////////////////////////////////////////////////////
 CompletionParams::CompletionParams(const nlohmann::json& jsonRPC)
 {
@@ -16,6 +17,7 @@ CompletionParams::CompletionParams(const nlohmann::json& jsonRPC)
     setPosition(jsonRPC["position"]);
     setTextDocumentIdentifier(jsonRPC["textDocument"]);
 }
+
 
 ////////////////////////////////////////////////////////////
 void CompletionParams::setCompletionContext(const nlohmann::json& jsonRPC)
@@ -31,12 +33,14 @@ void CompletionParams::setCompletionContext(const nlohmann::json& jsonRPC)
     m_completionContext.completionTriggerKind = jsonRPC["triggerKind"];
 }
 
+
 ////////////////////////////////////////////////////////////
 void CompletionParams::setPosition(const nlohmann::json& jsonRPC)
 {
     m_position.character = jsonRPC["character"];
     m_position.line      = jsonRPC["line"];
 }
+
 
 ////////////////////////////////////////////////////////////
 void CompletionParams::setTextDocumentIdentifier(const nlohmann::json& jsonRPC)
@@ -51,4 +55,6 @@ void CompletionParams::setTextDocumentIdentifier(const nlohmann::json& jsonRPC)
 
     m_textDocumentIdentifier.URI = jsonRPC["uri"];
 }
+
+
 } // namespace ls6502

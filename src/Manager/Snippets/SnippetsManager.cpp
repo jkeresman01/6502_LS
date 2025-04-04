@@ -7,13 +7,14 @@
 namespace ls6502
 {
 
+
 ////////////////////////////////////////////////////////////
 SnippetsMapT SnippetsManager::getAllSnippets()
 {
     loadSnippets();
-
     return m_snippets;
 }
+
 
 ////////////////////////////////////////////////////////////
 std::optional<std::vector<std::string>> SnippetsManager::getSnippetsByMnemonic(const std::string& mnemonic)
@@ -31,6 +32,7 @@ std::optional<std::vector<std::string>> SnippetsManager::getSnippetsByMnemonic(c
     return snippets.empty() ? std::nullopt : std::make_optional<std::vector<std::string>>(snippets);
 }
 
+
 ////////////////////////////////////////////////////////////
 void SnippetsManager::loadSnippets()
 {
@@ -40,11 +42,13 @@ void SnippetsManager::loadSnippets()
     }
 }
 
+
 ////////////////////////////////////////////////////////////
 SnippetsManager& SnippetsManager::getInstance()
 {
     static SnippetsManager instance;
     return instance;
 }
+
 
 } // namespace ls6502

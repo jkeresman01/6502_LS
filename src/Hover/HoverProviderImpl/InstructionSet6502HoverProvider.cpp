@@ -15,6 +15,7 @@
 namespace ls6502
 {
 
+
 ////////////////////////////////////////////////////////////
 HoverItem InstructionSet6502HoverProvider::getHoverItem(const std::string& document, const Position& position)
 {
@@ -41,5 +42,6 @@ HoverItem InstructionSet6502HoverProvider::getHoverItem(const std::string& docum
 
     return hoverItem;
 }
+
 
 } // namespace ls6502

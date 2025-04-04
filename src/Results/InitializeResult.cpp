@@ -9,12 +9,14 @@
 namespace ls6502
 {
 
+
 ////////////////////////////////////////////////////////////
 InitializeResult::InitializeResult(const ServerInfo& serverInfo, const ServerCapabilities& serverCapabilites) :
 m_serverInfo(serverInfo),
 m_serverCapabilities(serverCapabilites)
 {
 }
+
 
 ////////////////////////////////////////////////////////////
 nlohmann::json InitializeResult::toJson() const
@@ -29,6 +31,7 @@ nlohmann::json InitializeResult::toJson() const
                {{"resolveProvider", false}, {"completionItem", {{"snippetSupport", true}}}}}}}};
 }
 
+
 ////////////////////////////////////////////////////////////
 std::string InitializeResult::toString() const
 {
@@ -36,5 +39,6 @@ std::string InitializeResult::toString() const
     ss << "Initialization result for server { " << m_serverInfo.toString() << " }";
     return ss.str();
 }
+
 
 } // namespace ls6502

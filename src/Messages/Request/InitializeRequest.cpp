@@ -9,11 +9,13 @@
 namespace ls6502
 {
 
+
 ////////////////////////////////////////////////////////////
 InitializeRequest::InitializeRequest(const nlohmann::json& jsonRPC) : RequestMessage(jsonRPC)
 {
     setInitializeParams(jsonRPC);
 }
+
 
 ////////////////////////////////////////////////////////////
 void InitializeRequest::setInitializeParams(const nlohmann::json& jsonRPC)
@@ -28,5 +30,6 @@ void InitializeRequest::setInitializeParams(const nlohmann::json& jsonRPC)
 
     m_initializeParams = std::make_shared<InitializeParams>(jsonRPC["params"]);
 }
+
 
 } // namespace ls6502

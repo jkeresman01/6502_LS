@@ -7,6 +7,7 @@
 namespace ls6502
 {
 
+
 ////////////////////////////////////////////////////////////
 Location FakeDefinitionProvider::provideDefinitionLocation(const std::string& document,
                                                            const Position&    position,
@@ -15,4 +16,6 @@ Location FakeDefinitionProvider::provideDefinitionLocation(const std::string& do
     Range range{{10, 10}, {10, 12}};
     return Location{URI, range};
 }
+
+
 } // namespace ls6502

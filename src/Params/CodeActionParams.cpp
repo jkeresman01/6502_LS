@@ -9,6 +9,7 @@
 namespace ls6502
 {
 
+
 ////////////////////////////////////////////////////////////
 CodeActionParams::CodeActionParams(const nlohmann::json& jsonRPC)
 {
@@ -16,6 +17,7 @@ CodeActionParams::CodeActionParams(const nlohmann::json& jsonRPC)
     setURI(jsonRPC["textDocument"]);
     // TODO reset of the params
 }
+
 
 ////////////////////////////////////////////////////////////
 void CodeActionParams::setRange(const nlohmann::json& jsonRPC)
@@ -34,6 +36,7 @@ void CodeActionParams::setRange(const nlohmann::json& jsonRPC)
     setEndPosition(range["end"]);
 }
 
+
 ////////////////////////////////////////////////////////////
 void CodeActionParams::setStartPosition(const nlohmann::json& jsonRPC)
 {
@@ -41,12 +44,14 @@ void CodeActionParams::setStartPosition(const nlohmann::json& jsonRPC)
     m_range.start.character = jsonRPC["character"];
 }
 
+
 ////////////////////////////////////////////////////////////
 void CodeActionParams::setEndPosition(const nlohmann::json& jsonRPC)
 {
     m_range.end.line      = jsonRPC["line"];
     m_range.end.character = jsonRPC["character"];
 }
+
 
 ////////////////////////////////////////////////////////////
 void CodeActionParams::setURI(const nlohmann::json& jsonRPC)
@@ -61,4 +66,6 @@ void CodeActionParams::setURI(const nlohmann::json& jsonRPC)
 
     m_URI = jsonRPC["uri"];
 }
+
+
 } // namespace ls6502

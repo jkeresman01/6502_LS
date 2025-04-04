@@ -162,4 +162,8 @@ ObjCBreakBeforeNestedBlockParam: true
 ObjCSpaceAfterProperty: true
 ObjCSpaceBeforeProtocolList: false
 
+#Empty lines configuration
+KeepEmptyLinesAtTheStartOfBlock: true
+MaxEmptyLinesToKeep: 2
+
 ...

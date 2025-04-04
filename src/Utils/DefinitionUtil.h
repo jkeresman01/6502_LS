@@ -38,11 +38,13 @@ public:
 /// Implementation of inline defined functions
 /////////////////////////////////////////////////////////////////////
 
+
 ////////////////////////////////////////////////////////////
 inline Position& DefinitionUtil::findLabelPosition(const std::string& label, const std::string& document)
 {
     std::regex        labelPattern("\\b" + label + "\\b");
     std::smatch       match;
+
     std::stringstream ss(document);
 
     std::string line;
@@ -65,5 +67,6 @@ inline Position& DefinitionUtil::findLabelPosition(const std::string& label, con
         lineNumber++;
     }
 }
+
 
 } // namespace ls6502

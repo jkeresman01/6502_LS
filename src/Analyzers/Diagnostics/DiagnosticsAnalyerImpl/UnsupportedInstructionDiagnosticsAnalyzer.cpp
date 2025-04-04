@@ -12,6 +12,7 @@
 namespace ls6502
 {
 
+
 ////////////////////////////////////////////////////////////
 std::vector<CodeAction> UnsupportedInstructionDiagnosticsAnalyzer::provideCodeActions(
     const Diagnostic&  diagnostic,
@@ -21,6 +22,7 @@ std::vector<CodeAction> UnsupportedInstructionDiagnosticsAnalyzer::provideCodeAc
     m_codeActions.clear();
 
     WorkspaceEdit         workspaceEdit;
+
     std::vector<TextEdit> textEdits;
 
     Range range = diagnostic.getRange();
@@ -34,6 +36,7 @@ std::vector<CodeAction> UnsupportedInstructionDiagnosticsAnalyzer::provideCodeAc
 
     return m_codeActions;
 }
+
 
 ////////////////////////////////////////////////////////////
 CodeAction UnsupportedInstructionDiagnosticsAnalyzer::createCodeAction(const WorkspaceEdit& workspaceEdit)

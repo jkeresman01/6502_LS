@@ -10,11 +10,13 @@
 namespace ls6502
 {
 
+
 ////////////////////////////////////////////////////////////
 FakeSnippetsProvider::FakeSnippetsProvider()
 {
     fillFakeSnippets();
 }
+
 
 ////////////////////////////////////////////////////////////
 std::vector<CompletionItem> FakeSnippetsProvider::getSnippets(const std::string& prefix)
@@ -25,6 +27,7 @@ std::vector<CompletionItem> FakeSnippetsProvider::getSnippets(const std::string&
     return m_snippets;
 }
 
+
 ////////////////////////////////////////////////////////////
 void FakeSnippetsProvider::fillFakeSnippets(std::vector<CompletionItem>& snippets)
 {
@@ -32,4 +35,6 @@ void FakeSnippetsProvider::fillFakeSnippets(std::vector<CompletionItem>& snippet
     m_snippets.emplace_back("snippet 2", CompletionItemKind::SNIPPET, "", "", "snippet 2 insert text");
     m_snippets.emplace_back("snippet 3", CompletionItemKind::SNIPPET, "", "", "snippet 3 insert text");
 }
+
+
 } // namespace ls6502

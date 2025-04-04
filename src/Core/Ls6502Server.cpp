@@ -15,6 +15,7 @@
 namespace ls6502
 {
 
+
 ////////////////////////////////////////////////////////////
 void Ls6502Server::init()
 {
@@ -23,11 +24,13 @@ void Ls6502Server::init()
     ConfigurationManager::getInstance()->load();
 }
 
+
 ////////////////////////////////////////////////////////////
 void Ls6502Server::shutdown()
 {
     LS_6502_DEBUG("Successful shutdown of Ls6502 server");
 }
+
 
 ////////////////////////////////////////////////////////////
 void Ls6502Server::run()
@@ -40,11 +43,13 @@ void Ls6502Server::run()
     }
 }
 
+
 ////////////////////////////////////////////////////////////
 void Ls6502Server::handleRequest(const std::string& request)
 {
     nlohmann::json jsonRPC = MessageUtil::tryParse(request);
     m_6502Facade->handleRequest(jsonRPC);
 }
+
 
 } // namespace ls6502

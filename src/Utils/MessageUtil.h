@@ -58,6 +58,7 @@ public:
 /// Implementation of inline defined functions
 /////////////////////////////////////////////////////////////////////
 
+
 ////////////////////////////////////////////////////////////
 inline nlohmann::json MessageUtil::tryParse(const std::string& request)
 {
@@ -73,6 +74,7 @@ inline nlohmann::json MessageUtil::tryParse(const std::string& request)
     return jsonRequest;
 }
 
+
 ////////////////////////////////////////////////////////////
 inline RequestType MessageUtil::getMethod(const nlohmann::json& request)
 {
@@ -87,5 +89,6 @@ inline RequestType MessageUtil::getMethod(const nlohmann::json& request)
     std::string method = std::string(request["method"]);
     return RequestMethodUtil::getType(method);
 }
+
 
 } // namespace ls6502

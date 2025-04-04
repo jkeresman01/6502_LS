@@ -18,6 +18,7 @@ public:
             .withErrorMessage("Received request before initiliazition request was send!");
     }
 
+
     ////////////////////////////////////////////////////////////
     static void constructParseError(ResponseError::Builder& responseErrorBuilder)
     {
@@ -25,12 +26,14 @@ public:
             .withErrorMessage("Parsing error happened, while processing request!");
     }
 
+
     ////////////////////////////////////////////////////////////
     static void constructMethodNotFoundError(ResponseError::Builder& responseErrorBuilder)
     {
         responseErrorBuilder.withErrorCode(ErrorCodes::METHOD_NOT_FOUND)
             .withErrorMessage("Didn't find method for given request");
     }
+
 
     ////////////////////////////////////////////////////////////
     static void constructInternalServerError(ResponseError::Builder& responseErrorBuilder)
@@ -45,5 +48,6 @@ public:
         responseErrorBuilder.withErrorCode(ErrorCodes::INVALID_REQUEST)
             .withErrorMessage("Received request after shutdown");
     }
+
 };
 } // namespace ls6502

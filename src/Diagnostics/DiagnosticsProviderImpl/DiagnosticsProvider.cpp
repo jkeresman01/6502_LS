@@ -25,6 +25,7 @@ DiagnosticsProvider::DiagnosticsProvider() : m_instructionSetRepository(Instruct
     m_instructionSet = m_instructionSetRepository->load();
 }
 
+
 ////////////////////////////////////////////////////////////
 std::vector<Diagnostic> DiagnosticsProvider::getDiagnostics(const std::string& document)
 {
@@ -42,6 +43,7 @@ std::vector<Diagnostic> DiagnosticsProvider::getDiagnostics(const std::string& d
     return m_diagnostics;
 }
 
+
 ////////////////////////////////////////////////////////////
 void DiagnosticsProvider::checkMalformedLabel(const std::string& line, size_t lineNumber)
 {
@@ -58,6 +60,7 @@ void DiagnosticsProvider::checkMalformedLabel(const std::string& line, size_t li
                                    "Malformed label");
     }
 }
+
 
 ////////////////////////////////////////////////////////////
 void DiagnosticsProvider::checkUnsupportedInstructions(const std::string& line, size_t lineNumber)
@@ -82,6 +85,7 @@ void DiagnosticsProvider::checkUnsupportedInstructions(const std::string& line, 
     }
 }
 
+
 ////////////////////////////////////////////////////////////
 void DiagnosticsProvider::checkGeneralSyntaxErrors(const std::string& line, size_t lineNumber)
 {
@@ -97,4 +101,6 @@ void DiagnosticsProvider::checkGeneralSyntaxErrors(const std::string& line, size
                                    "General syntax error");
     }
 }
+
+
 } // namespace ls6502

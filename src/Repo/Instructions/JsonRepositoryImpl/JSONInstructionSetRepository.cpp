@@ -10,6 +10,7 @@
 namespace ls6502
 {
 
+
 ////////////////////////////////////////////////////////////
 InstructionSetMapT JSONInstructionSetRepository::load()
 {
@@ -27,6 +28,7 @@ InstructionSetMapT JSONInstructionSetRepository::load()
 
     return m_instructionSet;
 }
+
 
 ////////////////////////////////////////////////////////////
 void JSONInstructionSetRepository::load(std::ifstream& in)
@@ -46,6 +48,7 @@ void JSONInstructionSetRepository::load(std::ifstream& in)
                          INSTRUCTION_SET_FILE_PATH));
     }
 }
+
 
 ////////////////////////////////////////////////////////////
 void JSONInstructionSetRepository::loadInstructionSet(const nlohmann::json& jsonData)
@@ -82,6 +85,7 @@ void JSONInstructionSetRepository::loadInstructionSet(const nlohmann::json& json
     }
 }
 
+
 ////////////////////////////////////////////////////////////
 void JSONInstructionSetRepository::loadMnemonic(const nlohmann::json& jsonData, Instruction& instruction)
 {
@@ -94,6 +98,7 @@ void JSONInstructionSetRepository::loadMnemonic(const nlohmann::json& jsonData, 
         LS_6502_WARN(STR("No can do for %s: Missing 'mnemonic' in instruction", INSTRUCTION_SET_FILE_PATH));
     }
 }
+
 
 ////////////////////////////////////////////////////////////
 void JSONInstructionSetRepository::loadDescription(const nlohmann::json& jsonData, Instruction& instruction)
@@ -108,6 +113,7 @@ void JSONInstructionSetRepository::loadDescription(const nlohmann::json& jsonDat
     }
 }
 
+
 ////////////////////////////////////////////////////////////
 void JSONInstructionSetRepository::loadOperation(const nlohmann::json& jsonData, Instruction& instruction)
 {
@@ -120,6 +126,7 @@ void JSONInstructionSetRepository::loadOperation(const nlohmann::json& jsonData,
         LS_6502_WARN(STR("No can do for %s: Missing 'operation' in instruction", INSTRUCTION_SET_FILE_PATH));
     }
 }
+
 
 ////////////////////////////////////////////////////////////
 void JSONInstructionSetRepository::loadFlags(const nlohmann::json& jsonData, Instruction& instruction)
@@ -147,6 +154,7 @@ void JSONInstructionSetRepository::loadFlags(const nlohmann::json& jsonData, Ins
     }
 }
 
+
 ////////////////////////////////////////////////////////////
 void JSONInstructionSetRepository::loadAddressingMode(const nlohmann::json& jsonData, AddressingMode& addressingMode)
 {
@@ -158,6 +166,7 @@ void JSONInstructionSetRepository::loadAddressingMode(const nlohmann::json& json
 
     addressingMode.hasExtraCycle = jsonData.value("extra_cycle", false);
 }
+
 
 ////////////////////////////////////////////////////////////
 void JSONInstructionSetRepository::loadMode(const nlohmann::json& jsonData, AddressingMode& addressingMode)
@@ -173,6 +182,7 @@ void JSONInstructionSetRepository::loadMode(const nlohmann::json& jsonData, Addr
     }
 }
 
+
 ////////////////////////////////////////////////////////////
 void JSONInstructionSetRepository::loadAssembler(const nlohmann::json& jsonData, AddressingMode& addressingMode)
 {
@@ -187,6 +197,7 @@ void JSONInstructionSetRepository::loadAssembler(const nlohmann::json& jsonData,
     }
 }
 
+
 ////////////////////////////////////////////////////////////
 void JSONInstructionSetRepository::loadOpcode(const nlohmann::json& jsonData, AddressingMode& addressingMode)
 {
@@ -199,6 +210,7 @@ void JSONInstructionSetRepository::loadOpcode(const nlohmann::json& jsonData, Ad
         LS_6502_WARN(STR("No can do for %s: Missing 'opcode' in addressing jsonData", INSTRUCTION_SET_FILE_PATH));
     }
 }
+
 
 ////////////////////////////////////////////////////////////
 void JSONInstructionSetRepository::loadBytes(const nlohmann::json& jsonData, AddressingMode& addressingMode)
@@ -213,6 +225,7 @@ void JSONInstructionSetRepository::loadBytes(const nlohmann::json& jsonData, Add
     }
 }
 
+
 ////////////////////////////////////////////////////////////
 void JSONInstructionSetRepository::loadCycles(const nlohmann::json& jsonData, AddressingMode& addressingMode)
 {
@@ -225,5 +238,6 @@ void JSONInstructionSetRepository::loadCycles(const nlohmann::json& jsonData, Ad
         LS_6502_WARN(STR("No can do for %s: Missing 'cycles' in addressing jsonData", INSTRUCTION_SET_FILE_PATH));
     }
 }
+
 
 } // namespace ls6502

@@ -7,16 +7,19 @@
 namespace ls6502
 {
 
+
 ////////////////////////////////////////////////////////////
 Message::Message(const std::string& jsonRPC) : m_jsonRPC(jsonRPC)
 {
 }
+
 
 ////////////////////////////////////////////////////////////
 nlohmann::json Message::toJson() const
 {
     return {{"jsonrpc", m_jsonRPC}};
 }
+
 
 ////////////////////////////////////////////////////////////
 std::ostream& operator<<(std::ostream& os, const Message& mesage)
@@ -28,5 +31,6 @@ std::ostream& operator<<(std::ostream& os, const Message& mesage)
 
     return os;
 }
+
 
 } // namespace ls6502

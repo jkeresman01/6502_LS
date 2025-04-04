@@ -53,6 +53,7 @@ public:
 /// Implementation of inline defined functions
 /////////////////////////////////////////////////////////////////////
 
+
 ////////////////////////////////////////////////////////////
 inline std::time_t TimeUtil::now()
 {
@@ -60,10 +61,12 @@ inline std::time_t TimeUtil::now()
     return high_resolution_clock::to_time_t(currentTime);
 }
 
+
 ////////////////////////////////////////////////////////////
 inline std::ostream& TimeUtil::putTime(std::ostream& out, const std::time_t& time)
 {
     return out << std::put_time(std::localtime(&time), "%Y-%m-%d %H:%M:%S");
 }
+
 
 } // namespace ls6502

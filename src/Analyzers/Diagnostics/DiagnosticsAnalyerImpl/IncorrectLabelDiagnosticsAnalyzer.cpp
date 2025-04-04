@@ -7,6 +7,7 @@
 namespace ls6502
 {
 
+
 ////////////////////////////////////////////////////////////
 std::vector<CodeAction> IncorrectLabelDiagnosticsAnalyzer::provideCodeActions(const Diagnostic&  diagnostic,
                                                                               const std::string& document,
@@ -14,7 +15,8 @@ std::vector<CodeAction> IncorrectLabelDiagnosticsAnalyzer::provideCodeActions(co
 {
     m_codeActions.clear();
 
-    Range       range           = diagnostic.getRange();
+    Range range = diagnostic.getRange();
+
     std::string replacementText = document.substr(range.start.character, range.end.character) + ":";
 
     std::vector<TextEdit> textEdits{{range, replacementText}};
@@ -27,6 +29,7 @@ std::vector<CodeAction> IncorrectLabelDiagnosticsAnalyzer::provideCodeActions(co
     return m_codeActions;
 }
 
+
 ////////////////////////////////////////////////////////////
 CodeAction IncorrectLabelDiagnosticsAnalyzer::createCodeAction(const WorkspaceEdit& workspaceEdit)
 {
@@ -37,5 +40,6 @@ CodeAction IncorrectLabelDiagnosticsAnalyzer::createCodeAction(const WorkspaceEd
         .withWorkspaceEdit(workspaceEdit)
         .build();
 }
+
 
 } // namespace ls6502

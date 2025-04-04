@@ -7,6 +7,7 @@
 namespace ls6502
 {
 
+
 ////////////////////////////////////////////////////////////
 HoverResponse::HoverResponse(const std::string& jsonRPC, const int64_t id, const HoverResult& hoverResult) :
 ResponseMessage(jsonRPC, id),
@@ -14,11 +15,13 @@ m_hoverResult(hoverResult)
 {
 }
 
+
 ////////////////////////////////////////////////////////////
 nlohmann::json HoverResponse::toJson() const
 {
     return {{"jsonrpc", m_jsonRPC}, {"id", m_id}, {"result", m_hoverResult.toJson()}};
 }
+
 
 ////////////////////////////////////////////////////////////
 std::ostream& operator<<(std::ostream& os, const HoverResponse& hoverResponse)
@@ -30,4 +33,6 @@ std::ostream& operator<<(std::ostream& os, const HoverResponse& hoverResponse)
 
     return os;
 }
+
+
 } // namespace ls6502

@@ -24,6 +24,7 @@ m_areDefinitionsSupported(areSnippetsSupported)
 {
 }
 
+
 ////////////////////////////////////////////////////////////
 nlohmann::json ServerCapabilities::toJson() const
 {
@@ -34,6 +35,7 @@ nlohmann::json ServerCapabilities::toJson() const
             {"definitionProvider", m_areDefinitionsSupported}};
 }
 
+
 ////////////////////////////////////////////////////////////
 ServerCapabilities::Builder& ServerCapabilities::Builder::withTextDocumentSyncKind(
     const TextDocumentSyncKind& textDocuemntSyncKind)
@@ -42,12 +44,14 @@ ServerCapabilities::Builder& ServerCapabilities::Builder::withTextDocumentSyncKi
     return *this;
 }
 
+
 ////////////////////////////////////////////////////////////
 ServerCapabilities::Builder& ServerCapabilities::Builder::withSnippetSupport(bool areSnippetsSupported)
 {
     m_areSnippetsSupported = areSnippetsSupported;
     return *this;
 }
+
 
 ////////////////////////////////////////////////////////////
 ServerCapabilities::Builder& ServerCapabilities::Builder::withHoverSupport(bool isHoverSupported)
@@ -56,12 +60,14 @@ ServerCapabilities::Builder& ServerCapabilities::Builder::withHoverSupport(bool 
     return *this;
 }
 
+
 ////////////////////////////////////////////////////////////
 ServerCapabilities::Builder& ServerCapabilities::Builder::withCompletionSupport(bool areCompletionsSupported)
 {
     m_areCompletionsSupported = areCompletionsSupported;
     return *this;
 }
+
 
 ////////////////////////////////////////////////////////////
 ServerCapabilities::Builder& ServerCapabilities::Builder::withCodeActionSupport(bool areCodeActionsSupported)
@@ -70,12 +76,14 @@ ServerCapabilities::Builder& ServerCapabilities::Builder::withCodeActionSupport(
     return *this;
 }
 
+
 ////////////////////////////////////////////////////////////
 ServerCapabilities::Builder& ServerCapabilities::Builder::withDefinitionSupport(bool areDefintionsSupported)
 {
     m_areDefinitionsSupported = areDefintionsSupported;
     return *this;
 }
+
 
 ////////////////////////////////////////////////////////////
 ServerCapabilities ServerCapabilities::Builder::build() const

@@ -22,6 +22,7 @@ void Trie::insert(const std::string& word)
     current->isLeaf = true;
 }
 
+
 ////////////////////////////////////////////////////////////
 std::vector<std::string> Trie::getCompletionWords(const std::string& prefix) const
 {
@@ -35,6 +36,7 @@ std::vector<std::string> Trie::getCompletionWords(const std::string& prefix) con
 
     return completionOptions;
 }
+
 
 ////////////////////////////////////////////////////////////
 std::shared_ptr<Node> Trie::getNode(const std::string& prefix) const
@@ -54,6 +56,7 @@ std::shared_ptr<Node> Trie::getNode(const std::string& prefix) const
     return current;
 }
 
+
 ////////////////////////////////////////////////////////////
 void Trie::findAllWords(std::shared_ptr<Node> node, const std::string& prefix, std::vector<std::string>& results) const
 {
@@ -67,5 +70,6 @@ void Trie::findAllWords(std::shared_ptr<Node> node, const std::string& prefix, s
         findAllWords(pair.second, prefix + pair.first, results);
     }
 }
+
 
 } // namespace ls6502

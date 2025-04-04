@@ -35,6 +35,7 @@ std::vector<CodeAction> WrongInstructionUsageDiagnosticsAnalyzer::provideCodeAct
     return m_codeActions;
 }
 
+
 ////////////////////////////////////////////////////////////
 CodeAction WrongInstructionUsageDiagnosticsAnalyzer::createCodeAction(const WorkspaceEdit& workspaceEdit)
 {

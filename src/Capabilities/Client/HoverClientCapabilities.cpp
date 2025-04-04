@@ -7,6 +7,7 @@
 namespace ls6502
 {
 
+
 //////////////////////////////////////////////////////////////
 HoverClientCapabilities::HoverClientCapabilities(const nlohmann::json& jsonRPC) :
 m_isDynamicRegistrationSupported(false)
@@ -15,5 +16,6 @@ m_isDynamicRegistrationSupported(false)
 
     // TODO get contentForrmat from request and dynamic reg options
 }
+
 
 } // namespace ls6502

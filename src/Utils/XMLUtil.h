@@ -74,6 +74,7 @@ private:
 /// Implementation of inline defined functions
 /////////////////////////////////////////////////////////////////////
 
+
 ////////////////////////////////////////////////////////////
 inline std::pair<std::string, std::string> XMLUtil::parseFromFileLine(const std::string& line)
 {
@@ -99,6 +100,7 @@ inline std::pair<std::string, std::string> XMLUtil::parseFromFileLine(const std:
     return property;
 }
 
+
 ////////////////////////////////////////////////////////////
 inline bool XMLUtil::isValidXMLLine(const std::string_view& line)
 {
@@ -107,6 +109,7 @@ inline bool XMLUtil::isValidXMLLine(const std::string_view& line)
 
     return hasCorrectStartPropertyTag and hasCorrectStartEndPropertyTag;
 }
+
 
 ////////////////////////////////////////////////////////////
 inline std::string XMLUtil::trim(const std::string& line)
@@ -118,5 +121,6 @@ inline std::string XMLUtil::trim(const std::string& line)
 
     return isAllWhitespaceLine ? "" : line.substr(start, end - start + 1);
 }
+
 
 } // namespace ls6502

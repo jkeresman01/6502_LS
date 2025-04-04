@@ -13,9 +13,11 @@
 namespace ls6502
 {
 
+
 ////////////////////////////////////////////////////////////
 ConfigurationManager* ConfigurationManager::s_instance = nullptr;
 std::mutex            ConfigurationManager::s_mutex;
+
 
 ////////////////////////////////////////////////////////////
 void ConfigurationManager::load()
@@ -35,6 +37,7 @@ void ConfigurationManager::load()
     configFile.close();
 }
 
+
 ////////////////////////////////////////////////////////////
 void ConfigurationManager::load(std::ifstream& in)
 {
@@ -53,6 +56,7 @@ void ConfigurationManager::load(std::ifstream& in)
     }
 }
 
+
 ////////////////////////////////////////////////////////////
 void ConfigurationManager::readPropertyFromFileLine(const std::string& line)
 {
@@ -70,6 +74,7 @@ void ConfigurationManager::readPropertyFromFileLine(const std::string& line)
     m_properties.insert(property);
 }
 
+
 ////////////////////////////////////////////////////////////
 std::string ConfigurationManager::getProperty(const std::string& propertyName)
 {
@@ -84,6 +89,7 @@ std::string ConfigurationManager::getProperty(const std::string& propertyName)
     return it->second;
 }
 
+
 ////////////////////////////////////////////////////////////
 ConfigurationManager::~ConfigurationManager()
 {
@@ -92,6 +98,7 @@ ConfigurationManager::~ConfigurationManager()
         delete s_instance;
     }
 }
+
 
 ////////////////////////////////////////////////////////////
 ConfigurationManager* ConfigurationManager::getInstance()
@@ -105,4 +112,6 @@ ConfigurationManager* ConfigurationManager::getInstance()
 
     return s_instance;
 }
+
+
 } // namespace ls6502

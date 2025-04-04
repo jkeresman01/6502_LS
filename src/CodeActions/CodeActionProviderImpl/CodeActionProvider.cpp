@@ -12,16 +12,19 @@
 namespace ls6502
 {
 
+
 ////////////////////////////////////////////////////////////
 CodeActionProvider::CodeActionProvider() : m_diagnosticsProvider(DiagnosticsProviderFactory::create())
 {
 }
+
 
 ////////////////////////////////////////////////////////////
 void CodeActionProvider::setDiagnosticsProvider(const std::shared_ptr<IDiagnosticsProvider>& diagnosticsProvider)
 {
     m_diagnosticsProvider = diagnosticsProvider;
 };
+
 
 ////////////////////////////////////////////////////////////
 std::vector<CodeAction> CodeActionProvider::getCodeActions(const std::string& document, const std::string& URI)
@@ -37,4 +40,6 @@ std::vector<CodeAction> CodeActionProvider::getCodeActions(const std::string& do
 
     return m_codeActions;
 }
+
+
 } // namespace ls6502

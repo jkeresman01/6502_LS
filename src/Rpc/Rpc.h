@@ -62,6 +62,7 @@ private:
 /// Implementation of inline defined functions
 /////////////////////////////////////////////////////////////////////
 
+
 ////////////////////////////////////////////////////////////
 inline std::string Rpc::receive()
 {
@@ -72,6 +73,7 @@ inline std::string Rpc::receive()
 
     return content;
 }
+
 
 ////////////////////////////////////////////////////////////
 inline uint32_t Rpc::extractContentLength()
@@ -95,5 +97,6 @@ inline uint32_t Rpc::extractContentLength()
         }
     }
 }
+
 
 } // namespace ls6502

@@ -32,6 +32,7 @@
 namespace ls6502
 {
 
+
 ////////////////////////////////////////////////////////////
 void Ls6502Facade::handleRequest(const nlohmann::json& request)
 {
@@ -73,6 +74,7 @@ void Ls6502Facade::handleRequest(const nlohmann::json& request)
     }
 }
 
+
 ////////////////////////////////////////////////////////////
 void Ls6502Facade::handleInitializeRequest(const nlohmann::json& request)
 {
@@ -87,6 +89,7 @@ void Ls6502Facade::handleInitializeRequest(const nlohmann::json& request)
     m_ls6502ReqHandler->initializeReq(initializeRequest);
 }
 
+
 ////////////////////////////////////////////////////////////
 void Ls6502Facade::handleShutdownRequest(const nlohmann::json& request)
 {
@@ -99,6 +102,7 @@ void Ls6502Facade::handleShutdownRequest(const nlohmann::json& request)
     m_ls6502ReqHandler->shutdownReq(shutdownRequest);
 }
 
+
 ////////////////////////////////////////////////////////////
 void Ls6502Facade::handleInitializedRequest(const nlohmann::json& request)
 {
@@ -110,6 +114,7 @@ void Ls6502Facade::handleInitializedRequest(const nlohmann::json& request)
 
     LS_6502_DEBUG("Successful connection between client and Ls6502Server has been established");
 }
+
 
 ////////////////////////////////////////////////////////////
 void Ls6502Facade::handleTextDocumentDidOpenRequest(const nlohmann::json& request)
@@ -126,6 +131,7 @@ void Ls6502Facade::handleTextDocumentDidOpenRequest(const nlohmann::json& reques
     m_ls6502ReqHandler->textDocumentDidOpenReq(didOpenTextDocumentNotification);
 }
 
+
 ////////////////////////////////////////////////////////////
 void Ls6502Facade::handleTextDocumentDidChangeRequest(const nlohmann::json& request)
 {
@@ -141,6 +147,7 @@ void Ls6502Facade::handleTextDocumentDidChangeRequest(const nlohmann::json& requ
     m_ls6502ReqHandler->textDocumentDidChangeReq(didChangeTextDocumentReq);
 }
 
+
 ////////////////////////////////////////////////////////////
 void Ls6502Facade::handleTextDocumentCompletionRequest(const nlohmann::json& request)
 {
@@ -154,6 +161,7 @@ void Ls6502Facade::handleTextDocumentCompletionRequest(const nlohmann::json& req
 
     m_ls6502ReqHandler->textDocumentCompletionReq(completionRequest);
 }
+
 
 ////////////////////////////////////////////////////////////
 void Ls6502Facade::handleExitRequest(const nlohmann::json& request)
@@ -174,6 +182,7 @@ void Ls6502Facade::handleExitRequest(const nlohmann::json& request)
     }
 }
 
+
 ////////////////////////////////////////////////////////////
 void Ls6502Facade::handleTextDocumentHoverRequest(const nlohmann::json& request)
 {
@@ -187,6 +196,7 @@ void Ls6502Facade::handleTextDocumentHoverRequest(const nlohmann::json& request)
 
     m_ls6502ReqHandler->textDocumentHoverReq(hoverRequest);
 }
+
 
 ////////////////////////////////////////////////////////////
 void Ls6502Facade::handleTextDocumentCodeActionRequest(const nlohmann::json& request)
@@ -202,6 +212,7 @@ void Ls6502Facade::handleTextDocumentCodeActionRequest(const nlohmann::json& req
     m_ls6502ReqHandler->textDocumentCodeActionReq(codeActionRequest);
 }
 
+
 ////////////////////////////////////////////////////////////
 void Ls6502Facade::handleTextDocumentDefintionRequest(const nlohmann::json& request)
 {
@@ -216,6 +227,7 @@ void Ls6502Facade::handleTextDocumentDefintionRequest(const nlohmann::json& requ
     m_ls6502ReqHandler->textDocumentDefinitionReq(definitionRequest);
 }
 
+
 ////////////////////////////////////////////////////////////
 void Ls6502Facade::ensureNoReqIsProcessedAfterShutdown(const nlohmann::json& request)
 {
@@ -227,5 +239,6 @@ void Ls6502Facade::ensureNoReqIsProcessedAfterShutdown(const nlohmann::json& req
         m_ls6502ErrorHandler->handleReceivedReqAfterShutdownError(request["id"]);
     }
 }
+
 
 } // namespace ls6502

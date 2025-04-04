@@ -9,12 +9,14 @@
 namespace ls6502
 {
 
+
 ////////////////////////////////////////////////////////////
 DidOpenTextDocumentRequest::DidOpenTextDocumentRequest(const nlohmann::json& jsonRPC) :
 NotificationMessage(jsonRPC)
 {
     setParams(jsonRPC);
 }
+
 
 ////////////////////////////////////////////////////////////
 void DidOpenTextDocumentRequest::setParams(const nlohmann::json& jsonRPC)
@@ -29,5 +31,6 @@ void DidOpenTextDocumentRequest::setParams(const nlohmann::json& jsonRPC)
 
     m_params = std::make_shared<DidOpenTextDocumentParams>(jsonRPC["params"]);
 }
+
 
 } // namespace ls6502

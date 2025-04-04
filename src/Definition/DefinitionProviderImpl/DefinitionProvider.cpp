@@ -11,6 +11,7 @@
 namespace ls6502
 {
 
+
 ////////////////////////////////////////////////////////////
 Location DefinitionProvider::provideDefinitionLocation(const std::string& document,
                                                        const Position&    position,
@@ -36,5 +37,6 @@ Location DefinitionProvider::provideDefinitionLocation(const std::string& docume
 
     return Location{URI, range};
 }
+
 
 } // namespace ls6502

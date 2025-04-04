@@ -7,6 +7,7 @@
 namespace ls6502
 {
 
+
 ////////////////////////////////////////////////////////////
 nlohmann::json CodeActionResult::toJson() const
 {
@@ -19,4 +20,6 @@ nlohmann::json CodeActionResult::toJson() const
 
     return json;
 }
+
+
 } // namespace ls6502

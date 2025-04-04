@@ -8,11 +8,13 @@
 namespace ls6502
 {
 
+
 ////////////////////////////////////////////////////////////
 CodeActionRequest::CodeActionRequest(const nlohmann::json& jsonRPC) : RequestMessage(jsonRPC)
 {
     setParams(jsonRPC);
 }
+
 
 ////////////////////////////////////////////////////////////
 void CodeActionRequest::setParams(const nlohmann::json& jsonRPC)
@@ -27,4 +29,6 @@ void CodeActionRequest::setParams(const nlohmann::json& jsonRPC)
 
     m_codeActionParams = std::make_shared<CodeActionParams>(jsonRPC["params"]);
 }
+
+
 } // namespace ls6502

@@ -16,6 +16,7 @@
 namespace ls6502
 {
 
+
 ////////////////////////////////////////////////////////////
 std::vector<CompletionItem> InstructionSetCompletionProvider::getCompletions(const std::string& document,
                                                                              const Position&    position)
@@ -29,6 +30,7 @@ std::vector<CompletionItem> InstructionSetCompletionProvider::getCompletions(con
 
     return mapInstructionsToCompletions(instructions);
 }
+
 
 ////////////////////////////////////////////////////////////
 std::vector<CompletionItem> InstructionSetCompletionProvider::mapInstructionsToCompletions(
@@ -44,6 +46,7 @@ std::vector<CompletionItem> InstructionSetCompletionProvider::mapInstructionsToC
     return completionItems;
 }
 
+
 ////////////////////////////////////////////////////////////
 void InstructionSetCompletionProvider::fillCompletionsForInstruction(const std::string& mnemonic,
                                                                      std::vector<CompletionItem>& completionItems)
@@ -57,6 +60,7 @@ void InstructionSetCompletionProvider::fillCompletionsForInstruction(const std::
         LS_6502_ERROR(STR("Unkown instruction, mnemonic: %s", mnemonic.c_str()));
     }
 }
+
 
 ////////////////////////////////////////////////////////////
 void InstructionSetCompletionProvider::createCompletionsForAllAddressingModes(
@@ -72,5 +76,6 @@ void InstructionSetCompletionProvider::createCompletionsForAllAddressingModes(
                                      addressingMode.getDetails());
     }
 }
+
 
 } // namespace ls6502

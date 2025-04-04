@@ -11,6 +11,7 @@
 namespace ls6502
 {
 
+
 ////////////////////////////////////////////////////////////
 InstructionsSetMapT InstructionSetManager::getAllInstructions()
 {
@@ -18,12 +19,14 @@ InstructionsSetMapT InstructionSetManager::getAllInstructions()
     return m_instructionSet;
 }
 
+
 ////////////////////////////////////////////////////////////
 std::vector<std::string> InstructionSetManager::getInstructionsByPrefix(const std::string& prefix)
 {
     loadInstructionSetTrie();
     return m_instructionSetTrie->getCompletionWords(prefix);
 }
+
 
 ////////////////////////////////////////////////////////////
 std::optional<Instruction> InstructionSetManager::getInstructionByMnemonic(const std::string& mnemonic)
@@ -41,6 +44,7 @@ std::optional<Instruction> InstructionSetManager::getInstructionByMnemonic(const
     return std::make_optional(it->second);
 }
 
+
 ////////////////////////////////////////////////////////////
 void InstructionSetManager::loadInstructions()
 {
@@ -49,6 +53,7 @@ void InstructionSetManager::loadInstructions()
         m_instructionSet = m_instructionSetRepository->load();
     }
 }
+
 
 ////////////////////////////////////////////////////////////
 void InstructionSetManager::loadInstructionSetTrie()
@@ -61,10 +66,13 @@ void InstructionSetManager::loadInstructionSetTrie()
     }
 }
 
+
 ////////////////////////////////////////////////////////////
 InstructionSetManager& InstructionSetManager::getInstance()
 {
     static InstructionSetManager instance;
     return instance;
 }
+
+
 } // namespace ls6502

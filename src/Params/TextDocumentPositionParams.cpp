@@ -9,6 +9,7 @@
 namespace ls6502
 {
 
+
 ////////////////////////////////////////////////////////////
 TextDocumentPositionParams::TextDocumentPositionParams(const nlohmann::json& jsonRPC)
 {
@@ -16,12 +17,14 @@ TextDocumentPositionParams::TextDocumentPositionParams(const nlohmann::json& jso
     setPosition(jsonRPC["position"]);
 }
 
+
 ////////////////////////////////////////////////////////////
 void TextDocumentPositionParams::setPosition(const nlohmann::json& jsonRPC)
 {
     m_position.line      = jsonRPC["line"];
     m_position.character = jsonRPC["character"];
 }
+
 
 ////////////////////////////////////////////////////////////
 void TextDocumentPositionParams::setTextDocumentIdentifier(const nlohmann::json& jsonRPC)
@@ -36,4 +39,6 @@ void TextDocumentPositionParams::setTextDocumentIdentifier(const nlohmann::json&
 
     m_textDocument.URI = jsonRPC["uri"];
 }
+
+
 } // namespace ls6502

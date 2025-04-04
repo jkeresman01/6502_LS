@@ -67,11 +67,13 @@ public:
 /// Implementation of inline defined functions
 /////////////////////////////////////////////////////////////////////
 
+
 ////////////////////////////////////////////////////////////
 inline bool DiagnosticsUtil::isLabelMissingSemicolon(const Diagnostic& diagnostic)
 {
     return diagnostic.getMessage().find("Label missing ':'") != std::string::npos;
 }
+
 
 ////////////////////////////////////////////////////////////
 inline bool DiagnosticsUtil::isInstructionUnsupproted(const Diagnostic& diagnostic)
@@ -79,10 +81,12 @@ inline bool DiagnosticsUtil::isInstructionUnsupproted(const Diagnostic& diagnost
     return diagnostic.getMessage().find("Unsupported instruction") != std::string::npos;
 }
 
+
 ////////////////////////////////////////////////////////////
 inline bool DiagnosticsUtil::isInstructionUsageIncorrect(const Diagnostic& diagnostic)
 {
     return diagnostic.getMessage().find("Incorrect instruction usage") != std::string::npos;
 }
+
 
 } // namespace ls6502

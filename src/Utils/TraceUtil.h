@@ -42,6 +42,7 @@ public:
 /// Implementation of inline defined functions
 /////////////////////////////////////////////////////////////////////
 
+
 ////////////////////////////////////////////////////////////
 inline TraceValue getTraceValue(const std::string& traceValueStr)
 {
@@ -57,5 +58,6 @@ inline TraceValue getTraceValue(const std::string& traceValueStr)
 
     return TraceValue::OFF;
 }
+
 
 } // namespace ls6502
