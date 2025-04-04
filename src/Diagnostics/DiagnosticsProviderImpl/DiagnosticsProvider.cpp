@@ -3,7 +3,6 @@
 ////////////////////////////////////////////////////////////
 
 #include "DiagnosticsProvider.h"
-
 #include <regex>
 #include <sstream>
 #include <string>
@@ -18,7 +17,7 @@
 namespace ls6502
 {
 
-//TODO refactor this whole thing
+// TODO refactor this whole thing
 
 ////////////////////////////////////////////////////////////
 DiagnosticsProvider::DiagnosticsProvider() : m_instructionSetRepository(InstructionSetRepoFactory::create())

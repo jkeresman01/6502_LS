@@ -4,14 +4,14 @@
 // Headers
 ////////////////////////////////////////////////////////////
 
-#include "../Messages/Message.h"
-#include "ResponseError.h"
-
 #include <cstdint>
 #include <nlohmann/json.hpp>
 #include <optional>
 #include <ostream>
 #include <string>
+
+#include "../Messages/Message.h"
+#include "ResponseError.h"
 
 namespace ls6502
 {

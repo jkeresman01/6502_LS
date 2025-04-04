@@ -6,10 +6,10 @@
 
 #include <memory>
 
-#include "../Diagnostics/IDiagnosticsProvider.h"
-#include "../Types/CodeAction.h"
-#include "../ICodeActionsProvider.h"
 #include "../Analyzers/Diagnostics/IDiagnosticsAnalyzer.h"
+#include "../Diagnostics/IDiagnosticsProvider.h"
+#include "../ICodeActionsProvider.h"
+#include "../Types/CodeAction.h"
 
 namespace ls6502
 {

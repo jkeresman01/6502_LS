@@ -4,8 +4,8 @@
 // Headers
 ////////////////////////////////////////////////////////////
 
-#include "../Types/CodeAction.h"
 #include "../ICodeActionsProvider.h"
+#include "../Types/CodeAction.h"
 
 namespace ls6502
 {

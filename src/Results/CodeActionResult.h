@@ -4,10 +4,10 @@
 // Headers
 ////////////////////////////////////////////////////////////
 
+#include <nlohmann/json.hpp>
 #include <vector>
 
 #include "../Types/CodeAction.h"
-#include <nlohmann/json.hpp>
 
 namespace ls6502
 {

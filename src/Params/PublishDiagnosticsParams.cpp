@@ -16,8 +16,8 @@ PublishDiagnosticsParams::PublishDiagnosticsParams(const std::string &URI,
 nlohmann::json PublishDiagnosticsParams::toJson() const
 {
     return {
-        {"uri", m_URI},
-        {"diagnostics", dianosticItemsToJson()},
+      {"uri", m_URI},
+      {"diagnostics", dianosticItemsToJson()},
     };
 }
 

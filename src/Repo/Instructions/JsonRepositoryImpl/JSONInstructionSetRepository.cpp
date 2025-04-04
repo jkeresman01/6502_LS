@@ -3,8 +3,9 @@
 ////////////////////////////////////////////////////////////
 
 #include "JSONInstructionSetRepository.h"
-#include "../Utils/Logger.h"
+
 #include "../Types/Instruction.h"
+#include "../Utils/Logger.h"
 
 namespace ls6502
 {
@@ -58,8 +59,8 @@ void JSONInstructionSetRepository::loadInstructionSet(const nlohmann::json &json
         loadOperation(jsonInstruction, instruction);
         loadFlags(jsonInstruction, instruction);
 
-        bool isValidJSONFormat =
-            jsonInstruction.contains("addressing_modes") && jsonInstruction["addressing_modes"].is_array();
+        bool isValidJSONFormat
+          = jsonInstruction.contains("addressing_modes") && jsonInstruction["addressing_modes"].is_array();
 
         if (!isValidJSONFormat)
         {
@@ -104,7 +105,7 @@ void JSONInstructionSetRepository::loadDescription(const nlohmann::json &jsonDat
     else
     {
         LS_6502_WARN(
-            STR("No can do for %s: Missing 'description' in instruction", INSTRUCTION_SET_FILE_PATH));
+          STR("No can do for %s: Missing 'description' in instruction", INSTRUCTION_SET_FILE_PATH));
     }
 }
 
@@ -129,7 +130,7 @@ void JSONInstructionSetRepository::loadFlags(const nlohmann::json &jsonData, Ins
     if (!isValidJSONFormat)
     {
         LS_6502_WARN(
-            STR("No can do for %s: Missing or invalid 'flags' in instruction", INSTRUCTION_SET_FILE_PATH));
+          STR("No can do for %s: Missing or invalid 'flags' in instruction", INSTRUCTION_SET_FILE_PATH));
         return;
     }
 
@@ -169,7 +170,7 @@ void JSONInstructionSetRepository::loadMode(const nlohmann::json &jsonData, Addr
     else
     {
         LS_6502_WARN(
-            STR("No can do for %s: Missing 'jsonData' in addressing jsonData", INSTRUCTION_SET_FILE_PATH));
+          STR("No can do for %s: Missing 'jsonData' in addressing jsonData", INSTRUCTION_SET_FILE_PATH));
     }
 }
 
@@ -184,7 +185,7 @@ void JSONInstructionSetRepository::loadAssembler(const nlohmann::json &jsonData,
     else
     {
         LS_6502_WARN(
-            STR("No can do for %s: Missing 'assembler' in addressing jsonData", INSTRUCTION_SET_FILE_PATH));
+          STR("No can do for %s: Missing 'assembler' in addressing jsonData", INSTRUCTION_SET_FILE_PATH));
     }
 }
 
@@ -198,7 +199,7 @@ void JSONInstructionSetRepository::loadOpcode(const nlohmann::json &jsonData, Ad
     else
     {
         LS_6502_WARN(
-            STR("No can do for %s: Missing 'opcode' in addressing jsonData", INSTRUCTION_SET_FILE_PATH));
+          STR("No can do for %s: Missing 'opcode' in addressing jsonData", INSTRUCTION_SET_FILE_PATH));
     }
 }
 
@@ -212,7 +213,7 @@ void JSONInstructionSetRepository::loadBytes(const nlohmann::json &jsonData, Add
     else
     {
         LS_6502_WARN(
-            STR("No can do for %s: Missing 'bytes' in addressing jsonData", INSTRUCTION_SET_FILE_PATH));
+          STR("No can do for %s: Missing 'bytes' in addressing jsonData", INSTRUCTION_SET_FILE_PATH));
     }
 }
 
@@ -225,9 +226,8 @@ void JSONInstructionSetRepository::loadCycles(const nlohmann::json &jsonData, Ad
     }
     else
     {
-
         LS_6502_WARN(
-            STR("No can do for %s: Missing 'cycles' in addressing jsonData", INSTRUCTION_SET_FILE_PATH));
+          STR("No can do for %s: Missing 'cycles' in addressing jsonData", INSTRUCTION_SET_FILE_PATH));
     }
 }
 

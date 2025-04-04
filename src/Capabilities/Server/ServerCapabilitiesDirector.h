@@ -38,11 +38,11 @@ class ServerCapabilitiesDirector
     static void constructDefaultServerCapabilities(ServerCapabilities::Builder &serverCapabilitesBuilder)
     {
         serverCapabilitesBuilder.withTextDocumentSyncKind(TextDocumentSyncKind::FULL)
-            .withHoverSupport(true)
-            .withSnippetSupport(true)
-            .withCompletionSupport(true)
-            .withDefinitionSupport(true)
-            .withCodeActionSupport(true);
+          .withHoverSupport(true)
+          .withSnippetSupport(true)
+          .withCompletionSupport(true)
+          .withDefinitionSupport(true)
+          .withCodeActionSupport(true);
     }
 };
 

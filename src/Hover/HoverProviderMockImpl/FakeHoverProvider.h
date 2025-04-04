@@ -4,9 +4,9 @@
 // Headers
 ////////////////////////////////////////////////////////////
 
-#include "../IHoverProvider.h"
-
 #include <string>
+
+#include "../IHoverProvider.h"
 
 namespace ls6502
 {

@@ -8,9 +8,8 @@
 
 #include "../CodeActionProviderImpl/CodeActionProvider.h"
 #include "../CodeActionProviderMockImpl/FakeCodectionsProvider.h"
-#include "../ICodeActionsProvider.h"
-
 #include "../Config/ConfigurationManager.h"
+#include "../ICodeActionsProvider.h"
 #include "../Utils/Logger.h"
 
 namespace ls6502
@@ -44,8 +43,8 @@ class CodeActionsProviderFactory
     //////////////////////////////////////////////////////////////
     static std::shared_ptr<ICodeActionsProvider> create()
     {
-        const std::string &codeActionProvider =
-            ConfigurationManager::getInstance()->getProperty("codeActionProvider");
+        const std::string &codeActionProvider
+          = ConfigurationManager::getInstance()->getProperty("codeActionProvider");
 
         LS_6502_DEBUG(STR("Code action provider: %s", codeActionProvider.c_str()));
 

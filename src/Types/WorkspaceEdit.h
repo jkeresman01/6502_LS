@@ -4,12 +4,12 @@
 // Headers
 ////////////////////////////////////////////////////////////
 
-#include "TextEdit.h"
-
 #include <nlohmann/json.hpp>
 #include <sstream>
 #include <unordered_map>
 #include <vector>
+
+#include "TextEdit.h"
 
 namespace ls6502
 {

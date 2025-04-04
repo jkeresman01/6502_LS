@@ -3,19 +3,18 @@
 ////////////////////////////////////////////////////////////
 
 #include "Ls6502ReqHandler.h"
-
 #include <vector>
 
 #include "../Capabilities/Server/ServerCapabilities.h"
 #include "../Capabilities/Server/ServerCapabilitiesDirector.h"
 #include "../CodeActions/FactoryImpl/CodeActionProviderFactory.h"
 #include "../CodeActions/ICodeActionsProvider.h"
-#include "../Completions/FactoryImpl/CompletionProviderFactory.h"
 #include "../Completions/CompletionProviderMockImpl/FakeCompletionProvider.h"
+#include "../Completions/FactoryImpl/CompletionProviderFactory.h"
 #include "../Completions/ICompletionProvider.h"
 #include "../Definition/FactoryImpl/DefinitionProviderFactory.h"
-#include "../Diagnostics/FactoryImpl/DiagnosticsProviderFactory.h"
 #include "../Diagnostics/DiagnosticsProviderMockImpl/FakeDiagnosticsProvider.h"
+#include "../Diagnostics/FactoryImpl/DiagnosticsProviderFactory.h"
 #include "../Diagnostics/IDiagnosticsProvider.h"
 #include "../Enums/TextDocumentSyncKind.h"
 #include "../Hover/FactoryImpl/HoverProviderFactory.h"
@@ -75,12 +74,12 @@ void Ls6502ReqHandler::initializeReq(const std::shared_ptr<InitializeRequest> &i
     Rpc::send(initializeResponse);
 
     LS_6502_DEBUG(
-        STR("Initialize response was successfully sent for client: %s", clientInfo.toString().c_str()));
+      STR("Initialize response was successfully sent for client: %s", clientInfo.toString().c_str()));
 }
 
 ////////////////////////////////////////////////////////////
 void Ls6502ReqHandler::textDocumentDidOpenReq(
-    const std::shared_ptr<DidOpenTextDocumentRequest> &didOpenTextDocumentReq)
+  const std::shared_ptr<DidOpenTextDocumentRequest> &didOpenTextDocumentReq)
 {
     LS_6502_DEBUG("Processing textDocument/didOpen request");
 
@@ -96,8 +95,8 @@ void Ls6502ReqHandler::textDocumentDidOpenReq(
 
     const std::vector<Diagnostic> &diagnostics = m_diagnosticsProvider->getDiagnostics(document);
 
-    std::shared_ptr<PublishDiagnosticsParams> diagnosticsParams =
-        std::make_shared<PublishDiagnosticsParams>(URI, diagnostics);
+    std::shared_ptr<PublishDiagnosticsParams> diagnosticsParams
+      = std::make_shared<PublishDiagnosticsParams>(URI, diagnostics);
     PublishDiagnosticsNoticifation publishDiagnosticsNotification("textDocument/publishDiagnostics",
                                                                   diagnosticsParams);
 
@@ -108,7 +107,7 @@ void Ls6502ReqHandler::textDocumentDidOpenReq(
 
 ////////////////////////////////////////////////////////////
 void Ls6502ReqHandler::textDocumentDidChangeReq(
-    const std::shared_ptr<DidChangeTextDocumentRequest> &didChangeTextDocumentReq)
+  const std::shared_ptr<DidChangeTextDocumentRequest> &didChangeTextDocumentReq)
 {
     LS_6502_DEBUG("Processing textDocument/didChange request");
 
@@ -122,8 +121,8 @@ void Ls6502ReqHandler::textDocumentDidChangeReq(
     const std::string &document = m_ls6502Client->getDocumentByURI(URI);
     const std::vector<Diagnostic> &diagnostics = m_diagnosticsProvider->getDiagnostics(document);
 
-    std::shared_ptr<PublishDiagnosticsParams> diagnosticsParams =
-        std::make_shared<PublishDiagnosticsParams>(URI, diagnostics);
+    std::shared_ptr<PublishDiagnosticsParams> diagnosticsParams
+      = std::make_shared<PublishDiagnosticsParams>(URI, diagnostics);
     PublishDiagnosticsNoticifation publishDiagnosticsNotification("textDocument/publishDiagnostics",
                                                                   diagnosticsParams);
 
@@ -143,8 +142,8 @@ void Ls6502ReqHandler::textDocumentCompletionReq(const std::shared_ptr<Completio
     const std::string &URI = completionParams->getURI();
 
     const std::string &document = m_ls6502Client->getDocumentByURI(URI);
-    const std::vector<CompletionItem> &completionItems =
-        m_completionProvider->getCompletions(document, position);
+    const std::vector<CompletionItem> &completionItems
+      = m_completionProvider->getCompletions(document, position);
 
     int64_t requestId = completionReq->getId();
 

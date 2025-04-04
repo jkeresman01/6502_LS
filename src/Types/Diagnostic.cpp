@@ -18,7 +18,7 @@ Diagnostic::Diagnostic(const Range &range, const DiagnosticSeverity &severity, c
 nlohmann::json Diagnostic::toJson() const
 {
     return {
-        {"range", m_range.toJson()}, {"severity", m_severity}, {"source", m_source}, {"message", m_message}};
+      {"range", m_range.toJson()}, {"severity", m_severity}, {"source", m_source}, {"message", m_message}};
 }
 
 } // namespace ls6502

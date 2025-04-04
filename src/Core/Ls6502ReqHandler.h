@@ -92,7 +92,7 @@ class Ls6502ReqHandler
     ///
     //////////////////////////////////////////////////////////////
     void textDocumentDidChangeReq(
-        const std::shared_ptr<DidChangeTextDocumentRequest> &didChangeTextDocumentReq);
+      const std::shared_ptr<DidChangeTextDocumentRequest> &didChangeTextDocumentReq);
 
     //////////////////////////////////////////////////////////////
     ///

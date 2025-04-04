@@ -4,16 +4,15 @@
 // Headers
 ////////////////////////////////////////////////////////////
 
-#include "../IDiagnosticsAnalyzer.h"
+#include <memory>
+
 #include "../DiagnosticsAnalyerImpl/IncorrectLabelDiagnosticsAnalyzer.h"
 #include "../DiagnosticsAnalyerImpl/UnsupportedInstructionDiagnosticsAnalyzer.h"
 #include "../DiagnosticsAnalyerImpl/WrongInstructionUsageDiagnosticsAnalyzer.h"
-
+#include "../IDiagnosticsAnalyzer.h"
 #include "../Types/Diagnostic.h"
 #include "../Utils/DiagnosticsUtil.h"
 #include "../Utils/Logger.h"
-
-#include <memory>
 
 namespace ls6502
 {

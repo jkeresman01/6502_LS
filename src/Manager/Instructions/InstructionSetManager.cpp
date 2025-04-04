@@ -4,10 +4,9 @@
 
 #include <optional>
 
-#include "InstructionSetManager.h"
-
-#include "../../Utils/Logger.h"
 #include "../../Repo/Instructions/FactoryImpl/InstructionSetRepoFactory.h"
+#include "../../Utils/Logger.h"
+#include "InstructionSetManager.h"
 
 namespace ls6502
 {
@@ -20,8 +19,7 @@ InstructionsSetMapT InstructionSetManager::getAllInstructions()
 }
 
 ////////////////////////////////////////////////////////////
-std::vector<std::string> InstructionSetManager::getInstructionsByPrefix(
-    const std::string &prefix)
+std::vector<std::string> InstructionSetManager::getInstructionsByPrefix(const std::string &prefix)
 {
     loadInstructionSetTrie();
     return m_instructionSetTrie->getCompletionWords(prefix);

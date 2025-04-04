@@ -4,9 +4,8 @@
 // Headers
 ////////////////////////////////////////////////////////////
 
-#include <nlohmann/json.hpp>
-
 #include <cstdint>
+#include <nlohmann/json.hpp>
 #include <ostream>
 #include <set>
 #include <string>

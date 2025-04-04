@@ -3,7 +3,6 @@
 ////////////////////////////////////////////////////////////
 
 #include "InitializeParams.h"
-
 #include <string>
 
 #include "../Utils/Logger.h"

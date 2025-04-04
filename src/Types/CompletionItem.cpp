@@ -43,7 +43,7 @@ CompletionItem::Builder &CompletionItem::Builder::withDocumentation(const std::s
 
 ////////////////////////////////////////////////////////////
 CompletionItem::Builder &CompletionItem::Builder::withCompletionItemKind(
-    const CompletionItemKind &completionItemKind)
+  const CompletionItemKind &completionItemKind)
 {
     m_completionItemKind = completionItemKind;
     return *this;

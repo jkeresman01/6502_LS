@@ -6,10 +6,10 @@
 
 #include <memory>
 
-#include "../CompletionProviderMockImpl/FakeCompletionProvider.h"
 #include "../CompletionProviderImpl/InstructionSetCompletionProvider.h"
-#include "../ICompletionProvider.h"
+#include "../CompletionProviderMockImpl/FakeCompletionProvider.h"
 #include "../Config/ConfigurationManager.h"
+#include "../ICompletionProvider.h"
 #include "../Utils/Logger.h"
 
 namespace ls6502
@@ -43,8 +43,8 @@ class CompletionProviderFactory
     //////////////////////////////////////////////////////////////
     static std::shared_ptr<ICompletionProvider> create()
     {
-        const std::string &completionProvider =
-            ConfigurationManager::getInstance()->getProperty("completion");
+        const std::string &completionProvider
+          = ConfigurationManager::getInstance()->getProperty("completion");
 
         LS_6502_DEBUG(STR("Completion provider: %s", completionProvider.c_str()));
 

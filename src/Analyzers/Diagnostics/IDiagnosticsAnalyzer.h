@@ -38,7 +38,7 @@ class IDiagnosticsAnalyzer
     ///
     //////////////////////////////////////////////////////////////
     virtual std::vector<CodeAction> provideCodeActions(const Diagnostic &diagnostic,
-                                                       const std::string &document,
-                                                       const std::string &URI) = 0;
+                                                       const std::string &document, const std::string &URI)
+      = 0;
 };
 } // namespace ls6502

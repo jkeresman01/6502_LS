@@ -3,13 +3,12 @@
 ////////////////////////////////////////////////////////////
 
 #include "FakeCodectionsProvider.h"
+#include <vector>
 
 #include "../Types/CodeAction.h"
 #include "../Types/Range.h"
 #include "../Types/TextEdit.h"
 #include "../Types/WorkspaceEdit.h"
-
-#include <vector>
 
 namespace ls6502
 {
@@ -44,11 +43,11 @@ CodeAction FakeCodeActionsProvider::createFakeCodeAction(const WorkspaceEdit &wo
                                                          const std::string &title)
 {
     return CodeAction::Builder()
-        .withTitle(title)
-        .withCodeActionKind(CodeActionKind::QUICK_FIX)
-        .withPrefferedFix(false)
-        .withWorkspaceEdit(workspaceEdit)
-        .build();
+      .withTitle(title)
+      .withCodeActionKind(CodeActionKind::QUICK_FIX)
+      .withPrefferedFix(false)
+      .withWorkspaceEdit(workspaceEdit)
+      .build();
 }
 
 } // namespace ls6502

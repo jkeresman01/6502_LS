@@ -3,9 +3,8 @@
 ////////////////////////////////////////////////////////////
 
 #include "InstructionSetCompletionProvider.h"
-
-#include <vector>
 #include <optional>
+#include <vector>
 
 #include "../../Manager/Instructions/InstructionSetManager.h"
 #include "../../Repo/Instructions/FactoryImpl/InstructionSetRepoFactory.h"
@@ -25,14 +24,15 @@ std::vector<CompletionItem> InstructionSetCompletionProvider::getCompletions(con
 
     StringUtil::toUpper(prefix);
 
-    const std::vector<std::string> &instructions = InstructionSetManager::getInstance().getInstructionsByPrefix(prefix);
+    const std::vector<std::string> &instructions
+      = InstructionSetManager::getInstance().getInstructionsByPrefix(prefix);
 
     return mapInstructionsToCompletions(instructions);
 }
 
 ////////////////////////////////////////////////////////////
 std::vector<CompletionItem> InstructionSetCompletionProvider::mapInstructionsToCompletions(
-    const std::vector<std::string> &instructions)
+  const std::vector<std::string> &instructions)
 {
     std::vector<CompletionItem> completionItems(instructions.size());
 
@@ -46,7 +46,7 @@ std::vector<CompletionItem> InstructionSetCompletionProvider::mapInstructionsToC
 
 ////////////////////////////////////////////////////////////
 void InstructionSetCompletionProvider::fillCompletionsForInstruction(
-    const std::string &mnemonic, std::vector<CompletionItem> &completionItems)
+  const std::string &mnemonic, std::vector<CompletionItem> &completionItems)
 {
     if (auto it = InstructionSetManager::getInstance().getInstructionByMnemonic(mnemonic))
     {
@@ -60,7 +60,7 @@ void InstructionSetCompletionProvider::fillCompletionsForInstruction(
 
 ////////////////////////////////////////////////////////////
 void InstructionSetCompletionProvider::createCompletionsForAllAddressingModes(
-    const Instruction &instruction, std::vector<CompletionItem> &completionItems)
+  const Instruction &instruction, std::vector<CompletionItem> &completionItems)
 {
     for (const auto &addressingMode : instruction.addressingModes)
     {

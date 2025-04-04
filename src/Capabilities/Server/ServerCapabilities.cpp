@@ -30,7 +30,7 @@ nlohmann::json ServerCapabilities::toJson() const
 
 ////////////////////////////////////////////////////////////
 ServerCapabilities::Builder &ServerCapabilities::Builder::withTextDocumentSyncKind(
-    const TextDocumentSyncKind &textDocuemntSyncKind)
+  const TextDocumentSyncKind &textDocuemntSyncKind)
 {
     m_textDocumentSyncKind = textDocuemntSyncKind;
     return *this;

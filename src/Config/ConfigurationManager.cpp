@@ -3,13 +3,12 @@
 ////////////////////////////////////////////////////////////
 
 #include "ConfigurationManager.h"
-
-#include "../Utils/Logger.h"
-#include "../Utils/XMLUtil.h"
-
 #include <fstream>
 #include <mutex>
 #include <string>
+
+#include "../Utils/Logger.h"
+#include "../Utils/XMLUtil.h"
 
 namespace ls6502
 {
@@ -59,8 +58,8 @@ void ConfigurationManager::readPropertyFromFileLine(const std::string &line)
 
     if (!isValidProperty)
     {
-        LS_6502_WARN(STR("Found empty property: [\"%s\"] : [\"%s\"]", property.first.c_str(),
-                         property.second.c_str()));
+        LS_6502_WARN(
+          STR("Found empty property: [\"%s\"] : [\"%s\"]", property.first.c_str(), property.second.c_str()));
         return;
     }
 

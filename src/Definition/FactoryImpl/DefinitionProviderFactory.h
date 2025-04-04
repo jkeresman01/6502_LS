@@ -6,10 +6,10 @@
 
 #include <memory>
 
+#include "../Config/ConfigurationManager.h"
 #include "../DefinitionProviderImpl/DefinitionProvider.h"
 #include "../DefinitionProviderMockImpl/FakeDefinitionProvider.h"
 #include "../IDefinitionProvider.h"
-#include "../Config/ConfigurationManager.h"
 #include "../Utils/Logger.h"
 
 namespace ls6502
@@ -43,8 +43,8 @@ class DefinitionProviderFactory
     //////////////////////////////////////////////////////////////
     static std::shared_ptr<IDefinitionProvider> create()
     {
-        const std::string &definitionProvider =
-            ConfigurationManager::getInstance()->getProperty("definition");
+        const std::string &definitionProvider
+          = ConfigurationManager::getInstance()->getProperty("definition");
 
         LS_6502_DEBUG(STR("Definition provider: %s", definitionProvider.c_str()));
 

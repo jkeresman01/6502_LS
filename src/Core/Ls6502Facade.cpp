@@ -3,7 +3,6 @@
 ////////////////////////////////////////////////////////////
 
 #include "Ls6502Facade.h"
-
 #include <exception>
 #include <iostream>
 #include <memory>
@@ -121,8 +120,8 @@ void Ls6502Facade::handleTextDocumentDidOpenRequest(const nlohmann::json &reques
 
     ensureNoReqIsProcessedAfterShutdown(request);
 
-    std::shared_ptr<DidOpenTextDocumentRequest> didOpenTextDocumentNotification =
-        MessageFactory::createDidOpenTextDocumentReq(request);
+    std::shared_ptr<DidOpenTextDocumentRequest> didOpenTextDocumentNotification
+      = MessageFactory::createDidOpenTextDocumentReq(request);
 
     m_ls6502ReqHandler->textDocumentDidOpenReq(didOpenTextDocumentNotification);
 }
@@ -136,8 +135,8 @@ void Ls6502Facade::handleTextDocumentDidChangeRequest(const nlohmann::json &requ
 
     ensureNoReqIsProcessedAfterShutdown(request);
 
-    std::shared_ptr<DidChangeTextDocumentRequest> didChangeTextDocumentReq =
-        MessageFactory::createDidChangeTextDocumentReq(request);
+    std::shared_ptr<DidChangeTextDocumentRequest> didChangeTextDocumentReq
+      = MessageFactory::createDidChangeTextDocumentReq(request);
 
     m_ls6502ReqHandler->textDocumentDidChangeReq(didChangeTextDocumentReq);
 }
@@ -212,8 +211,8 @@ void Ls6502Facade::handleTextDocumentDefintionRequest(const nlohmann::json &requ
 
     ensureNoReqIsProcessedAfterShutdown(request);
 
-    std::shared_ptr<DefintionRequest> definitionRequest =
-        MessageFactory::createGoToDefinitionRequest(request);
+    std::shared_ptr<DefintionRequest> definitionRequest
+      = MessageFactory::createGoToDefinitionRequest(request);
 
     m_ls6502ReqHandler->textDocumentDefinitionReq(definitionRequest);
 }

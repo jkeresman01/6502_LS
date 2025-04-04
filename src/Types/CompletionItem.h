@@ -4,10 +4,10 @@
 // Headers
 ////////////////////////////////////////////////////////////
 
-#include "../Enums/CompletionItemKind.h"
-
 #include <nlohmann/json.hpp>
 #include <string>
+
+#include "../Enums/CompletionItemKind.h"
 
 namespace ls6502
 {

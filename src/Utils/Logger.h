@@ -4,8 +4,6 @@
 // Headers
 ////////////////////////////////////////////////////////////
 
-#include "TimeUtil.h"
-
 #include <chrono>
 #include <cstdarg>
 #include <cstdint>
@@ -17,20 +15,22 @@
 #include <sstream>
 #include <string>
 
+#include "TimeUtil.h"
+
 #define MAX_BUFFER_SIZE 256
 
-#define STR(format, ...)                                                                                     \
-    [](const char *fmt, auto... args) {                                                                      \
-        char buffer[MAX_BUFFER_SIZE];                                                                        \
-        snprintf(buffer, sizeof(buffer), fmt, args...);                                                      \
-        return std::string(buffer);                                                                          \
+#define STR(format, ...) \
+    [](const char *fmt, auto... args) { \
+        char buffer[MAX_BUFFER_SIZE]; \
+        snprintf(buffer, sizeof(buffer), fmt, args...); \
+        return std::string(buffer); \
     }(format, __VA_ARGS__)
 
 #define LOG(severity, message) ls6502::Logger::log(severity, message, __FILE__, __LINE__)
 
 #define LS_6502_DEBUG(message) LOG("DEBUG", message)
-#define LS_6502_INFO(message) LOG("INFO", message)
-#define LS_6502_WARN(message) LOG("WARN", message)
+#define LS_6502_INFO(message)  LOG("INFO", message)
+#define LS_6502_WARN(message)  LOG("WARN", message)
 #define LS_6502_ERROR(message) LOG("ERROR", message)
 
 namespace ls6502

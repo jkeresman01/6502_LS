@@ -4,10 +4,10 @@
 // Headers
 ////////////////////////////////////////////////////////////
 
+#include <regex>
+
 #include "../Types/Position.h"
 #include "../Utils/Logger.h"
-
-#include <regex>
 
 namespace ls6502
 {

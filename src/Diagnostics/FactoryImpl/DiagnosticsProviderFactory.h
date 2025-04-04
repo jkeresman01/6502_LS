@@ -6,12 +6,11 @@
 
 #include <memory>
 
+#include "../Config/ConfigurationManager.h"
+#include "../Utils/Logger.h"
 #include "DiagnosticsProviderImpl/DiagnosticsProvider.h"
 #include "DiagnosticsProviderMockImpl/FakeDiagnosticsProvider.h"
 #include "IDiagnosticsProvider.h"
-
-#include "../Config/ConfigurationManager.h"
-#include "../Utils/Logger.h"
 
 namespace ls6502
 {
@@ -44,8 +43,8 @@ class DiagnosticsProviderFactory
     //////////////////////////////////////////////////////////////
     static std::shared_ptr<IDiagnosticsProvider> create()
     {
-        const std::string &diagnosticsProvider =
-            ConfigurationManager::getInstance()->getProperty("diagnosticsProvider");
+        const std::string &diagnosticsProvider
+          = ConfigurationManager::getInstance()->getProperty("diagnosticsProvider");
 
         LS_6502_DEBUG(STR("Diagnostics provider: %s", diagnosticsProvider.c_str()));
 

@@ -3,7 +3,6 @@
 ////////////////////////////////////////////////////////////
 
 #include "Ls6502Client.h"
-
 #include <memory>
 
 #include "../Utils/Logger.h"
@@ -36,8 +35,8 @@ void Ls6502Client::addDocument(const std::string &URI, const std::string &docume
 {
     m_documentsByURI.emplace(URI, document);
 
-    LS_6502_DEBUG(STR("Added text document with URI: %s, for client: %s", URI.c_str(),
-                      m_clientInfo.toString().c_str()));
+    LS_6502_DEBUG(
+      STR("Added text document with URI: %s, for client: %s", URI.c_str(), m_clientInfo.toString().c_str()));
 }
 
 ////////////////////////////////////////////////////////////

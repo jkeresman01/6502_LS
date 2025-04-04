@@ -2,9 +2,8 @@
 // Headers
 ////////////////////////////////////////////////////////////
 
-#include "CodeActionRequest.h"
-
 #include "../../Utils/Logger.h"
+#include "CodeActionRequest.h"
 
 namespace ls6502
 {

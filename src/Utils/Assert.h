@@ -9,10 +9,10 @@ template <> class TStaticAssert<true>
 {
 };
 
-#define STATIC_ASSERT(expr)                                                                                  \
-    enum                                                                                                     \
-    {                                                                                                        \
-        ASSERT_GLUE(g_assert_fail_, __LINE__) = sizeof(TStaticAssert<!!(expr)>)                              \
+#define STATIC_ASSERT(expr) \
+    enum \
+    { \
+        ASSERT_GLUE(g_assert_fail_, __LINE__) = sizeof(TStaticAssert<!!(expr)>) \
     }
 #endif
 #endif

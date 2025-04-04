@@ -8,8 +8,8 @@
 
 #include "../../Algo/Trie.h"
 #include "../../Repo/Instructions/FactoryImpl/InstructionSetRepoFactory.h"
-#include "../../Types/Instruction.h"
 #include "../../Repo/Instructions/IInstructionSetRepository.h"
+#include "../../Types/Instruction.h"
 
 namespace ls6502
 {
@@ -89,7 +89,7 @@ class InstructionSetManager
     /// @brief Retrieves instructions matching a given prefix
     ///
     /// @param [in] prefix The prefix to search for
-    /// 
+    ///
     /// @return A vector of matching instruction mnemonics, if found
     ///
     //////////////////////////////////////////////////////////////
@@ -100,7 +100,7 @@ class InstructionSetManager
     /// @brief Retrieves an instruction by its mnemonic
     ///
     /// @param [in] mnemonic The instruction mnemonic
-    /// 
+    ///
     /// @return The corresponding instruction, if found
     ///
     //////////////////////////////////////////////////////////////

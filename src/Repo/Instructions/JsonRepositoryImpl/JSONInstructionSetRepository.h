@@ -169,8 +169,8 @@ class JSONInstructionSetRepository : public IInstructionSetRepository
     /// @brief Path to the JSON instruction set
     ///
     /////////////////////////////////////////////////////////////////////
-    
-    //TODO change
+
+    // TODO change
     const char *INSTRUCTION_SET_FILE_PATH = "/home/josip/git/cpp/6502_LS/instructions/instructions.json";
 };
 

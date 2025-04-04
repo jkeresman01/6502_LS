@@ -10,8 +10,8 @@
 #include "../Config/ConfigurationManager.h"
 #include "../Utils/Logger.h"
 #include "ISnippetProvider.h"
-#include "SnippetProviderMockImpl/FakeSnippetProvider.h"
 #include "SnippetProviderImpl/PredefinedSnipetProvider.h"
+#include "SnippetProviderMockImpl/FakeSnippetProvider.h"
 
 namespace ls6502
 {
@@ -41,8 +41,8 @@ class SnippetProviderFactory
     //////////////////////////////////////////////////////////////
     static std::shared_ptr<ISnippetProvider> create()
     {
-        const std::string &snippetsProvider =
-            ConfigurationManager::getInstance()->getProperty("snippetsProvider");
+        const std::string &snippetsProvider
+          = ConfigurationManager::getInstance()->getProperty("snippetsProvider");
 
         LS_6502_DEBUG(STR("Snippets provider: %s", snippetsProvider.c_str()));
 

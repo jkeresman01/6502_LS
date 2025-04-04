@@ -3,7 +3,6 @@
 ////////////////////////////////////////////////////////////
 
 #include "WorkspaceEdit.h"
-
 #include <nlohmann/json.hpp>
 
 namespace ls6502

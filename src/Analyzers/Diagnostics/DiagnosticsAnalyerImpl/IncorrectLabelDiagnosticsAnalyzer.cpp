@@ -31,11 +31,11 @@ std::vector<CodeAction> IncorrectLabelDiagnosticsAnalyzer::provideCodeActions(co
 CodeAction IncorrectLabelDiagnosticsAnalyzer::createCodeAction(const WorkspaceEdit &workspaceEdit)
 {
     return CodeAction::Builder()
-        .withTitle("Add missing ':' to label")
-        .withCodeActionKind(CodeActionKind::QUICK_FIX)
-        .withPrefferedFix(true)
-        .withWorkspaceEdit(workspaceEdit)
-        .build();
+      .withTitle("Add missing ':' to label")
+      .withCodeActionKind(CodeActionKind::QUICK_FIX)
+      .withPrefferedFix(true)
+      .withWorkspaceEdit(workspaceEdit)
+      .build();
 }
 
 } // namespace ls6502

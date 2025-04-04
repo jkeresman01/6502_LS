@@ -9,7 +9,7 @@ namespace ls6502
 
 ////////////////////////////////////////////////////////////
 PublishDiagnosticsNoticifation::PublishDiagnosticsNoticifation(
-    const std::string &method, const std::shared_ptr<PublishDiagnosticsParams> &diagnosticsParams)
+  const std::string &method, const std::shared_ptr<PublishDiagnosticsParams> &diagnosticsParams)
     : NotificationMessage(method), m_diagnosticsParams(diagnosticsParams)
 {
 }

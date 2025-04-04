@@ -26,7 +26,6 @@ HoverItem InstructionSet6502HoverProvider::getHoverItem(const std::string &docum
 
     HoverItem hoverItem;
 
-
     if (auto it = InstructionSetManager::getInstance().getInstructionByMnemonic(mnemonic))
     {
         std::string invalidInstructionStr = STR("%s isn't valid 6502 ASM instruction!", mnemonic.c_str());
