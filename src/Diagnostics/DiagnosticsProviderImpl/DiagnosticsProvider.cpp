@@ -48,8 +48,6 @@ void DiagnosticsProvider::checkMalformedLabel(const std::string& line, size_t li
     std::regex  labelRegex(R"(^\s*([A-Za-z_][A-Za-z0-9_]*)\s*$)");
     std::smatch match;
 
-    InstructionSetMapT::iterator it = m_instructionSet.find(line);
-
     bool isMissingColon = std::regex_match(line, match, labelRegex);
 
     if (isMissingColon)
