@@ -3,6 +3,7 @@
 ////////////////////////////////////////////////////////////
 
 #include "InitializeResponse.h"
+
 #include <cstdint>
 #include <sstream>
 #include <string>

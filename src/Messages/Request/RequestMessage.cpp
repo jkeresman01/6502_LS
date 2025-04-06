@@ -3,11 +3,12 @@
 ////////////////////////////////////////////////////////////
 
 #include "RequestMessage.h"
+
 #include <nlohmann/json.hpp>
 
 #include "../Utils/Logger.h"
 #include "../Utils/MessageUtil.h"
-#include "Message.h"
+#include "../Message.h"
 
 namespace ls6502
 {

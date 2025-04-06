@@ -7,7 +7,7 @@
 #include <cstdint>
 #include <nlohmann/json.hpp>
 
-#include "Message.h"
+#include "../Message.h"
 
 namespace ls6502
 {

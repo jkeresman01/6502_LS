@@ -3,6 +3,7 @@
 ////////////////////////////////////////////////////////////
 
 #include "JsonSnippetRepository.h"
+
 #include <nlohmann/json.hpp>
 
 #include "../Utils/Logger.h"

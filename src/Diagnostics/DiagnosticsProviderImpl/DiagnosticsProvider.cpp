@@ -3,6 +3,7 @@
 ////////////////////////////////////////////////////////////
 
 #include "DiagnosticsProvider.h"
+
 #include <regex>
 #include <sstream>
 #include <string>

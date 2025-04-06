@@ -3,6 +3,7 @@
 ////////////////////////////////////////////////////////////
 
 #include "ConfigurationManager.h"
+
 #include <fstream>
 #include <mutex>
 #include <string>

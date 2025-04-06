@@ -2,11 +2,13 @@
 // Headers
 ////////////////////////////////////////////////////////////
 
+
+#include "InstructionSetManager.h"
+
 #include <optional>
 
 #include "../../Repo/Instructions/FactoryImpl/InstructionSetRepoFactory.h"
 #include "../../Utils/Logger.h"
-#include "InstructionSetManager.h"
 
 namespace ls6502
 {

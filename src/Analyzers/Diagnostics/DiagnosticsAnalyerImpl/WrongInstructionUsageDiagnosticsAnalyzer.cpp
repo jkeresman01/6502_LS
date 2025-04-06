@@ -3,6 +3,7 @@
 ////////////////////////////////////////////////////////////
 
 #include "WrongInstructionUsageDiagnosticsAnalyzer.h"
+
 #include <string>
 #include <vector>
 

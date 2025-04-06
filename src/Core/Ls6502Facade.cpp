@@ -3,6 +3,7 @@
 ////////////////////////////////////////////////////////////
 
 #include "Ls6502Facade.h"
+
 #include <exception>
 #include <iostream>
 #include <memory>

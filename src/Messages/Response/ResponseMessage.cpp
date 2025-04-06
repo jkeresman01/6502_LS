@@ -3,6 +3,7 @@
 ////////////////////////////////////////////////////////////
 
 #include "ResponseMessage.h"
+
 #include <ostream>
 
 namespace ls6502

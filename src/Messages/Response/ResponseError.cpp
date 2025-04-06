@@ -3,6 +3,7 @@
 ////////////////////////////////////////////////////////////
 
 #include "ResponseError.h"
+
 #include <sstream>
 
 namespace ls6502
