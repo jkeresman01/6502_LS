@@ -22,7 +22,7 @@ namespace ls6502
 /// @brief Provides predefined code snippets for code completion.
 ///
 //////////////////////////////////////////////////////////////
-class PredefinedSnippetProvider : public ISnippetProvider
+class SnippetsProvider : public ISnippetProvider
 {
 public:
     //////////////////////////////////////////////////////////////
@@ -30,7 +30,7 @@ public:
     /// @brief Constructs a PredefinedSnippetProvider instance.
     ///
     //////////////////////////////////////////////////////////////
-    PredefinedSnippetProvider();
+    SnippetsProvider();
 
     //////////////////////////////////////////////////////////////
     ///
@@ -57,6 +57,6 @@ private:
     /// @return A vector of CompletionItem objects.
     ///
     //////////////////////////////////////////////////////////////
-    std::vector<CompletionItem> getCompletions(const std::vector<std::string>& snippets, const std::string& prefix);
+    std::vector<CompletionItem> mapSnippetsToCompletions(const std::vector<std::string>& snippets, const std::string& prefix);
 };
 } // namespace ls6502
