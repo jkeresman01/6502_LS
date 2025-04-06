@@ -16,7 +16,7 @@ std::vector<CompletionItem> PredefinedSnippetProvider::getSnippets(const std::st
 {
     if (auto it = SnippetsManager::getInstance().getSnippetsByMnemonic(prefix))
     {
-        return getCompletions(*it);
+        return mapSnippetsToCompletions(*it, prefix);
     }
     else
     {
@@ -26,7 +26,7 @@ std::vector<CompletionItem> PredefinedSnippetProvider::getSnippets(const std::st
 
 
 ////////////////////////////////////////////////////////////
-std::vector<CompletionItem> PredefinedSnippetProvider::getCompletions(const std::vector<std::string>& snippets,
+std::vector<CompletionItem> PredefinedSnippetProvider::mapSnippetsToCompletions(const std::vector<std::string>& snippets,
                                                                       const std::string& prefix)
 {
     std::vector<CompletionItem> completionItems(snippets.size());
