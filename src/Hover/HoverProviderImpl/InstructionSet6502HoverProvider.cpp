@@ -29,16 +29,15 @@ HoverItem InstructionSet6502HoverProvider::getHoverItem(const std::string& docum
 
     if (auto it = InstructionSetManager::getInstance().getInstructionByMnemonic(mnemonic))
     {
-        std::string invalidInstructionStr = STR("%s isn't valid 6502 ASM instruction!", mnemonic.c_str());
-
-        LS_6502_DEBUG(invalidInstructionStr);
-
-        hoverItem.text = invalidInstructionStr;
-    }
-    else
-    {
         hoverItem.text = it->toString();
+        return hoverItem;
     }
+
+    std::string invalidInstructionStr = STR("%s isn't valid 6502 ASM instruction!", mnemonic.c_str());
+
+    LS_6502_DEBUG(invalidInstructionStr);
+
+    hoverItem.text = invalidInstructionStr;
 
     return hoverItem;
 }
