@@ -1,14 +1,13 @@
 <div align="center">
 
   <h1>6502 assembly language server</h1>
+  <h3> !!!!!!!   Not baked yet   !!!!!!! </h3>
   <h6> ---> Langauge server for 6502 assembly <--- </h6>
 
 ![C++](https://img.shields.io/badge/C++-blue?style=for-the-badge&logo=c%2B%2B)
 ![Work In Progress](https://img.shields.io/badge/Work%20In%20Progress-orange?style=for-the-badge)
 
 </div>
-
-## Langauge server for 6502 assembly ---> Not baked yet
 
 ## Table of Contents ##
 
