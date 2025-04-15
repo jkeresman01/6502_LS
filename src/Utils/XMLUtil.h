@@ -13,7 +13,7 @@ namespace ls6502
 ///
 /// @class XMLUtil
 ///
-/// @brief Utility class for converting stuff
+/// @brief Utility class for XML related logic
 ///
 /////////////////////////////////////////////////////////////////////
 class XMLUtil
