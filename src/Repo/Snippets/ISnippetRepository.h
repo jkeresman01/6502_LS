@@ -7,6 +7,8 @@
 #include <string>
 #include <unordered_map>
 
+#include "../IRepository.h"
+
 namespace ls6502
 {
 //////////////////////////////////////////////////////////////
@@ -16,7 +18,7 @@ namespace ls6502
 /// @brief Interface for a snippet repository that loads code snippets.
 ///
 //////////////////////////////////////////////////////////////
-class ISnippetRepository
+class ISnippetRepository : public IRepository
 {
 public:
     //////////////////////////////////////////////////////////////

@@ -4,9 +4,11 @@
 // Headers
 ////////////////////////////////////////////////////////////
 
+
 #include <unordered_map>
 
 #include "../../Types/Instruction.h"
+#include "../IRepository.h"
 
 namespace ls6502
 {
@@ -18,7 +20,7 @@ namespace ls6502
 /// @brief Interface for loading an instruction set repository
 ///
 /////////////////////////////////////////////////////////////////////
-class IInstructionSetRepository
+class IInstructionSetRepository : public IRepository
 {
 public:
     /////////////////////////////////////////////////////////////////////
