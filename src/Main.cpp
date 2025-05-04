@@ -1,4 +1,4 @@
-#include "Core/Ls6502Server.h"
+#include "Core/Server/Ls6502Server.h"
 
 int main()
 {
