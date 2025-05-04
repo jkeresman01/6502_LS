@@ -6,7 +6,7 @@ namespace ls6502
 ///
 /// @class IProvider
 ///
-/// @brief Sematic interface for different providers
+/// @brief Semantic interface for different providers
 ///
 //////////////////////////////////////////////////////////////
 class IProvider

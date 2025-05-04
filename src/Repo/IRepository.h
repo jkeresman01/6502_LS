@@ -6,7 +6,7 @@ namespace ls6502
 ///
 /// @class IRepository
 ///
-/// @brief Sematic interface for different repostiories
+/// @brief Semantic interface for different repostiories
 ///
 //////////////////////////////////////////////////////////////
 class IRepository
