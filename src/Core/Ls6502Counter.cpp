@@ -3,7 +3,6 @@
 ////////////////////////////////////////////////////////////
 
 #include "Ls6502Counter.h"
-
 #include <cstdint>
 #include <numeric>
 

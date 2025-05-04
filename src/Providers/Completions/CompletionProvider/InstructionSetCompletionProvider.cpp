@@ -3,7 +3,6 @@
 ////////////////////////////////////////////////////////////
 
 #include "InstructionSetCompletionProvider.h"
-
 #include <optional>
 #include <vector>
 

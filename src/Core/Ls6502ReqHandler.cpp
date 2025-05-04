@@ -3,7 +3,6 @@
 ////////////////////////////////////////////////////////////
 
 #include "Ls6502ReqHandler.h"
-
 #include <vector>
 
 #include "../Capabilities/Server/ServerCapabilities.h"

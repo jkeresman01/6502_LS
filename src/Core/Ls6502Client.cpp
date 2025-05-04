@@ -3,7 +3,6 @@
 ////////////////////////////////////////////////////////////
 
 #include "Ls6502Client.h"
-
 #include <memory>
 
 #include "../Utils/Logger.h"

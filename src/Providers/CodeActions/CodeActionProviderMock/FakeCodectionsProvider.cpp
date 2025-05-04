@@ -3,7 +3,6 @@
 ////////////////////////////////////////////////////////////
 
 #include "FakeCodectionsProvider.h"
-
 #include <vector>
 
 #include "../Types/CodeAction.h"

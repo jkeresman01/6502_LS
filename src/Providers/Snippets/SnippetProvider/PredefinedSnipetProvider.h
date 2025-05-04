@@ -57,6 +57,7 @@ private:
     /// @return A vector of CompletionItem objects.
     ///
     //////////////////////////////////////////////////////////////
-    std::vector<CompletionItem> mapSnippetsToCompletions(const std::vector<std::string>& snippets, const std::string& prefix);
+    std::vector<CompletionItem> mapSnippetsToCompletions(const std::vector<std::string>& snippets,
+                                                         const std::string&              prefix);
 };
 } // namespace ls6502

@@ -26,8 +26,9 @@ std::vector<CompletionItem> PredefinedSnippetProvider::getSnippets(const std::st
 
 
 ////////////////////////////////////////////////////////////
-std::vector<CompletionItem> PredefinedSnippetProvider::mapSnippetsToCompletions(const std::vector<std::string>& snippets,
-                                                                      const std::string& prefix)
+std::vector<CompletionItem> PredefinedSnippetProvider::mapSnippetsToCompletions(
+    const std::vector<std::string>& snippets,
+    const std::string&              prefix)
 {
     std::vector<CompletionItem> completionItems(snippets.size());
 

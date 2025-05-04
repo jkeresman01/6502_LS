@@ -3,7 +3,6 @@
 ////////////////////////////////////////////////////////////
 
 #include "CodeActionProvider.h"
-
 #include <algorithm>
 #include <string>
 

@@ -3,7 +3,6 @@
 ////////////////////////////////////////////////////////////
 
 #include "FakeCompletionProvider.h"
-
 #include <vector>
 
 #include "../../Types/CompletionItem.h"

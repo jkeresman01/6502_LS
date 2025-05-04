@@ -3,7 +3,6 @@
 ////////////////////////////////////////////////////////////
 
 #include "InitializeResult.h"
-
 #include <sstream>
 #include <string>
 
