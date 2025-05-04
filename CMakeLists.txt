@@ -29,7 +29,7 @@ file(GLOB_RECURSE SOURCES
     ${SRC_DIR}/*.h
 )
 
-add_executable(6502LS ${SOURCES})
+add_executable(6502LS ${SOURCES} "src/Providers/IProvider.h")
 
 include(FetchContent)
 
