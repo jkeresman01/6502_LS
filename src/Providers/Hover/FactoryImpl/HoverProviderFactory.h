@@ -45,7 +45,7 @@ public:
 
         LS_6502_DEBUG(STR("Hover provider: %s", hoverProvider.c_str()));
 
-        return ClassRegistry::getInstance()->forName(hoverProvider)->newInstance();
+        return ClassRegistry::getInstance()->forName(hoverProvider)->createInstance();
     }
 
 private:

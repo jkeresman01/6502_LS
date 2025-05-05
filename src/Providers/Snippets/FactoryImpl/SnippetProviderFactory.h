@@ -46,7 +46,7 @@ public:
 
         LS_6502_DEBUG(STR("Snippet provider: %s", snippetsProvider.c_str()));
 
-        return ClassRegistry::getInstance()->forName(snippetsProvider)->newInstance();
+        return ClassRegistry::getInstance()->forName(snippetsProvider)->createInstance();
     }
 
 private:

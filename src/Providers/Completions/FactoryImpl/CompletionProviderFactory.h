@@ -48,7 +48,7 @@ public:
 
         LS_6502_DEBUG(STR("Completion provider: %s", completionProvider.c_str()));
 
-        return ClassRegistry::getInstance()->forName(completionProvider)->newInstance();
+        return ClassRegistry::getInstance()->forName(completionProvider)->createInstance();
     }
 
 private:

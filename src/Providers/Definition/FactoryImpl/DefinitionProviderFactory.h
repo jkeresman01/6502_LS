@@ -48,7 +48,7 @@ public:
 
         LS_6502_DEBUG(STR("Definition provider: %s", definitionProvider.c_str()));
 
-        return ClassRegistry::getInstance()->forName(definitionProvider)->newInstance();
+        return ClassRegistry::getInstance()->forName(definitionProvider)->createInstance();
     }
 
 private:

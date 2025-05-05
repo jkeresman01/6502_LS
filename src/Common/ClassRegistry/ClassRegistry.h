@@ -54,7 +54,7 @@ public:
         {
         }
 
-        std::shared_ptr<T> newInstance() const
+        std::shared_ptr<T> createInstance() const
         {
             auto&           registry = ClassRegistry::getInstance().m_registries;
             std::type_index typeId   = std::type_index(typeid(T));

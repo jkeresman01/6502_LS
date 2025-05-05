@@ -48,7 +48,7 @@ public:
 
         LS_6502_DEBUG(STR("Code action provider: %s", codeActionProvider.c_str()));
 
-        return ClassRegistry::getInstance()->forName(codeActionProvider)->newInstance();
+        return ClassRegistry::getInstance()->forName(codeActionProvider)->createInstance();
     }
 
 private:

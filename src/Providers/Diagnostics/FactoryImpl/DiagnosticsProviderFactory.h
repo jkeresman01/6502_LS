@@ -48,7 +48,7 @@ public:
 
         LS_6502_DEBUG(STR("Diagnostics provider: %s", diagnosticsProvider.c_str()));
 
-        return ClassRegistry::getInstance()->forName(diagnosticsProvider)->newInstance();
+        return ClassRegistry::getInstance()->forName(diagnosticsProvider)->createInstance();
     }
 
 private:
