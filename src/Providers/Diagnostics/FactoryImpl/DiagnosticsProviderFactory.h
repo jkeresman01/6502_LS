@@ -6,24 +6,24 @@
 
 #include <memory>
 
-#include "../CompletionProviderImpl/InstructionSetCompletionProvider.h"
-#include "../CompletionProviderMockImpl/FakeCompletionProvider.h"
 #include "../Config/ConfigurationManager.h"
-#include "../ICompletionProvider.h"
 #include "../Utils/Logger.h"
+#include "DiagnosticsProviderImpl/DiagnosticsProvider.h"
+#include "DiagnosticsProviderMockImpl/FakeDiagnosticsProvider.h"
+#include "IDiagnosticsProvider.h"
 
 namespace ls6502
 {
 
 //////////////////////////////////////////////////////////////
 ///
-/// @class CompletionProviderFactory
+/// @class DiagnosticsProviderFactory
 ///
-/// @brief Factory class for creating instances of completion
+/// @brief Factory class for creating instances of diagnostics
 ///        providers based on configuration settings.
 ///
 //////////////////////////////////////////////////////////////
-class CompletionProviderFactory
+class DiagnosticsProviderFactory
 {
 public:
     //////////////////////////////////////////////////////////////
@@ -31,30 +31,28 @@ public:
     /// @brief Deleted constructor to prevent instantiation.
     ///
     //////////////////////////////////////////////////////////////
-    CompletionProviderFactory() = delete;
+    DiagnosticsProviderFactory() = delete;
 
     //////////////////////////////////////////////////////////////
     ///
-    /// @brief Creates an instance of a completion provider.
+    /// @brief Creates an instance of a diagnostics provider.
     ///
     /// @return A shared pointer to an instance of a class
-    ///         implementing ICompletionProvider.
+    ///         implementing IDiagnosticsProvider.
     ///
     //////////////////////////////////////////////////////////////
-    static std::shared_ptr<ICompletionProvider> create()
+    static std::shared_ptr<IDiagnosticsProvider> create()
     {
-        const std::string& completionProvider = ConfigurationManager::getInstance()->getProperty(
-            "completion");
+        const std::string& diagnosticsProvider = ConfigurationManager::getInstance()->getProperty(
+            DIAGNOSTICS_PROVIDER);
 
-        LS_6502_DEBUG(STR("Completion provider: %s", completionProvider.c_str()));
+        LS_6502_DEBUG(STR("Diagnostics provider: %s", diagnosticsProvider.c_str()));
 
-        if (completionProvider == "fake")
-        {
-            return std::make_shared<FakeCompletionProvider>();
-        }
-
-        return std::make_shared<InstructionSetCompletionProvider>();
+        return ClassRegistry::getInstance()->forName(diagnosticsProvider)->newInstance();
     }
+
+private:
+    static const char* DIAGNOSTICS_PROVIDER = "diagnosticsProvider";
 };
 
 } // namespace ls6502

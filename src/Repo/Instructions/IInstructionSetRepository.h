@@ -7,8 +7,8 @@
 
 #include <unordered_map>
 
-#include "../IRepository.h"
 #include "../../Types/Instruction.h"
+#include "../IRepository.h"
 
 namespace ls6502
 {

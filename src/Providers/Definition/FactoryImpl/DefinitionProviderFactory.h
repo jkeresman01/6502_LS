@@ -44,18 +44,15 @@ public:
     static std::shared_ptr<IDefinitionProvider> create()
     {
         const std::string& definitionProvider = ConfigurationManager::getInstance()->getProperty(
-            "definition");
+            DEFINITION_PROVIDER);
 
         LS_6502_DEBUG(STR("Definition provider: %s", definitionProvider.c_str()));
 
-        if (definitionProvider == "fake")
-        {
-            return std::make_shared<FakeDefinitionProvider>();
-        }
-
-        // TODO replace
-        return std::make_shared<FakeDefinitionProvider>();
+        return ClassRegistry::getInstance()->forName(definitionProvider)->newInstance();
     }
+
+private:
+    static const char* DEFINITION_PROVIDER = "definition";
 };
 
 } // namespace ls6502

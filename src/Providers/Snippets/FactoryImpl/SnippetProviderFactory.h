@@ -7,6 +7,7 @@
 #include <memory>
 #include <string>
 
+#include "../Common/ClassRegistry.h"
 #include "../Config/ConfigurationManager.h"
 #include "../Utils/Logger.h"
 #include "ISnippetProvider.h"
@@ -41,17 +42,14 @@ public:
     //////////////////////////////////////////////////////////////
     static std::shared_ptr<ISnippetProvider> create()
     {
-        const std::string& snippetsProvider = ConfigurationManager::getInstance()->getProperty(
-            "snippetsProvider");
+        const std::string& snippetsProvider = ConfigurationManager::getInstance()->getProperty(SNIPPET_PROVIDER);
 
-        LS_6502_DEBUG(STR("Snippets provider: %s", snippetsProvider.c_str()));
+        LS_6502_DEBUG(STR("Snippet provider: %s", snippetsProvider.c_str()));
 
-        if (snippetsProvider == "predefined")
-        {
-            return std::make_shared<PredefinedSnippetProvider>();
-        }
-
-        return std::make_shared<FakeSnippetsProvider>();
+        return ClassRegistry::getInstance()->forName(snippetsProvider)->newInstance();
     }
+
+private:
+    static const char* SNIPPET_PROVIDER = "snippetProvider";
 };
 } // namespace ls6502

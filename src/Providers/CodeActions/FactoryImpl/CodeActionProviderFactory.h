@@ -44,17 +44,15 @@ public:
     static std::shared_ptr<ICodeActionsProvider> create()
     {
         const std::string& codeActionProvider = ConfigurationManager::getInstance()->getProperty(
-            "codeActionProvider");
+            CODE_ACTION_PROVIDER);
 
         LS_6502_DEBUG(STR("Code action provider: %s", codeActionProvider.c_str()));
 
-        if (codeActionProvider == "6502asm")
-        {
-            return std::make_shared<CodeActionProvider>();
-        }
-
-        return std::make_shared<FakeCodeActionsProvider>();
+        return ClassRegistry::getInstance()->forName(codeActionProvider)->newInstance();
     }
+
+private:
+    static const char* CODE_ACTION_PROVIDER = "codeActionProvider";
 };
 
 } // namespace ls6502

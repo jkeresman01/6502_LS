@@ -41,21 +41,15 @@ public:
     /////////////////////////////////////////////////////////////////////
     static std::shared_ptr<IHoverProvider> create()
     {
-        const std::string& hoverProvider = ConfigurationManager::getInstance()->getProperty("hoverProvider");
+        const std::string& hoverProvider = ConfigurationManager::getInstance()->getProperty(HOVER_PROVIDER);
 
-        if (hoverProvider == "fake")
-        {
-            return std::make_shared<FakeHoverProvider>();
-        }
+        LS_6502_DEBUG(STR("Hover provider: %s", hoverProvider.c_str()));
 
-        if (hoverProvider == "6502ISA")
-        {
-            return std::make_shared<InstructionSet6502HoverProvider>();
-        }
-
-        // TODO default to FakeHoverProvider
-        return std::make_shared<InstructionSet6502HoverProvider>();
+        return ClassRegistry::getInstance()->forName(hoverProvider)->newInstance();
     }
+
+private:
+    static const char* HOVER_PROVIDER = "hoverProvider";
 };
 
 } // namespace ls6502

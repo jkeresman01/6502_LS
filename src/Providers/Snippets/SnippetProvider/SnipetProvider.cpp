@@ -2,10 +2,9 @@
 // Headers
 ////////////////////////////////////////////////////////////
 
-#include "PredefinedSnipetProvider.h"
-
 #include "../../Manager/Snippets/SnippetsManager.h"
 #include "../../Utils/Logger.h"
+#include "PredefinedSnipetProvider.h"
 
 namespace ls6502
 {
