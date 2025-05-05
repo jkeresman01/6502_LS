@@ -20,6 +20,12 @@ std::mutex            ConfigurationManager::s_mutex;
 
 
 ////////////////////////////////////////////////////////////
+void ConfigurationManager::init()
+{
+    load();
+}
+
+////////////////////////////////////////////////////////////
 void ConfigurationManager::load()
 {
     m_properties.clear();
