@@ -4,7 +4,7 @@ namespace ls6502
 {
 enum class Lifetime
 {
-    SINGELTTON,
+    SINGLETON,
     TRANSIENT
 };
 } // namespace ls6502
