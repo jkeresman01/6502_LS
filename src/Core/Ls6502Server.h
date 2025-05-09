@@ -88,7 +88,7 @@ private:
     /// @brief Single simplified interface for handling LSP request
     ///
     //////////////////////////////////////////////////////////////
-    std::shared_ptr<Ls6502Facade> m_6502Facade = std::make_shared<Ls6502Facade>();
+    std::unique_ptr<Ls6502Facade> m_6502Facade = std::make_unique<Ls6502Facade>();
 };
 
 } // namespace ls6502

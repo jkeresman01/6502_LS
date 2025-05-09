@@ -9,6 +9,7 @@
 #include <string>
 
 #include "../Messages/Response/ResponseMessage.h"
+#include "../Common/DependecyContainer/DependecyContainer.h"
 #include "Ls6502Client.h"
 #include "Ls6502Counter.h"
 #include "Ls6502ErrorHandler.h"
@@ -33,7 +34,7 @@ public:
     ///        and assignment operators
     ///
     //////////////////////////////////////////////////////////////
-    Ls6502Facade()                               = default;
+    Ls6502Facade(const std::shared_ptr<DependencyContainer>& depencyContainer);
     Ls6502Facade(const Ls6502Facade&)            = delete;
     Ls6502Facade(Ls6502Facade&&)                 = delete;
     Ls6502Facade& operator=(const Ls6502Facade&) = delete;
