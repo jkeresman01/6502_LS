@@ -44,17 +44,17 @@ void Ls6502Client::addDocument(const std::string& URI, const std::string& docume
 
 
 ////////////////////////////////////////////////////////////
-std::string Ls6502Client::getDocumentByURI(const std::string& URI) const
+std::optional<std::string> Ls6502Client::getDocumentByURI(const std::string& URI) const
 {
     DocumentsMapT::const_iterator it = m_documentsByURI.find(URI);
 
     if (it == m_documentsByURI.end())
     {
         LS_6502_ERROR(STR("There are no documents with URI: %s !", URI.c_str()));
-        return std::string();
+        return std::nullopt;
     }
 
-    return it->second;
+    return std::make_optional(it->second);
 }
 
 
