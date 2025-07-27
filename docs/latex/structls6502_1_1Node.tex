@@ -1,0 +1,49 @@
+\hypertarget{structls6502_1_1Node}{}\doxysection{ls6502\+::Node Struct Reference}
+\label{structls6502_1_1Node}\index{ls6502::Node@{ls6502::Node}}
+
+
+A structure representing a node in a trie.  
+
+
+
+
+{\ttfamily \#include $<$Node.\+h$>$}
+
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{structls6502_1_1Node_adfa0dfc61b0bf4412e842f87b0d27054}{is\+Leaf}}
+\begin{DoxyCompactList}\small\item\em Indicates whether the node is a leaf. \end{DoxyCompactList}\item 
+std\+::unordered\+\_\+map$<$ char, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{structls6502_1_1Node}{Node}} $>$ $>$ \mbox{\hyperlink{structls6502_1_1Node_a5722d5a39e2c7999c513d23f4a3fd38d}{children}}
+\begin{DoxyCompactList}\small\item\em A map of child nodes indexed by characters. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A structure representing a node in a trie. 
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structls6502_1_1Node_a5722d5a39e2c7999c513d23f4a3fd38d}\label{structls6502_1_1Node_a5722d5a39e2c7999c513d23f4a3fd38d}} 
+\index{ls6502::Node@{ls6502::Node}!children@{children}}
+\index{children@{children}!ls6502::Node@{ls6502::Node}}
+\doxysubsubsection{\texorpdfstring{children}{children}}
+{\footnotesize\ttfamily std\+::unordered\+\_\+map$<$char, std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{structls6502_1_1Node}{Node}}$>$ $>$ ls6502\+::\+Node\+::children}
+
+
+
+A map of child nodes indexed by characters. 
+
+\mbox{\Hypertarget{structls6502_1_1Node_adfa0dfc61b0bf4412e842f87b0d27054}\label{structls6502_1_1Node_adfa0dfc61b0bf4412e842f87b0d27054}} 
+\index{ls6502::Node@{ls6502::Node}!isLeaf@{isLeaf}}
+\index{isLeaf@{isLeaf}!ls6502::Node@{ls6502::Node}}
+\doxysubsubsection{\texorpdfstring{isLeaf}{isLeaf}}
+{\footnotesize\ttfamily bool ls6502\+::\+Node\+::is\+Leaf}
+
+
+
+Indicates whether the node is a leaf. 
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+6502ls-\/algo/include/6502ls/6502ls-\/algo/Node.\+h\end{DoxyCompactItemize}

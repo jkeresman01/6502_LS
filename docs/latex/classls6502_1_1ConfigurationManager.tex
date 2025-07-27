@@ -1,0 +1,129 @@
+\hypertarget{classls6502_1_1ConfigurationManager}{}\doxysection{ls6502\+::Configuration\+Manager Class Reference}
+\label{classls6502_1_1ConfigurationManager}\index{ls6502::ConfigurationManager@{ls6502::ConfigurationManager}}
+
+
+Implementation of configuration manager for Ls6502.  
+
+
+
+
+{\ttfamily \#include $<$Configuration\+Manager.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classls6502_1_1ConfigurationManager_aa4edafb3fd4e257a4a6b9af71dd8628e}{Configuration\+Manager}} (const \mbox{\hyperlink{classls6502_1_1ConfigurationManager}{Configuration\+Manager}} \&)=delete
+\begin{DoxyCompactList}\small\item\em Constructors (default, copy, move) and assignment operators. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classls6502_1_1ConfigurationManager_a5713fc87097f7e1002dae2509dc8bde6}\label{classls6502_1_1ConfigurationManager_a5713fc87097f7e1002dae2509dc8bde6}} 
+{\bfseries Configuration\+Manager} (\mbox{\hyperlink{classls6502_1_1ConfigurationManager}{Configuration\+Manager}} \&\&)=delete
+\item 
+\mbox{\Hypertarget{classls6502_1_1ConfigurationManager_abd6c7a2fa8154462a8099ef8e7053c5e}\label{classls6502_1_1ConfigurationManager_abd6c7a2fa8154462a8099ef8e7053c5e}} 
+\mbox{\hyperlink{classls6502_1_1ConfigurationManager}{Configuration\+Manager}} \& {\bfseries operator=} (const \mbox{\hyperlink{classls6502_1_1ConfigurationManager}{Configuration\+Manager}} \&)=delete
+\item 
+\mbox{\Hypertarget{classls6502_1_1ConfigurationManager_a1bfae4b1103fba8be8696f63282902e9}\label{classls6502_1_1ConfigurationManager_a1bfae4b1103fba8be8696f63282902e9}} 
+\mbox{\hyperlink{classls6502_1_1ConfigurationManager}{Configuration\+Manager}} \& {\bfseries operator=} (\mbox{\hyperlink{classls6502_1_1ConfigurationManager}{Configuration\+Manager}} \&\&)=delete
+\item 
+virtual \mbox{\hyperlink{classls6502_1_1ConfigurationManager_ac6fb6303ac4c9f23b03d69f579b0d731}{$\sim$\+Configuration\+Manager}} ()
+\begin{DoxyCompactList}\small\item\em Destructor, cleans up resources. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classls6502_1_1ConfigurationManager_adcd47221bff6483b6384fec174c4c3ae}{init}} ()
+\begin{DoxyCompactList}\small\item\em Initalize configuration manager. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classls6502_1_1ConfigurationManager_ad0946c8db14f912f50b04ea74b9ed6ff}{load}} (std\+::ifstream \&in)
+\begin{DoxyCompactList}\small\item\em Helper function to load properties from a file stream. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classls6502_1_1ConfigurationManager_aa7d715334bb73873eaf6af5872d3fd9a}{get\+Property}} (const std\+::string \&key)
+\begin{DoxyCompactList}\small\item\em Retrieve a property value by its key. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{classls6502_1_1ConfigurationManager}{Configuration\+Manager}} $\ast$ \mbox{\hyperlink{classls6502_1_1ConfigurationManager_a4bb3f7254d0b0c1727e3aa1dde76fd63}{get\+Instance}} ()
+\begin{DoxyCompactList}\small\item\em Get the Singleton instance of \mbox{\hyperlink{classls6502_1_1ConfigurationManager}{Configuration\+Manager}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Implementation of configuration manager for Ls6502. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classls6502_1_1ConfigurationManager_aa4edafb3fd4e257a4a6b9af71dd8628e}\label{classls6502_1_1ConfigurationManager_aa4edafb3fd4e257a4a6b9af71dd8628e}} 
+\index{ls6502::ConfigurationManager@{ls6502::ConfigurationManager}!ConfigurationManager@{ConfigurationManager}}
+\index{ConfigurationManager@{ConfigurationManager}!ls6502::ConfigurationManager@{ls6502::ConfigurationManager}}
+\doxysubsubsection{\texorpdfstring{ConfigurationManager()}{ConfigurationManager()}}
+{\footnotesize\ttfamily ls6502\+::\+Configuration\+Manager\+::\+Configuration\+Manager (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classls6502_1_1ConfigurationManager}{Configuration\+Manager}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+
+
+Constructors (default, copy, move) and assignment operators. 
+
+\mbox{\Hypertarget{classls6502_1_1ConfigurationManager_ac6fb6303ac4c9f23b03d69f579b0d731}\label{classls6502_1_1ConfigurationManager_ac6fb6303ac4c9f23b03d69f579b0d731}} 
+\index{ls6502::ConfigurationManager@{ls6502::ConfigurationManager}!````~ConfigurationManager@{$\sim$ConfigurationManager}}
+\index{````~ConfigurationManager@{$\sim$ConfigurationManager}!ls6502::ConfigurationManager@{ls6502::ConfigurationManager}}
+\doxysubsubsection{\texorpdfstring{$\sim$ConfigurationManager()}{~ConfigurationManager()}}
+{\footnotesize\ttfamily ls6502\+::\+Configuration\+Manager\+::$\sim$\+Configuration\+Manager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Destructor, cleans up resources. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classls6502_1_1ConfigurationManager_a4bb3f7254d0b0c1727e3aa1dde76fd63}\label{classls6502_1_1ConfigurationManager_a4bb3f7254d0b0c1727e3aa1dde76fd63}} 
+\index{ls6502::ConfigurationManager@{ls6502::ConfigurationManager}!getInstance@{getInstance}}
+\index{getInstance@{getInstance}!ls6502::ConfigurationManager@{ls6502::ConfigurationManager}}
+\doxysubsubsection{\texorpdfstring{getInstance()}{getInstance()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classls6502_1_1ConfigurationManager}{Configuration\+Manager}} $\ast$ ls6502\+::\+Configuration\+Manager\+::get\+Instance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Get the Singleton instance of \mbox{\hyperlink{classls6502_1_1ConfigurationManager}{Configuration\+Manager}}. 
+
+\begin{DoxyReturn}{Returns}
+Pointer to the single instance of \mbox{\hyperlink{classls6502_1_1ConfigurationManager}{Configuration\+Manager}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classls6502_1_1ConfigurationManager_aa7d715334bb73873eaf6af5872d3fd9a}\label{classls6502_1_1ConfigurationManager_aa7d715334bb73873eaf6af5872d3fd9a}} 
+\index{ls6502::ConfigurationManager@{ls6502::ConfigurationManager}!getProperty@{getProperty}}
+\index{getProperty@{getProperty}!ls6502::ConfigurationManager@{ls6502::ConfigurationManager}}
+\doxysubsubsection{\texorpdfstring{getProperty()}{getProperty()}}
+{\footnotesize\ttfamily std\+::string ls6502\+::\+Configuration\+Manager\+::get\+Property (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{key }\end{DoxyParamCaption})}
+
+
+
+Retrieve a property value by its key. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em key} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The value associated with the given key 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classls6502_1_1ConfigurationManager_adcd47221bff6483b6384fec174c4c3ae}\label{classls6502_1_1ConfigurationManager_adcd47221bff6483b6384fec174c4c3ae}} 
+\index{ls6502::ConfigurationManager@{ls6502::ConfigurationManager}!init@{init}}
+\index{init@{init}!ls6502::ConfigurationManager@{ls6502::ConfigurationManager}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily void ls6502\+::\+Configuration\+Manager\+::init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Initalize configuration manager. 
+
+\mbox{\Hypertarget{classls6502_1_1ConfigurationManager_ad0946c8db14f912f50b04ea74b9ed6ff}\label{classls6502_1_1ConfigurationManager_ad0946c8db14f912f50b04ea74b9ed6ff}} 
+\index{ls6502::ConfigurationManager@{ls6502::ConfigurationManager}!load@{load}}
+\index{load@{load}!ls6502::ConfigurationManager@{ls6502::ConfigurationManager}}
+\doxysubsubsection{\texorpdfstring{load()}{load()}}
+{\footnotesize\ttfamily void ls6502\+::\+Configuration\+Manager\+::load (\begin{DoxyParamCaption}\item[{std\+::ifstream \&}]{in }\end{DoxyParamCaption})}
+
+
+
+Helper function to load properties from a file stream. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em in} & \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+6502ls-\/config/include/6502ls/6502ls-\/config/Configuration\+Manager.\+h\item 
+6502ls-\/config/src/Configuration\+Manager.\+cpp\end{DoxyCompactItemize}

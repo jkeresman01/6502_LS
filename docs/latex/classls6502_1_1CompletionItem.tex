@@ -1,0 +1,192 @@
+\hypertarget{classls6502_1_1CompletionItem}{}\doxysection{ls6502\+::Completion\+Item Struct Reference}
+\label{classls6502_1_1CompletionItem}\index{ls6502::CompletionItem@{ls6502::CompletionItem}}
+
+
+Represents a completion item in the language server protocol,.  
+
+
+
+
+{\ttfamily \#include $<$Completion\+Item.\+h$>$}
+
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classls6502_1_1CompletionItem_1_1Builder}{Builder}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classls6502_1_1CompletionItem_1_1Builder}{Builder}} for construction text\+Document/completion items. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classls6502_1_1CompletionItem_aecde2efd920236973bcbfb0f0d9464df}{Completion\+Item}} ()=default
+\begin{DoxyCompactList}\small\item\em Constructs text\+Document/completion item. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classls6502_1_1CompletionItem_a22c05798497ba6eb98bcfb7042a0490e}{Completion\+Item}} (const std\+::string \&label, const Completion\+Item\+Kind completion\+Item\+Kind, const std\+::string \&detail, const std\+::string \&documentation, const std\+::string \&inserted\+Text)
+\begin{DoxyCompactList}\small\item\em Constructs text\+Document/completion item. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classls6502_1_1CompletionItem_aaf00f23c8fd78388d0967e34af258d58}{get\+Inserted\+Text}} () const
+\begin{DoxyCompactList}\small\item\em Accessor method for inserted text. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classls6502_1_1CompletionItem_a302bea13c5634b265c210f71ef49d3b8}{get\+Label}} () const
+\begin{DoxyCompactList}\small\item\em Accessor method for inserted text. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classls6502_1_1CompletionItem_a57603d41e9a265fe87b35905b94d980f}{get\+Details}} () const
+\begin{DoxyCompactList}\small\item\em Accessor method for details. \end{DoxyCompactList}\item 
+nlohmann\+::json \mbox{\hyperlink{classls6502_1_1CompletionItem_a0d88fe45a1394a4b28810ffaa44371ee}{to\+Json}} () const
+\begin{DoxyCompactList}\small\item\em Serializes the completion item to J\+S\+ON format. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{classls6502_1_1CompletionItem_a359606c27849ec23428922dc57f76f67}{m\+\_\+label}}
+\begin{DoxyCompactList}\small\item\em The label of the completion item. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classls6502_1_1CompletionItem_a5a569ad3aa751fbe9301ef7b37abea51}{m\+\_\+detail}}
+\begin{DoxyCompactList}\small\item\em Additional detail about the completion item. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classls6502_1_1CompletionItem_affd1767f567a74738297055b1eb23910}{m\+\_\+documentation}}
+\begin{DoxyCompactList}\small\item\em Documentation or extended information about the item. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classls6502_1_1CompletionItem_a3af798a5af0b4e1ee1b40309a79eee12}{m\+\_\+insert\+Text}}
+\begin{DoxyCompactList}\small\item\em Text to ne inserted by the editor. \end{DoxyCompactList}\item 
+Completion\+Item\+Kind \mbox{\hyperlink{classls6502_1_1CompletionItem_a85a73fb92fc626c104a101ceca3eb1dd}{m\+\_\+completion\+Item\+Kind}}
+\begin{DoxyCompactList}\small\item\em Completion item kind (Q\+U\+I\+C\+K\+\_\+\+F\+IX, S\+N\+I\+P\+P\+ET...) \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a completion item in the language server protocol,. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classls6502_1_1CompletionItem_aecde2efd920236973bcbfb0f0d9464df}\label{classls6502_1_1CompletionItem_aecde2efd920236973bcbfb0f0d9464df}} 
+\index{ls6502::CompletionItem@{ls6502::CompletionItem}!CompletionItem@{CompletionItem}}
+\index{CompletionItem@{CompletionItem}!ls6502::CompletionItem@{ls6502::CompletionItem}}
+\doxysubsubsection{\texorpdfstring{CompletionItem()}{CompletionItem()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily ls6502\+::\+Completion\+Item\+::\+Completion\+Item (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+Constructs text\+Document/completion item. 
+
+\mbox{\Hypertarget{classls6502_1_1CompletionItem_a22c05798497ba6eb98bcfb7042a0490e}\label{classls6502_1_1CompletionItem_a22c05798497ba6eb98bcfb7042a0490e}} 
+\index{ls6502::CompletionItem@{ls6502::CompletionItem}!CompletionItem@{CompletionItem}}
+\index{CompletionItem@{CompletionItem}!ls6502::CompletionItem@{ls6502::CompletionItem}}
+\doxysubsubsection{\texorpdfstring{CompletionItem()}{CompletionItem()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily ls6502\+::\+Completion\+Item\+::\+Completion\+Item (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{label,  }\item[{const Completion\+Item\+Kind}]{completion\+Item\+Kind,  }\item[{const std\+::string \&}]{detail,  }\item[{const std\+::string \&}]{documentation,  }\item[{const std\+::string \&}]{inserted\+Text }\end{DoxyParamCaption})}
+
+
+
+Constructs text\+Document/completion item. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em label} & \\
+\hline
+\mbox{\texttt{ in}}  & {\em detail} & \\
+\hline
+\mbox{\texttt{ in}}  & {\em documentation} & \\
+\hline
+\mbox{\texttt{ in}}  & {\em detail} & \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classls6502_1_1CompletionItem_a57603d41e9a265fe87b35905b94d980f}\label{classls6502_1_1CompletionItem_a57603d41e9a265fe87b35905b94d980f}} 
+\index{ls6502::CompletionItem@{ls6502::CompletionItem}!getDetails@{getDetails}}
+\index{getDetails@{getDetails}!ls6502::CompletionItem@{ls6502::CompletionItem}}
+\doxysubsubsection{\texorpdfstring{getDetails()}{getDetails()}}
+{\footnotesize\ttfamily std\+::string ls6502\+::\+Completion\+Item\+::get\+Details (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Accessor method for details. 
+
+\begin{DoxyReturn}{Returns}
+details 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classls6502_1_1CompletionItem_aaf00f23c8fd78388d0967e34af258d58}\label{classls6502_1_1CompletionItem_aaf00f23c8fd78388d0967e34af258d58}} 
+\index{ls6502::CompletionItem@{ls6502::CompletionItem}!getInsertedText@{getInsertedText}}
+\index{getInsertedText@{getInsertedText}!ls6502::CompletionItem@{ls6502::CompletionItem}}
+\doxysubsubsection{\texorpdfstring{getInsertedText()}{getInsertedText()}}
+{\footnotesize\ttfamily std\+::string ls6502\+::\+Completion\+Item\+::get\+Inserted\+Text (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Accessor method for inserted text. 
+
+\begin{DoxyReturn}{Returns}
+insert text 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classls6502_1_1CompletionItem_a302bea13c5634b265c210f71ef49d3b8}\label{classls6502_1_1CompletionItem_a302bea13c5634b265c210f71ef49d3b8}} 
+\index{ls6502::CompletionItem@{ls6502::CompletionItem}!getLabel@{getLabel}}
+\index{getLabel@{getLabel}!ls6502::CompletionItem@{ls6502::CompletionItem}}
+\doxysubsubsection{\texorpdfstring{getLabel()}{getLabel()}}
+{\footnotesize\ttfamily std\+::string ls6502\+::\+Completion\+Item\+::get\+Label (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Accessor method for inserted text. 
+
+\mbox{\Hypertarget{classls6502_1_1CompletionItem_a0d88fe45a1394a4b28810ffaa44371ee}\label{classls6502_1_1CompletionItem_a0d88fe45a1394a4b28810ffaa44371ee}} 
+\index{ls6502::CompletionItem@{ls6502::CompletionItem}!toJson@{toJson}}
+\index{toJson@{toJson}!ls6502::CompletionItem@{ls6502::CompletionItem}}
+\doxysubsubsection{\texorpdfstring{toJson()}{toJson()}}
+{\footnotesize\ttfamily nlohmann\+::json ls6502\+::\+Completion\+Item\+::to\+Json (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Serializes the completion item to J\+S\+ON format. 
+
+\begin{DoxyReturn}{Returns}
+Returns a J\+S\+ON object representing the completion item, 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classls6502_1_1CompletionItem_a85a73fb92fc626c104a101ceca3eb1dd}\label{classls6502_1_1CompletionItem_a85a73fb92fc626c104a101ceca3eb1dd}} 
+\index{ls6502::CompletionItem@{ls6502::CompletionItem}!m\_completionItemKind@{m\_completionItemKind}}
+\index{m\_completionItemKind@{m\_completionItemKind}!ls6502::CompletionItem@{ls6502::CompletionItem}}
+\doxysubsubsection{\texorpdfstring{m\_completionItemKind}{m\_completionItemKind}}
+{\footnotesize\ttfamily Completion\+Item\+Kind ls6502\+::\+Completion\+Item\+::m\+\_\+completion\+Item\+Kind}
+
+
+
+Completion item kind (Q\+U\+I\+C\+K\+\_\+\+F\+IX, S\+N\+I\+P\+P\+ET...) 
+
+\mbox{\Hypertarget{classls6502_1_1CompletionItem_a5a569ad3aa751fbe9301ef7b37abea51}\label{classls6502_1_1CompletionItem_a5a569ad3aa751fbe9301ef7b37abea51}} 
+\index{ls6502::CompletionItem@{ls6502::CompletionItem}!m\_detail@{m\_detail}}
+\index{m\_detail@{m\_detail}!ls6502::CompletionItem@{ls6502::CompletionItem}}
+\doxysubsubsection{\texorpdfstring{m\_detail}{m\_detail}}
+{\footnotesize\ttfamily std\+::string ls6502\+::\+Completion\+Item\+::m\+\_\+detail}
+
+
+
+Additional detail about the completion item. 
+
+\mbox{\Hypertarget{classls6502_1_1CompletionItem_affd1767f567a74738297055b1eb23910}\label{classls6502_1_1CompletionItem_affd1767f567a74738297055b1eb23910}} 
+\index{ls6502::CompletionItem@{ls6502::CompletionItem}!m\_documentation@{m\_documentation}}
+\index{m\_documentation@{m\_documentation}!ls6502::CompletionItem@{ls6502::CompletionItem}}
+\doxysubsubsection{\texorpdfstring{m\_documentation}{m\_documentation}}
+{\footnotesize\ttfamily std\+::string ls6502\+::\+Completion\+Item\+::m\+\_\+documentation}
+
+
+
+Documentation or extended information about the item. 
+
+\mbox{\Hypertarget{classls6502_1_1CompletionItem_a3af798a5af0b4e1ee1b40309a79eee12}\label{classls6502_1_1CompletionItem_a3af798a5af0b4e1ee1b40309a79eee12}} 
+\index{ls6502::CompletionItem@{ls6502::CompletionItem}!m\_insertText@{m\_insertText}}
+\index{m\_insertText@{m\_insertText}!ls6502::CompletionItem@{ls6502::CompletionItem}}
+\doxysubsubsection{\texorpdfstring{m\_insertText}{m\_insertText}}
+{\footnotesize\ttfamily std\+::string ls6502\+::\+Completion\+Item\+::m\+\_\+insert\+Text}
+
+
+
+Text to ne inserted by the editor. 
+
+\mbox{\Hypertarget{classls6502_1_1CompletionItem_a359606c27849ec23428922dc57f76f67}\label{classls6502_1_1CompletionItem_a359606c27849ec23428922dc57f76f67}} 
+\index{ls6502::CompletionItem@{ls6502::CompletionItem}!m\_label@{m\_label}}
+\index{m\_label@{m\_label}!ls6502::CompletionItem@{ls6502::CompletionItem}}
+\doxysubsubsection{\texorpdfstring{m\_label}{m\_label}}
+{\footnotesize\ttfamily std\+::string ls6502\+::\+Completion\+Item\+::m\+\_\+label}
+
+
+
+The label of the completion item. 
+
+
+
+The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+6502ls-\/types/include/6502ls/6502ls-\/types/Completion\+Item.\+h\item 
+6502ls-\/types/src/Completion\+Item.\+cpp\end{DoxyCompactItemize}

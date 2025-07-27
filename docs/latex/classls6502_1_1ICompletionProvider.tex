@@ -1,0 +1,79 @@
+\hypertarget{classls6502_1_1ICompletionProvider}{}\doxysection{ls6502\+::I\+Completion\+Provider Class Reference}
+\label{classls6502_1_1ICompletionProvider}\index{ls6502::ICompletionProvider@{ls6502::ICompletionProvider}}
+
+
+Interface for providing completion items in response to code completion requests.  
+
+
+
+
+{\ttfamily \#include $<$I\+Completion\+Provider.\+h$>$}
+
+
+
+Inheritance diagram for ls6502\+::I\+Completion\+Provider\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classls6502_1_1ICompletionProvider__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for ls6502\+::I\+Completion\+Provider\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=235pt]{classls6502_1_1ICompletionProvider__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{classls6502_1_1ICompletionProvider_a1c558b4401800ba65306b08019d395b1}{$\sim$\+I\+Completion\+Provider}} ()=default
+\begin{DoxyCompactList}\small\item\em Virtual destructor to ensure proper cleanup of derived classes. \end{DoxyCompactList}\item 
+virtual std\+::vector$<$ \mbox{\hyperlink{classls6502_1_1CompletionItem}{Completion\+Item}} $>$ \mbox{\hyperlink{classls6502_1_1ICompletionProvider_aa5d17940a85ab71f028c3e19e9ab6ac8}{get\+Completions}} (const std\+::string \&document, const \mbox{\hyperlink{structls6502_1_1Position}{Position}} \&position)=0
+\begin{DoxyCompactList}\small\item\em Pure virtual function to retrieve completion items. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Interface for providing completion items in response to code completion requests. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classls6502_1_1ICompletionProvider_a1c558b4401800ba65306b08019d395b1}\label{classls6502_1_1ICompletionProvider_a1c558b4401800ba65306b08019d395b1}} 
+\index{ls6502::ICompletionProvider@{ls6502::ICompletionProvider}!````~ICompletionProvider@{$\sim$ICompletionProvider}}
+\index{````~ICompletionProvider@{$\sim$ICompletionProvider}!ls6502::ICompletionProvider@{ls6502::ICompletionProvider}}
+\doxysubsubsection{\texorpdfstring{$\sim$ICompletionProvider()}{~ICompletionProvider()}}
+{\footnotesize\ttfamily virtual ls6502\+::\+I\+Completion\+Provider\+::$\sim$\+I\+Completion\+Provider (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+
+
+Virtual destructor to ensure proper cleanup of derived classes. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classls6502_1_1ICompletionProvider_aa5d17940a85ab71f028c3e19e9ab6ac8}\label{classls6502_1_1ICompletionProvider_aa5d17940a85ab71f028c3e19e9ab6ac8}} 
+\index{ls6502::ICompletionProvider@{ls6502::ICompletionProvider}!getCompletions@{getCompletions}}
+\index{getCompletions@{getCompletions}!ls6502::ICompletionProvider@{ls6502::ICompletionProvider}}
+\doxysubsubsection{\texorpdfstring{getCompletions()}{getCompletions()}}
+{\footnotesize\ttfamily virtual std\+::vector$<$\mbox{\hyperlink{classls6502_1_1CompletionItem}{Completion\+Item}}$>$ ls6502\+::\+I\+Completion\+Provider\+::get\+Completions (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{document,  }\item[{const \mbox{\hyperlink{structls6502_1_1Position}{Position}} \&}]{position }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Pure virtual function to retrieve completion items. 
+
+\begin{DoxyReturn}{Returns}
+A vector of \mbox{\hyperlink{classls6502_1_1CompletionItem}{Completion\+Item}} objects representing the available completions. 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classls6502_1_1InstructionSetCompletionProvider_ad0a4ef35144aa9246925511cb58f3ebb}{ls6502\+::\+Instruction\+Set\+Completion\+Provider}}, \mbox{\hyperlink{classls6502_1_1InstructionSetCompletionProvider_a33a5d83e10422703abaa7808b1fa8a32}{ls6502\+::\+Instruction\+Set\+Completion\+Provider}}, and \mbox{\hyperlink{classls6502_1_1FakeCompletionProvider_ab41014bc6fabbf84de395c97abe1eafe}{ls6502\+::\+Fake\+Completion\+Provider}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+6502ls-\/completion/interface/6502ls/6502ls-\/completion/I\+Completion\+Provider.\+h\end{DoxyCompactItemize}

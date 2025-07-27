@@ -1,0 +1,111 @@
+\hypertarget{classls6502_1_1CodeAction}{}\doxysection{ls6502\+::Code\+Action Class Reference}
+\label{classls6502_1_1CodeAction}\index{ls6502::CodeAction@{ls6502::CodeAction}}
+
+
+Represents a code action as defined by L\+SP.  
+
+
+
+
+{\ttfamily \#include $<$Code\+Action.\+h$>$}
+
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classls6502_1_1CodeAction_1_1Builder}{Builder}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classls6502_1_1CodeAction_1_1Builder}{Builder}} class for constructing \mbox{\hyperlink{classls6502_1_1CodeAction}{Code\+Action}} objects. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classls6502_1_1CodeAction_a6468cce9e3c416e4b651d9377575b76b}{Code\+Action}} ()=default
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classls6502_1_1CodeAction_a1f66c74302ae044d0e3b25218ce6400f}{Code\+Action}} (const std\+::string \&title, const Code\+Action\+Kind \&code\+Action\+Kind, const bool is\+Preffered, const \mbox{\hyperlink{classls6502_1_1WorkspaceEdit}{Workspace\+Edit}} \&edit)
+\begin{DoxyCompactList}\small\item\em Constructs a \mbox{\hyperlink{classls6502_1_1CodeAction}{Code\+Action}} with given parameters. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classls6502_1_1CodeAction_a0adacf3554b68409b080f0e71a70ac79}{get\+Title}} () const
+\begin{DoxyCompactList}\small\item\em Accessor method for title. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classls6502_1_1CodeAction_a43dc838e551d8c3426b246ecc5675a44}{to\+String}} () const
+\begin{DoxyCompactList}\small\item\em Converts the \mbox{\hyperlink{classls6502_1_1CodeAction}{Code\+Action}} to a string representation. \end{DoxyCompactList}\item 
+nlohmann\+::json \mbox{\hyperlink{classls6502_1_1CodeAction_a24af6ced35c0364b2d270305d514d5cf}{to\+Json}} () const
+\begin{DoxyCompactList}\small\item\em Converts the \mbox{\hyperlink{classls6502_1_1CodeAction}{Code\+Action}} to a J\+S\+ON representation. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a code action as defined by L\+SP. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classls6502_1_1CodeAction_a6468cce9e3c416e4b651d9377575b76b}\label{classls6502_1_1CodeAction_a6468cce9e3c416e4b651d9377575b76b}} 
+\index{ls6502::CodeAction@{ls6502::CodeAction}!CodeAction@{CodeAction}}
+\index{CodeAction@{CodeAction}!ls6502::CodeAction@{ls6502::CodeAction}}
+\doxysubsubsection{\texorpdfstring{CodeAction()}{CodeAction()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily ls6502\+::\+Code\+Action\+::\+Code\+Action (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+Default constructor. 
+
+\mbox{\Hypertarget{classls6502_1_1CodeAction_a1f66c74302ae044d0e3b25218ce6400f}\label{classls6502_1_1CodeAction_a1f66c74302ae044d0e3b25218ce6400f}} 
+\index{ls6502::CodeAction@{ls6502::CodeAction}!CodeAction@{CodeAction}}
+\index{CodeAction@{CodeAction}!ls6502::CodeAction@{ls6502::CodeAction}}
+\doxysubsubsection{\texorpdfstring{CodeAction()}{CodeAction()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily ls6502\+::\+Code\+Action\+::\+Code\+Action (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{title,  }\item[{const Code\+Action\+Kind \&}]{code\+Action\+Kind,  }\item[{const bool}]{is\+Preffered,  }\item[{const \mbox{\hyperlink{classls6502_1_1WorkspaceEdit}{Workspace\+Edit}} \&}]{edit }\end{DoxyParamCaption})}
+
+
+
+Constructs a \mbox{\hyperlink{classls6502_1_1CodeAction}{Code\+Action}} with given parameters. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em title} & \\
+\hline
+\mbox{\texttt{ in}}  & {\em code\+Action\+Kind} & \\
+\hline
+\mbox{\texttt{ in}}  & {\em is\+Preffered} & \\
+\hline
+\mbox{\texttt{ in}}  & {\em edit} & \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classls6502_1_1CodeAction_a0adacf3554b68409b080f0e71a70ac79}\label{classls6502_1_1CodeAction_a0adacf3554b68409b080f0e71a70ac79}} 
+\index{ls6502::CodeAction@{ls6502::CodeAction}!getTitle@{getTitle}}
+\index{getTitle@{getTitle}!ls6502::CodeAction@{ls6502::CodeAction}}
+\doxysubsubsection{\texorpdfstring{getTitle()}{getTitle()}}
+{\footnotesize\ttfamily std\+::string ls6502\+::\+Code\+Action\+::get\+Title (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Accessor method for title. 
+
+\mbox{\Hypertarget{classls6502_1_1CodeAction_a24af6ced35c0364b2d270305d514d5cf}\label{classls6502_1_1CodeAction_a24af6ced35c0364b2d270305d514d5cf}} 
+\index{ls6502::CodeAction@{ls6502::CodeAction}!toJson@{toJson}}
+\index{toJson@{toJson}!ls6502::CodeAction@{ls6502::CodeAction}}
+\doxysubsubsection{\texorpdfstring{toJson()}{toJson()}}
+{\footnotesize\ttfamily nlohmann\+::json ls6502\+::\+Code\+Action\+::to\+Json (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Converts the \mbox{\hyperlink{classls6502_1_1CodeAction}{Code\+Action}} to a J\+S\+ON representation. 
+
+\begin{DoxyReturn}{Returns}
+A J\+S\+ON object representing the \mbox{\hyperlink{classls6502_1_1CodeAction}{Code\+Action}}. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classls6502_1_1CodeAction_a43dc838e551d8c3426b246ecc5675a44}\label{classls6502_1_1CodeAction_a43dc838e551d8c3426b246ecc5675a44}} 
+\index{ls6502::CodeAction@{ls6502::CodeAction}!toString@{toString}}
+\index{toString@{toString}!ls6502::CodeAction@{ls6502::CodeAction}}
+\doxysubsubsection{\texorpdfstring{toString()}{toString()}}
+{\footnotesize\ttfamily std\+::string ls6502\+::\+Code\+Action\+::to\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Converts the \mbox{\hyperlink{classls6502_1_1CodeAction}{Code\+Action}} to a string representation. 
+
+\begin{DoxyReturn}{Returns}
+A string representation of the \mbox{\hyperlink{classls6502_1_1CodeAction}{Code\+Action}}. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+6502ls-\/types/include/6502ls/6502ls-\/types/Code\+Action.\+h\item 
+6502ls-\/types/src/Code\+Action.\+cpp\end{DoxyCompactItemize}

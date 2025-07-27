@@ -1,0 +1,74 @@
+\hypertarget{classls6502_1_1UnsupportedInstructionDiagnosticsAnalyzer}{}\doxysection{ls6502\+::Unsupported\+Instruction\+Diagnostics\+Analyzer Class Reference}
+\label{classls6502_1_1UnsupportedInstructionDiagnosticsAnalyzer}\index{ls6502::UnsupportedInstructionDiagnosticsAnalyzer@{ls6502::UnsupportedInstructionDiagnosticsAnalyzer}}
+
+
+A diagnostics analyzer that detects and provides code actions for unsupported instructions in the document.  
+
+
+
+
+{\ttfamily \#include $<$Unsupported\+Instruction\+Diagnostics\+Analyzer.\+h$>$}
+
+
+
+Inheritance diagram for ls6502\+::Unsupported\+Instruction\+Diagnostics\+Analyzer\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=249pt]{classls6502_1_1UnsupportedInstructionDiagnosticsAnalyzer__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for ls6502\+::Unsupported\+Instruction\+Diagnostics\+Analyzer\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=249pt]{classls6502_1_1UnsupportedInstructionDiagnosticsAnalyzer__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{classls6502_1_1CodeAction}{Code\+Action}} $>$ \mbox{\hyperlink{classls6502_1_1UnsupportedInstructionDiagnosticsAnalyzer_a428905d0cf2cbc13f5d8f6246f486588}{provide\+Code\+Actions}} (const \mbox{\hyperlink{classls6502_1_1Diagnostic}{Diagnostic}} \&diagnostic, const std\+::string \&document, const std\+::string \&U\+RI) override
+\begin{DoxyCompactList}\small\item\em Provides code actions based on a given diagnostic. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A diagnostics analyzer that detects and provides code actions for unsupported instructions in the document. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classls6502_1_1UnsupportedInstructionDiagnosticsAnalyzer_a428905d0cf2cbc13f5d8f6246f486588}\label{classls6502_1_1UnsupportedInstructionDiagnosticsAnalyzer_a428905d0cf2cbc13f5d8f6246f486588}} 
+\index{ls6502::UnsupportedInstructionDiagnosticsAnalyzer@{ls6502::UnsupportedInstructionDiagnosticsAnalyzer}!provideCodeActions@{provideCodeActions}}
+\index{provideCodeActions@{provideCodeActions}!ls6502::UnsupportedInstructionDiagnosticsAnalyzer@{ls6502::UnsupportedInstructionDiagnosticsAnalyzer}}
+\doxysubsubsection{\texorpdfstring{provideCodeActions()}{provideCodeActions()}}
+{\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{classls6502_1_1CodeAction}{Code\+Action}} $>$ ls6502\+::\+Unsupported\+Instruction\+Diagnostics\+Analyzer\+::provide\+Code\+Actions (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classls6502_1_1Diagnostic}{Diagnostic}} \&}]{diagnostic,  }\item[{const std\+::string \&}]{document,  }\item[{const std\+::string \&}]{U\+RI }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Provides code actions based on a given diagnostic. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em diagnostic} & \\
+\hline
+\mbox{\texttt{ in}}  & {\em document} & \\
+\hline
+\mbox{\texttt{ in}}  & {\em U\+RI} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A vector of \mbox{\hyperlink{classls6502_1_1CodeAction}{Code\+Action}} objects representing possible fixes or improvements for the diagnostic. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classls6502_1_1IDiagnosticsAnalyzer_a0c343bba9010e13e7b75bf9047af1b62}{ls6502\+::\+I\+Diagnostics\+Analyzer}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+6502ls-\/diagnostics/include/6502ls/6502ls-\/diagnostics/Unsupported\+Instruction\+Diagnostics\+Analyzer.\+h\item 
+6502ls-\/diagnostics/src/Unsupported\+Instruction\+Diagnostics\+Analyzer.\+cpp\end{DoxyCompactItemize}

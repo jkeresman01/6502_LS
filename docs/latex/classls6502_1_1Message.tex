@@ -1,0 +1,123 @@
+\hypertarget{classls6502_1_1Message}{}\doxysection{ls6502\+::Message Class Reference}
+\label{classls6502_1_1Message}\index{ls6502::Message@{ls6502::Message}}
+
+
+Capabilities specific to the {\ttfamily text\+Document/hover} request.  
+
+
+
+
+{\ttfamily \#include $<$Hover\+Client\+Capabilities.\+h$>$}
+
+
+
+Inheritance diagram for ls6502\+::Message\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classls6502_1_1Message__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classls6502_1_1Message_a51fc4e36cd1e1a55a6ed41a2bdb16f28}{Message}} (const std\+::string \&json\+R\+PC)
+\begin{DoxyCompactList}\small\item\em Constructs the \mbox{\hyperlink{classls6502_1_1Message}{Message}} from json\+R\+PC. \end{DoxyCompactList}\item 
+virtual nlohmann\+::json \mbox{\hyperlink{classls6502_1_1Message_a97782ff096afd7f26870521c2aac012c}{to\+Json}} () const
+\begin{DoxyCompactList}\small\item\em Serializes the message to J\+S\+ON format. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{classls6502_1_1Message_ad6659f93e72f7e7e3f35374a35284c63}{m\+\_\+json\+R\+PC}}
+\begin{DoxyCompactList}\small\item\em R\+PC version, language server protocol always uses \char`\"{}2.\+0\char`\"{} as the jsonrpc version. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+std\+::ostream \& \mbox{\hyperlink{classls6502_1_1Message_a3dd7c92edf547a94ea960436c101f7c2}{operator$<$$<$}} (std\+::ostream \&os, const \mbox{\hyperlink{classls6502_1_1Message}{Message}} \&mesage)
+\begin{DoxyCompactList}\small\item\em Overloads the output stream operator for \mbox{\hyperlink{classls6502_1_1ResponseMessage}{Response\+Message}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Capabilities specific to the {\ttfamily text\+Document/hover} request. 
+
+A general message as defined by J\+S\+O\+N-\/\+R\+PC. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classls6502_1_1Message_a51fc4e36cd1e1a55a6ed41a2bdb16f28}\label{classls6502_1_1Message_a51fc4e36cd1e1a55a6ed41a2bdb16f28}} 
+\index{ls6502::Message@{ls6502::Message}!Message@{Message}}
+\index{Message@{Message}!ls6502::Message@{ls6502::Message}}
+\doxysubsubsection{\texorpdfstring{Message()}{Message()}}
+{\footnotesize\ttfamily ls6502\+::\+Message\+::\+Message (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{json\+R\+PC }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+Constructs the \mbox{\hyperlink{classls6502_1_1Message}{Message}} from json\+R\+PC. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em json\+R\+PC} & \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classls6502_1_1Message_a97782ff096afd7f26870521c2aac012c}\label{classls6502_1_1Message_a97782ff096afd7f26870521c2aac012c}} 
+\index{ls6502::Message@{ls6502::Message}!toJson@{toJson}}
+\index{toJson@{toJson}!ls6502::Message@{ls6502::Message}}
+\doxysubsubsection{\texorpdfstring{toJson()}{toJson()}}
+{\footnotesize\ttfamily nlohmann\+::json ls6502\+::\+Message\+::to\+Json (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Serializes the message to J\+S\+ON format. 
+
+\begin{DoxyReturn}{Returns}
+Returns serialized \mbox{\hyperlink{classls6502_1_1Message}{Message}} in J\+S\+ON format 
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{classls6502_1_1ResponseMessage_a62a3a8345219e7a52692286dd4b9fb8f}{ls6502\+::\+Response\+Message}}, \mbox{\hyperlink{classls6502_1_1InitializeResponse_a899bd4c7efb52bd9a7d1c60aa5016d40}{ls6502\+::\+Initialize\+Response}}, \mbox{\hyperlink{classls6502_1_1NotificationMessage_ac81e5d9dbc550cc9f863cd208214d628}{ls6502\+::\+Notification\+Message}}, \mbox{\hyperlink{classls6502_1_1PublishDiagnosticsNoticifation_a1cf50f2b8a6ee51afcd1a06f33528182}{ls6502\+::\+Publish\+Diagnostics\+Noticifation}}, \mbox{\hyperlink{classls6502_1_1CompletionResponse_aae65981d2c0d82eafa0df1b95b6de08b}{ls6502\+::\+Completion\+Response}}, \mbox{\hyperlink{classls6502_1_1ShutdownResponse_a222d17a24f620a0e8afb1c42ec634b8b}{ls6502\+::\+Shutdown\+Response}}, \mbox{\hyperlink{classls6502_1_1CodeActionResponse_a4e133356ef69428918b6f78df834dcaa}{ls6502\+::\+Code\+Action\+Response}}, and \mbox{\hyperlink{classls6502_1_1HoverResponse_a41008979949680bd9948d44782ad6dc5}{ls6502\+::\+Hover\+Response}}.
+
+
+
+\doxysubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{classls6502_1_1Message_a3dd7c92edf547a94ea960436c101f7c2}\label{classls6502_1_1Message_a3dd7c92edf547a94ea960436c101f7c2}} 
+\index{ls6502::Message@{ls6502::Message}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!ls6502::Message@{ls6502::Message}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$}{operator<<}}
+{\footnotesize\ttfamily std\+::ostream\& operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{os,  }\item[{const \mbox{\hyperlink{classls6502_1_1Message}{Message}} \&}]{mesage }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Overloads the output stream operator for \mbox{\hyperlink{classls6502_1_1ResponseMessage}{Response\+Message}}. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em out} & \\
+\hline
+\mbox{\texttt{ in}}  & {\em response\+Message} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The modified output stream. 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classls6502_1_1Message_ad6659f93e72f7e7e3f35374a35284c63}\label{classls6502_1_1Message_ad6659f93e72f7e7e3f35374a35284c63}} 
+\index{ls6502::Message@{ls6502::Message}!m\_jsonRPC@{m\_jsonRPC}}
+\index{m\_jsonRPC@{m\_jsonRPC}!ls6502::Message@{ls6502::Message}}
+\doxysubsubsection{\texorpdfstring{m\_jsonRPC}{m\_jsonRPC}}
+{\footnotesize\ttfamily std\+::string ls6502\+::\+Message\+::m\+\_\+json\+R\+PC\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+R\+PC version, language server protocol always uses \char`\"{}2.\+0\char`\"{} as the jsonrpc version. 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+6502ls-\/messages/include/6502ls/6502ls-\/messages/Message.\+h\item 
+6502ls-\/messages/src/Message.\+cpp\end{DoxyCompactItemize}

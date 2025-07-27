@@ -1,0 +1,104 @@
+\hypertarget{classls6502_1_1FakeDiagnosticsProvider}{}\doxysection{ls6502\+::Fake\+Diagnostics\+Provider Class Reference}
+\label{classls6502_1_1FakeDiagnosticsProvider}\index{ls6502::FakeDiagnosticsProvider@{ls6502::FakeDiagnosticsProvider}}
+
+
+A mock implementation of the \mbox{\hyperlink{classls6502_1_1IDiagnosticsProvider}{I\+Diagnostics\+Provider}} interface. This class is used to simulate diagnostics, providing fake diagnostic information for testing or mock scenarios.  
+
+
+
+
+{\ttfamily \#include $<$Fake\+Diagnostics\+Provider.\+h$>$}
+
+
+
+Inheritance diagram for ls6502\+::Fake\+Diagnostics\+Provider\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=254pt]{classls6502_1_1FakeDiagnosticsProvider__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for ls6502\+::Fake\+Diagnostics\+Provider\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=254pt]{classls6502_1_1FakeDiagnosticsProvider__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classls6502_1_1FakeDiagnosticsProvider_a56aafa30f830699177bf8aa6efeb2fb3}{Fake\+Diagnostics\+Provider}} ()
+\begin{DoxyCompactList}\small\item\em Mock constructor for \mbox{\hyperlink{classls6502_1_1FakeDiagnosticsProvider}{Fake\+Diagnostics\+Provider}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classls6502_1_1FakeDiagnosticsProvider_ad70a374b24bf8b58b150966354639fde}{Fake\+Diagnostics\+Provider}} (const std\+::vector$<$ \mbox{\hyperlink{classls6502_1_1Diagnostic}{Diagnostic}} $>$ \&mock\+Diagnostics)
+\begin{DoxyCompactList}\small\item\em Mock constructor for \mbox{\hyperlink{classls6502_1_1FakeDiagnosticsProvider}{Fake\+Diagnostics\+Provider}}. \end{DoxyCompactList}\item 
+std\+::vector$<$ \mbox{\hyperlink{classls6502_1_1Diagnostic}{Diagnostic}} $>$ \mbox{\hyperlink{classls6502_1_1FakeDiagnosticsProvider_ae2327a9b98985a3e3c6af99bdf26b938}{get\+Diagnostics}} (const std\+::string \&document) override
+\begin{DoxyCompactList}\small\item\em Retrieves a vector of fake diagnostics for a given document and position. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A mock implementation of the \mbox{\hyperlink{classls6502_1_1IDiagnosticsProvider}{I\+Diagnostics\+Provider}} interface. This class is used to simulate diagnostics, providing fake diagnostic information for testing or mock scenarios. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classls6502_1_1FakeDiagnosticsProvider_a56aafa30f830699177bf8aa6efeb2fb3}\label{classls6502_1_1FakeDiagnosticsProvider_a56aafa30f830699177bf8aa6efeb2fb3}} 
+\index{ls6502::FakeDiagnosticsProvider@{ls6502::FakeDiagnosticsProvider}!FakeDiagnosticsProvider@{FakeDiagnosticsProvider}}
+\index{FakeDiagnosticsProvider@{FakeDiagnosticsProvider}!ls6502::FakeDiagnosticsProvider@{ls6502::FakeDiagnosticsProvider}}
+\doxysubsubsection{\texorpdfstring{FakeDiagnosticsProvider()}{FakeDiagnosticsProvider()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily ls6502\+::\+Fake\+Diagnostics\+Provider\+::\+Fake\+Diagnostics\+Provider (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Mock constructor for \mbox{\hyperlink{classls6502_1_1FakeDiagnosticsProvider}{Fake\+Diagnostics\+Provider}}. 
+
+\mbox{\Hypertarget{classls6502_1_1FakeDiagnosticsProvider_ad70a374b24bf8b58b150966354639fde}\label{classls6502_1_1FakeDiagnosticsProvider_ad70a374b24bf8b58b150966354639fde}} 
+\index{ls6502::FakeDiagnosticsProvider@{ls6502::FakeDiagnosticsProvider}!FakeDiagnosticsProvider@{FakeDiagnosticsProvider}}
+\index{FakeDiagnosticsProvider@{FakeDiagnosticsProvider}!ls6502::FakeDiagnosticsProvider@{ls6502::FakeDiagnosticsProvider}}
+\doxysubsubsection{\texorpdfstring{FakeDiagnosticsProvider()}{FakeDiagnosticsProvider()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily ls6502\+::\+Fake\+Diagnostics\+Provider\+::\+Fake\+Diagnostics\+Provider (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ \mbox{\hyperlink{classls6502_1_1Diagnostic}{Diagnostic}} $>$ \&}]{mock\+Diagnostics }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+Mock constructor for \mbox{\hyperlink{classls6502_1_1FakeDiagnosticsProvider}{Fake\+Diagnostics\+Provider}}. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em mock\+Diagnostics} & \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classls6502_1_1FakeDiagnosticsProvider_ae2327a9b98985a3e3c6af99bdf26b938}\label{classls6502_1_1FakeDiagnosticsProvider_ae2327a9b98985a3e3c6af99bdf26b938}} 
+\index{ls6502::FakeDiagnosticsProvider@{ls6502::FakeDiagnosticsProvider}!getDiagnostics@{getDiagnostics}}
+\index{getDiagnostics@{getDiagnostics}!ls6502::FakeDiagnosticsProvider@{ls6502::FakeDiagnosticsProvider}}
+\doxysubsubsection{\texorpdfstring{getDiagnostics()}{getDiagnostics()}}
+{\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{classls6502_1_1Diagnostic}{Diagnostic}} $>$ ls6502\+::\+Fake\+Diagnostics\+Provider\+::get\+Diagnostics (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{document }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Retrieves a vector of fake diagnostics for a given document and position. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em document} & \\
+\hline
+\mbox{\texttt{ in}}  & {\em position} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A vector of \mbox{\hyperlink{classls6502_1_1Diagnostic}{Diagnostic}} objects representing the fake diagnostics. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classls6502_1_1IDiagnosticsProvider_a2f8e6a1fa4ca3c9f3941a05efc1d2f51}{ls6502\+::\+I\+Diagnostics\+Provider}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+6502ls-\/diagnostics/include/6502ls/6502ls-\/diagnostics/Fake\+Diagnostics\+Provider.\+h\item 
+6502ls-\/diagnostics/src/Fake\+Diagnostics\+Provider.\+cpp\end{DoxyCompactItemize}

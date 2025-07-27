@@ -1,0 +1,76 @@
+\hypertarget{classls6502_1_1InitializeParams}{}\doxysection{ls6502\+::Initialize\+Params Class Reference}
+\label{classls6502_1_1InitializeParams}\index{ls6502::InitializeParams@{ls6502::InitializeParams}}
+
+
+Parameters for the Initialize Request, first request send from client (editor) to server.  
+
+
+
+
+{\ttfamily \#include $<$Initialize\+Params.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classls6502_1_1InitializeParams_aa41b1e143f3f174a32e100d521067464}{Initialize\+Params}} (const nlohmann\+::json \&json\+Initialize\+Params)
+\begin{DoxyCompactList}\small\item\em Constructs the \mbox{\hyperlink{classls6502_1_1InitializeParams}{Initialize\+Params}} from J\+S\+ON R\+PC. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structls6502_1_1ClientInfo}{Client\+Info}} \mbox{\hyperlink{classls6502_1_1InitializeParams_a6d8b6611d78fb70c6b9deb528cd129f0}{get\+Client\+Info}} () const
+\begin{DoxyCompactList}\small\item\em Accessor method for Client information. \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classls6502_1_1ClientCapabilities}{Client\+Capabilities}} $>$ \mbox{\hyperlink{classls6502_1_1InitializeParams_ae83663fefce0e1d434d44daf7bbf8da4}{get\+Client\+Capabilites}} () const
+\begin{DoxyCompactList}\small\item\em Accessor method for Client capabilities. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Parameters for the Initialize Request, first request send from client (editor) to server. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classls6502_1_1InitializeParams_aa41b1e143f3f174a32e100d521067464}\label{classls6502_1_1InitializeParams_aa41b1e143f3f174a32e100d521067464}} 
+\index{ls6502::InitializeParams@{ls6502::InitializeParams}!InitializeParams@{InitializeParams}}
+\index{InitializeParams@{InitializeParams}!ls6502::InitializeParams@{ls6502::InitializeParams}}
+\doxysubsubsection{\texorpdfstring{InitializeParams()}{InitializeParams()}}
+{\footnotesize\ttfamily ls6502\+::\+Initialize\+Params\+::\+Initialize\+Params (\begin{DoxyParamCaption}\item[{const nlohmann\+::json \&}]{json\+Initialize\+Params }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+Constructs the \mbox{\hyperlink{classls6502_1_1InitializeParams}{Initialize\+Params}} from J\+S\+ON R\+PC. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em json\+R\+PC} & \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classls6502_1_1InitializeParams_ae83663fefce0e1d434d44daf7bbf8da4}\label{classls6502_1_1InitializeParams_ae83663fefce0e1d434d44daf7bbf8da4}} 
+\index{ls6502::InitializeParams@{ls6502::InitializeParams}!getClientCapabilites@{getClientCapabilites}}
+\index{getClientCapabilites@{getClientCapabilites}!ls6502::InitializeParams@{ls6502::InitializeParams}}
+\doxysubsubsection{\texorpdfstring{getClientCapabilites()}{getClientCapabilites()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classls6502_1_1ClientCapabilities}{Client\+Capabilities}}$>$ ls6502\+::\+Initialize\+Params\+::get\+Client\+Capabilites (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Accessor method for Client capabilities. 
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{classls6502_1_1ClientCapabilities}{Client\+Capabilities}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classls6502_1_1InitializeParams_a6d8b6611d78fb70c6b9deb528cd129f0}\label{classls6502_1_1InitializeParams_a6d8b6611d78fb70c6b9deb528cd129f0}} 
+\index{ls6502::InitializeParams@{ls6502::InitializeParams}!getClientInfo@{getClientInfo}}
+\index{getClientInfo@{getClientInfo}!ls6502::InitializeParams@{ls6502::InitializeParams}}
+\doxysubsubsection{\texorpdfstring{getClientInfo()}{getClientInfo()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structls6502_1_1ClientInfo}{Client\+Info}} ls6502\+::\+Initialize\+Params\+::get\+Client\+Info (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Accessor method for Client information. 
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{structls6502_1_1ClientInfo}{Client\+Info}} 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+6502ls-\/params/include/6502ls/6502ls-\/params/Initialize\+Params.\+h\item 
+6502ls-\/params/src/Initialize\+Params.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,6 @@
+<map id="ls6502::IDiagnosticsAnalyzer" name="ls6502::IDiagnosticsAnalyzer">
+<area shape="rect" id="node1" title="Interface for analyzing diagnostics and providing code actions based on detected issues in a document..." alt="" coords="5,78,216,105"/>
+<area shape="rect" id="node2" href="$classls6502_1_1IncorrectLabelDiagnosticsAnalyzer.html" title="A diagnostics analyzer that detects and provides code actions for incorrect labels in the document." alt="" coords="264,5,505,47"/>
+<area shape="rect" id="node3" href="$classls6502_1_1UnsupportedInstructionDiagnosticsAnalyzer.html" title="A diagnostics analyzer that detects and provides code actions for unsupported instructions in the doc..." alt="" coords="272,71,497,112"/>
+<area shape="rect" id="node4" href="$classls6502_1_1WrongInstructionUsageDiagnosticsAnalyzer.html" title="A diagnostics analyzer that detects and provides code actions for incorrect usage of instructions in ..." alt="" coords="287,136,483,177"/>
+</map>

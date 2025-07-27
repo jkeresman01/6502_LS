@@ -1,0 +1,9 @@
+<map id="ls6502::ResponseMessage" name="ls6502::ResponseMessage">
+<area shape="rect" id="node1" title="Represents a response message in the JSON&#45;RPC protocol. This message can either be a successful respo..." alt="" coords="184,107,379,133"/>
+<area shape="rect" id="node3" href="$classls6502_1_1CodeActionResponse.html" title="Represents a response message for a code action request." alt="" coords="427,5,637,32"/>
+<area shape="rect" id="node4" href="$classls6502_1_1CompletionResponse.html" title="Represents a response message for a completion request in the language server protocol." alt="" coords="427,56,637,83"/>
+<area shape="rect" id="node5" href="$classls6502_1_1HoverResponse.html" title="Represents a response message for a hover request." alt="" coords="445,107,619,133"/>
+<area shape="rect" id="node6" href="$classls6502_1_1InitializeResponse.html" title="Represents the response to an &quot;initialize&quot; request in the language server protocol (LSP)." alt="" coords="436,157,628,184"/>
+<area shape="rect" id="node7" href="$classls6502_1_1ShutdownResponse.html" title="Represents a response message for the &quot;shutdown&quot; request in the JSON&#45;RPC protocol." alt="" coords="432,208,632,235"/>
+<area shape="rect" id="node2" href="$classls6502_1_1Message.html" title="Capabilities specific to the textDocument/hover request." alt="" coords="5,107,136,133"/>
+</map>

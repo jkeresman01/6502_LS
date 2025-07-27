@@ -1,0 +1,63 @@
+\hypertarget{classls6502_1_1IDiagnosticsAnalyzer}{}\doxysection{ls6502\+::I\+Diagnostics\+Analyzer Class Reference}
+\label{classls6502_1_1IDiagnosticsAnalyzer}\index{ls6502::IDiagnosticsAnalyzer@{ls6502::IDiagnosticsAnalyzer}}
+
+
+Interface for analyzing diagnostics and providing code actions based on detected issues in a document.  
+
+
+
+
+{\ttfamily \#include $<$I\+Diagnostics\+Analyzer.\+h$>$}
+
+
+
+Inheritance diagram for ls6502\+::I\+Diagnostics\+Analyzer\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classls6502_1_1IDiagnosticsAnalyzer__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual std\+::vector$<$ \mbox{\hyperlink{classls6502_1_1CodeAction}{Code\+Action}} $>$ \mbox{\hyperlink{classls6502_1_1IDiagnosticsAnalyzer_a0c343bba9010e13e7b75bf9047af1b62}{provide\+Code\+Actions}} (const \mbox{\hyperlink{classls6502_1_1Diagnostic}{Diagnostic}} \&diagnostic, const std\+::string \&document, const std\+::string \&U\+RI)=0
+\begin{DoxyCompactList}\small\item\em Pure virtual function to provide code actions based on a given diagnostic and document. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Interface for analyzing diagnostics and providing code actions based on detected issues in a document. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classls6502_1_1IDiagnosticsAnalyzer_a0c343bba9010e13e7b75bf9047af1b62}\label{classls6502_1_1IDiagnosticsAnalyzer_a0c343bba9010e13e7b75bf9047af1b62}} 
+\index{ls6502::IDiagnosticsAnalyzer@{ls6502::IDiagnosticsAnalyzer}!provideCodeActions@{provideCodeActions}}
+\index{provideCodeActions@{provideCodeActions}!ls6502::IDiagnosticsAnalyzer@{ls6502::IDiagnosticsAnalyzer}}
+\doxysubsubsection{\texorpdfstring{provideCodeActions()}{provideCodeActions()}}
+{\footnotesize\ttfamily virtual std\+::vector$<$\mbox{\hyperlink{classls6502_1_1CodeAction}{Code\+Action}}$>$ ls6502\+::\+I\+Diagnostics\+Analyzer\+::provide\+Code\+Actions (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classls6502_1_1Diagnostic}{Diagnostic}} \&}]{diagnostic,  }\item[{const std\+::string \&}]{document,  }\item[{const std\+::string \&}]{U\+RI }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Pure virtual function to provide code actions based on a given diagnostic and document. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em diagnostic} & \\
+\hline
+\mbox{\texttt{ in}}  & {\em document} & \\
+\hline
+\mbox{\texttt{ in}}  & {\em U\+RI} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A vector of \mbox{\hyperlink{classls6502_1_1CodeAction}{Code\+Action}} objects representing the available fixes or suggestions for the diagnostic. 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classls6502_1_1UnsupportedInstructionDiagnosticsAnalyzer_a428905d0cf2cbc13f5d8f6246f486588}{ls6502\+::\+Unsupported\+Instruction\+Diagnostics\+Analyzer}}, \mbox{\hyperlink{classls6502_1_1WrongInstructionUsageDiagnosticsAnalyzer_a4c9c3bd20d973d2a6dd4c5dd47d0b73c}{ls6502\+::\+Wrong\+Instruction\+Usage\+Diagnostics\+Analyzer}}, \mbox{\hyperlink{classls6502_1_1IncorrectLabelDiagnosticsAnalyzer_af6523b05749b16952181e76d7ff42e42}{ls6502\+::\+Incorrect\+Label\+Diagnostics\+Analyzer}}, and \mbox{\hyperlink{classls6502_1_1IncorrectLabelDiagnosticsAnalyzer_ada32b4fe0fa103001a3a4fc89de88bf5}{ls6502\+::\+Incorrect\+Label\+Diagnostics\+Analyzer}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+6502ls-\/diagnostics/interface/6502ls/6502ls-\/diagnostics/I\+Diagnostics\+Analyzer.\+h\end{DoxyCompactItemize}

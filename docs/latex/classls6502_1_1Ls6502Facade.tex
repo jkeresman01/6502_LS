@@ -1,0 +1,70 @@
+\hypertarget{classls6502_1_1Ls6502Facade}{}\doxysection{ls6502\+::Ls6502\+Facade Class Reference}
+\label{classls6502_1_1Ls6502Facade}\index{ls6502::Ls6502Facade@{ls6502::Ls6502Facade}}
+
+
+Single simplified interface for handling L\+SP request messages.  
+
+
+
+
+{\ttfamily \#include $<$Ls6502\+Facade.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classls6502_1_1Ls6502Facade_a581950c27fe4cc43a3bfdaadafb8bb77}{Ls6502\+Facade}} (const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classls6502_1_1DependencyContainer}{Dependency\+Container}} $>$ \&depency\+Container)
+\begin{DoxyCompactList}\small\item\em Constructors (default, copy, move) and assignment operators. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classls6502_1_1Ls6502Facade_ad8ca50f6fa2e5cf471bfa798100fd6e2}\label{classls6502_1_1Ls6502Facade_ad8ca50f6fa2e5cf471bfa798100fd6e2}} 
+{\bfseries Ls6502\+Facade} (const \mbox{\hyperlink{classls6502_1_1Ls6502Facade}{Ls6502\+Facade}} \&)=delete
+\item 
+\mbox{\Hypertarget{classls6502_1_1Ls6502Facade_a664e025c46b3ecf01c019dd3d8654958}\label{classls6502_1_1Ls6502Facade_a664e025c46b3ecf01c019dd3d8654958}} 
+{\bfseries Ls6502\+Facade} (\mbox{\hyperlink{classls6502_1_1Ls6502Facade}{Ls6502\+Facade}} \&\&)=delete
+\item 
+\mbox{\Hypertarget{classls6502_1_1Ls6502Facade_a4efa3db9cd98aaf05f2ac47300de8c48}\label{classls6502_1_1Ls6502Facade_a4efa3db9cd98aaf05f2ac47300de8c48}} 
+\mbox{\hyperlink{classls6502_1_1Ls6502Facade}{Ls6502\+Facade}} \& {\bfseries operator=} (const \mbox{\hyperlink{classls6502_1_1Ls6502Facade}{Ls6502\+Facade}} \&)=delete
+\item 
+\mbox{\Hypertarget{classls6502_1_1Ls6502Facade_a38074e19f278ed0380bd0836e18f1ffc}\label{classls6502_1_1Ls6502Facade_a38074e19f278ed0380bd0836e18f1ffc}} 
+\mbox{\hyperlink{classls6502_1_1Ls6502Facade}{Ls6502\+Facade}} \& {\bfseries operator=} (\mbox{\hyperlink{classls6502_1_1Ls6502Facade}{Ls6502\+Facade}} \&\&)=delete
+\item 
+void \mbox{\hyperlink{classls6502_1_1Ls6502Facade_a72a831ad066e39f5ad622a393ba4c28d}{handle\+Request}} (const nlohmann\+::json \&request)
+\begin{DoxyCompactList}\small\item\em Interface for handling all L\+SP requests. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Single simplified interface for handling L\+SP request messages. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classls6502_1_1Ls6502Facade_a581950c27fe4cc43a3bfdaadafb8bb77}\label{classls6502_1_1Ls6502Facade_a581950c27fe4cc43a3bfdaadafb8bb77}} 
+\index{ls6502::Ls6502Facade@{ls6502::Ls6502Facade}!Ls6502Facade@{Ls6502Facade}}
+\index{Ls6502Facade@{Ls6502Facade}!ls6502::Ls6502Facade@{ls6502::Ls6502Facade}}
+\doxysubsubsection{\texorpdfstring{Ls6502Facade()}{Ls6502Facade()}}
+{\footnotesize\ttfamily ls6502\+::\+Ls6502\+Facade\+::\+Ls6502\+Facade (\begin{DoxyParamCaption}\item[{const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classls6502_1_1DependencyContainer}{Dependency\+Container}} $>$ \&}]{depency\+Container }\end{DoxyParamCaption})}
+
+
+
+Constructors (default, copy, move) and assignment operators. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classls6502_1_1Ls6502Facade_a72a831ad066e39f5ad622a393ba4c28d}\label{classls6502_1_1Ls6502Facade_a72a831ad066e39f5ad622a393ba4c28d}} 
+\index{ls6502::Ls6502Facade@{ls6502::Ls6502Facade}!handleRequest@{handleRequest}}
+\index{handleRequest@{handleRequest}!ls6502::Ls6502Facade@{ls6502::Ls6502Facade}}
+\doxysubsubsection{\texorpdfstring{handleRequest()}{handleRequest()}}
+{\footnotesize\ttfamily void ls6502\+::\+Ls6502\+Facade\+::handle\+Request (\begin{DoxyParamCaption}\item[{const nlohmann\+::json \&}]{request }\end{DoxyParamCaption})}
+
+
+
+Interface for handling all L\+SP requests. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em String} & representation of incoming request \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+6502ls-\/core/include/6502ls/6502ls-\/core/Ls6502\+Facade.\+h\item 
+6502ls-\/core/src/Ls6502\+Facade.\+cpp\end{DoxyCompactItemize}

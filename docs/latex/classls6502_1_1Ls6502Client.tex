@@ -1,0 +1,164 @@
+\hypertarget{classls6502_1_1Ls6502Client}{}\doxysection{ls6502\+::Ls6502\+Client Class Reference}
+\label{classls6502_1_1Ls6502Client}\index{ls6502::Ls6502Client@{ls6502::Ls6502Client}}
+
+
+Represent the client that connects to Ls6502 server.  
+
+
+
+
+{\ttfamily \#include $<$Ls6502\+Client.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classls6502_1_1Ls6502Client_a3b490ec387c850275ff902210371d10f}{Ls6502\+Client}} ()=default
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classls6502_1_1Ls6502Client_a1bb86b43c8f694c1fdce38011c3a0fb6}{Ls6502\+Client}} (const \mbox{\hyperlink{structls6502_1_1ClientInfo}{Client\+Info}} \&client\+Info, const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classls6502_1_1ClientCapabilities}{Client\+Capabilities}} $>$ \&client\+Capabilites)
+\begin{DoxyCompactList}\small\item\em Constructor that saves client info and registers clients capabilities. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classls6502_1_1Ls6502Client_a9a57caad7ac98c6443eea1ed6ea41d89}{register\+Capabilites}} (const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classls6502_1_1ClientCapabilities}{Client\+Capabilities}} $>$ \&client\+Capabilites)
+\begin{DoxyCompactList}\small\item\em Registers client capabilities (features supported by the editor or tool) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classls6502_1_1Ls6502Client_a925be2ef72e9f384594bdfbdd91ede5c}{save\+Info}} (const \mbox{\hyperlink{structls6502_1_1ClientInfo}{Client\+Info}} \&client\+Info)
+\begin{DoxyCompactList}\small\item\em Saves info about the client (name and version) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classls6502_1_1Ls6502Client_a2dc1574fcff6d8d3e4e8bd3140616e97}{add\+Document}} (const std\+::string \&U\+RI, const std\+::string \&document)
+\begin{DoxyCompactList}\small\item\em Adds new document to keep track of. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classls6502_1_1Ls6502Client_af443d7e98a614a5b9b99cf6dd46bcb38}{update\+Document\+With\+U\+RI}} (const std\+::string \&U\+RI, const std\+::string \&document)
+\begin{DoxyCompactList}\small\item\em Adds new document to keep track of. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classls6502_1_1Ls6502Client_a7045573e4fe67bc2cf3c61a4dfcaa6c1}{get\+Document\+By\+U\+RI}} (const std\+::string \&U\+RI) const
+\begin{DoxyCompactList}\small\item\em Gets document by provided U\+RI. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classls6502_1_1Ls6502Client_a99cb43c59ca07b1784372dd4594dddac}{get\+Info}} () const
+\begin{DoxyCompactList}\small\item\em Gets string represenation of client information. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represent the client that connects to Ls6502 server. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classls6502_1_1Ls6502Client_a3b490ec387c850275ff902210371d10f}\label{classls6502_1_1Ls6502Client_a3b490ec387c850275ff902210371d10f}} 
+\index{ls6502::Ls6502Client@{ls6502::Ls6502Client}!Ls6502Client@{Ls6502Client}}
+\index{Ls6502Client@{Ls6502Client}!ls6502::Ls6502Client@{ls6502::Ls6502Client}}
+\doxysubsubsection{\texorpdfstring{Ls6502Client()}{Ls6502Client()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily ls6502\+::\+Ls6502\+Client\+::\+Ls6502\+Client (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+Default constructor. 
+
+\mbox{\Hypertarget{classls6502_1_1Ls6502Client_a1bb86b43c8f694c1fdce38011c3a0fb6}\label{classls6502_1_1Ls6502Client_a1bb86b43c8f694c1fdce38011c3a0fb6}} 
+\index{ls6502::Ls6502Client@{ls6502::Ls6502Client}!Ls6502Client@{Ls6502Client}}
+\index{Ls6502Client@{Ls6502Client}!ls6502::Ls6502Client@{ls6502::Ls6502Client}}
+\doxysubsubsection{\texorpdfstring{Ls6502Client()}{Ls6502Client()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily ls6502\+::\+Ls6502\+Client\+::\+Ls6502\+Client (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structls6502_1_1ClientInfo}{Client\+Info}} \&}]{client\+Info,  }\item[{const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classls6502_1_1ClientCapabilities}{Client\+Capabilities}} $>$ \&}]{client\+Capabilites }\end{DoxyParamCaption})}
+
+
+
+Constructor that saves client info and registers clients capabilities. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em client\+Info} & \\
+\hline
+\mbox{\texttt{ in}}  & {\em client\+Capabilites} & \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classls6502_1_1Ls6502Client_a2dc1574fcff6d8d3e4e8bd3140616e97}\label{classls6502_1_1Ls6502Client_a2dc1574fcff6d8d3e4e8bd3140616e97}} 
+\index{ls6502::Ls6502Client@{ls6502::Ls6502Client}!addDocument@{addDocument}}
+\index{addDocument@{addDocument}!ls6502::Ls6502Client@{ls6502::Ls6502Client}}
+\doxysubsubsection{\texorpdfstring{addDocument()}{addDocument()}}
+{\footnotesize\ttfamily void ls6502\+::\+Ls6502\+Client\+::add\+Document (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{U\+RI,  }\item[{const std\+::string \&}]{document }\end{DoxyParamCaption})}
+
+
+
+Adds new document to keep track of. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em U\+RI} & \\
+\hline
+\mbox{\texttt{ in}}  & {\em document} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classls6502_1_1Ls6502Client_a7045573e4fe67bc2cf3c61a4dfcaa6c1}\label{classls6502_1_1Ls6502Client_a7045573e4fe67bc2cf3c61a4dfcaa6c1}} 
+\index{ls6502::Ls6502Client@{ls6502::Ls6502Client}!getDocumentByURI@{getDocumentByURI}}
+\index{getDocumentByURI@{getDocumentByURI}!ls6502::Ls6502Client@{ls6502::Ls6502Client}}
+\doxysubsubsection{\texorpdfstring{getDocumentByURI()}{getDocumentByURI()}}
+{\footnotesize\ttfamily std\+::optional$<$ std\+::string $>$ ls6502\+::\+Ls6502\+Client\+::get\+Document\+By\+U\+RI (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{U\+RI }\end{DoxyParamCaption}) const}
+
+
+
+Gets document by provided U\+RI. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em U\+RI} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classls6502_1_1Ls6502Client_a99cb43c59ca07b1784372dd4594dddac}\label{classls6502_1_1Ls6502Client_a99cb43c59ca07b1784372dd4594dddac}} 
+\index{ls6502::Ls6502Client@{ls6502::Ls6502Client}!getInfo@{getInfo}}
+\index{getInfo@{getInfo}!ls6502::Ls6502Client@{ls6502::Ls6502Client}}
+\doxysubsubsection{\texorpdfstring{getInfo()}{getInfo()}}
+{\footnotesize\ttfamily std\+::string ls6502\+::\+Ls6502\+Client\+::get\+Info (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets string represenation of client information. 
+
+\begin{DoxyReturn}{Returns}
+client\+Info 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classls6502_1_1Ls6502Client_a9a57caad7ac98c6443eea1ed6ea41d89}\label{classls6502_1_1Ls6502Client_a9a57caad7ac98c6443eea1ed6ea41d89}} 
+\index{ls6502::Ls6502Client@{ls6502::Ls6502Client}!registerCapabilites@{registerCapabilites}}
+\index{registerCapabilites@{registerCapabilites}!ls6502::Ls6502Client@{ls6502::Ls6502Client}}
+\doxysubsubsection{\texorpdfstring{registerCapabilites()}{registerCapabilites()}}
+{\footnotesize\ttfamily void ls6502\+::\+Ls6502\+Client\+::register\+Capabilites (\begin{DoxyParamCaption}\item[{const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classls6502_1_1ClientCapabilities}{Client\+Capabilities}} $>$ \&}]{client\+Capabilites }\end{DoxyParamCaption})}
+
+
+
+Registers client capabilities (features supported by the editor or tool) 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em client\+Capabilites} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classls6502_1_1Ls6502Client_a925be2ef72e9f384594bdfbdd91ede5c}\label{classls6502_1_1Ls6502Client_a925be2ef72e9f384594bdfbdd91ede5c}} 
+\index{ls6502::Ls6502Client@{ls6502::Ls6502Client}!saveInfo@{saveInfo}}
+\index{saveInfo@{saveInfo}!ls6502::Ls6502Client@{ls6502::Ls6502Client}}
+\doxysubsubsection{\texorpdfstring{saveInfo()}{saveInfo()}}
+{\footnotesize\ttfamily void ls6502\+::\+Ls6502\+Client\+::save\+Info (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structls6502_1_1ClientInfo}{Client\+Info}} \&}]{client\+Info }\end{DoxyParamCaption})}
+
+
+
+Saves info about the client (name and version) 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em client\+Info} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classls6502_1_1Ls6502Client_af443d7e98a614a5b9b99cf6dd46bcb38}\label{classls6502_1_1Ls6502Client_af443d7e98a614a5b9b99cf6dd46bcb38}} 
+\index{ls6502::Ls6502Client@{ls6502::Ls6502Client}!updateDocumentWithURI@{updateDocumentWithURI}}
+\index{updateDocumentWithURI@{updateDocumentWithURI}!ls6502::Ls6502Client@{ls6502::Ls6502Client}}
+\doxysubsubsection{\texorpdfstring{updateDocumentWithURI()}{updateDocumentWithURI()}}
+{\footnotesize\ttfamily void ls6502\+::\+Ls6502\+Client\+::update\+Document\+With\+U\+RI (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{U\+RI,  }\item[{const std\+::string \&}]{document }\end{DoxyParamCaption})}
+
+
+
+Adds new document to keep track of. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em U\+RI} & \\
+\hline
+\mbox{\texttt{ in}}  & {\em document} & \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+6502ls-\/core/include/6502ls/6502ls-\/core/Ls6502\+Client.\+h\item 
+6502ls-\/core/src/Ls6502\+Client.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,85 @@
+\hypertarget{classls6502_1_1DiagnosticsProvider}{}\doxysection{ls6502\+::Diagnostics\+Provider Class Reference}
+\label{classls6502_1_1DiagnosticsProvider}\index{ls6502::DiagnosticsProvider@{ls6502::DiagnosticsProvider}}
+
+
+Provides diagnostics for assembly code.  
+
+
+
+
+{\ttfamily \#include $<$Diagnostics\+Provider.\+h$>$}
+
+
+
+Inheritance diagram for ls6502\+::Diagnostics\+Provider\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=235pt]{classls6502_1_1DiagnosticsProvider__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for ls6502\+::Diagnostics\+Provider\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=235pt]{classls6502_1_1DiagnosticsProvider__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classls6502_1_1DiagnosticsProvider_a052e07767a11075b584871e091e87ce5}{Diagnostics\+Provider}} ()
+\begin{DoxyCompactList}\small\item\em Constructor for \mbox{\hyperlink{classls6502_1_1DiagnosticsProvider}{Diagnostics\+Provider}}. \end{DoxyCompactList}\item 
+std\+::vector$<$ \mbox{\hyperlink{classls6502_1_1Diagnostic}{Diagnostic}} $>$ \mbox{\hyperlink{classls6502_1_1DiagnosticsProvider_ab533f9b88e35bb2bb4378a6e8292d4e6}{get\+Diagnostics}} (const std\+::string \&document) override
+\begin{DoxyCompactList}\small\item\em Retrieves diagnostics for a given document. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Provides diagnostics for assembly code. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classls6502_1_1DiagnosticsProvider_a052e07767a11075b584871e091e87ce5}\label{classls6502_1_1DiagnosticsProvider_a052e07767a11075b584871e091e87ce5}} 
+\index{ls6502::DiagnosticsProvider@{ls6502::DiagnosticsProvider}!DiagnosticsProvider@{DiagnosticsProvider}}
+\index{DiagnosticsProvider@{DiagnosticsProvider}!ls6502::DiagnosticsProvider@{ls6502::DiagnosticsProvider}}
+\doxysubsubsection{\texorpdfstring{DiagnosticsProvider()}{DiagnosticsProvider()}}
+{\footnotesize\ttfamily ls6502\+::\+Diagnostics\+Provider\+::\+Diagnostics\+Provider (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Constructor for \mbox{\hyperlink{classls6502_1_1DiagnosticsProvider}{Diagnostics\+Provider}}. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classls6502_1_1DiagnosticsProvider_ab533f9b88e35bb2bb4378a6e8292d4e6}\label{classls6502_1_1DiagnosticsProvider_ab533f9b88e35bb2bb4378a6e8292d4e6}} 
+\index{ls6502::DiagnosticsProvider@{ls6502::DiagnosticsProvider}!getDiagnostics@{getDiagnostics}}
+\index{getDiagnostics@{getDiagnostics}!ls6502::DiagnosticsProvider@{ls6502::DiagnosticsProvider}}
+\doxysubsubsection{\texorpdfstring{getDiagnostics()}{getDiagnostics()}}
+{\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{classls6502_1_1Diagnostic}{Diagnostic}} $>$ ls6502\+::\+Diagnostics\+Provider\+::get\+Diagnostics (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{document }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Retrieves diagnostics for a given document. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em document} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A vector of diagnostic issues found in the document 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classls6502_1_1IDiagnosticsProvider_a2f8e6a1fa4ca3c9f3941a05efc1d2f51}{ls6502\+::\+I\+Diagnostics\+Provider}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+6502ls-\/diagnostics/include/6502ls/6502ls-\/diagnostics/Diagnostics\+Provider.\+h\item 
+6502ls-\/diagnostics/src/Diagnostics\+Provider.\+cpp\end{DoxyCompactItemize}

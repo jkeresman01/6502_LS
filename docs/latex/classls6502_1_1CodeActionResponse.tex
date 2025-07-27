@@ -1,0 +1,118 @@
+\hypertarget{classls6502_1_1CodeActionResponse}{}\doxysection{ls6502\+::Code\+Action\+Response Class Reference}
+\label{classls6502_1_1CodeActionResponse}\index{ls6502::CodeActionResponse@{ls6502::CodeActionResponse}}
+
+
+Represents a response message for a code action request.  
+
+
+
+
+{\ttfamily \#include $<$Code\+Action\+Response.\+h$>$}
+
+
+
+Inheritance diagram for ls6502\+::Code\+Action\+Response\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=238pt]{classls6502_1_1CodeActionResponse__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for ls6502\+::Code\+Action\+Response\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=238pt]{classls6502_1_1CodeActionResponse__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classls6502_1_1CodeActionResponse_adef56269f852c6631327fb55bcbc58ff}{Code\+Action\+Response}} (const std\+::string \&json\+R\+PC, const int64\+\_\+t id, const \mbox{\hyperlink{classls6502_1_1CodeActionResult}{Code\+Action\+Result}} \&code\+Action\+Result)
+\begin{DoxyCompactList}\small\item\em Constructs a \mbox{\hyperlink{classls6502_1_1CodeActionResponse}{Code\+Action\+Response}} with given parameters. \end{DoxyCompactList}\item 
+virtual nlohmann\+::json \mbox{\hyperlink{classls6502_1_1CodeActionResponse_a4e133356ef69428918b6f78df834dcaa}{to\+Json}} () const override
+\begin{DoxyCompactList}\small\item\em Converts the \mbox{\hyperlink{classls6502_1_1CodeActionResponse}{Code\+Action\+Response}} to a J\+S\+ON representation. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+std\+::ostream \& \mbox{\hyperlink{classls6502_1_1CodeActionResponse_a43410df1d4eb97487f2dabf2143cd15f}{operator$<$$<$}} (std\+::ostream \&os, const \mbox{\hyperlink{classls6502_1_1CodeActionResponse}{Code\+Action\+Response}} \&code\+Action\+Response)
+\begin{DoxyCompactList}\small\item\em Overloads the output stream operator for \mbox{\hyperlink{classls6502_1_1CodeActionResponse}{Code\+Action\+Response}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Represents a response message for a code action request. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classls6502_1_1CodeActionResponse_adef56269f852c6631327fb55bcbc58ff}\label{classls6502_1_1CodeActionResponse_adef56269f852c6631327fb55bcbc58ff}} 
+\index{ls6502::CodeActionResponse@{ls6502::CodeActionResponse}!CodeActionResponse@{CodeActionResponse}}
+\index{CodeActionResponse@{CodeActionResponse}!ls6502::CodeActionResponse@{ls6502::CodeActionResponse}}
+\doxysubsubsection{\texorpdfstring{CodeActionResponse()}{CodeActionResponse()}}
+{\footnotesize\ttfamily ls6502\+::\+Code\+Action\+Response\+::\+Code\+Action\+Response (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{json\+R\+PC,  }\item[{const int64\+\_\+t}]{id,  }\item[{const \mbox{\hyperlink{classls6502_1_1CodeActionResult}{Code\+Action\+Result}} \&}]{code\+Action\+Result }\end{DoxyParamCaption})}
+
+
+
+Constructs a \mbox{\hyperlink{classls6502_1_1CodeActionResponse}{Code\+Action\+Response}} with given parameters. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em json\+R\+PC} & \\
+\hline
+\mbox{\texttt{ in}}  & {\em id} & \\
+\hline
+\mbox{\texttt{ in}}  & {\em hover\+Result} & \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classls6502_1_1CodeActionResponse_a4e133356ef69428918b6f78df834dcaa}\label{classls6502_1_1CodeActionResponse_a4e133356ef69428918b6f78df834dcaa}} 
+\index{ls6502::CodeActionResponse@{ls6502::CodeActionResponse}!toJson@{toJson}}
+\index{toJson@{toJson}!ls6502::CodeActionResponse@{ls6502::CodeActionResponse}}
+\doxysubsubsection{\texorpdfstring{toJson()}{toJson()}}
+{\footnotesize\ttfamily nlohmann\+::json ls6502\+::\+Code\+Action\+Response\+::to\+Json (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Converts the \mbox{\hyperlink{classls6502_1_1CodeActionResponse}{Code\+Action\+Response}} to a J\+S\+ON representation. 
+
+\begin{DoxyReturn}{Returns}
+A J\+S\+ON object representing the \mbox{\hyperlink{classls6502_1_1CodeActionResponse}{Code\+Action\+Response}}. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classls6502_1_1ResponseMessage_a62a3a8345219e7a52692286dd4b9fb8f}{ls6502\+::\+Response\+Message}}.
+
+
+
+\doxysubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{classls6502_1_1CodeActionResponse_a43410df1d4eb97487f2dabf2143cd15f}\label{classls6502_1_1CodeActionResponse_a43410df1d4eb97487f2dabf2143cd15f}} 
+\index{ls6502::CodeActionResponse@{ls6502::CodeActionResponse}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!ls6502::CodeActionResponse@{ls6502::CodeActionResponse}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$}{operator<<}}
+{\footnotesize\ttfamily std\+::ostream\& operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{os,  }\item[{const \mbox{\hyperlink{classls6502_1_1CodeActionResponse}{Code\+Action\+Response}} \&}]{code\+Action\+Response }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Overloads the output stream operator for \mbox{\hyperlink{classls6502_1_1CodeActionResponse}{Code\+Action\+Response}}. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em os} & \\
+\hline
+\mbox{\texttt{ in}}  & {\em code\+Action\+Response} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The modified output stream. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+6502ls-\/messages/include/6502ls/6502ls-\/messages/response/Code\+Action\+Response.\+h\item 
+6502ls-\/messages/src/Code\+Action\+Response.\+cpp\end{DoxyCompactItemize}

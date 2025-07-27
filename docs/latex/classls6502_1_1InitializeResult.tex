@@ -1,0 +1,108 @@
+\hypertarget{classls6502_1_1InitializeResult}{}\doxysection{ls6502\+::Initialize\+Result Class Reference}
+\label{classls6502_1_1InitializeResult}\index{ls6502::InitializeResult@{ls6502::InitializeResult}}
+
+
+Represents the response to an \char`\"{}initialize\char`\"{} request in the language server protocol (L\+SP).  
+
+
+
+
+{\ttfamily \#include $<$Initialize\+Result.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classls6502_1_1InitializeResult_a8b1bdb58bef2b7686e7c35a39d1f9893}{Initialize\+Result}} (const \mbox{\hyperlink{structls6502_1_1ServerInfo}{Server\+Info}} \&server\+Info, const \mbox{\hyperlink{classls6502_1_1ServerCapabilities}{Server\+Capabilities}} \&server\+Capabilities)
+\begin{DoxyCompactList}\small\item\em Constructs an \mbox{\hyperlink{classls6502_1_1InitializeResult}{Initialize\+Result}} with the provided server info and capabilities. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structls6502_1_1ServerInfo}{Server\+Info}} \mbox{\hyperlink{classls6502_1_1InitializeResult_a9f3b6fc77b41844e1b292f4f51c54a37}{get\+Server\+Info}} () const
+\begin{DoxyCompactList}\small\item\em Retrieves the server info. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classls6502_1_1ServerCapabilities}{Server\+Capabilities}} \mbox{\hyperlink{classls6502_1_1InitializeResult_a58734e6cb10be1d1f410251d9e3c86a6}{get\+Server\+Capabilities}} () const
+\begin{DoxyCompactList}\small\item\em Retrieves the server capabilities. \end{DoxyCompactList}\item 
+nlohmann\+::json \mbox{\hyperlink{classls6502_1_1InitializeResult_a96b6696dfd9c1bc2d4e8741076dc6412}{to\+Json}} () const
+\begin{DoxyCompactList}\small\item\em Serializes the \mbox{\hyperlink{classls6502_1_1InitializeResult}{Initialize\+Result}} to J\+S\+ON format. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classls6502_1_1InitializeResult_a6dacdb6838b41f01a645312df0d03c47}{to\+String}} () const
+\begin{DoxyCompactList}\small\item\em String representation of \mbox{\hyperlink{classls6502_1_1InitializeResult}{Initialize\+Result}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents the response to an \char`\"{}initialize\char`\"{} request in the language server protocol (L\+SP). 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classls6502_1_1InitializeResult_a8b1bdb58bef2b7686e7c35a39d1f9893}\label{classls6502_1_1InitializeResult_a8b1bdb58bef2b7686e7c35a39d1f9893}} 
+\index{ls6502::InitializeResult@{ls6502::InitializeResult}!InitializeResult@{InitializeResult}}
+\index{InitializeResult@{InitializeResult}!ls6502::InitializeResult@{ls6502::InitializeResult}}
+\doxysubsubsection{\texorpdfstring{InitializeResult()}{InitializeResult()}}
+{\footnotesize\ttfamily ls6502\+::\+Initialize\+Result\+::\+Initialize\+Result (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structls6502_1_1ServerInfo}{Server\+Info}} \&}]{server\+Info,  }\item[{const \mbox{\hyperlink{classls6502_1_1ServerCapabilities}{Server\+Capabilities}} \&}]{server\+Capabilities }\end{DoxyParamCaption})}
+
+
+
+Constructs an \mbox{\hyperlink{classls6502_1_1InitializeResult}{Initialize\+Result}} with the provided server info and capabilities. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em server\+Info} & \\
+\hline
+\mbox{\texttt{ in}}  & {\em server\+Capabilities} & \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classls6502_1_1InitializeResult_a58734e6cb10be1d1f410251d9e3c86a6}\label{classls6502_1_1InitializeResult_a58734e6cb10be1d1f410251d9e3c86a6}} 
+\index{ls6502::InitializeResult@{ls6502::InitializeResult}!getServerCapabilities@{getServerCapabilities}}
+\index{getServerCapabilities@{getServerCapabilities}!ls6502::InitializeResult@{ls6502::InitializeResult}}
+\doxysubsubsection{\texorpdfstring{getServerCapabilities()}{getServerCapabilities()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classls6502_1_1ServerCapabilities}{Server\+Capabilities}} ls6502\+::\+Initialize\+Result\+::get\+Server\+Capabilities (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Retrieves the server capabilities. 
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{classls6502_1_1ServerCapabilities}{Server\+Capabilities}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classls6502_1_1InitializeResult_a9f3b6fc77b41844e1b292f4f51c54a37}\label{classls6502_1_1InitializeResult_a9f3b6fc77b41844e1b292f4f51c54a37}} 
+\index{ls6502::InitializeResult@{ls6502::InitializeResult}!getServerInfo@{getServerInfo}}
+\index{getServerInfo@{getServerInfo}!ls6502::InitializeResult@{ls6502::InitializeResult}}
+\doxysubsubsection{\texorpdfstring{getServerInfo()}{getServerInfo()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structls6502_1_1ServerInfo}{Server\+Info}} ls6502\+::\+Initialize\+Result\+::get\+Server\+Info (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Retrieves the server info. 
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{structls6502_1_1ServerInfo}{Server\+Info}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classls6502_1_1InitializeResult_a96b6696dfd9c1bc2d4e8741076dc6412}\label{classls6502_1_1InitializeResult_a96b6696dfd9c1bc2d4e8741076dc6412}} 
+\index{ls6502::InitializeResult@{ls6502::InitializeResult}!toJson@{toJson}}
+\index{toJson@{toJson}!ls6502::InitializeResult@{ls6502::InitializeResult}}
+\doxysubsubsection{\texorpdfstring{toJson()}{toJson()}}
+{\footnotesize\ttfamily nlohmann\+::json ls6502\+::\+Initialize\+Result\+::to\+Json (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Serializes the \mbox{\hyperlink{classls6502_1_1InitializeResult}{Initialize\+Result}} to J\+S\+ON format. 
+
+\begin{DoxyReturn}{Returns}
+Returns the response in J\+S\+ON format. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classls6502_1_1InitializeResult_a6dacdb6838b41f01a645312df0d03c47}\label{classls6502_1_1InitializeResult_a6dacdb6838b41f01a645312df0d03c47}} 
+\index{ls6502::InitializeResult@{ls6502::InitializeResult}!toString@{toString}}
+\index{toString@{toString}!ls6502::InitializeResult@{ls6502::InitializeResult}}
+\doxysubsubsection{\texorpdfstring{toString()}{toString()}}
+{\footnotesize\ttfamily std\+::string ls6502\+::\+Initialize\+Result\+::to\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+String representation of \mbox{\hyperlink{classls6502_1_1InitializeResult}{Initialize\+Result}}. 
+
+\begin{DoxyReturn}{Returns}
+String representation of \mbox{\hyperlink{classls6502_1_1InitializeResult}{Initialize\+Result}} 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+6502ls-\/results/include/6502ls/6502ls-\/results/Initialize\+Result.\+h\item 
+6502ls-\/results/src/Initialize\+Result.\+cpp\end{DoxyCompactItemize}

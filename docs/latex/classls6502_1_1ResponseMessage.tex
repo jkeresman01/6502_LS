@@ -1,0 +1,170 @@
+\hypertarget{classls6502_1_1ResponseMessage}{}\doxysection{ls6502\+::Response\+Message Class Reference}
+\label{classls6502_1_1ResponseMessage}\index{ls6502::ResponseMessage@{ls6502::ResponseMessage}}
+
+
+Represents a response message in the J\+S\+O\+N-\/\+R\+PC protocol. This message can either be a successful response or an error response.  
+
+
+
+
+{\ttfamily \#include $<$Response\+Message.\+h$>$}
+
+
+
+Inheritance diagram for ls6502\+::Response\+Message\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classls6502_1_1ResponseMessage__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for ls6502\+::Response\+Message\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=226pt]{classls6502_1_1ResponseMessage__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classls6502_1_1ResponseMessage_ab27330f1f934c948a7b5005b5ef6cfde}{Response\+Message}} (const std\+::string \&json\+Rpc, const int64\+\_\+t id)
+\begin{DoxyCompactList}\small\item\em Constructs a successful \mbox{\hyperlink{classls6502_1_1ResponseMessage}{Response\+Message}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classls6502_1_1ResponseMessage_ac53ef07314bb3f3297a3406e71ff0c01}{Response\+Message}} (const std\+::string \&json\+Rpc, const int64\+\_\+t id, const \mbox{\hyperlink{classls6502_1_1ResponseError}{Response\+Error}} \&response\+Error)
+\begin{DoxyCompactList}\small\item\em Constructs an error \mbox{\hyperlink{classls6502_1_1ResponseMessage}{Response\+Message}}. \end{DoxyCompactList}\item 
+virtual nlohmann\+::json \mbox{\hyperlink{classls6502_1_1ResponseMessage_a62a3a8345219e7a52692286dd4b9fb8f}{to\+Json}} () const override
+\begin{DoxyCompactList}\small\item\em Serializes the response message to J\+S\+ON format. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int64\+\_\+t \mbox{\hyperlink{classls6502_1_1ResponseMessage_ae0b06ea7fa5e252dc5f17c0058236455}{m\+\_\+id}}
+\begin{DoxyCompactList}\small\item\em Unique identifier for the request associated with the response. \end{DoxyCompactList}\item 
+std\+::optional$<$ \mbox{\hyperlink{classls6502_1_1ResponseError}{Response\+Error}} $>$ \mbox{\hyperlink{classls6502_1_1ResponseMessage_a8ab633b4fa1cf7cac67b9099a461f2fe}{m\+\_\+response\+Error}}
+\begin{DoxyCompactList}\small\item\em Optional error message for error responses. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+std\+::ostream \& \mbox{\hyperlink{classls6502_1_1ResponseMessage_a5027c9ccc18dc32f147c0fb394a449ca}{operator$<$$<$}} (std\+::ostream \&out, const \mbox{\hyperlink{classls6502_1_1ResponseMessage}{Response\+Message}} \&response\+Message)
+\begin{DoxyCompactList}\small\item\em Overloads the output stream operator for \mbox{\hyperlink{classls6502_1_1ResponseMessage}{Response\+Message}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a response message in the J\+S\+O\+N-\/\+R\+PC protocol. This message can either be a successful response or an error response. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classls6502_1_1ResponseMessage_ab27330f1f934c948a7b5005b5ef6cfde}\label{classls6502_1_1ResponseMessage_ab27330f1f934c948a7b5005b5ef6cfde}} 
+\index{ls6502::ResponseMessage@{ls6502::ResponseMessage}!ResponseMessage@{ResponseMessage}}
+\index{ResponseMessage@{ResponseMessage}!ls6502::ResponseMessage@{ls6502::ResponseMessage}}
+\doxysubsubsection{\texorpdfstring{ResponseMessage()}{ResponseMessage()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily ls6502\+::\+Response\+Message\+::\+Response\+Message (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{json\+Rpc,  }\item[{const int64\+\_\+t}]{id }\end{DoxyParamCaption})}
+
+
+
+Constructs a successful \mbox{\hyperlink{classls6502_1_1ResponseMessage}{Response\+Message}}. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em json\+Rpc} & \\
+\hline
+\mbox{\texttt{ in}}  & {\em id} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classls6502_1_1ResponseMessage_ac53ef07314bb3f3297a3406e71ff0c01}\label{classls6502_1_1ResponseMessage_ac53ef07314bb3f3297a3406e71ff0c01}} 
+\index{ls6502::ResponseMessage@{ls6502::ResponseMessage}!ResponseMessage@{ResponseMessage}}
+\index{ResponseMessage@{ResponseMessage}!ls6502::ResponseMessage@{ls6502::ResponseMessage}}
+\doxysubsubsection{\texorpdfstring{ResponseMessage()}{ResponseMessage()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily ls6502\+::\+Response\+Message\+::\+Response\+Message (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{json\+Rpc,  }\item[{const int64\+\_\+t}]{id,  }\item[{const \mbox{\hyperlink{classls6502_1_1ResponseError}{Response\+Error}} \&}]{response\+Error }\end{DoxyParamCaption})}
+
+
+
+Constructs an error \mbox{\hyperlink{classls6502_1_1ResponseMessage}{Response\+Message}}. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em json\+Rpc} & \\
+\hline
+\mbox{\texttt{ in}}  & {\em id} & \\
+\hline
+\mbox{\texttt{ in}}  & {\em response\+Error} & \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classls6502_1_1ResponseMessage_a62a3a8345219e7a52692286dd4b9fb8f}\label{classls6502_1_1ResponseMessage_a62a3a8345219e7a52692286dd4b9fb8f}} 
+\index{ls6502::ResponseMessage@{ls6502::ResponseMessage}!toJson@{toJson}}
+\index{toJson@{toJson}!ls6502::ResponseMessage@{ls6502::ResponseMessage}}
+\doxysubsubsection{\texorpdfstring{toJson()}{toJson()}}
+{\footnotesize\ttfamily nlohmann\+::json ls6502\+::\+Response\+Message\+::to\+Json (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Serializes the response message to J\+S\+ON format. 
+
+\begin{DoxyReturn}{Returns}
+Returns the \mbox{\hyperlink{classls6502_1_1ResponseMessage}{Response\+Message}} in serialized J\+S\+ON format. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classls6502_1_1Message_a97782ff096afd7f26870521c2aac012c}{ls6502\+::\+Message}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{classls6502_1_1InitializeResponse_a899bd4c7efb52bd9a7d1c60aa5016d40}{ls6502\+::\+Initialize\+Response}}, \mbox{\hyperlink{classls6502_1_1CompletionResponse_aae65981d2c0d82eafa0df1b95b6de08b}{ls6502\+::\+Completion\+Response}}, \mbox{\hyperlink{classls6502_1_1ShutdownResponse_a222d17a24f620a0e8afb1c42ec634b8b}{ls6502\+::\+Shutdown\+Response}}, \mbox{\hyperlink{classls6502_1_1CodeActionResponse_a4e133356ef69428918b6f78df834dcaa}{ls6502\+::\+Code\+Action\+Response}}, and \mbox{\hyperlink{classls6502_1_1HoverResponse_a41008979949680bd9948d44782ad6dc5}{ls6502\+::\+Hover\+Response}}.
+
+
+
+\doxysubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{classls6502_1_1ResponseMessage_a5027c9ccc18dc32f147c0fb394a449ca}\label{classls6502_1_1ResponseMessage_a5027c9ccc18dc32f147c0fb394a449ca}} 
+\index{ls6502::ResponseMessage@{ls6502::ResponseMessage}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!ls6502::ResponseMessage@{ls6502::ResponseMessage}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$}{operator<<}}
+{\footnotesize\ttfamily std\+::ostream\& operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{out,  }\item[{const \mbox{\hyperlink{classls6502_1_1ResponseMessage}{Response\+Message}} \&}]{response\+Message }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Overloads the output stream operator for \mbox{\hyperlink{classls6502_1_1ResponseMessage}{Response\+Message}}. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em out} & \\
+\hline
+\mbox{\texttt{ in}}  & {\em response\+Message} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The modified output stream. 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classls6502_1_1ResponseMessage_ae0b06ea7fa5e252dc5f17c0058236455}\label{classls6502_1_1ResponseMessage_ae0b06ea7fa5e252dc5f17c0058236455}} 
+\index{ls6502::ResponseMessage@{ls6502::ResponseMessage}!m\_id@{m\_id}}
+\index{m\_id@{m\_id}!ls6502::ResponseMessage@{ls6502::ResponseMessage}}
+\doxysubsubsection{\texorpdfstring{m\_id}{m\_id}}
+{\footnotesize\ttfamily int64\+\_\+t ls6502\+::\+Response\+Message\+::m\+\_\+id\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Unique identifier for the request associated with the response. 
+
+\mbox{\Hypertarget{classls6502_1_1ResponseMessage_a8ab633b4fa1cf7cac67b9099a461f2fe}\label{classls6502_1_1ResponseMessage_a8ab633b4fa1cf7cac67b9099a461f2fe}} 
+\index{ls6502::ResponseMessage@{ls6502::ResponseMessage}!m\_responseError@{m\_responseError}}
+\index{m\_responseError@{m\_responseError}!ls6502::ResponseMessage@{ls6502::ResponseMessage}}
+\doxysubsubsection{\texorpdfstring{m\_responseError}{m\_responseError}}
+{\footnotesize\ttfamily std\+::optional$<$\mbox{\hyperlink{classls6502_1_1ResponseError}{Response\+Error}}$>$ ls6502\+::\+Response\+Message\+::m\+\_\+response\+Error\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Optional error message for error responses. 
+
+Stores an error description when the response is an error. If the response is successful, this remains empty. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+6502ls-\/messages/include/6502ls/6502ls-\/messages/response/Response\+Message.\+h\item 
+6502ls-\/messages/src/Response\+Message.\+cpp\end{DoxyCompactItemize}

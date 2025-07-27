@@ -1,0 +1,4 @@
+<map id="ls6502::UnsupportedInstructionDiagnosticsAnalyzer" name="ls6502::UnsupportedInstructionDiagnosticsAnalyzer">
+<area shape="rect" id="node1" title="A diagnostics analyzer that detects and provides code actions for unsupported instructions in the doc..." alt="" coords="5,80,231,121"/>
+<area shape="rect" id="node2" href="$classls6502_1_1IDiagnosticsAnalyzer.html" title="Interface for analyzing diagnostics and providing code actions based on detected issues in a document..." alt="" coords="13,5,223,32"/>
+</map>

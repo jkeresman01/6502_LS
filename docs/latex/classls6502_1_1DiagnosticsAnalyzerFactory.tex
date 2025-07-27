@@ -1,0 +1,45 @@
+\hypertarget{classls6502_1_1DiagnosticsAnalyzerFactory}{}\doxysection{ls6502\+::Diagnostics\+Analyzer\+Factory Class Reference}
+\label{classls6502_1_1DiagnosticsAnalyzerFactory}\index{ls6502::DiagnosticsAnalyzerFactory@{ls6502::DiagnosticsAnalyzerFactory}}
+
+
+Factory class for creating instances of diagnostic analyzers based on the type of diagnostic provided.  
+
+
+
+
+{\ttfamily \#include $<$Diagnostics\+Analyer\+Factory.\+h$>$}
+
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classls6502_1_1IDiagnosticsAnalyzer}{I\+Diagnostics\+Analyzer}} $>$ \mbox{\hyperlink{classls6502_1_1DiagnosticsAnalyzerFactory_af27c2e1590a3032f5fd93c671a0526be}{get\+Instance}} (const \mbox{\hyperlink{classls6502_1_1Diagnostic}{Diagnostic}} \&diagnostic)
+\begin{DoxyCompactList}\small\item\em Creates an instance of the appropriate diagnostics analyzer based on the given diagnostic. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Factory class for creating instances of diagnostic analyzers based on the type of diagnostic provided. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classls6502_1_1DiagnosticsAnalyzerFactory_af27c2e1590a3032f5fd93c671a0526be}\label{classls6502_1_1DiagnosticsAnalyzerFactory_af27c2e1590a3032f5fd93c671a0526be}} 
+\index{ls6502::DiagnosticsAnalyzerFactory@{ls6502::DiagnosticsAnalyzerFactory}!getInstance@{getInstance}}
+\index{getInstance@{getInstance}!ls6502::DiagnosticsAnalyzerFactory@{ls6502::DiagnosticsAnalyzerFactory}}
+\doxysubsubsection{\texorpdfstring{getInstance()}{getInstance()}}
+{\footnotesize\ttfamily static std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classls6502_1_1IDiagnosticsAnalyzer}{I\+Diagnostics\+Analyzer}}$>$ ls6502\+::\+Diagnostics\+Analyzer\+Factory\+::get\+Instance (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classls6502_1_1Diagnostic}{Diagnostic}} \&}]{diagnostic }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Creates an instance of the appropriate diagnostics analyzer based on the given diagnostic. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em diagnostic} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A shared pointer to an \mbox{\hyperlink{classls6502_1_1IDiagnosticsAnalyzer}{I\+Diagnostics\+Analyzer}} instance corresponding to the diagnostic type. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+6502ls-\/diagnostics/factory\+\_\+src/Diagnostics\+Analyer\+Factory.\+h\end{DoxyCompactItemize}

@@ -1,0 +1,4 @@
+<map id="ls6502::FakeSnippetsProvider" name="ls6502::FakeSnippetsProvider">
+<area shape="rect" id="node1" title="A mock implementation of ISnippetProvider that provides predefined fake snippets for testing purposes..." alt="" coords="5,80,217,107"/>
+<area shape="rect" id="node2" href="$classls6502_1_1ISnippetProvider.html" title="Interface for providing code snippets based on a given prefix." alt="" coords="21,5,201,32"/>
+</map>

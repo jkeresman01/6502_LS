@@ -1,0 +1,81 @@
+\hypertarget{classls6502_1_1CompletionRequest}{}\doxysection{ls6502\+::Completion\+Request Class Reference}
+\label{classls6502_1_1CompletionRequest}\index{ls6502::CompletionRequest@{ls6502::CompletionRequest}}
+
+
+The Code actions request is sent from the client to the Ls6502 server to provide code actions for a given document.  
+
+
+
+
+{\ttfamily \#include $<$Code\+Action\+Request.\+h$>$}
+
+
+
+Inheritance diagram for ls6502\+::Completion\+Request\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=231pt]{classls6502_1_1CompletionRequest__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for ls6502\+::Completion\+Request\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=231pt]{classls6502_1_1CompletionRequest__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classls6502_1_1CompletionRequest_a757a84bcf5954e3bc309facbdd247fec}{Completion\+Request}} (const nlohmann\+::json \&json\+R\+PC)
+\begin{DoxyCompactList}\small\item\em Constructs the Completion request from J\+S\+ON R\+PC. \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classls6502_1_1CompletionParams}{Completion\+Params}} $>$ \mbox{\hyperlink{classls6502_1_1CompletionRequest_aefbec7e7f32e3cc2af7df5d6efa3fcba}{get\+Params}} () const
+\begin{DoxyCompactList}\small\item\em Accessor method for text document completion params. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+The Code actions request is sent from the client to the Ls6502 server to provide code actions for a given document. 
+
+The Completion request is sent from the client to the Ls6502 server to compute completion items at a given cursor position. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classls6502_1_1CompletionRequest_a757a84bcf5954e3bc309facbdd247fec}\label{classls6502_1_1CompletionRequest_a757a84bcf5954e3bc309facbdd247fec}} 
+\index{ls6502::CompletionRequest@{ls6502::CompletionRequest}!CompletionRequest@{CompletionRequest}}
+\index{CompletionRequest@{CompletionRequest}!ls6502::CompletionRequest@{ls6502::CompletionRequest}}
+\doxysubsubsection{\texorpdfstring{CompletionRequest()}{CompletionRequest()}}
+{\footnotesize\ttfamily ls6502\+::\+Completion\+Request\+::\+Completion\+Request (\begin{DoxyParamCaption}\item[{const nlohmann\+::json \&}]{json\+R\+PC }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+Constructs the Completion request from J\+S\+ON R\+PC. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em json\+R\+PC} & \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classls6502_1_1CompletionRequest_aefbec7e7f32e3cc2af7df5d6efa3fcba}\label{classls6502_1_1CompletionRequest_aefbec7e7f32e3cc2af7df5d6efa3fcba}} 
+\index{ls6502::CompletionRequest@{ls6502::CompletionRequest}!getParams@{getParams}}
+\index{getParams@{getParams}!ls6502::CompletionRequest@{ls6502::CompletionRequest}}
+\doxysubsubsection{\texorpdfstring{getParams()}{getParams()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classls6502_1_1CompletionParams}{Completion\+Params}}$>$ ls6502\+::\+Completion\+Request\+::get\+Params (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Accessor method for text document completion params. 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+6502ls-\/messages/include/6502ls/6502ls-\/messages/request/Completion\+Request.\+h\item 
+6502ls-\/messages/src/request/Completion\+Request.\+cpp\end{DoxyCompactItemize}

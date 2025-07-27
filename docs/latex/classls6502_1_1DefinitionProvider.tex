@@ -1,0 +1,74 @@
+\hypertarget{classls6502_1_1DefinitionProvider}{}\doxysection{ls6502\+::Definition\+Provider Class Reference}
+\label{classls6502_1_1DefinitionProvider}\index{ls6502::DefinitionProvider@{ls6502::DefinitionProvider}}
+
+
+Provides the location of a definition in the source code based on a given document and position.  
+
+
+
+
+{\ttfamily \#include $<$Definition\+Provider.\+h$>$}
+
+
+
+Inheritance diagram for ls6502\+::Definition\+Provider\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=226pt]{classls6502_1_1DefinitionProvider__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for ls6502\+::Definition\+Provider\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=226pt]{classls6502_1_1DefinitionProvider__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{structls6502_1_1Location}{Location}} \mbox{\hyperlink{classls6502_1_1DefinitionProvider_ad11e395224856aa6ba0f341da1fb0739}{provide\+Definition\+Location}} (const std\+::string \&document, const \mbox{\hyperlink{structls6502_1_1Position}{Position}} \&position, const std\+::string \&U\+RI) override
+\begin{DoxyCompactList}\small\item\em Provides the location of a definition. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Provides the location of a definition in the source code based on a given document and position. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classls6502_1_1DefinitionProvider_ad11e395224856aa6ba0f341da1fb0739}\label{classls6502_1_1DefinitionProvider_ad11e395224856aa6ba0f341da1fb0739}} 
+\index{ls6502::DefinitionProvider@{ls6502::DefinitionProvider}!provideDefinitionLocation@{provideDefinitionLocation}}
+\index{provideDefinitionLocation@{provideDefinitionLocation}!ls6502::DefinitionProvider@{ls6502::DefinitionProvider}}
+\doxysubsubsection{\texorpdfstring{provideDefinitionLocation()}{provideDefinitionLocation()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structls6502_1_1Location}{Location}} ls6502\+::\+Definition\+Provider\+::provide\+Definition\+Location (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{document,  }\item[{const \mbox{\hyperlink{structls6502_1_1Position}{Position}} \&}]{position,  }\item[{const std\+::string \&}]{U\+RI }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Provides the location of a definition. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em document} & \\
+\hline
+\mbox{\texttt{ in}}  & {\em position} & \\
+\hline
+\mbox{\texttt{ in}}  & {\em U\+RI} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The location of the definition, including line and column information. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classls6502_1_1IDefinitionProvider_a68b98de26255c9a6dbd27e449586236b}{ls6502\+::\+I\+Definition\+Provider}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+6502ls-\/definition/include/6502ls/6502ls-\/definition/Definition\+Provider.\+h\item 
+6502ls-\/definition/src/Definition\+Provider.\+cpp\end{DoxyCompactItemize}

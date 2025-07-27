@@ -1,0 +1,78 @@
+\hypertarget{classls6502_1_1Trie}{}\doxysection{ls6502\+::Trie Class Reference}
+\label{classls6502_1_1Trie}\index{ls6502::Trie@{ls6502::Trie}}
+
+
+A \mbox{\hyperlink{classls6502_1_1Trie}{Trie}} / prefix tree implementation.  
+
+
+
+
+{\ttfamily \#include $<$Trie.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classls6502_1_1Trie_a9c3f0544c4ebeacba3e289ab0bfcab22}{Trie}} ()=default
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classls6502_1_1Trie_af76f69c213821fb6784f3f9993fc12e2}{insert}} (const std\+::string \&word)
+\begin{DoxyCompactList}\small\item\em Inserts a word into the trie. \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{classls6502_1_1Trie_a20485700b4dc2cfed2439866b252efa2}{get\+Completion\+Words}} (const std\+::string \&prefix) const
+\begin{DoxyCompactList}\small\item\em Retrieves all words in the trie that start with the given prefix. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A \mbox{\hyperlink{classls6502_1_1Trie}{Trie}} / prefix tree implementation. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classls6502_1_1Trie_a9c3f0544c4ebeacba3e289ab0bfcab22}\label{classls6502_1_1Trie_a9c3f0544c4ebeacba3e289ab0bfcab22}} 
+\index{ls6502::Trie@{ls6502::Trie}!Trie@{Trie}}
+\index{Trie@{Trie}!ls6502::Trie@{ls6502::Trie}}
+\doxysubsubsection{\texorpdfstring{Trie()}{Trie()}}
+{\footnotesize\ttfamily ls6502\+::\+Trie\+::\+Trie (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+Default constructor. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classls6502_1_1Trie_a20485700b4dc2cfed2439866b252efa2}\label{classls6502_1_1Trie_a20485700b4dc2cfed2439866b252efa2}} 
+\index{ls6502::Trie@{ls6502::Trie}!getCompletionWords@{getCompletionWords}}
+\index{getCompletionWords@{getCompletionWords}!ls6502::Trie@{ls6502::Trie}}
+\doxysubsubsection{\texorpdfstring{getCompletionWords()}{getCompletionWords()}}
+{\footnotesize\ttfamily std\+::vector$<$ std\+::string $>$ ls6502\+::\+Trie\+::get\+Completion\+Words (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{prefix }\end{DoxyParamCaption}) const}
+
+
+
+Retrieves all words in the trie that start with the given prefix. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em prefix} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A vector containing all words that match the prefix 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classls6502_1_1Trie_af76f69c213821fb6784f3f9993fc12e2}\label{classls6502_1_1Trie_af76f69c213821fb6784f3f9993fc12e2}} 
+\index{ls6502::Trie@{ls6502::Trie}!insert@{insert}}
+\index{insert@{insert}!ls6502::Trie@{ls6502::Trie}}
+\doxysubsubsection{\texorpdfstring{insert()}{insert()}}
+{\footnotesize\ttfamily void ls6502\+::\+Trie\+::insert (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{word }\end{DoxyParamCaption})}
+
+
+
+Inserts a word into the trie. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em word} & \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+6502ls-\/algo/include/6502ls/6502ls-\/algo/Trie.\+h\item 
+6502ls-\/algo/src/Trie.\+cpp\end{DoxyCompactItemize}

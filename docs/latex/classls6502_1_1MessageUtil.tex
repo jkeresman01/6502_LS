@@ -1,0 +1,85 @@
+\hypertarget{classls6502_1_1MessageUtil}{}\doxysection{ls6502\+::Message\+Util Class Reference}
+\label{classls6502_1_1MessageUtil}\index{ls6502::MessageUtil@{ls6502::MessageUtil}}
+
+
+Utility class for handling L\+SP messages.  
+
+
+
+
+{\ttfamily \#include $<$Message\+Util.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classls6502_1_1MessageUtil_a2e180b19387b1c8d0ca986ffe90ebfff}{Message\+Util}} ()=delete
+\begin{DoxyCompactList}\small\item\em Delete default constructor to prevent instantiation. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static Request\+Type \mbox{\hyperlink{classls6502_1_1MessageUtil_a5ad0af9ee0cb04d4b1e4d04993c1d669}{get\+Method}} (const nlohmann\+::json \&request)
+\begin{DoxyCompactList}\small\item\em Delete default constructor to prevent instantiation. \end{DoxyCompactList}\item 
+static nlohmann\+::json \mbox{\hyperlink{classls6502_1_1MessageUtil_a2e587695c64a6117aa84e97bdefb8c32}{try\+Parse}} (const std\+::string \&request)
+\begin{DoxyCompactList}\small\item\em Try to parse L\+SP request received from stdin. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Utility class for handling L\+SP messages. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classls6502_1_1MessageUtil_a2e180b19387b1c8d0ca986ffe90ebfff}\label{classls6502_1_1MessageUtil_a2e180b19387b1c8d0ca986ffe90ebfff}} 
+\index{ls6502::MessageUtil@{ls6502::MessageUtil}!MessageUtil@{MessageUtil}}
+\index{MessageUtil@{MessageUtil}!ls6502::MessageUtil@{ls6502::MessageUtil}}
+\doxysubsubsection{\texorpdfstring{MessageUtil()}{MessageUtil()}}
+{\footnotesize\ttfamily ls6502\+::\+Message\+Util\+::\+Message\+Util (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+
+
+Delete default constructor to prevent instantiation. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classls6502_1_1MessageUtil_a5ad0af9ee0cb04d4b1e4d04993c1d669}\label{classls6502_1_1MessageUtil_a5ad0af9ee0cb04d4b1e4d04993c1d669}} 
+\index{ls6502::MessageUtil@{ls6502::MessageUtil}!getMethod@{getMethod}}
+\index{getMethod@{getMethod}!ls6502::MessageUtil@{ls6502::MessageUtil}}
+\doxysubsubsection{\texorpdfstring{getMethod()}{getMethod()}}
+{\footnotesize\ttfamily Request\+Type ls6502\+::\+Message\+Util\+::get\+Method (\begin{DoxyParamCaption}\item[{const nlohmann\+::json \&}]{request }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Delete default constructor to prevent instantiation. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em request} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+request method/type 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classls6502_1_1MessageUtil_a2e587695c64a6117aa84e97bdefb8c32}\label{classls6502_1_1MessageUtil_a2e587695c64a6117aa84e97bdefb8c32}} 
+\index{ls6502::MessageUtil@{ls6502::MessageUtil}!tryParse@{tryParse}}
+\index{tryParse@{tryParse}!ls6502::MessageUtil@{ls6502::MessageUtil}}
+\doxysubsubsection{\texorpdfstring{tryParse()}{tryParse()}}
+{\footnotesize\ttfamily nlohmann\+::json ls6502\+::\+Message\+Util\+::try\+Parse (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{request }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Try to parse L\+SP request received from stdin. 
+
+Implementation of inline defined functions.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em request} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+json object 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+6502ls-\/utils/include/6502ls/6502ls-\/utils/Message\+Util.\+h\end{DoxyCompactItemize}

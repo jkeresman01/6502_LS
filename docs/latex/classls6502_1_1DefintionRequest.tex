@@ -1,0 +1,82 @@
+\hypertarget{classls6502_1_1DefintionRequest}{}\doxysection{ls6502\+::Defintion\+Request Class Reference}
+\label{classls6502_1_1DefintionRequest}\index{ls6502::DefintionRequest@{ls6502::DefintionRequest}}
+
+
+The definition request is sent from the client to the server to request hover information at a given text document position.  
+
+
+
+
+{\ttfamily \#include $<$Definition\+Request.\+h$>$}
+
+
+
+Inheritance diagram for ls6502\+::Defintion\+Request\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=219pt]{classls6502_1_1DefintionRequest__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for ls6502\+::Defintion\+Request\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=219pt]{classls6502_1_1DefintionRequest__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classls6502_1_1DefintionRequest_a3233882254a535ddc0f9a92b24bea62c}{Defintion\+Request}} (const nlohmann\+::json \&json\+R\+PC)
+\begin{DoxyCompactList}\small\item\em Constructs the Defintion request from J\+S\+ON R\+PC. \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classls6502_1_1DefinitionParams}{Definition\+Params}} $>$ \mbox{\hyperlink{classls6502_1_1DefintionRequest_aa02be3bf1aaf946067f3aeb43d2cdf53}{get\+Params}} () const
+\begin{DoxyCompactList}\small\item\em Accessor method for Defintion\+Params. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+The definition request is sent from the client to the server to request hover information at a given text document position. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classls6502_1_1DefintionRequest_a3233882254a535ddc0f9a92b24bea62c}\label{classls6502_1_1DefintionRequest_a3233882254a535ddc0f9a92b24bea62c}} 
+\index{ls6502::DefintionRequest@{ls6502::DefintionRequest}!DefintionRequest@{DefintionRequest}}
+\index{DefintionRequest@{DefintionRequest}!ls6502::DefintionRequest@{ls6502::DefintionRequest}}
+\doxysubsubsection{\texorpdfstring{DefintionRequest()}{DefintionRequest()}}
+{\footnotesize\ttfamily ls6502\+::\+Defintion\+Request\+::\+Defintion\+Request (\begin{DoxyParamCaption}\item[{const nlohmann\+::json \&}]{json\+R\+PC }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+Constructs the Defintion request from J\+S\+ON R\+PC. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em json\+R\+PC} & \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classls6502_1_1DefintionRequest_aa02be3bf1aaf946067f3aeb43d2cdf53}\label{classls6502_1_1DefintionRequest_aa02be3bf1aaf946067f3aeb43d2cdf53}} 
+\index{ls6502::DefintionRequest@{ls6502::DefintionRequest}!getParams@{getParams}}
+\index{getParams@{getParams}!ls6502::DefintionRequest@{ls6502::DefintionRequest}}
+\doxysubsubsection{\texorpdfstring{getParams()}{getParams()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classls6502_1_1DefinitionParams}{Definition\+Params}}$>$ ls6502\+::\+Defintion\+Request\+::get\+Params (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Accessor method for Defintion\+Params. 
+
+\begin{DoxyReturn}{Returns}
+Defintion\+Params 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+6502ls-\/messages/include/6502ls/6502ls-\/messages/request/Definition\+Request.\+h\item 
+6502ls-\/messages/src/request/Definition\+Request.\+cpp\end{DoxyCompactItemize}

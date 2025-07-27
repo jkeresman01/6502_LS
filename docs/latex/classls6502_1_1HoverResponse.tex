@@ -1,0 +1,118 @@
+\hypertarget{classls6502_1_1HoverResponse}{}\doxysection{ls6502\+::Hover\+Response Class Reference}
+\label{classls6502_1_1HoverResponse}\index{ls6502::HoverResponse@{ls6502::HoverResponse}}
+
+
+Represents a response message for a hover request.  
+
+
+
+
+{\ttfamily \#include $<$Hover\+Response.\+h$>$}
+
+
+
+Inheritance diagram for ls6502\+::Hover\+Response\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=226pt]{classls6502_1_1HoverResponse__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for ls6502\+::Hover\+Response\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=226pt]{classls6502_1_1HoverResponse__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classls6502_1_1HoverResponse_a12afb8c6a905273dafbf4d0ac9e2925d}{Hover\+Response}} (const std\+::string \&json\+R\+PC, const int64\+\_\+t id, const \mbox{\hyperlink{classls6502_1_1HoverResult}{Hover\+Result}} \&hover\+Result)
+\begin{DoxyCompactList}\small\item\em Constructs a \mbox{\hyperlink{classls6502_1_1HoverResponse}{Hover\+Response}} with given parameters. \end{DoxyCompactList}\item 
+virtual nlohmann\+::json \mbox{\hyperlink{classls6502_1_1HoverResponse_a41008979949680bd9948d44782ad6dc5}{to\+Json}} () const override
+\begin{DoxyCompactList}\small\item\em Converts the \mbox{\hyperlink{classls6502_1_1HoverResponse}{Hover\+Response}} to a J\+S\+ON representation. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+std\+::ostream \& \mbox{\hyperlink{classls6502_1_1HoverResponse_a7847e05687e98dcd5979d1b120e65fb5}{operator$<$$<$}} (std\+::ostream \&os, const \mbox{\hyperlink{classls6502_1_1HoverResponse}{Hover\+Response}} \&hover\+Response)
+\begin{DoxyCompactList}\small\item\em Overloads the output stream operator for \mbox{\hyperlink{classls6502_1_1HoverResponse}{Hover\+Response}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Represents a response message for a hover request. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classls6502_1_1HoverResponse_a12afb8c6a905273dafbf4d0ac9e2925d}\label{classls6502_1_1HoverResponse_a12afb8c6a905273dafbf4d0ac9e2925d}} 
+\index{ls6502::HoverResponse@{ls6502::HoverResponse}!HoverResponse@{HoverResponse}}
+\index{HoverResponse@{HoverResponse}!ls6502::HoverResponse@{ls6502::HoverResponse}}
+\doxysubsubsection{\texorpdfstring{HoverResponse()}{HoverResponse()}}
+{\footnotesize\ttfamily ls6502\+::\+Hover\+Response\+::\+Hover\+Response (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{json\+R\+PC,  }\item[{const int64\+\_\+t}]{id,  }\item[{const \mbox{\hyperlink{classls6502_1_1HoverResult}{Hover\+Result}} \&}]{hover\+Result }\end{DoxyParamCaption})}
+
+
+
+Constructs a \mbox{\hyperlink{classls6502_1_1HoverResponse}{Hover\+Response}} with given parameters. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em json\+R\+PC} & \\
+\hline
+\mbox{\texttt{ in}}  & {\em id} & \\
+\hline
+\mbox{\texttt{ in}}  & {\em hover\+Result} & \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classls6502_1_1HoverResponse_a41008979949680bd9948d44782ad6dc5}\label{classls6502_1_1HoverResponse_a41008979949680bd9948d44782ad6dc5}} 
+\index{ls6502::HoverResponse@{ls6502::HoverResponse}!toJson@{toJson}}
+\index{toJson@{toJson}!ls6502::HoverResponse@{ls6502::HoverResponse}}
+\doxysubsubsection{\texorpdfstring{toJson()}{toJson()}}
+{\footnotesize\ttfamily nlohmann\+::json ls6502\+::\+Hover\+Response\+::to\+Json (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Converts the \mbox{\hyperlink{classls6502_1_1HoverResponse}{Hover\+Response}} to a J\+S\+ON representation. 
+
+\begin{DoxyReturn}{Returns}
+A J\+S\+ON object representing the \mbox{\hyperlink{classls6502_1_1HoverResponse}{Hover\+Response}}. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classls6502_1_1ResponseMessage_a62a3a8345219e7a52692286dd4b9fb8f}{ls6502\+::\+Response\+Message}}.
+
+
+
+\doxysubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{classls6502_1_1HoverResponse_a7847e05687e98dcd5979d1b120e65fb5}\label{classls6502_1_1HoverResponse_a7847e05687e98dcd5979d1b120e65fb5}} 
+\index{ls6502::HoverResponse@{ls6502::HoverResponse}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!ls6502::HoverResponse@{ls6502::HoverResponse}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$}{operator<<}}
+{\footnotesize\ttfamily std\+::ostream\& operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{os,  }\item[{const \mbox{\hyperlink{classls6502_1_1HoverResponse}{Hover\+Response}} \&}]{hover\+Response }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Overloads the output stream operator for \mbox{\hyperlink{classls6502_1_1HoverResponse}{Hover\+Response}}. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em os} & \\
+\hline
+\mbox{\texttt{ in}}  & {\em code\+Action\+Response} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The modified output stream. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+6502ls-\/messages/include/6502ls/6502ls-\/messages/response/Hover\+Response.\+h\item 
+6502ls-\/messages/src/Hover\+Response.\+cpp\end{DoxyCompactItemize}
