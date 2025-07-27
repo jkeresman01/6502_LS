@@ -1,0 +1,6 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node1" href="$classls6502_1_1TextDocumentPositionParams.html" title="Represents parameters specifying a text document and a position within that document." alt="" coords="5,49,224,90"/>
+<area shape="rect" id="node2" href="$classls6502_1_1DefinitionParams.html" title=" " alt="" coords="301,5,485,32"/>
+<area shape="rect" id="node3" href="$classls6502_1_1HoverParams.html" title=" " alt="" coords="313,56,473,83"/>
+<area shape="rect" id="node4" href="$classls6502_1_1TextDocumentCompletionParams.html" title="Represents parameters for a completion request in the language server protocol." alt="" coords="272,107,515,149"/>
+</map>

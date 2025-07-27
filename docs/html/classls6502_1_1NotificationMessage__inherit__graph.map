@@ -1,0 +1,7 @@
+<map id="ls6502::NotificationMessage" name="ls6502::NotificationMessage">
+<area shape="rect" id="node1" title="Represents a notification message in the language server protocol (LSP). Notification messages are se..." alt="" coords="184,78,391,105"/>
+<area shape="rect" id="node3" href="$classls6502_1_1DidChangeTextDocumentRequest.html" title="Represents a textDocument/didChange request in the LSP." alt="" coords="439,5,677,47"/>
+<area shape="rect" id="node4" href="$classls6502_1_1DidOpenTextDocumentRequest.html" title="Represents a request message for the textDocument/didOpen request in the Language Server Protocol (LS..." alt="" coords="447,71,669,112"/>
+<area shape="rect" id="node5" href="$classls6502_1_1PublishDiagnosticsNoticifation.html" title="Represents a notification message for publishing diagnostics in the language server protocol (LSP)...." alt="" coords="460,136,656,177"/>
+<area shape="rect" id="node2" href="$classls6502_1_1Message.html" title="Capabilities specific to the textDocument/hover request." alt="" coords="5,78,136,105"/>
+</map>

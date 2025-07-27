@@ -1,0 +1,61 @@
+\hypertarget{classls6502_1_1CodeActionResult}{}\doxysection{ls6502\+::Code\+Action\+Result Class Reference}
+\label{classls6502_1_1CodeActionResult}\index{ls6502::CodeActionResult@{ls6502::CodeActionResult}}
+
+
+Represents the result of a code action request.  
+
+
+
+
+{\ttfamily \#include $<$Code\+Action\+Result.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classls6502_1_1CodeActionResult_af05dc9221a5d48faf8a79cdfcf506a08}{Code\+Action\+Result}} (const std\+::vector$<$ \mbox{\hyperlink{classls6502_1_1CodeAction}{Code\+Action}} $>$ \&code\+Actions)
+\begin{DoxyCompactList}\small\item\em Constructs a \mbox{\hyperlink{classls6502_1_1CodeActionResult}{Code\+Action\+Result}} with the given list of code actions. \end{DoxyCompactList}\item 
+nlohmann\+::json \mbox{\hyperlink{classls6502_1_1CodeActionResult_a5b921be6307102bd628e841444035764}{to\+Json}} () const
+\begin{DoxyCompactList}\small\item\em Serializes the \mbox{\hyperlink{classls6502_1_1CodeActionResult}{Code\+Action\+Result}} object into a J\+S\+ON representation. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents the result of a code action request. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classls6502_1_1CodeActionResult_af05dc9221a5d48faf8a79cdfcf506a08}\label{classls6502_1_1CodeActionResult_af05dc9221a5d48faf8a79cdfcf506a08}} 
+\index{ls6502::CodeActionResult@{ls6502::CodeActionResult}!CodeActionResult@{CodeActionResult}}
+\index{CodeActionResult@{CodeActionResult}!ls6502::CodeActionResult@{ls6502::CodeActionResult}}
+\doxysubsubsection{\texorpdfstring{CodeActionResult()}{CodeActionResult()}}
+{\footnotesize\ttfamily ls6502\+::\+Code\+Action\+Result\+::\+Code\+Action\+Result (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ \mbox{\hyperlink{classls6502_1_1CodeAction}{Code\+Action}} $>$ \&}]{code\+Actions }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+
+
+Constructs a \mbox{\hyperlink{classls6502_1_1CodeActionResult}{Code\+Action\+Result}} with the given list of code actions. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em code\+Actions} & \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classls6502_1_1CodeActionResult_a5b921be6307102bd628e841444035764}\label{classls6502_1_1CodeActionResult_a5b921be6307102bd628e841444035764}} 
+\index{ls6502::CodeActionResult@{ls6502::CodeActionResult}!toJson@{toJson}}
+\index{toJson@{toJson}!ls6502::CodeActionResult@{ls6502::CodeActionResult}}
+\doxysubsubsection{\texorpdfstring{toJson()}{toJson()}}
+{\footnotesize\ttfamily nlohmann\+::json ls6502\+::\+Code\+Action\+Result\+::to\+Json (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Serializes the \mbox{\hyperlink{classls6502_1_1CodeActionResult}{Code\+Action\+Result}} object into a J\+S\+ON representation. 
+
+\begin{DoxyReturn}{Returns}
+A nlohmann\+::json object representing the \mbox{\hyperlink{classls6502_1_1CodeActionResult}{Code\+Action\+Result}}. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+6502ls-\/results/include/6502ls/6502ls-\/results/Code\+Action\+Result.\+h\item 
+6502ls-\/results/src/Code\+Action\+Result.\+cpp\end{DoxyCompactItemize}

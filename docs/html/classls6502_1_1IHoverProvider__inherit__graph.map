@@ -1,0 +1,6 @@
+<map id="ls6502::IHoverProvider" name="ls6502::IHoverProvider">
+<area shape="rect" id="node1" title="An interface for providing hover items based on document content and position." alt="" coords="127,80,297,107"/>
+<area shape="rect" id="node3" href="$classls6502_1_1FakeHoverProvider.html" title="A mock implementation of the IHoverProvider interface." alt="" coords="5,162,200,189"/>
+<area shape="rect" id="node4" href="$classls6502_1_1InstructionSet6502HoverProvider.html" title="Provides hover information based on the 6502 instruction set." alt="" coords="224,155,419,196"/>
+<area shape="rect" id="node2" title=" " alt="" coords="172,5,252,32"/>
+</map>

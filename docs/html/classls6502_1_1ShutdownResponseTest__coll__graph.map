@@ -1,0 +1,7 @@
+<map id="ls6502::ShutdownResponseTest" name="ls6502::ShutdownResponseTest">
+<area shape="rect" id="node1" title=" " alt="" coords="5,247,232,273"/>
+<area shape="rect" id="node2" title=" " alt="" coords="73,157,121,184"/>
+<area shape="rect" id="node3" href="$classls6502_1_1ShutdownResponse.html" title="Represents a response message for the &quot;shutdown&quot; request in the JSON&#45;RPC protocol." alt="" coords="145,157,345,184"/>
+<area shape="rect" id="node4" href="$classls6502_1_1ResponseMessage.html" title="Represents a response message in the JSON&#45;RPC protocol. This message can either be a successful respo..." alt="" coords="148,81,343,108"/>
+<area shape="rect" id="node5" href="$classls6502_1_1Message.html" title="Capabilities specific to the textDocument/hover request." alt="" coords="180,5,311,32"/>
+</map>

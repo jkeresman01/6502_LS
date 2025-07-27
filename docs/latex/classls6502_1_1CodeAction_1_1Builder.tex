@@ -1,0 +1,121 @@
+\hypertarget{classls6502_1_1CodeAction_1_1Builder}{}\doxysection{ls6502\+::Code\+Action\+::Builder Class Reference}
+\label{classls6502_1_1CodeAction_1_1Builder}\index{ls6502::CodeAction::Builder@{ls6502::CodeAction::Builder}}
+
+
+\mbox{\hyperlink{classls6502_1_1CodeAction_1_1Builder}{Builder}} class for constructing \mbox{\hyperlink{classls6502_1_1CodeAction}{Code\+Action}} objects.  
+
+
+
+
+{\ttfamily \#include $<$Code\+Action.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classls6502_1_1CodeAction_1_1Builder}{Builder}} \& \mbox{\hyperlink{classls6502_1_1CodeAction_1_1Builder_a199c210cd2210ed0a793874eae4e24fd}{with\+Title}} (const std\+::string \&title)
+\begin{DoxyCompactList}\small\item\em Sets the title of the \mbox{\hyperlink{classls6502_1_1CodeAction}{Code\+Action}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classls6502_1_1CodeAction_1_1Builder}{Builder}} \& \mbox{\hyperlink{classls6502_1_1CodeAction_1_1Builder_a7ffb4e7ef016f63534a11f1e86fdb5db}{with\+Code\+Action\+Kind}} (const Code\+Action\+Kind \&code\+Action\+Kind)
+\begin{DoxyCompactList}\small\item\em Sets the kind of the \mbox{\hyperlink{classls6502_1_1CodeAction}{Code\+Action}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classls6502_1_1CodeAction_1_1Builder}{Builder}} \& \mbox{\hyperlink{classls6502_1_1CodeAction_1_1Builder_a6f9a83582115054cb2c75f895b534658}{with\+Preffered\+Fix}} (bool is\+Preffered)
+\begin{DoxyCompactList}\small\item\em Sets whether this code action is preferred. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classls6502_1_1CodeAction_1_1Builder}{Builder}} \& \mbox{\hyperlink{classls6502_1_1CodeAction_1_1Builder_aea172f5d1a4c5dd423658e436d9191ae}{with\+Workspace\+Edit}} (const \mbox{\hyperlink{classls6502_1_1WorkspaceEdit}{Workspace\+Edit}} \&workspace\+Edit)
+\begin{DoxyCompactList}\small\item\em Sets the workspace edit associated with the \mbox{\hyperlink{classls6502_1_1CodeAction}{Code\+Action}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classls6502_1_1CodeAction}{Code\+Action}} \mbox{\hyperlink{classls6502_1_1CodeAction_1_1Builder_a83607d643e89f2aed5c9bfc25cb56cf1}{build}} ()
+\begin{DoxyCompactList}\small\item\em Builds and returns a \mbox{\hyperlink{classls6502_1_1CodeAction}{Code\+Action}} object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{classls6502_1_1CodeAction_1_1Builder}{Builder}} class for constructing \mbox{\hyperlink{classls6502_1_1CodeAction}{Code\+Action}} objects. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classls6502_1_1CodeAction_1_1Builder_a83607d643e89f2aed5c9bfc25cb56cf1}\label{classls6502_1_1CodeAction_1_1Builder_a83607d643e89f2aed5c9bfc25cb56cf1}} 
+\index{ls6502::CodeAction::Builder@{ls6502::CodeAction::Builder}!build@{build}}
+\index{build@{build}!ls6502::CodeAction::Builder@{ls6502::CodeAction::Builder}}
+\doxysubsubsection{\texorpdfstring{build()}{build()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classls6502_1_1CodeAction}{Code\+Action}} ls6502\+::\+Code\+Action\+::\+Builder\+::build (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Builds and returns a \mbox{\hyperlink{classls6502_1_1CodeAction}{Code\+Action}} object. 
+
+\begin{DoxyReturn}{Returns}
+The constructed \mbox{\hyperlink{classls6502_1_1CodeAction}{Code\+Action}}. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classls6502_1_1CodeAction_1_1Builder_a7ffb4e7ef016f63534a11f1e86fdb5db}\label{classls6502_1_1CodeAction_1_1Builder_a7ffb4e7ef016f63534a11f1e86fdb5db}} 
+\index{ls6502::CodeAction::Builder@{ls6502::CodeAction::Builder}!withCodeActionKind@{withCodeActionKind}}
+\index{withCodeActionKind@{withCodeActionKind}!ls6502::CodeAction::Builder@{ls6502::CodeAction::Builder}}
+\doxysubsubsection{\texorpdfstring{withCodeActionKind()}{withCodeActionKind()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classls6502_1_1CodeAction_1_1Builder}{Code\+Action\+::\+Builder}} \& ls6502\+::\+Code\+Action\+::\+Builder\+::with\+Code\+Action\+Kind (\begin{DoxyParamCaption}\item[{const Code\+Action\+Kind \&}]{code\+Action\+Kind }\end{DoxyParamCaption})}
+
+
+
+Sets the kind of the \mbox{\hyperlink{classls6502_1_1CodeAction}{Code\+Action}}. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em code\+Action\+Kind} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Reference to the \mbox{\hyperlink{classls6502_1_1CodeAction_1_1Builder}{Builder}} for method chaining. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classls6502_1_1CodeAction_1_1Builder_a6f9a83582115054cb2c75f895b534658}\label{classls6502_1_1CodeAction_1_1Builder_a6f9a83582115054cb2c75f895b534658}} 
+\index{ls6502::CodeAction::Builder@{ls6502::CodeAction::Builder}!withPrefferedFix@{withPrefferedFix}}
+\index{withPrefferedFix@{withPrefferedFix}!ls6502::CodeAction::Builder@{ls6502::CodeAction::Builder}}
+\doxysubsubsection{\texorpdfstring{withPrefferedFix()}{withPrefferedFix()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classls6502_1_1CodeAction_1_1Builder}{Code\+Action\+::\+Builder}} \& ls6502\+::\+Code\+Action\+::\+Builder\+::with\+Preffered\+Fix (\begin{DoxyParamCaption}\item[{bool}]{is\+Preffered }\end{DoxyParamCaption})}
+
+
+
+Sets whether this code action is preferred. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em is\+Preffered} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Reference to the \mbox{\hyperlink{classls6502_1_1CodeAction_1_1Builder}{Builder}} for method chaining. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classls6502_1_1CodeAction_1_1Builder_a199c210cd2210ed0a793874eae4e24fd}\label{classls6502_1_1CodeAction_1_1Builder_a199c210cd2210ed0a793874eae4e24fd}} 
+\index{ls6502::CodeAction::Builder@{ls6502::CodeAction::Builder}!withTitle@{withTitle}}
+\index{withTitle@{withTitle}!ls6502::CodeAction::Builder@{ls6502::CodeAction::Builder}}
+\doxysubsubsection{\texorpdfstring{withTitle()}{withTitle()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classls6502_1_1CodeAction_1_1Builder}{Code\+Action\+::\+Builder}} \& ls6502\+::\+Code\+Action\+::\+Builder\+::with\+Title (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{title }\end{DoxyParamCaption})}
+
+
+
+Sets the title of the \mbox{\hyperlink{classls6502_1_1CodeAction}{Code\+Action}}. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em title} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Reference to the \mbox{\hyperlink{classls6502_1_1CodeAction_1_1Builder}{Builder}} for method chaining. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classls6502_1_1CodeAction_1_1Builder_aea172f5d1a4c5dd423658e436d9191ae}\label{classls6502_1_1CodeAction_1_1Builder_aea172f5d1a4c5dd423658e436d9191ae}} 
+\index{ls6502::CodeAction::Builder@{ls6502::CodeAction::Builder}!withWorkspaceEdit@{withWorkspaceEdit}}
+\index{withWorkspaceEdit@{withWorkspaceEdit}!ls6502::CodeAction::Builder@{ls6502::CodeAction::Builder}}
+\doxysubsubsection{\texorpdfstring{withWorkspaceEdit()}{withWorkspaceEdit()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classls6502_1_1CodeAction_1_1Builder}{Code\+Action\+::\+Builder}} \& ls6502\+::\+Code\+Action\+::\+Builder\+::with\+Workspace\+Edit (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classls6502_1_1WorkspaceEdit}{Workspace\+Edit}} \&}]{workspace\+Edit }\end{DoxyParamCaption})}
+
+
+
+Sets the workspace edit associated with the \mbox{\hyperlink{classls6502_1_1CodeAction}{Code\+Action}}. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em workspace\+Edit} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Reference to the \mbox{\hyperlink{classls6502_1_1CodeAction_1_1Builder}{Builder}} for method chaining. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+6502ls-\/types/include/6502ls/6502ls-\/types/Code\+Action.\+h\item 
+6502ls-\/types/src/Code\+Action.\+cpp\end{DoxyCompactItemize}

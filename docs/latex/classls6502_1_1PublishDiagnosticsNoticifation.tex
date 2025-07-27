@@ -1,0 +1,131 @@
+\hypertarget{classls6502_1_1PublishDiagnosticsNoticifation}{}\doxysection{ls6502\+::Publish\+Diagnostics\+Noticifation Class Reference}
+\label{classls6502_1_1PublishDiagnosticsNoticifation}\index{ls6502::PublishDiagnosticsNoticifation@{ls6502::PublishDiagnosticsNoticifation}}
+
+
+Represents a notification message for publishing diagnostics in the language server protocol (L\+SP). This message is sent to notify the client about diagnostics related to a specific document.  
+
+
+
+
+{\ttfamily \#include $<$Publish\+Diagnostics\+Notification.\+h$>$}
+
+
+
+Inheritance diagram for ls6502\+::Publish\+Diagnostics\+Noticifation\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=235pt]{classls6502_1_1PublishDiagnosticsNoticifation__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for ls6502\+::Publish\+Diagnostics\+Noticifation\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=235pt]{classls6502_1_1PublishDiagnosticsNoticifation__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classls6502_1_1PublishDiagnosticsNoticifation_aede12a2ead498004d0e197b7bbe0245d}{Publish\+Diagnostics\+Noticifation}} (const std\+::string \&method, const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classls6502_1_1PublishDiagnosticsParams}{Publish\+Diagnostics\+Params}} $>$ \&diagnostics\+Params)
+\begin{DoxyCompactList}\small\item\em Constructs a \mbox{\hyperlink{classls6502_1_1PublishDiagnosticsNoticifation}{Publish\+Diagnostics\+Noticifation}} with the specified method and diagnostics parameters. \end{DoxyCompactList}\item 
+nlohmann\+::json \mbox{\hyperlink{classls6502_1_1PublishDiagnosticsNoticifation_a1cf50f2b8a6ee51afcd1a06f33528182}{to\+Json}} () const override
+\begin{DoxyCompactList}\small\item\em Converts the notification to a J\+S\+ON object. \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classls6502_1_1PublishDiagnosticsParams}{Publish\+Diagnostics\+Params}} $>$ \mbox{\hyperlink{classls6502_1_1PublishDiagnosticsNoticifation_a19bf5316b3bb851a04f94d60e2086479}{get\+Params}} () const
+\begin{DoxyCompactList}\small\item\em Retrieves the diagnostics parameters. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+std\+::ostream \& \mbox{\hyperlink{classls6502_1_1PublishDiagnosticsNoticifation_a533ca1e113638163b52acbfd76394147}{operator$<$$<$}} (std\+::ostream \&os, const \mbox{\hyperlink{classls6502_1_1PublishDiagnosticsNoticifation}{Publish\+Diagnostics\+Noticifation}} \&publish\+Diagsnostics\+Notification)
+\begin{DoxyCompactList}\small\item\em Overloads the stream insertion operator to print the \mbox{\hyperlink{classls6502_1_1PublishDiagnosticsNoticifation}{Publish\+Diagnostics\+Noticifation}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Represents a notification message for publishing diagnostics in the language server protocol (L\+SP). This message is sent to notify the client about diagnostics related to a specific document. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classls6502_1_1PublishDiagnosticsNoticifation_aede12a2ead498004d0e197b7bbe0245d}\label{classls6502_1_1PublishDiagnosticsNoticifation_aede12a2ead498004d0e197b7bbe0245d}} 
+\index{ls6502::PublishDiagnosticsNoticifation@{ls6502::PublishDiagnosticsNoticifation}!PublishDiagnosticsNoticifation@{PublishDiagnosticsNoticifation}}
+\index{PublishDiagnosticsNoticifation@{PublishDiagnosticsNoticifation}!ls6502::PublishDiagnosticsNoticifation@{ls6502::PublishDiagnosticsNoticifation}}
+\doxysubsubsection{\texorpdfstring{PublishDiagnosticsNoticifation()}{PublishDiagnosticsNoticifation()}}
+{\footnotesize\ttfamily ls6502\+::\+Publish\+Diagnostics\+Noticifation\+::\+Publish\+Diagnostics\+Noticifation (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{method,  }\item[{const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classls6502_1_1PublishDiagnosticsParams}{Publish\+Diagnostics\+Params}} $>$ \&}]{diagnostics\+Params }\end{DoxyParamCaption})}
+
+
+
+Constructs a \mbox{\hyperlink{classls6502_1_1PublishDiagnosticsNoticifation}{Publish\+Diagnostics\+Noticifation}} with the specified method and diagnostics parameters. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em method} & \\
+\hline
+\mbox{\texttt{ in}}  & {\em diagnostics\+Params} & \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classls6502_1_1PublishDiagnosticsNoticifation_a19bf5316b3bb851a04f94d60e2086479}\label{classls6502_1_1PublishDiagnosticsNoticifation_a19bf5316b3bb851a04f94d60e2086479}} 
+\index{ls6502::PublishDiagnosticsNoticifation@{ls6502::PublishDiagnosticsNoticifation}!getParams@{getParams}}
+\index{getParams@{getParams}!ls6502::PublishDiagnosticsNoticifation@{ls6502::PublishDiagnosticsNoticifation}}
+\doxysubsubsection{\texorpdfstring{getParams()}{getParams()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classls6502_1_1PublishDiagnosticsParams}{Publish\+Diagnostics\+Params}}$>$ ls6502\+::\+Publish\+Diagnostics\+Noticifation\+::get\+Params (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Retrieves the diagnostics parameters. 
+
+\begin{DoxyReturn}{Returns}
+Shared pointer to the diagnostics parameters. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classls6502_1_1PublishDiagnosticsNoticifation_a1cf50f2b8a6ee51afcd1a06f33528182}\label{classls6502_1_1PublishDiagnosticsNoticifation_a1cf50f2b8a6ee51afcd1a06f33528182}} 
+\index{ls6502::PublishDiagnosticsNoticifation@{ls6502::PublishDiagnosticsNoticifation}!toJson@{toJson}}
+\index{toJson@{toJson}!ls6502::PublishDiagnosticsNoticifation@{ls6502::PublishDiagnosticsNoticifation}}
+\doxysubsubsection{\texorpdfstring{toJson()}{toJson()}}
+{\footnotesize\ttfamily nlohmann\+::json ls6502\+::\+Publish\+Diagnostics\+Noticifation\+::to\+Json (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Converts the notification to a J\+S\+ON object. 
+
+\begin{DoxyReturn}{Returns}
+A J\+S\+ON representation of the notification. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classls6502_1_1NotificationMessage_ac81e5d9dbc550cc9f863cd208214d628}{ls6502\+::\+Notification\+Message}}.
+
+
+
+\doxysubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{classls6502_1_1PublishDiagnosticsNoticifation_a533ca1e113638163b52acbfd76394147}\label{classls6502_1_1PublishDiagnosticsNoticifation_a533ca1e113638163b52acbfd76394147}} 
+\index{ls6502::PublishDiagnosticsNoticifation@{ls6502::PublishDiagnosticsNoticifation}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!ls6502::PublishDiagnosticsNoticifation@{ls6502::PublishDiagnosticsNoticifation}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$}{operator<<}}
+{\footnotesize\ttfamily std\+::ostream\& operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{os,  }\item[{const \mbox{\hyperlink{classls6502_1_1PublishDiagnosticsNoticifation}{Publish\+Diagnostics\+Noticifation}} \&}]{publish\+Diagsnostics\+Notification }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Overloads the stream insertion operator to print the \mbox{\hyperlink{classls6502_1_1PublishDiagnosticsNoticifation}{Publish\+Diagnostics\+Noticifation}}. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in,out}}  & {\em os} & \\
+\hline
+\mbox{\texttt{ in}}  & {\em publish\+Diagsnostics\+Notification} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Reference to the output stream. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+6502ls-\/messages/include/6502ls/6502ls-\/messages/notification/Publish\+Diagnostics\+Notification.\+h\item 
+6502ls-\/messages/src/Publish\+Diagnostics\+Notification.\+cpp\end{DoxyCompactItemize}

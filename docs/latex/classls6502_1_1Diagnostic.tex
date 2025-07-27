@@ -1,0 +1,121 @@
+\hypertarget{classls6502_1_1Diagnostic}{}\doxysection{ls6502\+::Diagnostic Class Reference}
+\label{classls6502_1_1Diagnostic}\index{ls6502::Diagnostic@{ls6502::Diagnostic}}
+
+
+Represents a diagnostic item in language server protocol.  
+
+
+
+
+{\ttfamily \#include $<$Diagnostic.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classls6502_1_1Diagnostic_aa5eabfdc875a377243e5a7c7ba0ead29}{Diagnostic}} ()=default
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classls6502_1_1Diagnostic_a1da42e5964e484b447a5ffec28f84e40}{Diagnostic}} (const \mbox{\hyperlink{structls6502_1_1Range}{Range}} \&range, const Diagnostic\+Severity \&severity, const std\+::string \&source, const std\+::string \&message)
+\begin{DoxyCompactList}\small\item\em Constructs a \mbox{\hyperlink{classls6502_1_1Diagnostic}{Diagnostic}} item with specified range. \end{DoxyCompactList}\item 
+nlohmann\+::json \mbox{\hyperlink{classls6502_1_1Diagnostic_a7588840be6aa9672becdfeec93c841be}{to\+Json}} () const
+\begin{DoxyCompactList}\small\item\em Serializes Diagnostics item to J\+S\+ON format. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classls6502_1_1Diagnostic_a6f490018bfcca792ed207fa86a617068}{add\+Diagnostics\+Tag}} (const Diagnostic\+Tag diagnostics\+Tag)
+\begin{DoxyCompactList}\small\item\em Adds new diagnostics tag. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classls6502_1_1Diagnostic_a54df8e1b3f43c34607697ce5e5b9f075}{get\+Message}} () const
+\begin{DoxyCompactList}\small\item\em Accessor method for diagnostics message. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structls6502_1_1Range}{Range}} \mbox{\hyperlink{classls6502_1_1Diagnostic_af275d0271776055f605efa332a0141b9}{get\+Range}} () const
+\begin{DoxyCompactList}\small\item\em Accessor method for diagnostics range. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a diagnostic item in language server protocol. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classls6502_1_1Diagnostic_aa5eabfdc875a377243e5a7c7ba0ead29}\label{classls6502_1_1Diagnostic_aa5eabfdc875a377243e5a7c7ba0ead29}} 
+\index{ls6502::Diagnostic@{ls6502::Diagnostic}!Diagnostic@{Diagnostic}}
+\index{Diagnostic@{Diagnostic}!ls6502::Diagnostic@{ls6502::Diagnostic}}
+\doxysubsubsection{\texorpdfstring{Diagnostic()}{Diagnostic()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily ls6502\+::\+Diagnostic\+::\+Diagnostic (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+Default constructor. 
+
+\mbox{\Hypertarget{classls6502_1_1Diagnostic_a1da42e5964e484b447a5ffec28f84e40}\label{classls6502_1_1Diagnostic_a1da42e5964e484b447a5ffec28f84e40}} 
+\index{ls6502::Diagnostic@{ls6502::Diagnostic}!Diagnostic@{Diagnostic}}
+\index{Diagnostic@{Diagnostic}!ls6502::Diagnostic@{ls6502::Diagnostic}}
+\doxysubsubsection{\texorpdfstring{Diagnostic()}{Diagnostic()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily ls6502\+::\+Diagnostic\+::\+Diagnostic (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structls6502_1_1Range}{Range}} \&}]{range,  }\item[{const Diagnostic\+Severity \&}]{severity,  }\item[{const std\+::string \&}]{source,  }\item[{const std\+::string \&}]{message }\end{DoxyParamCaption})}
+
+
+
+Constructs a \mbox{\hyperlink{classls6502_1_1Diagnostic}{Diagnostic}} item with specified range. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em range} & \\
+\hline
+\mbox{\texttt{ in}}  & {\em severity} & \\
+\hline
+\mbox{\texttt{ in}}  & {\em source} & \\
+\hline
+\mbox{\texttt{ in}}  & {\em message} & \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classls6502_1_1Diagnostic_a6f490018bfcca792ed207fa86a617068}\label{classls6502_1_1Diagnostic_a6f490018bfcca792ed207fa86a617068}} 
+\index{ls6502::Diagnostic@{ls6502::Diagnostic}!addDiagnosticsTag@{addDiagnosticsTag}}
+\index{addDiagnosticsTag@{addDiagnosticsTag}!ls6502::Diagnostic@{ls6502::Diagnostic}}
+\doxysubsubsection{\texorpdfstring{addDiagnosticsTag()}{addDiagnosticsTag()}}
+{\footnotesize\ttfamily void ls6502\+::\+Diagnostic\+::add\+Diagnostics\+Tag (\begin{DoxyParamCaption}\item[{const Diagnostic\+Tag}]{diagnostics\+Tag }\end{DoxyParamCaption})}
+
+
+
+Adds new diagnostics tag. 
+
+\mbox{\Hypertarget{classls6502_1_1Diagnostic_a54df8e1b3f43c34607697ce5e5b9f075}\label{classls6502_1_1Diagnostic_a54df8e1b3f43c34607697ce5e5b9f075}} 
+\index{ls6502::Diagnostic@{ls6502::Diagnostic}!getMessage@{getMessage}}
+\index{getMessage@{getMessage}!ls6502::Diagnostic@{ls6502::Diagnostic}}
+\doxysubsubsection{\texorpdfstring{getMessage()}{getMessage()}}
+{\footnotesize\ttfamily std\+::string ls6502\+::\+Diagnostic\+::get\+Message (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Accessor method for diagnostics message. 
+
+\begin{DoxyReturn}{Returns}
+diagnostics message 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classls6502_1_1Diagnostic_af275d0271776055f605efa332a0141b9}\label{classls6502_1_1Diagnostic_af275d0271776055f605efa332a0141b9}} 
+\index{ls6502::Diagnostic@{ls6502::Diagnostic}!getRange@{getRange}}
+\index{getRange@{getRange}!ls6502::Diagnostic@{ls6502::Diagnostic}}
+\doxysubsubsection{\texorpdfstring{getRange()}{getRange()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structls6502_1_1Range}{Range}} ls6502\+::\+Diagnostic\+::get\+Range (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Accessor method for diagnostics range. 
+
+\begin{DoxyReturn}{Returns}
+diagnostics range 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classls6502_1_1Diagnostic_a7588840be6aa9672becdfeec93c841be}\label{classls6502_1_1Diagnostic_a7588840be6aa9672becdfeec93c841be}} 
+\index{ls6502::Diagnostic@{ls6502::Diagnostic}!toJson@{toJson}}
+\index{toJson@{toJson}!ls6502::Diagnostic@{ls6502::Diagnostic}}
+\doxysubsubsection{\texorpdfstring{toJson()}{toJson()}}
+{\footnotesize\ttfamily nlohmann\+::json ls6502\+::\+Diagnostic\+::to\+Json (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Serializes Diagnostics item to J\+S\+ON format. 
+
+\begin{DoxyReturn}{Returns}
+Diagnostics item in J\+S\+ON format 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+6502ls-\/types/include/6502ls/6502ls-\/types/Diagnostic.\+h\item 
+6502ls-\/types/src/Diagnostic.\+cpp\end{DoxyCompactItemize}

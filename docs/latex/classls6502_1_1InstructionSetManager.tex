@@ -1,0 +1,150 @@
+\hypertarget{classls6502_1_1InstructionSetManager}{}\doxysection{ls6502\+::Instruction\+Set\+Manager Class Reference}
+\label{classls6502_1_1InstructionSetManager}\index{ls6502::InstructionSetManager@{ls6502::InstructionSetManager}}
+
+
+Manages the instruction set for the 6502 processor. Provides access to all instructions and lookup functionality.  
+
+
+
+
+{\ttfamily \#include $<$Instruction\+Set\+Manager.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classls6502_1_1InstructionSetManager_af9088ee118ea3fd1688b586eca93e3bc}{Instruction\+Set\+Manager}} ()
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classls6502_1_1InstructionSetManager_a4c932af4d99153e8ef7841a4ede0cc25}{Instruction\+Set\+Manager}} (const \mbox{\hyperlink{classls6502_1_1InstructionSetManager}{Instruction\+Set\+Manager}} \&)=delete
+\begin{DoxyCompactList}\small\item\em Deleted copy constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classls6502_1_1InstructionSetManager_a56259c10cb9a181174f6ceb322056358}{Instruction\+Set\+Manager}} (\mbox{\hyperlink{classls6502_1_1InstructionSetManager}{Instruction\+Set\+Manager}} \&\&)=delete
+\begin{DoxyCompactList}\small\item\em Deleted move constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classls6502_1_1InstructionSetManager}{Instruction\+Set\+Manager}} \& \mbox{\hyperlink{classls6502_1_1InstructionSetManager_a0244a84b897dc2a7d0b3527f3392ed10}{operator=}} (const \mbox{\hyperlink{classls6502_1_1InstructionSetManager}{Instruction\+Set\+Manager}} \&)=delete
+\begin{DoxyCompactList}\small\item\em Deleted copy assignment operator. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classls6502_1_1InstructionSetManager}{Instruction\+Set\+Manager}} \& \mbox{\hyperlink{classls6502_1_1InstructionSetManager_abefbb80a583551da309d5e153bd868a3}{operator=}} (\mbox{\hyperlink{classls6502_1_1InstructionSetManager}{Instruction\+Set\+Manager}} \&\&)=delete
+\begin{DoxyCompactList}\small\item\em Deleted move assignment operator. \end{DoxyCompactList}\item 
+Instructions\+Set\+MapT \mbox{\hyperlink{classls6502_1_1InstructionSetManager_a00ad85754e36629896a599673aeff579}{get\+All\+Instructions}} ()
+\begin{DoxyCompactList}\small\item\em Retrieves all available instructions. \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{classls6502_1_1InstructionSetManager_a4ec5210e3b63417f897120eeb6c9ea63}{get\+Instructions\+By\+Prefix}} (const std\+::string \&prefix)
+\begin{DoxyCompactList}\small\item\em Retrieves instructions matching a given prefix. \end{DoxyCompactList}\item 
+std\+::optional$<$ \mbox{\hyperlink{structls6502_1_1Instruction}{Instruction}} $>$ \mbox{\hyperlink{classls6502_1_1InstructionSetManager_ac98e20d98b6b2d7492366b213598b44a}{get\+Instruction\+By\+Mnemonic}} (const std\+::string \&mnemonic)
+\begin{DoxyCompactList}\small\item\em Retrieves an instruction by its mnemonic. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classls6502_1_1InstructionSetManager_a535c36f5976d090c2e4d1855cf777b29}\label{classls6502_1_1InstructionSetManager_a535c36f5976d090c2e4d1855cf777b29}} 
+static \mbox{\hyperlink{classls6502_1_1InstructionSetManager}{Instruction\+Set\+Manager}} \& \mbox{\hyperlink{classls6502_1_1InstructionSetManager_a535c36f5976d090c2e4d1855cf777b29}{get\+Instance}} ()
+\begin{DoxyCompactList}\small\item\em Returns the singleton instance of \mbox{\hyperlink{classls6502_1_1InstructionSetManager}{Instruction\+Set\+Manager}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Manages the instruction set for the 6502 processor. Provides access to all instructions and lookup functionality. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classls6502_1_1InstructionSetManager_af9088ee118ea3fd1688b586eca93e3bc}\label{classls6502_1_1InstructionSetManager_af9088ee118ea3fd1688b586eca93e3bc}} 
+\index{ls6502::InstructionSetManager@{ls6502::InstructionSetManager}!InstructionSetManager@{InstructionSetManager}}
+\index{InstructionSetManager@{InstructionSetManager}!ls6502::InstructionSetManager@{ls6502::InstructionSetManager}}
+\doxysubsubsection{\texorpdfstring{InstructionSetManager()}{InstructionSetManager()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily ls6502\+::\+Instruction\+Set\+Manager\+::\+Instruction\+Set\+Manager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor. 
+
+\mbox{\Hypertarget{classls6502_1_1InstructionSetManager_a4c932af4d99153e8ef7841a4ede0cc25}\label{classls6502_1_1InstructionSetManager_a4c932af4d99153e8ef7841a4ede0cc25}} 
+\index{ls6502::InstructionSetManager@{ls6502::InstructionSetManager}!InstructionSetManager@{InstructionSetManager}}
+\index{InstructionSetManager@{InstructionSetManager}!ls6502::InstructionSetManager@{ls6502::InstructionSetManager}}
+\doxysubsubsection{\texorpdfstring{InstructionSetManager()}{InstructionSetManager()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily ls6502\+::\+Instruction\+Set\+Manager\+::\+Instruction\+Set\+Manager (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classls6502_1_1InstructionSetManager}{Instruction\+Set\+Manager}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+
+
+Deleted copy constructor. 
+
+\mbox{\Hypertarget{classls6502_1_1InstructionSetManager_a56259c10cb9a181174f6ceb322056358}\label{classls6502_1_1InstructionSetManager_a56259c10cb9a181174f6ceb322056358}} 
+\index{ls6502::InstructionSetManager@{ls6502::InstructionSetManager}!InstructionSetManager@{InstructionSetManager}}
+\index{InstructionSetManager@{InstructionSetManager}!ls6502::InstructionSetManager@{ls6502::InstructionSetManager}}
+\doxysubsubsection{\texorpdfstring{InstructionSetManager()}{InstructionSetManager()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily ls6502\+::\+Instruction\+Set\+Manager\+::\+Instruction\+Set\+Manager (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classls6502_1_1InstructionSetManager}{Instruction\+Set\+Manager}} \&\&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+
+
+Deleted move constructor. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classls6502_1_1InstructionSetManager_a00ad85754e36629896a599673aeff579}\label{classls6502_1_1InstructionSetManager_a00ad85754e36629896a599673aeff579}} 
+\index{ls6502::InstructionSetManager@{ls6502::InstructionSetManager}!getAllInstructions@{getAllInstructions}}
+\index{getAllInstructions@{getAllInstructions}!ls6502::InstructionSetManager@{ls6502::InstructionSetManager}}
+\doxysubsubsection{\texorpdfstring{getAllInstructions()}{getAllInstructions()}}
+{\footnotesize\ttfamily Instructions\+Set\+MapT ls6502\+::\+Instruction\+Set\+Manager\+::get\+All\+Instructions (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Retrieves all available instructions. 
+
+\begin{DoxyReturn}{Returns}
+A map containing all instructions 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classls6502_1_1InstructionSetManager_ac98e20d98b6b2d7492366b213598b44a}\label{classls6502_1_1InstructionSetManager_ac98e20d98b6b2d7492366b213598b44a}} 
+\index{ls6502::InstructionSetManager@{ls6502::InstructionSetManager}!getInstructionByMnemonic@{getInstructionByMnemonic}}
+\index{getInstructionByMnemonic@{getInstructionByMnemonic}!ls6502::InstructionSetManager@{ls6502::InstructionSetManager}}
+\doxysubsubsection{\texorpdfstring{getInstructionByMnemonic()}{getInstructionByMnemonic()}}
+{\footnotesize\ttfamily std\+::optional$<$ \mbox{\hyperlink{structls6502_1_1Instruction}{Instruction}} $>$ ls6502\+::\+Instruction\+Set\+Manager\+::get\+Instruction\+By\+Mnemonic (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{mnemonic }\end{DoxyParamCaption})}
+
+
+
+Retrieves an instruction by its mnemonic. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em mnemonic} & The instruction mnemonic\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The corresponding instruction, if found 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classls6502_1_1InstructionSetManager_a4ec5210e3b63417f897120eeb6c9ea63}\label{classls6502_1_1InstructionSetManager_a4ec5210e3b63417f897120eeb6c9ea63}} 
+\index{ls6502::InstructionSetManager@{ls6502::InstructionSetManager}!getInstructionsByPrefix@{getInstructionsByPrefix}}
+\index{getInstructionsByPrefix@{getInstructionsByPrefix}!ls6502::InstructionSetManager@{ls6502::InstructionSetManager}}
+\doxysubsubsection{\texorpdfstring{getInstructionsByPrefix()}{getInstructionsByPrefix()}}
+{\footnotesize\ttfamily std\+::vector$<$ std\+::string $>$ ls6502\+::\+Instruction\+Set\+Manager\+::get\+Instructions\+By\+Prefix (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{prefix }\end{DoxyParamCaption})}
+
+
+
+Retrieves instructions matching a given prefix. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em prefix} & The prefix to search for\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A vector of matching instruction mnemonics, if found 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classls6502_1_1InstructionSetManager_a0244a84b897dc2a7d0b3527f3392ed10}\label{classls6502_1_1InstructionSetManager_a0244a84b897dc2a7d0b3527f3392ed10}} 
+\index{ls6502::InstructionSetManager@{ls6502::InstructionSetManager}!operator=@{operator=}}
+\index{operator=@{operator=}!ls6502::InstructionSetManager@{ls6502::InstructionSetManager}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classls6502_1_1InstructionSetManager}{Instruction\+Set\+Manager}}\& ls6502\+::\+Instruction\+Set\+Manager\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classls6502_1_1InstructionSetManager}{Instruction\+Set\+Manager}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+
+
+Deleted copy assignment operator. 
+
+\mbox{\Hypertarget{classls6502_1_1InstructionSetManager_abefbb80a583551da309d5e153bd868a3}\label{classls6502_1_1InstructionSetManager_abefbb80a583551da309d5e153bd868a3}} 
+\index{ls6502::InstructionSetManager@{ls6502::InstructionSetManager}!operator=@{operator=}}
+\index{operator=@{operator=}!ls6502::InstructionSetManager@{ls6502::InstructionSetManager}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classls6502_1_1InstructionSetManager}{Instruction\+Set\+Manager}}\& ls6502\+::\+Instruction\+Set\+Manager\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classls6502_1_1InstructionSetManager}{Instruction\+Set\+Manager}} \&\&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+
+
+Deleted move assignment operator. 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+6502ls-\/managers/include/6502ls/6502ls-\/managers/Instruction\+Set\+Manager.\+h\item 
+6502ls-\/managers/src/Instruction\+Set\+Manager.\+cpp\end{DoxyCompactItemize}

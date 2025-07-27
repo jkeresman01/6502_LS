@@ -1,0 +1,4 @@
+<map id="ls6502::ResponseMessage" name="ls6502::ResponseMessage">
+<area shape="rect" id="node1" title="Represents a response message in the JSON&#45;RPC protocol. This message can either be a successful respo..." alt="" coords="5,80,200,107"/>
+<area shape="rect" id="node2" href="$classls6502_1_1Message.html" title="Capabilities specific to the textDocument/hover request." alt="" coords="37,5,168,32"/>
+</map>

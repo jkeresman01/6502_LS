@@ -1,0 +1,5 @@
+<map id="ls6502::CompletionRequest" name="ls6502::CompletionRequest">
+<area shape="rect" id="node1" title="The Code actions request is sent from the client to the Ls6502 server to provide code actions for a g..." alt="" coords="5,155,207,181"/>
+<area shape="rect" id="node2" href="$classls6502_1_1RequestMessage.html" title="A request message to describe a request between the client (editor) and the server." alt="" coords="14,80,198,107"/>
+<area shape="rect" id="node3" href="$classls6502_1_1Message.html" title="Capabilities specific to the textDocument/hover request." alt="" coords="41,5,171,32"/>
+</map>

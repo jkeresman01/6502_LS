@@ -1,0 +1,72 @@
+\hypertarget{classls6502_1_1ClientCapabilities}{}\doxysection{ls6502\+::Client\+Capabilities Class Reference}
+\label{classls6502_1_1ClientCapabilities}\index{ls6502::ClientCapabilities@{ls6502::ClientCapabilities}}
+
+
+\mbox{\hyperlink{classls6502_1_1ClientCapabilities}{Client\+Capabilities}} define capabilities for dynamic registration, workspace and text document features the client supports.  
+
+
+
+
+{\ttfamily \#include $<$Client\+Capabilites.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classls6502_1_1ClientCapabilities_a878d2a511e9a0079fdf4bf4ce254faac}{Client\+Capabilities}} ()=default
+\begin{DoxyCompactList}\small\item\em Default constructor for \mbox{\hyperlink{classls6502_1_1ClientCapabilities}{Client\+Capabilities}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classls6502_1_1ClientCapabilities_a9c349a870f71ad2c108f9af77f90c322}{Client\+Capabilities}} (const nlohmann\+::json \&json\+R\+PC)
+\begin{DoxyCompactList}\small\item\em Constructs the \mbox{\hyperlink{classls6502_1_1ClientCapabilities}{Client\+Capabilities}} from json\+R\+PC request. \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classls6502_1_1TextDocumentCapabilities}{Text\+Document\+Capabilities}} $>$ \mbox{\hyperlink{classls6502_1_1ClientCapabilities_a7a921dec15d9e582ed65e5d39cbbc18d}{get\+Text\+Document\+Capabilities}} () const
+\begin{DoxyCompactList}\small\item\em Accessor method for text document features that client (editor or tool) supports. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{classls6502_1_1ClientCapabilities}{Client\+Capabilities}} define capabilities for dynamic registration, workspace and text document features the client supports. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classls6502_1_1ClientCapabilities_a878d2a511e9a0079fdf4bf4ce254faac}\label{classls6502_1_1ClientCapabilities_a878d2a511e9a0079fdf4bf4ce254faac}} 
+\index{ls6502::ClientCapabilities@{ls6502::ClientCapabilities}!ClientCapabilities@{ClientCapabilities}}
+\index{ClientCapabilities@{ClientCapabilities}!ls6502::ClientCapabilities@{ls6502::ClientCapabilities}}
+\doxysubsubsection{\texorpdfstring{ClientCapabilities()}{ClientCapabilities()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily ls6502\+::\+Client\+Capabilities\+::\+Client\+Capabilities (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+Default constructor for \mbox{\hyperlink{classls6502_1_1ClientCapabilities}{Client\+Capabilities}}. 
+
+\mbox{\Hypertarget{classls6502_1_1ClientCapabilities_a9c349a870f71ad2c108f9af77f90c322}\label{classls6502_1_1ClientCapabilities_a9c349a870f71ad2c108f9af77f90c322}} 
+\index{ls6502::ClientCapabilities@{ls6502::ClientCapabilities}!ClientCapabilities@{ClientCapabilities}}
+\index{ClientCapabilities@{ClientCapabilities}!ls6502::ClientCapabilities@{ls6502::ClientCapabilities}}
+\doxysubsubsection{\texorpdfstring{ClientCapabilities()}{ClientCapabilities()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily ls6502\+::\+Client\+Capabilities\+::\+Client\+Capabilities (\begin{DoxyParamCaption}\item[{const nlohmann\+::json \&}]{json\+R\+PC }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+Constructs the \mbox{\hyperlink{classls6502_1_1ClientCapabilities}{Client\+Capabilities}} from json\+R\+PC request. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em json\+R\+PC} & \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classls6502_1_1ClientCapabilities_a7a921dec15d9e582ed65e5d39cbbc18d}\label{classls6502_1_1ClientCapabilities_a7a921dec15d9e582ed65e5d39cbbc18d}} 
+\index{ls6502::ClientCapabilities@{ls6502::ClientCapabilities}!getTextDocumentCapabilities@{getTextDocumentCapabilities}}
+\index{getTextDocumentCapabilities@{getTextDocumentCapabilities}!ls6502::ClientCapabilities@{ls6502::ClientCapabilities}}
+\doxysubsubsection{\texorpdfstring{getTextDocumentCapabilities()}{getTextDocumentCapabilities()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classls6502_1_1TextDocumentCapabilities}{Text\+Document\+Capabilities}}$>$ ls6502\+::\+Client\+Capabilities\+::get\+Text\+Document\+Capabilities (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Accessor method for text document features that client (editor or tool) supports. 
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{classls6502_1_1TextDocumentCapabilities}{Text\+Document\+Capabilities}} 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+6502ls-\/capabilities/include/6502ls/6502ls-\/capabilities/Client\+Capabilites.\+h\end{DoxyCompactItemize}

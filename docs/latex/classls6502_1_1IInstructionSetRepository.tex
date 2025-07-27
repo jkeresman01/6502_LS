@@ -1,0 +1,64 @@
+\hypertarget{classls6502_1_1IInstructionSetRepository}{}\doxysection{ls6502\+::I\+Instruction\+Set\+Repository Class Reference}
+\label{classls6502_1_1IInstructionSetRepository}\index{ls6502::IInstructionSetRepository@{ls6502::IInstructionSetRepository}}
+
+
+Interface for loading an instruction set repository.  
+
+
+
+
+{\ttfamily \#include $<$I\+Instruction\+Set\+Repository.\+h$>$}
+
+
+
+Inheritance diagram for ls6502\+::I\+Instruction\+Set\+Repository\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=258pt]{classls6502_1_1IInstructionSetRepository__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for ls6502\+::I\+Instruction\+Set\+Repository\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=258pt]{classls6502_1_1IInstructionSetRepository__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual std\+::unordered\+\_\+map$<$ std\+::string, \mbox{\hyperlink{structls6502_1_1Instruction}{Instruction}} $>$ \mbox{\hyperlink{classls6502_1_1IInstructionSetRepository_a621971125922ac92402988d1fb6b6ed3}{load}} ()=0
+\begin{DoxyCompactList}\small\item\em Pure virtual function to load the instruction set. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Interface for loading an instruction set repository. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classls6502_1_1IInstructionSetRepository_a621971125922ac92402988d1fb6b6ed3}\label{classls6502_1_1IInstructionSetRepository_a621971125922ac92402988d1fb6b6ed3}} 
+\index{ls6502::IInstructionSetRepository@{ls6502::IInstructionSetRepository}!load@{load}}
+\index{load@{load}!ls6502::IInstructionSetRepository@{ls6502::IInstructionSetRepository}}
+\doxysubsubsection{\texorpdfstring{load()}{load()}}
+{\footnotesize\ttfamily virtual std\+::unordered\+\_\+map$<$std\+::string, \mbox{\hyperlink{structls6502_1_1Instruction}{Instruction}}$>$ ls6502\+::\+I\+Instruction\+Set\+Repository\+::load (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Pure virtual function to load the instruction set. 
+
+\begin{DoxyReturn}{Returns}
+A map of instruction names to \mbox{\hyperlink{structls6502_1_1Instruction}{Instruction}} objects 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classls6502_1_1JSONInstructionSetRepository_a8cc5129a3871583e58ff5d903504d60e}{ls6502\+::\+J\+S\+O\+N\+Instruction\+Set\+Repository}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+6502ls-\/repo/interface/6502ls/6502ls-\/repo/I\+Instruction\+Set\+Repository.\+h\end{DoxyCompactItemize}

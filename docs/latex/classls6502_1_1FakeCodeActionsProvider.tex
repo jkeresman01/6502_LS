@@ -1,0 +1,70 @@
+\hypertarget{classls6502_1_1FakeCodeActionsProvider}{}\doxysection{ls6502\+::Fake\+Code\+Actions\+Provider Class Reference}
+\label{classls6502_1_1FakeCodeActionsProvider}\index{ls6502::FakeCodeActionsProvider@{ls6502::FakeCodeActionsProvider}}
+
+
+A mock implementation of the \mbox{\hyperlink{classls6502_1_1ICodeActionsProvider}{I\+Code\+Actions\+Provider}} interface, providing fake code actions for testing and demonstration purposes.  
+
+
+
+
+{\ttfamily \#include $<$Fake\+Codections\+Provider.\+h$>$}
+
+
+
+Inheritance diagram for ls6502\+::Fake\+Code\+Actions\+Provider\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=258pt]{classls6502_1_1FakeCodeActionsProvider__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for ls6502\+::Fake\+Code\+Actions\+Provider\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=258pt]{classls6502_1_1FakeCodeActionsProvider__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{classls6502_1_1CodeAction}{Code\+Action}} $>$ \mbox{\hyperlink{classls6502_1_1FakeCodeActionsProvider_a3cf68e122caf5286ab291c4a480daa3c}{get\+Code\+Actions}} (const std\+::string \&document, const std\+::string \&U\+RI) override
+\begin{DoxyCompactList}\small\item\em Retrieves a list of fake code actions for a given U\+RI. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A mock implementation of the \mbox{\hyperlink{classls6502_1_1ICodeActionsProvider}{I\+Code\+Actions\+Provider}} interface, providing fake code actions for testing and demonstration purposes. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classls6502_1_1FakeCodeActionsProvider_a3cf68e122caf5286ab291c4a480daa3c}\label{classls6502_1_1FakeCodeActionsProvider_a3cf68e122caf5286ab291c4a480daa3c}} 
+\index{ls6502::FakeCodeActionsProvider@{ls6502::FakeCodeActionsProvider}!getCodeActions@{getCodeActions}}
+\index{getCodeActions@{getCodeActions}!ls6502::FakeCodeActionsProvider@{ls6502::FakeCodeActionsProvider}}
+\doxysubsubsection{\texorpdfstring{getCodeActions()}{getCodeActions()}}
+{\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{classls6502_1_1CodeAction}{Code\+Action}} $>$ ls6502\+::\+Fake\+Code\+Actions\+Provider\+::get\+Code\+Actions (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{document,  }\item[{const std\+::string \&}]{U\+RI }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Retrieves a list of fake code actions for a given U\+RI. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em U\+RI} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A vector of \mbox{\hyperlink{classls6502_1_1CodeAction}{Code\+Action}} objects representing the fake code actions. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classls6502_1_1ICodeActionsProvider_a4cfe872a2dca3ae35c085a60f46f78a6}{ls6502\+::\+I\+Code\+Actions\+Provider}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+6502ls-\/codeaction/include/6502ls/6502ls-\/codeaction/Fake\+Codections\+Provider.\+h\item 
+6502ls-\/codeaction/src/Fake\+Codections\+Provider.\+cpp\end{DoxyCompactItemize}

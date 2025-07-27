@@ -1,0 +1,133 @@
+\hypertarget{structls6502_1_1AddressingMode}{}\doxysection{ls6502\+::Addressing\+Mode Struct Reference}
+\label{structls6502_1_1AddressingMode}\index{ls6502::AddressingMode@{ls6502::AddressingMode}}
+
+
+Represents an addressing mode in the 6502 instruction set.  
+
+
+
+
+{\ttfamily \#include $<$Addressing\+Mode.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{structls6502_1_1AddressingMode_abe8268acbe970d09738d0c3aac5aa4ad}{get\+Details}} () const
+\begin{DoxyCompactList}\small\item\em Retrieves details about the addressing mode as a formatted string. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{structls6502_1_1AddressingMode_ad37d299cdee09f43b98226286f46193a}{to\+String}} () const
+\begin{DoxyCompactList}\small\item\em Converts the addressing mode information to a formatted string. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{structls6502_1_1AddressingMode_a177f019575b72210f252815c39cc5e7a}{mode}}
+\begin{DoxyCompactList}\small\item\em The name of the addressing mode. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{structls6502_1_1AddressingMode_a97c46e51bd59296296be0f8c39af9d35}{assembler}}
+\begin{DoxyCompactList}\small\item\em The assembler representation of the addressing mode. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{structls6502_1_1AddressingMode_a3f56bc6c465fb404293ec3bfe04961a8}{opcode}}
+\begin{DoxyCompactList}\small\item\em The opcode associated with this addressing mode. \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{structls6502_1_1AddressingMode_a8ff771a00baaa07649f7db3accac01d9}{bytes}}
+\begin{DoxyCompactList}\small\item\em The number of bytes used by this addressing mode. \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{structls6502_1_1AddressingMode_a77b1868f982f68aa1af62b720f008fb4}{cycles}}
+\begin{DoxyCompactList}\small\item\em The number of C\+PU cycles required for execution. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{structls6502_1_1AddressingMode_a3f42a91c58dbeb40b0c0d312f97833c9}{has\+Extra\+Cycle}}
+\begin{DoxyCompactList}\small\item\em Indicates whether this mode incurs an extra cycle. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents an addressing mode in the 6502 instruction set. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structls6502_1_1AddressingMode_abe8268acbe970d09738d0c3aac5aa4ad}\label{structls6502_1_1AddressingMode_abe8268acbe970d09738d0c3aac5aa4ad}} 
+\index{ls6502::AddressingMode@{ls6502::AddressingMode}!getDetails@{getDetails}}
+\index{getDetails@{getDetails}!ls6502::AddressingMode@{ls6502::AddressingMode}}
+\doxysubsubsection{\texorpdfstring{getDetails()}{getDetails()}}
+{\footnotesize\ttfamily std\+::string ls6502\+::\+Addressing\+Mode\+::get\+Details (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Retrieves details about the addressing mode as a formatted string. 
+
+\begin{DoxyReturn}{Returns}
+A string describing the opcode, bytes, and cycles. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{structls6502_1_1AddressingMode_ad37d299cdee09f43b98226286f46193a}\label{structls6502_1_1AddressingMode_ad37d299cdee09f43b98226286f46193a}} 
+\index{ls6502::AddressingMode@{ls6502::AddressingMode}!toString@{toString}}
+\index{toString@{toString}!ls6502::AddressingMode@{ls6502::AddressingMode}}
+\doxysubsubsection{\texorpdfstring{toString()}{toString()}}
+{\footnotesize\ttfamily std\+::string ls6502\+::\+Addressing\+Mode\+::to\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Converts the addressing mode information to a formatted string. 
+
+\begin{DoxyReturn}{Returns}
+A string representation of the addressing mode details. 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structls6502_1_1AddressingMode_a97c46e51bd59296296be0f8c39af9d35}\label{structls6502_1_1AddressingMode_a97c46e51bd59296296be0f8c39af9d35}} 
+\index{ls6502::AddressingMode@{ls6502::AddressingMode}!assembler@{assembler}}
+\index{assembler@{assembler}!ls6502::AddressingMode@{ls6502::AddressingMode}}
+\doxysubsubsection{\texorpdfstring{assembler}{assembler}}
+{\footnotesize\ttfamily std\+::string ls6502\+::\+Addressing\+Mode\+::assembler}
+
+
+
+The assembler representation of the addressing mode. 
+
+\mbox{\Hypertarget{structls6502_1_1AddressingMode_a8ff771a00baaa07649f7db3accac01d9}\label{structls6502_1_1AddressingMode_a8ff771a00baaa07649f7db3accac01d9}} 
+\index{ls6502::AddressingMode@{ls6502::AddressingMode}!bytes@{bytes}}
+\index{bytes@{bytes}!ls6502::AddressingMode@{ls6502::AddressingMode}}
+\doxysubsubsection{\texorpdfstring{bytes}{bytes}}
+{\footnotesize\ttfamily uint32\+\_\+t ls6502\+::\+Addressing\+Mode\+::bytes}
+
+
+
+The number of bytes used by this addressing mode. 
+
+\mbox{\Hypertarget{structls6502_1_1AddressingMode_a77b1868f982f68aa1af62b720f008fb4}\label{structls6502_1_1AddressingMode_a77b1868f982f68aa1af62b720f008fb4}} 
+\index{ls6502::AddressingMode@{ls6502::AddressingMode}!cycles@{cycles}}
+\index{cycles@{cycles}!ls6502::AddressingMode@{ls6502::AddressingMode}}
+\doxysubsubsection{\texorpdfstring{cycles}{cycles}}
+{\footnotesize\ttfamily uint32\+\_\+t ls6502\+::\+Addressing\+Mode\+::cycles}
+
+
+
+The number of C\+PU cycles required for execution. 
+
+\mbox{\Hypertarget{structls6502_1_1AddressingMode_a3f42a91c58dbeb40b0c0d312f97833c9}\label{structls6502_1_1AddressingMode_a3f42a91c58dbeb40b0c0d312f97833c9}} 
+\index{ls6502::AddressingMode@{ls6502::AddressingMode}!hasExtraCycle@{hasExtraCycle}}
+\index{hasExtraCycle@{hasExtraCycle}!ls6502::AddressingMode@{ls6502::AddressingMode}}
+\doxysubsubsection{\texorpdfstring{hasExtraCycle}{hasExtraCycle}}
+{\footnotesize\ttfamily bool ls6502\+::\+Addressing\+Mode\+::has\+Extra\+Cycle}
+
+
+
+Indicates whether this mode incurs an extra cycle. 
+
+\mbox{\Hypertarget{structls6502_1_1AddressingMode_a177f019575b72210f252815c39cc5e7a}\label{structls6502_1_1AddressingMode_a177f019575b72210f252815c39cc5e7a}} 
+\index{ls6502::AddressingMode@{ls6502::AddressingMode}!mode@{mode}}
+\index{mode@{mode}!ls6502::AddressingMode@{ls6502::AddressingMode}}
+\doxysubsubsection{\texorpdfstring{mode}{mode}}
+{\footnotesize\ttfamily std\+::string ls6502\+::\+Addressing\+Mode\+::mode}
+
+
+
+The name of the addressing mode. 
+
+\mbox{\Hypertarget{structls6502_1_1AddressingMode_a3f56bc6c465fb404293ec3bfe04961a8}\label{structls6502_1_1AddressingMode_a3f56bc6c465fb404293ec3bfe04961a8}} 
+\index{ls6502::AddressingMode@{ls6502::AddressingMode}!opcode@{opcode}}
+\index{opcode@{opcode}!ls6502::AddressingMode@{ls6502::AddressingMode}}
+\doxysubsubsection{\texorpdfstring{opcode}{opcode}}
+{\footnotesize\ttfamily std\+::string ls6502\+::\+Addressing\+Mode\+::opcode}
+
+
+
+The opcode associated with this addressing mode. 
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+6502ls-\/types/include/6502ls/6502ls-\/types/Addressing\+Mode.\+h\end{DoxyCompactItemize}

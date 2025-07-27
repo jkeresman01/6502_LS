@@ -1,0 +1,79 @@
+\hypertarget{classls6502_1_1ISnippetRepository}{}\doxysection{ls6502\+::I\+Snippet\+Repository Class Reference}
+\label{classls6502_1_1ISnippetRepository}\index{ls6502::ISnippetRepository@{ls6502::ISnippetRepository}}
+
+
+Interface for a snippet repository that loads code snippets.  
+
+
+
+
+{\ttfamily \#include $<$I\+Snippet\+Repository.\+h$>$}
+
+
+
+Inheritance diagram for ls6502\+::I\+Snippet\+Repository\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=227pt]{classls6502_1_1ISnippetRepository__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for ls6502\+::I\+Snippet\+Repository\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=227pt]{classls6502_1_1ISnippetRepository__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{classls6502_1_1ISnippetRepository_aca03bd31a43ddfc98f62d9bf46cd49b0}{$\sim$\+I\+Snippet\+Repository}} ()=default
+\begin{DoxyCompactList}\small\item\em Virtual destructor to ensure proper cleanup of derived classes. \end{DoxyCompactList}\item 
+virtual std\+::unordered\+\_\+multimap$<$ std\+::string, std\+::string $>$ \mbox{\hyperlink{classls6502_1_1ISnippetRepository_af1941a0801a038c899ac36b77158fada}{load}} ()=0
+\begin{DoxyCompactList}\small\item\em Loads snippets from a source and returns them as a multimap. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Interface for a snippet repository that loads code snippets. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classls6502_1_1ISnippetRepository_aca03bd31a43ddfc98f62d9bf46cd49b0}\label{classls6502_1_1ISnippetRepository_aca03bd31a43ddfc98f62d9bf46cd49b0}} 
+\index{ls6502::ISnippetRepository@{ls6502::ISnippetRepository}!````~ISnippetRepository@{$\sim$ISnippetRepository}}
+\index{````~ISnippetRepository@{$\sim$ISnippetRepository}!ls6502::ISnippetRepository@{ls6502::ISnippetRepository}}
+\doxysubsubsection{\texorpdfstring{$\sim$ISnippetRepository()}{~ISnippetRepository()}}
+{\footnotesize\ttfamily virtual ls6502\+::\+I\+Snippet\+Repository\+::$\sim$\+I\+Snippet\+Repository (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+
+
+Virtual destructor to ensure proper cleanup of derived classes. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classls6502_1_1ISnippetRepository_af1941a0801a038c899ac36b77158fada}\label{classls6502_1_1ISnippetRepository_af1941a0801a038c899ac36b77158fada}} 
+\index{ls6502::ISnippetRepository@{ls6502::ISnippetRepository}!load@{load}}
+\index{load@{load}!ls6502::ISnippetRepository@{ls6502::ISnippetRepository}}
+\doxysubsubsection{\texorpdfstring{load()}{load()}}
+{\footnotesize\ttfamily virtual std\+::unordered\+\_\+multimap$<$std\+::string, std\+::string$>$ ls6502\+::\+I\+Snippet\+Repository\+::load (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Loads snippets from a source and returns them as a multimap. 
+
+\begin{DoxyReturn}{Returns}
+A multimap where the key is the snippet identifier, and the value is the corresponding snippet code. 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classls6502_1_1SnippetRepository_a63ea3d280096589a4920a1fb82032681}{ls6502\+::\+Snippet\+Repository}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+6502ls-\/repo/interface/6502ls/6502ls-\/repo/I\+Snippet\+Repository.\+h\end{DoxyCompactItemize}

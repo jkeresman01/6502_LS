@@ -1,0 +1,7 @@
+<map id="ls6502::ResponseMessageTest" name="ls6502::ResponseMessageTest">
+<area shape="rect" id="node1" title=" " alt="" coords="65,185,285,212"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,81,53,108"/>
+<area shape="rect" id="node3" href="$classls6502_1_1ResponseMessage.html" title="Represents a response message in the JSON&#45;RPC protocol. This message can either be a successful respo..." alt="" coords="77,81,272,108"/>
+<area shape="rect" id="node4" href="$classls6502_1_1Message.html" title="Capabilities specific to the textDocument/hover request." alt="" coords="109,5,240,32"/>
+<area shape="rect" id="node5" href="$classls6502_1_1ResponseError.html" title="Represents an error response in JSON&#45;RPC. This class encapsulates the error code and a message descri..." alt="" coords="297,81,463,108"/>
+</map>

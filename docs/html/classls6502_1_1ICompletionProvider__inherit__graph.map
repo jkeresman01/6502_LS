@@ -1,0 +1,6 @@
+<map id="ls6502::ICompletionProvider" name="ls6502::ICompletionProvider">
+<area shape="rect" id="node1" title="Interface for providing completion items in response to code completion requests." alt="" coords="147,80,353,107"/>
+<area shape="rect" id="node3" href="$classls6502_1_1FakeCompletionProvider.html" title="A mock implementation of the ICompletionProvider interface, providing fake completion items for testi..." alt="" coords="5,162,236,189"/>
+<area shape="rect" id="node4" href="$classls6502_1_1InstructionSetCompletionProvider.html" title="Provides completion suggestions for instruction sets." alt="" coords="260,155,499,196"/>
+<area shape="rect" id="node2" title=" " alt="" coords="210,5,290,32"/>
+</map>

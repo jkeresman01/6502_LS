@@ -1,0 +1,87 @@
+\hypertarget{classls6502_1_1Ls6502Counter}{}\doxysection{ls6502\+::Ls6502\+Counter Class Reference}
+\label{classls6502_1_1Ls6502Counter}\index{ls6502::Ls6502Counter@{ls6502::Ls6502Counter}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classls6502_1_1Ls6502Counter_a1f246fdb412e9dc74125389d14a99b08}{Ls6502\+Counter}} ()
+\begin{DoxyCompactList}\small\item\em Constructors (default, copy, move) and assignment operators. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classls6502_1_1Ls6502Counter_a575bc12d76594af2dfe3b3ddc7bed5d2}\label{classls6502_1_1Ls6502Counter_a575bc12d76594af2dfe3b3ddc7bed5d2}} 
+{\bfseries Ls6502\+Counter} (const \mbox{\hyperlink{classls6502_1_1Ls6502Counter}{Ls6502\+Counter}} \&)=delete
+\item 
+\mbox{\Hypertarget{classls6502_1_1Ls6502Counter_ae0936b012dda46c08439d4aeef41e1ce}\label{classls6502_1_1Ls6502Counter_ae0936b012dda46c08439d4aeef41e1ce}} 
+{\bfseries Ls6502\+Counter} (\mbox{\hyperlink{classls6502_1_1Ls6502Counter}{Ls6502\+Counter}} \&\&)=delete
+\item 
+\mbox{\Hypertarget{classls6502_1_1Ls6502Counter_a233f3ea14339dd626ebf29bdd74e14a5}\label{classls6502_1_1Ls6502Counter_a233f3ea14339dd626ebf29bdd74e14a5}} 
+\mbox{\hyperlink{classls6502_1_1Ls6502Counter}{Ls6502\+Counter}} \& {\bfseries operator=} (const \mbox{\hyperlink{classls6502_1_1Ls6502Counter}{Ls6502\+Counter}} \&)=delete
+\item 
+\mbox{\Hypertarget{classls6502_1_1Ls6502Counter_aaa8bde9a3e37382a0e6268d73bb0e74a}\label{classls6502_1_1Ls6502Counter_aaa8bde9a3e37382a0e6268d73bb0e74a}} 
+\mbox{\hyperlink{classls6502_1_1Ls6502Counter}{Ls6502\+Counter}} \& {\bfseries operator=} (\mbox{\hyperlink{classls6502_1_1Ls6502Counter}{Ls6502\+Counter}} \&\&)=delete
+\item 
+void \mbox{\hyperlink{classls6502_1_1Ls6502Counter_ab81199aa9e9b9509a20f1462506ce3cd}{increment}} (Request\+Type request\+Type)
+\begin{DoxyCompactList}\small\item\em Increments the request counter. \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{classls6502_1_1Ls6502Counter_a3c7c13ce1e0d72d641b394698cdfb76c}{get\+Value}} (Request\+Type request\+Type) const
+\begin{DoxyCompactList}\small\item\em Gets the value of requested counter. \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{classls6502_1_1Ls6502Counter_a85db14c154d11648e53da60575854381}{get\+Sum}} () const
+\begin{DoxyCompactList}\small\item\em Gets the accumulated sum of all counters. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classls6502_1_1Ls6502Counter_a1f246fdb412e9dc74125389d14a99b08}\label{classls6502_1_1Ls6502Counter_a1f246fdb412e9dc74125389d14a99b08}} 
+\index{ls6502::Ls6502Counter@{ls6502::Ls6502Counter}!Ls6502Counter@{Ls6502Counter}}
+\index{Ls6502Counter@{Ls6502Counter}!ls6502::Ls6502Counter@{ls6502::Ls6502Counter}}
+\doxysubsubsection{\texorpdfstring{Ls6502Counter()}{Ls6502Counter()}}
+{\footnotesize\ttfamily ls6502\+::\+Ls6502\+Counter\+::\+Ls6502\+Counter (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Constructors (default, copy, move) and assignment operators. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classls6502_1_1Ls6502Counter_a85db14c154d11648e53da60575854381}\label{classls6502_1_1Ls6502Counter_a85db14c154d11648e53da60575854381}} 
+\index{ls6502::Ls6502Counter@{ls6502::Ls6502Counter}!getSum@{getSum}}
+\index{getSum@{getSum}!ls6502::Ls6502Counter@{ls6502::Ls6502Counter}}
+\doxysubsubsection{\texorpdfstring{getSum()}{getSum()}}
+{\footnotesize\ttfamily uint32\+\_\+t ls6502\+::\+Ls6502\+Counter\+::get\+Sum (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Gets the accumulated sum of all counters. 
+
+\mbox{\Hypertarget{classls6502_1_1Ls6502Counter_a3c7c13ce1e0d72d641b394698cdfb76c}\label{classls6502_1_1Ls6502Counter_a3c7c13ce1e0d72d641b394698cdfb76c}} 
+\index{ls6502::Ls6502Counter@{ls6502::Ls6502Counter}!getValue@{getValue}}
+\index{getValue@{getValue}!ls6502::Ls6502Counter@{ls6502::Ls6502Counter}}
+\doxysubsubsection{\texorpdfstring{getValue()}{getValue()}}
+{\footnotesize\ttfamily uint32\+\_\+t ls6502\+::\+Ls6502\+Counter\+::get\+Value (\begin{DoxyParamCaption}\item[{Request\+Type}]{request\+Type }\end{DoxyParamCaption}) const}
+
+
+
+Gets the value of requested counter. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em request\+Type} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classls6502_1_1Ls6502Counter_ab81199aa9e9b9509a20f1462506ce3cd}\label{classls6502_1_1Ls6502Counter_ab81199aa9e9b9509a20f1462506ce3cd}} 
+\index{ls6502::Ls6502Counter@{ls6502::Ls6502Counter}!increment@{increment}}
+\index{increment@{increment}!ls6502::Ls6502Counter@{ls6502::Ls6502Counter}}
+\doxysubsubsection{\texorpdfstring{increment()}{increment()}}
+{\footnotesize\ttfamily void ls6502\+::\+Ls6502\+Counter\+::increment (\begin{DoxyParamCaption}\item[{Request\+Type}]{request\+Type }\end{DoxyParamCaption})}
+
+
+
+Increments the request counter. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em request\+Type} & \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+6502ls-\/core/include/6502ls/6502ls-\/core/Ls6502\+Counter.\+h\item 
+6502ls-\/core/src/Ls6502\+Counter.\+cpp\end{DoxyCompactItemize}

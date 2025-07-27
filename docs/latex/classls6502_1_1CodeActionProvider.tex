@@ -1,0 +1,104 @@
+\hypertarget{classls6502_1_1CodeActionProvider}{}\doxysection{ls6502\+::Code\+Action\+Provider Class Reference}
+\label{classls6502_1_1CodeActionProvider}\index{ls6502::CodeActionProvider@{ls6502::CodeActionProvider}}
+
+
+Provides code actions based on document diagnostics.  
+
+
+
+
+{\ttfamily \#include $<$Code\+Action\+Provider.\+h$>$}
+
+
+
+Inheritance diagram for ls6502\+::Code\+Action\+Provider\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=239pt]{classls6502_1_1CodeActionProvider__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for ls6502\+::Code\+Action\+Provider\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=239pt]{classls6502_1_1CodeActionProvider__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classls6502_1_1CodeActionProvider_a6815fd613003d008bc039a356db35821}{Code\+Action\+Provider}} ()
+\begin{DoxyCompactList}\small\item\em Constructor for \mbox{\hyperlink{classls6502_1_1CodeActionProvider}{Code\+Action\+Provider}}. \end{DoxyCompactList}\item 
+std\+::vector$<$ \mbox{\hyperlink{classls6502_1_1CodeAction}{Code\+Action}} $>$ \mbox{\hyperlink{classls6502_1_1CodeActionProvider_ace1afba5cd66154e468a054830eb5958}{get\+Code\+Actions}} (const std\+::string \&document, const std\+::string \&U\+RI) override
+\begin{DoxyCompactList}\small\item\em Retrieves available code actions for a given document. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classls6502_1_1CodeActionProvider_a71f5f04437aecca65047d3d3b4a70166}{set\+Diagnostics\+Provider}} (const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classls6502_1_1IDiagnosticsProvider}{I\+Diagnostics\+Provider}} $>$ \&diagnostics\+Provider)
+\begin{DoxyCompactList}\small\item\em Mutator method for diagnostics provider. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Provides code actions based on document diagnostics. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classls6502_1_1CodeActionProvider_a6815fd613003d008bc039a356db35821}\label{classls6502_1_1CodeActionProvider_a6815fd613003d008bc039a356db35821}} 
+\index{ls6502::CodeActionProvider@{ls6502::CodeActionProvider}!CodeActionProvider@{CodeActionProvider}}
+\index{CodeActionProvider@{CodeActionProvider}!ls6502::CodeActionProvider@{ls6502::CodeActionProvider}}
+\doxysubsubsection{\texorpdfstring{CodeActionProvider()}{CodeActionProvider()}}
+{\footnotesize\ttfamily ls6502\+::\+Code\+Action\+Provider\+::\+Code\+Action\+Provider (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Constructor for \mbox{\hyperlink{classls6502_1_1CodeActionProvider}{Code\+Action\+Provider}}. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classls6502_1_1CodeActionProvider_ace1afba5cd66154e468a054830eb5958}\label{classls6502_1_1CodeActionProvider_ace1afba5cd66154e468a054830eb5958}} 
+\index{ls6502::CodeActionProvider@{ls6502::CodeActionProvider}!getCodeActions@{getCodeActions}}
+\index{getCodeActions@{getCodeActions}!ls6502::CodeActionProvider@{ls6502::CodeActionProvider}}
+\doxysubsubsection{\texorpdfstring{getCodeActions()}{getCodeActions()}}
+{\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{classls6502_1_1CodeAction}{Code\+Action}} $>$ ls6502\+::\+Code\+Action\+Provider\+::get\+Code\+Actions (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{document,  }\item[{const std\+::string \&}]{U\+RI }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Retrieves available code actions for a given document. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em document} & \\
+\hline
+\mbox{\texttt{ in}}  & {\em U\+RI} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A vector of available code actions 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classls6502_1_1ICodeActionsProvider_a4cfe872a2dca3ae35c085a60f46f78a6}{ls6502\+::\+I\+Code\+Actions\+Provider}}.
+
+\mbox{\Hypertarget{classls6502_1_1CodeActionProvider_a71f5f04437aecca65047d3d3b4a70166}\label{classls6502_1_1CodeActionProvider_a71f5f04437aecca65047d3d3b4a70166}} 
+\index{ls6502::CodeActionProvider@{ls6502::CodeActionProvider}!setDiagnosticsProvider@{setDiagnosticsProvider}}
+\index{setDiagnosticsProvider@{setDiagnosticsProvider}!ls6502::CodeActionProvider@{ls6502::CodeActionProvider}}
+\doxysubsubsection{\texorpdfstring{setDiagnosticsProvider()}{setDiagnosticsProvider()}}
+{\footnotesize\ttfamily void ls6502\+::\+Code\+Action\+Provider\+::set\+Diagnostics\+Provider (\begin{DoxyParamCaption}\item[{const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classls6502_1_1IDiagnosticsProvider}{I\+Diagnostics\+Provider}} $>$ \&}]{diagnostics\+Provider }\end{DoxyParamCaption})}
+
+
+
+Mutator method for diagnostics provider. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em diagnostics\+Provider} & \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+6502ls-\/codeaction/include/6502ls/6502ls-\/codeaction/Code\+Action\+Provider.\+h\item 
+6502ls-\/codeaction/src/Code\+Action\+Provider.\+cpp\end{DoxyCompactItemize}

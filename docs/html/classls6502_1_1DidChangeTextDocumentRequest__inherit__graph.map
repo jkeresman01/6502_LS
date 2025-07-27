@@ -1,0 +1,5 @@
+<map id="ls6502::DidChangeTextDocumentRequest" name="ls6502::DidChangeTextDocumentRequest">
+<area shape="rect" id="node1" title="Represents a textDocument/didChange request in the LSP." alt="" coords="5,155,244,196"/>
+<area shape="rect" id="node2" href="$classls6502_1_1NotificationMessage.html" title="Represents a notification message in the language server protocol (LSP). Notification messages are se..." alt="" coords="21,80,228,107"/>
+<area shape="rect" id="node3" href="$classls6502_1_1Message.html" title="Capabilities specific to the textDocument/hover request." alt="" coords="59,5,190,32"/>
+</map>
