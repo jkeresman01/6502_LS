@@ -1,4 +1,0 @@
-<map id="ls6502::TextDocumentCompletionParams" name="ls6502::TextDocumentCompletionParams">
-<area shape="rect" id="node1" title="Represents parameters for a completion request in the language server protocol." alt="" coords="5,95,248,136"/>
-<area shape="rect" id="node2" href="$classls6502_1_1TextDocumentPositionParams.html" title="Represents parameters specifying a text document and a position within that document." alt="" coords="17,5,236,47"/>
-</map>

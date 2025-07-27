@@ -1,6 +1,0 @@
-<map id="ls6502::DiagnosticRelatedInformation" name="ls6502::DiagnosticRelatedInformation">
-<area shape="rect" id="node1" title=" " alt="" coords="5,288,197,329"/>
-<area shape="rect" id="node2" href="$structls6502_1_1Location.html" title=" " alt="" coords="37,199,165,225"/>
-<area shape="rect" id="node3" href="$structls6502_1_1Range.html" title="Contains additional information about the context in which a completion was triggered." alt="" coords="44,109,159,136"/>
-<area shape="rect" id="node4" href="$structls6502_1_1Position.html" title="Position in a text document expressed as zero&#45;based line and zero&#45;based character offset." alt="" coords="39,5,164,32"/>
-</map>

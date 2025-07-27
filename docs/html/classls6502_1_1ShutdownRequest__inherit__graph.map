@@ -1,5 +1,0 @@
-<map id="ls6502::ShutdownRequest" name="ls6502::ShutdownRequest">
-<area shape="rect" id="node1" title="A general message as defined by JSON&#45;RPC." alt="" coords="5,155,196,181"/>
-<area shape="rect" id="node2" href="$classls6502_1_1RequestMessage.html" title="A request message to describe a request between the client (editor) and the server." alt="" coords="9,80,193,107"/>
-<area shape="rect" id="node3" href="$classls6502_1_1Message.html" title="Capabilities specific to the textDocument/hover request." alt="" coords="35,5,166,32"/>
-</map>

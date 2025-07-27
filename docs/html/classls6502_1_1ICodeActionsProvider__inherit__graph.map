@@ -1,6 +1,0 @@
-<map id="ls6502::ICodeActionsProvider" name="ls6502::ICodeActionsProvider">
-<area shape="rect" id="node1" title="Interface for providing code actions in response to a given document URI." alt="" coords="121,80,333,107"/>
-<area shape="rect" id="node3" href="$classls6502_1_1CodeActionProvider.html" title="Provides code actions based on document diagnostics." alt="" coords="5,155,207,181"/>
-<area shape="rect" id="node4" href="$classls6502_1_1FakeCodeActionsProvider.html" title="A mock implementation of the ICodeActionsProvider interface, providing fake code actions for testing ..." alt="" coords="231,155,469,181"/>
-<area shape="rect" id="node2" title=" " alt="" coords="187,5,267,32"/>
-</map>

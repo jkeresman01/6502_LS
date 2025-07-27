@@ -1,5 +1,0 @@
-<map id="ls6502::DefinitionProvider" name="ls6502::DefinitionProvider">
-<area shape="rect" id="node1" title="Provides the location of a definition in the source code based on a given document and position." alt="" coords="7,155,198,181"/>
-<area shape="rect" id="node2" href="$classls6502_1_1IDefinitionProvider.html" title="Provides an interface for locating a definition in a source code document." alt="" coords="5,80,200,107"/>
-<area shape="rect" id="node3" title=" " alt="" coords="63,5,143,32"/>
-</map>

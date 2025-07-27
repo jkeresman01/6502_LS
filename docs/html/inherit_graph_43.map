@@ -1,7 +1,0 @@
-<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$classls6502_1_1IRepository.html" title="Semantic interface for different repostiories." alt="" coords="5,42,152,69"/>
-<area shape="rect" id="node2" href="$classls6502_1_1IInstructionSetRepository.html" title="Interface for loading an instruction set repository." alt="" coords="200,15,437,42"/>
-<area shape="rect" id="node4" href="$classls6502_1_1ISnippetRepository.html" title="Interface for a snippet repository that loads code snippets." alt="" coords="221,67,417,94"/>
-<area shape="rect" id="node3" href="$classls6502_1_1JSONInstructionSetRepository.html" title="Loads and manages instruction set data from a JSON file." alt="" coords="485,5,680,47"/>
-<area shape="rect" id="node5" href="$classls6502_1_1SnippetRepository.html" title="repository for 6502 snippets" alt="" coords="487,71,679,98"/>
-</map>
