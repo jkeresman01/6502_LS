@@ -1,2 +1,9 @@
 /build/*
 /test/build/*
+
+# Doxygen build artifacts
+html/
+latex/
+docs/html/
+docs/latex/
+

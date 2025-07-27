@@ -1,4 +1,0 @@
-<map id="ls6502::Range" name="ls6502::Range">
-<area shape="rect" id="node1" title="Contains additional information about the context in which a completion was triggered." alt="" coords="11,109,125,136"/>
-<area shape="rect" id="node2" href="$structls6502_1_1Position.html" title="Position in a text document expressed as zero&#45;based line and zero&#45;based character offset." alt="" coords="5,5,131,32"/>
-</map>

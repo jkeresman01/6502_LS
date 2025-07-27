@@ -1,4 +1,0 @@
-<map id="ls6502::WrongInstructionUsageDiagnosticsAnalyzer" name="ls6502::WrongInstructionUsageDiagnosticsAnalyzer">
-<area shape="rect" id="node1" title="A diagnostics analyzer that detects and provides code actions for incorrect usage of instructions in ..." alt="" coords="13,80,209,121"/>
-<area shape="rect" id="node2" href="$classls6502_1_1IDiagnosticsAnalyzer.html" title="Interface for analyzing diagnostics and providing code actions based on detected issues in a document..." alt="" coords="5,5,216,32"/>
-</map>

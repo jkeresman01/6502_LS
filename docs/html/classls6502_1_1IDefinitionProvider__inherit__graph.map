@@ -1,6 +1,0 @@
-<map id="ls6502::IDefinitionProvider" name="ls6502::IDefinitionProvider">
-<area shape="rect" id="node1" title="Provides an interface for locating a definition in a source code document." alt="" coords="118,80,313,107"/>
-<area shape="rect" id="node3" href="$classls6502_1_1DefinitionProvider.html" title="Provides the location of a definition in the source code based on a given document and position." alt="" coords="5,155,196,181"/>
-<area shape="rect" id="node4" href="$classls6502_1_1FakeDefinitionProvider.html" title="A mock implementation of IDefinitionProvider for testing or demonstration purposes." alt="" coords="221,155,439,181"/>
-<area shape="rect" id="node2" title=" " alt="" coords="175,5,255,32"/>
-</map>

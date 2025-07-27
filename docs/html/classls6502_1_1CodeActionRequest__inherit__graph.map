@@ -1,5 +1,0 @@
-<map id="ls6502::CodeActionRequest" name="ls6502::CodeActionRequest">
-<area shape="rect" id="node1" title=" " alt="" coords="5,155,205,181"/>
-<area shape="rect" id="node2" href="$classls6502_1_1RequestMessage.html" title="A request message to describe a request between the client (editor) and the server." alt="" coords="13,80,197,107"/>
-<area shape="rect" id="node3" href="$classls6502_1_1Message.html" title="Capabilities specific to the textDocument/hover request." alt="" coords="40,5,171,32"/>
-</map>

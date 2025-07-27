@@ -1,5 +1,0 @@
-<map id="ls6502::CodeActionResponse" name="ls6502::CodeActionResponse">
-<area shape="rect" id="node1" title="Represents a response message for a code action request." alt="" coords="5,155,216,181"/>
-<area shape="rect" id="node2" href="$classls6502_1_1ResponseMessage.html" title="Represents a response message in the JSON&#45;RPC protocol. This message can either be a successful respo..." alt="" coords="13,80,208,107"/>
-<area shape="rect" id="node3" href="$classls6502_1_1Message.html" title="Capabilities specific to the textDocument/hover request." alt="" coords="45,5,176,32"/>
-</map>
