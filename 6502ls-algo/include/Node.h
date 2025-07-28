@@ -7,7 +7,7 @@
 #include <memory>
 #include <unordered_map>
 
-namespace ls6502
+namespace ls6502::algo
 {
 //////////////////////////////////////////////////////////////
 ///
@@ -32,4 +32,6 @@ struct Node
     //////////////////////////////////////////////////////////////
     std::unordered_map<char, std::shared_ptr<Node>> children;
 };
-} // namespace ls6502
+
+} // namespace ls6502::algo
+

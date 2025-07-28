@@ -2,10 +2,11 @@
 // Headers
 ////////////////////////////////////////////////////////////
 
-#include "Trie.h"
 #include <memory>
 
-namespace ls6502
+#include "Trie.h"
+
+namespace ls6502::algo
 {
 
 ////////////////////////////////////////////////////////////
@@ -71,5 +72,5 @@ void Trie::findAllWords(std::shared_ptr<Node> node, const std::string& prefix, s
     }
 }
 
+} // namespace ls6502::algo
 
-} // namespace ls6502

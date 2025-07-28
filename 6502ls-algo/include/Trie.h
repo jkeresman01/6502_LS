@@ -8,10 +8,10 @@
 #include <string>
 #include <vector>
 
-#include "Node.h"
+#include "algo/Trie.h"
 
-namespace ls6502
-{
+namespace ls6502 {
+namespace algo {
 //////////////////////////////////////////////////////////////
 ///
 /// @class Trie
@@ -83,4 +83,5 @@ private:
     //////////////////////////////////////////////////////////////
     std::shared_ptr<Node> m_root = std::make_shared<Node>();
 };
+}
 } // namespace ls6502
