@@ -8,10 +8,10 @@
 #include <nlohmann/json.hpp>
 #include <string>
 
-#include "../Messages/Response/ResponseMessage.h"
-#include "Ls6502Facade.h"
+#include "ls6502/lsp/messages/response/ResponseMessage.h"
+#include "ls6502/core/Ls6502Facade.h"
 
-namespace ls6502
+namespace ls6502::core
 {
 
 //////////////////////////////////////////////////////////////

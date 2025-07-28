@@ -2,55 +2,71 @@
 // Headers
 ////////////////////////////////////////////////////////////
 
-#include "Ls6502ReqHandler.h"
 #include <vector>
 
-#include "../Capabilities/Server/ServerCapabilities.h"
-#include "../Capabilities/Server/ServerCapabilitiesDirector.h"
-#include "../CodeActions/FactoryImpl/CodeActionProviderFactory.h"
-#include "../CodeActions/ICodeActionsProvider.h"
-#include "../Completions/CompletionProviderMockImpl/FakeCompletionProvider.h"
-#include "../Completions/FactoryImpl/CompletionProviderFactory.h"
-#include "../Completions/ICompletionProvider.h"
-#include "../Definition/FactoryImpl/DefinitionProviderFactory.h"
-#include "../Diagnostics/DiagnosticsProviderMockImpl/FakeDiagnosticsProvider.h"
-#include "../Diagnostics/FactoryImpl/DiagnosticsProviderFactory.h"
-#include "../Diagnostics/IDiagnosticsProvider.h"
-#include "../Enums/TextDocumentSyncKind.h"
-#include "../Hover/FactoryImpl/HoverProviderFactory.h"
-#include "../Messages/Notification/PublishDiagnosticsNotification.h"
-#include "../Messages/Response/CodeActionResponse.h"
-#include "../Messages/Response/CompletionResponse.h"
-#include "../Messages/Response/HoverResponse.h"
-#include "../Messages/Response/InitializeResponse.h"
-#include "../Messages/Response/ShutdownResponse.h"
-#include "../Params/DidChangeTextDocumentParams.h"
-#include "../Params/DidOpenTextDocumentParams.h"
-#include "../Params/PublishDiagnosticsParams.h"
-#include "../Results/CodeActionResult.h"
-#include "../Results/CompletionResult.h"
-#include "../Results/HoverResult.h"
-#include "../Rpc/Rpc.h"
-#include "../Snippets/FactoryImpl/SnippetProviderFactory.h"
-#include "../Types/CompletionItem.h"
-#include "../Types/Diagnostic.h"
-#include "../Types/TextDocumentItem.h"
+#include "ls6502/core/Ls6502ReqHandler.h"
 
-namespace ls6502
+#include "ls6502/lsp/capabilities/server/ServerCapabilities.h"
+#include "ls6502/lsp/capabilities/server/ServerCapabilitiesDirector.h"
+
+#include "ls6502/lsp/codeactions/CodeActionsProviderFactory.h"
+#include "ls6502/lsp/completions/CompletionProviderFactory.h"
+#include "ls6502/lsp/definition/DefinitionProviderFactory.h"
+#include "ls6502/lsp/diagnostics/DiagnosticsProviderFactory.h"
+#include "ls6502/lsp/hover/HoverProviderFactory.h"
+#include "ls6502/lsp/snippets/SnippetProviderFactory.h"
+
+#include "ls6502/lsp/messages/request/InitializeRequest.h"
+#include "ls6502/lsp/messages/request/DidOpenTextDocumentRequest.h"
+#include "ls6502/lsp/messages/request/DidChangeTextDocumentRequest.h"
+#include "ls6502/lsp/messages/request/ShutdownRequest.h"
+#include "ls6502/lsp/messages/request/CompletionRequest.h"
+#include "ls6502/lsp/messages/request/HoverRequest.h"
+#include "ls6502/lsp/messages/request/CodeActionRequest.h"
+#include "ls6502/lsp/messages/request/DefinitionRequest.h"
+
+#include "ls6502/lsp/messages/notification/PublishDiagnosticsNotification.h"
+#include "ls6502/lsp/messages/response/InitializeResponse.h"
+#include "ls6502/lsp/messages/response/ShutdownResponse.h"
+#include "ls6502/lsp/messages/response/CompletionResponse.h"
+#include "ls6502/lsp/messages/response/HoverResponse.h"
+#include "ls6502/lsp/messages/response/CodeActionResponse.h"
+
+#include "ls6502/lsp/params/InitializeParams.h"
+#include "ls6502/lsp/params/DidOpenTextDocumentParams.h"
+#include "ls6502/lsp/params/DidChangeTextDocumentParams.h"
+#include "ls6502/lsp/params/CodeActionParams.h"
+#include "ls6502/lsp/params/HoverParams.h"
+#include "ls6502/lsp/params/DefinitionParams.h"
+#include "ls6502/lsp/params/PublishDiagnosticsParams.h"
+
+#include "ls6502/lsp/types/TextDocumentItem.h"
+#include "ls6502/lsp/types/ClientInfo.h"
+#include "ls6502/lsp/types/CompletionItem.h"
+#include "ls6502/lsp/types/Diagnostic.h"
+#include "ls6502/lsp/types/Location.h"
+
+#include "ls6502/lsp/results/InitializeResult.h"
+#include "ls6502/lsp/results/CompletionResult.h"
+#include "ls6502/lsp/results/HoverResult.h"
+#include "ls6502/lsp/results/CodeActionResult.h"
+
+#include "ls6502/lsp/rpc/Rpc.h"
+#include "ls6502/utils/Logger.h"
+
+namespace ls6502::core
 {
-
 
 ////////////////////////////////////////////////////////////
 Ls6502ReqHandler::Ls6502ReqHandler() :
-m_diagnosticsProvider(DiagnosticsProviderFactory::create()),
-m_completionProvider(CompletionProviderFactory::create()),
-m_definitionProvider(DefinitionProviderFactory::create()),
-m_hoverProvider(HoverProviderFactory::create()),
-m_snippetProvider(SnippetProviderFactory::create()),
-m_codeActionsProvider(CodeActionsProviderFactory::create())
+    m_diagnosticsProvider(DiagnosticsProviderFactory::create()),
+    m_completionProvider(CompletionProviderFactory::create()),
+    m_definitionProvider(DefinitionProviderFactory::create()),
+    m_hoverProvider(HoverProviderFactory::create()),
+    m_snippetProvider(SnippetProviderFactory::create()),
+    m_codeActionsProvider(CodeActionsProviderFactory::create())
 {
 }
-
 
 ////////////////////////////////////////////////////////////
 void Ls6502ReqHandler::initializeReq(const std::shared_ptr<InitializeRequest>& initializeRequest)
@@ -62,23 +78,22 @@ void Ls6502ReqHandler::initializeReq(const std::shared_ptr<InitializeRequest>& i
 
     const ClientInfo& clientInfo = initializeParams->getClientInfo();
 
-    LS_6502_DEBUG(STR("Client: %s has sent initializtion request", clientInfo.toString().c_str()));
+    LS_6502_DEBUG(STR("Client: %s has sent initialization request", clientInfo.toString().c_str()));
 
     m_ls6502Client->saveInfo(clientInfo);
     m_ls6502Client->registerCapabilites(capabilities);
 
     ServerCapabilities::Builder serverCapabilitiesBuilder;
     ServerCapabilitiesDirector::constructDefaultServerCapabilities(serverCapabilitiesBuilder);
-    ServerCapabilities serverCapabilites = serverCapabilitiesBuilder.build();
+    ServerCapabilities serverCapabilities = serverCapabilitiesBuilder.build();
 
-    InitializeResult   initializeResult({"Ls6502", "0.0.0.0.0.1-alpha"}, serverCapabilites);
+    InitializeResult   initializeResult({"Ls6502", "0.0.0.0.0.1-alpha"}, serverCapabilities);
     InitializeResponse initializeResponse("2.0", initializeRequest->getId(), initializeResult);
 
     Rpc::send(initializeResponse);
 
     LS_6502_DEBUG(STR("Initialize response was successfully sent for client: %s", clientInfo.toString().c_str()));
 }
-
 
 ////////////////////////////////////////////////////////////
 void Ls6502ReqHandler::textDocumentDidOpenReq(const std::shared_ptr<DidOpenTextDocumentRequest>& didOpenTextDocumentReq)
@@ -93,142 +108,136 @@ void Ls6502ReqHandler::textDocumentDidOpenReq(const std::shared_ptr<DidOpenTextD
 
     m_ls6502Client->addDocument(URI, textDocumentContent);
 
-    const std::string& document = m_ls6502Client->getDocumentByURI(URI);
+    auto documentOpt = m_ls6502Client->getDocumentByURI(URI);
+    if (!documentOpt)
+        return;
 
-    const std::vector<Diagnostic>& diagnostics = m_diagnosticsProvider->getDiagnostics(document);
+    const std::vector<Diagnostic>& diagnostics = m_diagnosticsProvider->getDiagnostics(*documentOpt);
 
-    std::shared_ptr<PublishDiagnosticsParams>
-        diagnosticsParams = std::make_shared<PublishDiagnosticsParams>(URI, diagnostics);
-    PublishDiagnosticsNoticifation publishDiagnosticsNotification("textDocument/publishDiagnostics",
-                                                                  diagnosticsParams);
+    auto diagnosticsParams = std::make_shared<PublishDiagnosticsParams>(URI, diagnostics);
+    PublishDiagnosticsNotification notification("textDocument/publishDiagnostics", diagnosticsParams);
 
-    Rpc::send(publishDiagnosticsNotification);
+    Rpc::send(notification);
 
     LS_6502_DEBUG("Request with method: textDocument/didOpen was successfully processed");
 }
-
 
 ////////////////////////////////////////////////////////////
 void Ls6502ReqHandler::textDocumentDidChangeReq(const std::shared_ptr<DidChangeTextDocumentRequest>& didChangeTextDocumentReq)
 {
     LS_6502_DEBUG("Processing textDocument/didChange request");
 
-    std::shared_ptr<DidChangeTextDocumentParams> didChangeParams = didChangeTextDocumentReq->getParams();
+    auto didChangeParams = didChangeTextDocumentReq->getParams();
+    const std::string& URI = didChangeParams->getChangedDocumentURI();
+    const std::string& content = didChangeParams->getContentChanges();
 
-    const std::string& URI            = didChangeParams->getChangedDocumentURI();
-    const std::string& contentChanges = didChangeParams->getContentChanges();
+    m_ls6502Client->updateDocumentWithURI(URI, content);
 
-    m_ls6502Client->updateDocumentWithURI(URI, contentChanges);
+    auto documentOpt = m_ls6502Client->getDocumentByURI(URI);
+    if (!documentOpt)
+        return;
 
-    const std::string&             document    = m_ls6502Client->getDocumentByURI(URI);
-    const std::vector<Diagnostic>& diagnostics = m_diagnosticsProvider->getDiagnostics(document);
+    const std::vector<Diagnostic>& diagnostics = m_diagnosticsProvider->getDiagnostics(*documentOpt);
 
-    std::shared_ptr<PublishDiagnosticsParams>
-        diagnosticsParams = std::make_shared<PublishDiagnosticsParams>(URI, diagnostics);
-    PublishDiagnosticsNoticifation publishDiagnosticsNotification("textDocument/publishDiagnostics",
-                                                                  diagnosticsParams);
+    auto diagnosticsParams = std::make_shared<PublishDiagnosticsParams>(URI, diagnostics);
+    PublishDiagnosticsNotification notification("textDocument/publishDiagnostics", diagnosticsParams);
 
-    Rpc::send(publishDiagnosticsNotification);
+    Rpc::send(notification);
 
-    LS_6502_DEBUG("Response successfully sent for textDocument/didChangerequest");
+    LS_6502_DEBUG("Response successfully sent for textDocument/didChange request");
 }
-
 
 ////////////////////////////////////////////////////////////
 void Ls6502ReqHandler::textDocumentCompletionReq(const std::shared_ptr<CompletionRequest>& completionReq)
 {
     LS_6502_DEBUG("Processing textDocument/completion request");
 
-    std::shared_ptr<CompletionParams> completionParams = completionReq->getParams();
+    auto params = completionReq->getParams();
+    const std::string& URI = params->getURI();
+    const Position& position = params->getPosition();
 
-    const Position&    position = completionParams->getPosition();
-    const std::string& URI      = completionParams->getURI();
+    auto documentOpt = m_ls6502Client->getDocumentByURI(URI);
+    if (!documentOpt)
+        return;
 
-    const std::string& document = m_ls6502Client->getDocumentByURI(URI);
-    const std::vector<CompletionItem>& completionItems = m_completionProvider->getCompletions(document, position);
+    const std::vector<CompletionItem>& completions = m_completionProvider->getCompletions(*documentOpt, position);
 
-    int64_t requestId = completionReq->getId();
+    CompletionResult result(completions);
+    CompletionResponse response("2.0", completionReq->getId(), result);
 
-    CompletionResult   completionResult(completionItems);
-    CompletionResponse completionResponse{"2.0", requestId, completionResult};
-
-    Rpc::send(completionResponse);
+    Rpc::send(response);
 
     LS_6502_DEBUG("Response successfully sent for textDocument/completion request");
 }
-
 
 ////////////////////////////////////////////////////////////
 void Ls6502ReqHandler::textDocumentHoverReq(const std::shared_ptr<HoverRequest>& hoverTextDocumentReq)
 {
     LS_6502_DEBUG("Processing textDocument/hover request");
 
-    std::shared_ptr<HoverParams> hoverParams = hoverTextDocumentReq->getParams();
+    auto params = hoverTextDocumentReq->getParams();
+    const std::string& URI = params->getTextDocumentIdentifier().URI;
+    const Position& position = params->getPosition();
 
-    const std::string& URI = hoverParams->getTextDocumentIdentifier().URI;
+    auto documentOpt = m_ls6502Client->getDocumentByURI(URI);
+    if (!documentOpt)
+        return;
 
-    const Position&    position = hoverParams->getPosition();
-    const std::string& document = m_ls6502Client->getDocumentByURI(URI);
+    const HoverItem& item = m_hoverProvider->getHoverItem(*documentOpt, position);
 
-    int64_t requestId = hoverTextDocumentReq->getId();
+    HoverResult result(item.text);
+    HoverResponse response("2.0", hoverTextDocumentReq->getId(), result);
 
-    const HoverItem& hoverItem = m_hoverProvider->getHoverItem(document, position);
-
-    HoverResult   hoverResult(hoverItem.text);
-    HoverResponse hoverResponse("2.0", requestId, hoverResult);
-
-    Rpc::send(hoverResponse);
+    Rpc::send(response);
 }
-
 
 ////////////////////////////////////////////////////////////
 void Ls6502ReqHandler::textDocumentCodeActionReq(const std::shared_ptr<CodeActionRequest>& codeActionRequest)
 {
     LS_6502_DEBUG("Processing textDocument/codeAction request");
 
-    std::shared_ptr<CodeActionParams> codeActionParams = codeActionRequest->getParams();
+    auto params = codeActionRequest->getParams();
+    const std::string& URI = params->getURI();
 
-    const std::string& URI      = codeActionParams->getURI();
-    const std::string& document = m_ls6502Client->getDocumentByURI(URI);
+    auto documentOpt = m_ls6502Client->getDocumentByURI(URI);
+    if (!documentOpt)
+        return;
 
-    const std::vector<CodeAction>& codeActions = m_codeActionsProvider->getCodeActions(document, URI);
+    const std::vector<CodeAction>& actions = m_codeActionsProvider->getCodeActions(*documentOpt, URI);
 
-    int64_t requestId = codeActionRequest->getId();
+    CodeActionResult result(actions);
+    CodeActionResponse response("2.0", codeActionRequest->getId(), result);
 
-    CodeActionResult   codeActionResult({codeActions});
-    CodeActionResponse codeActionsResponse{"2.0", requestId, codeActionResult};
-
-    Rpc::send(codeActionsResponse);
+    Rpc::send(response);
 }
-
 
 ////////////////////////////////////////////////////////////
 void Ls6502ReqHandler::textDocumentDefinitionReq(const std::shared_ptr<DefintionRequest>& defintionRequest)
 {
     LS_6502_DEBUG("Processing textDocument/definition request");
 
-    std::shared_ptr<DefinitionParams> definitionParams = defintionRequest->getParams();
+    auto params = defintionRequest->getParams();
+    const std::string& URI = params->getTextDocumentIdentifier().URI;
+    const Position& position = params->getPosition();
 
-    const std::string& URI      = definitionParams->getTextDocumentIdentifier().URI;
-    const Position&    position = definitionParams->getPosition();
+    auto documentOpt = m_ls6502Client->getDocumentByURI(URI);
+    if (!documentOpt)
+        return;
 
-    const std::string& document = m_ls6502Client->getDocumentByURI(URI);
-
-    const Location& location = m_definitionProvider->provideDefinitionLocation(document, position, document);
+    const Location& location = m_definitionProvider->provideDefinitionLocation(*documentOpt, position, *documentOpt);
+    // If you need to respond, build a proper DefinitionResponse and send it via Rpc
 }
-
 
 ////////////////////////////////////////////////////////////
 void Ls6502ReqHandler::shutdownReq(const std::shared_ptr<ShutdownRequest>& shutdownRequest)
 {
     LS_6502_DEBUG("Processing shutdown request");
 
-    ShutdownResponse shutdownResponse{"2.0", shutdownRequest->getId()};
-
-    Rpc::send(shutdownResponse);
+    ShutdownResponse response("2.0", shutdownRequest->getId());
+    Rpc::send(response);
 
     LS_6502_DEBUG("Response was sent for shutdown request!");
 }
 
+} // namespace ls6502::core
 
-} // namespace ls6502

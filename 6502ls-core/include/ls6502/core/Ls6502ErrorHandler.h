@@ -7,10 +7,10 @@
 #include <memory>
 #include <string>
 
-#include "../Errors/ErrorCodes.h"
-#include "../Messages/Response/ResponseError.h"
+#include "ls6502/lsp/errors/ErrorCodes.h"
+#include "ls6502/lsp/messages/response/ResponseError.h"
 
-namespace ls6502
+namespace ls6502::core
 {
 //////////////////////////////////////////////////////////////
 ///

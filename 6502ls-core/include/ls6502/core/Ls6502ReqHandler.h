@@ -4,26 +4,27 @@
 // Headers
 ////////////////////////////////////////////////////////////
 
+
 #include <memory>
 
-#include "../CodeActions/ICodeActionsProvider.h"
-#include "../Completions/ICompletionProvider.h"
-#include "../Definition/IDefinitionProvider.h"
-#include "../Diagnostics/IDiagnosticsProvider.h"
-#include "../Hover/IHoverProvider.h"
-#include "../Messages/Request/CodeActionRequest.h"
-#include "../Messages/Request/CompletionRequest.h"
-#include "../Messages/Request/DefinitionRequest.h"
-#include "../Messages/Request/DidChangeTextDocumentRequest.h"
-#include "../Messages/Request/DidOpenTextDocumentRequest.h"
-#include "../Messages/Request/HoverRequest.h"
-#include "../Messages/Request/InitializeRequest.h"
-#include "../Messages/Request/ShutdownRequest.h"
-#include "../Snippets/ISnippetProvider.h"
-#include "Ls6502Client.h"
-#include "Ls6502Counter.h"
+#include "ls6502/features/codeaction/ICodeActionsProvider.h"
+#include "ls6502/features/completion/ICompletionProvider.h"
+#include "ls6502/features/definition/IDefinitionProvider.h"
+#include "ls6502/features/diagnostics/IDiagnosticsProvider.h"
+#include "ls6502/features/hover/IHoverProvider.h"
+#include "ls6502/lsp/messages/request/CodeActionRequest.h"
+#include "ls6502/lsp/messages/request/CompletionRequest.h"
+#include "ls6502/lsp/messages/request/DefinitionRequest.h"
+#include "ls6502/lsp/messages/request/DidChangeTextDocumentRequest.h"
+#include "ls6502/lsp/messages/request/DidOpenTextDocumentRequest.h"
+#include "ls6502/lsp/messages/request/HoverRequest.h"
+#include "ls6502/lsp/messages/request/InitializeRequest.h"
+#include "ls6502/lsp/messages/request/ShutdownRequest.h"
+#include "ls6502/features/snippets/ISnippetProvider.h"
+#include "ls6502/core/Ls6502Client.h"
+#include "ls6502/core/Ls6502Counter.h"
 
-namespace ls6502
+namespace ls6502::core
 {
 //////////////////////////////////////////////////////////////
 ///

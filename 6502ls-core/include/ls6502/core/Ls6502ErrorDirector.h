@@ -4,9 +4,9 @@
 // Headers
 ////////////////////////////////////////////////////////////
 
-#include "../Messages/Response/ResponseError.h"
+#include "ls6502/lsp/messages/response/ResponseError.h"
 
-namespace ls6502
+namespace ls6502::core
 {
 class Ls6502ErrorDirector
 {

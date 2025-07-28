@@ -4,18 +4,19 @@
 // Headers
 ////////////////////////////////////////////////////////////
 
+#include <string>
 #include <memory>
 #include <nlohmann/json.hpp>
-#include <string>
 
-#include "../Messages/Response/ResponseMessage.h"
-#include "../Common/DependecyContainer/DependecyContainer.h"
-#include "Ls6502Client.h"
-#include "Ls6502Counter.h"
-#include "Ls6502ErrorHandler.h"
-#include "Ls6502ReqHandler.h"
+#include "ls6502/lsp/messages/response/ResponseMessage.h"
+#include "ls6502/infra/common/DependecyContainer.h"
 
-namespace ls6502
+#include "ls6502/core/Ls6502Client.h"
+#include "ls6502/core/Ls6502Counter.h"
+#include "ls6502/core/Ls6502ErrorHandler.h"
+#include "ls6502/core/Ls6502ReqHandler.h"
+
+namespace ls6502::core
 {
 
 //////////////////////////////////////////////////////////////

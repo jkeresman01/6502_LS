@@ -8,10 +8,10 @@
 #include <string>
 #include <unordered_map>
 
-#include "../Capabilities/Client/ClientCapabilites.h"
-#include "../Types/ClientInfo.h"
+#include "ls6502/lsp/capabilities/ClientCapabilities.h"
+#include "ls6502/lsp/types/ClientInfo.h"
 
-namespace ls6502
+namespace ls6502::core
 {
 
 //////////////////////////////////////////////////////////////

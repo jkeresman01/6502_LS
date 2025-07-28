@@ -2,17 +2,18 @@
 // Headers
 ////////////////////////////////////////////////////////////
 
-#include "Ls6502Client.h"
+#include "ls6502/core/Ls6502Client.h"
+
 #include <memory>
+#include <optional>
 
-#include "../Utils/Logger.h"
+#include "ls6502/utils/Logger.h"
 
-namespace ls6502
+namespace ls6502::core
 {
 
-
 ////////////////////////////////////////////////////////////
-Ls6502Client::Ls6502Client(const ClientInfo& clientInfo, const std::shared_ptr<ClientCapabilities>& clientCapabilites)
+Ls6502Client::Ls6502Client(const lsp::ClientInfo& clientInfo, const std::shared_ptr<lsp::ClientCapabilities>& clientCapabilites)
 {
     saveInfo(clientInfo);
     registerCapabilites(clientCapabilites);
@@ -20,14 +21,14 @@ Ls6502Client::Ls6502Client(const ClientInfo& clientInfo, const std::shared_ptr<C
 
 
 ////////////////////////////////////////////////////////////
-void Ls6502Client::saveInfo(const ClientInfo& clientInfo)
+void Ls6502Client::saveInfo(const lsp::ClientInfo& clientInfo)
 {
     m_clientInfo = clientInfo;
 }
 
 
 ////////////////////////////////////////////////////////////
-void Ls6502Client::registerCapabilites(const std::shared_ptr<ClientCapabilities>& clientCapabilites)
+void Ls6502Client::registerCapabilites(const std::shared_ptr<lsp::ClientCapabilities>& clientCapabilites)
 {
     m_clientCapabilities = clientCapabilites;
 }
@@ -67,5 +68,5 @@ void Ls6502Client::updateDocumentWithURI(const std::string& URI, const std::stri
         STR("Updated text document with URI: %s, for client: %s", URI.c_str(), m_clientInfo.toString().c_str()));
 }
 
+} // namespace ls6502::core
 
-} // namespace ls6502

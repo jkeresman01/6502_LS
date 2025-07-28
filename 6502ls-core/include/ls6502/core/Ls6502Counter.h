@@ -7,9 +7,9 @@
 #include <cstdint>
 #include <vector>
 
-#include "../Enums/RequestType.h"
+#include "ls6502/lsp/enums/RequestType.h"
 
-namespace ls6502
+namespace ls6502::core
 {
 class Ls6502Counter
 {
