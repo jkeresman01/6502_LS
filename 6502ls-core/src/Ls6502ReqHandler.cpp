@@ -110,7 +110,10 @@ void Ls6502ReqHandler::textDocumentDidOpenReq(const std::shared_ptr<DidOpenTextD
 
     auto documentOpt = m_ls6502Client->getDocumentByURI(URI);
     if (!documentOpt)
+    {
+        LS_6502_DEBUG(STR("No document with URI %s", URI.c_str()));
         return;
+    }
 
     const std::vector<Diagnostic>& diagnostics = m_diagnosticsProvider->getDiagnostics(*documentOpt);
 
@@ -135,7 +138,10 @@ void Ls6502ReqHandler::textDocumentDidChangeReq(const std::shared_ptr<DidChangeT
 
     auto documentOpt = m_ls6502Client->getDocumentByURI(URI);
     if (!documentOpt)
+    {
+        LS_6502_DEBUG(STR("No document with URI %s", URI.c_str()));
         return;
+    }
 
     const std::vector<Diagnostic>& diagnostics = m_diagnosticsProvider->getDiagnostics(*documentOpt);
 
@@ -158,7 +164,10 @@ void Ls6502ReqHandler::textDocumentCompletionReq(const std::shared_ptr<Completio
 
     auto documentOpt = m_ls6502Client->getDocumentByURI(URI);
     if (!documentOpt)
+    {
+        LS_6502_DEBUG(STR("No document with URI %s", URI.c_str()));
         return;
+    }
 
     const std::vector<CompletionItem>& completions = m_completionProvider->getCompletions(*documentOpt, position);
 
@@ -180,8 +189,12 @@ void Ls6502ReqHandler::textDocumentHoverReq(const std::shared_ptr<HoverRequest>&
     const Position& position = params->getPosition();
 
     auto documentOpt = m_ls6502Client->getDocumentByURI(URI);
+
     if (!documentOpt)
+    {
+        LS_6502_DEBUG(STR("No document with URI %s", URI.c_str()));
         return;
+    }
 
     const HoverItem& item = m_hoverProvider->getHoverItem(*documentOpt, position);
 
@@ -200,8 +213,12 @@ void Ls6502ReqHandler::textDocumentCodeActionReq(const std::shared_ptr<CodeActio
     const std::string& URI = params->getURI();
 
     auto documentOpt = m_ls6502Client->getDocumentByURI(URI);
-    if (!documentOpt)
+
+    if (!documentOpt) 
+    {
+        LS_6502_DEBUG(STR("No document with URI %s", URI.c_str()));
         return;
+    }
 
     const std::vector<CodeAction>& actions = m_codeActionsProvider->getCodeActions(*documentOpt, URI);
 
@@ -221,11 +238,13 @@ void Ls6502ReqHandler::textDocumentDefinitionReq(const std::shared_ptr<Defintion
     const Position& position = params->getPosition();
 
     auto documentOpt = m_ls6502Client->getDocumentByURI(URI);
-    if (!documentOpt)
+    if (!documentOpt) 
+    {
+        LS_6502_DEBUG(STR("No document with URI %s", URI.c_str()));
         return;
-
+    }
+       
     const Location& location = m_definitionProvider->provideDefinitionLocation(*documentOpt, position, *documentOpt);
-    // If you need to respond, build a proper DefinitionResponse and send it via Rpc
 }
 
 ////////////////////////////////////////////////////////////
