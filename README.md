@@ -24,7 +24,7 @@
 
 [![asciicast](https://asciinema.org/a/Vpxr4wl0QqZ83fRqBJO7xGunM.svg)](https://asciinema.org/a/Vpxr4wl0QqZ83fRqBJO7xGunM)
 
-### Hover#### 
+### Hover #### 
 [![asciicast](https://asciinema.org/a/syKCKR74Qze1xiQ46AxoEDiyv.svg)](https://asciinema.org/a/syKCKR74Qze1xiQ46AxoEDiyv)
 
 ## Project structure ##
@@ -78,4 +78,5 @@ mkdir build && cd build
 cmake ..
 make -j$(nproc)
 ```
+
 
