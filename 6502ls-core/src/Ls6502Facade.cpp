@@ -93,7 +93,7 @@ void Ls6502Facade::handleInitializeRequest(const nlohmann::json& request)
 ////////////////////////////////////////////////////////////
 void Ls6502Facade::handleShutdownRequest(const nlohmann::json& request)
 {
-    LS_6502_DEBUG("Received request with method: shutdown");
+    LS_6502_WARN("Received request with method: shutdown");
 
     m_ls6502Counters->increment(lsp::RequestType::SHUTDOWN);
 
